@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomLinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/button_list_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" fb:traceAs="ComposerFooterBar"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <ViewStub android:id="@id/add_quick_cam" android:layout="@layout/composer_photo_button" android:inflatedId="@id/add_quick_cam" style="@style/footer_bar_button" />
+    <ViewStub android:id="@id/add_photo" android:layout="@layout/composer_photo_button" android:inflatedId="@id/add_photo" style="@style/footer_bar_button" />
+    <ViewStub android:id="@id/add_to_album" android:visibility="gone" android:layout="@layout/composer_album_button" android:inflatedId="@id/add_to_album" style="@style/footer_bar_button" />
+    <ViewStub android:id="@id/tag_people" android:layout="@layout/footer_tag_people" android:inflatedId="@id/tag_people" style="@style/footer_bar_button" />
+    <ViewStub android:id="@id/minutiae_button" android:layout="@layout/footer_minutiae" android:inflatedId="@id/minutiae_button" style="@style/footer_bar_button" />
+    <ViewStub android:id="@id/tag_place" android:layout="@layout/footer_tag_place" android:inflatedId="@id/tag_place" style="@style/footer_bar_button" />
+    <ViewStub android:id="@id/pick_date" android:layout="@layout/footer_pick_date" android:inflatedId="@id/pick_date" style="@style/footer_bar_button_base" />
+    <ViewStub android:id="@id/transliterate_button" android:layout="@layout/footer_transliterate" android:inflatedId="@id/transliterate_button" style="@style/footer_bar_button" />
+    <LinearLayout android:gravity="right|center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ViewStub android:layout_gravity="right|center" android:id="@id/implicit_location" android:visibility="gone" android:layout="@layout/footer_implicit_location" android:inflatedId="@id/implicit_location" android:layout_width="wrap_content" android:layout_height="@dimen/composer_footer_bar_height" />
+        <ViewStub android:layout_gravity="right|center" android:id="@id/publish_mode_selector" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:visibility="gone" android:layout="@layout/footer_image_button" android:inflatedId="@id/publish_mode_selector" android:layout_width="wrap_content" style="@style/footer_bar_button" />
+    </LinearLayout>
+</com.facebook.widget.CustomLinearLayout>

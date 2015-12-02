@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.viewpager.ViewPagerWithCompositeOnPageChangeListener android:id="@id/structured_menu_view_pager" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.widget.listview.EmptyListViewItem android:layout_gravity="center" android:id="@id/structured_menu_empty_view" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:id="@id/structured_menu_header_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.localcontent.menus.FoodPhotosHscrollView android:id="@id/food_photos_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.fbui.pagerindicator.TabbedViewPagerIndicator android:id="@id/structured_menu_tabbed_view_pager_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

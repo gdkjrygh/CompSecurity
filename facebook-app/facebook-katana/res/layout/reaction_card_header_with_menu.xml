@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/reaction_card_header" android:background="?reactionCardPrimaryBackground" android:paddingLeft="?reactionCardRightLeftPadding" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/reaction_card_header_icon" android:layout_width="@dimen/reaction_icon_size" android:layout_height="@dimen/reaction_icon_size" android:layout_marginTop="@dimen/reaction_padding_large" android:layout_marginRight="@dimen/reaction_card_header_icon_padding" android:layout_marginBottom="@dimen/reaction_padding_medium_large" />
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/reaction_padding_large" android:paddingBottom="@dimen/reaction_padding_medium_large" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <include layout="@layout/reaction_card_header_text" />
+    </LinearLayout>
+    <ImageView android:id="@id/reaction_card_header_menu" android:paddingLeft="?reactionCardRightLeftPadding" android:paddingTop="@dimen/reaction_padding_large" android:paddingRight="?reactionCardRightLeftPadding" android:paddingBottom="@dimen/reaction_padding_medium_large" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/feed_story_chevron" />
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbTextView android:layout_gravity="bottom|left|center" android:id="@id/clock_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/shadowed_white_text.light.billboard" />
+            <ImageView android:layout_gravity="right|center" android:id="@id/clock_card_settings_button" android:layout_width="80.0dip" android:layout_height="60.0dip" android:layout_marginRight="-20.0dip" android:src="@drawable/settings_icon" android:scaleType="center" android:contentDescription="@string/settings_button_content_description" android:layout_marginEnd="-20.0dip" />
+        </FrameLayout>
+        <com.facebook.resources.ui.FbTextView android:layout_gravity="bottom|left|center" android:id="@id/date_text_view" android:paddingRight="@dimen/page_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/shadowed_white_text.regular.large" />
+        <com.facebook.widget.ShimmerFrameLayout android:id="@id/weather_container" android:paddingRight="@dimen/page_margin" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbAlwaysFocusedTextView android:layout_gravity="bottom|left|center" android:id="@id/weather_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weather_updating" android:singleLine="true" style="@style/shadowed_white_text.regular.large" />
+        </com.facebook.widget.ShimmerFrameLayout>
+        <com.facebook.widget.ShimmerFrameLayout android:id="@id/cover_feed_notification_container" android:paddingRight="@dimen/page_margin" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbAlwaysFocusedTextView android:layout_gravity="bottom|left|center" android:id="@id/cover_feed_notification_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/coverfeed_notification_updating" android:singleLine="true" style="@style/shadowed_white_text.regular.large" />
+        </com.facebook.widget.ShimmerFrameLayout>
+    </LinearLayout>
+</merge>

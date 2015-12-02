@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.SquareFrameLayout android:id="@id/media_item" android:paddingRight="@dimen/orca_media_tray_divider_width" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:placeholderImage="@color/media_placeholder_color" fb:placeholderImageScaleType="fitCenter" fb:actualImageScaleType="centerCrop" />
+    <ViewStub android:id="@id/media_tray_video_player_stub" android:layout="@layout/orca_media_tray_video_stub" android:inflatedId="@id/media_tray_video_player" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/blurred_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <include layout="@layout/media_tray_item_send_and_edit_buttons" />
+    <com.facebook.fbui.widget.text.ImageWithTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/white" android:gravity="center" android:id="@id/media_tray_error" android:background="@color/media_error_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/error_loading_media" android:drawablePadding="@dimen/fbui_drawable_padding" fb:drawable="@drawable/media_error_icon" fb:drawableOrientation="top" />
+</com.facebook.widget.SquareFrameLayout>

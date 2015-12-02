@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/lockscreen_notification_dialog_background" android:paddingLeft="@dimen/lockscreen_settings_inner_padding" android:paddingRight="@dimen/lockscreen_settings_inner_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.SwitchCompat android:textSize="@dimen/fbui_text_size_xlarge" android:textColor="@color/notification_title_color" android:id="@id/lockscreen_settings_master_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lockscreen_settings_padding_vertical" android:text="@string/lockscreen_info_master_switch_caption" style="@style/generic_switch" />
+    <View android:background="@color/lockscreen_settings_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/lockscreen_settings_padding_vertical" />
+    <LinearLayout android:orientation="vertical" android:id="@id/lockscreen_settings_entries_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:id="@id/lockscreen_settings_divider" android:background="@color/lockscreen_settings_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/lockscreen_settings_padding_vertical" />
+    <include android:id="@id/lockscreen_settings_light_up_screen_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lockscreen_settings_padding_vertical" android:layout_marginRight="-5.0dip" android:layout_marginEnd="-5.0dip" layout="@layout/lockscreen_notification_settings_contentview_entry" />
+    <View android:background="@color/lockscreen_settings_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/lockscreen_settings_padding_vertical" />
+    <Button android:textColor="@color/fbui_accent_blue" android:id="@id/lockscreen_settings_ok_button" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/dialog_ok" />
+</LinearLayout>

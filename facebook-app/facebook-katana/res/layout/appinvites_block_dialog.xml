@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.resources.ui.FbTextView android:textAppearance="@style/TextAppearance.FBUi.DialogWindowTitle" android:id="@id/appinvites_block_window_title" android:padding="@dimen/fbui_padding_standard" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:minHeight="150.0dip" android:layout_weight="1.0">
+        <com.facebook.widget.loadingindicator.LoadingIndicatorView android:layout_gravity="center" android:id="@id/appinvite_blocked_list_loading_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.facebook.widget.listview.BetterListView android:id="@id/appinvites_blocked_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/appinvites_block_list_divider" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/appinvites_blocked_list_empty" android:paddingLeft="@dimen/fbui_padding_standard" android:paddingRight="@dimen/fbui_padding_standard" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:gravity="center" android:id="@id/appinvites_blocked_list_empty_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:gravity="center" android:id="@id/appinvites_blocked_list_empty_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

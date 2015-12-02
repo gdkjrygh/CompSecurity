@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/composer_harrison_plus_titlebar_wrapper" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/fbui_white" android:padding="@dimen/places_hint_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginRight="@dimen/places_hint_image_text_spacing" android:src="@drawable/create_place_hoots" />
+        <com.facebook.resources.ui.FbTextView android:textColor="@color/fbui_grey_70" android:layout_gravity="center_vertical" android:id="@id/location_picker_hint_text" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View android:background="@color/default_separator_color" android:layout_width="fill_parent" android:layout_height="@dimen/divider_width" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <fragment android:id="@id/map_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.google.android.gms.maps.SupportMapFragment" />
+        <ImageView android:layout_gravity="center" android:id="@id/static_pin_overlay" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/map_pin" />
+    </FrameLayout>
+</LinearLayout>

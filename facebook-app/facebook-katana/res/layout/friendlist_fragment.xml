@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub android:id="@id/friendlist_error_view_stub" android:layout="@layout/generic_error_view" android:inflatedId="@id/friendlist_error_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/friendlist_search_container" android:background="@color/fbui_bg_medium" android:padding="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <com.facebook.resources.ui.FbEditText android:textAppearance="?android:textAppearanceMedium" android:textColorHint="?android:textColorTertiary" android:gravity="center_vertical" android:id="@id/friendlist_search" android:background="@color/fbui_bg_medium" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/friendlist_hint" android:singleLine="true" android:drawableLeft="@drawable/search_light_grey_s" android:drawablePadding="8.0dip" android:imeOptions="actionDone" />
+        <ImageButton android:layout_gravity="right|center" android:id="@id/clear_friend_search_text_button" android:background="@color/transparent" android:padding="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cross_light_grey_s" />
+    </FrameLayout>
+    <com.facebook.widget.listview.BetterListView android:id="@id/friendlist_listview" android:background="@color/fbui_list_item_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/fbui_list_divider" />
+    <include layout="@layout/friendlist_empty_view" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.common.ui.keyboard.SoftInputDetectingLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minWidth="@dimen/dialog_min_width"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="?alertDialogPaddingHorizontal" android:paddingTop="?alertDialogPaddingVertical" android:paddingRight="?alertDialogPaddingHorizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbTextView android:id="@id/send_message_dialog_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:attr/windowTitleStyle" />
+        <com.facebook.resources.ui.FbEditText android:id="@id/send_message_dialog_composer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/fb2m_send_message_placeholder_text" />
+    </LinearLayout>
+    <com.facebook.fbui.dialog.DialogButtonBar android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/alertDialogButtonBarStyle">
+        <com.facebook.resources.ui.FbButton android:id="@id/send_message_dialog_cancel_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/fb2m_send_message_dialog_negative_button_label" style="?attr/alertDialogButtonStyle" />
+        <com.facebook.resources.ui.FbButton android:id="@id/send_message_dialog_send_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/fb2m_send_message_dialog_positive_button_label" style="?attr/alertDialogPrimaryButtonStyle" />
+    </com.facebook.fbui.dialog.DialogButtonBar>
+</com.facebook.common.ui.keyboard.SoftInputDetectingLinearLayout>

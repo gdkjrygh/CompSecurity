@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/collection_item_subtitle" android:layout_gravity="center_vertical" android:id="@id/info_request_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/collection_item_vertical_margin" android:layout_marginRight="8.0dip" android:layout_marginBottom="@dimen/collection_item_vertical_margin" android:layout_weight="1.0" />
+    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbButton android:id="@id/info_request_ask" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fbui_padding_half_standard" android:layout_marginBottom="@dimen/fbui_padding_half_standard" android:text="@string/who_ask" style="?attr/buttonRegularSmall" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/info_request_sent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/collection_item_vertical_margin" android:layout_marginBottom="@dimen/collection_item_vertical_margin">
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/collection_item_subtitle" android:id="@id/info_request_sent_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/who_cancel" />
+            <ImageView android:id="@id/info_request_cancel" android:paddingLeft="3.0dip" android:paddingTop="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/circled_cross" android:contentDescription="@string/accessibility_who_cancel" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

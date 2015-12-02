@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/friends_nearby_location_disabled" />
+        <com.facebook.resources.ui.FbTextView android:textAppearance="@style/TextAppearance.FBUi.Large" android:textColor="?android:textColorPrimary" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/friends_nearby_location_disabled_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/friends_nearby_padding_medium" android:text="@string/friends_nearby_location_disabled_description" />
+        <com.facebook.widget.text.BetterButton android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/friends_nearby_location_disabled_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/friends_nearby_padding_medium" android:layout_marginBottom="@dimen/friends_nearby_padding_medium" fb:allCaps="true" style="?attr/buttonSpecialLarge" />
+    </LinearLayout>
+    <include android:id="@id/friends_nearby_location_disabled_facepile" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/friends_nearby_padding_small" android:layout_marginBottom="@dimen/friends_nearby_padding_small" layout="@layout/background_location_upsell_facepile" />
+    <com.facebook.resources.ui.FbTextView android:textAppearance="@style/TextAppearance.FBUi.Medium" android:textColor="?android:textColorPrimary" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/friends_nearby_location_disabled_social_context" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.facebook.resources.ui.FbTextView android:layout_gravity="center_horizontal" android:id="@id/friends_nearby_location_disabled_info_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/friends_nearby_padding_small" style="@style/TextAppearance.FriendsNearby.InfoLink" />
+</merge>

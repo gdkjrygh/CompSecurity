@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/composer_popup_content_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/emoji_front_container" android:background="?emojiPickerBackgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewStub android:id="@id/attachments_section_stub" android:layout="?classicAttachmentKeyboardAttachmentsSectionLayout" android:inflatedId="@id/attachment_operation_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <View android:layout_width="fill_parent" style="?classicAttachmentKeyboardAttachmentsDividerStyle" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/emoji_front_content" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:id="@id/emoji_front_content_first_row" android:layout_width="fill_parent" android:layout_height="@dimen/emoji_attachments_drawer_row_height" />
+                <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/emoji_front_content_second_row" android:layout_width="fill_parent" android:layout_height="57.0dip" />
+            </LinearLayout>
+            <ImageButton android:layout_gravity="bottom|left|center" android:id="@id/emoji_show_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/see_more_emoji_button_description" style="?classicAttachmentKeyboardShowMoreButtonStyle" />
+            <ImageButton android:layout_gravity="bottom|right|center" android:id="@id/emoji_backspace" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/backspace_button_description" style="?classicAttachmentKeyboardBackspaceButtonStyle" />
+        </FrameLayout>
+    </LinearLayout>
+    <ViewStub android:id="@id/emoji_back_stub" android:layout="@layout/orca_classic_attachment_keyboard_backside" android:inflatedId="@id/emoji_back_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

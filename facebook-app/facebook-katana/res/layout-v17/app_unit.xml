@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/cover" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" />
+    <LinearLayout android:paddingLeft="@dimen/ozone_blue_padding" android:paddingTop="@dimen/ozone_blue_padding" android:paddingRight="@dimen/ozone_blue_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_gravity="center_vertical" android:layout_width="@dimen/app_unit_icon_size" android:layout_height="@dimen/app_unit_icon_size">
+            <ImageView android:id="@id/icon" android:layout_width="@dimen/app_unit_icon_size" android:layout_height="@dimen/app_unit_icon_size" />
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/app_unit_icon_frame_size" android:layout_height="@dimen/app_unit_icon_frame_size" android:src="@drawable/icon_corner" />
+        </FrameLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/app_unit_small_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/app_unit_large_font_size" android:textColor="@color/ozone_primary_dark" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:fontFamily="sans-serif-medium" />
+            <TextView android:textSize="@dimen/app_unit_small_font_size" android:textColor="@color/ozone_primary_light" android:ellipsize="end" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" />
+            <TextView android:textSize="@dimen/app_unit_small_font_size" android:textColor="@color/ozone_primary_light" android:ellipsize="end" android:id="@id/context_sentence" android:paddingTop="@dimen/app_unit_small_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:theme="@style/Widget.Neko.CardTextView" android:ellipsize="end" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ozone_blue_padding" android:layout_marginTop="@dimen/ozone_yellow_padding" android:layout_marginRight="@dimen/ozone_blue_padding" android:lines="3" android:layout_marginStart="@dimen/ozone_blue_padding" android:layout_marginEnd="@dimen/ozone_blue_padding" />
+    <TextView android:textSize="@dimen/app_unit_medium_font_size" android:textColor="@android:color/white" android:gravity="center" android:id="@id/cta_button" android:background="@drawable/cta_bg" android:padding="@dimen/app_unit_tiny_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ozone_blue_padding" android:lines="1" android:textAllCaps="true" android:fontFamily="sans-serif-medium" />
+</merge>

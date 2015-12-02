@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/groups_feed_root_container" android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.refreshableview.StandardPTRView android:id="@id/ptr_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:gravity="center" android:id="@id/list_empty_text" android:background="@color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/empty_layout_progress_bar" android:background="@color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:indeterminate="true" />
+    </LinearLayout>
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/quickpromotion_groupsfeed_footer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.feed.ui.GenericNotificationBanner android:layout_gravity="top" android:id="@id/error_banner" android:layout_width="fill_parent" android:layout_height="@dimen/feed_top_bar_height" />
+</FrameLayout>

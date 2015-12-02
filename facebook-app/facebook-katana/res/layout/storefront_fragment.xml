@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/StorefrontDefaults"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.loadingindicator.LoadingIndicatorView android:id="@id/loading_indicator" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/empty_storefront_view_stub" android:layout="@layout/storefront_empty_store_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.widget.listview.BetterListView android:id="@id/collection_list" android:paddingBottom="@dimen/storefront_card_outside_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:dividerHeight="1.0dip" />
+    <android.support.v7.widget.RecyclerView android:id="@id/emerging_markets_storefront_recycler_view" android:background="@color/fbui_white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

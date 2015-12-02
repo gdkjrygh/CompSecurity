@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/page_information_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/page_identity_title_bar_stub" />
+    <ScrollView android:id="@id/page_information_scrollview" android:background="@color/fbui_wash_mobile" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/page_information_container" android:background="@color/fbui_wash_mobile" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+            <com.facebook.pages.identity.fragments.moreinformation.PageInformationHoursCardView android:id="@id/page_info_hours" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PageIdentityCard" />
+            <com.facebook.pages.identity.fragments.moreinformation.PageInformationBusinessInfoView android:id="@id/page_information_business_info_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PageIdentityCard" />
+            <com.facebook.pages.identity.fragments.moreinformation.PageInformationActionSheet android:id="@id/page_info_action_sheet" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PageIdentityCard" />
+            <LinearLayout android:orientation="vertical" android:id="@id/page_info_sections_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.facebook.pages.identity.fragments.moreinformation.PageInformationSuggestEditCard android:id="@id/page_info_suggest_edit" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PageIdentityCard" />
+            <com.facebook.pages.identity.cards.vertexattribution.PageIdentityVertexAttributionCardView android:id="@id/page_information_attribution_footer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PageIdentityCard" />
+            <com.facebook.pages.identity.fragments.moreinformation.PageInformationReportProblemCard android:id="@id/page_info_report_problem" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/page_information_loading_progress" android:layout_width="@dimen/page_spinner_size" android:layout_height="@dimen/page_spinner_size" android:layout_marginTop="14.0dip" android:indeterminate="true" />
+            <LinearLayout android:orientation="vertical" android:id="@id/page_information_loading_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginBottom="14.0dip">
+                <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/page_identity_error_icon" />
+                <com.facebook.resources.ui.FbTextView android:gravity="center" android:paddingTop="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/page_identity_data_fetch_error" style="@style/Pages.TextAppearance.Light.Large.Bold" />
+            </LinearLayout>
+            <include android:id="@id/page_information_end_of_content_marker" layout="@layout/page_end_of_content_marker" />
+            <View android:id="@id/buffer_view" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

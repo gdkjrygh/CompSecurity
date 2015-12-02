@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="top" android:layout_width="fill_parent" android:layout_height="@dimen/refresher_header_height" android:layout_margin="@dimen/refresher_margin"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/refresher_cover_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:placeholderImage="@color/fbui_grey_30" fb:actualImageScaleType="focusCrop" />
+        <FrameLayout android:layout_gravity="bottom|left|center" android:id="@id/profile_photo_container" android:background="@color/white" android:padding="2.0dip" android:layout_width="112.0dip" android:layout_height="112.0dip" android:layout_margin="12.0dip">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/refresher_profile_picture" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:placeholderImage="@color/fbui_grey_30" />
+        </FrameLayout>
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xxxlarge_4" android:textColor="@color/white" android:ellipsize="end" android:gravity="left|center" android:layout_gravity="bottom|left|center" android:id="@id/profile_refresher_name" android:layout_width="fill_parent" android:layout_height="126.0dip" android:layout_marginLeft="132.0dip" android:layout_marginBottom="12.0dip" android:maxLines="2" android:shadowColor="#7f000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="2.0" android:lineSpacingExtra="0.0sp" android:fontFamily="sans-serif-light" android:layout_marginStart="132.0dip" />
+    </FrameLayout>
+</LinearLayout>

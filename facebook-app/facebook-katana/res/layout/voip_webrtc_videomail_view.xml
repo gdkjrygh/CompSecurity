@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="center" android:id="@id/videomail_camera_clipper" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewStub android:id="@id/videomail_camera_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <View android:layout_gravity="center" android:id="@id/videomail_cancel_layer" android:background="@color/quick_cam_video_cancel_screen_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:gravity="center" android:id="@id/videomail_peer_view_holder" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:layout_gravity="center" android:id="@id/videomail_shadow_layer" android:background="@color/black" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/quick_cam_text_size_large" android:textStyle="bold" android:textColor="@color/quick_cam_nux_text_color" android:gravity="center" android:layout_gravity="top|center" android:id="@id/videomail_nux_text_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="12.0dip" android:text="@string/webrtc_videomail_nux_instructions" android:shadowColor="@color/quick_cam_nux_drop_shadow_color" android:shadowDy="1.0" android:shadowRadius="4.0" />
+        <ProgressBar android:id="@id/videomail_progress_bar" android:background="@android:color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="80.0dip" android:max="15000" android:progress="0" android:progressDrawable="@drawable/quick_cam_progress_drawable" style="?android:attr/progressBarStyleHorizontal" />
+    </LinearLayout>
+    <ImageButton android:layout_gravity="bottom|center" android:id="@id/videomail_record_button" android:background="@null" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_margin="10.0dip" android:src="@drawable/quick_cam_send" android:scaleType="fitCenter" android:contentDescription="@string/quick_cam_nux_tap_instructions" />
+    <com.facebook.rtc.views.RtcActionBar android:id="@id/videomail_action_bar" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="48.0dip" orca:backBackground="@drawable/rtc_videomail_actionbar_back_background" orca:backTextColor="@color/fbui_white" orca:swapCameraColor="@color/fbui_white" orca:swapCameraBackground="@drawable/rtc_videomail_actionbar_back_background" orca:arrowDrawable="@drawable/voip_video_up_button" orca:showName="true" />
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/quick_cam_text_size_large" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="bottom|left|center" android:id="@id/videomail_timer_text_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="80.0dip" android:layout_marginLeft="10.0dip" android:text="@string/quick_cam_zero_time" />
+</merge>

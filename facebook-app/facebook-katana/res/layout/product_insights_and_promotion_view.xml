@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:showDividers="middle" custom:divider="@drawable/horizontal_divider" custom:dividerThickness="@dimen/divider_thickness">
+        <com.facebook.widget.text.BetterTextView android:textAppearance="@style/TextAppearance.FBUi.Cell.Title" android:gravity="center_vertical" android:paddingLeft="@dimen/header_horizontal_padding" android:paddingTop="@dimen/header_vertical_margin" android:paddingRight="@dimen/header_horizontal_padding" android:paddingBottom="@dimen/header_vertical_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/insights_promotion_section_title" android:drawableLeft="@drawable/fbui_barchart_l" />
+        <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:orientation="horizontal" android:id="@id/summary_info_layout" android:paddingTop="@dimen/product_details_standard_vertical_padding" android:paddingBottom="@dimen/product_details_standard_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:showDividers="middle" custom:divider="@drawable/vertical_divider" custom:dividerThickness="@dimen/divider_thickness">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.facebook.widget.text.BetterTextView android:textAppearance="@style/TextAppearance.FBUi.XLarge" android:id="@id/first_data_value" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <com.facebook.widget.text.BetterTextView android:textAppearance="@style/TextAppearance.FBUi.Content" android:id="@id/first_data_label" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.facebook.widget.text.BetterTextView android:textAppearance="@style/TextAppearance.FBUi.XLarge" android:id="@id/second_data_value" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <com.facebook.widget.text.BetterTextView android:textAppearance="@style/TextAppearance.FBUi.Content" android:id="@id/second_data_label" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.facebook.fbui.widget.layout.SegmentedLinearLayout>
+        <FrameLayout android:paddingLeft="@dimen/product_details_standard_horizontal_padding" android:paddingTop="@dimen/product_details_standard_vertical_padding" android:paddingRight="@dimen/product_details_standard_horizontal_padding" android:paddingBottom="@dimen/product_details_standard_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbButton android:id="@id/action_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Button.FBUi.Light.Primary.Large" />
+        </FrameLayout>
+    </com.facebook.fbui.widget.layout.SegmentedLinearLayout>
+</merge>

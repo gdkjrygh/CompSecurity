@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="left" android:id="@id/feedback_buttons_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <com.facebook.widget.PhotoToggleButton android:gravity="center_vertical" android:id="@id/like_button" android:paddingRight="7.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:contentDescription="@string/feed_feedback_like_container_content_description" app:uncheckedImage="@drawable/video_like" app:checkedImage="@drawable/video_like_active" app:uncheckedContentDescription="@string/feed_feedback_like_container_content_description" app:checkedContentDescription="@string/feed_feedback_like_container_content_description_pressed" app:shouldBounce="true" />
+        <com.facebook.widget.PhotoButton android:gravity="center_vertical" android:id="@id/comment_button" android:paddingLeft="7.0dip" android:paddingRight="7.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/video_comment" android:contentDescription="@string/feed_feedback_comment_container_content_description" />
+        <com.facebook.widget.PhotoButton android:gravity="center_vertical" android:id="@id/share_button" android:paddingLeft="7.0dip" android:paddingRight="7.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/video_share" android:contentDescription="@string/feed_feedback_share_container_content_description" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="right" android:orientation="vertical" android:id="@id/feedback_text" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="7.0dip" android:layout_marginEnd="7.0dip">
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/feed_feedback_button_text_size" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="right" android:layout_gravity="right" android:id="@id/like_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/feed_feedback_button_text_size" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="right" android:layout_gravity="right" android:id="@id/comment_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip">
+        <com.facebook.feed.ui.footer.FeedbackActionButtonBar android:id="@id/feed_feedback_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</merge>

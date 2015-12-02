@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.composer.ui.titlebar.ComposerHarrisonPlusTitleBar android:id="@id/text_titlebar" android:background="#fff7f8fb" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.widget.CustomFrameLayout android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.photos.creativeediting.ui.ImageContainerView android:id="@id/background_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.facebook.photos.creativeediting.ui.TextsContainerView android:id="@id/texts_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.facebook.photos.creativeediting.ui.PhotoTextEditorEntryLayout android:layout_gravity="top" android:id="@id/edit_text_entry_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include layout="@layout/overlay_items_renderer_stub" />
+        <ViewStub android:layout_gravity="center" android:id="@id/progress_bar_stub" android:layout="@layout/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.facebook.widget.CustomFrameLayout>
+</com.facebook.widget.CustomLinearLayout>

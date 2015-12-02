@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/pull_to_refresh_parent_container" android:layout_width="fill_parent" android:layout_height="@dimen/orca_pull_to_refresh_view_height">
+        <ImageView android:id="@id/pull_to_refresh_spinner" android:layout_width="@dimen/orca_pull_to_refresh_spinner_dimen" android:layout_height="@dimen/orca_pull_to_refresh_spinner_dimen" android:src="@drawable/neue_orca_spinner_clockwise_ptr" android:layout_centerInParent="true" />
+        <com.facebook.widget.FacebookProgressCircleView android:id="@id/pull_to_refresh_spinner_mask" android:layout_width="@dimen/orca_pull_to_refresh_spinner_dimen" android:layout_height="@dimen/orca_pull_to_refresh_spinner_dimen" android:layout_centerInParent="true" fb:progressCircleBaseAlpha="255" fb:progressCircleBaseColor="@color/pull_to_refresh_default_color" fb:progressCircleDrawnAlpha="0" fb:progressCircleEnableFadeIn="true" fb:progressCircleStrokeWidth="6.0dip" fb:progressCircleWidth="@dimen/orca_pull_to_refresh_spinner_dimen" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    <View android:id="@id/pull_to_refresh_list_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/ptr_list_gradient_height" />
+    <View android:id="@id/pull_to_refresh_list_mask" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

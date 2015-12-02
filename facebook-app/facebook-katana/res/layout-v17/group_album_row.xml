@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="@dimen/group_photos_album_preview_container_size" android:layout_height="@dimen/group_photos_album_preview_container_size" android:layout_marginLeft="@dimen/group_photos_album_preview_container_left_margin" android:layout_marginTop="@dimen/group_photos_album_preview_container_margins" android:layout_marginBottom="@dimen/group_photos_album_preview_container_margins" android:layout_marginStart="@dimen/group_photos_album_preview_container_left_margin">
+        <android.support.v7.widget.GridLayout android:layout_gravity="center" android:id="@id/photo_grid" android:layout_width="fill_parent" android:layout_height="fill_parent" app:rowCount="2" app:columnCount="2" />
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/album_cover_photo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:actualImageScaleType="centerCrop" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/group_photos_album_title_container_h_margins" android:layout_marginRight="@dimen/group_photos_album_title_container_h_margins" android:layout_marginStart="@dimen/group_photos_album_title_container_h_margins" android:layout_marginEnd="@dimen/group_photos_album_title_container_h_margins">
+        <com.facebook.widget.text.BetterTextView android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/album_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.facebook.widget.text.BetterTextView android:textSize="12.0sp" android:textColor="@color/black" android:id="@id/photo_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+    </LinearLayout>
+</merge>

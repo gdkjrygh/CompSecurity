@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.view.ViewPager android:id="@id/raven_stickers_view_pager" android:background="@color/raven_stickers_grid_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/raven_composer_stickers_tray" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/raven_composer_stickers_tray" android:background="@color/raven_stickers_grid_background" android:layout_width="fill_parent" android:layout_height="@dimen/raven_sticker_tray_height" android:layout_alignParentBottom="true">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/raven_store_button" fb:placeholderImage="@drawable/raven_stickers_store_tab" fb:placeholderImageScaleType="centerInside" fb:actualImageScaleType="centerInside" style="@style/sticker_store_button" />
+        <it.sephiroth.android.library.widget.HListView android:id="@id/raven_stickers_tray_hlistview" style="@style/StickersTrayListView" />
+    </LinearLayout>
+</merge>

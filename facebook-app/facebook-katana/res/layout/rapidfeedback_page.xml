@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@id/rapidfeedback_button_row" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/rapidfeedback_button_padding" android:layout_alignParentBottom="true">
+        <com.facebook.widget.text.BetterButton android:layout_gravity="center" android:id="@id/rapidfeedback_close_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?attr/closeButtonStyle" />
+        <com.facebook.widget.text.BetterButton android:layout_gravity="center" android:id="@id/rapidfeedback_continue_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?attr/continueButtonStyle" />
+    </LinearLayout>
+    <com.facebook.structuredsurvey.views.SurveyListView android:id="@id/rapidfeedback_page_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/rapidfeedback_button_row" android:layout_alignParentTop="true" />
+</merge>

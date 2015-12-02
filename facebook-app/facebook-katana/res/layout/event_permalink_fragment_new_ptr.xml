@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.FbSwipeRefreshLayout android:id="@id/swipe_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <com.facebook.widget.listview.BetterListView android:layout_gravity="center" android:id="@id/list_view" android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+    </com.facebook.widget.FbSwipeRefreshLayout>
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:layout_gravity="center" android:id="@id/list_empty_text" android:background="@color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/empty_layout_progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    <com.facebook.feed.ui.GenericNotificationBanner android:id="@id/error_banner" android:layout_width="fill_parent" android:layout_height="@dimen/feed_top_bar_height" />
+    <ProgressBar android:id="@id/reloading_event_progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:indeterminate="true" style="@style/FbProgressCircular.Small" />
+</FrameLayout>

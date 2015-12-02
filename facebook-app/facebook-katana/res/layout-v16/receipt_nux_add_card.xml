@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/black" android:id="@id/receipt_status_for_nux" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/receipt_pending" android:fontFamily="sans-serif" />
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/payment_no_action_gray_text_color" android:gravity="center" android:id="@id/receipt_add_debit_card_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/receipt_recipient_nux_add_card_message" android:fontFamily="sans-serif" />
+    <LinearLayout android:orientation="vertical" android:id="@id/receipt_recipient_nux_buttons" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.widget.text.BetterButton android:id="@id/receipt_add_card_button" android:text="@string/receipt_recipient_nux_add_card" style="@style/Payments.Button.ReceiptPadded" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/action_text_color" android:layout_gravity="center_horizontal" android:id="@id/receipt_nux_decline_action_text" android:clickable="true" android:layout_marginTop="8.0dip" android:text="@string/receipt_recipient_decline_text" android:fontFamily="sans-serif" style="@style/PaymentActionTextViewStyle" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/root_view" android:background="@drawable/app_feeds_upsell_background_gradient" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="top|right|center" android:id="@id/close_button" android:padding="@dimen/home_standard_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cover_feed_upsell_x" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:paddingLeft="54.0dip" android:paddingRight="54.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbTextView android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_feeds_upsell_title" style="@style/shadowed_white_text.regular.large.cover_feed" />
+        <com.facebook.resources.ui.FbTextView android:gravity="center" android:layout_gravity="center" android:paddingTop="@dimen/home_standard_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_feeds_upsell_body" style="@style/shadowed_white_text.regular.medium.cover_feed" />
+        <FrameLayout android:paddingTop="36.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <LinearLayout android:id="@id/instagram_button" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/instagram" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <com.facebook.resources.ui.FbTextView android:layout_gravity="center" android:paddingLeft="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Instagram" style="@style/shadowed_white_text.regular.medium.cover_feed" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/tumblr_button" android:paddingTop="27.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/tumblr" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <com.facebook.resources.ui.FbTextView android:layout_gravity="center" android:paddingLeft="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tumblr" style="@style/shadowed_white_text.regular.medium.cover_feed" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <LinearLayout android:id="@id/pinterest_button" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/pinterest" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <com.facebook.resources.ui.FbTextView android:layout_gravity="center" android:paddingLeft="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pinterest" style="@style/shadowed_white_text.regular.medium.cover_feed" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/flickr_button" android:paddingTop="27.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/flickr_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <com.facebook.resources.ui.FbTextView android:layout_gravity="center" android:paddingLeft="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Flickr" style="@style/shadowed_white_text.regular.medium.cover_feed" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <com.facebook.resources.ui.FbTextView android:gravity="center" android:layout_gravity="center" android:id="@id/connect_button" android:background="@drawable/white_line_rounded_rectangle" android:paddingLeft="40.0dip" android:paddingRight="40.0dip" android:layout_width="wrap_content" android:layout_height="54.0dip" android:layout_marginTop="36.0dip" android:text="@string/app_feeds_upsell_connect_apps_label" style="@style/shadowed_white_text.regular.medium.cover_feed" />
+    </LinearLayout>
+</FrameLayout>

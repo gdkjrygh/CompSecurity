@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/fragment_components" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/map_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/address_input" android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ad_interfaces_standard_horizontal_padding">
+            <com.facebook.fbui.glyph.GlyphView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/row_chevron_horizontal_margin" android:src="@drawable/fbui_app_pages_l" fb:glyphColor="@color/fbui_bluegrey_30" />
+            <com.facebook.widget.text.BetterTextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ad_interfaces_location_options_label" android:layout_weight="1.0" style="@style/AdInterfacesAddressInput" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/popover_menu_anchor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/row_chevron_horizontal_margin" android:src="@drawable/chevron_down_light_grey_m" />
+        </LinearLayout>
+        <com.facebook.adinterfaces.ui.MapSpinnerView android:layout_gravity="center" android:id="@id/spinner_view" android:layout_width="wrap_content" android:layout_height="wrap_content" fb:mapSpinnerCircleColor="@color/target_area_background_color" fb:mapSpinnerCircleStrokeWidth="@dimen/map_spinner_stroke_width" fb:mapSpinnerCircleWidth="@dimen/targeting_full_map_zone_diameter" />
+        <android.support.v7.widget.LinearLayoutCompat android:layout_gravity="bottom|center" android:orientation="horizontal" android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/map_footer_margin" fb:showDividers="middle" fb:divider="@drawable/vertical_divider">
+            <LinearLayout android:orientation="vertical" android:padding="@dimen/ad_interfaces_map_text_margins" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.facebook.widget.text.BetterTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/map_text_separation" android:text="@string/ad_interfaces_radius_label" style="@style/AdInterfacesText.MediumSize.Regular" />
+                <com.facebook.widget.text.BetterTextView android:id="@id/radius_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdInterfacesText.MediumSize.Light" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:padding="@dimen/ad_interfaces_map_text_margins" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.facebook.widget.text.BetterTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/map_text_separation" android:text="@string/ad_interfaces_potential_reach_label" style="@style/AdInterfacesText.MediumSize.Regular" />
+                <com.facebook.widget.text.BetterTextView android:id="@id/reach_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdInterfacesText.MediumSize.Light" />
+                <ProgressBar android:id="@id/reach_estimate_progress_bar" android:visibility="gone" android:layout_width="@dimen/fbui_text_size_medium" android:layout_height="@dimen/fbui_text_size_medium" />
+            </LinearLayout>
+        </android.support.v7.widget.LinearLayoutCompat>
+    </FrameLayout>
+</com.facebook.widget.CustomLinearLayout>

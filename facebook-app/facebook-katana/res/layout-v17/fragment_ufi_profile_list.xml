@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/likers_switch_view_holder" android:background="@drawable/ufiservices_generic_press_state_background_rounded" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <ImageView android:layout_gravity="left|center" android:id="@id/likers_arrow" android:background="@drawable/arrow_left" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/ufiservices_go_back_description" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textStyle="bold" android:textColor="@color/black" android:layout_gravity="center" android:id="@id/likers_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ufiservices_people_who_like_this" />
+    </FrameLayout>
+    <ImageView android:id="@id/likers_separator" android:background="@drawable/flyout_header_bottom_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_below="@id/likers_switch_view_holder" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" />
+    <com.facebook.widget.loadingindicator.LoadingIndicatorView android:id="@id/loading_indicator_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="-16.0dip" android:layout_below="@id/likers_separator" fb:imageSize="large">
+        <include layout="@layout/fragment_ufi_profile_listview" />
+    </com.facebook.widget.loadingindicator.LoadingIndicatorView>
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

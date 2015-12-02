@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.composer.ui.titlebar.ComposerHarrisonPlusTitleBar android:id="@id/sticker_titlebar" android:background="@color/raven_titlebar_background" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/sticker_titlebar" android:layout_alignParentBottom="true">
+        <com.facebook.photos.creativeediting.ui.ImageContainerView android:id="@id/photo_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.facebook.photos.creativeediting.stickers.ui.StickerContainerView android:id="@id/stickers_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:layout_gravity="center" android:id="@id/progress_bar_stub" android:layout="@layout/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <com.facebook.photos.creativeediting.stickers.stickers.StickerPicker android:id="@id/sticker_picker" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/sticker_titlebar" android:layout_alignParentBottom="true" />
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/image_view_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/protiles_image" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:placeholderImage="@color/protiles_image_background_color" fb:actualImageScaleType="focusCrop" fb:pressedStateOverlayImage="@color/timeline_darken_pressed_state" />
+        <com.facebook.widget.CustomLinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/protile_text_container" android:padding="@dimen/protiles_image_title_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/protiles_image_title_height">
+            <com.facebook.resources.ui.FbTextView android:layout_gravity="bottom" android:id="@id/protile_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ProtileTitleStyle" />
+            <com.facebook.resources.ui.FbTextView android:layout_gravity="bottom" android:id="@id/protile_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawablePadding="@dimen/protiles_subtitle_drawable_padding" style="@style/ProtileSubtitleStyle" />
+        </com.facebook.widget.CustomLinearLayout>
+        <ImageView android:layout_gravity="top|right|center" android:id="@id/add_friend" android:paddingLeft="@dimen/protiles_image_add_friend_padding_left_right" android:paddingTop="@dimen/protiles_image_add_friend_padding_top" android:paddingRight="@dimen/protiles_image_add_friend_padding_left_right" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.facebook.resources.ui.FbTextView android:layout_gravity="top|right|center" android:id="@id/protile_badge" android:paddingLeft="@dimen/protiles_badge_padding_horizontal" android:paddingTop="@dimen/one_dp" android:paddingRight="@dimen/protiles_badge_padding_horizontal" android:paddingBottom="@dimen/one_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/protiles_badge_margin_horizontal" android:layout_marginTop="@dimen/protiles_badge_margin_top" android:layout_marginRight="@dimen/protiles_badge_margin_horizontal" style="@style/ProtileSubtitleStyle" />
+    </FrameLayout>
+</merge>

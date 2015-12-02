@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.goodwill.feed.ui.ThrowbackConfettiView android:id="@id/throwback_confetti_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/throwback_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/imageHeader" android:layout_width="fill_parent" android:layout_height="@dimen/goodwill_header_height">
+                <com.facebook.goodwill.feed.ui.ThrowbackAnimatedHeaderView android:id="@id/animatedHeaderImage" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <include layout="@layout/throwback_profile_pic_date" />
+            </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/birthdayHeader" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/throwback_header_divider" android:layout_below="@id/imageHeader" android:showDividers="beginning">
+                <com.facebook.resources.ui.FbTextView android:layout_gravity="left" android:id="@id/birthdayTitleText" android:paddingLeft="@dimen/fbui_padding_standard" android:paddingTop="@dimen/goodwill_otd_birthday_padding_top_bot" android:paddingRight="@dimen/fbui_padding_standard" android:paddingBottom="@dimen/goodwill_otd_birthday_padding_mid" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/OtdBirthdayTitleText" />
+                <com.facebook.resources.ui.FbTextView android:layout_gravity="left" android:id="@id/birthdaySubtitleText" android:paddingLeft="@dimen/fbui_padding_standard" android:paddingRight="@dimen/fbui_padding_standard" android:paddingBottom="@dimen/goodwill_otd_birthday_padding_top_bot" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/OtdBirthdaySubtitleText" />
+            </LinearLayout>
+        </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    </FrameLayout>
+    <com.facebook.fbui.widget.megaphone.Megaphone android:id="@id/subscriptionPrompt" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.goodwill.feed.ui.ThrowbackMegaphone android:id="@id/throwbackSubscriptionPrompt" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

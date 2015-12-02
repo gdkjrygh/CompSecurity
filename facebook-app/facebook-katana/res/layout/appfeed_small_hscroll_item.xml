@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="18.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="30.0dip" android:layout_marginBottom="10.0dip">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center_vertical" android:id="@id/appfeed_small_hscroll_app_icon" android:layout_width="@dimen/appfeed_small_hscroll_icon_size" android:layout_height="@dimen/appfeed_small_hscroll_icon_size" android:layout_marginLeft="10.0dip" fb:placeholderImage="@color/fbui_bg_dark" fb:placeholderImageScaleType="centerCrop" fb:actualImageScaleType="fitCenter" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:layout_weight="1.0">
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_black" android:id="@id/appfeed_small_hscroll_app_name" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_tiny" android:textColor="@color/fbui_black" android:id="@id/appfeed_small_hscroll_app_description" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.facebook.widget.ratingbar.BetterRatingBar android:id="@id/appfeed_small_hscroll_app_rating" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:activeStarDrawable="@drawable/star_small_blue" fb:inactiveStarDrawable="@drawable/star_small_empty" fb:horizontalStarPadding="1.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_tiny" android:textColor="@color/fbui_text_light" android:id="@id/appfeed_small_hscroll_sponsored" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_tiny" android:textColor="@color/fbui_btn_light_primary_text" android:id="@id/appfeed_small_hscroll_action_text" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</merge>

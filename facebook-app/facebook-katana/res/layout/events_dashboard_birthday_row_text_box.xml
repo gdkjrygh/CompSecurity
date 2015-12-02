@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="horizontal" android:id="@id/events_dashboard_birthday_textbox_row" android:paddingTop="@dimen/event_birthday_row_padding_inside" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:layout_useViewAs="meta"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/events_dashboard_birthday_inline_textbox_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" fb:showDividers="end" fb:divider="@color/fbui_bluegrey_10" fb:dividerThickness="@dimen/one_px">
+            <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_bluegrey_30" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/events_dashboard_birthday_inline_textbox" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/events_dashboard_birthday_row_text_height" android:layout_marginRight="@dimen/events_dashboard_birthday_row_margin_right" android:maxLines="1" />
+        </com.facebook.fbui.widget.layout.SegmentedLinearLayout>
+        <include layout="@layout/events_dashboard_birthday_row_photo_picker_button" />
+        <include layout="@layout/events_dashboard_birthday_row_video_cam_button" />
+        <com.facebook.fbui.glyph.GlyphView android:layout_gravity="center" android:id="@id/messenger_button" android:paddingLeft="@dimen/event_birthday_row_button_left_right_padding" android:paddingRight="@dimen/event_birthday_row_button_left_right_padding" android:layout_width="@dimen/event_birthday_row_button_width" android:layout_height="@dimen/event_birthday_row_button_height" android:src="@drawable/cta_messenger" android:scaleType="center" android:contentDescription="@string/birthday_messenger_content_description" fb:glyphColor="@color/fbui_bluegrey_20" />
+    </LinearLayout>
+</FrameLayout>

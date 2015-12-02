@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@android:id/empty" android:background="@color/solid_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:gravity="center" android:id="@id/list_empty_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="center" android:id="@id/list_empty_progress" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ProgressBar android:layout_gravity="center_vertical" android:id="@id/empty_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:indeterminate="true" style="@style/Widget.ProgressBar.FBUi" />
+    </LinearLayout>
+    <ViewStub android:layout_gravity="bottom|center" android:id="@id/feed_loading_slow_view_stub" android:layout="@layout/feed_loading_slow_view" android:inflatedId="@id/feed_loading_slow_view_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_loading_slow_text_view_spacing_from_edges" android:layout_marginRight="@dimen/feed_loading_slow_text_view_spacing_from_edges" android:layout_marginBottom="@dimen/feed_loading_slow_text_view_spacing_from_bottom" />
+</FrameLayout>

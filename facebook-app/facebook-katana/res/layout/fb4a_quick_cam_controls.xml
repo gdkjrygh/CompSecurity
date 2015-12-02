@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+        <com.facebook.resources.ui.FbTextView android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/quick_cam_timer" android:background="@drawable/fb4a_quick_cam_timer_bg" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="32.0dip" android:layout_marginBottom="12.0dip" android:drawableStart="@drawable/fb4a_quick_cam_timer_dot" />
+        <ViewStub android:id="@id/quick_cam_video_progress_bar_stub" android:layout="@layout/fb4a_quick_cam_controls_video_progress" android:inflatedId="@id/quick_cam_video_progress_bar" android:layout_width="fill_parent" android:layout_height="4.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
+        <View android:id="@id/cqc_left_space_filler_1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/cqc_gallery_preview" android:background="@drawable/quickcam_gallery_preview" android:layout_width="42.0dip" android:layout_height="42.0dip" android:contentDescription="@string/quick_cam_gallery_preview_accessibility" fb:roundedCornerRadius="4.0dip" />
+        <View android:id="@id/cqc_left_space_filler_2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/quick_cam_main_button" android:background="@null" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/shutter_default" android:scaleType="fitCenter" android:contentDescription="@string/quick_cam_main_button_accessibility" />
+        <View android:id="@id/cqc_right_space_filler" android:layout_width="42.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+    </LinearLayout>
+    <com.facebook.fbui.glyph.GlyphView android:layout_gravity="top|right|center" android:id="@id/cqc_flip_camera_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/fbui_rotate_l" android:scaleType="center" android:contentDescription="@string/quick_cam_flip_camera_button_accessibility" fb:glyphColor="@color/fbui_white" />
+    <com.facebook.fbui.glyph.GlyphView android:layout_gravity="top|left|center" android:id="@id/cqc_close_camera" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:src="@drawable/fbui_cross_l" android:scaleType="center" android:contentDescription="@string/quick_cam_close_button_accessibility" fb:glyphColor="@color/fbui_white" />
+    <ViewStub android:layout_gravity="center" android:id="@id/quick_cam_progress_bar_view_stub" android:layout="@layout/fb4a_quick_cam_controls_progress" android:inflatedId="@id/quick_cam_progress_bar" android:layout_width="50.0dip" android:layout_height="50.0dip" />
+</merge>

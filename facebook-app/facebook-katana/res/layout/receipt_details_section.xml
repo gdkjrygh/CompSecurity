@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.messaging.payment.ui.PlatformItemInfoView android:id="@id/item_info_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/receipt_footer_widgets_vertical_spacing" />
+        <com.facebook.messaging.payment.ui.PaymentTextBlockLayout android:id="@id/receipt_memo_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/receipt_footer_widgets_vertical_spacing" fb:title="@string/memo_title_text" />
+        <com.facebook.messaging.payment.ui.PaymentTextBlockLayout android:id="@id/receipt_sent_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/receipt_footer_widgets_vertical_spacing" android:singleLine="true" />
+        <com.facebook.messaging.payment.ui.PaymentTextBlockLayout android:id="@id/receipt_supplementary_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/receipt_footer_widgets_vertical_spacing" android:singleLine="true" />
+        <com.facebook.messaging.payment.ui.PaymentTextBlockLayout android:id="@id/receipt_payment_source" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/receipt_footer_widgets_vertical_spacing" android:singleLine="true" />
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/payment_no_action_gray_text_color" android:id="@id/receipt_payment_source_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/receipt_footer_widgets_vertical_spacing" fb:fontFamily="roboto" fb:fontWeight="regular" />
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/payment_no_action_gray_text_color" android:id="@id/receipt_disclaimer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/receipt_footer_widgets_vertical_spacing" fb:fontFamily="roboto" fb:fontWeight="regular" />
+        <com.facebook.messaging.payment.prefs.receipts.footer.ReceiptFooterInfoView android:gravity="bottom" android:id="@id/receipt_footer_info_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/fbui_white" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.ui.titlebar.Fb4aTitleBar android:id="@id/title_bar" android:background="?titleBarBackground" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.search.embed.ui.EmbedTypeaheadText android:id="@id/search_typeahead" android:layout_width="fill_parent" android:layout_height="@dimen/embed_typeahead_height" />
+    <View android:background="@color/fbui_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewStub android:id="@id/null_state_list" android:layout="@layout/embed_link_list_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/keyword_results_list" android:layout="@layout/embed_link_list_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/spinner" android:paddingTop="@dimen/fbui_padding_standard" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

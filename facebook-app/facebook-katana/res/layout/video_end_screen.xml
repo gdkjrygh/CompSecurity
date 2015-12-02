@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/video_end_screen_replay_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@id/video_end_screen_replay_button" android:background="@null" android:layout_width="@dimen/end_screen_video_cta_icon_size" android:layout_height="@dimen/end_screen_video_cta_icon_size" android:layout_marginRight="@dimen/end_screen_video_cta_icon_and_label_margin" android:src="@drawable/call_to_action_replay" android:scaleType="fitCenter" android:contentDescription="@string/watch_again" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/end_screen_video_cta_label_text_size" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/video_end_screen_replay_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/watch_again" android:contentDescription="@string/watch_again" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/video_end_screen_call_to_action_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/video_end_screen_replay_container">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center" android:id="@id/video_end_screen_call_to_action_button" android:background="@null" android:layout_width="@dimen/end_screen_video_cta_icon_size" android:layout_height="@dimen/end_screen_video_cta_icon_size" android:layout_marginRight="@dimen/end_screen_video_cta_icon_and_label_margin" android:contentDescription="@string/accessibility_call_to_action" fb:placeholderImage="@drawable/call_to_action_placeholder" fb:placeholderImageScaleType="fitCenter" fb:actualImageScaleType="fitCenter" />
+            <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/end_screen_video_cta_label_text_size" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/video_end_screen_call_to_action_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/accessibility_call_to_action" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/end_screen_video_cta_source_text_size" android:textColor="@color/white" android:id="@id/video_end_screen_call_to_action_source" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_below="@id/video_end_screen_call_to_action_title" android:contentDescription="@string/accessibility_call_to_action" />
+            </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+        </LinearLayout>
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+</merge>

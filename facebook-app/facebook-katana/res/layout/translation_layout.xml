@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.CustomLinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.facebook.feed.rows.views.ContentTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/grey68" android:textColorHighlight="@color/feed_press_state_background_color" android:id="@id/see_translation" android:background="@drawable/feed_transparent_background_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/feed_story_margin" android:text="@string/feed_story_see_translation" android:includeFontPadding="false" android:lineSpacingExtra="1.5dip" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="@style/FbProgressCircular.Small" />
+    </com.facebook.widget.CustomLinearLayout>
+    <ViewStub android:id="@id/translated_text_view_stub" android:layout="@layout/translated_text" android:inflatedId="@id/translated_text_section" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/translation_error_stub" android:layout="@layout/translation_error" android:inflatedId="@id/translation_error_section" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</com.facebook.widget.CustomLinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:id="@id/bottom_bar" android:background="@color/title_bar_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/simplegallery_bottom_bar_height">
+        <ImageView android:id="@id/tag_button" android:contentDescription="@string/accessibility_tag_button" style="@style/taggablegallery_bottom_button_style" />
+        <ImageView android:id="@id/rotate_button" android:src="@drawable/gallery_rotate_icon" android:contentDescription="@string/accessibility_rotate_photo_button" style="@style/taggablegallery_bottom_button_style" />
+    </LinearLayout>
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/white" android:ellipsize="end" android:layout_gravity="bottom|center" android:id="@id/tagging_instructions" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="80.0dip" android:text="@string/tap_to_tag" android:singleLine="true" android:includeFontPadding="false" />
+    <com.facebook.photos.tagging.shared.TagTypeahead android:id="@id/tag_typeahead" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/touch_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

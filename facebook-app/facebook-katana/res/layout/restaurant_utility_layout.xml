@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/restaurant_utility_view" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/bragging_layout" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/utility_bar_background_color" android:layout_width="fill_parent" android:layout_height="@dimen/utility_attachment_bar_height">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/utility_rating_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/utility_attachment_font_size" android:textColor="@color/utility_bar_rating_color" android:id="@id/utility_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+            <com.facebook.fbui.glyph.GlyphView android:layout_width="13.0dip" android:layout_height="13.0dip" android:src="@drawable/star_16" fb:glyphColor="@color/utility_bar_rating_color" />
+        </LinearLayout>
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/utility_attachment_font_size" android:ellipsize="end" android:gravity="center" android:id="@id/is_open" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1.0" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/utility_attachment_font_size" android:textColor="@color/utility_bar_text_color" android:gravity="center" android:id="@id/dollar_signs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/restaurant_checkins_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.facebook.fbui.glyph.GlyphView android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pin_16" fb:glyphColor="@color/utility_bar_text_color" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/utility_attachment_font_size" android:textColor="@color/utility_bar_text_color" android:ellipsize="end" android:gravity="center" android:id="@id/restaurant_checkins" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/restaurant_likes_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.facebook.fbui.glyph.GlyphView android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/group_16" fb:glyphColor="@color/utility_bar_text_color" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/utility_attachment_font_size" android:textColor="@color/utility_bar_text_color" android:ellipsize="end" android:gravity="center" android:id="@id/restaurant_likes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/view_menu" android:background="@drawable/utility_click_background" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.facebook.fbui.glyph.GlyphView android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fork_knife_16" fb:glyphColor="@color/utility_bar_text_color" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/utility_attachment_font_size" android:textColor="@color/utility_bar_text_color" android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/view_menu" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/view_photos" android:background="@drawable/utility_click_background" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.facebook.fbui.glyph.GlyphView android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/photo_stack_16" fb:glyphColor="@color/utility_bar_text_color" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/utility_attachment_font_size" android:textColor="@color/utility_bar_text_color" android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/view_photos" android:includeFontPadding="false" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

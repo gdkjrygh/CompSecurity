@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:orientation="vertical" android:layout_width="@dimen/small_page_item_width" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:background="@color/fbui_white" android:padding="@dimen/small_page_item_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/small_page_item_margin">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center_vertical" android:id="@id/icon" android:layout_width="@dimen/small_page_item_icon_size" android:layout_height="@dimen/small_page_item_icon_size" android:layout_margin="@dimen/small_page_item_icon_margin" fb:placeholderImage="@color/fbui_bg_dark" fb:placeholderImageScaleType="centerCrop" fb:actualImageScaleType="fitCenter" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.facebook.widget.text.BetterTextView android:textAppearance="@style/AppDiscovery.TextAppearance.SingleLine.Bold" android:textSize="@dimen/fbui_text_size_small_medium" android:textColor="@color/app_discovery_title_color" android:id="@id/name" android:fontFamily="roboto-medium" style="@style/AppDiscovery.Widget.Text" />
+                <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/small_page_item_text_padding" android:paddingBottom="@dimen/small_page_item_text_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.facebook.fbui.glyph.GlyphView android:layout_gravity="center_vertical" android:layout_width="@dimen/small_page_item_glyph_size" android:layout_height="@dimen/small_page_item_glyph_size" android:layout_marginRight="7.0dip" android:src="@drawable/fbui_download_l" fb:glyphColor="@color/app_discovery_subtitle_glyph_color" />
+                    <com.facebook.widget.text.BetterTextView android:textAppearance="@style/AppDiscovery.TextAppearance.SingleLine" android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/app_discovery_subtitle_color" android:layout_gravity="center" android:id="@id/action_textview" style="@style/AppDiscovery.Widget.Text" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</merge>

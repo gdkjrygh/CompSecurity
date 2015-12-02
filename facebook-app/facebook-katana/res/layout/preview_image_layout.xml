@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/photo_height" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/preview_lock" android:layout_width="@dimen/photo_width" android:layout_height="@dimen/photo_height">
+        <ImageView android:id="@id/preview_lock_image" android:layout_width="@dimen/photo_width" android:layout_height="@dimen/photo_height" android:scaleType="centerCrop" />
+        <ImageView android:id="@id/preview_lock_overlay" android:visibility="gone" android:layout_width="@dimen/photo_width" android:layout_height="@dimen/photo_height" android:src="@drawable/lock_overlay" />
+        <ImageView android:id="@id/lock_wf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/lock_wf" />
+        <com.facebook.resources.ui.FbTextView android:textSize="5.0sp" android:textColor="@color/white" android:layout_gravity="top|left|center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginTop="7.0dip" android:text="@string/wp_swipe_down" style="@style/shadowed_white_text" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/white" android:layout_gravity="bottom|left|center" android:id="@id/preview_image_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginBottom="21.0dip" style="@style/shadowed_white_text" />
+        <com.facebook.resources.ui.FbTextView android:textSize="5.0sp" android:textColor="@color/white" android:layout_gravity="bottom|left|center" android:id="@id/preview_image_date" android:paddingTop="1.0dip" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginBottom="13.0dip" style="@style/shadowed_white_text" />
+        <com.facebook.resources.ui.FbTextView android:textSize="5.0sp" android:textColor="@color/white" android:layout_gravity="bottom|left|center" android:id="@id/preview_image_weather" android:paddingTop="1.0dip" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginBottom="6.0dip" style="@style/shadowed_white_text" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/preview_launcher" android:visibility="gone" android:layout_width="@dimen/photo_width" android:layout_height="@dimen/photo_height" android:layout_marginLeft="18.0dip">
+        <ImageView android:id="@id/preview_launcher_image" android:layout_width="@dimen/photo_width" android:layout_height="@dimen/photo_height" android:scaleType="centerCrop" />
+        <ImageView android:id="@id/preview_launcher_overlay" android:visibility="gone" android:layout_width="@dimen/photo_width" android:layout_height="@dimen/photo_height" android:src="@drawable/launcher_overlay" />
+        <ImageView android:id="@id/launcher_wf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/launcher_wf" />
+        <include android:layout_gravity="top|left|center" android:id="@id/app_icons_text_1" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginLeft="4.0dip" android:layout_marginTop="25.0dip" android:layout_marginRight="4.0dip" layout="@layout/preview_icon_names" />
+        <include android:layout_gravity="top|left|center" android:id="@id/app_icons_text_2" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginLeft="4.0dip" android:layout_marginTop="52.0dip" android:layout_marginRight="4.0dip" layout="@layout/preview_icon_names" />
+    </FrameLayout>
+</LinearLayout>

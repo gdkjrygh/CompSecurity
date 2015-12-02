@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/see_first_padding" android:paddingTop="@dimen/see_first_padding" android:paddingRight="@dimen/see_first_padding" android:paddingBottom="@dimen/see_first_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_tiny_small" android:textColor="@color/fbui_bluegrey_30" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/timeline_title_see_first" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/switcher_layout" android:background="@drawable/see_first_divider" android:paddingTop="@dimen/see_first_padding" android:paddingBottom="@dimen/see_first_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/see_first_unfollow" />
+        <include layout="@layout/see_first_regular_follow" />
+        <include layout="@layout/see_first_follow" />
+    </LinearLayout>
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/fbui_bluegrey_30" android:gravity="center_horizontal" android:id="@id/see_first_notice" android:paddingTop="@dimen/see_first_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/timeline_notice_default" />
+</LinearLayout>

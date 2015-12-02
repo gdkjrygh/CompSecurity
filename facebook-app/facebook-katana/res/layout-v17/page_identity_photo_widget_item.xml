@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/pages_identity_photo_widget_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" orca:scaleType="centerCrop" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/page_identity_photo_attribution_container" android:background="@drawable/page_identity_carousel_image_gradient" android:paddingTop="15.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/pages_identity_photo_widget_photo">
+        <com.facebook.resources.ui.FbTextView android:textSize="?pagesSmallTextSize" android:textStyle="bold" android:textColor="@color/white" android:id="@id/pages_identity_photo_widget_owner" android:paddingLeft="@dimen/page_identity_carousel_item_text_padding" android:paddingRight="@dimen/page_identity_carousel_item_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/page_identity_carousel_item_text_padding" android:paddingRight="@dimen/page_identity_carousel_item_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbTextView android:textSize="?pagesSmallTextSize" android:textColor="?pagesLightTextColor" android:layout_gravity="center_vertical" android:id="@id/pages_identity_photo_widget_timestamp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center_vertical" android:id="@id/pages_identity_photo_widget_privacy_icon" android:visibility="gone" android:layout_width="@dimen/page_identity_attributions_icon_size" android:layout_height="@dimen/page_identity_attributions_icon_size" android:layout_marginLeft="6.0dip" android:layout_marginStart="6.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

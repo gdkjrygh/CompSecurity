@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/pymk_swipe_unit_view" android:background="@drawable/feed_attachment_background" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/pymk_suggestion_image" android:clickable="true" android:layout_width="@dimen/pymk_feed_unit_image_size" android:layout_height="@dimen/pymk_feed_unit_image_size" fb:actualImageScaleType="fitCenter" />
+            <ImageView android:id="@id/pymk_suggestion_blacklist_icon" android:background="@drawable/feed_unit_blacklist_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/feed_unit_blacklist_icon" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/pymk_suggestion_blacklist_description" android:layout_alignParentEnd="true" />
+        </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="@dimen/pymk_feed_unit_image_size" android:layout_height="@dimen/pymk_swipe_feed_unit_bottom_section_size">
+            <LinearLayout android:orientation="vertical" android:id="@id/pymk_suggestion_name_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textStyle="bold" android:textColor="@color/feed_story_link_text_color" android:id="@id/pymk_suggestion_name" android:background="@drawable/feed_generic_press_state_background_rounded" android:paddingTop="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:singleLine="true" android:includeFontPadding="false" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_micro_tiny" android:textColor="@color/feed_story_dark_gray_text_color" android:id="@id/pymk_suggestion_extra" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+            </LinearLayout>
+            <View android:background="@color/light_grey" android:layout_width="@dimen/one_px" android:layout_height="fill_parent" android:layout_weight="0.0" />
+            <com.facebook.friends.ui.FriendingButton android:id="@id/pymk_suggestion_action_icon" android:paddingLeft="1.0dip" android:paddingRight="2.0dip" android:paddingBottom="2.0dip" android:layout_width="40.0dip" android:layout_height="wrap_content" android:scaleType="center" android:layout_weight="0.0" fb:activeSrc="@drawable/friending_glyph_friends" fb:inactiveSrc="@drawable/friending_glyph_add_friend" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

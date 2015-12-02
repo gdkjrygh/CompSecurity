@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/feed_feedback_top_divider" android:background="@color/snowflake_ufi_separator" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" />
+    <FrameLayout android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <LinearLayout android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.facebook.widget.PhotoToggleButton android:layout_gravity="center_vertical" android:id="@id/like_button" android:paddingLeft="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" app:uncheckedImage="@drawable/snowflake_like_button" app:checkedImage="@drawable/snowflake_like_button_active" app:uncheckedContentDescription="@string/photo_like" app:checkedContentDescription="@string/photo_unlike" app:shouldBounce="true" />
+            <com.facebook.widget.PhotoButton android:layout_gravity="center_vertical" android:id="@id/comment_button" android:paddingLeft="16.0dip" android:paddingTop="0.0dip" android:paddingRight="0.0dip" android:paddingBottom="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/snowflake_comment_button" android:contentDescription="@string/photo_comment" />
+            <com.facebook.widget.PhotoButton android:layout_gravity="center_vertical" android:id="@id/tag_button" android:paddingLeft="16.0dip" android:paddingTop="0.0dip" android:paddingRight="0.0dip" android:paddingBottom="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/snowflake_tag_button" android:contentDescription="@string/photo_tag" />
+            <com.facebook.widget.PhotoButton android:layout_gravity="center_vertical" android:id="@id/share_button" android:paddingLeft="16.0dip" android:paddingTop="0.0dip" android:paddingRight="0.0dip" android:paddingBottom="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/snowflake_share_button" android:contentDescription="@string/photo_share" />
+            <com.facebook.widget.PhotoButton android:layout_gravity="center_vertical" android:id="@id/menu_button" android:paddingLeft="16.0dip" android:paddingTop="0.0dip" android:paddingRight="0.0dip" android:paddingBottom="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/snowflake_more_button" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="right" android:id="@id/feedback_text" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/snowflake_feedback_text" android:gravity="center_vertical" android:id="@id/like_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/snowflake_feedback_text" android:gravity="center_vertical" android:id="@id/comment_text" android:paddingLeft="12.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" />
+        </LinearLayout>
+    </FrameLayout>
+</merge>

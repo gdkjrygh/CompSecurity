@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <fragment android:name="com.facebook.places.common.PlacesMapFragment" android:id="@id/places_map_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip">
+        <com.facebook.places.common.SquareAndRowLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.facebook.resources.ui.FbEditText android:textColor="#ff545d6d" android:id="@id/place_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:hint="@string/places_name_hint" android:inputType="textCapWords|textAutoCorrect" />
+                <com.facebook.resources.ui.FbEditText android:textColor="#ff545d6d" android:id="@id/place_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:hint="@string/places_address" android:inputType="textCapWords|textAutoCorrect" />
+            </LinearLayout>
+            <fragment android:name="com.facebook.places.suggestions.common.SuggestProfilePicFragment" android:id="@id/suggest_profile_pic" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" />
+        </com.facebook.places.common.SquareAndRowLayout>
+        <com.facebook.resources.ui.FbEditText android:textColor="#ff545d6d" android:id="@id/place_city" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:hint="@string/places_city" android:inputType="textCapWords|textAutoCorrect" />
+        <com.facebook.resources.ui.FbEditText android:textColor="#ff545d6d" android:id="@id/place_phone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:hint="@string/places_phone_number" android:inputType="phone" />
+        <com.facebook.resources.ui.FbEditText android:textColor="#ff545d6d" android:id="@id/place_website" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:hint="@string/places_website" android:inputType="textUri" />
+    </LinearLayout>
+    <FrameLayout android:background="#fff7f8fb" android:layout_width="fill_parent" android:layout_height="32.0dip">
+        <View android:layout_gravity="top" android:background="@color/default_separator_color" android:layout_width="fill_parent" android:layout_height="@dimen/divider_width" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textStyle="bold" android:textColor="#ff545d6d" android:layout_gravity="center_vertical" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/places_categories" android:singleLine="true" android:textAllCaps="true" />
+        <View android:layout_gravity="bottom" android:background="@color/default_separator_color" android:layout_width="fill_parent" android:layout_height="@dimen/divider_width" />
+    </FrameLayout>
+</LinearLayout>

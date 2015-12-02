@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/fbui_bluegrey_70" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.ui.titlebar.Fb4aTitleBar android:id="@id/titlebar" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:hasJewel="false" fb:hasLauncherButton="false"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/fb4a_code_generator_margin" android:layout_marginRight="@dimen/fb4a_code_generator_margin" android:layout_marginStart="@dimen/fb4a_code_generator_margin" android:layout_marginEnd="@dimen/fb4a_code_generator_margin">
+        <com.facebook.resources.ui.FbTextView android:textSize="56.0sp" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/login_approvals_code" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="23435" android:fontFamily="sans-serif-thin" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/codegenerator_white_30a" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/code_generator_code_refresh" />
+        <FrameLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <com.facebook.widget.FacebookProgressCircleView android:id="@id/code_generator_timer" android:visibility="visible" style="@style/CodeGeneratorProgressCircle" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xxlarge" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/code_time_validity" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.facebook.resources.ui.FbButton android:textColor="@color/codegenerator_white_30a" android:layout_gravity="bottom|center" android:id="@id/code_generator_not_working" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="48.0dip" android:text="@string/code_generator_code_not_working_title" />
+</FrameLayout>

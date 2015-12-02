@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/page_video_list_item_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <GridView android:layout_gravity="fill" android:id="@id/videos_grid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:horizontalSpacing="0.0dip" android:verticalSpacing="0.0dip" android:numColumns="3" />
+        <ImageView android:layout_gravity="fill" android:id="@id/grid_overlay" android:background="@color/forty_percent_alpha_black" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/watch_more_button" android:background="@drawable/see_playlist" android:layout_width="@dimen/page_identity_video_feed_story_play_icon_size" android:layout_height="@dimen/page_identity_video_feed_story_play_icon_size" />
+            <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_white" android:layout_gravity="center_horizontal" android:paddingTop="@dimen/fbui_button_padding_top_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/watch_more" fb:fontFamily="roboto" fb:fontWeight="regular" />
+        </LinearLayout>
+    </FrameLayout>
+</merge>

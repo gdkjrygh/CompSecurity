@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/greetingcard_cover_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/greetingcard_background_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignTop="@id/greetingcard_linear" android:layout_alignBottom="@id/greetingcard_linear" fb:roundedCornerRadius="@dimen/greetingcard_cover_corners_radius" />
+        <LinearLayout android:orientation="vertical" android:id="@id/greetingcard_linear" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center_horizontal" android:id="@id/greetingcard_cover_image" android:layout_width="@dimen/greetingcard_cover_size" android:layout_height="@dimen/greetingcard_cover_size" android:layout_marginTop="@dimen/greetingcard_cover_top_margin" fb:actualImageScaleType="focusCrop" fb:roundAsCircle="true" />
+            <com.facebook.widget.text.BetterTextView android:textSize="@dimen/greetingcard_cover_text_size" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/greetingcard_cover_text" android:padding="@dimen/greetingcard_text_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/greetingcard_cover_shadow_size" android:layout_marginRight="@dimen/greetingcard_cover_shadow_size" android:layout_marginBottom="@dimen/greetingcard_cover_shadow_size" android:layout_marginStart="@dimen/greetingcard_cover_shadow_size" android:layout_marginEnd="@dimen/greetingcard_cover_shadow_size" />
+        </LinearLayout>
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    <View android:background="@drawable/gc_touchstate" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

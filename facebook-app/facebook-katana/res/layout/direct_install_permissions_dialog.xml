@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:id="@id/app_permissions_progress" android:padding="@dimen/direct_install_dialog_padding_large" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateOnly="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/app_permissions_retry_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <com.facebook.resources.ui.FbTextView android:textAppearance="@style/TextAppearance.TitleBar.Description" android:gravity="center" android:id="@id/app_permissions_retry_message" android:padding="@dimen/direct_install_dialog_padding_large" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.facebook.resources.ui.FbButton android:layout_gravity="center_horizontal" android:id="@id/app_permissions_retry_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/direct_install_dialog_padding_large" android:layout_marginBottom="@dimen/direct_install_dialog_padding_large" style="?attr/buttonPrimaryMedium" />
+        <com.facebook.resources.ui.FbTextView android:textAppearance="@style/TextAppearance.TitleBar.Description" android:textColor="@color/fbui_text_link" android:layout_gravity="center_horizontal" android:id="@id/app_permissions_network_settings" android:padding="@dimen/direct_install_dialog_padding_large" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+            <com.facebook.resources.ui.ExpandingEllipsizingTextView android:textSize="@dimen/direct_install_dialog_description_font_size" android:textColor="?android:textColorPrimary" android:ellipsize="end" android:id="@id/description" android:paddingLeft="@dimen/direct_install_dialog_padding_tiny" android:paddingRight="@dimen/direct_install_dialog_padding_tiny" android:paddingBottom="@dimen/direct_install_dialog_padding_medium" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:includeFontPadding="false" fb:ellipsisText="@string/directinstall_ellipsis_more" />
+        </ScrollView>
+        <ExpandableListView android:id="@id/app_permissions_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/direct_install_dialog_padding_small" android:cacheColorHint="@android:color/transparent" android:groupIndicator="@android:color/transparent" android:childDivider="@android:color/transparent" android:dividerHeight="0.0dip" />
+    </LinearLayout>
+</LinearLayout>

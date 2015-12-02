@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:background="@color/page_identity_upsell_background" android:padding="?pagesDefaultPadding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/page_admin_app_icon" android:paddingRight="?pagesDefaultPadding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_pages" android:layout_alignParentLeft="true" />
+        <com.facebook.resources.ui.FbTextView android:id="@id/page_admin_upsell_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/page_identity_pma" android:layout_toRightOf="@id/page_admin_app_icon" style="@style/PageUIButtonCardText" />
+        <com.facebook.resources.ui.FbTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:text="@string/page_identity_pma_desc" android:layout_toRightOf="@id/page_admin_app_icon" android:layout_below="@id/page_admin_upsell_title" style="@style/ChambrayText.Light" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    <include layout="@layout/page_card_divider" />
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/page_identity_pma_notifications_button" android:background="@drawable/page_ui_card_clickable_unit_background" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChambrayCardUnit">
+        <com.facebook.resources.ui.FbTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/page_identity_pma_notifications" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/Pages.TextAppearance.Dark.Large.Bold" />
+        <com.facebook.resources.ui.FbTextView android:id="@id/page_identity_pma_notification_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="?pagesDefaultPadding" android:layout_toLeftOf="@id/page_identity_pma_notification_icon" android:layout_centerVertical="true" style="@style/ChambrayText.Light.Bold" />
+        <ImageView android:id="@id/page_identity_pma_notification_icon" android:background="@drawable/page_admin_upsell_leav_app_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    <include android:id="@id/page_admin_upsell_card_divider" android:visibility="gone" layout="@layout/page_card_divider" />
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/page_identity_pma_messages_button" android:background="@drawable/page_ui_card_clickable_unit_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChambrayCardUnit">
+        <com.facebook.resources.ui.FbTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/page_identity_pma_messages" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/Pages.TextAppearance.Dark.Large.Bold" />
+        <com.facebook.resources.ui.FbTextView android:id="@id/page_identity_pma_message_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="?pagesDefaultPadding" android:layout_toLeftOf="@id/page_identity_pma_message_icon" android:layout_centerVertical="true" style="@style/Pages.TextAppearance.Light.Bold" />
+        <ImageView android:id="@id/page_identity_pma_message_icon" android:background="@drawable/page_admin_upsell_leav_app_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+</com.facebook.widget.CustomLinearLayout>

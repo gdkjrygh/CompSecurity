@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/panel" android:paddingTop="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="center" android:paddingLeft="28.0dip" android:paddingRight="28.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbTextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="@color/black" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/platformattribution_layout_dialog_title" />
+        <ImageButton android:layout_gravity="right|center" android:id="@id/close_button" android:background="@null" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/close_dialog_button" />
+    </FrameLayout>
+    <RelativeLayout android:layout_gravity="center" android:layout_width="200.0dip" android:layout_height="200.0dip" android:layout_margin="14.0dip">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center" android:id="@id/layout_promotion_image" android:visibility="gone" android:layout_width="200.0dip" android:layout_height="200.0dip" android:layout_centerInParent="true" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/layout_promotion_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <com.facebook.resources.ui.FbTextView android:textSize="13.0sp" android:textColor="@color/black" android:gravity="center" android:paddingLeft="26.0dip" android:paddingRight="26.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/platformattribution_layout_dialog_description" />
+    <com.facebook.widget.text.BetterButton android:textAppearance="@style/TextAppearance.FBUi.Button.Light.Special.Large" android:textColor="@color/fbui_btn_light_special_text" android:layout_gravity="center" android:id="@id/layout_install_button" android:background="@drawable/layout_install_button_drawable" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/platformattribution_layout_dialog_get_layout_button" fb:allCaps="true" />
+</LinearLayout>

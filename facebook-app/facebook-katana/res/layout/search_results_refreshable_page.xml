@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.refreshableview.RefreshableListViewContainer android:id="@id/search_results_refresh_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.widget.refreshableview.RefreshableViewOverflowItem android:id="@id/search_results_page_refresh_overflow" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.widget.refreshableview.RefreshableViewItem android:id="@id/search_results_page_refresh_item" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.widget.listview.BetterListView android:layout_gravity="center" android:id="@id/search_results_page_list_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:dividerHeight="0.0px" />
+    </com.facebook.widget.refreshableview.RefreshableListViewContainer>
+    <include layout="@layout/search_results_base_page" />
+</merge>

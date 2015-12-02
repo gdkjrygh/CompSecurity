@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/top_detail_view_stub" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <android.support.v7.internal.widget.ViewStubCompat android:id="@id/message_left_bubble_sender_name" android:layout="@layout/orca_message_item_sender_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?messageItemViewLeftTextMargin" />
+    <LinearLayout android:layout_gravity="left" android:orientation="horizontal" android:id="@id/message_container" android:paddingRight="@dimen/orca_message_other_user_right_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.facebook.user.tiles.UserTileView android:id="@id/message_user_tile" style="?messageItemViewUserTileStyle" />
+        <com.facebook.orca.threadview.MessageContentContainer android:gravity="center_vertical" android:layout_gravity="left" android:orientation="vertical" android:id="@id/message_content_container" android:focusable="true" android:clickable="true" android:longClickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minWidth="@dimen/orca_message_bubble_min_size" android:minHeight="@dimen/orca_message_bubble_min_size" android:layout_weight="1.0">
+            <com.facebook.widget.text.BetterTextView android:gravity="left|center" android:id="@id/message_text" orca:minimallyWide="true" orca:maximallyWideThreshold="20.0dip" orca:adjustLRGravityByTextDirectionCompat="true" orca:layout_contentType="text" style="?messageItemViewOtherUserStyle" />
+            <include layout="@layout/orca_message_content_stubs" />
+        </com.facebook.orca.threadview.MessageContentContainer>
+        <android.support.v7.internal.widget.ViewStubCompat android:layout_gravity="left|center" android:id="@id/gutter_stub" android:layout="@layout/orca_message_item_gutter" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</merge>

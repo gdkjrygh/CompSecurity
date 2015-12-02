@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/root_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="74.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/permanent_cards_container" android:paddingLeft="@dimen/page_margin" android:paddingBottom="@dimen/home_standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="-5.0dip" android:animateLayoutChanges="true" />
+        <View android:id="@id/cards_container_separator" android:visibility="gone" android:layout_marginLeft="@dimen/separator_margin" android:layout_marginRight="@dimen/separator_margin" android:layout_marginStart="@dimen/separator_margin" android:layout_marginEnd="@dimen/separator_margin" style="@style/horizontal_button_bar" />
+        <com.facebook.dash.ui.LockCardScrollableCardsScrollView android:id="@id/impermanent_cards_scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/page_margin" android:paddingRight="@dimen/page_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+                <Space android:id="@id/impermanent_cards_container_top_space" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/home_half_standard_padding" />
+                <LinearLayout android:orientation="vertical" android:id="@id/impermanent_cards_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <Space android:id="@id/impermanent_cards_container_bottom_space" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/home_standard_padding" />
+            </LinearLayout>
+        </com.facebook.dash.ui.LockCardScrollableCardsScrollView>
+    </LinearLayout>
+</merge>

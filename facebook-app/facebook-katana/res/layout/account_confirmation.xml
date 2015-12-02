@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:hasBackButton="false" fb:navless="true" />
+    <ScrollView android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="20.0dip" android:paddingTop="26.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textStyle="bold" android:id="@id/code_resent_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:id="@id/instructions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/fbui_text_size_large" />
+            <View android:focusable="true" android:focusableInTouchMode="true" android:visibility="visible" android:nextFocusRight="@id/code_input" android:nextFocusDown="@id/code_input" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+            <com.facebook.resources.ui.FbEditText android:id="@id/code_input" android:background="@drawable/orca_login_inputfield_background" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_marginBottom="8.0dip" android:hint="@string/input_code" android:singleLine="true" android:inputType="number" android:imeOptions="actionDone" android:contentDescription="@string/input_code" />
+            <com.facebook.resources.ui.FbButton android:id="@id/submit_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/confirm" android:contentDescription="@string/confirm" style="?attr/buttonPrimaryLarge" />
+            <View android:background="?android:textColorTertiary" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="16.0dip" />
+            <com.facebook.resources.ui.FbButton android:textColor="@color/secondary_button_text" android:id="@id/resend_code_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/send_code_again" android:contentDescription="@string/send_code_again" style="?attr/buttonRegularLarge" />
+            <com.facebook.resources.ui.FbButton android:textColor="@color/secondary_button_text" android:id="@id/change_contactpoint_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" style="?attr/buttonRegularLarge" />
+            <com.facebook.resources.ui.FbButton android:textColor="@color/secondary_button_text" android:id="@id/change_contactpoint_type_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" style="?attr/buttonRegularLarge" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

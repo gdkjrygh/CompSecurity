@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.orca.creation.CreateThreadActivityView android:id="@id/create_thread_overlay_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/create_thread_linear_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:title="@string/thread_new_conversation_title" orca:navless="true" />
+        <View android:id="@id/banner_notification_placeholder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.widget.OverlayLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.facebook.orca.common.ui.widgets.CreateThreadCustomLayout android:id="@id/create_thread_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?attr/createThreadCustomLayoutStyle">
+                <fragment android:name="com.facebook.orca.contacts.picker.ContactMultipickerFragment" android:id="@id/suggestions_multipicker_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <fragment android:name="com.facebook.orca.compose.ComposeFragment" android:id="@id/create_thread_compose" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.facebook.orca.common.ui.widgets.CreateThreadCustomLayout>
+        </com.facebook.widget.OverlayLayout>
+        <include layout="@layout/custom_keyboard_layout" />
+    </LinearLayout>
+</com.facebook.orca.creation.CreateThreadActivityView>

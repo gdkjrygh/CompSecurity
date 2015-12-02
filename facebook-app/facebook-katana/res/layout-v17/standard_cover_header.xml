@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ViewStub android:id="@id/standard_header_face_pile" android:layout="@layout/standard_facepile_cover" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.caspian.ui.standardheader.StandardCoverPhotoView android:id="@id/standard_cover_photo_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/standard_cover_photo_edit_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:layout_gravity="bottom|right|center" android:id="@id/standard_cover_photo_edit_icon_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <include layout="@layout/standard_profile_image_frame" />
+        <com.facebook.caspian.ui.standardheader.StandardHeaderTitlesContainer android:gravity="center_vertical" android:orientation="vertical" android:id="@id/standard_header_titles_container" android:layout_width="?headerTitlesWidth" android:layout_height="?headerTitlesHeight" android:layout_marginLeft="?headerTitlesMarginStart" android:layout_marginTop="?headerTitlesMarginTop" android:layout_marginRight="?headerTitlesMarginEnd" android:layout_marginBottom="?headerTitlesMarginBottom" android:layout_marginStart="?headerTitlesMarginStart" android:layout_marginEnd="?headerTitlesMarginEnd">
+            <com.facebook.resources.ui.FbTextView android:textAppearance="?contentViewTitleStyle" android:ellipsize="end" android:gravity="?headerTitlesGravity" android:id="@id/standard_header_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" />
+            <com.facebook.resources.ui.FbTextView android:textAppearance="?contentViewSubtitleStyle" android:ellipsize="end" android:gravity="?headerTitlesGravity" android:id="@id/standard_header_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" />
+        </com.facebook.caspian.ui.standardheader.StandardHeaderTitlesContainer>
+    </com.facebook.widget.CustomLinearLayout>
+    <View android:id="@id/standard_header_blue_overlay" android:background="?titleBarBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

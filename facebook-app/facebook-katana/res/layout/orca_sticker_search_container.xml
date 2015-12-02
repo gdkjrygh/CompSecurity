@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.resources.ui.FbTextView android:gravity="center" android:id="@id/sticker_tag_matches_text" android:paddingTop="@dimen/sticker_search_tags_grid_top_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/sticker_tag_featured_tags_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/sticker_tag_results_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/sticker_tag_search_frame" android:background="?stickerKeyboardBackgroundColor" android:paddingLeft="@dimen/sticker_search_left_padding" android:paddingRight="@dimen/sticker_search_right_padding" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0">
+            <com.facebook.resources.ui.FbEditText android:id="@id/sticker_tag_search_edit_box" android:background="@drawable/orca_textfield_searchview" android:layout_width="fill_parent" android:layout_height="40.0dip" android:singleLine="true" android:imeOptions="actionDone|flagNoExtractUi" />
+            <LinearLayout android:gravity="center_vertical" android:id="@id/sticker_tag_search_hint" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/sticker_tag_search_hint_icon" android:layout_width="@dimen/sticker_search_edittext_icon_size" android:layout_height="@dimen/sticker_search_edittext_icon_size" android:src="@drawable/orca_stickers_search_tab" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/sticker_search_text_size" android:textColor="@color/grey50" android:gravity="center_vertical" android:id="@id/sticker_tag_search_hint_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/sticker_tags_search_bar_hint" />
+            </LinearLayout>
+        </FrameLayout>
+        <ImageView android:layout_gravity="right|center" android:id="@id/sticker_tag_remove_tag" android:layout_width="@dimen/sticker_search_edittext_icon_size" android:layout_height="@dimen/sticker_search_edittext_icon_size" android:src="@drawable/notif_x" android:contentDescription="@string/clearing_stickers_search_label" />
+    </LinearLayout>
+    <com.facebook.resources.ui.FbTextView android:gravity="center" android:id="@id/sticker_tag_loading_message" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/business_margin_default" style="@style/business_bubble_margin_horizontal_default">
+        <ImageView android:id="@id/ride_receipt_bubble_origin_icon" android:layout_width="@dimen/ride_bubble_map_dot_size" android:layout_height="@dimen/ride_bubble_map_dot_size" android:layout_marginRight="@dimen/ride_bubble_map_dot_margin" android:src="@drawable/msgr_ic_location_dots" />
+        <com.facebook.widget.text.BetterTextView android:id="@id/ride_receipt_bubble_origin_address" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/business_bubble_text_default" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/business_bubble_margin_horizontal_default">
+        <ImageView android:id="@id/ride_receipt_bubble_destination_icon" android:layout_width="@dimen/ride_bubble_map_dot_size" android:layout_height="@dimen/ride_bubble_map_dot_size" android:layout_marginRight="@dimen/ride_bubble_map_dot_margin" android:src="@drawable/msgr_ic_location_dots" />
+        <com.facebook.widget.text.BetterTextView android:id="@id/ride_receipt_bubble_destination_address" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/business_bubble_text_default" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/business_margin_default" android:layout_marginBottom="@dimen/business_margin_default" style="@style/business_bubble_margin_horizontal_default">
+        <com.facebook.messaging.business.common.view.BusinessPairTextView android:id="@id/ride_bubble_type" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" fb:titleString="@string/ride_bubble_type_title" fb:textOrientation="vertical" />
+        <com.facebook.messaging.business.common.view.BusinessPairTextView android:id="@id/ride_bubble_miles" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" fb:titleString="@string/ride_bubble_miles_title" fb:textOrientation="vertical" />
+        <com.facebook.messaging.business.common.view.BusinessPairTextView android:id="@id/ride_bubble_trip_time" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" fb:titleString="@string/ride_bubble_trip_time_title" fb:textOrientation="vertical" />
+    </LinearLayout>
+</merge>

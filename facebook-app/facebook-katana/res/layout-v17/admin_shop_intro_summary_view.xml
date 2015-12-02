@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/fbui_text_light" android:layout_gravity="center_vertical" android:id="@id/header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/commerce_publishing_intro_summary_header" fb:fontFamily="roboto" fb:fontWeight="regular" />
+        <com.facebook.fbui.glyph.GlyphView android:layout_gravity="center_vertical" android:id="@id/info_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/fbui_padding_half_standard" android:scaleType="center" android:layout_marginStart="@dimen/fbui_padding_half_standard" fb:glyphColor="@color/fbui_bluegrey_20" fb:source="@drawable/glyph_info_solid_20" />
+    </LinearLayout>
+    <com.facebook.widget.text.BetterEditTextView android:id="@id/edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/admin_shop_layout_margin_top_regular" android:maxLength="@integer/intro_summary_max_length" fb:fontFamily="roboto" style="@style/AdminShopIntroSummaryEditTextStyle" />
+    <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/fbui_text_light" android:gravity="right" android:id="@id/word_limit_text_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/admin_shop_layout_margin_top_regular" fb:fontFamily="roboto" fb:fontWeight="regular" />
+</merge>

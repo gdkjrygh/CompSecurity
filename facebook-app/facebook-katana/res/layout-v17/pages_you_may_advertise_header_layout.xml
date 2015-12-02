@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/pyma_header_top_margin" android:layout_marginBottom="@dimen/pyma_header_bottom_margin" android:layout_weight="1.0">
+        <com.facebook.fbui.glyph.GlyphView android:layout_gravity="center_vertical" android:id="@id/branding_image_view" android:layout_width="@dimen/pyma_only_me_image_size" android:layout_height="@dimen/pyma_only_me_image_size" android:layout_marginRight="@dimen/pyma_header_standard_padding" android:src="@drawable/privacy_scope_only_me" android:layout_marginEnd="@dimen/pyma_header_standard_padding" fb:actualImageScaleType="fitXY" fb:glyphColor="@color/fbui_bluegrey_30" />
+        <com.facebook.feed.rows.views.ContentTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_bluegrey_30" android:layout_gravity="center_vertical" android:id="@id/story_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feed_pyma_only_you" />
+    </LinearLayout>
+    <include layout="@layout/header_layout_menu" />
+</merge>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.text.BetterTextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/month_name" android:layout_width="wrap_content" android:layout_height="@dimen/calendar_month_names_text_height" fb:allCaps="true" style="@android:style/TextAppearance.Medium" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/day_names" android:layout_width="fill_parent" android:layout_height="@dimen/calendar_day_names_text_height" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="6.0dip" android:layout_marginStart="2.0dip" android:layout_marginEnd="2.0dip">
+        <com.facebook.resources.ui.FbTextView android:gravity="center" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.facebook.resources.ui.FbTextView android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.facebook.resources.ui.FbTextView android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.facebook.resources.ui.FbTextView android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.facebook.resources.ui.FbTextView android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.facebook.resources.ui.FbTextView android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.facebook.resources.ui.FbTextView android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.facebook.resources.ui.FbTextView android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:gravity="fill_horizontal" android:id="@id/day_names_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:src="?dividerHorizontal" android:scaleType="fitXY" />
+    <ListView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" android:cacheColorHint="@android:color/transparent" android:fastScrollEnabled="false" android:overScrollMode="never" />
+</LinearLayout>

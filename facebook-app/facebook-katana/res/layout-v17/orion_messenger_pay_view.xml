@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:orientation="vertical" android:background="@color/fbui_white" android:paddingLeft="32.0dip" android:paddingRight="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/payment_send_money_receiver_border" android:layout_width="fill_parent" android:layout_height="64.0dip">
+            <com.facebook.user.tiles.UserTileView android:id="@id/receiver_tile_img" android:layout_width="36.0dip" android:layout_height="36.0dip" fb:asCircle="true" />
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginStart="10.0dip">
+                <ProgressBar android:layout_gravity="center" android:id="@id/recipient_name_progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleSmallTitle" />
+                <com.facebook.resources.ui.FbTextView android:textSize="18.0sp" android:id="@id/receiver_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </FrameLayout>
+        </LinearLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="140.0dip" android:layout_marginTop="90.0dip">
+            <com.facebook.messaging.payment.value.input.DollarIconEditText android:textSize="@dimen/payment_value_text_size_extra_large" android:textColor="@color/payment_action_blue" android:textColorHint="@color/payment_no_action_gray_text_color" android:layout_gravity="center" android:id="@id/payment_value_edit_text" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/send_money_no_value_entered" android:cursorVisible="false" android:digits="0123456789.," android:inputType="numberDecimal" android:imeOptions="actionDone" android:fontFamily="sans-serif-thin" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/payment_method_info" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="220.0dip">
+            <ProgressBar android:layout_gravity="center" android:id="@id/payment_card_progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleSmallTitle" />
+            <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/send_composer_text_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0.0dip" android:minHeight="0.0dip">
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/payment_no_action_gray_text_color" android:id="@id/send_composer_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/lock" android:drawablePadding="8.0dip" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/orca_neue_primary" android:id="@id/send_composer_text_learn_more" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/send_composer_text_learn_more" style="@style/PaymentActionTextViewStyle" />
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/payment_card_button_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0.0dip" android:minHeight="0.0dip">
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/payment_no_action_gray_text_color" android:id="@id/payment_card_info" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <com.facebook.resources.ui.FbButton android:textColor="@color/payment_action_blue" android:id="@id/payment_card_change_button" android:background="@drawable/payment_enter_payment_change_card_button_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/send_money_change_card_button_text" style="@style/Widget.FacebookHolo.Light.Button.Borderless.Small" />
+            </LinearLayout>
+        </FrameLayout>
+        <com.facebook.messaging.payment.value.input.MemoInputView android:id="@id/memo_input" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/payment_method_info" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+</ScrollView>

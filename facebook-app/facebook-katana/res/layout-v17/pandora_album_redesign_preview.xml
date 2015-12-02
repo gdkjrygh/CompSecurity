@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.photos.albums.PandoraAlbumUploadButtonView android:id="@id/upload_button" android:background="@color/white" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.facebook.photos.albums.PandoraAlbumLinesHeaderView android:layout_gravity="left" android:id="@id/album_header_lines_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/pandora_album_edge_size" android:layout_marginStart="@dimen/pandora_album_edge_size" />
+    <com.facebook.photos.albums.PandoraAlbumLinesHeaderView android:layout_gravity="right" android:id="@id/album_header_lines_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/pandora_album_edge_size_right" android:layout_marginEnd="@dimen/pandora_album_edge_size_right" />
+    <LinearLayout android:orientation="vertical" android:id="@id/album_group_left" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small_medium" android:textColor="@color/pandora_album_name_redesign" android:ellipsize="end" android:id="@id/album_name_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small_medium" android:textColor="@color/pandora_album_count_redesign" android:ellipsize="end" android:id="@id/album_photo_count_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/album_group_right" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small_medium" android:textColor="@color/pandora_album_name_redesign" android:ellipsize="end" android:id="@id/album_name_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small_medium" android:textColor="@color/pandora_album_count_redesign" android:ellipsize="end" android:id="@id/album_photo_count_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+    <com.facebook.photos.albums.AlbumsRowView android:layout_gravity="top" android:id="@id/album_cover" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</merge>

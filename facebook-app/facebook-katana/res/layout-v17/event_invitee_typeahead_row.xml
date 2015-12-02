@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@id/typeahead_item_row_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/invitee_fragment_padding_left" android:layout_marginRight="@dimen/invitee_fragment_padding_left" android:layout_marginStart="@dimen/invitee_fragment_padding_left" android:layout_marginEnd="@dimen/invitee_fragment_padding_left">
+        <LinearLayout android:gravity="center_vertical" android:paddingTop="@dimen/event_invitee_typeahead_row_padding_top" android:paddingBottom="@dimen/event_invitee_typeahead_row_padding_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioButton android:id="@id/is_picked_checkbox" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/event_invitee_typeahead_row_check_margin_left" android:textOn="@null" android:textOff="@null" android:text="@null" android:layout_marginEnd="@dimen/event_invitee_typeahead_row_check_margin_left" style="@style/Widget.CheckBox.FBUi.Light" />
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/url_icon" android:layout_width="@dimen/event_invitee_typeahead_row_image_width" android:layout_height="@dimen/event_invitee_typeahead_row_image_width" android:layout_marginRight="@dimen/event_invitee_typeahead_row_image_margin_right" android:contentDescription="@string/invitee_profile_pic" android:layout_marginEnd="@dimen/event_invitee_typeahead_row_image_margin_right" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/tokenizedtypeahead_fig_text_right_margin" android:layout_marginEnd="@dimen/tokenizedtypeahead_fig_text_right_margin">
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/black" android:ellipsize="end" android:id="@id/item_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="?android:textColorTertiary" android:ellipsize="end" android:id="@id/item_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@id/divider_fig" android:background="@color/fbui_bluegrey_5" android:layout_width="fill_parent" android:layout_height="@dimen/event_invitee_typeahead_divider_height" />
+    </LinearLayout>
+    <View android:id="@id/already_invited_overlay" android:background="@color/event_already_invited_grey" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/composer_harrison_plus_titlebar_wrapper" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/loading_view" android:background="@color/black_alpha_30" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center" android:id="@id/spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyle" />
+        </FrameLayout>
+        <ScrollView android:background="@color/fbui_wash_mobile" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:id="@id/cover_photo_layout" layout="@layout/home_cover" />
+                <LinearLayout android:orientation="vertical" android:background="@drawable/card_background" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_tiny_small" android:textStyle="bold" android:textColor="@color/fbui_bluegrey_50" android:background="@color/fbui_bluegrey_2" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="@string/places_home_location_title" />
+                    <FrameLayout android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip">
+                        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textStyle="bold" android:textColor="@android:color/secondary_text_light_nodisable" android:id="@id/city_text_view" android:background="@drawable/fbui_edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/places_city" />
+                        <ImageView android:layout_gravity="right|center" android:id="@id/city_chevron_icon" android:layout_width="14.0dip" android:layout_height="14.0dip" android:src="@drawable/chevron_right_light_grey_s" android:contentDescription="@string/places_city" />
+                    </FrameLayout>
+                    <com.facebook.resources.ui.FbEditText android:textSize="@dimen/fbui_text_size_medium" android:textStyle="bold" android:textColor="@android:color/primary_text_light" android:id="@id/neighborhood_text_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginBottom="12.0dip" android:hint="@string/places_neighborhood_hint" android:singleLine="true" />
+                    <com.facebook.resources.ui.FbEditText android:textSize="@dimen/fbui_text_size_medium" android:textStyle="bold" android:textColor="@android:color/primary_text_light" android:id="@id/address_text_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginBottom="12.0dip" android:hint="@string/places_address_hint" android:singleLine="true" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:background="@drawable/card_background" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_tiny_small" android:textStyle="bold" android:textColor="@color/fbui_bluegrey_50" android:background="@color/fbui_bluegrey_2" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="@string/places_home_privacy_title" />
+                    <include android:id="@id/privacy_layout" layout="@layout/place_privacy_selector" />
+                    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@id/flower" android:paddingRight="10.0dip" android:layout_width="100.0dip" android:layout_height="74.0dip" android:src="@drawable/flower_right" android:layout_alignParentLeft="true" />
+                        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_bluegrey_30" android:background="@color/white" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/places_home_privacy_description" android:layout_toRightOf="@id/flower" />
+                    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+                </LinearLayout>
+                <com.facebook.resources.ui.FbButton android:textColor="@color/fbui_red" android:id="@id/delete_home_button" android:background="@drawable/card_background" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/delete_home_text" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>

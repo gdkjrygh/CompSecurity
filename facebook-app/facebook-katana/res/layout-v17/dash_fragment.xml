@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dash_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.dash.wallpaper.ui.WallpaperView android:id="@id/wallpaper" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/background_image_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/background_image_back" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <ImageView android:id="@id/background_image_front" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/blackout" android:background="@drawable/black_tiled" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/dash_loading_spinner" android:visibility="gone" android:layout_width="@dimen/feed_story_loading_spinner_dim" android:layout_height="@dimen/feed_story_loading_spinner_dim" android:indeterminateOnly="true" android:indeterminateDrawable="@drawable/white_spinner_indeterminate" android:indeterminateDuration="1500" />
+    <FrameLayout android:id="@id/background_overlay_full" android:background="@color/notifications_background_overlay_full_noblur" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/background_overlay_partial" android:background="@drawable/up_gradient" android:layout_width="fill_parent" android:layout_height="260.0dip" />
+    <FrameLayout android:layout_gravity="top" android:id="@id/top_shadow" android:background="@drawable/up_gradient" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+    <FrameLayout android:layout_gravity="top|right|center" android:id="@id/side_shadow" android:background="@drawable/side_gradient" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="fill_parent" android:layout_marginRight="-5.0dip" android:layout_marginEnd="-5.0dip" />
+    <View android:id="@id/unlock_gradient" android:background="@drawable/down_gradient" android:layout_width="fill_parent" android:layout_height="160.0dip" />
+    <FrameLayout android:id="@id/dash_fragment_pager_frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/unlock_text_view_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbTextView android:id="@id/unlock_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/page_margin" android:text="@string/dash_lockcard_swipe_down_to_unlock" android:layout_marginStart="@dimen/page_margin" style="@style/shadowed_white_text.regular.large" />
+        </FrameLayout>
+        <com.facebook.widget.TouchInterceptorFrameLayout android:id="@id/touch_receiver" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/drag_down_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:id="@id/story_pager_container" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" />
+            </FrameLayout>
+        </com.facebook.widget.TouchInterceptorFrameLayout>
+        <com.facebook.dash.ui.DashEmptyStoryView android:gravity="center" android:id="@id/empty_story_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" />
+    </FrameLayout>
+    <ImageView android:layout_gravity="top|right|center" android:id="@id/settings_dialog_button" android:padding="@dimen/lockscreen_settings_end_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/notifications_dots_icon" />
+</FrameLayout>

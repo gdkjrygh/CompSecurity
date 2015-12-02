@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/story_attachment_image" android:layout_width="@dimen/feed_attachment_image_size" android:layout_height="@dimen/feed_attachment_image_size" android:layout_alignTop="@id/feed_story_subattachment_divider" android:layout_alignParentLeft="true" android:layout_alignWithParentIfMissing="true" />
+    <View android:id="@id/feed_story_subattachment_divider" android:background="@color/feed_subattachment_divider_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/one_px" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/story_attachment_right_section" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/story_attachment_image" android:layout_centerVertical="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/story_attachment_text_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/feed_story_attachment_padding" android:layout_weight="1.0">
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textStyle="bold" android:textColor="@color/feed_story_dark_gray_text_color" android:id="@id/story_attachment_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="?android:textColorTertiary" android:id="@id/story_attachment_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="?android:textColorTertiary" android:id="@id/story_attachment_sponsored" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <ImageView android:id="@id/story_attachment_leaveapp_icon" android:paddingLeft="@dimen/feed_action_icon_padding_left" android:paddingRight="@dimen/feed_action_icon_padding_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/feed_icon_exit" android:scaleType="fitXY" />
+        <View android:id="@id/attachment_action_icon_divider" android:background="@drawable/attachment_action_button_divider" android:visibility="gone" android:layout_width="@dimen/feed_attachment_divider_width" android:layout_height="@dimen/feed_attachment_divider_length" />
+    </LinearLayout>
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

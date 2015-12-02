@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/fbui_white" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:hasBackButton="true" />
+        <ScrollView android:scrollbarAlwaysDrawVerticalTrack="true" android:id="@id/refresher_scroll_view" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.widget.loadingindicator.LoadingIndicatorView android:id="@id/loading_indicator_view" android:paddingBottom="52.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:contentLayout="@layout/profile_refresher_body" />
+        </ScrollView>
+    </LinearLayout>
+    <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:gravity="center_horizontal" android:id="@id/profile_refresher_bottom_bar" android:background="@color/fbui_blue_90" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0" android:layout_alignParentBottom="true" fb:showDividers="middle" fb:dividerPadding="6.0dip" fb:divider="@color/fbui_white_20" fb:dividerThickness="0.5dip">
+        <com.facebook.resources.ui.FbButton android:textSize="@dimen/fbui_text_size_small" android:textStyle="bold" android:textColor="@color/fbui_white" android:gravity="center" android:id="@id/picture_from_album_text" android:background="@drawable/refresher_bottom_bar_bg" android:layout_width="0.0dip" android:layout_height="@dimen/publisher_height" android:text="@string/profile_refresher_select_photo_from_album" android:layout_weight="0.5" />
+        <com.facebook.resources.ui.FbButton android:textSize="@dimen/fbui_text_size_small" android:textStyle="bold" android:textColor="@color/fbui_white" android:gravity="center" android:id="@id/picture_from_upload_text" android:background="@drawable/refresher_bottom_bar_bg" android:layout_width="0.0dip" android:layout_height="@dimen/publisher_height" android:text="@string/profile_refresher_upload_photo" android:layout_weight="0.5" />
+    </com.facebook.fbui.widget.layout.SegmentedLinearLayout>
+</merge>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/throwback_header_divider" android:showDividers="beginning">
+        <LinearLayout android:gravity="left" android:orientation="horizontal" android:padding="@dimen/fbui_padding_standard" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="top|left|center" android:layout_gravity="left|center" android:orientation="vertical" android:id="@id/megaphone_text_layout" android:paddingRight="@dimen/fbui_drawable_padding" android:layout_width="@dimen/throwback_megaphone_text_width" android:layout_height="wrap_content" android:layout_weight="3.0">
+                <com.facebook.resources.ui.FbTextView android:id="@id/throwback_megaphone_title" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/GoodwillMegaphoneTitle" />
+                <com.facebook.resources.ui.FbTextView android:id="@id/throwback_megaphone_subtitle" android:paddingTop="@dimen/fbui_padding_text" android:paddingBottom="@dimen/fbui_padding_standard" android:focusable="true" android:nextFocusDown="@id/throwback_megaphone_button" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GoodwillMegaphoneSubtitle" />
+                <com.facebook.resources.ui.FbButton android:id="@id/throwback_megaphone_button" android:background="@drawable/throwback_megaphone_button" android:paddingLeft="@dimen/fbui_button_padding_left_small" android:paddingTop="@dimen/fbui_button_padding_top_small" android:paddingRight="@dimen/fbui_button_padding_right_small" android:paddingBottom="@dimen/fbui_button_padding_bottom_small" android:focusable="true" android:nextFocusUp="@id/throwback_megaphone_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/GoodwillMegaphoneButton" />
+            </LinearLayout>
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="top|right|center" android:id="@id/throwback_megaphone_image" android:layout_width="@dimen/throwback_megaphone_image_width" android:layout_height="fill_parent" android:layout_marginTop="@dimen/throwback_megaphone_image_padding_top" android:layout_weight="1.0" fb:actualImageScaleType="fitCenter" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageButton android:gravity="center" android:layout_gravity="top|right|center" android:id="@id/throwback_megaphone_close" android:background="@drawable/fbui_megaphone_button_background" android:padding="@dimen/fbui_padding_standard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fbui_megaphone_cross" android:contentDescription="@string/dialog_close" />
+</merge>

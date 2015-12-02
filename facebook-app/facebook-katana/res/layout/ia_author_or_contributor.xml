@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/richdocument_block"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/hairline" android:background="@color/richdocument_hairline_color_on_white" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/richdocument_author_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.0" fb:placeholderImage="@drawable/no_avatar" />
+        <LinearLayout android:orientation="vertical" android:id="@id/layout_author_list" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_toRightOf="@id/richdocument_author_image">
+            <com.facebook.resources.ui.FbTextView android:id="@id/richdocument_author_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/richdocument_richtext_author_name" />
+            <com.facebook.richdocument.view.widget.RichTextView android:id="@id/richdocument_author_bio" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/richdocument_richtext_author_bio" />
+        </LinearLayout>
+        <com.facebook.richdocument.view.widget.PressStateButton android:id="@id/richdocument_author_page_like" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/richdocument_ufi_to_like" android:layout_weight="0.0" fb:drawable="@drawable/richdocument_like_small" style="@style/richdocument_author_action_button" />
+        <com.facebook.richdocument.view.widget.PressStateButton android:id="@id/richdocument_author_profile_follow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/richdocument_author_profile_follow" android:layout_weight="0.0" fb:drawable="@drawable/richdocument_follow_add" style="@style/richdocument_author_action_button" />
+    </LinearLayout>
+</LinearLayout>

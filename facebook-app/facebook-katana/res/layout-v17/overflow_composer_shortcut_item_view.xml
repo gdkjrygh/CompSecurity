@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/orca_neue_item_background" android:paddingLeft="6.0dip" android:paddingTop="10.0dip" android:paddingRight="6.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="10.0dip" android:layout_marginStart="10.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_weight="1.0" android:layout_marginStart="32.0dip">
+            <com.facebook.resources.ui.FbTextView android:textSize="16.0sp" android:textColor="@color/messaging_composershortcuts_app_title_text_color" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.facebook.resources.ui.FbTextView android:textSize="14.0sp" android:textColor="@color/messaging_composershortcuts_app_description_text_color" android:id="@id/description" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <com.facebook.resources.ui.FbTextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/install_badge" android:background="@drawable/install_badge_background" android:paddingLeft="8.0dip" android:paddingTop="6.0dip" android:paddingRight="8.0dip" android:paddingBottom="6.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/install_badge_text" android:textAllCaps="true" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+        <ViewStub android:id="@id/shortcut_badge_stub" android:layout="@layout/shortcut_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_marginEnd="16.0dip" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/recent_attachments" android:paddingLeft="66.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="@dimen/messaging_composershortcuts_content_preview_height" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+</LinearLayout>

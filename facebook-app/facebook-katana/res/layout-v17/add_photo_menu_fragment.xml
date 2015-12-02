@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/fbui_bluegrey_5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_weight="1.0" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textColor="?android:textColorPrimary" android:gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/add_photo_menu_padding" android:layout_marginTop="28.0dip" android:layout_marginRight="@dimen/add_photo_menu_padding" android:layout_marginBottom="28.0dip" android:text="@string/add_menu_fragment_instructions_title" android:layout_weight="1.0" android:layout_marginStart="@dimen/add_photo_menu_padding" android:layout_marginEnd="@dimen/add_photo_menu_padding" />
+            <include layout="@layout/add_photo_menu_fragment_instructions" />
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/add_photo_menu_button_padding" android:paddingBottom="@dimen/add_photo_menu_button_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbButton android:id="@id/upload_from_camera_roll_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/add_photo_menu_button_padding" android:layout_marginRight="@dimen/add_photo_menu_button_padding" android:text="@string/photo_menu_upload_existing_photos" android:layout_weight="1.0" android:layout_marginStart="@dimen/add_photo_menu_button_padding" android:layout_marginEnd="@dimen/add_photo_menu_button_padding" style="?attr/buttonPrimarySmall" />
+        <com.facebook.resources.ui.FbButton android:id="@id/take_photo_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="@dimen/add_photo_menu_button_padding" android:text="@string/photo_menu_upload_from_camera" android:layout_weight="1.0" android:layout_marginEnd="@dimen/add_photo_menu_button_padding" style="?attr/buttonSpecialSmall" />
+    </LinearLayout>
+</LinearLayout>

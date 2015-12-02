@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fbui="http://schemas.android.com/apk/res-auto" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/feed_attachment_background" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.facebook.drawee.view.DraweeView android:id="@id/ig_ego_photo" android:layout_width="@dimen/instagram_photo_size" android:layout_height="@dimen/instagram_photo_size" />
+        <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:orientation="horizontal" android:background="@color/feed_app_ad_card_background_color" android:paddingLeft="@dimen/feed_story_margin" android:paddingRight="@dimen/feed_story_margin" android:layout_width="@dimen/instagram_photo_size" android:layout_height="wrap_content" fb:showDividers="middle" fb:dividerPadding="@dimen/feed_story_margin" fb:divider="@color/feed_feedback_action_button_bar_divider_color" fb:dividerThickness="@dimen/one_px">
+            <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/instagram_info_section_padding" android:paddingRight="@dimen/feed_story_margin" android:paddingBottom="@dimen/instagram_info_section_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textStyle="bold" android:ellipsize="end" android:id="@id/ig_ego_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/feed_app_ad_social_context_color" android:ellipsize="end" android:id="@id/ig_ego_subtitle" android:paddingTop="@dimen/instagram_subtitle_padding_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" />
+            </LinearLayout>
+            <com.facebook.fbui.glyph.GlyphView android:layout_gravity="center" android:id="@id/ig_ego_like" android:paddingLeft="@dimen/feed_story_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/feed_like_icon" fb:glyphColor="@color/like_action_button_color" />
+        </com.facebook.fbui.widget.layout.SegmentedLinearLayout>
+    </LinearLayout>
+</merge>

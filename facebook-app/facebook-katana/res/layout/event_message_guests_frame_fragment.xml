@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.fbui.pagerindicator.TabbedViewPagerIndicator android:id="@id/event_message_guests_type_tabbed_view_pager_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/events_message_guest_seen_state_megaphone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <android.support.v4.view.ViewPager android:id="@id/event_guestlist_view_pager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.facebook.resources.ui.FbTextView android:id="@id/send_message_limit_warning" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/event_send_message_count_warning_height" android:layout_alignBottom="@id/content_container" style="@style/EventsInviteAndMessageWarningBadge" />
+    <com.facebook.resources.ui.FbTextView android:gravity="center" android:id="@id/message_send_separately" android:background="@color/fbui_bg_light" android:layout_width="fill_parent" android:layout_height="@dimen/event_send_message_count_warning_height" android:text="@string/events_message_guests_sent_seperately" style="@style/EventsMessageGuestsSeperateInfo" />
+</LinearLayout>

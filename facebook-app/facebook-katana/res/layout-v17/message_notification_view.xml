@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.dashcard.notificationcard.view.MessageNotificationView android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="@dimen/home_half_standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.dashcard.notificationcard.view.MessageNotificationSender android:id="@id/notification_sender" android:layout_width="@dimen/dashcard_large_icon_width" android:layout_height="@dimen/dashcard_large_icon_height" />
+    <com.facebook.dashcard.common.ui.TapToOpenContentContainer android:gravity="center_vertical" android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dashcard_large_icon_content_gap" android:layout_marginStart="@dimen/dashcard_large_icon_content_gap">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbTextView android:id="@id/message_subject" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-1.0dip" android:singleLine="true" android:contentDescription="@string/dashcard_message_subject_description" style="@style/shadowed_white_text.bold.medium" />
+            <com.facebook.resources.ui.FbTextView android:id="@id/message_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:lineSpacingExtra="2.0sp" android:contentDescription="@string/dashcard_message_text_description" style="@style/shadowed_white_text.regular.medium" />
+            <com.facebook.resources.ui.FbTextView android:id="@id/message_attachment_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:contentDescription="@string/dashcard_message_attachment_text_description" style="@style/shadowed_white_text.bold.medium" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_tiny" android:id="@id/message_timestamp_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" style="@style/shadowed_white_text.bold.small.dimmed" />
+        </LinearLayout>
+    </com.facebook.dashcard.common.ui.TapToOpenContentContainer>
+</com.facebook.dashcard.notificationcard.view.MessageNotificationView>

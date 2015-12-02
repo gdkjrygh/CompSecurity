@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:id="@id/background_location_settings_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:background="?divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider_width" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/backgroundlocation_settings" />
+        </ScrollView>
+        <include layout="@layout/backgroundlocation_settings_upsell" />
+        <include layout="@layout/backgroundlocation_settings_loading" />
+        <include layout="@layout/backgroundlocation_settings_error" />
+    </FrameLayout>
+</com.facebook.widget.CustomLinearLayout>

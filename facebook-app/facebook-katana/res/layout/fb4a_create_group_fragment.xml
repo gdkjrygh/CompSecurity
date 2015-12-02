@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/native_group_creation_root_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/native_group_creation_name_and_photo_container" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/native_group_creation_add_photo_button" android:background="@drawable/native_group_creation_photo_circle" android:layout_width="@dimen/native_group_creation_add_photo_button_size" android:layout_height="@dimen/native_group_creation_add_photo_button_size" android:layout_marginTop="9.0dip">
+            <ImageView android:layout_gravity="center" android:id="@id/native_group_creation_photo_image_button" android:layout_width="@dimen/native_group_creation_add_attachment_circle_image_size" android:layout_height="@dimen/native_group_creation_add_attachment_circle_image_size" android:src="@drawable/native_group_creation_take_photo" android:contentDescription="@string/native_group_creation_select_photo_button_hint" />
+            <com.facebook.drawee.view.DraweeView android:id="@id/native_group_creation_group_photo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/native_group_creation_group_photo_label" />
+        </FrameLayout>
+        <com.facebook.resources.ui.FbEditText android:textSize="@dimen/fbui_text_size_xlarge" android:textColor="@android:color/black" android:textColorHint="@color/native_group_creation_groups_hint_color" android:ellipsize="end" android:gravity="bottom" android:id="@id/group_title" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="15.0dip" android:hint="@string/group_title_hint" android:maxLines="2" android:singleLine="false" android:layout_weight="1.0" android:imeOptions="actionDone" />
+    </LinearLayout>
+    <fragment android:name="com.facebook.groups.fb4a.create.FB4AGroupsCreateMemberPickerFragment" android:id="@id/group_create_member_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <fragment android:name="com.facebook.groups.fb4a.create.FB4AGroupsCreatePrivacySelectorFragment" android:id="@id/group_create_privacy_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

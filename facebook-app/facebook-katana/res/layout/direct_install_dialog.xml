@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="@dimen/direct_install_dialog_width" android:layout_height="fill_parent" android:minHeight="@dimen/direct_install_dialog_minHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/direct_install_dialog_title_bar" />
+    <FrameLayout android:id="@id/content" android:paddingLeft="@dimen/direct_install_dialog_padding_large" android:paddingRight="@dimen/direct_install_dialog_padding_large" android:paddingBottom="@dimen/direct_install_dialog_padding_large" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <View android:background="@color/direct_install_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/direct_install_divider_thickness" />
+    <LinearLayout android:gravity="right" android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbButton android:textColor="@color/fbui_accent_blue" android:id="@id/secondary_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.Dialog.Button" />
+        <com.facebook.resources.ui.FbButton android:textColor="@color/fbui_accent_blue" android:id="@id/primary_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.Dialog.Button.Primary" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/icon_layout" android:layout_width="@dimen/default_place_image_size" android:layout_height="@dimen/default_place_image_size" android:layout_marginLeft="16.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="8.0dip">
+        <ImageView android:background="@drawable/dotted_square" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/add_icon" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip">
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_accent_blue" android:id="@id/home_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/places_home_cell_title" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:id="@id/home_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/places_home_cell_description" android:layout_below="@id/home_text" />
+    </LinearLayout>
+</LinearLayout>

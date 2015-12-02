@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/edit_history_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_centerInParent="true" />
+    <include android:id="@id/error_view" layout="@layout/generic_error_view" />
+    <FrameLayout android:id="@id/feed_flyout_edit_history_switch_view_holder" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <ImageView android:layout_gravity="left|center" android:id="@id/feed_flyout_edit_history_arrow" android:background="@drawable/arrow_left" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textStyle="bold" android:textColor="@color/black" android:layout_gravity="center" android:id="@id/feed_flyout_edit_history_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ufiservices_edit_history_title" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/feed_flyout_edit_history_switch_view_holder">
+        <ImageView android:layout_gravity="top" android:id="@id/feed_flyout_edit_history_separator" android:background="@drawable/flyout_header_bottom_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" />
+        <com.facebook.widget.listview.BetterListView android:id="@id/edit_history_list" android:paddingLeft="@dimen/ufiservice_flyout_margin_left_right" android:paddingRight="@dimen/ufiservice_flyout_margin_left_right" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@android:color/transparent" android:divider="@android:color/transparent" android:dividerHeight="0.0dip" android:footerDividersEnabled="false" />
+    </FrameLayout>
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

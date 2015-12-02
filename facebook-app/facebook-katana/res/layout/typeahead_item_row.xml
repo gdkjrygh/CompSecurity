@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/typeahead_item_row_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/typeahead_item_row_inner_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ToggleButton android:id="@id/is_picked_checkbox" android:background="@drawable/checkmark_green" android:focusable="false" android:clickable="false" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_margin="10.0dip" android:textOn="@null" android:textOff="@null" android:text="@null" android:layout_centerVertical="true" />
+        <FrameLayout android:id="@id/icon_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/is_picked_checkbox">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/url_icon" android:layout_width="48.0dip" android:layout_height="48.0dip" />
+            <com.facebook.fbui.glyph.GlyphView android:id="@id/glyph" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="center" />
+        </FrameLayout>
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium_large" android:textColor="?tokenizedTypeaheadItemTextColor" android:textColorHint="#ffa0a3a7" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/label" android:layout_width="wrap_content" android:layout_height="@dimen/tokenizedtypeahead_item_row_text_height" android:layout_marginRight="16.0dip" android:hint="@string/token_hint_text" android:maxLines="1" android:singleLine="true" android:layout_toRightOf="@id/icon_wrapper" />
+        <ImageView android:id="@id/edit_button" android:background="@drawable/pencil_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:layout_alignParentRight="true" />
+        <ImageView android:id="@id/right_arrow" android:background="@drawable/typeahead_item_row_chevron" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginRight="18.0dip" android:layout_alignParentRight="true" android:contentDescription="@string/typeahead_view_more_description" />
+        <View android:id="@id/divider" android:layout_below="@id/label" style="@style/typeahead_divider" />
+        <View android:id="@id/divider_fig" android:visibility="gone" android:layout_below="@id/label" style="@style/typeahead_divider_fig" />
+        <View android:id="@id/disabled_overlay" android:background="#bbffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/tokenizedtypeahead_item_row_text_height" android:layout_marginTop="1.0dip" android:layout_above="@id/divider_fig" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

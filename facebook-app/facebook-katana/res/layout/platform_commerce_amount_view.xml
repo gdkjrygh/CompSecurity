@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/platform_commerce_amount_content_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="18.0dip">
+            <com.facebook.widget.text.BetterTextView android:gravity="left" android:id="@id/subtotal_title_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/platform_commerce_amount_subtotal_title" android:layout_weight="1.0" style="@style/PaymentsTitleText" />
+            <com.facebook.widget.text.BetterTextView android:gravity="right" android:id="@id/subtotal_amount_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/PaymentsTitleText" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/tax_row" android:layout_width="fill_parent" android:layout_height="18.0dip">
+            <com.facebook.widget.text.BetterTextView android:gravity="left" android:id="@id/tax_title_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/platform_commerce_amount_tax_title" android:layout_weight="1.0" style="@style/PaymentsTitleText" />
+            <com.facebook.widget.text.BetterTextView android:gravity="right" android:id="@id/tax_amount_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/PaymentsTitleText" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/shipping_row" android:layout_width="fill_parent" android:layout_height="18.0dip">
+            <com.facebook.widget.text.BetterTextView android:gravity="left" android:id="@id/shipping_title_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/platform_commerce_amount_shipping_title" android:layout_weight="1.0" style="@style/PaymentsTitleText" />
+            <com.facebook.widget.text.BetterTextView android:gravity="right" android:id="@id/shipping_amount_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/PaymentsTitleText" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="22.0dip">
+            <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_large" android:textStyle="bold" android:gravity="left" android:id="@id/total_title_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/platform_commerce_amount_total_title" android:layout_weight="1.0" style="@style/PaymentsTitleText" />
+            <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_large" android:textStyle="bold" android:gravity="right" android:id="@id/total_amount_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/PaymentsTitleText" />
+        </LinearLayout>
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/update_amount_progress_bar" android:visibility="gone" android:layout_width="30.0dip" android:layout_height="30.0dip" style="?android:attr/progressBarStyle" />
+</FrameLayout>

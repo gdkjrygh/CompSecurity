@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="@dimen/awesomizer_avatar_size" android:layout_height="wrap_content">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center_horizontal" android:id="@id/avatar" android:layout_width="@dimen/awesomizer_avatar_size" android:layout_height="@dimen/awesomizer_avatar_size" android:layout_marginBottom="@dimen/awesomizer_padding_between_text" fb:placeholderImageScaleType="centerCrop" fb:actualImageScaleType="fitCenter" fb:roundAsCircle="true" />
+        <com.facebook.fbui.facepile.FacepileView android:layout_gravity="bottom" android:id="@id/avatar_facepile" android:visibility="gone" android:layout_width="@dimen/awesomizer_avatar_size" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/awesomizer_avatar_facepile_margin" android:layout_marginRight="@dimen/awesomizer_avatar_facepile_margin" fb:roundingBorderWidth="@dimen/awesomizer_avatar_facepile_roundingBorderWidth" fb:roundingBorderColor="@color/fbui_white" fb:horizontalPadding="@dimen/awesomizer_avatar_facepile_horizontalpadding" fb:faceSize="@dimen/awesomizer_avatar_facepile_facesize" fb:roundFaces="true" fb:showOverflowView="true" fb:overflowBackgroundColor="@color/fbui_bluegrey_20" fb:overflowTextColor="@color/fbui_white" />
+    </FrameLayout>
+    <com.facebook.resources.ui.FbTextView android:layout_gravity="center_horizontal" android:id="@id/avatar_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AwesomizerAvatarNameText" />
+    <com.facebook.resources.ui.FbTextView android:layout_gravity="center_horizontal" android:id="@id/avatar_context" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AwesomizerAvatarContextText" />
+</merge>

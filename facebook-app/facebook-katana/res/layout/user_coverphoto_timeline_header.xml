@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.timeline.header.ui.CaspianTimelineStandardHeader android:id="@id/timeline_standard_cover_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.timeline.actionbar.TimelineActionBar android:id="@id/plutonium_action_bar" android:layout_width="fill_parent" android:layout_height="@dimen/plutonium_action_bar_with_divider_height" />
+            <include android:id="@id/plutonium_context_lines_section" layout="@layout/context_items_section" />
+            <ViewStub android:id="@id/timeline_intro_card_view_stub" android:layout="@layout/timeline_intro_card" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View android:id="@id/timeline_shadow" android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+            <ViewStub android:id="@id/plutonium_navtiles_stub" android:layout="@layout/plutonium_navtiles" android:inflatedId="@id/plutonium_navtiles" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View android:background="@color/edit_coverphoto_headerdisable" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</merge>

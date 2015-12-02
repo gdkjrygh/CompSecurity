@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:gravity="center" android:layout_gravity="center" android:id="@id/video_view_holder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:orientation="vertical" android:id="@id/voice_view_holder" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="fill" android:id="@id/contact_photo" android:background="@color/orca_white" android:layout_width="fill_parent" android:layout_height="fill_parent" orca:placeholderImage="@drawable/transparent_drawable" />
+        <LinearLayout android:orientation="vertical" android:id="@id/webrtc_main_incall_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.facebook.rtc.views.RtcActionBar android:id="@id/incall_action_bar" android:layout_width="fill_parent" android:layout_height="48.0dip" orca:showName="false" />
+            <com.facebook.rtc.views.VoipConnectionBanner android:layout_gravity="top" android:id="@id/connection_banner" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="26.0dip" orca:rtcTheme="voice" />
+            <LinearLayout android:gravity="bottom|center" android:layout_gravity="top" android:orientation="vertical" android:id="@id/peer_voice_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="103.0" android:layout_weight="11.0">
+                <com.facebook.rtc.views.VoipTileView android:layout_gravity="center" android:id="@id/contact_voip_tile_image" android:background="@drawable/voip_usertile_background" android:layout_width="fill_parent" android:layout_height="104.0dip" android:layout_weight="10.0" orca:tileSize="96.0dip" orca:messengerBadge="@drawable/orca_messenger_user_badge_large" orca:asCircle="true" />
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="12.0" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xxxlarge_4" android:textColor="?rtcColorPrimary" android:ellipsize="end" android:gravity="center" android:id="@id/contact_display_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xxlarge" android:textColor="?rtcColorSecondary" android:gravity="top|center" android:id="@id/call_status" android:paddingLeft="16.0dip" android:paddingTop="2.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    <com.facebook.rtc.views.VoipDragSelfView android:id="@id/rtc_self_view" android:padding="16.0dip" android:visibility="gone" android:layout_width="88.0dip" android:layout_height="132.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <ViewStub android:id="@id/debug_info_stub" android:layout="@layout/voip_debug_text" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/videomail_view_holder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/push_notification_item_background" android:layout_width="fill_parent" android:layout_height="@dimen/push_notification_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/container_layout" android:layout_width="@dimen/jewel_avatar_width" android:layout_height="@dimen/jewel_avatar_width">
+        <ViewAnimator android:id="@id/lockscreen_collage_animator" android:layout_width="@dimen/jewel_avatar_width" android:layout_height="@dimen/jewel_avatar_width">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/friend_user_image" android:layout_width="@dimen/lockscreen_avatar_width" android:layout_height="@dimen/lockscreen_avatar_height" style="@style/LockscreenNotificationAvatarLeftRounded" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/friend_user_two_images" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/friend_user_image_two_first" android:layout_width="@dimen/lockscreen_multi_avatar_width" android:layout_height="@dimen/lockscreen_avatar_height" style="@style/LockscreenNotificationAvatarLeftRounded" />
+                <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/friend_user_image_two_second" android:layout_width="@dimen/lockscreen_multi_avatar_width" android:layout_height="@dimen/lockscreen_avatar_height" style="@style/LockscreenNotificationAvatar" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/friend_user_three_images" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/friend_user_image_three_first" android:layout_width="@dimen/lockscreen_multi_avatar_width" android:layout_height="@dimen/lockscreen_avatar_height" style="@style/LockscreenNotificationAvatarLeftRounded" />
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/friend_user_image_three_second" android:layout_width="@dimen/lockscreen_multi_avatar_width" android:layout_height="@dimen/lockscreen_multi_avatar_height" style="@style/LockscreenNotificationAvatar" />
+                    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/friend_user_image_three_third" android:layout_width="@dimen/lockscreen_multi_avatar_width" android:layout_height="@dimen/lockscreen_multi_avatar_height" style="@style/LockscreenNotificationAvatar" />
+                </LinearLayout>
+            </LinearLayout>
+        </ViewAnimator>
+    </FrameLayout>
+    <include android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/lockscreen_notification_row_content_view" />
+</LinearLayout>

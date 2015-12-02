@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="62.0dip">
+        <com.facebook.fbui.widget.text.ImageWithTextView android:gravity="center" android:id="@id/call_reminder_button" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="3.0dip" android:text="@string/incall_reminder" android:drawablePadding="2.0dip" android:layout_weight="1.0" orca:drawable="@drawable/voip_reminder_icon" orca:drawableOrientation="top" style="@style/WebrtcQuickOptionsClickable" />
+        <com.facebook.fbui.widget.text.GlyphWithTextView android:gravity="center" android:id="@id/qr_message_button" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:text="@string/incall_qr_message" android:drawablePadding="6.0dip" android:layout_weight="1.0" orca:glyphColor="@color/voip_blue" orca:drawable="@drawable/fbui_app_messenger_l" orca:drawableOrientation="top" style="@style/WebrtcQuickOptionsClickable" />
+    </LinearLayout>
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="62.0" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:baselineAligned="false">
+        <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageButton android:id="@id/decline_call_button" android:background="@color/clear" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/voip_end_call" android:contentDescription="@string/incall_decline_call" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.facebook.fbui.glyph.GlyphButton android:id="@id/answer_call_button" android:background="@drawable/rtc_green_circle_background_pressed" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/voip_accept_call_white" android:contentDescription="@string/incall_answer_call" orca:glyphColor="@color/orca_white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

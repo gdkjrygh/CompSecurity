@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/fbui_bg_dark" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewStub android:id="@id/appinvites_nux_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.widget.loadingindicator.LoadingIndicatorView android:gravity="center" android:id="@id/appinvite_loading_indicator" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:imageSize="large" />
+        <com.facebook.widget.refreshableview.RefreshableListViewContainer android:id="@id/appinvites_list_container" android:background="@color/fbui_bg_dark" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.facebook.widget.refreshableview.RefreshableViewOverflowItem android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.facebook.widget.refreshableview.RefreshableViewItem android:background="@color/fbui_bg_dark" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.facebook.widget.listview.BetterListView android:id="@id/appinvites_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+        </com.facebook.widget.refreshableview.RefreshableListViewContainer>
+    </LinearLayout>
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:gravity="center" android:id="@id/appinvites_none_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="32.0dip" android:layout_marginRight="32.0dip">
+        <ImageView android:id="@id/appinvites_none_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="32.0dip" android:src="@drawable/appinvites_controller_large" android:layout_centerHorizontal="true" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textStyle="bold" android:textColor="@color/fbui_text_light" android:gravity="center_horizontal" android:id="@id/appinvites_none_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/app_invites_none" android:layout_below="@id/appinvites_none_image" />
+        <com.facebook.resources.ui.FbButton android:id="@id/appinvites_none_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="@string/app_invites_find_games" android:drawableLeft="@drawable/appinvites_gamecenter_logo" android:layout_below="@id/appinvites_none_text" android:layout_centerHorizontal="true" style="?attr/buttonSpecialLargeInverse" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+</FrameLayout>

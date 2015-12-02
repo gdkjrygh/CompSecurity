@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="?neko_padding_between_title_subtitle" android:paddingBottom="@dimen/ozone_purple_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:theme="@style/Widget.Neko.BodyTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ozone_green_padding" android:layout_marginRight="@dimen/ozone_green_padding" android:text="@string/subtitle" android:layout_marginStart="@dimen/ozone_green_padding" android:layout_marginEnd="@dimen/ozone_green_padding" />
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView android:theme="@style/Widget.Neko.HeaderTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ozone_green_padding" android:layout_marginRight="@dimen/ozone_green_padding" android:layout_marginBottom="@dimen/ozone_blue_padding" android:text="@string/recommendations" android:layout_marginStart="@dimen/ozone_green_padding" android:layout_marginEnd="@dimen/ozone_green_padding" />
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.facebook.neko.util.AppCardPager android:id="@id/app_pager" android:paddingLeft="@dimen/ozone_green_padding" android:paddingRight="@dimen/ozone_green_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </FrameLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/ad_choices" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ad_choices" />
+    </LinearLayout>
+</LinearLayout>

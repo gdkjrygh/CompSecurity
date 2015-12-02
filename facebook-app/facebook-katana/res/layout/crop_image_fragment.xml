@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.photos.crop.ProfilePicZoomableImageView android:id="@id/underlying_image" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.photos.crop.CropImageOverlay android:id="@id/crop_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.resources.ui.FbTextView android:gravity="center" android:layout_gravity="top" android:background="@color/crop_title_bar_grey" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/move_and_scale" style="@style/crop_image_fragment_text" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:background="@color/crop_title_bar_grey" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <com.facebook.resources.ui.FbTextView android:gravity="center" android:id="@id/cancel_button" android:background="@drawable/crop_image_button_bg_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/dialog_cancel" android:layout_weight="1.0" style="@style/crop_image_fragment_text" />
+        <View android:background="@color/crop_title_bar_grey_pressed" android:layout_width="@dimen/divider_width" android:layout_height="fill_parent" />
+        <com.facebook.resources.ui.FbTextView android:gravity="center" android:id="@id/done_button" android:background="@drawable/crop_image_button_bg_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/dialog_done" android:layout_weight="1.0" style="@style/crop_image_fragment_text" />
+    </LinearLayout>
+</FrameLayout>

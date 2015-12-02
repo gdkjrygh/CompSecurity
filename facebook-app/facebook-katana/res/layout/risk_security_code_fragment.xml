@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/payment_form_overall_left_right_paddings" android:paddingRight="@dimen/payment_form_overall_left_right_paddings" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.messaging.payment.ui.PaymentHeaderSubheaderLayout android:id="@id/header_subheader" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.facebook.resources.ui.FbEditText android:id="@id/risk_flow_card_number" android:hint="@string/payment_card_number" android:singleLine="true" android:maxLength="19" style="@style/PaymentCardInfoEditText.Portrait" />
+    <com.facebook.messaging.payment.method.input.PaymentFormEditTextView android:id="@id/risk_flow_security_code" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:maxLength="4" fb:hint="@string/payment_security_code" fb:errorMessage="@string/risk_flow_error_in_security_code" />
+</LinearLayout>

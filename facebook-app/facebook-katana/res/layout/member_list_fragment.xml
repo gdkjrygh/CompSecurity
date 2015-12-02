@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/member_list_parent_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/member_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <include layout="@layout/group_member_list_search_bar" />
+        <View android:background="@drawable/groups_listview_divider" android:layout_width="fill_parent" android:layout_height="@dimen/list_view_divider_height" />
+        <ViewStub android:layout_gravity="center" android:id="@id/empty_state_message_stub" android:inflatedId="@id/empty_state_message" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.facebook.widget.listview.BetterListView android:id="@id/member_list_view" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/groups_list_selector" android:divider="@null" />
+    </LinearLayout>
+</FrameLayout>

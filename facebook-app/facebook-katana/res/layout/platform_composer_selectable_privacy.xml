@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="?android:textColorTertiary" android:layout_gravity="center_vertical" android:id="@id/selectable_privacy_heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/typeahead_to_heading" android:includeFontPadding="false" />
+    <FrameLayout android:id="@id/selectable_privacy_text_wrapper" android:addStatesFromChildren="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.facebook.resources.ui.FbEditText android:textColor="?android:textColorTertiary" android:id="@id/selectable_privacy_text" android:background="@android:color/transparent" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="wrap_content" android:cursorVisible="false" android:singleLine="true" style="@style/privacy_title_var_text_view" />
+    </FrameLayout>
+    <ProgressBar android:id="@id/selectable_privacy_loading_indicator" style="@style/audience_picker_loading_icon" />
+    <ImageView android:id="@id/selectable_privacy_right_arrow" style="@style/audience_picker_right_arrow_view" />
+</merge>

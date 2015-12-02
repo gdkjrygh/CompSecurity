@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/home_half_standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="@dimen/dashcard_large_icon_width" android:layout_height="@dimen/dashcard_large_icon_height">
+                <com.facebook.widget.RoundedBitmapView android:id="@id/album_art" android:background="@drawable/dashcard_image_shadow" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/album_art_bitmap_view_description" fb:cornerRadius="0.0dip" fb:scaling="centerCrop" />
+                <com.facebook.widget.RoundedBitmapView android:id="@id/album_art_fader" android:background="@drawable/dashcard_image_shadow" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:cornerRadius="0.0dip" fb:scaling="centerCrop" />
+            </FrameLayout>
+            <com.facebook.dashcard.common.ui.TapToOpenContentContainer android:gravity="center_vertical" android:id="@id/content_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/dashcard_content_vertical_gap" android:layout_marginRight="@dimen/dashcard_content_vertical_gap" android:layout_weight="1.0">
+                <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.facebook.resources.ui.FbTextView android:id="@id/track_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_alignParentTop="true" android:contentDescription="@string/track_title_text_view_description" style="@style/shadowed_white_text.bold.medium" />
+                    <com.facebook.resources.ui.FbTextView android:id="@id/artist_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@id/track_title" android:contentDescription="@string/artist_title_text_view_description" style="@style/shadowed_white_text.regular.medium" />
+                    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_tiny" android:id="@id/app_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/artist_title" android:contentDescription="@string/app_name_text_view_description" style="@style/shadowed_white_text.bold.small.dimmed" />
+                    <ProgressBar android:id="@id/buffering_spinner" android:visibility="gone" android:layout_width="26.0dip" android:layout_height="26.0dip" android:indeterminateOnly="true" android:indeterminateDrawable="@drawable/music_spinner_indeterminate" android:layout_below="@id/app_name" android:layout_centerHorizontal="true" />
+                    <LinearLayout android:orientation="horizontal" android:id="@id/control_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/artist_title" android:layout_alignParentBottom="true">
+                        <Button android:id="@id/prev_button" android:background="@null" android:paddingTop="10.0sp" android:layout_width="0.0dip" android:layout_height="fill_parent" android:drawableLeft="@drawable/music_previous_button" android:layout_weight="1.0" android:contentDescription="@string/prev_button_description" />
+                        <ImageButton android:id="@id/play_button" android:background="@null" android:paddingTop="10.0sp" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/music_play_button" android:layout_weight="1.0" android:contentDescription="@string/play_button_description" />
+                        <Button android:id="@id/next_button" android:background="@null" android:paddingTop="10.0sp" android:layout_width="0.0dip" android:layout_height="fill_parent" android:drawableRight="@drawable/music_next_button" android:layout_weight="1.0" android:contentDescription="@string/next_button_description" />
+                    </LinearLayout>
+                </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+            </com.facebook.dashcard.common.ui.TapToOpenContentContainer>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/context_layout" android:paddingTop="@dimen/home_half_standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ProgressBar android:layout_gravity="center" android:id="@id/music_loading_spinner" android:visibility="visible" android:layout_width="52.0dip" android:layout_height="52.0dip" android:indeterminateOnly="true" />
+            <com.facebook.resources.ui.FbTextView android:id="@id/artist_name" android:paddingTop="@dimen/home_half_standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/shadowed_white_text.regular.medium" />
+            <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/home_half_standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:layout_width="@dimen/dashcard_small_icon_width" android:layout_height="@dimen/dashcard_small_icon_height">
+                    <com.facebook.widget.RoundedBitmapView android:id="@id/artist_profile" android:layout_width="wrap_content" android:layout_height="wrap_content" fb:cornerRadius="@dimen/dashcard_small_icon_width" fb:scaling="centerCrop" />
+                </FrameLayout>
+                <com.facebook.resources.ui.FbTextView android:id="@id/artist_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dashcard_content_vertical_gap" android:layout_marginRight="@dimen/dashcard_content_vertical_gap" android:contentDescription="@string/artist_title_text_view_description" style="@style/shadowed_white_text.regular.medium" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/home_half_standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:layout_gravity="left" android:layout_width="@dimen/dashcard_large_icon_width" android:layout_height="@dimen/dashcard_large_icon_height">
+                    <ImageButton android:id="@id/like_button" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/like" />
+                </FrameLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/friends_list" android:paddingTop="@dimen/home_half_standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</merge>

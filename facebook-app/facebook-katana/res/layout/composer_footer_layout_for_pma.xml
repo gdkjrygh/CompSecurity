@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/button_list_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub android:id="@id/add_photo" android:layout="@layout/composer_photo_button" android:inflatedId="@id/add_photo" style="@style/footer_bar_button" />
+    <ViewStub android:id="@id/add_to_album" android:visibility="gone" android:layout="@layout/composer_album_button" android:inflatedId="@id/add_to_album" style="@style/footer_bar_button" />
+    <ViewStub android:id="@id/minutiae_button" android:layout="@layout/footer_minutiae" android:inflatedId="@id/minutiae_button" style="@style/footer_bar_button" />
+    <ViewStub android:id="@id/tag_place" android:layout="@layout/footer_tag_place" android:inflatedId="@id/tag_place" style="@style/footer_bar_button" />
+    <View android:layout_width="0.0dip" android:layout_height="@dimen/composer_footer_bar_height" android:layout_weight="1.0" />
+    <ViewStub android:gravity="right|center" android:id="@id/publish_mode_selector" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:visibility="gone" android:layout="@layout/footer_image_button" android:inflatedId="@id/publish_mode_selector" style="@style/footer_bar_button" />
+</LinearLayout>

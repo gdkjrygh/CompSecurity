@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:auto="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/share_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/inbox2_item_top_margin">
+        <com.facebook.fbui.glyph.GlyphView android:id="@id/share_glyph" android:background="@drawable/inbox2_story_forward_circle" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginLeft="@dimen/inbox2_item_left_margin" android:src="@drawable/msgr_ic_forward_black" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" auto:glyphColor="#ff0084ff" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/inbox2_item_left_margin" android:layout_marginRight="@dimen/inbox2_item_right_margin" android:layout_toLeftOf="@id/share_chevron" android:layout_toRightOf="@id/share_glyph" android:layout_centerVertical="true">
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textColor="#ff000000" android:id="@id/share_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messaging_inbox2_stories_share_text" android:singleLine="true" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="#ff999999" android:id="@id/share_reason" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <com.facebook.fbui.glyph.GlyphView android:id="@id/share_chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/inbox2_item_right_margin" android:src="@drawable/fbui_chevron_right_l" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerInParent="true" auto:glyphColor="#ffaaaaaa" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/attachment_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/inbox2_item_left_margin" android:layout_marginTop="@dimen/inbox2_item_top_margin" android:layout_marginRight="@dimen/inbox2_item_right_margin" android:layout_marginBottom="10.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/preview_image" android:layout_width="fill_parent" android:layout_height="180.0dip" auto:actualImageScaleType="centerCrop" />
+            <com.facebook.resources.ui.FbTextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff000000" android:ellipsize="end" android:id="@id/title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/inbox2_item_left_margin" android:layout_marginRight="@dimen/inbox2_item_right_margin" android:maxLines="2" android:minLines="1" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="#ff999999" android:id="@id/description_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/inbox2_item_left_margin" android:layout_marginTop="-2.0dip" android:layout_marginRight="@dimen/inbox2_item_right_margin" android:layout_marginBottom="5.0dip" android:singleLine="true" android:drawablePadding="2.0dip" />
+        </LinearLayout>
+    </FrameLayout>
+</merge>

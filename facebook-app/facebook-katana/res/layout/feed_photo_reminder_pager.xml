@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <ViewStub android:id="@id/photo_reminder_title_bar_stub" android:layout="@layout/photo_reminder_title_bar" android:layout_width="fill_parent" android:layout_height="@dimen/photo_reminder_title_bar_height" />
+    <FrameLayout android:layout_gravity="top" android:id="@id/photo_reminder_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.feed.photoreminder.PhotoReminderScrollView android:id="@id/photo_tray" android:paddingLeft="@dimen/photo_reminder_scroll_view_left_right_padding" android:paddingRight="@dimen/photo_reminder_scroll_view_left_right_padding" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <ViewStub android:id="@id/photo_reminder_nux_stub" android:background="@drawable/phototray_nux" android:layout="@layout/photo_reminder_nux" android:inflatedId="@id/photo_reminder_nux" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

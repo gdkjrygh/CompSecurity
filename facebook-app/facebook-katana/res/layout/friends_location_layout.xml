@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/friend_location_swipe_unit_view" android:background="@drawable/feed_attachment_background" android:layout_width="@dimen/friend_location_feed_unit_frame_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:clickable="true" android:layout_width="@dimen/friend_location_feed_unit_image_width" android:layout_height="@dimen/friend_location_feed_unit_image_height">
+        <com.facebook.widget.ShimmerFrameLayout android:id="@id/friend_location_cover_background" android:layout_width="@dimen/friend_location_feed_unit_image_width" android:layout_height="@dimen/friend_location_feed_unit_image_height" fb:auto_start="true" fb:base_alpha="0.45" fb:duration="3000">
+            <View android:background="@drawable/map_loader_grid" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.facebook.widget.ShimmerFrameLayout>
+        <com.facebook.maps.FbStaticMapView android:id="@id/friend_location_cover_map" android:visibility="gone" android:layout_width="@dimen/friend_location_feed_unit_image_width" android:layout_height="@dimen/friend_location_feed_unit_image_height" />
+        <FrameLayout android:layout_gravity="center" android:id="@id/friend_location_center_frame" android:background="@drawable/feed_profile_circle" android:visibility="gone" android:layout_width="@dimen/friend_location_feed_unit_center_profile_size" android:layout_height="@dimen/friend_location_feed_unit_center_profile_size">
+            <com.facebook.drawee.view.DraweeView android:layout_gravity="center" android:id="@id/friend_location_center" android:clickable="true" android:layout_width="@dimen/friend_location_feed_unit_center_profile_inner_size" android:layout_height="@dimen/friend_location_feed_unit_center_profile_inner_size" android:scaleType="fitCenter" />
+        </FrameLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="@dimen/friend_location_feed_unit_image_width" android:layout_height="@dimen/friend_location_feed_unit_bottom_section_size">
+        <LinearLayout android:orientation="vertical" android:id="@id/friend_location_title_section" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:layout_weight="1.0">
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textStyle="bold" android:textColor="@color/feed_story_link_text_color" android:id="@id/friend_location_title" android:background="@drawable/feed_generic_press_state_background_rounded" android:paddingTop="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip" android:singleLine="true" android:includeFontPadding="false" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/feed_story_dark_gray_text_color" android:id="@id/friend_location_subtitle" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        </LinearLayout>
+        <View android:background="@color/light_grey" android:layout_width="@dimen/one_px" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/friend_location_action_button" android:paddingBottom="6.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="center" />
+    </LinearLayout>
+</LinearLayout>

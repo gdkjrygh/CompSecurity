@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/pivotHolder" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/empty_layout" />
+    <ViewStub android:id="@id/feed_error_view_stub" android:layout="@layout/feed_error_view" android:inflatedId="@id/feed_error_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/publisher_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/new_stories_button" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_below="@id/publishers_root" android:layout_centerHorizontal="true" layout="@layout/feed_new_stories_button" />
+        <ViewStub android:id="@id/feed_install_notification_beeper" android:layout="@layout/install_notification_beeper" android:inflatedId="@id/feed_install_notification_beeper" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.feed.ui.GenericNotificationBanner android:id="@id/notification_banner" android:layout_width="fill_parent" android:layout_height="@dimen/feed_top_bar_height" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+</merge>

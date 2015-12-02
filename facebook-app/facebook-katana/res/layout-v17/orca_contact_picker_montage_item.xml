@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.fbui.glyph.GlyphView android:id="@id/contact_user_tile_image" android:background="@drawable/new_groups_circle_tile_background" android:src="@drawable/orca_groups_placeholder" android:scaleType="centerCrop" fb:glyphColor="@color/orca_white" style="?contactPickerNewGroupsTileStyle" />
+    <com.facebook.widget.text.SimpleVariableTextLayoutView android:id="@id/contact_name" android:layout_width="fill_parent" android:layout_height="?contactPickerRowHeight" android:layout_marginLeft="?contactPickerContainerMarginLeft" android:layout_toRightOf="@id/contact_user_tile_image" android:layout_alignParentRight="true" android:layout_marginStart="?contactPickerContainerMarginLeft" android:layout_toEndOf="@id/contact_user_tile_image" android:layout_alignParentEnd="true" fb:text="@string/msgr_montage_picker_text" style="?attr/contactPickerItemNameStyle" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/contact_row_extras_holder" android:layout_width="wrap_content" android:layout_height="?contactPickerRowHeight" android:layout_alignParentRight="true">
+        <ToggleButton android:id="@id/is_picked_checkbox" android:focusable="false" android:visibility="gone" android:clickable="false" android:textOn="@null" android:textOff="@null" android:text="@null" style="?contactPickerSecondaryCheckboxStyle" />
+    </LinearLayout>
+    <View android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" style="?attr/contactPickerItemDividerStyle" />
+</merge>

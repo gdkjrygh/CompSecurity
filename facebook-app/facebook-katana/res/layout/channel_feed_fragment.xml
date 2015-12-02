@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.video.channelfeed.ChannelFeedContainerView android:id="@id/channel_feed_container" android:background="@drawable/channel_feed_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.listview.BetterListView android:id="@id/channel_feed_list" android:paddingTop="@dimen/channel_feed_header_height" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@null" />
+    <com.facebook.video.channelfeed.ChannelFeedHeaderView android:gravity="center" android:layout_gravity="top" android:id="@id/channel_feed_header" android:background="@drawable/channel_feed_header_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/channel_feed_header_height" />
+    <ViewStub android:layout_gravity="bottom|center" android:id="@id/channel_feed_more_videos_pill_stub" android:layout="@layout/channel_feed_more_videos_pill" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/channel_feed_more_videos_pill_margin" />
+    <com.facebook.video.channelfeed.ChannelFeedFullscreenPlayer android:id="@id/fullscreen_player" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.facebook.video.channelfeed.ChannelFeedContainerView>

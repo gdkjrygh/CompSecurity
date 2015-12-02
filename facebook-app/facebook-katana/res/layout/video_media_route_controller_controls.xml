@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/cover_image" android:layout_width="84.0dip" android:layout_height="84.0dip" android:layout_alignParentLeft="true" android:contentDescription="@string/cc_cover_image_desc" fb:actualImageScaleType="centerCrop" />
+    <ImageView android:id="@id/play_pause_view" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/cc_play_pause_button_desc" />
+    <ProgressBar android:id="@id/loading_spinner" android:visibility="gone" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginRight="8.0dip" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@android:style/Widget.ProgressBar.Large.Inverse" />
+    <LinearLayout android:orientation="vertical" android:id="@id/media_info_text_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="4.0dip" android:layout_toLeftOf="@id/play_pause_view" android:layout_toRightOf="@id/cover_image" android:layout_centerVertical="true">
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium_large" android:textStyle="bold" android:ellipsize="end" android:id="@id/title_textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:ellipsize="end" android:id="@id/subtitle_textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/facebookholo_blue_light" android:ellipsize="end" android:id="@id/cast_state_textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+    </LinearLayout>
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

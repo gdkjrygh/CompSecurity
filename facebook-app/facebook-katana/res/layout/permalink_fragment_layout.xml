@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.feed.permalink.PermalinkLinearLayout android:orientation="vertical" android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:showDividers="middle" fb:divider="@color/fbui_bluegrey_5" fb:dividerThickness="@dimen/one_px"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.facebook.widget.refreshableview.RefreshableListViewContainer android:id="@id/permalink_refreshable_list_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.facebook.widget.refreshableview.RefreshableViewOverflowItem android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.facebook.widget.refreshableview.RefreshableViewItem android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.facebook.widget.listview.BetterListView android:id="@id/comment_list_view" android:fadingEdge="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@android:color/transparent" android:dividerHeight="0.0dip" />
+        </com.facebook.widget.refreshableview.RefreshableListViewContainer>
+        <ViewStub android:layout_gravity="bottom|center" android:id="@id/new_comments_button_stub" android:layout="@layout/feedback_new_comments_pill_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.facebook.widget.loadingindicator.LoadingIndicatorView android:id="@id/permalink_loading_indicator_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:imageSize="large" />
+    </FrameLayout>
+    <ViewStub android:id="@id/old_comment_composer_stub" android:layout="@layout/old_comment_composer_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/new_comment_composer_stub" android:layout="@layout/new_comment_composer_inflated_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.facebook.feed.permalink.PermalinkLinearLayout>

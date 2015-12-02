@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/feed_story_header_margin_top_inside" android:layout_weight="1.0">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center_vertical" android:id="@id/branding_image" android:layout_width="@dimen/quick_promotion_feed_unit_title_branding_icon_size" android:layout_height="@dimen/quick_promotion_feed_unit_title_branding_icon_size" android:layout_marginRight="@dimen/feed_story_header_margin_right" fb:actualImageScaleType="fitXY" />
+        <com.facebook.feed.rows.views.ContentTextView android:textColor="@color/feed_story_dark_gray_text_color" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/story_text" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <include layout="@layout/header_layout_menu" />
+</merge>

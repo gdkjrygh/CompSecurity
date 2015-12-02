@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.resources.ui.FbTextView android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/error_message" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/camera_already_open_error" />
+    <LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/orca_quick_cam_progress_bar_height">
+        <ImageButton android:id="@id/cancel_button" android:background="@null" android:visibility="gone" android:layout_width="@dimen/orca_quick_cam_progress_bar_height" android:layout_height="@dimen/orca_quick_cam_progress_bar_height" android:src="@drawable/orca_composer_camera_cancel" />
+        <ImageButton android:id="@id/capture_button" android:background="@null" android:visibility="gone" android:layout_width="@dimen/orca_quick_cam_progress_bar_height" android:layout_height="@dimen/orca_quick_cam_progress_bar_height" android:src="@drawable/orca_composer_camera_capture" />
+        <ImageButton android:id="@id/send_button" android:background="@null" android:visibility="gone" android:layout_width="@dimen/orca_quick_cam_progress_bar_height" android:layout_height="@dimen/orca_quick_cam_progress_bar_height" android:src="@drawable/orca_composer_camera_send" android:contentDescription="@string/quickcam_nux_tap_instructions" />
+    </LinearLayout>
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textColor="@color/white" android:gravity="center" android:layout_gravity="bottom|left|center" android:id="@id/timer" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="@dimen/orca_quick_cam_progress_bar_height" android:layout_marginLeft="10.0dip" android:text="0:00" />
+</merge>

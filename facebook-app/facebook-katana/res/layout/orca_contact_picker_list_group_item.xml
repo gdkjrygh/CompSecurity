@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.tiles.ThreadTileView android:id="@id/contact_group_tile_image" android:layout_centerVertical="true" style="?attr/contactPickerThreadTileViewStyle" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_toLeftOf="@id/contact_row_extras_holder" android:layout_toRightOf="@id/contact_group_tile_image" android:layout_centerVertical="true" style="?attr/contactPickerItemTextContainerStyle">
+        <com.facebook.messaging.ui.name.ThreadNameView android:id="@id/group_name" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:maxLines="1" orca:minScaledTextSize="15" orca:maxScaledTextSize="15" orca:alignment="normal" style="?attr/contactPickerItemNameStyle" />
+        <com.facebook.messaging.ui.name.ThreadNameView android:id="@id/group_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" orca:maxLines="1" orca:minScaledTextSize="12" orca:maxScaledTextSize="12" orca:alignment="normal" orca:nameOption="useParticipantsNamesOnly" style="?attr/contactPickerItemStatusStyle" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/contact_row_extras_holder" android:layout_width="wrap_content" android:layout_height="?contactPickerRowHeight" android:layout_alignParentRight="true">
+        <ToggleButton android:id="@id/is_picked_checkbox" android:focusable="false" android:visibility="gone" android:clickable="false" android:textOn="@null" android:textOff="@null" android:text="@null" style="?contactPickerSecondaryCheckboxStyle" />
+        <ImageView android:id="@id/popup_menu_anchor" android:background="@drawable/orca_neue_item_background" android:visibility="gone" android:layout_width="28.0dip" android:layout_height="fill_parent" android:src="@drawable/orca_action_overflow_button" android:scaleType="center" android:contentDescription="@string/menu_more_options" />
+    </LinearLayout>
+    <ViewStub android:id="@id/disabled_overlay_view_stub" android:layout="@layout/disabled_contact_view" android:layout_width="fill_parent" android:layout_height="?contactPickerRowHeight" />
+    <View android:id="@id/contact_divider" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="?attr/contactPickerItemDividerStyle" />
+</merge>

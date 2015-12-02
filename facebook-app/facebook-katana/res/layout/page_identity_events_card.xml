@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:paddingBottom="10.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Pages.CardTitleStyle">
+        <com.facebook.widget.text.BetterTextView android:id="@id/page_identity_carousel_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.facebook.widget.text.BetterTextView android:textColor="@color/fbui_text_light" android:id="@id/page_identity_carousel_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.0" />
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_text_light" android:gravity="center_vertical" android:id="@id/page_identity_carousel_view_all_text_view" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/page_identity_events_view_all_events" />
+    </LinearLayout>
+    <com.facebook.pages.identity.ui.PageIdentityCarouselView android:gravity="center" android:id="@id/page_identity_carousel_gallery" android:background="@color/white" android:paddingBottom="8.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:unselectedAlpha="1.0" fb:initializeHeightToFirstItem="true" />
+    <include layout="@layout/page_card_divider" />
+    <com.facebook.widget.text.BetterTextView android:gravity="center_vertical" android:id="@id/page_identity_carousel_action" android:background="@drawable/plutonium_context_item_bg" android:paddingLeft="?pagesDefaultPadding" android:paddingRight="?pagesDefaultPadding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="?pagesRowHeightDefault" android:minHeight="?pagesRowHeightDefault" android:maxLines="1" />
+</merge>

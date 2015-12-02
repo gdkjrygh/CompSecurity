@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.text.BetterTextView android:id="@id/empty_insights_message" android:paddingLeft="@dimen/ad_interfaces_standard_horizontal_padding" android:paddingTop="@dimen/ad_interfaces_standard_vertical_padding" android:paddingRight="@dimen/ad_interfaces_standard_horizontal_padding" android:paddingBottom="@dimen/ad_interfaces_standard_vertical_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ad_interfaces_no_insights_message" style="@style/AdInterfacesText.MediumSize.Regular" />
+    <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:orientation="horizontal" android:id="@id/summary_info_layout" android:paddingTop="@dimen/ad_interfaces_standard_vertical_padding" android:paddingBottom="@dimen/ad_interfaces_standard_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:showDividers="middle" fb:divider="@drawable/vertical_divider" fb:dividerThickness="1.0px">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.facebook.widget.text.BetterTextView android:id="@id/first_data_value" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdInterfacesText.XLargeSize.InsightValues" />
+            <com.facebook.widget.text.BetterTextView android:id="@id/first_data_label" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdInterfacesText.MediumSize.Regular" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.facebook.widget.text.BetterTextView android:id="@id/second_data_value" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdInterfacesText.XLargeSize.InsightValues" />
+            <com.facebook.widget.text.BetterTextView android:id="@id/second_data_label" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdInterfacesText.MediumSize.Regular" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/third_info_component" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.facebook.widget.text.BetterTextView android:id="@id/third_data_value" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdInterfacesText.XLargeSize.InsightValues" />
+            <com.facebook.widget.text.BetterTextView android:id="@id/third_data_label" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdInterfacesText.MediumSize.Regular" />
+        </LinearLayout>
+    </com.facebook.fbui.widget.layout.SegmentedLinearLayout>
+</merge>

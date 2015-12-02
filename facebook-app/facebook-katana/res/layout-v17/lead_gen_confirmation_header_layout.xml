@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/leadgen_fullscreen_header_height">
+        <FrameLayout android:layout_gravity="left" android:id="@id/header_close_x_container" android:layout_width="@dimen/leadgen_dialog_header_height" android:layout_height="@dimen/leadgen_dialog_header_height">
+            <ImageView android:layout_gravity="center" android:id="@id/popover_close_icon" android:layout_width="@dimen/leadgen_close_icon_size" android:layout_height="@dimen/leadgen_close_icon_size" android:src="@drawable/lead_gen_x_out" android:scaleType="centerCrop" />
+        </FrameLayout>
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/leadgen_medium_font_size" android:textColor="@color/leadgen_title_color" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/page_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/lead_gen_page_name_right_margin" android:singleLine="true" android:layout_marginEnd="@dimen/lead_gen_page_name_right_margin" />
+    </LinearLayout>
+    <View android:id="@id/header_divider" android:background="@color/default_separator_color" android:layout_width="fill_parent" android:layout_height="@dimen/leadgen_divider_size" />
+</merge>

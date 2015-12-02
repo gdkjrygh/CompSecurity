@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="@dimen/emoji_triggers_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:auto="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="@color/white" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="1.0px" android:layout_weight="1.0">
+        <android.support.v7.widget.RecyclerView android:id="@id/results_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:layout_gravity="right" android:background="@drawable/emoji_trigger_result_gradient" android:layout_width="@dimen/emoji_triggers_alpha_overlap" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <com.facebook.fbui.glyph.GlyphView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/results_close_button" android:background="@color/white" android:paddingLeft="11.0dip" android:paddingRight="11.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="1.0px" android:src="@drawable/msgr_ic_close_circle" android:contentDescription="@string/compose_emoji_trigger_button_close_description" auto:glyphColor="@color/emoji_trigger_close_button_color" />
+</merge>

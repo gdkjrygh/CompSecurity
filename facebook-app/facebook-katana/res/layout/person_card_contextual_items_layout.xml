@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/person_card_contextual_items_list" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.uicontrib.contextitem.PlutoniumContextualItemView android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.uicontrib.contextitem.PlutoniumContextualItemView android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.uicontrib.contextitem.PlutoniumContextualItemView android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/person_card_contextual_items_loading" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:progressDrawable="@drawable/progress_medium_holo" />
+    <ImageView android:layout_gravity="center" android:id="@id/person_card_contextual_items_loading_static" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/spinner_48_inner_holo" />
+    <ViewStub android:layout_gravity="center" android:id="@id/person_card_contextual_items_error_stub" android:layout="@layout/person_card_error_layout" android:inflatedId="@id/person_card_contextual_items_error" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</merge>

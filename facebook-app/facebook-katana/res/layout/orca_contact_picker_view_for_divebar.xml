@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?attr/divebarContainerStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.contacts.picker.DivebarSearchBarView android:orientation="horizontal" android:id="@id/contact_picker_search_section" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="?pickerSearchBoxDefaultHeight" style="?attr/divebarSearchContainerStyle" />
+    <View style="?contactPickerSearchDividerStyle" />
+    <FrameLayout android:id="@id/divebar_header_view_container" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.orca.contacts.divebar.DivebarChatAvailabilityWarning android:id="@id/divebar_availability_warning" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.facebook.widget.listview.BetterListView android:id="@id/friends_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/transparent_drawable" android:overScrollMode="never" style="?contactPickerListStyle" />
+        <com.facebook.widget.listview.EmptyListViewItem android:id="@id/friends_list_empty_item" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?contactPickerEmptyListItemStyle" />
+        <View style="?contactPickerListTopShadowStyle" />
+        <View android:id="@id/friends_list_mask" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?contactPickerFriendsListMaskStyle" />
+    </FrameLayout>
+</LinearLayout>

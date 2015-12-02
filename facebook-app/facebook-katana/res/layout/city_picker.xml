@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/composer_harrison_plus_titlebar_wrapper" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/city_search_bar" layout="@layout/city_search_bar" />
+        <View android:background="@color/default_separator_color" android:layout_width="fill_parent" android:layout_height="@dimen/divider_width" />
+    </LinearLayout>
+    <com.facebook.widget.listview.BetterListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:drawSelectorOnTop="false" android:cacheColorHint="#ffffffff" android:divider="@drawable/fbui_list_divider" android:choiceMode="multipleChoice" android:layout_weight="1.0" />
+    <ViewStub android:layout_gravity="bottom" android:id="@id/city_picker_footer_stub" android:layout="@layout/place_picker_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.widget.CustomLinearLayout android:id="@id/composer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.widget.CustomFrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.facebook.widget.CustomLinearLayout android:id="@id/faceweb_placeholder" android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ImageView android:id="@id/faceweb_drop_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/composerbar" android:scaleType="fitXY" />
+        </com.facebook.widget.CustomFrameLayout>
+        <include layout="@layout/feedback" />
+        <RadioGroup android:orientation="horizontal" android:id="@id/tab_segments" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/tab_segments_height" />
+    </com.facebook.widget.CustomLinearLayout>
+    <include android:id="@id/publisher_bar" android:visibility="gone" layout="@layout/fb_default_publisher_bar" />
+</com.facebook.widget.CustomFrameLayout>

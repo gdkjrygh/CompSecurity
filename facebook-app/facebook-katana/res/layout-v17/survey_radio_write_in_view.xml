@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/survey_radio_write_in_top" android:layout_width="fill_parent" android:layout_height="@dimen/structuredsurvey_radio_item_height">
+        <com.facebook.widget.text.BetterTextView android:textSize="?radioTextSize" android:textStyle="?radioTextWeight" android:textColor="?radioTextColor" android:id="@id/survey_radio_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/survey_radio_button" android:layout_alignParentLeft="true" android:layout_centerInParent="true" android:layout_toStartOf="@id/survey_radio_button" android:layout_alignParentStart="true" />
+        <com.facebook.structuredsurvey.views.InertRadioButton android:layout_gravity="center_vertical" android:id="@id/survey_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/structuredsurvey_radio_padding" android:layout_alignParentRight="true" android:layout_centerInParent="true" android:layout_marginStart="@dimen/structuredsurvey_radio_padding" android:layout_alignParentEnd="true" style="?attr/radioStyle" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    <com.facebook.widget.text.BetterEditTextView android:textSize="?editTextSize" android:layout_gravity="center_vertical" android:id="@id/survey_radio_write_in_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollHorizontally="false" android:layout_below="@id/survey_radio_write_in_top" style="?attr/editTextStyle" />
+</merge>

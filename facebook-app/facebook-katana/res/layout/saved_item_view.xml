@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uib="http://schemas.android.com/apk/res-auto">
+    <com.facebook.fbui.widget.contentview.ContentViewWithButton android:id="@id/saved_item_normal_view" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" uib:titleTextAppearance="@style/saved_item_title" uib:subtitleTextAppearance="@style/saved_item_subtitle" uib:metaTextAppearance="@style/saved_item_subtitle" style="@style/saved_item_content_view">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:background="@color/saved_dashboard_item_profile_picture_border" android:padding="1.0px" android:layout_width="@dimen/saved_dashboard_profile_picture_size" android:layout_height="@dimen/saved_dashboard_profile_picture_size" uib:actualImageScaleType="centerCrop" uib:layout_useAsThumbnail="true" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/saved_item_action_button" android:background="@android:color/transparent" android:paddingLeft="@dimen/saved_dashboard_saved_item_padding" android:paddingRight="@dimen/saved_dashboard_saved_item_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/saved_dashboard_action_button" android:contentDescription="@string/saved_dashboard_action_button_label" uib:layout_useAsAuxView="true" />
+    </com.facebook.fbui.widget.contentview.ContentViewWithButton>
+    <ViewStub android:id="@id/saved_item_grayed_view_stub" android:layout="@layout/saved_item_grayed_view_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

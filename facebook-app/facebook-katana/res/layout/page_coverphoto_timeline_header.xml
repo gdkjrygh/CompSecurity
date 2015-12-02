@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/page_header_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/page_identity_cover_gradient_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.facebook.timeline.header.CoverPhotoEditView android:id="@id/timeline_edit_cover_photo_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <View android:background="@color/timeline_cover_photo_border" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignBottom="@id/timeline_edit_cover_photo_view" />
+            </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+        </FrameLayout>
+        <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="@dimen/timeline_page_profile_image_inset" android:layout_marginRight="12.0dip" android:layout_marginBottom="18.0dip">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center_vertical" android:id="@id/timeline_profile_pic" android:background="@android:color/white" android:padding="2.0dip" android:layout_width="@dimen/timeline_page_profile_pic_size" android:layout_height="@dimen/timeline_page_profile_pic_size" android:layout_marginRight="8.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/timeline_profile_pic">
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/timeline_page_header_name_text_size" android:ellipsize="end" android:id="@id/timeline_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:lineSpacingExtra="@dimen/timeline_page_header_name_text_line_spacing" style="@style/TimelinePageHeaderText" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/timeline_page_header_category_text_size" android:ellipsize="end" android:id="@id/timeline_categories" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:maxLines="2" android:lineSpacingExtra="-2.0sp" style="@style/TimelinePageHeaderText" />
+            </LinearLayout>
+        </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    </LinearLayout>
+</merge>

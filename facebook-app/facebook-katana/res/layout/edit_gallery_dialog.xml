@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/edit_gallery_title_bar" />
+    <com.facebook.photos.creativeediting.RotatingFrameLayout android:id="@id/rotating_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/edit_gallery_crop_bar_layout" android:layout_below="@id/edit_gallery_title_bar_layout">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/rotating_photo" android:padding="30.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:actualImageScaleType="fitCenter" />
+        <ViewStub android:id="@id/overlay_view_stub" android:layout="@layout/overlay_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.facebook.photos.creativeediting.RotatingFrameLayout>
+    <FrameLayout android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/controller_layout" android:layout_below="@id/edit_gallery_title_bar_layout">
+        <com.facebook.photos.creativeediting.swipeable.composer.CreativeEditingSwipeableLayout android:id="@id/background_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.facebook.photos.editgallery.EditableOverlayContainerView android:id="@id/overlay_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:layout_gravity="center" android:id="@id/progress_bar_stub" android:layout="@layout/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <ViewStub android:id="@id/action_view" android:layout="@layout/action_view" android:layout_width="fill_parent" android:layout_height="@dimen/action_button_size" android:layout_marginTop="@dimen/action_button_top_margin" android:layout_marginBottom="@dimen/action_button_bottom_margin" android:layout_above="@id/controller_layout" android:layout_centerHorizontal="true" />
+    <include layout="@layout/edit_gallery_control_panel" />
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

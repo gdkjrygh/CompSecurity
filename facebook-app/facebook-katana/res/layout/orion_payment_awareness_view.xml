@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.fbui.widget.layout.SegmentedLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:showDividers="middle" fb:divider="@color/divider_gray" fb:dividerThickness="1.0px"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/padding_left_right" android:paddingTop="35.0dip" android:paddingRight="@dimen/padding_left_right" android:paddingBottom="78.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_xxxlarge_1" android:textColor="@color/black" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/orion_send_title" fb:fontFamily="roboto" fb:fontWeight="regular" />
+            <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/text_gray_color" android:gravity="center" android:id="@id/subtitle" android:paddingBottom="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/orion_send_subtitle" fb:fontFamily="roboto" fb:fontWeight="light" />
+            <com.facebook.widget.text.BetterTextView android:id="@id/awareness_ease_of_payment" android:drawableLeft="@drawable/checkmark" style="@style/Awareness.Row" />
+            <com.facebook.widget.text.BetterTextView android:id="@id/awareness_pin_security" android:drawableLeft="@drawable/fingerprint" style="@style/Awareness.Row" />
+            <com.facebook.widget.text.BetterTextView android:id="@id/awareness_debit_card" android:drawableLeft="@drawable/debit_card" style="@style/Awareness.Row" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/padding_left_right" android:paddingRight="@dimen/padding_left_right" android:layout_width="fill_parent" android:layout_height="68.0dip">
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/text_gray_color" android:gravity="center_vertical" android:id="@id/security_info" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/orion_payment_encrypted_privacy_info" android:drawableLeft="@drawable/lock" android:drawablePadding="9.0dip" android:layout_weight="1.0" fb:fontFamily="roboto" fb:fontWeight="light" />
+        <com.facebook.widget.text.BetterButton android:id="@id/action_button" android:text="@string/orion_payment_action_text" style="@style/Awareness.Button" />
+    </LinearLayout>
+</com.facebook.fbui.widget.layout.SegmentedLinearLayout>

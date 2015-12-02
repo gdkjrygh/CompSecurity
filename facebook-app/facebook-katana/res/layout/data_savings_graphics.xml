@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textColor="@color/fbui_accent_blue" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/fbui_bluegrey_30" android:id="@id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="12.0dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/graph" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <View android:id="@id/left_side" android:background="@color/fbui_blue_90" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <View android:id="@id/right_side" android:background="@color/fbui_accent_blue" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="0.0" />
+    </LinearLayout>
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/legend" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="16.0dip">
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/fbui_bluegrey_30" android:id="@id/right_legend_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+        <View android:id="@id/left_legend_box" android:background="@color/fbui_blue_90" android:padding="2.0dip" android:layout_width="@dimen/fbui_text_size_small" android:layout_height="@dimen/fbui_text_size_small" android:layout_marginTop="2.0dip" android:layout_marginRight="2.0dip" android:layout_alignParentLeft="true" />
+        <View android:id="@id/right_legend_box" android:background="@color/fbui_accent_blue" android:padding="2.0dip" android:layout_width="@dimen/fbui_text_size_small" android:layout_height="@dimen/fbui_text_size_small" android:layout_marginTop="2.0dip" android:layout_marginRight="2.0dip" android:layout_toLeftOf="@id/right_legend_text" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/fbui_bluegrey_30" android:id="@id/left_legend_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/left_legend_box" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+</LinearLayout>

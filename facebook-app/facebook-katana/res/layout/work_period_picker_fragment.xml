@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:datepicker="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbTextView android:text="@string/composer_from_date_picker_title" style="@style/DatePickerTitleStyle" />
+        <View style="@style/DatePickerDividerStyle.Thick" />
+        <com.facebook.uicontrib.datepicker.DatePicker android:id="@id/composer_from_date_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" datepicker:isOptional="false" />
+        <CheckBox android:enabled="true" android:id="@id/ongoing_period_checkbox" android:button="@null" android:drawableRight="?android:listChoiceIndicatorMultiple" android:drawablePadding="120.0dip" style="@style/DatePickerTitleStyle.Checkbox" />
+        <View android:layout_marginBottom="32.0dip" style="@style/DatePickerDividerStyle.Thin" />
+        <LinearLayout android:orientation="vertical" android:id="@id/composer_to_date_picker_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="32.0dip">
+            <View style="@style/DatePickerSeparatorStyle" />
+            <com.facebook.resources.ui.FbTextView android:id="@id/composer_to_date_picker_title" android:text="@string/composer_to_date_picker_title" style="@style/DatePickerTitleStyle" />
+            <View style="@style/DatePickerDividerStyle.Thick" />
+            <com.facebook.uicontrib.datepicker.DatePicker android:id="@id/composer_to_date_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" datepicker:isOptional="false" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

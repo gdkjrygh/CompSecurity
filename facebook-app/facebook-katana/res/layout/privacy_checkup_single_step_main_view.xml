@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="@dimen/privacy_checkup_single_step_illustration_with_titlebar_height">
+            <View android:layout_gravity="top" android:id="@id/title_bar_underlay" android:background="@color/daily_dialogue_light_blue" android:layout_width="fill_parent" android:layout_height="@dimen/title_bar_height" />
+            <com.facebook.fbui.glyph.GlyphView android:gravity="center_vertical" android:layout_gravity="top|left|center" android:id="@id/title_bar_left_icon" android:paddingLeft="@dimen/privacy_checkup_horizontal_padding" android:layout_width="wrap_content" android:layout_height="@dimen/title_bar_height" android:src="@drawable/caspian_titlebar_icon_up" android:scaleType="center" fb:glyphColor="@color/fbui_white" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium_large" android:textColor="@color/fbui_white" android:gravity="center_vertical" android:layout_gravity="top|right|center" android:id="@id/title_bar_right_text" android:paddingRight="@dimen/privacy_checkup_horizontal_padding" android:layout_width="wrap_content" android:layout_height="@dimen/title_bar_height" />
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="bottom|center" android:id="@id/illustration_image" android:layout_width="@dimen/privacy_checkup_single_step_illustration_image_width" android:layout_height="@dimen/privacy_checkup_single_step_illustration_image_height" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/list_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.facebook.widget.listview.BetterListView android:scrollbarStyle="outsideOverlay" android:id="@id/checkup_single_step_list" android:paddingBottom="@dimen/privacy_checkup_single_step_list_gutter" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/privacy_checkup_horizontal_padding" android:layout_marginRight="@dimen/privacy_checkup_horizontal_padding" android:listSelector="@android:color/transparent" android:divider="@null" android:layout_weight="1.0" android:headerDividersEnabled="false" android:footerDividersEnabled="false" android:overScrollMode="never" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/fbui_white" android:id="@id/footer_text" android:background="@color/daily_dialogue_light_blue" android:padding="@dimen/privacy_checkup_single_step_footer_text_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.facebook.fbui.glyph.GlyphView android:id="@id/info_icon" android:background="@drawable/info_icon_circle_background" android:visibility="gone" android:layout_width="@dimen/privacy_checkup_single_step_footer_icon_size" android:layout_height="@dimen/privacy_checkup_single_step_footer_icon_size" android:src="@drawable/fbui_info_solid_l" android:scaleType="center" fb:glyphColor="@color/fbui_white" />
+</merge>

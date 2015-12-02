@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/sticker_top_drag_slot" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="72.0dip" />
+    <View android:id="@id/sticker_top_divider" android:visibility="gone" android:layout_width="fill_parent" style="?attr/stickerStoreItemDividerStyle" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/sticker_item_display_frame" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="72.0dip">
+        <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/sticker" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:layout_weight="1.0">
+            <FrameLayout android:id="@id/progress_thumbnail" android:layout_width="62.0dip" android:layout_height="62.0dip" android:layout_marginRight="5.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+                <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" orca:placeholderImage="?stickerStorePlaceholderDrawable" orca:placeholderImageScaleType="fitCenter" orca:actualImageScaleType="fitCenter" />
+                <ProgressBar android:layout_gravity="bottom|center" android:id="@id/progress_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="10.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" style="@style/StickerStoreProgressBar" />
+            </FrameLayout>
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textStyle="bold" android:textColor="@android:color/black" android:ellipsize="end" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/progress_thumbnail" android:layout_alignParentTop="true" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/grey68" android:ellipsize="end" android:id="@id/artist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/progress_thumbnail" android:layout_below="@id/name" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_tiny" android:textStyle="bold" android:textColor="@color/grey68" android:ellipsize="end" android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/progress_thumbnail" android:layout_below="@id/artist" />
+        </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/status_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_toLeftOf="@id/grabber_icon" android:layout_alignWithParentIfMissing="true" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/grabber_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" style="?attr/stickerStoreItemDragStyle" />
+    </LinearLayout>
+    <View android:id="@id/sticker_bottom_divider" android:layout_width="fill_parent" style="?attr/stickerStoreItemDividerStyle" />
+    <View android:id="@id/sticker_bottom_drag_slot" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="72.0dip" />
+</com.facebook.widget.CustomLinearLayout>

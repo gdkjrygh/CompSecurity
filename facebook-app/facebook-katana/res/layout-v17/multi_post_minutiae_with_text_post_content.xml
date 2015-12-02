@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.feedplugins.multipoststory.rows.ui.TextViewWithEllipsizingAndClickableSpans android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_text_dark" android:ellipsize="end" android:id="@id/minutiae_text" android:paddingLeft="@dimen/fbui_padding_standard" android:paddingRight="@dimen/fbui_padding_standard" android:paddingBottom="@dimen/fbui_padding_standard" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="@integer/multi_post_minutiae_message_max_lines" />
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/minutiae_cover_photo" android:background="@drawable/multi_post_activity_with_text_image_border" android:padding="@dimen/multi_post_pager_item_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/multi_post_activity_image_with_text_padding" android:layout_marginRight="@dimen/multi_post_activity_image_with_text_padding" android:layout_weight="1.0" android:layout_marginStart="@dimen/multi_post_activity_image_with_text_padding" android:layout_marginEnd="@dimen/multi_post_activity_image_with_text_padding" fb:actualImageScaleType="centerCrop" fb:roundedCornerRadius="@dimen/multi_post_attachment_content_radius" fb:roundBottomRight="false" fb:roundBottomLeft="false" />
+    <include layout="@layout/multi_post_activity_info_view" />
+    <ViewStub android:id="@id/mps_blingbar_stub" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</merge>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/privacy_custom_include_fragment_frame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/privacy_custom_exclude_fragment_frame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:id="@id/custom_include_bar_view" style="@style/audience_picker_bar_view">
+        <com.facebook.fbui.glyph.GlyphView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/audience_custom" />
+        <LinearLayout style="@style/audience_picker_full_custom_header_layout">
+            <com.facebook.resources.ui.FbTextView android:id="@id/custom_include_header" android:text="@string/privacy_full_custom_include" style="@style/audience_picker_full_custom_header_text_view" />
+            <com.facebook.resources.ui.FbTextView android:id="@id/custom_include_subheader" android:text="@string/privacy_full_custom_subheading" style="@style/audience_picker_full_custom_subheader_text_view" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/custom_include_loading_bar" style="@style/audience_picker_full_custom_loading_bar_view">
+        <ProgressBar style="@style/audience_picker_full_custom_loading_icon" />
+        <com.facebook.resources.ui.FbTextView style="@style/audience_picker_full_custom_loading_text_view" />
+    </LinearLayout>
+    <com.facebook.widget.listview.BetterListView android:id="@id/custom_include_list_view" android:layout_weight="1.0" style="@style/audience_picker_custom_list_view" />
+    <com.facebook.resources.ui.FbTextView android:id="@id/custom_tap_to_include" android:text="@string/privacy_full_custom_add_to_include" style="@style/audience_picker_full_custom_add_or_remove_text_view" />
+    <LinearLayout android:id="@id/custom_exclude_bar_view" style="@style/audience_picker_bar_view">
+        <com.facebook.fbui.glyph.GlyphView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/audience_custom" />
+        <LinearLayout style="@style/audience_picker_full_custom_header_layout">
+            <com.facebook.resources.ui.FbTextView android:id="@id/custom_exclude_header" android:text="@string/privacy_full_custom_exclude" style="@style/audience_picker_full_custom_header_text_view" />
+            <com.facebook.resources.ui.FbTextView android:id="@id/custom_exclude_subheader" android:text="@string/privacy_full_custom_subheading" style="@style/audience_picker_full_custom_subheader_text_view" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/custom_exclude_loading_bar" style="@style/audience_picker_full_custom_loading_bar_view">
+        <ProgressBar style="@style/audience_picker_full_custom_loading_icon" />
+        <com.facebook.resources.ui.FbTextView style="@style/audience_picker_full_custom_loading_text_view" />
+    </LinearLayout>
+    <com.facebook.widget.listview.BetterListView android:id="@id/custom_exclude_list_view" android:layout_weight="1.0" style="@style/audience_picker_custom_list_view" />
+    <com.facebook.resources.ui.FbTextView android:id="@id/custom_tap_to_exclude" android:text="@string/privacy_full_custom_add_to_exclude" style="@style/audience_picker_full_custom_add_or_remove_text_view" />
+</LinearLayout>

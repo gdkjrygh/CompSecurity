@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.photos.creativecam.ui.SquarePreviewLayout android:id="@id/square_preview_holder" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ViewStub android:id="@id/camera_preview" android:layout="@layout/creativecam_camera_preview_view" android:inflatedId="@id/camera_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/photo_preview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:placeholderImage="@color/fbui_black" fb:actualImageScaleType="fitStart" />
+        <com.facebook.photos.creativeediting.swipeable.composer.CreativeEditingSwipeableLayout android:id="@id/swipeable_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.facebook.photos.creativecam.ui.SquarePreviewLayout>
+</merge>

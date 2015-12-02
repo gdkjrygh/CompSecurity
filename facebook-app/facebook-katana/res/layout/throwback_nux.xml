@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/backgroundImage" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="10.0" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/goodwill_nux_title_text_size" android:textColor="@color/fbui_text_inverse_dark" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/goodwill_nux_text_title_margin_bottom" android:layout_centerHorizontal="true" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/goodwill_nux_content_text_size" android:textColor="@color/fbui_text_inverse_medium" android:gravity="center" android:id="@id/body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/goodwill_nux_text_content_margin_left" android:layout_marginRight="@dimen/goodwill_nux_text_content_margin_right" android:layout_marginBottom="@dimen/goodwill_nux_text_content_margin_bottom" android:layout_below="@id/title" android:layout_centerHorizontal="true" />
+        <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbButton android:textSize="@dimen/goodwill_nux_button_text_size" android:textColor="@color/fbui_text_inverse_light" android:id="@id/get_notifications" android:background="@color/fbui_accent_blue" android:padding="@dimen/goodwill_nux_button_text_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <com.facebook.widget.loadingindicator.LoadingIndicatorView android:id="@id/empty_state_loading_indicator" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@android:style/Widget.ProgressBar.Small.Inverse" />
+        </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+        <View android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="18.0" />
+    </LinearLayout>
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

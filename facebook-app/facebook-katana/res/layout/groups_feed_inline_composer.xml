@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.fbui.widget.layout.ImageBlockLayout android:gravity="center_vertical" android:id="@id/groups_feed_inline_composer_container" android:padding="@dimen/default_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:thumbnailPadding="@dimen/default_padding">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center_vertical" android:id="@id/groups_feed_composer_profile_image" android:layout_width="@dimen/groups_feed_profile_image_large_size" android:layout_height="@dimen/groups_feed_profile_image_large_size" fb:placeholderImage="@drawable/no_avatar" fb:actualImageScaleType="centerCrop" fb:layout_useAsThumbnail="true" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/groups_composer_hint_text_color" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/groups_feed_composer_hint" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/groups_composer_publish_hint_text" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" fb:layout_useAsAuxView="true">
+            <com.facebook.fbui.glyph.GlyphView android:id="@id/groups_feed_composer_photo_button" android:layout_width="@dimen/groups_feed_composer_photo_button_size" android:layout_height="@dimen/groups_feed_composer_photo_button_size" android:src="@drawable/fbui_camera_l" android:scaleType="centerInside" fb:glyphColor="@color/groups_composer_button_color" />
+            <ViewStub android:id="@id/groups_feed_composer_more_stub" android:layout="@layout/groups_feed_composer_more_view" android:inflatedId="@id/groups_feed_composer_more_button" android:layout_width="@dimen/groups_feed_composer_photo_button_size" android:layout_height="@dimen/groups_feed_composer_photo_button_size" />
+        </LinearLayout>
+    </com.facebook.fbui.widget.layout.ImageBlockLayout>
+    <ViewStub android:id="@id/discuss_stub" android:layout="@layout/groups_feed_commerce_start_discussion" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.composer.activity.TwoThirdsLinearLayout android:orientation="vertical" android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/albums_header" android:background="@drawable/album_header" android:paddingTop="@dimen/album_header_margin_top" android:paddingBottom="@dimen/album_header_margin_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <com.facebook.resources.ui.FbTextView android:textSize="16.0sp" android:textColor="@color/fbui_black" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/fbui_padding_half_standard" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/photos_album_select" android:layout_weight="1.0" style="@style/header_button_text" />
+        <ImageView android:id="@id/create_album_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/icon_add_album" android:scaleType="center" android:contentDescription="@string/accessibility_albums_create_album" />
+    </LinearLayout>
+    <include layout="@layout/album_selector_view_content" />
+    <View android:id="@id/padding" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.facebook.composer.activity.TwoThirdsLinearLayout>

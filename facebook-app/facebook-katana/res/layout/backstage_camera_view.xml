@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:camera="http://schemas.android.com/apk/res-auto">
+    <com.facebook.optic.CameraPreviewView android:id="@id/camera_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true" camera:initialCameraFacing="back" camera:videoCaptureQuality="medium" camera:photoCaptureQuality="high" camera:enablePinchZoom="true" />
+    <View android:id="@id/black_overlay" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.backstage.camera.FocusView android:id="@id/focus_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.backstage.camera.ZoomView android:id="@id/zoom_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="bottom" android:id="@id/camera_control_box" android:fitsSystemWindows="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+        <FrameLayout android:id="@id/camera_flip_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center" android:id="@id/camera_flip_shadow_down" android:background="@drawable/camera_flip_shadow_down" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:layout_gravity="center" android:id="@id/camera_flip_shadow_up" android:background="@drawable/camera_flip_shadow_up" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.0" />
+            <com.facebook.backstage.ui.RotateButton android:layout_gravity="center" android:id="@id/camera_flip_button" android:background="@drawable/camera_flip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <com.facebook.backstage.camera.CaptureButton android:layout_gravity="center" android:id="@id/capture_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.facebook.backstage.ui.ToggleTextButton android:layout_gravity="center" android:id="@id/flash_button" android:background="@drawable/flash_off" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.facebook.backstage.ui.VideoRecordingProgressBar android:layout_gravity="top" android:id="@id/video_recording_progress_bar" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

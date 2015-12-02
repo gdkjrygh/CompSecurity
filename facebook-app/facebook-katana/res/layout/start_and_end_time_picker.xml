@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/start_and_end_time_picker_start_date_time" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.events.ui.date.DatePickerView android:textSize="@dimen/fbui_text_size_large" android:id="@id/start_and_end_time_picker_start_date" android:focusable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:cursorVisible="false" android:lines="1" android:layout_weight="50.0" android:inputType="none" style="@style/Spinner" />
+        <com.facebook.events.ui.date.TimePickerView android:textSize="@dimen/fbui_text_size_large" android:id="@id/start_and_end_time_picker_start_time" android:focusable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/event_start_time" android:cursorVisible="false" android:lines="1" android:layout_weight="50.0" android:inputType="none" style="@style/Spinner" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/start_and_end_time_picker_end_date_time" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_below="@id/start_and_end_time_picker_start_date_time">
+        <com.facebook.events.ui.date.DatePickerView android:textSize="@dimen/fbui_text_size_large" android:id="@id/start_and_end_time_picker_end_date" android:focusable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/event_end_date" android:cursorVisible="false" android:lines="1" android:layout_weight="50.0" android:inputType="none" style="@style/Spinner" />
+        <com.facebook.events.ui.date.TimePickerView android:textSize="@dimen/fbui_text_size_large" android:id="@id/start_and_end_time_picker_end_time" android:focusable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/event_end_time" android:cursorVisible="false" android:lines="1" android:layout_weight="50.0" android:inputType="none" style="@style/Spinner" />
+    </LinearLayout>
+</merge>

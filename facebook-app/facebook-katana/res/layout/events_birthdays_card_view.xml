@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.resources.ui.FbTextView android:gravity="center_vertical" android:id="@id/events_dashboard_card_title_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/events_dashboard_upcoming_birthdays_header" style="?attr/eventsDashboardHeaderStyle" />
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/eventsDashboardBaseStyle">
+        <com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:id="@id/events_birthdays_linear_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ProgressBar android:id="@id/events_birthdays_loading_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    <com.facebook.widget.text.BetterTextView android:id="@id/events_dashboard_card_view_all_text_view" android:layout_width="fill_parent" style="?attr/eventsDashboardBirthdayViewAllStyle" />
+</merge>

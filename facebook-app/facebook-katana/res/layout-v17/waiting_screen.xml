@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/title_layout_navless_empty" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/loading_strings_progress_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/fbui_content_view_horizontal_padding" android:layout_marginRight="@dimen/fbui_content_view_horizontal_padding" android:layout_marginBottom="@dimen/harrison_title_bar_height" android:layout_marginStart="@dimen/fbui_content_view_horizontal_padding" android:layout_marginEnd="@dimen/fbui_content_view_horizontal_padding">
+        <com.facebook.resources.ui.FbTextView android:textAppearance="?android:textAppearanceLarge" android:gravity="center" android:id="@id/language_pack_loading_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="28.0dip" />
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/loading_strings_error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/fbui_content_view_horizontal_padding" android:layout_marginRight="@dimen/fbui_content_view_horizontal_padding" android:layout_marginBottom="@dimen/fbui_content_view_horizontal_padding" android:layout_marginStart="@dimen/fbui_content_view_horizontal_padding" android:layout_marginEnd="@dimen/fbui_content_view_horizontal_padding">
+        <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.facebook.resources.ui.FbTextView android:textAppearance="?android:textAppearanceLarge" android:gravity="center" android:id="@id/language_pack_loading_failed_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" />
+        <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.facebook.resources.ui.FbButton android:id="@id/use_english_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fbui_content_view_vertical_padding" android:layout_marginBottom="@dimen/fbui_content_view_vertical_padding" android:text="@string/language_pack_loading_use_english" style="?attr/buttonSpecialMedium" />
+        <com.facebook.resources.ui.FbButton android:id="@id/use_english_button_grey" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fbui_content_view_vertical_padding" android:layout_marginBottom="@dimen/fbui_content_view_vertical_padding" android:text="@string/language_pack_loading_use_english" style="?attr/buttonRegularMedium" />
+        <com.facebook.resources.ui.FbButton android:id="@id/retry_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fbui_content_view_vertical_padding" android:text="@string/language_pack_loading_retry" style="?attr/buttonRegularMedium" />
+    </LinearLayout>
+</LinearLayout>

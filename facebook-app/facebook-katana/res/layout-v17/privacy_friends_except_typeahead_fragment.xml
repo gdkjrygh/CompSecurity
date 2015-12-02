@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/friends_to_bar_view" style="@style/audience_picker_bar_view">
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/privacy_typeahead_heading_text_size" android:textColor="?android:textColorTertiary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/typeahead_to_heading" android:includeFontPadding="false" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/privacy_typeahead_input_text_size" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/exclusion_to_header_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/privacy_typeahead_input_margin_left" android:layout_marginRight="@dimen/privacy_typeahead_input_margin_right" android:minHeight="@dimen/privacy_typeahead_input_min_height" android:text="@string/privacy_friends" android:maxLines="1" android:singleLine="true" android:includeFontPadding="false" android:layout_weight="1.0" android:layout_marginStart="@dimen/privacy_typeahead_input_margin_left" android:layout_marginEnd="@dimen/privacy_typeahead_input_margin_right" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/friends_except_bar_view" style="@style/audience_picker_bar_view">
+        <com.facebook.resources.ui.FbTextView android:text="@string/privacy_typeahead_custom_exclusion_heading" style="@style/audience_picker_custom_heading" />
+        <com.facebook.widget.tokenizedtypeahead.TokenizedAutoCompleteTextView android:id="@id/friends_except_autocomplete_input" style="@style/audience_picker_custom_autocomplete_input" />
+        <ProgressBar android:id="@id/friends_except_picker_loading_indicator" style="@style/audience_picker_loading_icon" />
+    </LinearLayout>
+    <com.facebook.widget.listview.BetterListView android:id="@id/friends_except_list_view" style="@style/audience_picker_custom_list_view" />
+    <View android:id="@id/friends_except_padding" android:background="?audienceTypeaheadBackgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

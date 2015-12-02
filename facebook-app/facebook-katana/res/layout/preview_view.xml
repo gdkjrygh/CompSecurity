@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.backstage.ui.MediaView android:id="@id/media_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.resources.ui.FbEditText android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="top|center" android:layout_gravity="top|center" android:id="@id/caption_input" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/backstage_preview_caption_margin" android:inputType="text" />
+    <com.facebook.resources.ui.FbTextView android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="top|center" android:layout_gravity="top|center" android:id="@id/caption_text" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/backstage_preview_caption_margin" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/preview_control_box" android:background="@drawable/dark_fade_gradient" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:layout_gravity="top" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:fitsSystemWindows="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.fbui.glyph.GlyphView android:id="@id/reshoot_button" android:padding="@dimen/backstage_preview_button_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/caspian_titlebar_icon_close_modal" />
+            <com.facebook.fbui.glyph.GlyphView android:id="@id/save_button" android:padding="@dimen/backstage_preview_button_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/backstage_preview_control_box_button_margin" android:src="@drawable/fbui_book_l" />
+            <com.facebook.fbui.glyph.GlyphView android:id="@id/message_button" android:padding="@dimen/backstage_preview_button_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/backstage_preview_control_box_button_margin" android:src="@drawable/draft_l" />
+            <com.facebook.fbui.glyph.GlyphView android:id="@id/share_button" android:padding="@dimen/backstage_preview_button_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/backstage_preview_control_box_button_margin" android:src="@drawable/fbui_share_l" />
+        </LinearLayout>
+    </FrameLayout>
+</merge>

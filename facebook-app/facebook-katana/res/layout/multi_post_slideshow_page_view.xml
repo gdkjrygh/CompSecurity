@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/chiclet_container" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/MultiPostStoryChiclet"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.facebook.feedplugins.multipoststory.rows.ui.SlideshowWithTextView android:id="@id/photo_view" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/photo_post_content_description" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/multi_post_slideshow_photo_count_view_text_size" android:textStyle="bold" android:textColor="@color/multi_post_photo_text" android:gravity="center" android:layout_gravity="top|right|center" android:id="@id/slideshow_photo_count_view" android:background="@drawable/slideshow_photo_count_view" android:layout_width="@dimen/multi_post_slideshow_photo_count_view_width" android:layout_height="@dimen/multi_post_slideshow_photo_count_view_width" android:layout_marginTop="@dimen/multi_post_slideshow_photo_count_view_margin" android:layout_marginRight="@dimen/multi_post_slideshow_photo_count_view_margin" />
+        <ViewStub android:layout_gravity="bottom|left|center" android:id="@id/mps_blingbar_stub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/feed_bling_bar_padding" />
+    </FrameLayout>
+    <include layout="@layout/multi_post_story_post_ufi" />
+</LinearLayout>

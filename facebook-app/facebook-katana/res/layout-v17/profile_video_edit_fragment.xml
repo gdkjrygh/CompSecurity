@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.timeline.profilevideo.view.PrivacyNoticeView android:gravity="center" android:padding="@dimen/privacy_view_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.widget.ExpandingFixedAspectRatioFrameLayout android:layout_gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/cover_frame_image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.instagram.creation.video.widget.scrubber.IgScrubberProgressIndicator android:id="@id/cover_frame_progress_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.facebook.widget.ExpandingFixedAspectRatioFrameLayout>
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <FrameLayout android:background="@color/fbui_bluegrey_2" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/scrubber_film_strip_left_right_margin" android:layout_marginTop="@dimen/scrubber_film_strip_top_bottom_margin" android:layout_marginRight="@dimen/scrubber_film_strip_left_right_margin" android:layout_marginBottom="@dimen/scrubber_film_strip_top_bottom_margin" android:layout_marginStart="@dimen/scrubber_film_strip_left_right_margin" android:layout_marginEnd="@dimen/scrubber_film_strip_left_right_margin">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/cover_frame_film_strip" android:layout_width="fill_parent" android:layout_height="@dimen/scrubber_film_strip_height" />
+        <SeekBar android:layout_gravity="center_vertical" android:id="@id/scrubber_seekbar" android:layout_width="fill_parent" android:layout_height="@dimen/scrubber_seek_bar_height" android:layout_marginLeft="@dimen/scrubber_seek_bar_left_right_margin" android:layout_marginRight="@dimen/scrubber_seek_bar_left_right_margin" android:progressDrawable="@null" android:layout_marginStart="@dimen/scrubber_seek_bar_left_right_margin" android:layout_marginEnd="@dimen/scrubber_seek_bar_left_right_margin" />
+    </FrameLayout>
+</LinearLayout>

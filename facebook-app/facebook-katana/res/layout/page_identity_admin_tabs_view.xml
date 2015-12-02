@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.CustomLinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.resources.ui.FbTextView android:id="@id/page_identity_page_tab" android:text="@string/page_identity_admin_tab_page" style="@style/secondary_tab_button" />
+        <View style="@style/seconday_tab_bar_vertical_separator" />
+        <com.facebook.fbui.widget.text.BadgeTextView android:ellipsize="end" android:id="@id/page_identity_activity_tab" android:text="@string/page_identity_admin_tab_activity" android:singleLine="true" fb:badgeTextAppearance="@style/notification_badge_text" fb:badgePadding="2.0dip" fb:badgeBackground="@drawable/mondobar_jewel_badge" fb:badgePlacement="withText" style="@style/secondary_tab_button" />
+        <View style="@style/seconday_tab_bar_vertical_separator" />
+        <com.facebook.resources.ui.FbTextView android:id="@id/page_identity_insights_tab" android:text="@string/page_identity_admin_tab_insights" style="@style/secondary_tab_button" />
+    </com.facebook.widget.CustomLinearLayout>
+    <View android:layout_gravity="bottom" android:background="@color/secondary_tab_bottom_border" android:layout_width="fill_parent" android:layout_height="@dimen/secondary_tab_bottom_border" />
+    <com.facebook.view.ControlledView android:layout_gravity="bottom" android:id="@id/page_identity_page_indicator" android:layout_width="fill_parent" android:layout_height="@dimen/secondary_tab_page_indicator_height" fb:controller="com.facebook.apptab.ui.NavigationTabsPageIndicator" />
+</merge>

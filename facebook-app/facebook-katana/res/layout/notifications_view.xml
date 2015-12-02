@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:id="@id/home_notifications_panel" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.MegaphoneViewstub android:id="@id/preview_notifications_megaphone_stub" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:inflatedLayoutAndroidId="@id/preview_notifications_megaphone" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.facebook.widget.refreshableview.StandardPTRView android:id="@id/ptr_container" android:background="?mainTabListBackgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:inflatedLayoutAndroidId="@id/notificationlist_container" />
+        <include layout="@layout/notifications_empty_layout" />
+    </FrameLayout>
+</merge>

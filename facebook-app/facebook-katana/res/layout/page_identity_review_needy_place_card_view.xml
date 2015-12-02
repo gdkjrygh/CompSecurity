@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.text.BetterTextView android:id="@id/review_needy_place_card_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Pages.CardTitleStyle" />
+    <com.facebook.widget.text.textwithentitiesview.TextWithEntitiesView android:id="@id/review_needy_place_card_subtitle" android:background="@color/white" android:paddingLeft="@dimen/fbui_padding_standard" android:paddingRight="@dimen/fbui_padding_standard" android:paddingBottom="@dimen/fbui_padding_standard" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Pages.TextAppearance.Light.Small" />
+    <include layout="@layout/page_card_divider" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/review_needy_place_card_stars_container" android:background="@color/white" android:padding="@dimen/fbui_padding_standard" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.widget.ratingbar.BetterRatingBar android:id="@id/review_needy_place_card_stars" android:layout_width="wrap_content" android:layout_height="wrap_content" fb:activeStarDrawable="@drawable/star_blue" fb:inactiveStarDrawable="@drawable/star_grey" fb:numStars="5" fb:horizontalStarPadding="1.0dip" />
+        <com.facebook.widget.text.BetterTextView android:paddingLeft="@dimen/fbui_padding_standard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/review_inline_star_upsell_hint" style="@style/Pages.TextAppearance.Light.Small" />
+    </LinearLayout>
+    <com.facebook.widget.text.BetterTextView android:id="@id/review_needy_place_card_review_button" android:background="@color/white" android:padding="@dimen/fbui_padding_standard" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/review_inline_button_upsell" style="@style/Pages.TextAppearance.Light" />
+</merge>

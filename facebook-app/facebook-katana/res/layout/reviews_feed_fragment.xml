@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomFrameLayout android:background="@color/fbui_bluegrey_5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.refreshableview.RefreshableListViewContainer android:id="@id/reviews_feed_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.widget.refreshableview.RefreshableViewOverflowItem android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.widget.refreshableview.RefreshableViewItem android:background="@color/fbui_bluegrey_5" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.widget.listview.BetterListView android:id="@id/reviews_feed_list" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/reviews_feed_list_view" />
+    </com.facebook.widget.refreshableview.RefreshableListViewContainer>
+    <ViewStub android:layout_gravity="top" android:id="@id/review_feed_sticky_header_stub" android:visibility="gone" android:layout="@layout/review_feed_section_header_view" android:inflatedId="@id/review_feed_sticky_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.facebook.widget.CustomFrameLayout>

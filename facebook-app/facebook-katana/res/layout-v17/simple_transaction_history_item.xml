@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:background="@drawable/payment_txn_list_item_underline_border" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:layout_marginStart="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="left|center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.facebook.widget.text.SimpleVariableTextLayoutView android:id="@id/transaction_name" android:layout_width="wrap_content" android:layout_height="wrap_content" fb:maxLines="1" fb:alignment="normal" style="?threadListItemNameStyle" />
+        <com.facebook.messaging.payment.prefs.transactions.PaymentTransactionStatusTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@drawable/transaction_status_text" android:id="@id/transaction_status" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/txn_hist_gray_color" android:gravity="right|center" android:layout_gravity="center" android:id="@id/transaction_amount" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</LinearLayout>

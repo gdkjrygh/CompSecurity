@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:background="@color/fbui_bluegrey_2" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/friending_codes_profile_pic" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="8.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="8.0dip" fb:placeholderImage="@drawable/no_avatar" fb:placeholderImageScaleType="centerCrop" fb:actualImageScaleType="centerCrop" />
+            <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:id="@id/friending_codes_my_code_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_bluegrey_40" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friending_codes_share" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xxxlarge_3" android:textColor="@color/fbui_bluegrey_40" android:id="@id/friending_codes_my_code_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <ProgressBar android:id="@id/friending_codes_my_code_progressbar" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginTop="5.0dip" />
+                <com.facebook.resources.ui.FbButton android:id="@id/friending_codes_try_again_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/friending_codes_try_again" style="?attr/buttonRegularSmall" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@color/fbui_white" android:paddingLeft="10.0dip" android:paddingTop="40.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_bluegrey_40" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/friending_codes_input" />
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/friending_codes_search_box_container" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:minWidth="225.0dip">
+                <com.facebook.ui.search.SearchEditText android:textSize="@dimen/fbui_text_size_xxxlarge_3" android:gravity="center" android:id="@id/friending_codes_search_box" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="36.0dip" android:maxLines="1" android:maxLength="10" android:layout_weight="1.0" android:inputType="number" android:imeOptions="actionSearch" android:layout_marginStart="36.0dip" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/friending_codes_search_icon" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/orca_magnifier" android:contentDescription="@string/accessibility_search" />
+                <ProgressBar android:layout_gravity="center_vertical" android:id="@id/friending_codes_search_progressbar" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="36.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/friending_codes_description_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_bluegrey_40" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/friending_codes_use_code" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_bluegrey_40" android:gravity="center" android:id="@id/friending_codes_expiration" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_red" android:gravity="center" android:id="@id/friending_codes_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

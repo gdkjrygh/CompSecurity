@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/video_trimming_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/video_trimming_layout" android:background="@color/media_edit_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.videocodec.trimming.VideoTrimmingPreviewView android:layout_gravity="center_horizontal" android:id="@id/video_trimming_preview" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/trimming_preview_margin" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="vertical" android:id="@id/video_trimming_editing_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.videocodec.trimming.VideoTrimmingFilmStripView android:id="@id/video_trimming_film_strip" android:layout_width="fill_parent" android:layout_height="@dimen/trimming_portrait_film_strip_height" />
+            <LinearLayout android:orientation="horizontal" android:background="@color/video_trimming_metadata_background_color" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.facebook.videocodec.trimming.VideoTrimmingMetadataView android:id="@id/video_trimming_original" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" fb:label="@string/video_trimming_metadata_original" fb:labelTextColor="@color/video_trimming_metadata_original_label_text_color" fb:bodyTextColor="@color/video_trimming_metadata_original_body_text_color" />
+                <com.facebook.videocodec.trimming.VideoTrimmingMetadataView android:id="@id/video_trimming_edited" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" fb:label="@string/video_trimming_metadata_ready" fb:labelTextColor="@color/video_trimming_metadata_edited_label_text_color" fb:bodyTextColor="@color/video_trimming_metadata_edited_body_text_color" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <com.facebook.widget.listview.EmptyListViewItem android:id="@id/empty_item_view" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

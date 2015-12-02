@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.apptab.ui.AppTabViewPager android:layout_gravity="bottom" android:id="@id/tab_content_viewpager" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.common.ui.keyboard.SoftInputDetectingLinearLayout android:orientation="vertical" android:id="@id/header_chrome_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/title_layout_base" />
+        <com.facebook.widget.CustomLinearLayout android:orientation="horizontal" android:id="@id/navigation_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/harrison_tab_bar_height" />
+        <View android:background="@color/black10a" android:layout_width="fill_parent" android:layout_height="2.0px" />
+    </com.facebook.common.ui.keyboard.SoftInputDetectingLinearLayout>
+    <ViewStub android:id="@id/zero_indicator_titlebar_stub" android:layout="@layout/fb4a_zero_indicator_wrapper" android:inflatedId="@id/zero_indicator_titlebar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/dialtone_switcher_bar_stub" android:layout="@layout/dialtone_switcher_bar_wrapper" android:inflatedId="@id/dialtone_switcher_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/preview_mode_banner_stub" android:layout="@layout/preview_banner_instance" android:inflatedId="@id/preview_mode_banner_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include layout="@layout/activity_fab_stub" />
+    <FrameLayout android:id="@id/tab_activity_fullscreen_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/tab_activity_main_expandable_photo" android:layout="@layout/tab_activity_main_expandable_photo" android:inflatedId="@id/tab_activity_main_expandable_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

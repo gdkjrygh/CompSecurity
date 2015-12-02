@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/friend_picture" android:layout_width="@dimen/profile_picture_size" android:layout_height="@dimen/profile_picture_size" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" fb:roundAsCircle="true" style="@style/FriendAppsProfilePictureStyle" />
+        <com.facebook.resources.ui.FbTextView android:id="@id/friend_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/friend_picture" style="@style/FriendAppsTitleStyle" />
+        <com.facebook.widget.ListViewFriendlyViewPager android:id="@id/friend_apps_viewpager" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_below="@id/friend_picture" android:overScrollMode="never" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+</LinearLayout>

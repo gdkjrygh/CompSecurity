@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.widget.error.GenericErrorViewStub android:id="@id/ad_interfaces_generic_error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/ad_interfaces_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.widget.scrollview.LockableScrollView android:id="@id/ad_interfaces_scroll_view" android:focusable="true" android:focusableInTouchMode="true" android:scrollbars="none" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/fragment_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.facebook.widget.scrollview.LockableScrollView>
+        <LinearLayout android:orientation="vertical" android:id="@id/sticky_fragment_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+        <ProgressBar android:id="@id/ad_interfaces_loading_progress_bar" android:layout_width="28.0dip" android:layout_height="28.0dip" android:indeterminate="true" android:layout_centerInParent="true" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+</com.facebook.widget.CustomLinearLayout>

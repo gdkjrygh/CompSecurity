@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center" android:id="@id/camera_clipper" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ViewStub android:id="@id/camera_preview_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/image_preview" android:background="@color/black" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+        <com.facebook.video.player.InlineVideoView android:id="@id/video_preview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:layout_gravity="center" android:id="@id/video_cancel_screen" android:background="@color/video_cancel_screen_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.facebook.messaging.quickcam.CameraFlash android:id="@id/camera_flash" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</merge>

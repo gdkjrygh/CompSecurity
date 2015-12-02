@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/preference_view_padding" android:paddingTop="@dimen/checkable_preference_v_padding" android:paddingRight="@dimen/preference_view_padding" android:paddingBottom="@dimen/checkable_preference_v_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/preference_view_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/preference_title_text_size" android:textColor="@color/black" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/switch_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/checkmark_margin" android:layout_marginEnd="@dimen/checkmark_margin" />
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/preference_summary_text_size" android:textColor="@color/groups_secondary_text_color" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/switch_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/checkmark_margin" android:lineSpacingMultiplier="1.0" android:layout_marginEnd="@dimen/checkmark_margin" />
+    </LinearLayout>
+    <ViewStub android:layout_gravity="right|center" android:id="@id/preference_switch_stub" android:inflatedId="@id/preference_switch" android:layout_width="@dimen/preference_switch_width" android:layout_height="@dimen/preference_switch_height" />
+</LinearLayout>

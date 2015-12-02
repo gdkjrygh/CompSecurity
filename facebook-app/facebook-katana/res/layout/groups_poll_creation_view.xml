@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.listview.BetterListView android:orientation="vertical" android:id="@id/groups_poll_options_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stackFromBottom="true" android:transcriptMode="alwaysScroll" android:divider="@drawable/groups_listview_divider" android:dividerHeight="@dimen/groups_poll_item_view_divider_height" />
+    <com.facebook.fbui.widget.layout.ImageBlockLayout android:gravity="center_vertical" android:id="@id/groups_poll_creation_view" android:layout_width="fill_parent" android:layout_height="@dimen/groups_poll_item_view_height">
+        <com.facebook.fbui.glyph.GlyphView android:layout_gravity="center_vertical" android:id="@id/groups_poll_create_button" android:padding="@dimen/groups_poll_icon_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/fbui_plus_l" fb:layout_useAsThumbnail="true" fb:glyphColor="@color/groups_poll_composer_icon_color" />
+        <com.facebook.resources.ui.FbEditText android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_text_dark" android:ellipsize="end" android:gravity="bottom" android:id="@id/groups_poll_create_option_text" android:background="@null" android:paddingBottom="@dimen/groups_poll_item_edit_text_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/groups_poll_initial_create_hint_message" android:maxLines="1" />
+        <com.facebook.fbui.glyph.GlyphView android:id="@id/groups_poll_create_setting" android:padding="@dimen/groups_poll_icon_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/fbui_settings_l" fb:layout_useAsAuxView="true" fb:glyphColor="@color/groups_poll_composer_icon_color" />
+    </com.facebook.fbui.widget.layout.ImageBlockLayout>
+</merge>

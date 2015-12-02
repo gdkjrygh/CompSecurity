@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/dummy_focus_elt" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0px" android:layout_height="0.0px" />
+    <FrameLayout android:layout_gravity="center_vertical" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/contact_picker_search_magnifier" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:src="?contactPickerSearchIcon" android:contentDescription="@string/search_icon_name" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/contact_picker_search_progress" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleSmall" />
+    </FrameLayout>
+    <com.facebook.widget.text.BetterEditTextView android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/friends_list_search" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:singleLine="true" android:completionThreshold="1" android:layout_weight="1.0" android:inputType="textPersonName" android:imeOptions="actionDone" android:textCursorDrawable="@null" style="?attr/divebarSearchEditTextStyle" />
+    <FrameLayout android:layout_gravity="center_vertical" android:id="@id/action_button_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</merge>

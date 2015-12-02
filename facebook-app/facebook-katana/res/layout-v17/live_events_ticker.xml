@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.RecyclerView android:id="@id/live_events_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/live_events_comment_box" android:layout_alignParentTop="true" />
+    <View android:background="@drawable/live_events_ticker_top_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/live_events_gradient_height" />
+    <View android:id="@id/live_events_bottom_gradient" android:background="@drawable/live_events_ticker_bottom_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/live_events_gradient_height" android:layout_above="@id/live_events_comment_box" />
+    <com.facebook.feed.ui.fullscreenvideoplayer.liveevent.LiveEventCommentComposer android:id="@id/live_events_comment_box" android:padding="@dimen/fbui_padding_standard" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <ViewStub android:id="@id/live_events_pill" android:layout="@layout/live_events_pill_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/live_events_pill_horizontal_margin" android:layout_marginRight="@dimen/live_events_pill_horizontal_margin" android:layout_marginBottom="@dimen/live_events_pill_bottom_margin" android:layout_above="@id/live_events_comment_box" android:layout_centerHorizontal="true" android:layout_marginStart="@dimen/live_events_pill_horizontal_margin" android:layout_marginEnd="@dimen/live_events_pill_horizontal_margin" />
+</merge>

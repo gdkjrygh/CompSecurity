@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/address_type_ahead_search_bar" android:layout_width="fill_parent" android:layout_height="@dimen/address_type_ahead_search_bar_height">
+        <com.facebook.ui.search.SearchEditText android:textColorHint="@color/search_bar_text" android:layout_gravity="left|center" android:id="@id/address_type_ahead_search_text" android:background="@color/transparent" android:saveEnabled="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/address_type_ahead_search_hint" android:singleLine="true" android:layout_weight="1.0" android:inputType="textNoSuggestions" android:imeOptions="actionSearch" />
+        <com.facebook.widget.text.BetterButton android:textColor="@color/search_bar_text" android:layout_gravity="right|center" android:id="@id/address_type_ahead_search_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/address_type_ahead_search_cancel" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/address_suggestions_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

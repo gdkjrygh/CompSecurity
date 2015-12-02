@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/top_detail_view_stub" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.facebook.orca.threadview.MessageItemContainer android:layout_gravity="right" android:orientation="vertical" android:id="@id/message_container" android:paddingLeft="@dimen/orca_message_me_user_left_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <android.support.v7.internal.widget.ViewStubCompat android:layout_gravity="right|center" android:id="@id/gutter_stub" android:layout="@layout/orca_message_me_user_item_gutter" android:layout_width="@dimen/orca_message_me_user_left_padding" android:layout_height="wrap_content" />
+            <com.facebook.orca.threadview.MessageContentContainer android:gravity="center_vertical" android:layout_gravity="right" android:orientation="vertical" android:id="@id/message_content_container" android:focusable="true" android:clickable="true" android:longClickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="?messageItemViewContainerMeUserRightMargin" android:minWidth="@dimen/orca_message_bubble_min_size" android:minHeight="@dimen/orca_message_bubble_min_size" android:layout_weight="1.0">
+                <com.facebook.widget.text.BetterTextView android:gravity="left|center" android:id="@id/message_text" orca:adjustLRGravityByTextDirectionCompat="true" orca:layout_contentType="text" style="?messageItemViewMeUserStyle" />
+                <include layout="@layout/orca_message_content_stubs" />
+            </com.facebook.orca.threadview.MessageContentContainer>
+            <android.support.v7.internal.widget.ViewStubCompat android:layout_gravity="bottom" android:id="@id/delivery_status_stub" android:layout="@layout/orca_message_item_delivery_status" android:layout_width="12.0sp" android:layout_height="12.0sp" android:layout_marginRight="6.0sp" />
+        </LinearLayout>
+        <android.support.v7.internal.widget.ViewStubCompat android:layout_gravity="right" android:id="@id/error_text_stub" android:layout="@layout/message_error_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="?messageItemViewRightTextMargin" />
+        <android.support.v7.internal.widget.ViewStubCompat android:layout_gravity="right" android:id="@id/error_text_stub_2" android:layout="@layout/message_error_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="?messageItemViewRightTextMargin" />
+    </com.facebook.orca.threadview.MessageItemContainer>
+</merge>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/banner_content_container" android:padding="@dimen/banner_border_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/banner_images" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/banner_image" android:visibility="gone" style="@style/MessagingPromotionBannerImage" />
+            <com.facebook.user.tiles.UserTileView android:id="@id/banner_round_image" android:visibility="gone" fb:threadTileSize="@dimen/banner_image_dimen" fb:bigImageWidthPercent="0.5" fb:asCircle="true" style="@style/MessagingPromotionBannerImage" />
+            <android.support.v7.internal.widget.ViewStubCompat android:id="@id/banner_survey_image_stub" android:inflatedId="@id/banner_survey_image" style="@style/MessagingPromotionBannerImage" />
+        </LinearLayout>
+        <ImageButton android:id="@id/banner_dismiss" android:background="?messagingPromotionBannerButtonBackground" android:layout_width="@dimen/banner_dismiss_dimen" android:layout_height="@dimen/banner_dismiss_dimen" android:layout_marginLeft="12.0dip" android:layout_marginBottom="@dimen/banner_dismiss_bottom_margin" android:src="?messagingPromotionBannerDismissDrawable" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/accessibility_dismiss_button" />
+        <LinearLayout android:orientation="vertical" android:id="@id/banner_standard_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/banner_dismiss" android:layout_toRightOf="@id/banner_images">
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/banner_title_font_size" android:textColor="?messagingPromotionBannerTextColor" android:id="@id/banner_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:includeFontPadding="false" android:fontFamily="sans-serif-medium" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/banner_description_font_size" android:textColor="?messagingPromotionBannerTextColor" android:id="@id/banner_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif" />
+        </LinearLayout>
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@id/banner_actions" android:background="@drawable/generic_promo_banner_bottom_divider_bg" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbTextView android:id="@id/secondary_action" android:layout_marginLeft="@dimen/banner_border_padding" android:layout_marginRight="@dimen/banner_action_horizontal_spacing" style="@style/MessagingPromotionBannerButton" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/banner_action_text_font_size" android:id="@id/primary_action" android:layout_marginRight="@dimen/banner_border_padding" style="@style/MessagingPromotionBannerButton" />
+    </LinearLayout>
+</merge>

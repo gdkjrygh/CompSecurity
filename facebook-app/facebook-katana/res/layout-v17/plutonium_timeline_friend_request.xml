@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="?android:textColorSecondary" android:layout_gravity="center_horizontal" android:id="@id/friend_request_header_text" android:paddingTop="@dimen/plutonium_friend_request_content_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/friend_request_button_container" android:paddingTop="@dimen/plutonium_friend_request_content_padding" android:paddingBottom="@dimen/plutonium_friend_request_content_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbButton android:textStyle="normal" android:id="@id/confirm_friend_request_button" android:layout_width="@dimen/plutonium_friend_request_reply_button_width" android:layout_height="@dimen/plutonium_friend_request_reply_button_height" android:layout_marginRight="@dimen/plutonium_friend_request_reply_button_right_margin" android:layout_marginEnd="@dimen/plutonium_friend_request_reply_button_right_margin" style="?attr/buttonSpecialSmall" />
+        <com.facebook.resources.ui.FbButton android:textStyle="normal" android:textColor="@color/fbui_btn_light_regular_stroke_default" android:id="@id/ignore_friend_request_button" android:layout_width="@dimen/plutonium_friend_request_reply_button_width" android:layout_height="@dimen/plutonium_friend_request_reply_button_height" style="?attr/buttonRegularSmall" />
+    </LinearLayout>
+    <ViewStub android:id="@id/timeline_friend_request_progress" android:layout="@layout/plutonium_timeline_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <View android:background="@color/fbui_border_light" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</merge>

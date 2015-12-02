@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/widgetbknd_noborder" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:background="@color/fbui_accent_blue" android:layout_width="@dimen/ridge_widget_icon_column_width" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center" android:id="@id/ridge_widget_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/ridge_widget_icon_size" android:maxHeight="@dimen/ridge_widget_icon_size" android:indeterminate="true" android:indeterminateDrawable="@drawable/ridge_widget_spin_animation" android:minWidth="@dimen/ridge_widget_icon_size" android:minHeight="@dimen/ridge_widget_icon_size" style="?android:attr/progressBarStyleLarge" />
+            <ImageView android:id="@id/ridge_widget_microphone_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_microphone" android:scaleType="center" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/ridge_widget_dot_grid" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+            <ViewFlipper android:id="@id/ridge_widget_text_flipper" android:layout_width="fill_parent" android:layout_height="fill_parent" android:inAnimation="@anim/abc_fade_in" android:outAnimation="@anim/abc_fade_out">
+                <TextView android:id="@id/ridge_prompt_blank" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+                <TextView android:id="@id/ridge_init_text" android:text="Initializing..." style="@style/RidgeWidgetPromptText" />
+                <TextView android:id="@id/ridge_prompt_text" android:text="What are you listening to?" style="@style/RidgeWidgetPromptText" />
+                <TextView android:id="@id/failure_text" android:text="Sorry, couldn't match. Retry?" style="@style/RidgeWidgetPromptText" />
+            </ViewFlipper>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

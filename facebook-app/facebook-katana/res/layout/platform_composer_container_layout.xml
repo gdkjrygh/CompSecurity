@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ViewStub android:id="@id/title_bar_stub" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="right|center" android:id="@id/cancel_view" android:visibility="gone" android:clickable="true" android:longClickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/composer_cancel" android:scaleType="center" />
+    </LinearLayout>
+    <com.facebook.widget.ScrollingAwareScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/fbui_wash_mobile" android:layout_width="fill_parent" android:layout_height="@dimen/one_px" />
+            <FrameLayout android:id="@id/composer_privacy_container" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:traceAs="ComposerPrivacyBar">
+                <com.facebook.platform.targetpicker.privacy.PlatformComposerSelectablePrivacyView android:id="@id/composer_selectable_privacy" style="@style/privacy_bar_view_base" />
+                <com.facebook.platform.targetpicker.privacy.PlatformComposerFixedPrivacyView android:id="@id/composer_fixed_privacy" android:visibility="gone" style="@style/privacy_bar_view_base" />
+                <View android:layout_gravity="bottom" android:background="@color/fbui_wash_mobile" android:layout_width="fill_parent" android:layout_height="@dimen/one_px" />
+            </FrameLayout>
+            <include layout="@layout/platform_composer_status_container" />
+        </LinearLayout>
+    </com.facebook.widget.ScrollingAwareScrollView>
+    <include layout="@layout/platform_composer_footer_container" />
+</merge>

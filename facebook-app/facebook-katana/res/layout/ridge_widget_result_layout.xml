@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/ridge_widget_result_view" android:background="@drawable/widgetbknd_noborder" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/ridge_widget_profile_picture" android:layout_width="@dimen/ridge_widget_icon_column_width" android:layout_height="fill_parent" android:src="@drawable/corrupted_image_placeholder" android:scaleType="centerCrop" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/fbui_padding_standard" android:paddingRight="@dimen/fbui_padding_standard" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/fbui_text_size_small" android:textStyle="bold" android:textColor="@color/fbui_bluegrey_80" android:ellipsize="end" android:id="@id/ridge_widget_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        <TextView android:textSize="@dimen/fbui_text_size_tiny" android:textColor="@color/fbui_bluegrey_50" android:ellipsize="end" android:id="@id/ridge_widget_subtitle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:lineSpacingExtra="1.0dip" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/ridge_widget_retry_button" android:layout_width="@dimen/ridge_widget_icon_span" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:layout_width="@dimen/ridge_widget_button_icon_size" android:layout_height="@dimen/ridge_widget_button_icon_size" android:src="@drawable/retry" android:scaleType="fitCenter" android:contentDescription="@string/generic_retry" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/ridge_widget_share_button" android:layout_width="@dimen/ridge_widget_icon_span" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:layout_width="@dimen/ridge_widget_button_icon_size" android:layout_height="@dimen/ridge_widget_button_icon_size" android:src="@drawable/icon_share" android:scaleType="fitCenter" android:contentDescription="@string/share_composer_initial_title" />
+    </FrameLayout>
+</LinearLayout>

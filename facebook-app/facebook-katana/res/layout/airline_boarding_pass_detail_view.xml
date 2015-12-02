@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.messaging.business.airline.view.AirlineHeaderView android:id="@id/airline_boarding_pass_detail_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/airline_bubble_header_height" fb:bubbleType="boarding" />
+    <include layout="@layout/airline_boarding_pass_detail_info_section" />
+    <com.facebook.messaging.business.airline.view.AirlineAirportRouteView android:id="@id/airline_boarding_pass_detail_airport_route" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/airline_detail_section_margin_bottom" style="@style/airline_horizontal_margin_default" />
+    <View android:layout_gravity="center" android:id="@id/airline_boarding_pass_detail_qr_code" android:background="@drawable/airline_qr_code_background" android:layout_width="@dimen/airline_detail_qr_code_background_size" android:layout_height="@dimen/airline_detail_qr_code_background_size" android:layout_marginTop="@dimen/airline_margin_default" android:layout_marginBottom="@dimen/airline_detail_qr_code_margin_bottom" />
+    <include layout="@layout/airline_divider_reverse" />
+    <com.facebook.widget.text.BetterTextView android:id="@id/airline_boarding_pass_detail_share_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/airline_boarding_pass_share_label" style="@style/airline_boarding_pass_detail_button" />
+    <include layout="@layout/airline_divider_reverse" />
+    <com.facebook.widget.text.BetterTextView android:id="@id/airline_boarding_pass_detail_message_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/airline_boarding_pass_message_us_label" style="@style/airline_boarding_pass_detail_button" />
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/airline_pager_indicator_height" />
+</merge>

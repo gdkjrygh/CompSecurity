@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.CustomLinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/commerce_checkout_item_preview_margin_vertical" android:layout_marginBottom="@dimen/commerce_checkout_item_preview_margin_vertical">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/item_preview_image" android:background="@color/commerce_bubble_image_background" android:padding="@dimen/commerce_item_border_width" android:layout_width="@dimen/commerce_receipt_details_image_width" android:layout_height="@dimen/commerce_receipt_details_image_height" android:layout_marginLeft="@dimen/commerce_receipt_details_margin_small" android:layout_marginRight="@dimen/commerce_receipt_details_margin" android:layout_centerVertical="true" android:layout_marginStart="@dimen/commerce_receipt_details_margin_small" android:layout_marginEnd="@dimen/commerce_receipt_details_margin" fb:actualImageScaleType="centerCrop" />
+        <com.facebook.widget.CustomLinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/item_preview_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.widget.text.BetterTextView android:ellipsize="end" android:id="@id/item_preview_title" android:layout_width="fill_parent" android:layout_height="@dimen/commerce_receipt_details_block_title" android:singleLine="true" style="@style/commerce_bubble_receipt_details_item_title" />
+            <com.facebook.widget.FlowLayout android:orientation="horizontal" android:id="@id/variants_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.facebook.widget.text.BetterTextView android:id="@id/item_preview_price" android:layout_width="wrap_content" android:layout_height="@dimen/commerce_receipt_details_block" style="@style/commerce_bubble_receipt_details_item_metaline" />
+        </com.facebook.widget.CustomLinearLayout>
+    </com.facebook.widget.CustomLinearLayout>
+    <View android:id="@id/commerce_bubble_receipt_header_divider" android:background="@color/business_bubble_divider" android:layout_width="fill_parent" android:layout_height="@dimen/business_bubble_divider_height" android:layout_marginLeft="@dimen/commerce_receipt_details_margin_small" android:layout_marginRight="@dimen/commerce_receipt_details_margin" android:layout_marginStart="@dimen/commerce_receipt_details_margin_small" android:layout_marginEnd="@dimen/commerce_receipt_details_margin" />
+</merge>

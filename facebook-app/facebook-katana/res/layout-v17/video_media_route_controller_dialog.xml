@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/media_route_control_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/media_route_newmedia_control_frame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/media_route_volume_layout" android:padding="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="64.0dip">
+        <ImageView android:gravity="center" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/mr_ic_audio_vol" android:scaleType="center" />
+        <SeekBar android:id="@id/media_route_volume_slider" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_weight="1.0" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+    </LinearLayout>
+    <View android:background="?android:dividerVertical" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:layout_marginStart="4.0dip" android:layout_marginEnd="4.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <com.facebook.resources.ui.FbButton android:textSize="@dimen/fbui_text_size_large" android:id="@id/disconnect" android:background="?android:selectableItemBackground" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/mr_media_route_controller_disconnect" android:layout_weight="1.0" />
+        <com.facebook.resources.ui.FbButton android:textSize="@dimen/fbui_text_size_large" android:id="@id/stop" android:background="?android:selectableItemBackground" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/mr_media_route_controller_stop" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

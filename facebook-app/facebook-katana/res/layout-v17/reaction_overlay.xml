@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/reaction_overlay_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/reaction_gradient_body" android:background="@color/reaction_overlay_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/reaction_overlay_welcome_header_stub" android:layout="@layout/reaction_overlay_welcome_header" android:inflatedId="@id/reaction_overlay_welcome_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.widget.recyclerview.BetterRecyclerView android:id="@id/reaction_recycler_view" android:paddingTop="@dimen/reaction_scroll_padding" android:paddingBottom="@dimen/reaction_padding_medium" android:clickable="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/reaction_spinner_viewstub" android:layout="@layout/reaction_overlay_loading_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <View android:id="@id/reaction_header_gradient" android:background="@drawable/reaction_header_gradient" android:clickable="false" android:layout_width="wrap_content" android:layout_height="@dimen/reaction_gradient_height" android:layout_alignLeft="@id/reaction_scroll_view" android:layout_alignRight="@id/reaction_scroll_view" android:layout_alignParentTop="true" android:layout_alignStart="@id/reaction_scroll_view" android:layout_alignEnd="@id/reaction_scroll_view" />
+    <com.facebook.reaction.ui.ReactionHeaderView android:id="@id/reaction_overlay_header" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:layout_alignParentTop="true" />
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

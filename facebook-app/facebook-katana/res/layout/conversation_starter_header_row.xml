@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.user.tiles.UserTileView android:id="@id/conversation_starter_round_image" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="?threadListItemThreadTileStyle" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/conversation_starter_title_presence_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/neue_thread_list_item_name_top_margin" android:layout_toRightOf="@id/conversation_starter_round_image">
+        <com.facebook.resources.ui.FbTextView android:id="@id/conversation_starter_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="?threadListItemNameStyleConversationStarter" />
+        <com.facebook.resources.ui.FbTextView android:textSize="12.0sp" android:id="@id/conversation_starter_presence_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/conversation_starter_presence_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginRight="@dimen/thread_list_right_margin" />
+    </LinearLayout>
+    <com.facebook.resources.ui.FbTextView android:id="@id/conversation_starter_description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/conversation_starter_round_image" android:layout_below="@id/conversation_starter_title_presence_container" style="?threadListItemSnippetStyleConversationStarter" />
+</merge>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/snowflake_photo_layout" android:background="?snowflake_photo_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.photos.consumptiongallery.snowphoto.Snowphoto android:id="@id/snowphoto" android:background="@drawable/snowflake_photo_placeholder" android:layout_width="fill_parent" android:layout_height="@dimen/snowflake_photo_default_height" />
+            <View android:id="@id/snowflake_photo_mask" android:background="?snowflake_photo_mask_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ImageView android:layout_gravity="center" android:id="@id/snowflake_play_button" android:background="@drawable/play_circle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" />
+            <ViewStub android:layout_gravity="top|right|center" android:id="@id/stub_snowflake_tag_button" android:layout="@layout/snowflake_tag_button_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/snowflake_dark_text" android:textColorLink="@color/snowflake_link" android:id="@id/snowflake_caption" android:paddingLeft="10.0dip" android:paddingTop="9.0dip" android:paddingRight="10.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2" />
+        <com.facebook.photos.consumptiongallery.snowflake.SnowflakeFooterViewStub android:id="@id/stub_snowflake_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</merge>

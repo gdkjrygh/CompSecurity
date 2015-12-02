@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.tiles.ThreadTileView android:id="@id/thread_tile_img" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="?threadListItemThreadTileStyle" />
+    <com.facebook.messaging.ui.name.ThreadNameView android:id="@id/thread_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/thread_time" android:layout_toRightOf="@id/thread_tile_img" android:layout_alignParentTop="true" orca:maxLines="1" orca:alignment="normal" style="?threadListItemNameStyle" />
+    <com.facebook.resources.ui.FbTextView android:id="@id/thread_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignBaseline="@id/thread_name" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="?threadListItemTimeStyle" />
+    <com.facebook.resources.ui.FbTextView android:ellipsize="end" android:id="@id/thread_last_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@id/thread_failure_container" android:layout_toRightOf="@id/thread_tile_img" android:layout_below="@id/thread_name" style="?threadListItemSnippetStyle" />
+    <ViewStub android:layout_gravity="center_vertical" android:id="@id/thread_failure_container" android:layout="@layout/orca_thread_list_item_failure" android:inflatedId="@id/thread_failure_container" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="11.0dip" android:layout_below="@id/thread_name" android:layout_alignTop="@id/thread_last_msg" android:layout_alignParentRight="true" />
+</merge>

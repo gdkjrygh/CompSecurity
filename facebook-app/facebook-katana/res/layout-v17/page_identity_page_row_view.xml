@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:background="@drawable/page_ui_card_clickable_with_white_background" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChambrayCardUnit"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/page_identity_profile_pic" android:layout_width="@dimen/page_ui_user_pic_size" android:layout_height="@dimen/page_ui_user_pic_size" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" orca:placeholderImage="@android:color/white" orca:actualImageScaleType="centerCrop" />
+    <ImageView android:id="@id/page_identity_chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:src="@drawable/chevron_right_light_grey_m" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginStart="6.0dip" android:layout_alignParentEnd="true" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/page_identity_chevron" android:layout_toRightOf="@id/page_identity_profile_pic" android:layout_centerVertical="true" android:layout_toStartOf="@id/page_identity_chevron" android:layout_toEndOf="@id/page_identity_profile_pic">
+        <com.facebook.resources.ui.FbTextView android:ellipsize="end" android:id="@id/page_identity_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/Pages.TextAppearance.Default.Large.Bold" />
+        <com.facebook.resources.ui.FbTextView android:ellipsize="end" android:id="@id/page_identity_subtext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/Pages.TextAppearance.Default.Large" />
+    </LinearLayout>
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:gravity="left" android:orientation="horizontal" android:background="@drawable/feed_offline_header_background" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="2.0dip" fb:showDividers="middle" fb:dividerPadding="8.0dip" fb:divider="@color/fbui_border_medium" fb:dividerThickness="1.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/fail_button" android:paddingLeft="@dimen/fbui_padding_standard" android:paddingRight="@dimen/fbui_padding_standard" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/offline_posting_error" android:contentDescription="@string/offline_posting_accessibility_failed" />
+        <com.facebook.resources.ui.FbTextView android:textColor="@color/publisher_text_color" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/error_text" android:paddingLeft="@dimen/fbui_padding_standard" android:paddingRight="@dimen/fbui_padding_standard" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/offline_post_failed" android:maxLines="2" android:inAnimation="@anim/none" android:outAnimation="@anim/abc_fade_out" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center" android:id="@id/cancel_button" android:paddingLeft="@dimen/fbui_padding_standard" android:paddingRight="@dimen/fbui_padding_standard" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/offline_posting_cancel_initial" android:contentDescription="@string/offline_posting_accessibility_cancel" />
+    </com.facebook.fbui.widget.layout.SegmentedLinearLayout>
+</merge>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/webview_container" android:background="@android:color/white" android:paddingTop="@dimen/browser_chrome_height" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.ui.browser.widget.BrowserProgressBar android:layout_gravity="top" android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="@dimen/browser_progressbar_height" android:max="100" android:indeterminate="false" android:indeterminateOnly="false" android:progressDrawable="@drawable/browser_progress_bar" />
+    </FrameLayout>
+    <ViewStub android:layout_gravity="bottom" android:id="@id/browser_conversations_stub" android:layout="@layout/browser_conversations_stub_layout" android:inflatedId="@id/browser_conversations_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:layout_gravity="bottom" android:id="@id/browser_ufi_only_stub" android:layout="@layout/browser_ufi_stub_layout" android:inflatedId="@id/browser_ufi_only_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:layout_gravity="bottom" android:id="@id/browser_pulse_bar_stub" android:layout="@layout/browser_pulse_bar_stub_layout" android:inflatedId="@id/browser_pulse_bar_view" android:layout_width="fill_parent" android:layout_height="@dimen/browser_embed_footer_height" />
+    <ViewStub android:layout_gravity="bottom" android:id="@id/browser_embed_footer" android:layout="@layout/browser_embed_footer" android:layout_width="fill_parent" android:layout_height="@dimen/browser_embed_footer_height" />
+    <com.facebook.ui.browser.widget.BrowserChrome android:layout_gravity="top" android:id="@id/browser_chrome" android:layout_width="fill_parent" android:layout_height="@dimen/browser_chrome_height" />
+    <FrameLayout android:id="@id/frame_full_screen_video" android:background="@android:color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

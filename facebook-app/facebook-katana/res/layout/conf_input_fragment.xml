@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/fbui_bg_light" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/fbui_padding_standard" android:paddingTop="@dimen/fbui_padding_half_standard" android:paddingRight="@dimen/fbui_padding_standard" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="3.0">
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textStyle="bold" android:textColor="@color/fbui_bluegrey_80" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/header_text" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/fbui_padding_standard" android:layout_weight="1.0" android:lineSpacingExtra="@dimen/fbui_padding_half_standard" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_red" android:gravity="top|center" android:id="@id/error_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minLines="3" android:lineSpacingExtra="@dimen/fbui_padding_one_fourth_standard" />
+        <ViewStub android:id="@id/confirmation_input_fragment_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.resources.ui.FbButton android:id="@id/continue_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fbui_padding_standard" android:text="@string/generic_continue" style="?attr/buttonSpecialLarge" />
+        <ViewStub android:id="@id/confirmation_input_fragment_bottom_stub" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" />
+    </LinearLayout>
+</ScrollView>

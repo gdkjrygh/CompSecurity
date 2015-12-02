@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/pages_contact_inbox_loading_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.ProgressBar.FBUi" />
+    <com.facebook.pages.common.ui.PagesEmptyView android:id="@id/pages_contact_inbox_error_message" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/pages_contact_inbox_swipe_refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.widget.recyclerview.BetterRecyclerView android:orientation="vertical" android:id="@id/pages_contact_inbox_list_recyclerview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</FrameLayout>

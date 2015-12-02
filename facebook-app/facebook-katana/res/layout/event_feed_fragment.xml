@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomRelativeLayout android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.refreshableview.RefreshableListViewContainer android:id="@id/events_feed_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.widget.refreshableview.RefreshableViewOverflowItem android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.widget.refreshableview.RefreshableViewItem android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.widget.listview.BetterListView android:layout_gravity="center" android:id="@id/events_feed_list" android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+    </com.facebook.widget.refreshableview.RefreshableListViewContainer>
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:gravity="center" android:id="@id/list_empty_text" android:background="@color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/empty_layout_progress_bar" android:background="@color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    </FrameLayout>
+    <com.facebook.feed.ui.GenericNotificationBanner android:id="@id/error_banner" android:layout_width="fill_parent" android:layout_height="@dimen/feed_top_bar_height" android:layout_alignParentTop="true" />
+</com.facebook.widget.CustomRelativeLayout>

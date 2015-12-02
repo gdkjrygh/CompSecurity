@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:auto="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/tile_image" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginLeft="@dimen/inbox2_item_left_margin" android:layout_marginRight="@dimen/inbox2_item_right_margin" android:layout_alignParentLeft="true" android:layout_centerVertical="true" auto:actualImageScaleType="centerCrop" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textStyle="normal" android:textColor="@color/inbox2_primary_text_color" android:id="@id/title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/inbox2_item_top_margin" android:singleLine="true" android:layout_toRightOf="@id/tile_image" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/inbox2_secondary_text_color" android:ellipsize="end" android:id="@id/description_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/inbox2_margin_between_text_lines" android:layout_marginRight="@dimen/inbox2_item_right_margin" android:layout_marginBottom="@dimen/inbox2_item_bottom_margin" android:maxLines="2" android:minLines="2" android:layout_toRightOf="@id/tile_image" android:layout_below="@id/title_text" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="40.0dip">
+        <TextView android:textColor="@color/fbui_btn_light_primary_text_enabled" android:gravity="center" android:layout_gravity="center" android:id="@id/read_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Read" android:layout_weight="1.0" />
+        <View android:background="@color/fbui_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+        <TextView android:textColor="@color/fbui_btn_light_primary_text_enabled" android:gravity="center" android:layout_gravity="center" android:id="@id/share_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Share" android:layout_weight="1.0" />
+    </LinearLayout>
+</merge>

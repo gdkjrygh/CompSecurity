@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/event_card_cover_photo" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:viewAspectRatio="1.91" />
+        <ImageView android:layout_gravity="top|right|center" android:id="@id/event_card_remove_button" android:padding="@dimen/fbui_padding_standard" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/event_card_remove_button_icon" />
+    </FrameLayout>
+    <com.facebook.fbui.widget.layout.ImageBlockLayout android:gravity="center" android:layout_gravity="bottom" android:id="@id/event_card_bottom_view_container" android:layout_width="fill_parent" android:layout_height="@dimen/event_card_bottom_view_height">
+        <com.facebook.events.widget.eventcard.EventCalendarTimeView android:gravity="center" android:layout_gravity="center" android:id="@id/event_card_calendar_time_view" android:paddingBottom="@dimen/fbui_padding_text" android:layout_width="@dimen/event_card_calendar_time_view_size" android:layout_height="@dimen/event_card_calendar_time_view_size" android:maxLines="2" android:includeFontPadding="false" fb:layout_useAsThumbnail="true" />
+        <com.facebook.widget.text.BetterTextView android:layout_gravity="center" android:id="@id/event_card_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="1.0dip" style="@style/event_card_title_text" />
+        <com.facebook.widget.text.BetterTextView android:layout_gravity="center" android:id="@id/event_card_event_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="3.0dip" style="@style/event_card_event_info_text" />
+        <com.facebook.widget.text.BetterTextView android:layout_gravity="center" android:id="@id/event_card_social_context" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="3.0dip" style="@style/event_card_social_context_text" />
+        <com.facebook.events.widget.eventcard.EventActionButtonView android:gravity="center" android:layout_gravity="center" android:id="@id/event_card_action_button" android:layout_width="@dimen/event_action_button_view_size" android:layout_height="@dimen/event_action_button_view_size" android:scaleType="center" fb:layout_useAsAuxView="true" />
+    </com.facebook.fbui.widget.layout.ImageBlockLayout>
+</merge>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:orientation="vertical" android:background="@drawable/today_nux_upsell_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/bottom_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/fragment_nux_step_enable_today_bottom" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom_layout">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_xxxlarge_1" android:textColor="@color/fbui_white" android:gravity="center" android:id="@id/today_location_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/today_nux_enable_side_padding" android:layout_marginTop="@dimen/today_nux_title_top_margin" android:layout_marginRight="@dimen/today_nux_enable_side_padding" android:text="@string/today_nux_location_history_title" android:layout_marginStart="@dimen/today_nux_enable_side_padding" android:layout_marginEnd="@dimen/today_nux_enable_side_padding" />
+            <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_white" android:gravity="center" android:id="@id/today_location_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/today_nux_enable_side_padding" android:layout_marginTop="@dimen/today_nux_enable_small_space" android:layout_marginRight="@dimen/today_nux_enable_side_padding" android:text="@string/today_nux_location_history_subtitle" android:layout_marginStart="@dimen/today_nux_enable_side_padding" android:layout_marginEnd="@dimen/today_nux_enable_side_padding" />
+            <ImageView android:id="@id/today_nux_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/today_nux_title_top_margin" android:src="@drawable/today_card_fan_android" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+        </LinearLayout>
+    </ScrollView>
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

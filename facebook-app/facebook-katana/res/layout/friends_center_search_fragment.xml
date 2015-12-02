@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/fbui_bg_medium" android:paddingLeft="@dimen/fbui_content_view_horizontal_padding" android:paddingTop="?contentViewVerticalPadding" android:paddingRight="@dimen/fbui_content_view_horizontal_padding" android:paddingBottom="?contentViewVerticalPadding" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/friends_center_search_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/fbui_content_view_thumbnail_margin_right" android:src="@drawable/fbui_magnifying_glass_l" />
+        <com.facebook.ui.search.SearchEditText android:textSize="@dimen/fbui_text_size_medium" android:textColor="?android:textColorSecondary" android:textColorHint="?android:textColorTertiary" android:ellipsize="end" android:id="@id/friends_center_search_edit_text" android:background="@color/fbui_bg_medium" android:saveEnabled="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/fbui_content_view_thumbnail_margin_right" android:hint="@string/friends_center_search_hint" android:singleLine="true" android:layout_weight="1.0" android:inputType="text" android:imeOptions="actionSearch" />
+        <ImageButton android:id="@id/friends_center_search_cancel" android:background="@color/fbui_bg_medium" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fbui_cross_l" />
+    </LinearLayout>
+    <com.facebook.widget.listview.BetterListView android:id="@id/friends_center_search_list_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/Widget.ListView.FBUi" />
+    <include layout="@layout/friends_center_empty_view" />
+</LinearLayout>

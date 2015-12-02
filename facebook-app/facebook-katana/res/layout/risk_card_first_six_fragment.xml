@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/payment_form_overall_left_right_paddings" android:paddingRight="@dimen/payment_form_overall_left_right_paddings" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.messaging.payment.ui.PaymentHeaderSubheaderLayout android:id="@id/header_subheader" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/input_form" android:background="@drawable/payment_text_field" android:addStatesFromChildren="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/payment_card_info_edit_text_top_margin">
+        <com.facebook.resources.ui.FbEditText android:textSize="@dimen/payment_card_info_edit_text_text_size" android:textColor="@color/fbui_text_medium" android:id="@id/input_first6" android:background="@android:color/transparent" android:layout_width="60.0dip" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="7" android:digits=" 0123456789" android:inputType="phone" android:imeOptions="actionDone|flagNoExtractUi" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/payment_card_info_edit_text_text_size" android:textColor="@color/payment_subtitle_noaction_gray" android:id="@id/first6_suffix" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/payment_card_info_edit_text_text_size_for_error" android:textColor="@color/fbui_red" android:id="@id/error_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/risk_flow_error_in_first_six" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomFrameLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.refreshableview.RefreshableListViewContainer android:id="@id/saved_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.widget.refreshableview.RefreshableViewOverflowItem android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.widget.refreshableview.RefreshableViewItem android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.widget.listview.BetterListView android:id="@id/saved_items_list_view" android:paddingLeft="@dimen/saved_dashboard_list_item_padding" android:paddingRight="@dimen/saved_dashboard_list_item_padding" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" style="@style/Widget.ListView.FBUi" />
+    </com.facebook.widget.refreshableview.RefreshableListViewContainer>
+    <ViewStub android:layout_gravity="center_horizontal" android:id="@id/new_items_button_stub" android:layout="@layout/saved_new_items_pill_layout" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginTop="7.0dip" />
+    <ViewStub android:id="@id/saved_items_list_empty_view_stub" android:layout="@layout/saved_item_list_empty_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.facebook.widget.CustomFrameLayout>

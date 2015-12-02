@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/live_wallpaper_settings_activity" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.resources.ui.FbTextView android:textColor="@color/white" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/border_padding" android:layout_marginTop="@dimen/top_border_padding" android:layout_marginRight="@dimen/border_padding" android:layout_marginBottom="@dimen/bottom_border_padding" android:text="@string/wpnux_title" style="@style/regular.large" />
+    <View android:background="@color/primary_divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginLeft="@dimen/border_padding" android:layout_marginRight="@dimen/border_padding" />
+    <fragment android:id="@id/settings_fragment" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" class="com.facebook.dash.wallpaper.ui.SettingsFragment" />
+    <View android:background="@color/primary_divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginLeft="@dimen/border_padding" android:layout_marginRight="@dimen/border_padding" />
+    <com.facebook.resources.ui.FbButton android:textColor="@color/base_button_text_color" android:gravity="center" android:id="@id/set_wallpaper" android:background="@drawable/query_list_selector" android:layout_width="fill_parent" android:layout_height="@dimen/query_list_item_height" android:text="@string/wpnux_set_wallpaper" style="@style/regular.large" />
+</LinearLayout>

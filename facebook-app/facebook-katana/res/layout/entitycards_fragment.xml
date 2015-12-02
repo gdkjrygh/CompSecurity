@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/entity_cards_background" android:background="@color/entity_cards_fragment_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.widget.text.SimpleVariableTextLayoutView android:textStyle="bold" android:ellipsize="end" android:gravity="center" android:layout_gravity="top|center" android:id="@id/entity_cards_title" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/entity_card_pager_page_padding" android:layout_marginRight="@dimen/entity_card_pager_page_padding" android:singleLine="true" fb:textColor="@color/white" fb:maxLines="1" fb:minScaledTextSize="14" fb:maxScaledTextSize="19" />
+    </FrameLayout>
+    <com.facebook.fbui.draggable.widget.DismissibleFrameLayout android:id="@id/entity_cards_dismissible_container" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:dragDirections="down" fb:swipeAxis="horizontal">
+        <android.support.v4.view.ViewPager android:layout_gravity="top" android:id="@id/entity_cards_view_pager" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.facebook.fbui.draggable.widget.DismissibleFrameLayout>
+</FrameLayout>

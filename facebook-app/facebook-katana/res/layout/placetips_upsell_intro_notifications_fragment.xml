@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:background="@color/fbui_white" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:id="@id/placetips_lh_upsell_header_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/placetips_lh_upsell_header_bg">
+        <ImageView android:id="@id/placetips_lh_upsell_header_image" android:paddingBottom="@dimen/fbui_padding_standard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pt_pin" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xxlarge" android:textColor="@color/fbui_bluegrey_80" android:gravity="center" android:id="@id/placetips_lh_upsell_header" android:paddingLeft="@dimen/fbui_check_size" android:paddingRight="@dimen/fbui_check_size" android:paddingBottom="@dimen/fbui_text_size_xxlarge" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:gravity="center" android:id="@id/placetips_lh_upsell_text" android:paddingLeft="@dimen/fbui_check_size" android:paddingRight="@dimen/fbui_check_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/placetips_upsell_line_spacing_extra" />
+        <com.facebook.resources.ui.FbButton android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_facebook_blue" android:gravity="center" android:id="@id/placetips_lh_upsell_learnmore_button" android:paddingLeft="@dimen/fbui_check_size" android:paddingTop="@dimen/fbui_padding_standard" android:paddingRight="@dimen/fbui_check_size" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" layout="@layout/placetips_upsell_include_bottom_buttons" />
+    <FrameLayout android:id="@id/placetips_lh_upsell_progress" android:background="@color/fbui_white_80" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    </FrameLayout>
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

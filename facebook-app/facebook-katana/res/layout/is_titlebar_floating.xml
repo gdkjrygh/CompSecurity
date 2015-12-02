@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/title_bar_floating" android:background="@drawable/instantshopping_header_border" android:layout_width="fill_parent" android:layout_height="@dimen/instant_shopping_titlebar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.text.BetterTextView android:textSize="@dimen/instant_shopping_header_title_size" android:textColor="@android:color/black" android:ellipsize="end" android:gravity="center" android:id="@id/titlebar_label" android:paddingLeft="@dimen/instant_shopping_titlebar_clickable_button_container_width" android:paddingRight="@dimen/instant_shopping_titlebar_clickable_button_container_width" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:layout_centerInParent="true" />
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:gravity="center" android:id="@id/titlebar_logo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_centerInParent="true" fb:actualImageScaleType="fitCenter" />
+    <FrameLayout android:layout_gravity="right|center" android:id="@id/titlebar_save_button_container" android:visibility="gone" android:layout_width="@dimen/instant_shopping_titlebar_clickable_button_container_width" android:layout_height="fill_parent" android:layout_weight="0.0">
+        <View android:layout_gravity="center" android:id="@id/titlebar_save_button" android:background="@drawable/instantshopping_save_button" android:layout_width="@dimen/instant_shopping_titlebar_save_icon_width" android:layout_height="@dimen/instant_shopping_titlebar_save_icon_height" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="right|center" android:id="@id/title_bar_add_to_cart_icon_with_badge" android:visibility="gone" android:layout_width="@dimen/instant_shopping_titlebar_add_to_cart_container_width" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:layout_gravity="center" android:id="@id/cart_icon" android:visibility="gone" android:layout_width="@dimen/instant_shopping_titlebar_icon_width" android:layout_height="@dimen/instant_shopping_titlebar_icon_height" android:src="@drawable/cart_blk" />
+        <com.facebook.widget.text.BetterTextView android:layout_gravity="center" android:id="@id/cart_item_count" android:visibility="gone" android:layout_marginRight="@dimen/instant_shopping_titlebar_add_to_cart_button_margin" android:layout_marginBottom="@dimen/instant_shopping_button_padding_bottom" style="@style/AddToCartBadge" />
+    </FrameLayout>
+</LinearLayout>

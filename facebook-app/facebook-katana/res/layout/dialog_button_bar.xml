@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="53.0dip" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@drawable/dialog_list_separator_background" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/dialog_button_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/dialog_button_divider" android:layout_weight="1.0" android:showDividers="middle">
+        <include android:id="@id/dialog_negative_button" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/dialog_no" android:layout_weight="1.0" layout="@layout/dialog_button" />
+        <include android:id="@id/dialog_neutral_button" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/dialog_cancel" android:layout_weight="1.0" layout="@layout/dialog_button" />
+        <include android:id="@id/dialog_positive_button" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/dialog_yes" android:layout_weight="1.0" layout="@layout/dialog_button" />
+    </LinearLayout>
+</LinearLayout>

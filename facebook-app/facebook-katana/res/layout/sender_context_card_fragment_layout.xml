@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/root_content_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/profile_image" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:viewAspectRatio="@dimen/sender_context_card_profile_image_aspect_ratio" fb:placeholderImage="@color/fbui_bg_light" fb:actualImageScaleType="centerCrop" />
+            <LinearLayout android:orientation="vertical" android:id="@id/sections_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/fbui_divider_horizontal" android:showDividers="middle">
+                <com.facebook.pages.messaging.sendercontextcard.ui.AboutSectionView android:id="@id/about_section_view" android:padding="@dimen/sender_context_card_section_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.facebook.pages.messaging.sendercontextcard.ui.TagsSectionView android:id="@id/tags_section_view" android:padding="@dimen/sender_context_card_section_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.facebook.pages.messaging.sendercontextcard.ui.NotesSectionView android:id="@id/notes_section_view" android:paddingTop="@dimen/sender_context_card_section_padding" android:paddingBottom="@dimen/sender_context_card_section_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.facebook.pages.messaging.sendercontextcard.ui.HistorySectionView android:id="@id/history_section_view" android:paddingTop="@dimen/fbui_content_view_vertical_padding" android:paddingBottom="@dimen/fbui_content_view_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.ProgressBar.FBUi" />
+</FrameLayout>

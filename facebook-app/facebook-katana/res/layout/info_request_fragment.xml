@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/profile_info_request_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/timeline_info_request_bgr" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbTextView android:textStyle="bold" android:id="@id/request_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/profile_info_request_padding" />
+            <View android:background="@color/profile_frame" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <com.facebook.resources.ui.FbEditText android:textSize="@dimen/fbui_text_size_medium" android:gravity="top" android:id="@id/request_note_edit_text" android:background="@null" android:padding="@dimen/profile_info_request_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/profile_info_request_edit_text_hint" android:minLines="5" />
+            <View android:background="@color/profile_frame" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <com.facebook.resources.ui.FbButton android:enabled="false" android:id="@id/request_button" android:layout_width="fill_parent" android:layout_height="@dimen/profile_info_request_button_height" android:layout_margin="@dimen/profile_info_request_padding" android:text="@string/profile_info_request_button_text" style="@style/profile_info_request_button" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/info_request_status_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/profile_info_request_button_height" android:layout_margin="@dimen/profile_info_request_padding">
+                <ProgressBar android:id="@id/info_request_progress_bar" android:layout_width="wrap_content" android:layout_height="@dimen/profile_info_request_progress_bar_height" android:indeterminate="true" />
+                <com.facebook.resources.ui.FbTextView android:id="@id/info_request_status_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.facebook.resources.ui.FbTextView android:gravity="center" android:id="@id/request_footer_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/profile_info_request_padding" />
+    </LinearLayout>
+</ScrollView>

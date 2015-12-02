@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.common.ui.keyboard.SoftInputDetectingLinearLayout android:orientation="vertical" android:id="@id/composer_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:traceAs="ComposerFragmentContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:id="@id/composer_content_wrapper" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <include layout="@layout/zero_indicator_bar" />
+        <include layout="@layout/dialtone_switcher_bar_stub" />
+        <ViewStub android:id="@id/composer_titlebar" android:inflatedId="@id/composer_titlebar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/linear_composer_next_tooltip" android:layout="@layout/linear_composer_tooltip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-12.0dip" />
+        <View android:id="@id/composer_fragment_top_border" android:background="@color/fbui_wash_mobile" android:layout_width="fill_parent" android:layout_height="@dimen/one_px" />
+        <com.facebook.widget.ScrollingAwareScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ViewStub android:id="@id/composer_privacy_container_stub" android:layout="@layout/composer_privacy_bar" android:inflatedId="@id/composer_privacy_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <ViewStub android:layout_gravity="center" android:id="@id/composer_sticker_icon_stub" android:layout="@layout/composer_sticker_view" android:inflatedId="@id/composer_sticker_icon" android:layout_width="@dimen/composer_sticker_icon_size" android:layout_height="@dimen/composer_sticker_icon_size" android:layout_marginTop="@dimen/composer_sticker_icon_margin_top" />
+                <com.facebook.composer.ui.statusview.ComposerStatusView android:orientation="vertical" android:id="@id/status_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:traceAs="ComposerStatusView" />
+            </LinearLayout>
+        </com.facebook.widget.ScrollingAwareScrollView>
+        <ViewStub android:id="@id/composer_bottom_text" android:layout="@layout/bottom_text_layout" android:inflatedId="@id/composer_bottom_text" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/composer_plugin_footer_view_stub" android:inflatedId="@id/composer_plugin_footer_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/linear_composer_footer_nux" android:layout="@layout/linear_composer_footer_nux" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/composer_footer_stub" android:inflatedId="@id/composer_footer_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.facebook.widget.CustomLinearLayout>
+</com.facebook.common.ui.keyboard.SoftInputDetectingLinearLayout>

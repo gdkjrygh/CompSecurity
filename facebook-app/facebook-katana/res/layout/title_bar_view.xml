@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/first_child" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_title_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/text_content" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.facebook.resources.ui.FbButton android:layout_gravity="left|center" android:id="@id/back_chevron" android:background="@drawable/back" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" />
+            <com.facebook.resources.ui.FbTextView android:textColor="@android:color/white" android:gravity="center_vertical" android:id="@id/title_text" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/regular.large" />
+        </LinearLayout>
+        <com.facebook.resources.ui.FbTextView android:textColor="@color/forty_percent_alpha_white" android:gravity="center_vertical" android:layout_gravity="right" android:id="@id/accessory_text" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/regular.large" />
+    </FrameLayout>
+    <View android:layout_gravity="bottom" style="@style/horizontal_button_bar" />
+</FrameLayout>

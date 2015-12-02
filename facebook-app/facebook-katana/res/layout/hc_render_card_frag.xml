@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/hc_card_root" android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/hc_loading_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.facebook.resources.ui.FbTextView android:layout_gravity="center" android:id="@id/hc_error_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hc_error_loading_card" />
+    <FrameLayout android:layout_gravity="center" android:id="@id/hc_content_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.facebook.greetingcards.verve.render.VerveContentView android:id="@id/hc_verve_scaled_container" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+        <com.facebook.resources.ui.FbButton android:layout_gravity="top|right|center" android:id="@id/hc_share_button" android:background="@drawable/hc_share_button_bg" android:paddingLeft="11.0dip" android:paddingTop="6.0dip" android:paddingRight="11.0dip" android:paddingBottom="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:text="@string/hc_preview_share" style="@style/Widget.Button.FBUi.Dark.Regular.Small" />
+    </FrameLayout>
+</FrameLayout>

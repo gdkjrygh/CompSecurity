@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/nearby_places_result_list_container" android:background="@color/fbui_bg_light" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.listview.BetterListView android:id="@id/nearby_places_result_list" android:background="@color/fbui_bg_light" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:divider="@drawable/nearby_places_v2_result_list_item_divider" android:dividerHeight="@dimen/nearby_places_v2_result_list_divider_height" style="@style/Widget.ListView.FBUi" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/nearby_places_result_list_error" android:padding="@dimen/nearby_places_v2_item_card_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbTextView android:textColor="@color/fbui_black" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/nearby_places_result_list_error" />
+        <com.facebook.resources.ui.FbTextView android:textColor="@color/fbui_bluegrey_40" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/nearby_places_result_list_broaden_search_text" />
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/nearby_places_result_list_loading_indicator" android:layout_width="@dimen/nearby_places_v2_result_list_progress_indicator_size" android:layout_height="@dimen/nearby_places_v2_result_list_progress_indicator_size" />
+</FrameLayout>

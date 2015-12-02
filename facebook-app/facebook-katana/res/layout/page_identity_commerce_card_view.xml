@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.widget.text.BetterTextView android:id="@id/page_identity_commerce_header_text" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Pages.CardTitleStyle.WithChevron" />
+        <com.facebook.widget.text.BetterButton android:textSize="@dimen/fbui_text_size_medium" android:textStyle="bold" android:textColor="@color/fbui_accent_blue" android:layout_gravity="right|center" android:id="@id/page_identity_commerce_edit" android:paddingLeft="@dimen/fbui_padding_standard" android:paddingRight="@dimen/page_identity_commerce_card_edit_right_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/page_identity_edit" fb:fontFamily="roboto" fb:fontWeight="bold" fb:allCaps="true" />
+    </FrameLayout>
+    <com.facebook.feed.ui.attachments.MosaicGridLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/page_identity_commerce_photos" android:background="@color/white" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/page_identity_commerce_card_bottom_margin" />
+    <ViewStub android:id="@id/page_identity_commerce_empty_shop" android:layout="@layout/page_identity_commerce_card_empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

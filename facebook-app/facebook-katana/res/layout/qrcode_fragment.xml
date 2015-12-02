@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/fbui_bg_medium" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/scanner_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:background="@color/fbui_btn_light_regular_bg_default" android:layout_width="fill_parent" android:layout_height="@dimen/menu_height">
+            <com.facebook.resources.ui.FbTextView android:enabled="true" android:textSize="@dimen/menu_text_size" android:textStyle="bold" android:textColor="@color/qrcode_state_switcher" android:gravity="center" android:id="@id/show_code_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/qr_code_show_button" android:layout_weight="1.0" />
+            <View android:layout_gravity="center" android:background="@color/fbui_divider" android:layout_width="1.0px" android:layout_height="@dimen/menu_divider_size" />
+            <com.facebook.resources.ui.FbTextView android:enabled="false" android:textSize="@dimen/menu_text_size" android:textStyle="bold" android:textColor="@color/qrcode_state_switcher" android:gravity="center" android:id="@id/scan_code_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/qr_code_scan_button" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:background="@color/fbui_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    </LinearLayout>
+    <ScrollView android:id="@id/qr_code_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:paddingTop="16.0dip" android:paddingBottom="8.0dip" android:layout_width="@dimen/qrcode_container_size" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/info_text_size" android:textColor="?android:textColorSecondary" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/qr_code_share_text" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.facebook.drawee.view.DraweeView android:layout_gravity="center_horizontal" android:id="@id/qr_code_image" android:background="@drawable/qr_code_background" android:layout_width="@dimen/qrcode_container_size" android:layout_height="@dimen/qrcode_container_size" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:scaleType="center" android:adjustViewBounds="true" android:contentDescription="@string/qr_code_accessibility_code_description" />
+            <com.facebook.fbui.widget.inlineactionbar.InlineActionBar android:layout_gravity="center_horizontal" android:id="@id/qrcode_action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/InlineActionBar" />
+        </LinearLayout>
+    </ScrollView>
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/camera_preview" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/qr_code_scanner_overlay" android:layout_width="@dimen/qrcode_container_size" android:layout_height="fill_parent" android:layout_centerHorizontal="true">
+            <View android:enabled="false" android:layout_gravity="center" android:id="@id/qr_code_scanner_guide" android:background="@drawable/qr_code_scanner_background" android:layout_width="fill_parent" android:layout_height="@dimen/qrcode_container_size" android:layout_marginTop="24.0dip" />
+            <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/info_text_size" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/qr_code_scan_text" android:layout_width="@dimen/qrcode_container_size" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip">
+                        <View android:layout_gravity="center_vertical" android:background="@color/overlay_divider" android:layout_width="wrap_content" android:layout_height="1.0px" android:layout_weight="1.0" />
+                        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/overlay_divider_text_size" android:textColor="@color/overlay_divider" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/qr_code_or_divider" />
+                        <View android:layout_gravity="center_vertical" android:background="@color/overlay_divider" android:layout_width="wrap_content" android:layout_height="1.0px" android:layout_weight="1.0" />
+                    </LinearLayout>
+                    <com.facebook.resources.ui.FbButton android:layout_gravity="center_horizontal" android:id="@id/import_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/fbui_padding_half_standard" android:text="@string/qr_code_import_button" style="?attr/buttonRegularLargeInverse" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <include layout="@layout/focus_indicator" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+</LinearLayout>

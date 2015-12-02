@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomRelativeLayout android:id="@id/threadlist_root" android:background="?threadListBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:traceAs="ThreadListFragmentContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <View android:layout_gravity="top" android:id="@id/error_toast_dock" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+    <include android:id="@id/qp_header_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/orca_qp_banner_view_stub_compat" />
+    <android.support.v7.internal.widget.ViewStubCompat android:id="@id/survey_header_banner" android:layout="@layout/orca_survey_banner_stub" android:inflatedId="@id/survey_header_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/qp_header_banner" />
+    <com.facebook.widget.FbSwipeRefreshLayout android:id="@id/threadlist_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/thread_list_composer_container" android:layout_below="@id/survey_header_banner">
+        <android.support.v7.internal.widget.ViewStubCompat android:id="@id/list_stub" android:inflatedId="@id/thread_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.facebook.widget.FbSwipeRefreshLayout>
+    <ViewStub android:id="@id/zero_rating_bottom_banner_stub" android:layout="@layout/carrier_bottom_banner_wrapper" android:inflatedId="@id/zero_rating_bottom_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <com.facebook.widget.listview.EmptyListViewItem android:id="@id/thread_list_loading_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+</com.facebook.widget.CustomRelativeLayout>

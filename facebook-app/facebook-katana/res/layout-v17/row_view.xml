@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="top" android:id="@id/horizontal_bar" android:background="@color/twelve_percent_alpha_white" android:layout_marginLeft="@dimen/home_standard_padding" android:layout_marginRight="@dimen/home_standard_padding" android:layout_marginStart="@dimen/home_standard_padding" android:layout_marginEnd="@dimen/home_standard_padding" style="@style/horizontal_button_bar" />
+    <LinearLayout android:id="@id/text_content_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/home_standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.facebook.resources.ui.FbTextView android:textColor="@android:color/white" android:gravity="center_vertical" android:id="@id/primary_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/regular.large" />
+            <com.facebook.resources.ui.FbTextView android:textColor="@color/fifty_percent_alpha_white" android:gravity="center_vertical" android:id="@id/detail_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/regular.medium" />
+        </LinearLayout>
+        <ImageButton android:layout_gravity="right|center" android:id="@id/checkmark" android:background="@null" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="@dimen/home_standard_padding" android:src="@drawable/checkmark_states" android:layout_marginStart="10.0dip" android:layout_marginEnd="@dimen/home_standard_padding" />
+    </LinearLayout>
+</FrameLayout>

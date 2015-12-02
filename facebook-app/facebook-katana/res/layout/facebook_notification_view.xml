@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.dashcard.notificationcard.view.FacebookNotificationView android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="@dimen/home_half_standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/notification_sender" android:background="@drawable/dashcard_image_shadow" android:layout_width="@dimen/dashcard_large_icon_width" android:layout_height="@dimen/dashcard_large_icon_height" android:scaleType="centerCrop" android:contentDescription="@string/dashcard_notification_sender_description" />
+    <com.facebook.dashcard.common.ui.TapToOpenContentContainer android:gravity="center_vertical" android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dashcard_large_icon_content_gap">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.facebook.resources.ui.FbTextView android:id="@id/notification_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:includeFontPadding="false" android:lineSpacingExtra="2.0sp" android:contentDescription="@string/dashcard_notification_text_description" style="@style/shadowed_white_text.regular.medium" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_tiny" android:id="@id/notification_timestamp_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" style="@style/shadowed_white_text.bold.small.dimmed" />
+            </LinearLayout>
+            <ImageView android:id="@id/notification_thumbnail_view" android:background="@drawable/dashcard_image_shadow" android:visibility="gone" android:layout_width="@dimen/dashcard_small_icon_width" android:layout_height="@dimen/dashcard_small_icon_height" android:layout_marginLeft="@dimen/dashcard_small_icon_content_gap" android:scaleType="centerCrop" />
+        </LinearLayout>
+    </com.facebook.dashcard.common.ui.TapToOpenContentContainer>
+</com.facebook.dashcard.notificationcard.view.FacebookNotificationView>

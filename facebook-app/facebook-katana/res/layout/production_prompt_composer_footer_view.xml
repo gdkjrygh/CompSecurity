@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.fbui.widget.layout.ImageBlockLayout android:gravity="left|center" android:orientation="horizontal" android:id="@id/production_prompt_accept_container" android:background="@color/prompt_click_container_background_color" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center" android:id="@id/prompt_icon_view" android:paddingLeft="@dimen/fbui_padding_standard" android:paddingRight="@dimen/fbui_padding_text" android:layout_width="@dimen/production_prompt_banner_icon_width" android:layout_height="@dimen/production_prompt_banner_icon_height" fb:actualImageScaleType="centerCrop" fb:layout_useAsThumbnail="true" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="?android:textColorTertiary" android:id="@id/prompt_cta" android:paddingTop="@dimen/fbui_padding_half_standard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/production_prompt_banner_add_to_post" android:maxLines="1" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_black" android:ellipsize="end" android:id="@id/prompt_title_view" android:paddingBottom="@dimen/fbui_padding_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        <com.facebook.fbui.glyph.GlyphView android:layout_gravity="center" android:id="@id/production_prompt_banner_accept" android:layout_width="@dimen/production_prompt_banner_button_width" android:layout_height="@dimen/production_prompt_banner_button_height" android:src="@drawable/fbui_checkmark_l" fb:layout_useAsAuxView="true" />
+    </com.facebook.fbui.widget.layout.ImageBlockLayout>
+    <com.facebook.fbui.glyph.GlyphView android:id="@id/production_prompt_banner_dismiss" android:background="@color/prompt_click_container_background_color" android:layout_width="@dimen/production_prompt_banner_button_width" android:layout_height="fill_parent" android:src="@drawable/fbui_cross_l" android:scaleType="centerInside" />
+</merge>

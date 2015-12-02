@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/edit_history_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    <include android:id="@id/error_view" layout="@layout/generic_error_view" />
+    <com.facebook.widget.listview.BetterListView android:id="@id/edit_history_list" android:paddingLeft="@dimen/feed_story_margin" android:paddingRight="@dimen/feed_story_margin" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@android:color/transparent" android:divider="@android:color/transparent" android:dividerHeight="0.0dip" android:footerDividersEnabled="false" />
+</FrameLayout>

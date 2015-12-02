@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:showDividers="middle" fb:divider="@drawable/horizontal_divider" fb:dividerThickness="1.0px">
+        <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/ad_interfaces_standard_horizontal_padding" android:paddingTop="@dimen/ad_interfaces_standard_vertical_padding" android:paddingRight="@dimen/ad_interfaces_standard_horizontal_padding" android:paddingBottom="@dimen/ad_interfaces_standard_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:weightSum="2.0" fb:showDividers="middle" fb:divider="@drawable/vertical_divider" fb:dividerThickness="1.0px">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.facebook.widget.text.BetterTextView android:id="@id/spent_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdInterfacesText.BoostSummaryFigures" />
+                <com.facebook.widget.text.BetterTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ad_interfaces_spent" style="@style/AdInterfacesText.MediumSize.Regular" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.facebook.widget.text.BetterTextView android:id="@id/paid_reach_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdInterfacesText.BoostSummaryFigures" />
+                <com.facebook.widget.text.BetterTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ad_interfaces_paid_reach" style="@style/AdInterfacesText.MediumSize.Regular" />
+            </LinearLayout>
+        </com.facebook.fbui.widget.layout.SegmentedLinearLayout>
+        <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:orientation="vertical" android:id="@id/promotion_details_rows_container" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:showDividers="middle" fb:divider="@drawable/horizontal_divider" fb:dividerThickness="1.0px" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbButton android:id="@id/action_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ad_interfaces_standard_horizontal_padding" android:layout_marginTop="@dimen/ad_interfaces_standard_vertical_padding" android:layout_marginRight="@dimen/ad_interfaces_standard_horizontal_padding" android:layout_marginBottom="@dimen/ad_interfaces_standard_vertical_padding" style="@style/Widget.Button.FBUi.Light.Regular.Medium" />
+        </LinearLayout>
+    </com.facebook.fbui.widget.layout.SegmentedLinearLayout>
+</merge>

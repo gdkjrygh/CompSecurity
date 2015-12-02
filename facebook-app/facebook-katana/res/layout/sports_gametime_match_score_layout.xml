@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/fbui_black" android:gravity="left" android:id="@id/left_team_name" android:padding="@dimen/sports_gametime_attachment_text_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/fbui_black" android:gravity="right" android:id="@id/right_team_name" android:padding="@dimen/sports_gametime_attachment_text_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <com.facebook.feed.rows.sections.attachments.ui.LeftTeamScoreLogoView android:gravity="left" android:id="@id/left_team_score_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/sports_gametime_attachment_team_layout_margin_side" android:layout_marginBottom="@dimen/sports_gametime_attachment_team_layout_margin_bottom" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginBottom="10.0dip" android:layout_weight="1.0">
+            <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_small" android:textStyle="bold" android:textColor="@color/fbui_black" android:gravity="center" android:id="@id/status_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+            <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_tiny_small" android:textColor="@color/grey60" android:gravity="center" android:id="@id/broadcast_network" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+        </LinearLayout>
+        <com.facebook.feed.rows.sections.attachments.ui.RightTeamScoreLogoView android:gravity="right" android:id="@id/right_team_score_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/sports_gametime_attachment_team_layout_margin_side" android:layout_marginBottom="@dimen/sports_gametime_attachment_team_layout_margin_bottom" />
+    </LinearLayout>
+</LinearLayout>

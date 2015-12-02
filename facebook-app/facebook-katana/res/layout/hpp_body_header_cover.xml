@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/hpp_cover_photo" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:actualImageScaleType="centerCrop" />
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="bottom|left|center" android:id="@id/hpp_profile_photo" android:background="@color/white" android:padding="@dimen/hpp_profile_pic_border_size" android:layout_width="@dimen/hpp_profile_pic_size" android:layout_height="@dimen/hpp_profile_pic_size" android:layout_marginLeft="@dimen/hpp_profile_pic_margin_left" android:layout_marginBottom="@dimen/hpp_profile_pic_margin_bottom" fb:actualImageScaleType="centerCrop" />
+    <com.facebook.fbui.widget.contentview.ContentView android:layout_gravity="bottom|left|center" android:id="@id/hpp_titles_container" android:paddingLeft="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hpp_titles_profilepic_margin_start" android:layout_marginRight="@dimen/hpp_titles_margin_end" android:layout_marginBottom="@dimen/hpp_titles_margin_bottom" fb:thumbnailSize="xlarge">
+        <com.facebook.fbui.widget.text.BadgeTextView android:textStyle="bold" android:ellipsize="end" android:id="@id/hpp_title_with_badge" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" fb:layout_useViewAs="title" fb:badgeTextAppearance="@style/notification_badge_text" fb:badgePadding="8.0dip" fb:badgeBackground="@drawable/mondobar_jewel_badge" fb:badgePlacement="awayFromText" />
+        <com.facebook.resources.ui.FbTextView android:ellipsize="end" android:id="@id/hpp_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" fb:layout_useViewAs="subtitle" />
+    </com.facebook.fbui.widget.contentview.ContentView>
+</merge>

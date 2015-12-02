@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.messaging.ui.segmentedtabbar.SegmentedTabBar android:layout_gravity="top|center" android:id="@id/gender_tab" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/commerce_shopping_flip_tab_margin" android:layout_marginTop="@dimen/commerce_shopping_flip_tab_margin" android:layout_marginRight="@dimen/commerce_shopping_flip_tab_margin" android:layout_marginBottom="@dimen/commerce_shopping_flip_tab_margin_bottom" android:layout_marginStart="@dimen/commerce_shopping_flip_tab_margin" android:layout_marginEnd="@dimen/commerce_shopping_flip_tab_margin" fb:leftTabName="@string/commerce_trending_shopping_women_label" fb:rightTabName="@string/commerce_trending_shopping_men_label" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:id="@id/trending_items_list" android:paddingLeft="@dimen/commerce_shopping_trending_padding" android:paddingTop="@dimen/commerce_shopping_trending_padding" android:paddingRight="@dimen/commerce_shopping_trending_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/load_trending_items_progress_bar" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyle" />
+    </FrameLayout>
+</com.facebook.widget.CustomLinearLayout>

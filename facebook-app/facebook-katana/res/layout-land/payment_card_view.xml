@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.AdvancedVerticalLinearLayout android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:spaceSavingThreshold="@dimen/payments_space_saving_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:navless="true" />
+    <View android:id="@id/banner_notification_placeholder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/fragment_activity" />
+            <LinearLayout android:orientation="vertical" android:id="@id/add_payment_card_activity" android:background="@color/fbui_white" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:layout_width="fill_parent" style="@style/PaymentsCardInfoEditTextIconContainer.Landscape">
+                    <com.facebook.resources.ui.FbEditText android:id="@id/card_number" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/payments_card_number" style="@style/PaymentsCardInfoEditTextWithoutLayout.Landscape" />
+                    <ImageView android:id="@id/card_icon" style="@style/PaymentsCardInfoIcon" />
+                </FrameLayout>
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/payments_card_info_edit_text_text_size_for_error" android:textColor="@color/fbui_red" android:id="@id/error_in_card_number" android:paddingLeft="@dimen/payments_card_info_edit_text_left_padding_land" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/payments_add_card_error_in_card_number" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.facebook.resources.ui.FbEditText android:id="@id/expiration_date" android:layout_width="0.0dip" android:hint="@string/payments_expiration_date" android:maxLength="5" android:layout_weight="2.0" style="@style/PaymentsCardInfoEditText.Landscape" />
+                    <FrameLayout android:layout_width="0.0dip" android:layout_weight="2.0" style="@style/PaymentsCardInfoEditTextIconContainer.Landscape">
+                        <com.facebook.resources.ui.FbEditText android:ellipsize="end" android:id="@id/security_code" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/payments_security_code" android:maxLength="4" style="@style/PaymentsCardInfoEditTextWithoutLayout.Landscape" />
+                        <ImageView android:id="@id/security_code_icon" style="@style/PaymentsCardInfoIcon" />
+                    </FrameLayout>
+                    <com.facebook.resources.ui.FbEditText android:id="@id/billing_zip" android:layout_width="0.0dip" android:hint="@string/payments_billing_zip" android:maxLength="5" android:layout_weight="3.0" style="@style/PaymentsCardInfoEditText.Landscape" />
+                </LinearLayout>
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/payments_card_info_edit_text_text_size_for_error" android:textColor="@color/fbui_red" android:id="@id/error_in_exp_date" android:paddingLeft="@dimen/payments_card_info_edit_text_left_padding_land" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payments_add_card_error_in_exp_date" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/payments_card_info_edit_text_text_size_for_error" android:textColor="@color/fbui_red" android:id="@id/error_in_security_code" android:paddingLeft="@dimen/payments_card_info_edit_text_left_padding_land" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payments_add_card_error_in_security_code" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/payments_card_info_edit_text_text_size_for_error" android:textColor="@color/fbui_red" android:id="@id/error_in_billing_zip" android:paddingLeft="@dimen/payments_card_info_edit_text_left_padding_land" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payments_add_card_error_in_billing_zip" />
+                <LinearLayout android:layout_gravity="right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textStyle="bold" android:textColor="@color/payments_action_blue" android:id="@id/card_cancel_text_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payments_add_card_cancel_text_button" android:textAllCaps="true" />
+                    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textStyle="bold" android:textColor="@color/payments_action_blue" android:id="@id/card_save_text_button" android:paddingLeft="40.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payments_add_card_save_text_button" android:textAllCaps="true" />
+                </LinearLayout>
+                <com.facebook.payments.ui.SecurityFooterView android:id="@id/security_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+            </LinearLayout>
+            <ProgressBar android:layout_gravity="center" android:id="@id/add_card_progress_bar" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" style="?android:attr/progressBarStyle" />
+        </FrameLayout>
+    </ScrollView>
+</com.facebook.widget.AdvancedVerticalLinearLayout>

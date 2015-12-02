@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="top|right|center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/qp_interstitial_margin_top">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/qp_interstitial_margin_horizontal" android:layout_marginRight="@dimen/qp_interstitial_margin_horizontal" android:fillViewport="true" android:layout_weight="1.0" android:layout_marginStart="@dimen/qp_interstitial_margin_horizontal" android:layout_marginEnd="@dimen/qp_interstitial_margin_horizontal">
+            <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/qp_image" android:layout_width="0.0dip" android:layout_height="0.0dip" fb:progressBarImage="@drawable/fbui_progress_spinner" fb:actualImageScaleType="centerInside" />
+                    <com.facebook.resources.ui.EllipsizingTextView android:textAppearance="@style/TextAppearance.QPInterstitialHeader" android:textColor="?android:textColorPrimary" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/qp_interstitial_title_margin" android:maxLines="@integer/qp_interstitial_title_max_lines" />
+                    <com.facebook.resources.ui.EllipsizingTextView android:textAppearance="@style/TextAppearance.FBUi.Medium" android:textColor="?android:textColorSecondary" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/content" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/qp_interstitial_inside_margin">
+                    <com.facebook.widget.facepile.FacepileView android:gravity="center_horizontal" android:id="@id/facepile" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:faceSize="40.0dip" fb:paddingBetweenFaces="3.0dip" />
+                    <com.facebook.resources.ui.EllipsizingTextView android:textAppearance="@style/TextAppearance.FBUi.Small" android:textColor="?android:textColorTertiary" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/social_context_text" android:paddingTop="@dimen/qp_interstitial_social_context_padding_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="@integer/qp_interstitial_social_context_max_lines" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/qp_interstitial_inside_margin_large">
+            <View android:layout_gravity="top" android:background="@color/QPButtonLinesColor" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/qp_interstitial_button_height">
+                <com.facebook.resources.ui.FbButton android:textAppearance="@style/TextAppearance.QPInterstitialButtonSecondary" android:textColor="?android:textColorTertiary" android:ellipsize="end" android:id="@id/btn_secondary" android:background="@drawable/qp_interstitial_button_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:maxLines="@integer/qp_interstitial_button_max_lines" android:layout_weight="1.0" />
+                <View android:layout_gravity="center_vertical" android:id="@id/btn_border" android:background="@color/QPButtonLinesColor" android:layout_width="1.0dip" android:layout_height="@dimen/qp_interstitial_button_divider_height" />
+                <com.facebook.resources.ui.FbButton android:textAppearance="@style/TextAppearance.QPInterstitialButtonPrimary" android:textColor="@color/QPInterstitialPrimaryButtonTextColor" android:ellipsize="end" android:id="@id/btn_primary" android:background="@drawable/qp_interstitial_button_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:maxLines="@integer/qp_interstitial_button_max_lines" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageButton android:layout_gravity="top|right|center" android:id="@id/btn_x_out" android:background="@drawable/qp_interstitial_button_background" android:padding="@dimen/qp_interstitial_x_button_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/qp_interstitial_x" />
+</FrameLayout>

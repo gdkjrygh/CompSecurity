@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.AdvancedVerticalLinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" fb:spaceSavingThreshold="@dimen/space_saving_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="never">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/fragment_activity" />
+            <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/edit_payment_methods_activity" android:paddingLeft="28.0dip" android:paddingRight="28.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:showDividers="end|middle" fb:divider="@color/payment_divider_gray" fb:dividerThickness="0.5dip">
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_bluegrey_50" android:gravity="center_vertical" android:id="@id/is_primary_card" android:paddingLeft="12.0dip" android:visibility="gone" android:clickable="false" android:layout_width="fill_parent" android:layout_height="64.0dip" android:text="@string/edit_payment_card_is_primary_card_text" android:drawableLeft="@drawable/primary_card_checkmark" android:drawablePadding="10.0dip" />
+                <include layout="@layout/edit_payment_methods_info" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textColor="@color/make_primary_card_color" android:gravity="center_vertical" android:id="@id/make_primary_card" android:background="@drawable/orca_neue_list_selector_background" android:paddingLeft="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="64.0dip" android:text="@string/edit_payment_card_make_primary_card" android:drawableLeft="@drawable/checkmark_black" android:drawablePadding="6.0dip" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/payment_card_info_edit_text_text_size_for_error" android:textColor="@color/fbui_text_light" android:id="@id/primary_card_info" android:paddingTop="8.0dip" android:paddingBottom="22.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/payment_edit_primary_card_info" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textColor="@color/delete_card_color" android:gravity="center_vertical" android:id="@id/delete_card" android:background="@drawable/orca_neue_list_selector_background" android:paddingLeft="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="64.0dip" android:text="@string/edit_payment_card_delete_card" android:drawableLeft="@drawable/delete_card" android:drawablePadding="6.0dip" />
+            </com.facebook.fbui.widget.layout.SegmentedLinearLayout>
+            <ProgressBar android:layout_gravity="center" android:id="@id/edit_card_progress_bar" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" style="?android:attr/progressBarStyle" />
+        </FrameLayout>
+    </ScrollView>
+</com.facebook.widget.AdvancedVerticalLinearLayout>

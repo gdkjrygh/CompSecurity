@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.fbui.widget.layout.ImageBlockLayout android:gravity="center_vertical" android:id="@id/feed_composer_header" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:thumbnailPadding="@dimen/default_padding">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center_vertical" android:id="@id/feed_composer_profile_image" android:layout_width="@dimen/feed_profile_image_large_size" android:layout_height="@dimen/feed_profile_image_large_size" fb:placeholderImage="@drawable/no_avatar" fb:actualImageScaleType="centerCrop" fb:layout_useAsThumbnail="true" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/fbui_text_light" android:layout_gravity="center_vertical" android:id="@id/feed_composer_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/inline_composer_prompt_icon_view_stub" android:layout="@layout/prompt_icon" android:layout_width="@dimen/v2_prompt_icon_size" android:layout_height="@dimen/v2_prompt_icon_size" android:layout_marginRight="@dimen/v2_prompt_icon_margin_right" android:layout_marginEnd="@dimen/v2_prompt_icon_margin_right" fb:layout_useAsAuxView="true" />
+    </com.facebook.fbui.widget.layout.ImageBlockLayout>
+    <include layout="@layout/prompt_flyout" />
+</merge>

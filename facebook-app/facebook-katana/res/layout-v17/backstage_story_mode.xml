@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/backstage_story_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/backstage_footer_bar" android:layout_width="fill_parent" android:layout_height="@dimen/backstage_story_footer_height">
+        <com.facebook.drawee.view.GenericDraweeView android:id="@id/backstage_footer_profile_image_view" android:layout_width="@dimen/backstage_story_seen_profile_size" android:layout_height="@dimen/backstage_story_seen_profile_size" android:layout_marginLeft="@dimen/backstage_story_seen_profile_margin" android:layout_marginBottom="@dimen/backstage_story_seen_profile_margin" android:layout_marginStart="@dimen/backstage_story_seen_profile_margin" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/backstage_story_footer_date_text_size" android:textColor="@android:color/white" android:id="@id/backstage_footer_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/backstage_story_footer_text_left_margin" android:layout_marginBottom="@dimen/backstage_story_seen_profile_margin" android:layout_marginStart="@dimen/backstage_story_footer_text_left_margin" style="@style/WhiteTextShadow" />
+        <com.facebook.backstage.consumption.BackstageBadgedSmileView android:layout_gravity="right|center" android:id="@id/backstage_smile" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <com.facebook.fbui.glyph.GlyphView android:layout_gravity="top|left|center" android:id="@id/backstage_story_close" android:paddingLeft="@dimen/backstage_story_seen_profile_margin" android:paddingTop="@dimen/backstage_story_seen_profile_margin" android:paddingRight="@dimen/backstage_story_seen_profile_margin" android:paddingBottom="@dimen/backstage_story_seen_profile_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fbui_cross_l" />
+</merge>

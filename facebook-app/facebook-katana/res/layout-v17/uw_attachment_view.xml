@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/image_contents" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="13.5dip">
+        <ViewStub android:id="@id/image_stub" android:inflatedId="@id/image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.facebook.photos.tagging.shared.FaceBoxesView android:id="@id/faceboxes_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.facebook.photos.creativeediting.renderers.CreativeEditingPhotoOverlayView android:id="@id/editing_overlay_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:layout_gravity="center" android:id="@id/video_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/video_grid_icon" />
+        <ViewStub android:layout_gravity="bottom" android:id="@id/editing_stub" android:layout="@layout/photo_editing_controls" android:inflatedId="@id/editing_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <ImageView android:layout_gravity="top|right|center" android:id="@id/remove_button" android:padding="@dimen/underwood_remove_button_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/underwood_remove_button_top_margin" android:layout_marginRight="@dimen/underwood_remove_button_right_margin" android:src="@drawable/uw_cross" android:contentDescription="@string/photo_cancel_content_description" android:layout_marginEnd="@dimen/underwood_remove_button_right_margin" />
+    <com.facebook.resources.ui.FbEditText android:textSize="15.5sp" android:textColor="@color/black" android:textColorHint="?android:textColorTertiary" android:id="@id/edit_caption_box" android:background="@color/white" android:paddingLeft="12.0dip" android:paddingTop="6.5dip" android:paddingRight="12.0dip" android:paddingBottom="9.0dip" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/uw_caption_box_hint" android:inputType="textCapSentences|textAutoCorrect|textMultiLine" android:imeOptions="actionDone" android:textCursorDrawable="@null" />
+</merge>

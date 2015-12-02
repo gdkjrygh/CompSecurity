@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/consumption_container" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/backstage_title_text_size" android:textColor="@android:color/white" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/backstage_title" android:paddingLeft="@dimen/backstage_main_title_margin" android:layout_width="wrap_content" android:layout_height="@dimen/backstage_title_height" android:text="@string/backstage_title_close_friend" android:fontFamily="sans-serif-medium" />
+        <com.facebook.backstage.consumption.BackstageOptionsView android:layout_gravity="right|center" android:id="@id/backstage_option_button" android:background="@drawable/settings_light_grey_l" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="15.0dip" />
+    </FrameLayout>
+    <com.facebook.backstage.consumption.BackstageGridView android:layout_gravity="bottom" android:id="@id/backstage_grid_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/backstage_title_height" />
+    <ViewStub android:id="@id/backstage_story_view_stub" android:layout="@layout/backstage_story_mode_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:layout_gravity="bottom|center" android:id="@id/backstage_camera_stub" android:layout="@layout/consumption_camera_flow_view_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

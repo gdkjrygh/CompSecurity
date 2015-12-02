@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/native_sign_up_layout_margin_horizontal_default">
+            <include layout="@layout/native_sign_up_pair_profile_view" />
+            <com.facebook.widget.text.BetterTextView android:id="@id/business_create_account_header_message" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/native_sign_up_message_text" />
+            <com.facebook.messaging.business.nativesignup.view.NativeSignUpRowView android:id="@id/business_create_account_profile_row" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/native_sign_up_row_list_margin_top" fb:nativeSignUpRowIconDrawable="@drawable/msgr_ic_account_circle" />
+            <com.facebook.messaging.business.nativesignup.view.NativeSignUpRowView android:id="@id/business_create_account_email_row" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:nativeSignUpRowIconDrawable="@drawable/msgr_ic_email" />
+            <com.facebook.messaging.business.nativesignup.view.NativeSignUpRowView android:id="@id/business_create_account_phone_row" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:nativeSignUpRowIconDrawable="@drawable/msgr_ic_call" />
+            <com.facebook.messaging.business.nativesignup.view.NativeSignUpRowView android:id="@id/business_create_account_payment_row" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:nativeSignUpRowIconDrawable="@drawable/msgr_ic_card" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/native_sign_up_layout_margin_horizontal_default">
+        <CheckBox android:id="@id/business_create_account_checkbox" android:focusable="false" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/native_sign_up_terms_font_size" android:layout_gravity="center_vertical" android:id="@id/business_create_account_terms_text" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.facebook.widget.text.BetterButton android:enabled="false" android:id="@id/business_create_account_create_account_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/native_sign_up_margin_horizontal" android:layout_marginRight="@dimen/native_sign_up_margin_horizontal" android:layout_marginBottom="@dimen/native_sign_up_layout_bottom_margin" android:text="@string/native_sign_up_create_account" android:height="@dimen/native_sign_up_button_height" style="@style/Payments.Button" />
+</LinearLayout>

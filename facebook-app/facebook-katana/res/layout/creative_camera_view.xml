@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.CustomFrameLayout android:id="@id/camera_view_top_bar" android:padding="@dimen/fbui_padding_standard" android:layout_width="fill_parent" android:layout_height="@dimen/top_bar_height">
+        <ImageView android:layout_gravity="left|center" android:id="@id/close_button" android:layout_width="@dimen/x_button_dim" android:layout_height="@dimen/x_button_dim" android:layout_marginLeft="@dimen/fbui_padding_standard" android:src="@drawable/x" />
+        <ImageView android:layout_gravity="right|center" android:id="@id/switch_camera_button" android:layout_width="@dimen/switch_button_dim" android:layout_height="@dimen/switch_button_dim" android:layout_marginRight="@dimen/fbui_padding_standard" android:src="@drawable/switch_camera" />
+        <com.facebook.photos.creativecam.ui.MultiStateToggleImageButton android:layout_gravity="center" android:id="@id/flash_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.facebook.widget.CustomFrameLayout>
+    <com.facebook.widget.CustomFrameLayout android:id="@id/preview_view_top_bar" android:padding="@dimen/fbui_padding_standard" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/top_bar_height">
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_large_xlarge" android:textColor="@color/fbui_white" android:layout_gravity="left|center" android:id="@id/retake" android:paddingLeft="@dimen/fbui_padding_standard" android:paddingRight="@dimen/fbui_padding_standard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/retake" fb:fontFamily="roboto" fb:fontWeight="medium" />
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_large_xlarge" android:textColor="@color/fbui_white" android:layout_gravity="right|center" android:id="@id/next" android:paddingLeft="@dimen/fbui_padding_standard" android:paddingRight="@dimen/fbui_padding_standard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/next" android:drawableRight="@drawable/chevron_right_white_s" android:drawablePadding="@dimen/fbui_drawable_padding" fb:fontFamily="roboto" fb:fontWeight="medium" />
+    </com.facebook.widget.CustomFrameLayout>
+    <include layout="@layout/square_preview" />
+    <com.facebook.widget.CustomFrameLayout android:id="@id/bottom_bar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/capture_button" android:background="@drawable/photo_capture_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" />
+    </com.facebook.widget.CustomFrameLayout>
+</com.facebook.widget.CustomLinearLayout>

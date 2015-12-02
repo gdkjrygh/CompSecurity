@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/is_titlebar" />
+        <com.facebook.instantshopping.view.widget.InstantShoppingRecyclerView android:id="@id/recycler_view" android:scrollbars="vertical" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/richdocument_recycler" />
+        <include layout="@layout/instantshopping_footer" />
+    </LinearLayout>
+    <include layout="@layout/is_titlebar_floating" />
+    <include layout="@layout/instantshopping_footer_floating" />
+    <FrameLayout android:id="@id/back_button_overlay_container" android:visibility="gone" android:layout_width="@dimen/instant_shopping_titlebar_clickable_button_container_width" android:layout_height="@dimen/instant_shopping_titlebar_clickable_button_container_width" android:layout_weight="0.0" android:layout_alignParentLeft="true" android:layout_alignParentStart="true">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/back_button_overlay" android:layout_width="@dimen/instant_shopping_titlebar_back_button_width" android:layout_height="@dimen/instant_shopping_titlebar_back_button_height" android:layout_marginLeft="@dimen/instant_shopping_titlebar_back_button_margin" android:src="@drawable/back_blk" android:layout_marginStart="@dimen/instant_shopping_titlebar_back_button_margin" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/back_button_overlay_container_light" android:visibility="gone" android:layout_width="@dimen/instant_shopping_titlebar_clickable_button_container_width" android:layout_height="@dimen/instant_shopping_titlebar_clickable_button_container_width" android:layout_weight="0.0" android:layout_alignParentLeft="true" android:layout_alignParentStart="true">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/back_button_overlay_light" android:layout_width="@dimen/instant_shopping_titlebar_back_button_width" android:layout_height="@dimen/instant_shopping_titlebar_back_button_height" android:layout_marginLeft="@dimen/instant_shopping_titlebar_back_button_margin" android:src="@drawable/instantshopping_back_wht" android:layout_marginStart="@dimen/instant_shopping_titlebar_back_button_margin" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/swipe_for_more_container" android:layout_width="fill_parent" android:layout_height="@dimen/swipe_for_more_arrow_container_height" android:layout_marginBottom="@dimen/swipe_for_more_arrow_default_bottom_margin" android:layout_weight="0.0" android:layout_alignParentBottom="true">
+        <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/swipe_for_more_arrow" android:layout_width="@dimen/swipe_for_more_arrow_width" android:layout_height="@dimen/swipe_for_more_arrow_height" android:src="@drawable/instantshopping_swipe_more_arrow" />
+    </FrameLayout>
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

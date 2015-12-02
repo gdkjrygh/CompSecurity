@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/receipt_header" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto" xmlns:uib="http://schemas.android.com/apk/res-auto">
+    <com.facebook.fbui.widget.layout.ImageBlockLayout android:gravity="center_vertical" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="76.0dip" uib:thumbnailPadding="10.0dip">
+        <com.facebook.user.tiles.UserTileView android:layout_gravity="center_vertical" android:id="@id/receipt_tile_image" android:layout_width="45.0dip" android:layout_height="45.0dip" uib:asCircle="true" uib:layout_useAsThumbnail="true" />
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_small_medium" android:textColor="@color/payment_no_action_gray_text_color" android:id="@id/receipt_header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" uib:fontFamily="roboto" uib:fontWeight="medium" />
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/black" android:ellipsize="end" android:id="@id/receipt_other_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" uib:fontFamily="roboto" uib:fontWeight="medium" />
+    </com.facebook.fbui.widget.layout.ImageBlockLayout>
+    <View android:id="@id/receipt_divider" android:background="@color/payment_divider_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.CustomViewPager android:id="@id/nux_steps_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:isSwipingEnabled="false" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/today_nux_skip_button_layout" android:background="@color/nux_notifs_skip_button_background" android:layout_width="fill_parent" android:layout_height="@dimen/today_nux_skip_layout_height">
+        <com.facebook.widget.CustomProgressBar android:layout_gravity="top" android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="@dimen/today_nux_progress_bar_height" android:progressDrawable="@drawable/today_nux_progress_bar" style="@style/CustomProgressBar" />
+        <com.facebook.widget.text.BetterButton android:textSize="@dimen/fbui_text_size_medium" android:textStyle="bold" android:textColor="@color/fbui_white" android:layout_gravity="center" android:id="@id/today_nux_skip_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/today_nux_enable_large_space" android:layout_marginTop="@dimen/today_nux_enable_small_space" android:layout_marginRight="@dimen/today_nux_enable_large_space" android:layout_marginBottom="@dimen/today_nux_enable_small_space" android:text="@string/today_nux_skip_button" android:layout_marginStart="@dimen/today_nux_enable_large_space" android:layout_marginEnd="@dimen/today_nux_enable_large_space" style="?attr/buttonRegularMediumInverse" />
+    </FrameLayout>
+</FrameLayout>

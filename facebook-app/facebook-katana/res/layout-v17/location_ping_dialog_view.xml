@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/location_ping_dialog_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minWidth="320.0dip">
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textStyle="bold" android:textColor="?android:textColorPrimary" android:gravity="left|center" android:id="@id/location_ping_dialog_time_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="12.0dip" />
+        <View android:background="@color/default_separator_color" android:layout_width="fill_parent" android:layout_height="@dimen/one_px" />
+        <com.facebook.widget.listview.BetterListView android:id="@id/location_ping_dialog_duration_list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:choiceMode="singleChoice" android:layout_weight="1.0" />
+        <com.facebook.friendsnearby.pingdialog.ui.LocationPingOptionView android:id="@id/location_ping_dialog_duration_button" android:background="@drawable/location_ping_dialog_spinner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View android:background="@color/default_separator_color" android:layout_width="fill_parent" android:layout_height="@dimen/one_px" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/location_ping_dialog_message_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbEditText android:textSize="@dimen/fbui_text_size_medium" android:textColor="?android:textColorTertiary" android:textColorHint="?android:textColorTertiary" android:ellipsize="start" android:gravity="center_horizontal" android:id="@id/location_ping_dialog_message" android:background="@drawable/location_ping_dialog_pressable" android:paddingLeft="12.0dip" android:paddingTop="12.0dip" android:paddingRight="4.0dip" android:paddingBottom="12.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/location_ping_dialog_message_hint" android:singleLine="true" android:maxLength="@integer/location_ping_dialog_message_max_length" android:layout_weight="1.0" android:inputType="textCapSentences" />
+            <com.facebook.resources.ui.FbTextView android:textAppearance="@style/TextAppearance.FBUi.Meta" android:layout_gravity="right|center" android:id="@id/location_ping_dialog_message_length" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="12.0dip" android:layout_marginStart="4.0dip" android:layout_marginEnd="12.0dip" />
+        </LinearLayout>
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textStyle="normal" android:textColor="@color/fbui_red" android:gravity="center" android:layout_gravity="center" android:id="@id/location_ping_dialog_delete" android:background="@drawable/location_ping_dialog_pressable" android:padding="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/location_ping_dialog_delete" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:attr/buttonBarStyle">
+            <com.facebook.resources.ui.FbButton android:id="@id/location_ping_dialog_negative_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/dialog_cancel" android:layout_weight="1.0" style="?android:attr/buttonBarButtonStyle" />
+            <com.facebook.resources.ui.FbButton android:id="@id/location_ping_dialog_positive_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="?android:attr/buttonBarButtonStyle" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:id="@id/location_ping_dialog_progress" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ProgressBar android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyle" />
+        <com.facebook.resources.ui.FbTextView android:textAppearance="@style/TextAppearance.FBUi.Content" android:layout_gravity="center_vertical" android:id="@id/location_ping_dialog_progress_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginStart="8.0dip" />
+    </LinearLayout>
+</FrameLayout>

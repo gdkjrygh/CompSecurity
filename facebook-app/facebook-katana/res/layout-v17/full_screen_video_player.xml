@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/full_screen_video_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/video_player" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <com.facebook.video.player.VideoController android:id="@id/fullscreen_video_controls" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/video_player" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/full_screen_placeholder_image" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="0.0dip" fb:placeholderImage="@drawable/transparent_drawable" fb:actualImageScaleType="fitCenter" />
+    <ImageView android:id="@id/postplay_play_icon" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/postplay_play_icon" android:scaleType="center" android:layout_alignLeft="@id/full_screen_placeholder_image" android:layout_alignTop="@id/full_screen_placeholder_image" android:layout_alignRight="@id/full_screen_placeholder_image" android:layout_alignBottom="@id/full_screen_placeholder_image" android:layout_alignStart="@id/full_screen_placeholder_image" android:layout_alignEnd="@id/full_screen_placeholder_image" />
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/full_screen_controls_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/full_screen_video_wrapper" android:layout_alignBottom="@id/full_screen_video_wrapper">
+        <ImageView android:id="@id/full_screen_paused_image" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" />
+        <ImageView android:id="@id/play_pause_animation_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <com.facebook.video.subtitles.views.FbSubtitleView android:id="@id/fullscreen_video_subtitles" android:paddingBottom="50.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        <com.facebook.video.player.VideoSpecText android:textColor="@color/white" android:id="@id/full_screen_spec_display" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_inline_btn_margin" android:layout_marginTop="@dimen/feed_inline_btn_margin" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_marginStart="@dimen/feed_inline_btn_margin" android:layout_alignParentStart="true" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/full_screen_player_progress_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/full_screen_video_wrapper" android:layout_alignBottom="@id/full_screen_video_wrapper">
+        <ProgressBar android:id="@id/loading_spinner" android:layout_width="35.0dip" android:layout_height="35.0dip" android:adjustViewBounds="true" android:layout_centerInParent="true" style="@android:style/Widget.ProgressBar.Large.Inverse" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+</merge>

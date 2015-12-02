@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.user.tiles.UserTileView android:id="@id/contact_picker_list_phone_contact_tile_image" android:layout_centerVertical="true" style="?contactPickerThreadTileViewStyle" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="?contactPickerRowHeight" android:layout_toRightOf="@id/contact_picker_list_phone_contact_tile_image" android:layout_centerVertical="true" style="?attr/contactPickerItemTextContainerStyle">
+        <com.facebook.widget.text.SimpleVariableTextLayoutView android:id="@id/contact_picker_list_phone_contact_name" android:layout_width="fill_parent" android:layout_height="wrap_content" orca:maxLines="1" orca:minScaledTextSize="15" orca:maxScaledTextSize="15" orca:alignment="normal" style="?attr/contactPickerItemNameStyle" />
+        <com.facebook.widget.text.SimpleVariableTextLayoutView android:id="@id/contact_picker_list_phone_contact_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" orca:maxLines="1" orca:minScaledTextSize="12" orca:maxScaledTextSize="12" orca:alignment="normal" style="?attr/contactPickerItemStatusStyle" />
+    </LinearLayout>
+    <ToggleButton android:id="@id/is_picked_secondary_checkbox" android:focusable="false" android:visibility="gone" android:clickable="false" android:textOn="@null" android:textOff="@null" android:text="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="?contactPickerSecondaryCheckboxStyle" />
+    <View android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="?attr/contactPickerItemDividerStyle" />
+</merge>

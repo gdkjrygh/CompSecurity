@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/nearby_progress_bar_container" android:background="@drawable/nearby_progress_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:alpha="0.85">
+        <ProgressBar android:id="@id/nearby_progress_bar" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/progress_bar" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/nearby_map_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/search_this_area_container" android:padding="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="56.0dip" android:layout_alignParentTop="true">
+        <com.facebook.resources.ui.FbButton android:textAppearance="?android:textAppearanceButton" android:id="@id/search_this_area_button" android:background="@drawable/nearby_map_button_selector" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/nearby_map_button_size" android:text="@string/nearby_search_this_area" android:layout_centerInParent="true" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/button_container" android:padding="8.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:layout_alignParentBottom="true">
+        <ImageButton android:gravity="center" android:id="@id/restore_list_button" android:background="@drawable/nearby_map_button_selector" android:layout_width="@dimen/nearby_map_button_size" android:layout_height="@dimen/nearby_map_button_size" android:src="@drawable/nearby_icon_list" android:layout_alignParentLeft="true" />
+        <ImageButton android:gravity="center" android:id="@id/recenter_button" android:background="@drawable/nearby_map_button_selector" android:layout_width="@dimen/nearby_map_button_size" android:layout_height="@dimen/nearby_map_button_size" android:src="@drawable/nearby_icon_location" android:layout_alignParentRight="true" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    <FrameLayout android:id="@id/restore_list_button_nux" android:background="@drawable/nearby_nux_dialog_point_down_left" android:visibility="gone" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_above="@id/button_container" android:layout_alignParentLeft="true">
+        <com.facebook.resources.ui.FbTextView android:gravity="center_horizontal" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nearby_nux_restore_list_button" style="@style/shadowed_button_white_text" />
+    </FrameLayout>
+    <View android:id="@id/nearby_vertical_separator" android:background="@color/grey68" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

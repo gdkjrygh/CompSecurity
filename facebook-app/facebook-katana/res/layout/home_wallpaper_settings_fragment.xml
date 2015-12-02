@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/live_wallpaper_settings_activity" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+        <Switch android:id="@id/enable_home_wallpaper" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/query_list_item_height" android:layout_marginLeft="@dimen/border_padding" android:layout_marginRight="@dimen/border_padding" android:textOn="" android:textOff="" android:thumb="@drawable/switch_thumb_selector" android:track="@drawable/switch_track_selector" android:switchMinWidth="40.0dip" android:thumbTextPadding="10.0dip" style="@style/regular.large" />
+        <View android:id="@id/enable_home_wallpaper_bottom_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" style="@style/horizontal_divider" />
+        <com.facebook.widget.ShimmerFrameLayout android:id="@id/preview_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/border_padding" android:layout_marginTop="@dimen/border_padding" android:layout_marginRight="@dimen/border_padding">
+            <include android:id="@id/preview_layout" layout="@layout/preview_image_layout" />
+        </com.facebook.widget.ShimmerFrameLayout>
+        <View android:id="@id/preview_bottom_divider" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginTop="@dimen/border_padding" style="@style/horizontal_divider" />
+        <com.facebook.dash.setupflow.navigation.RowView android:id="@id/use_current_wallpaper" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View android:id="@id/use_current_wallpaper_bottom_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" style="@style/horizontal_divider" />
+        <include android:id="@id/no_internet_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/no_internet_layout" />
+        <include android:id="@id/no_photo_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/no_photo_layout" />
+        <include android:id="@id/logged_out_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/logged_out_layout" />
+        <include android:id="@id/query_scrollview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/query_scrollview" />
+        <include android:id="@id/status_update_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/status_update_layout" />
+    </LinearLayout>
+</FrameLayout>

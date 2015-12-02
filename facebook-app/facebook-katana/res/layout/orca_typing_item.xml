@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.user.tiles.UserTileView android:id="@id/message_user_tile" style="?messageItemViewTypingItemStyle" />
+    <FrameLayout android:layout_gravity="top|left|center" android:id="@id/typing_bubble_container" android:background="@color/orca_convo_bubble_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?messageItemViewLeftMargin" android:layout_marginRight="@dimen/orca_message_other_user_right_padding" android:contentDescription="@string/presence_typing_description">
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_medium_large" android:textColor="#ffb2b2b2" android:layout_gravity="top|left|center" android:id="@id/message_text" android:visibility="?messageItemViewTypingTextVisibility" android:layout_width="wrap_content" android:layout_height="wrap_content" android:bufferType="spannable" android:text="@string/presence_typing" android:singleLine="false" android:includeFontPadding="true" />
+        <LinearLayout android:layout_gravity="left|center" android:orientation="horizontal" android:paddingLeft="@dimen/orca_message_bubble_padding_horizontal" android:paddingTop="@dimen/orca_message_bubble_padding_vertical" android:paddingRight="@dimen/orca_message_bubble_padding_horizontal" android:paddingBottom="@dimen/orca_message_bubble_padding_vertical" android:visibility="?messageItemViewTypingDotAnimationVisibility" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/dot_1" android:background="@drawable/neue_typing_dot" android:layout_width="6.0dip" android:layout_height="6.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/dot_2" android:background="@drawable/neue_typing_dot" android:layout_width="6.0dip" android:layout_height="6.0dip" android:layout_marginLeft="2.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/dot_3" android:background="@drawable/neue_typing_dot" android:layout_width="6.0dip" android:layout_height="6.0dip" android:layout_marginLeft="2.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+        </LinearLayout>
+    </FrameLayout>
+</merge>

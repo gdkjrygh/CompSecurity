@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.fbui.glyph.GlyphView android:id="@id/fb_logo_up_button" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="center" android:minWidth="@dimen/graph_search_box_side_margin" android:contentDescription="@string/titlebar_back_button" fb:glyphColor="?titleBarPrimaryColor" />
+    <FrameLayout android:id="@id/info_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.facebook.resources.ui.FbTextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Fb4aTitlebarTitleText" />
+        <FrameLayout android:id="@id/custom_title_wrapper" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="@dimen/title_bar_height" />
+        <ViewStub android:id="@id/search_box_stub" android:visibility="gone" android:inflatedId="@id/search_box" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@id/action_buttons_wrapper" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="@dimen/graph_search_box_side_margin">
+        <com.facebook.fbui.glyph.GlyphView android:id="@id/search_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/caspian_titlebar_icon_search" android:contentDescription="@android:string/search_go" fb:glyphColor="?titleBarPrimaryColor" style="@style/Fb4aTitlebarImageButton" />
+        <com.facebook.widget.text.SimpleVariableTextLayoutView android:id="@id/primary_named_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" fb:textColor="?titleBarButtonTextColor" fb:maxLines="1" fb:minScaledTextSize="8" fb:maxScaledTextSize="14" style="@style/Fb4aTitlebarTextButton" />
+        <com.facebook.apptab.ui.BadgableGlyphView android:id="@id/primary_action_button" android:visibility="gone" android:layout_width="@dimen/titlebar_button_width" android:layout_height="fill_parent" style="@style/Fb4aTitlebarImageButton" />
+        <com.facebook.widget.text.SimpleVariableTextLayoutView android:id="@id/secondary_named_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" fb:textColor="?titleBarButtonTextColor" fb:maxLines="1" fb:minScaledTextSize="8" fb:maxScaledTextSize="14" style="@style/Fb4aTitlebarTextButton" />
+        <com.facebook.apptab.ui.BadgableGlyphView android:id="@id/secondary_action_button" android:visibility="gone" android:layout_width="@dimen/titlebar_button_width" android:layout_height="fill_parent" style="@style/Fb4aTitlebarImageButton" />
+    </LinearLayout>
+</merge>

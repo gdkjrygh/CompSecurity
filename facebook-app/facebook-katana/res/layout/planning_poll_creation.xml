@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:id="@id/planning_poll_root_container" android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:hasBackButton="false" />
+        <com.facebook.widget.listview.BetterListView android:id="@id/poll_list_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textColor="@color/fbui_text_light" android:gravity="center" android:id="@id/empty_poll" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_poll_options" />
+    </com.facebook.widget.CustomLinearLayout>
+    <com.facebook.uicontrib.fab.FabView android:layout_gravity="bottom|right|center" android:id="@id/planning_new_poll_option" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/fbui_fab_edge_margin_mobile" android:layout_marginBottom="@dimen/fbui_fab_edge_margin_mobile" android:contentDescription="@string/add_poll_option_content_description" fb:fabGlyph="@drawable/fbui_plus_l" />
+</com.facebook.widget.CustomFrameLayout>

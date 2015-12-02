@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SSLIndicatorContainer">
+        <com.facebook.resources.ui.FbTextView android:id="@id/hostname_textview" style="@style/SSLIndicatorURLTextView" />
+        <com.facebook.resources.ui.FbTextView android:id="@id/security_loading_text" android:text="@string/browser_ssl_indicator_check_security" style="@style/SSLIndicatorLoadingTextView" />
+        <com.facebook.resources.ui.FbTextView android:id="@id/security_status_text" android:visibility="gone" android:text="@string/browser_ssl_indicator_secure_encryption" style="@style/SSLIndicatorStatusTextView" />
+    </LinearLayout>
+    <View style="@style/SSLIndicatorDivider" />
+</merge>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <ViewStub android:id="@id/minutiae_searchbar_stub" android:layout="@layout/composer_minutiae_search_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:id="@id/minutiae_view_divider" android:background="@color/default_list_bg_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/minutiae_taggable_object_search_view" />
+    <com.facebook.widget.listview.BetterListView android:id="@android:id/list" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@color/default_list_bg_color" android:divider="@color/default_list_bg_color" android:dividerHeight="1.0dip" android:layout_below="@id/minutiae_view_divider" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/minutiae_view_divider" layout="@layout/empty_layout" />
+    <com.facebook.composer.minutiae.view.stubs.MinutiaeErrorViewStub android:id="@id/error_view_stub" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/minutiae_view_divider" fb:inflatedLayoutAndroidId="@id/error_view" />
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

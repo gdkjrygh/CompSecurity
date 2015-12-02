@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/music_preview_card_cover_art" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.feedplugins.musicpreview.MusicButton android:layout_gravity="center" android:id="@id/music_preview_card_button" android:layout_width="0.0dip" android:layout_height="0.0dip" android:contentDescription="@string/feed_music_list_button" />
+    <com.facebook.widget.CustomLinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:padding="@dimen/music_preview_card_square_footer_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.EllipsizingTextView android:textAppearance="@style/TextAppearance.FBUi.Title" android:textStyle="bold" android:textColor="@color/white" android:id="@id/music_preview_card_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" fb:ellipsizeLineBreaks="false" />
+        <com.facebook.resources.ui.EllipsizingTextView android:textAppearance="@style/TextAppearance.FBUi.Content" android:textColor="@color/white" android:id="@id/music_preview_card_artist" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" fb:ellipsizeLineBreaks="false" />
+        <com.facebook.widget.CustomLinearLayout android:gravity="center_vertical" android:id="@id/music_preview_card_song_provider_action" android:paddingTop="@dimen/music_preview_card_provider_action_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/music_preview_card_source_image" android:layout_width="@dimen/music_preview_card_provider_logo_size" android:layout_height="@dimen/music_preview_card_provider_logo_size" android:layout_marginRight="@dimen/music_preview_card_provider_logo_right_margin" android:layout_marginEnd="@dimen/music_preview_card_provider_logo_right_margin" fb:placeholderImage="@color/feed_story_photo_placeholder_color" fb:actualImageScaleType="fitXY" />
+            <com.facebook.resources.ui.EllipsizingTextView android:textAppearance="@style/TextAppearance.FBUi.Meta" android:textColor="@color/white" android:id="@id/music_preview_card_source" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+            <ImageView android:id="@id/music_preview_card_ellipsis" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/three_dots_white_l" />
+        </com.facebook.widget.CustomLinearLayout>
+    </com.facebook.widget.CustomLinearLayout>
+</com.facebook.widget.CustomFrameLayout>

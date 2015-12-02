@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/default_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.fbui.widget.layout.ImageBlockLayout android:gravity="center_vertical" android:id="@id/feed_composer_header" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:thumbnailPadding="@dimen/default_padding">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center_vertical" android:id="@id/feed_composer_profile_image" android:layout_width="@dimen/feed_profile_image_large_size" android:layout_height="@dimen/feed_profile_image_large_size" fb:placeholderImage="@drawable/no_avatar" fb:actualImageScaleType="centerCrop" fb:layout_useAsThumbnail="true" />
+            <ViewStub android:id="@id/inline_composer_prompt_text_stub" android:layout="@layout/inline_composer_prompt_text" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/composer_hint_text_color" android:layout_gravity="center_vertical" android:id="@id/feed_composer_hint" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ViewStub android:id="@id/inline_composer_prompt_icon_view" android:layout="@layout/prompt_icon" android:layout_width="@dimen/inline_composer_prompt_icon_size" android:layout_height="@dimen/inline_composer_prompt_icon_size" fb:layout_useAsAuxView="true" />
+        </com.facebook.fbui.widget.layout.ImageBlockLayout>
+        <ViewStub android:id="@id/inline_composer_mps_nux_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ViewStub android:id="@id/photo_reminder_stub" android:layout="@layout/photo_reminder" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/inline_composer_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/feed_story_feedback_height">
+        <com.facebook.fbui.widget.text.GlyphWithTextView android:id="@id/feed_composer_status_button" android:paddingLeft="@dimen/inline_composer_status_button_left_padding" fb:drawable="@drawable/edit_dark_grey_l" style="@style/feed_composer_button_style" />
+        <com.facebook.fbui.widget.text.GlyphWithTextView android:id="@id/feed_composer_photo_button" android:paddingLeft="@dimen/inline_composer_photo_button_left_padding" fb:drawable="@drawable/camera_dark_grey_l" style="@style/feed_composer_button_style" />
+        <com.facebook.fbui.widget.text.GlyphWithTextView android:id="@id/feed_composer_checkin_button" android:paddingLeft="@dimen/inline_composer_checkin_button_left_padding" fb:drawable="@drawable/pin_dark_grey_l" style="@style/feed_composer_button_style" />
+    </LinearLayout>
+</merge>

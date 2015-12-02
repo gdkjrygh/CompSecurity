@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.RoundedBitmapView android:id="@id/card_background" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:cornerRadius="@dimen/feed_store_rounded_corner_radius" fb:scaling="centerCrop" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/feed_store_back_service_name_font_size" android:id="@id/service_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_store_back_margin_sides" android:layout_marginTop="@dimen/feed_store_back_margin_top" android:layout_marginRight="@dimen/feed_store_back_margin_sides" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/logo" android:layout_width="@dimen/feed_store_profile_photo_size" android:layout_height="@dimen/feed_store_profile_photo_size" android:scaleType="centerCrop" />
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/profile_photo" android:layout_width="@dimen/feed_store_profile_photo_size" android:layout_height="@dimen/feed_store_profile_photo_size" android:scaleType="centerCrop" />
+            </FrameLayout>
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/feed_store_back_username_font_size" android:textColor="@color/feed_store_username_back" android:id="@id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/feed_store_back_margin_top" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/settings_layout" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_store_back_margin_sides">
+            <View android:background="@color/feed_store_lines_back" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginRight="@dimen/feed_store_back_margin_sides" />
+            <com.facebook.dash.feedstore.ui.CardToggleButton android:textSize="@dimen/feed_store_back_settings_font_size" android:textColor="@color/feed_store_text_back" android:gravity="left|center" android:id="@id/activate_feed_button" android:background="@null" android:layout_width="fill_parent" android:layout_height="@dimen/feed_store_back_row_height" android:textOn="@string/feed_store_card_toggle" android:textOff="@string/feed_store_card_toggle" fb:maxCheckSize="27.0dip" fb:checkOnColour="#ff5b93fc" fb:checkOffColour="#005b93fc" fb:pressedCheckOnColour="#ff5b93fc" fb:pressedCheckOffColour="#005b93fc" fb:emptyCircleColour="@color/feed_store_text_back" />
+            <View android:id="@id/log_out_divider" android:background="@color/feed_store_lines_back" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginRight="@dimen/feed_store_back_margin_sides" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/feed_store_back_settings_font_size" android:textColor="@color/feed_store_text_back" android:gravity="left|center" android:id="@id/log_out_button" android:layout_width="fill_parent" android:layout_height="@dimen/feed_store_back_row_height" android:layout_marginRight="@dimen/feed_store_back_margin_sides" android:text="@string/feed_store_log_out_button" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:navless="false" />
+    <ScrollView android:background="@color/fbui_wash_mobile" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout style="@style/GreetingCardsCard">
+                <com.facebook.resources.ui.FbTextView android:text="@string/hc_header_cover" style="@style/GreetingCardHeader" />
+                <View style="@style/GreetingCardsSeparator" />
+                <com.facebook.greetingcards.create.GreetingCardCoverPhotoView android:id="@id/hc_cover_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hc_item_margin" android:layout_marginTop="4.0dip" android:layout_marginRight="@dimen/hc_item_margin" android:layout_marginStart="@dimen/hc_item_margin" android:layout_marginEnd="@dimen/hc_item_margin" />
+                <com.facebook.resources.ui.FbEditText android:textSize="@dimen/hc_title_size" android:id="@id/hc_cover_title_edit" android:layout_marginTop="@dimen/hc_vert_margin" android:layout_marginBottom="16.0dip" android:text="@string/hc_cover_title_placeholder" android:hint="@string/hc_cover_title_hint" android:maxLength="@integer/char_limit_title" style="@style/GreetingCardsEditable" />
+            </LinearLayout>
+            <LinearLayout style="@style/GreetingCardsCard">
+                <com.facebook.resources.ui.FbTextView android:text="@string/hc_header_theme" style="@style/GreetingCardHeader" />
+                <View style="@style/GreetingCardsSeparator" />
+                <com.facebook.greetingcards.create.GreetingCardThemeGrid android:id="@id/hc_theme_grid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="16.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+            </LinearLayout>
+            <LinearLayout android:paddingBottom="28.0dip" style="@style/GreetingCardsCard">
+                <com.facebook.resources.ui.FbTextView android:text="@string/hc_header_moments" style="@style/GreetingCardHeader" />
+                <View style="@style/GreetingCardsSeparator" />
+                <ViewStub android:id="@id/hc_moment_placeholder" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+            </LinearLayout>
+            <LinearLayout style="@style/GreetingCardsCard">
+                <com.facebook.resources.ui.FbTextView android:text="@string/hc_header_selfie" style="@style/GreetingCardHeader" />
+                <View style="@style/GreetingCardsSeparator" />
+                <com.facebook.greetingcards.create.GreetingCardSelfieView android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/hc_selfie" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hc_vert_margin" android:layout_marginBottom="12.0dip" />
+                <com.facebook.resources.ui.FbEditText android:textSize="@dimen/fbui_text_size_large" android:id="@id/hc_selfie_description_edit" android:layout_marginTop="@dimen/hc_vert_margin" android:layout_marginBottom="16.0dip" android:text="@string/hc_signoff_placeholder" android:hint="@string/hc_signoff_hint" android:maxLength="@integer/char_limit_body" style="@style/GreetingCardsEditable" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

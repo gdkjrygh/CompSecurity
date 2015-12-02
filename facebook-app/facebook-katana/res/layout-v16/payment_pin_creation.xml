@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.AdvancedVerticalLinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" fb:spaceSavingThreshold="@dimen/space_saving_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:gravity="top|center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_red" android:gravity="center" android:id="@id/pin_remain_attempts_count" android:paddingTop="50.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xxxlarge_1" android:textColor="@color/black" android:gravity="center" android:id="@id/pin_creation_header" android:paddingTop="100.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <LinearLayout android:gravity="top|center" android:orientation="vertical" android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/orca_neue_primary" android:gravity="center" android:layout_gravity="center" android:id="@id/forgot_pin_link" android:visibility="gone" android:clickable="true" android:layout_marginTop="10.0dip" android:text="@string/payment_pin_forget_link" style="@style/PaymentActionTextViewStyle" />
+        <com.facebook.resources.ui.FbEditText android:textColor="@color/transparent" android:gravity="top|center" android:id="@id/pin_digits" android:background="@null" android:layout_width="0.0dip" android:layout_height="0.0dip" android:cursorVisible="false" android:maxLength="4" android:digits="0123456789" android:inputType="numberDecimal" android:imeOptions="actionNext" />
+        <com.facebook.resources.ui.FbEditText android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/fbui_text_medium" android:id="@id/facebook_password_editor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="28.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="28.0dip" android:hint="@string/payment_pin_reset_facebook_password" android:cursorVisible="true" android:inputType="textPassword" android:imeOptions="actionNext" android:fontFamily="sans-serif" />
+        <ImageView android:gravity="center" android:id="@id/pin_icons" android:layout_width="140.0dip" android:layout_height="30.0dip" android:layout_marginTop="30.0dip" android:src="@drawable/payment_pin_dots_layer" />
+        <ProgressBar android:id="@id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" style="?android:attr/progressBarStyleSmall" />
+    </LinearLayout>
+</com.facebook.widget.AdvancedVerticalLinearLayout>

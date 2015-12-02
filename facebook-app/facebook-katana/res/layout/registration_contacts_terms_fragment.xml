@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:fadingEdgeLength="@dimen/registration_contacts_terms_fading_edge_length" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/registration_contacts_terms_scroll_horizontal_margin" android:layout_marginTop="@dimen/registration_contacts_terms_large_vertical_margin" android:layout_marginRight="@dimen/registration_contacts_terms_scroll_horizontal_margin" android:layout_marginBottom="@dimen/registration_contacts_terms_medium_small_vertical_margin" android:layout_weight="1.0" android:requiresFadingEdge="0x2000" style="@style/ContactsTermsScrollViewTheme">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/registration_contacts_terms_scroll_horizontal_padding" android:paddingRight="@dimen/registration_contacts_terms_scroll_horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/registration_contacts_terms_body" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/registration_step_side_padding" android:paddingRight="@dimen/registration_step_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbButton android:id="@id/finish_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/registration_contacts_terms_large_vertical_margin" android:text="@string/registration_contacts_terms_sign_up" style="?attr/buttonPrimaryLarge" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_accent_blue" android:gravity="center" android:id="@id/finish_without_contacts" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/registration_contacts_terms_sign_up_without_contacts" style="@style/ContactsTermsOptOutTheme" />
+    </LinearLayout>
+</LinearLayout>

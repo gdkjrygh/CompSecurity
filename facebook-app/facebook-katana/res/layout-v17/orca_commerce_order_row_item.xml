@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_width="fill_parent" android:layout_height="80.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/order_thumbnail" android:background="@color/commerce_bubble_image_background" android:padding="@dimen/commerce_item_border_width" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_centerVertical="true" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" fb:placeholderImageScaleType="fitCenter" fb:actualImageScaleType="fitCenter" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_toRightOf="@id/order_thumbnail" android:layout_centerInParent="true" android:layout_marginEnd="12.0dip" android:layout_toEndOf="@id/order_thumbnail">
+        <com.facebook.widget.text.BetterTextView android:textSize="18.0sp" android:textColor="@color/fbui_black" android:ellipsize="end" android:id="@id/order_item_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" fb:adjustLRGravityByTextDirectionCompat="true" />
+        <com.facebook.widget.text.BetterTextView android:textSize="14.0sp" android:textColor="@color/divebar_header_text" android:ellipsize="end" android:id="@id/order_status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" fb:adjustLRGravityByTextDirectionCompat="true" />
+    </LinearLayout>
+    <View android:id="@id/order_item_divider" android:background="@color/default_separator_color" android:layout_width="fill_parent" android:layout_height="@dimen/divider_width" android:layout_marginLeft="88.0dip" android:layout_marginBottom="1.0dip" android:layout_alignParentBottom="true" android:layout_marginStart="88.0dip" />
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

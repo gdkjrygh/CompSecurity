@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.AdvancedVerticalLinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" fb:spaceSavingThreshold="@dimen/space_saving_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/internet_not_available_fragment" />
+        <LinearLayout android:orientation="vertical" android:id="@id/payments_preferences_activity" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="outsideOverlay" android:id="@android:id/list" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:divider="@null" android:layout_weight="1.0" />
+        </LinearLayout>
+        <ProgressBar android:layout_gravity="center" android:id="@id/fetching_progress_bar" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" style="?android:attr/progressBarStyle" />
+    </FrameLayout>
+</com.facebook.widget.AdvancedVerticalLinearLayout>

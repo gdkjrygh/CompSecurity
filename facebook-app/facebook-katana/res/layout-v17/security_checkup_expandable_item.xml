@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:id="@id/sc_item_layout" android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginTop="32.0dip" android:layout_marginRight="32.0dip" android:layout_marginBottom="72.0dip" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center" android:id="@id/sc_item_icon" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginBottom="24.0dip" fresco:placeholderImage="@color/fbui_bg_dark" />
+        <com.facebook.resources.ui.FbTextView android:textSize="18.0sp" android:textColor="@color/fbui_bluegrey_30" android:layout_gravity="center" android:id="@id/sc_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:lineSpacingMultiplier="1.3" android:textAlignment="4" />
+        <com.facebook.resources.ui.FbTextView android:textSize="14.0sp" android:textColor="@color/fbui_bluegrey_50" android:layout_gravity="center" android:id="@id/sc_item_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.3" android:textAlignment="4" />
+        <FrameLayout android:layout_gravity="center" android:id="@id/sc_inner_item_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" />
+    </LinearLayout>
+    <com.facebook.resources.ui.FbButton android:layout_gravity="bottom" android:id="@id/sc_item_button" android:layout_width="fill_parent" android:layout_height="16.0dip" android:layout_marginBottom="32.0dip" style="@style/Widget.Button.SecurityCheckup.Primary" />
+    <View android:id="@id/sc_out_of_focus_overlay" android:background="#99000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

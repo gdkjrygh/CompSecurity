@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/dummy_focus_view" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center_vertical" android:id="@id/suggest_edits_field_icon" android:layout_width="@dimen/suggest_edits_icon_dimen" android:layout_height="@dimen/suggest_edits_icon_dimen" android:layout_marginLeft="@dimen/suggest_edits_icon_left_margin" android:layout_marginRight="@dimen/suggest_edits_icon_right_margin" android:layout_marginStart="@dimen/suggest_edits_icon_left_margin" android:layout_marginEnd="@dimen/suggest_edits_icon_right_margin" />
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.facebook.resources.ui.FbAutoUnFocusEditText android:id="@id/suggest_edits_field_value" android:layout_width="fill_parent" android:layout_height="fill_parent" android:inputType="textVisiblePassword|textNoSuggestions" android:imeOptions="actionDone" fb:autohide_keyboard="true" />
+        <ImageView android:id="@id/suggest_edits_field_action_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/suggest_edits_dots" android:scaleType="center" android:layout_alignRight="@id/suggest_edits_field_value" android:layout_centerVertical="true" android:contentDescription="@string/more_options_label" android:layout_alignEnd="@id/suggest_edits_field_value" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+</merge>

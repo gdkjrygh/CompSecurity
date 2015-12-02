@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@id/negative_feedback_guided_action_item" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uib="http://schemas.android.com/apk/res-auto">
+    <com.facebook.fbui.widget.contentview.ContentView android:id="@id/guided_action_item_view" android:paddingLeft="12.0dip" android:paddingTop="16.0dip" android:paddingRight="12.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" uib:thumbnailGravity="top" uib:thumbnailPadding="6.0dip" uib:auxViewPadding="6.0dip" uib:maxLinesFromThumbnailSize="false">
+        <ViewStub android:id="@id/action_confirmation_label_stub" android:layout="@layout/guided_action_confirmation_label" android:inflatedId="@id/action_confirmation_label" android:layout_width="wrap_content" android:layout_height="wrap_content" uib:layout_useAsAuxView="true" />
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" uib:layout_useAsThumbnail="true">
+            <ProgressBar android:layout_gravity="center" android:id="@id/action_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.facebook.fbui.glyph.GlyphView android:id="@id/action_glyph" android:paddingTop="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" uib:glyphColor="@color/fbui_bluegrey_40" />
+        </FrameLayout>
+    </com.facebook.fbui.widget.contentview.ContentView>
+</merge>

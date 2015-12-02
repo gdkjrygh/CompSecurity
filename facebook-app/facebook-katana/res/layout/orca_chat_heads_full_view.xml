@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <View android:id="@id/background_darken" android:background="@color/chat_heads_popup_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.chatheads.view.bubble.BubbleView android:layout_gravity="top|left|center" android:id="@id/bubble_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:layout_gravity="bottom|left|center" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/custom_keyboard_layout" />
+    <FrameLayout android:id="@id/chat_heads_container" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:splitMotionEvents="false" />
+    <FrameLayout android:id="@android:id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/close_target" android:layout="@layout/orca_chat_heads_close_target" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

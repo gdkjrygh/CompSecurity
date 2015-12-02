@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.facebook.overscroll.ScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/main_group" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/homesetup_settings_group">
+                <FrameLayout android:id="@id/lockscreen_launcher_fragment_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="25.0dip" />
+                <com.facebook.dash.setupflow.navigation.RowView android:id="@id/connect_apps" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:primary_text="@string/homesettings_connect_apps_row_label" custom:detail_text="@string/homesettings_connect_apps_row_detail" />
+                <com.facebook.dash.setupflow.navigation.RowView android:id="@id/change_wallpaper" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:primary_text="@string/homesettings_change_wallpaper_row_label" custom:detail_text="@string/homesettings_change_wallpaper_row_detail" />
+                <com.facebook.dash.setupflow.navigation.RowView android:id="@id/add_cover_feed_shortcut" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:primary_text="@string/homesettings_add_cover_feed_shortcut_row_label" custom:detail_text="@string/homesettings_add_cover_feed_shortcut_row_detail" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/lockscreen_group" style="@style/homesetup_settings_group">
+                <com.facebook.resources.ui.FbTextView android:id="@id/lockscreen_group_title" android:text="@string/homesettings_lockscreen_group_title" style="@style/homesetup_settings_group_title" />
+                <com.facebook.dash.setupflow.navigation.RowView android:id="@id/show_notifications_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:primary_text="@string/homesettings_system_notifications_label" />
+                <com.facebook.dash.setupflow.navigation.RowView android:id="@id/temperature_unit_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:primary_text="@string/dash_preferences_temperature_unit_dialog_title" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/general_group" style="@style/homesetup_settings_group">
+                <com.facebook.resources.ui.FbTextView android:id="@id/general_group_title" android:text="@string/homesettings_general_settings_group_title" style="@style/homesetup_settings_group_title" />
+                <com.facebook.dash.setupflow.navigation.RowView android:id="@id/ongoing_notification_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:primary_text="@string/dash_preferences_keep_running_title" custom:detail_text="@string/dash_preferences_keep_running_summary" />
+                <com.facebook.dash.setupflow.navigation.RowView android:id="@id/data_use_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:primary_text="@string/dash_preferences_data_use" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/app_info_group" style="@style/homesetup_settings_group">
+                <com.facebook.resources.ui.FbTextView android:id="@id/app_info_group_title" android:text="@string/homesettings_app_info_group_title" style="@style/homesetup_settings_group_title" />
+                <com.facebook.dash.setupflow.navigation.RowView android:id="@id/help_center_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:primary_text="@string/help_center" />
+                <com.facebook.dash.setupflow.navigation.RowView android:id="@id/terms_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:primary_text="@string/terms_and_privacy" />
+                <com.facebook.dash.setupflow.navigation.RowView android:id="@id/report_problem_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:primary_text="@string/report_a_problem" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/internal_settings_group" android:visibility="gone" style="@style/homesetup_settings_group">
+                <com.facebook.resources.ui.FbTextView android:id="@id/internal_settings_group_title" android:text="@string/homesettings_internal_settings_group_title" style="@style/homesetup_settings_group_title" />
+                <com.facebook.dash.setupflow.navigation.RowView android:id="@id/internal_settings_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:primary_text="@string/homesettings_internal_settings_group_title" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.facebook.overscroll.ScrollView>
+</FrameLayout>

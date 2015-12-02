@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginTop="12.0dip" android:src="@drawable/optin_artwork_question" android:adjustViewBounds="true" android:layout_weight="6.0" />
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium_large" android:textColor="@color/fbui_bluegrey_50" android:gravity="center" android:id="@id/permission_request" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" />
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_weight="1.0">
+        <com.facebook.resources.ui.FbButton android:layout_gravity="center" android:id="@id/accept_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="2.0" style="@style/NuxAcceptButton" />
+    </LinearLayout>
+    <com.facebook.resources.ui.FbButton android:textSize="@dimen/fbui_text_size_small_medium" android:textColor="@color/nux_blue" android:gravity="top|center" android:layout_gravity="center" android:id="@id/dismiss_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nux_not_now_btn" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip">
+        <com.facebook.fbui.glyph.GlyphView android:layout_width="@dimen/fbui_text_size_small" android:layout_height="@dimen/fbui_text_size_small" android:src="@drawable/fbui_lock_l" android:scaleType="fitCenter" android:adjustViewBounds="true" fb:glyphColor="@color/fbui_bluegrey_20" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/fbui_bluegrey_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nux_privacy_reminder" />
+    </LinearLayout>
+</com.facebook.widget.CustomLinearLayout>

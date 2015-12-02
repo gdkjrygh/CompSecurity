@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:orientation="vertical" android:background="@drawable/feed_story_bg" android:padding="@dimen/photo_menu_inner_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/photo_menu_padding" android:layout_marginRight="@dimen/photo_menu_padding" android:layout_marginStart="@dimen/photo_menu_padding" android:layout_marginEnd="@dimen/photo_menu_padding" fb:showDividers="middle" fb:divider="@color/fbui_divider" fb:dividerThickness="@dimen/photo_menu_divider_thickness">
+        <LinearLayout android:gravity="center_vertical" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbTextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/fbui_text_dark" android:ellipsize="end" android:gravity="left" android:id="@id/photo_menu_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:singleLine="true" android:includeFontPadding="false" android:layout_weight="1.0" android:layout_marginEnd="4.0dip" />
+            <com.facebook.resources.ui.FbTextView android:textColor="@color/fbui_text_light" android:id="@id/photo_menu_timestamp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        </LinearLayout>
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/photo_menu_image" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:roundedCornerRadius="@dimen/photo_menu_corner_radius" fb:roundTopLeft="false" fb:roundTopRight="false" fb:roundBottomRight="true" fb:roundBottomLeft="true" />
+    </com.facebook.fbui.widget.layout.SegmentedLinearLayout>
+</merge>

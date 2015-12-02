@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/registration_step_side_padding" android:paddingRight="@dimen/registration_step_side_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="6.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textStyle="bold" android:textColor="@color/fbui_bluegrey_80" android:gravity="center" android:id="@id/header_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fbui_padding_standard" android:layout_marginBottom="@dimen/fbui_padding_standard" android:lineSpacingExtra="@dimen/fbui_padding_half_standard" />
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_bluegrey_40" android:gravity="top|center" android:id="@id/info_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minLines="3" android:lineSpacingExtra="@dimen/fbui_padding_one_fourth_standard" />
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_red" android:gravity="top|center" android:id="@id/error_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minLines="3" android:lineSpacingExtra="@dimen/fbui_padding_one_fourth_standard" />
+    <ViewStub android:id="@id/registration_input_fragment_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.facebook.resources.ui.FbButton android:id="@id/finish_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fbui_padding_standard" android:layout_marginBottom="@dimen/fbui_padding_standard" android:text="@string/generic_next" style="?attr/buttonPrimaryLarge" />
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="4.0" />
+    <ViewStub android:id="@id/registration_input_fragment_bottom_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

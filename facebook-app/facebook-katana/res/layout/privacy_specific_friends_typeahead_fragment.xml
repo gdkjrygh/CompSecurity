@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/specific_friends_bar_view" style="@style/audience_picker_bar_view">
+        <com.facebook.resources.ui.FbTextView android:text="@string/privacy_typeahead_custom_inclusion_heading" style="@style/audience_picker_custom_heading" />
+        <com.facebook.widget.tokenizedtypeahead.TokenizedAutoCompleteTextView android:id="@id/specific_friends_autocomplete_input" style="@style/audience_picker_custom_autocomplete_input" />
+        <ProgressBar android:id="@id/specific_friends_picker_loading_indicator" style="@style/audience_picker_loading_icon" />
+    </LinearLayout>
+    <com.facebook.widget.listview.BetterListView android:id="@id/specific_friends_list_view" style="@style/audience_picker_custom_list_view" />
+    <View android:id="@id/specific_friends_padding" android:background="?audienceTypeaheadBackgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

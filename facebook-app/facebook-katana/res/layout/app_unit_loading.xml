@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.neko.util.AppShimmerFrameLayout android:id="@id/shimmer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:id="@id/cover" android:background="?loadingCardHighlight" android:layout_width="fill_parent" android:layout_height="150.0dip" />
+            <RelativeLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/error_section" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <TextView android:theme="@style/Widget.Neko.CardBodyTextView" android:gravity="center_horizontal" android:id="@id/error_message" android:padding="@dimen/ozone_purple_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <TextView android:theme="@style/Widget.Neko.ButtonTextView" android:gravity="center_horizontal" android:id="@id/retry" android:paddingBottom="@dimen/ozone_purple_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/try_again" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/loading_section" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                    <LinearLayout android:paddingLeft="@dimen/ozone_blue_padding" android:paddingTop="@dimen/ozone_blue_padding" android:paddingRight="@dimen/ozone_blue_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:layout_gravity="center_vertical" android:background="?loadingCardHighlight" android:layout_width="@dimen/app_unit_icon_size" android:layout_height="@dimen/app_unit_icon_size" />
+                        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/app_unit_small_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <LinearLayout android:gravity="center" android:background="?loadingCardHighlight" android:padding="@dimen/app_unit_tiny_padding" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginTop="3.0dip" />
+                            <LinearLayout android:gravity="center" android:background="?loadingCardHighlight" android:padding="@dimen/app_unit_tiny_padding" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginTop="@dimen/ozone_yellow_padding" />
+                            <LinearLayout android:gravity="center" android:background="?loadingCardHighlight" android:padding="@dimen/app_unit_tiny_padding" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginTop="25.0dip" android:layout_marginBottom="3.0dip" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:background="?loadingCardHighlight" android:padding="@dimen/app_unit_tiny_padding" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginLeft="@dimen/ozone_blue_padding" android:layout_marginTop="17.0dip" android:layout_marginRight="@dimen/ozone_blue_padding" />
+                    <LinearLayout android:gravity="center" android:background="?loadingCardHighlight" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginLeft="@dimen/ozone_blue_padding" android:layout_marginTop="@dimen/ozone_purple_padding" android:layout_marginRight="@dimen/ozone_blue_padding" />
+                    <LinearLayout android:gravity="center" android:background="?loadingCardHighlight" android:padding="@dimen/app_unit_tiny_padding" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginLeft="@dimen/ozone_blue_padding" android:layout_marginTop="@dimen/ozone_purple_padding" android:layout_marginRight="@dimen/ozone_blue_padding" />
+                    <LinearLayout android:gravity="center" android:background="?loadingCardHighlight" android:padding="@dimen/app_unit_tiny_padding" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_margin="@dimen/ozone_blue_padding" android:lines="1" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.facebook.neko.util.AppShimmerFrameLayout>
+</merge>

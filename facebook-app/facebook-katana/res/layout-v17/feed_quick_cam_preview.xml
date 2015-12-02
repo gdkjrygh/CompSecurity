@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:id="@id/fqc_camera_clipper" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub android:id="@id/fqc_camera_preview_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/fqc_camera_freeze_frame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.video.player.InlineVideoPlayer android:id="@id/fqc_inline_video_player" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:layout_gravity="center" android:id="@id/fqc_camera_play_button" android:background="@drawable/play_circle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/feed_quick_cam_video_control_play_button_margin" android:layout_marginRight="@dimen/feed_quick_cam_video_control_play_button_margin" android:adjustViewBounds="true" android:contentDescription="@string/feed_quick_cam_bottom_bar_button_play" android:layout_marginEnd="@dimen/feed_quick_cam_video_control_play_button_margin" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/fqc_video_resizing_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@android:style/Widget.ProgressBar" />
+</FrameLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/friends_nearby_map_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/friends_nearby_search_and_list" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/friends_nearby_search_bar_container" android:background="@color/fbui_list_item_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbEditText android:textAppearance="?android:textAppearanceMedium" android:textColorHint="?android:textColorTertiary" android:layout_gravity="center_vertical" android:id="@id/friends_nearby_search" android:background="@drawable/fbui_clickable_list_item_bg" android:padding="12.0dip" android:layout_width="0.0dip" android:layout_height="44.0dip" android:hint="@string/friends_nearby_search" android:singleLine="true" android:drawableLeft="@drawable/friends_nearby_search" android:drawablePadding="8.0dip" android:layout_weight="1.0" android:imeOptions="actionDone|flagNoFullscreen" android:drawableStart="@drawable/friends_nearby_search" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/friends_nearby_search_bar_progress" android:padding="8.0dip" android:visibility="gone" android:layout_width="44.0dip" android:layout_height="44.0dip" />
+            <com.facebook.widget.text.BetterButton android:textAppearance="@style/TextAppearance.FBUi.Button.Light.Primary.Medium" android:textColor="@color/fbui_accent_blue" android:layout_gravity="center_vertical" android:id="@id/friends_nearby_search_invite_button" android:background="@drawable/fbui_clickable_list_item_bg" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_nearby_invite_title" fb:allCaps="true" />
+        </LinearLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.facebook.widget.refreshableview.RefreshableListViewContainer android:id="@id/friends_nearby_refreshable_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.facebook.widget.refreshableview.RefreshableViewOverflowItem android:background="@color/fbui_list_item_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.facebook.widget.refreshableview.RefreshableViewItem android:background="@color/fbui_list_item_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.facebook.widget.listview.SplitHideableListView android:id="@id/friends_nearby_list" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:headerStartHeight="@dimen/friends_nearby_map_start_height" fb:disableScrollHideList="true" style="@style/Widget.ListView.FriendsNearby" />
+            </com.facebook.widget.refreshableview.RefreshableListViewContainer>
+            <com.facebook.fbui.widget.text.ImageWithTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textColor="?android:textColorSecondary" android:gravity="center" android:id="@id/friends_nearby_empty_view" android:background="@color/fbui_list_item_bg" android:padding="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:drawable="@drawable/friends_nearby_search_noresults_all" fb:drawableOrientation="top" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.facebook.friendsnearby.ui.FriendsNearbyFeatureDisabledView android:id="@id/friends_nearby_feature_disabled" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/friends_nearby_loading" android:background="@color/fbui_list_item_bg" android:padding="12.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textColor="?android:textColorSecondary" android:gravity="center" android:layout_gravity="center" android:id="@id/friends_nearby_loading_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" />
+    </LinearLayout>
+    <include android:id="@id/friends_nearby_error" layout="@layout/friends_nearby_error" />
+    <com.facebook.friendsnearby.ui.FriendsNearbyLocationDisabledView android:id="@id/friends_nearby_location_disabled" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uib="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" uib:layout_useAsThumbnail="true">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/qp_feed_image" android:layout_width="@dimen/quick_promotion_feed_unit_image_size" android:layout_height="@dimen/quick_promotion_feed_unit_image_size" android:layout_marginTop="5.0dip" uib:actualImageScaleType="centerCrop" />
+        <com.facebook.user.tiles.UserTileView android:id="@id/qp_feed_round_image" android:visibility="gone" android:layout_width="@dimen/qp_feed_round_image_size" android:layout_height="@dimen/qp_feed_round_image_size" android:layout_marginTop="6.0dip" android:layout_marginRight="2.0dip" android:layout_marginEnd="2.0dip" uib:actualImageScaleType="centerCrop" uib:threadTileSize="@dimen/qp_feed_round_image_size" uib:bigImageWidthPercent="0.5" uib:facebookBadge="@drawable/orca_facebook_user_badge" uib:messengerBadge="@drawable/orca_messenger_user_badge" uib:asCircle="true" />
+    </LinearLayout>
+    <com.facebook.feed.rows.views.ContentTextView android:ellipsize="end" android:id="@id/qp_feed_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" style="@style/QuickPromotionFeedUnitTitleText" />
+    <com.facebook.feed.rows.views.ContentTextView android:ellipsize="end" android:id="@id/qp_feed_content" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/QuickPromotionFeedUnitContentText" />
+</merge>

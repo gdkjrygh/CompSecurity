@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/item_row_container" android:layout_width="fill_parent" android:layout_height="@dimen/friend_selector_row_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.internal.widget.TintCheckBox android:gravity="center" android:id="@id/is_picked_checkbox" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/friend_selector_review_checkbox_margin" android:layout_marginTop="@dimen/friend_selector_review_checkbox_margin" android:layout_marginBottom="@dimen/friend_selector_review_checkbox_margin" android:textOn="@null" android:textOff="@null" android:text="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <FrameLayout android:id="@id/icon_wrapper" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="left|center" android:id="@id/url_icon" android:layout_width="@dimen/friend_selector_friend_icon_dimen" android:layout_height="@dimen/friend_selector_friend_icon_dimen" />
+        <com.facebook.fbui.glyph.GlyphView android:layout_gravity="left|center" android:id="@id/glyph" android:layout_width="@dimen/friend_selector_friend_icon_dimen" android:layout_height="@dimen/friend_selector_friend_icon_dimen" android:scaleType="center" />
+    </FrameLayout>
+    <com.facebook.widget.text.BetterTextView android:gravity="center_vertical" android:id="@id/label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_toLeftOf="@id/is_picked_checkbox" android:layout_toRightOf="@id/icon_wrapper" android:layout_centerVertical="true" style="@style/FriendListItemTextStyle" />
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

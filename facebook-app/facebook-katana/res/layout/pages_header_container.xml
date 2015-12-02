@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.pages.common.surface.ui.header.CaspianPagesHeaderView android:id="@id/pages_surface_caspian_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.pages.common.surface.ui.calltoaction.PageCallToActionButton android:id="@id/pages_surface_call_to_action" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/pages_surface_caspian_header" />
+    <com.facebook.pages.identity.cards.actionbar.PagesActionBar android:id="@id/pages_surface_action_bar" android:layout_width="fill_parent" android:layout_height="@dimen/pages_call_to_action_height" android:layout_below="@id/pages_surface_call_to_action" />
+    <com.facebook.pages.identity.cards.contextitems.PageIdentityContextItemsHeaderCardView android:id="@id/pages_surface_context_items_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/pages_surface_action_bar" />
+    <include android:id="@id/sliding_tabbar_in_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/pages_surface_context_items_container" layout="@layout/page_surface_sticky_tabs" />
+</merge>

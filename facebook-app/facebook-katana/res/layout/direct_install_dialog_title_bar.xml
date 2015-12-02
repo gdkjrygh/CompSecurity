@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/direct_install_dialog_title_bar_height">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/icon" android:layout_width="@dimen/direct_install_dialog_title_bar_icon_size" android:layout_height="@dimen/direct_install_dialog_title_bar_icon_size" android:layout_marginLeft="@dimen/direct_install_dialog_padding_large" android:layout_marginRight="@dimen/direct_install_dialog_padding_medium" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.facebook.resources.ui.FbTextView android:textAppearance="@style/TextAppearance.TitleBar.Title" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/direct_install_dialog_padding_large" android:layout_marginRight="@dimen/direct_install_dialog_padding_medium" android:singleLine="true" android:includeFontPadding="false" />
+            <com.facebook.resources.ui.FbTextView android:textAppearance="@style/TextAppearance.TitleBar.Subtitle" android:ellipsize="end" android:id="@id/subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/direct_install_dialog_padding_large" android:layout_marginRight="@dimen/direct_install_dialog_padding_medium" android:singleLine="true" android:includeFontPadding="false" />
+        </LinearLayout>
+        <com.facebook.resources.ui.FbButton android:enabled="false" android:textAppearance="@style/TextAppearance.TitleBar.Subtitle" android:gravity="center" android:id="@id/right_button" android:background="@drawable/direct_install_dialog_button_bg" android:paddingLeft="@dimen/direct_install_dialog_padding_large" android:paddingRight="@dimen/direct_install_dialog_padding_large" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:includeFontPadding="false" />
+    </LinearLayout>
+</merge>

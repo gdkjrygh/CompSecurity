@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:orca="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/video_cover_image" android:layout_width="0.0dip" android:layout_height="0.0dip" orca:placeholderImage="@color/feed_story_photo_placeholder_color" orca:actualImageScaleType="centerCrop" />
+    <ImageView android:id="@id/video_play_icon" android:background="@drawable/play_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:contentDescription="@string/video_play_button_description" />
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textStyle="bold" android:textColor="@color/white" android:id="@id/video_duration" android:background="#80000000" android:paddingLeft="@dimen/video_duration_padding" android:paddingRight="@dimen/video_duration_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/video_duration_margin" android:layout_marginBottom="@dimen/video_duration_margin" android:layout_alignLeft="@id/video_cover_image" android:layout_alignBottom="@id/video_cover_image" android:fontFamily="roboto" android:layout_marginStart="@dimen/video_duration_margin" android:layout_alignStart="@id/video_cover_image" />
+</merge>

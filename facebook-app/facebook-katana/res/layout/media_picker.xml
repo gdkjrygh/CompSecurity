@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomFrameLayout android:id="@id/layout_media_picker" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.messaging.media.mediapicker.AutoFitRecyclerView android:id="@id/picker_grid" android:paddingBottom="@dimen/production_gallery_footer_height" android:fadingEdgeLength="0.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="@dimen/multipicker_spacing" android:verticalSpacing="@dimen/multipicker_spacing" android:stretchMode="columnWidth" android:columnWidth="@dimen/multipicker_grid_size" android:numColumns="auto_fit" android:rowHeight="72.0dip" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/no_images_selected_text" android:padding="9.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/no_images_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="40.0dip" android:src="@drawable/picker_checkmark_hint" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/light_gray_text_color" android:gravity="center" android:id="@id/no_images_middle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_images_selected" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0sp" android:text="@string/no_images_selected_instructions" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/no_images_found_text" android:background="@color/black" android:padding="9.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="40.0dip" android:src="@drawable/picker_no_images_hint" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/light_gray_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photos_no_photos" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/bottom_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@drawable/chrome_gradient" android:layout_width="fill_parent" android:layout_height="32.0dip" />
+        <FrameLayout android:background="@drawable/chrome_bottom_bar" android:clickable="true" android:layout_width="fill_parent" android:layout_height="60.0dip">
+            <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.facebook.widget.MaxWidthFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="70.0dip" android:layout_marginRight="70.0dip" android:layout_centerHorizontal="true" app:maximumWidth="320.0dip">
+                    <RadioGroup android:orientation="horizontal" android:id="@id/all_selected_group" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <RadioButton android:textSize="@dimen/fbui_text_size_large" android:textColor="@android:color/white" android:gravity="center" android:id="@id/all_button" android:background="@drawable/toggle_left_states" android:layout_width="0.0dip" android:layout_height="fill_parent" android:checked="true" android:button="@null" android:text="@string/all" android:includeFontPadding="false" android:layout_weight="1.0" style="@style/ButtonTextShadow" />
+                        <RadioButton android:textSize="@dimen/fbui_text_size_large" android:textColor="@android:color/white" android:gravity="center" android:id="@id/selected_button" android:background="@drawable/toggle_right_states" android:layout_width="0.0dip" android:layout_height="fill_parent" android:button="@null" android:text="@string/selected" android:includeFontPadding="false" android:layout_weight="1.0" style="@style/ButtonTextShadow" />
+                    </RadioGroup>
+                </com.facebook.widget.MaxWidthFrameLayout>
+            </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+            <ImageButton android:layout_gravity="right" android:id="@id/button_post" android:background="@color/clear" android:layout_width="60.0dip" android:layout_height="fill_parent" android:src="@drawable/compose_button_states" />
+            <com.facebook.widget.CountBadge android:layout_gravity="top|right|center" android:id="@id/count_badge_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" app:uncheckedCountBadge="@drawable/chrome_badge_count" app:badgeTextColor="@color/white" />
+        </FrameLayout>
+    </LinearLayout>
+</com.facebook.widget.CustomFrameLayout>

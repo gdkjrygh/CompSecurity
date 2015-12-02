@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/place_creation_form" android:paddingTop="5.0dip" android:paddingBottom="36.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="52.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="12.0dip">
+            <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/dummy_focus_elt" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+            <com.facebook.resources.ui.FbAutoUnFocusEditText android:textSize="24.0sp" android:textColor="@color/fbui_text_medium" android:id="@id/place_name" android:paddingRight="56.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/place_creation_name_hint" android:inputType="textCapWords|textAutoCorrect" fb:autohide_keyboard="true" style="@style/Widget.EditText.FBUi" />
+            <ImageView android:id="@id/place_photo_upload_button" android:layout_width="@dimen/fbui_image_button_size_small" android:layout_height="@dimen/fbui_image_button_size_small" android:layout_marginRight="@dimen/fbui_padding_half_text" android:layout_marginBottom="12.0dip" android:src="@drawable/glyph16_camera" android:layout_alignRight="@id/place_name" android:layout_alignBottom="@id/place_name" android:contentDescription="@string/add_photo_overlay" style="@style/Widget.ImageButton.FBUi.Light.Regular.Small" />
+            <LinearLayout android:orientation="vertical" android:id="@id/place_uploaded_photo_frame" android:paddingLeft="@dimen/fbui_padding_half_text" android:paddingTop="8.0dip" android:paddingRight="@dimen/fbui_padding_half_text" android:paddingBottom="12.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignRight="@id/place_name" android:layout_alignBottom="@id/place_name">
+                <com.facebook.widget.MaskedFrameLayout android:layout_width="@dimen/fbui_image_button_size_small" android:layout_height="@dimen/fbui_image_button_size_small" android:foreground="@drawable/circular_crop_border" fb:mask="@drawable/circular_crop_mask">
+                    <ImageView android:id="@id/place_uploaded_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:contentDescription="@string/change_photo_button" />
+                </com.facebook.widget.MaskedFrameLayout>
+            </LinearLayout>
+        </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PlaceCreationFormEditTextRow">
+            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/glyph24_category_g30" style="@style/PlaceCreationFormSectionIcon" />
+            <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+            <com.facebook.resources.ui.FbTextView android:id="@id/place_category_text" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/place_creation_category_hint" style="@style/PlaceCreationFormEditText" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" style="@style/PlaceCreationFormEditTextRow">
+            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/glyph24_address_g30" style="@style/PlaceCreationFormSectionIcon" />
+            <com.facebook.resources.ui.FbAutoUnFocusEditText android:id="@id/place_street_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/place_creation_street_address_hint" android:inputType="textCapWords|textAutoCorrect" fb:autohide_keyboard="true" style="@style/PlaceCreationFormEditText" />
+        </LinearLayout>
+        <com.facebook.resources.ui.FbTextView android:id="@id/place_city" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/place_creation_city_hint" style="@style/PlaceCreationFormEditTextRowWithoutIcon" />
+        <com.facebook.resources.ui.FbAutoUnFocusEditText android:id="@id/place_zip_code" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/place_creation_zip_code_hint" android:inputType="textCapWords|textAutoCorrect" fb:autohide_keyboard="true" style="@style/PlaceCreationFormEditTextRowWithoutIcon" />
+        <com.facebook.maps.FbStaticMapView android:id="@id/map_image" android:layout_width="fill_parent" android:layout_height="@dimen/top_map_height" style="@style/PlaceCreationFormRowWithoutIcon" />
+        <CheckBox android:enabled="true" android:textSize="@dimen/fbui_text_size_large" android:id="@id/place_creation_im_currently_there_checkbox" android:paddingLeft="12.0dip" android:paddingTop="32.0dip" android:paddingBottom="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="@string/use_current_location_checkbox_label" />
+        <View android:background="@color/fbui_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="16.0dip">
+            <ImageView android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/create_place_hoots" android:scaleType="fitCenter" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textColor="@color/fbui_text_dark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/fbui_padding_half_text" android:text="@string/place_creation_form_notice_title" />
+                <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:textColor="@color/fbui_text_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/place_creation_form_notice_subtitle" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

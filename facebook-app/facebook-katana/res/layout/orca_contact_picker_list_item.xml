@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <ToggleButton android:id="@id/is_picked_checkbox" android:focusable="false" android:visibility="gone" android:clickable="false" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_margin="10.0dip" android:textOn="@null" android:textOff="@null" android:text="@null" android:layout_centerVertical="true" style="?contactPickerCheckboxStyle" />
+    <com.facebook.user.tiles.UserTileView android:id="@id/contact_user_tile_image" android:layout_centerVertical="true" style="?contactPickerThreadTileViewStyle" />
+    <com.facebook.widget.CustomRelativeLayout android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_toLeftOf="@id/contact_row_extras_holder" android:layout_toRightOf="@id/contact_user_tile_image" android:layout_centerVertical="true" style="?contactPickerItemTextContainerStyle">
+        <com.facebook.widget.text.SimpleVariableTextLayoutView android:id="@id/contact_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?attr/contactPickerItemNameStyle" />
+        <com.facebook.resources.ui.FbTextView android:id="@id/contact_presence_time" android:padding="3.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_toRightOf="@id/contact_name" style="?attr/contactPickerItemStatusStyle" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/rtc_admin_msg_subtitle" android:paddingTop="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/contact_name">
+            <com.facebook.fbui.glyph.GlyphView android:id="@id/contact_status_glyph" android:paddingRight="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <com.facebook.resources.ui.FbTextView android:ellipsize="end" android:id="@id/contact_status" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:includeFontPadding="false" style="?attr/contactPickerItemStatusStyle" />
+        </LinearLayout>
+    </com.facebook.widget.CustomRelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/contact_row_extras_holder" android:layout_width="wrap_content" android:layout_height="?contactPickerRowHeight" android:layout_alignParentRight="true">
+        <com.facebook.messaging.presence.PresenceIndicatorView android:id="@id/contact_presence_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?contactPickerItemPresenceIndicatorStyle" />
+        <com.facebook.messaging.presence.ButtonWithStatusIndicatorView android:id="@id/button_with_status_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ToggleButton android:id="@id/is_picked_secondary_checkbox" android:focusable="false" android:visibility="gone" android:clickable="false" android:textOn="@null" android:textOff="@null" android:text="@null" style="?contactPickerSecondaryCheckboxStyle" />
+        <ImageView android:id="@id/voip_video_call_button" android:background="@drawable/orca_neue_item_background" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/voip_video_titlebar_button_icon_blue" android:scaleType="center" android:contentDescription="@string/webrtc_start_video_call_title" />
+        <ImageView android:id="@id/voip_call_button" android:background="@drawable/orca_neue_item_background" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/voip_titlebar_button_icon" android:scaleType="center" android:contentDescription="@string/webrtc_start_call_title" />
+        <ImageView android:id="@id/popup_menu_anchor" android:background="@drawable/orca_neue_item_background" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="fill_parent" android:src="@drawable/orca_action_overflow_button" android:scaleType="center" android:contentDescription="@string/menu_more_options" />
+        <ImageView android:id="@id/divebar_row_arrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" />
+    </LinearLayout>
+    <ViewStub android:id="@id/disabled_overlay_view_stub" android:layout="@layout/disabled_contact_view" android:layout_width="fill_parent" android:layout_height="?contactPickerRowHeight" />
+    <View android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="?attr/contactPickerItemDividerStyle" />
+</merge>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbEditText android:textColor="@color/black" android:id="@id/people_filter" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:singleLine="true" android:layout_weight="1.0" android:imeOptions="actionDone" />
+        <ViewStub android:layout_gravity="center" android:id="@id/profile_small_spinner" android:layout="@layout/profile_list_small_spinner" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/people_filter_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/ic_search_text" android:contentDescription="@string/profilelist_search" />
+    </LinearLayout>
+    <com.facebook.widget.listview.BetterListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:drawSelectorOnTop="false" android:cacheColorHint="#ffffffff" android:layout_weight="1.0" android:fastScrollEnabled="true" />
+    <include layout="@layout/empty_layout" />
+</merge>

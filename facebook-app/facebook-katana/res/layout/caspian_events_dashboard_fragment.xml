@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomFrameLayout android:background="@color/feed_list_item_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:id="@id/events_dashboard_content_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewStub android:id="@id/events_megaphone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.fbui.pagerindicator.TabbedViewPagerIndicator android:id="@id/events_dashboard_pager_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/tabbedViewPagerIndicatorStyle" />
+        <com.facebook.widget.CustomViewPager android:id="@id/events_dashboard_view_pager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </com.facebook.widget.CustomLinearLayout>
+    <com.facebook.uicontrib.fab.FabView android:layout_gravity="bottom|right|center" android:id="@id/events_dashboard_create_floating_action_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/fbui_fab_edge_margin_mobile" android:layout_marginBottom="@dimen/fbui_fab_edge_margin_mobile" android:contentDescription="@string/publisher_create_event" fb:fabGlyph="@drawable/fbui_event_add_l" />
+    <com.facebook.feed.ui.GenericNotificationBanner android:layout_gravity="top" android:id="@id/error_banner" android:layout_width="fill_parent" android:layout_height="@dimen/feed_top_bar_height" />
+</com.facebook.widget.CustomFrameLayout>

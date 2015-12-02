@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/nearby_place_thumbnail" android:layout_width="@dimen/messaging_nearby_location_profile_pic_size" android:layout_height="@dimen/messaging_nearby_location_profile_pic_size" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" fb:roundAsCircle="true" />
+    <com.facebook.resources.ui.FbTextView android:textSize="12.0sp" android:textColor="@color/messenger_location_detail" android:id="@id/nearby_place_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/messaging_nearby_location_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/nearby_place_distance" android:layout_toRightOf="@id/nearby_place_thumbnail" android:layout_centerVertical="true" android:layout_toStartOf="@id/nearby_place_distance" android:layout_toEndOf="@id/nearby_place_thumbnail">
+        <com.facebook.resources.ui.FbTextView android:textSize="16.0sp" android:textColor="@color/messenger_location_title" android:ellipsize="end" android:id="@id/nearby_place_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <com.facebook.resources.ui.FbTextView android:textSize="14.0sp" android:textColor="@color/messenger_location_detail" android:ellipsize="end" android:id="@id/nearby_place_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+</merge>

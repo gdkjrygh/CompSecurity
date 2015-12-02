@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:background="@color/fbui_bluegrey_2" android:paddingLeft="@dimen/edit_bio_horizontal_padding" android:paddingTop="@dimen/edit_bio_privacy_hint_vertical_padding" android:paddingRight="@dimen/edit_bio_horizontal_padding" android:paddingBottom="@dimen/edit_bio_privacy_hint_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.fbui.glyph.GlyphView android:layout_gravity="top|left|center" android:id="@id/timeline_fav_photos_privacy_globe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:src="@drawable/privacy_scope_everyone" fb:glyphColor="@color/fbui_bluegrey_50" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small_medium" android:textColor="@color/fbui_bluegrey_50" android:layout_gravity="left|center" android:id="@id/timeline_edit_fav_photos_privacy_message" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/timeline_fav_photos_privacy_hint" />
+    </LinearLayout>
+    <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small_medium" android:textColor="@color/fbui_black" android:gravity="center_horizontal" android:id="@id/timeline_edit_fav_photos_hint" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/timeline_edit_fav_photos_hint" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.facebook.feed.ui.attachments.MosaicGridLayout android:id="@id/timeline_fav_photos_grid" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </ScrollView>
+        <com.facebook.fbui.widget.text.GlyphWithTextView android:textSize="@dimen/fbui_text_size_small" android:textStyle="bold" android:textColor="@color/fbui_white" android:gravity="center" android:layout_gravity="bottom" android:id="@id/timeline_add_fav_photo_button" android:background="@drawable/timeline_add_fav_photo_button_bg" android:layout_width="fill_parent" android:layout_height="@dimen/publisher_height" android:text="@string/timeline_add_fav_photo" android:drawablePadding="8.0dip" fb:glyphColor="@color/fbui_white" fb:drawable="@drawable/photo_add" />
+    </FrameLayout>
+</LinearLayout>

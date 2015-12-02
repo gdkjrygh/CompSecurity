@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomLinearLayout android:orientation="vertical" android:background="@color/fbui_white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="@dimen/events_dashboard_carousel_card_title_height">
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:gravity="left|center" android:id="@id/events_dashboard_card_title_text_view" android:paddingLeft="@dimen/events_dashboard_carousel_card_horizontal_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_text_light" android:gravity="center_vertical" android:id="@id/events_dashboard_card_view_all_text_view" android:paddingRight="@dimen/events_dashboard_carousel_card_horizontal_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" fb:allCaps="true" />
+    </LinearLayout>
+    <com.facebook.fbui.widget.text.ImageWithTextView android:textSize="@dimen/fbui_text_size_xlarge" android:gravity="center" android:id="@id/events_dashboard_card_null_state" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include layout="@layout/events_suggestions_card_row_view" />
+</com.facebook.widget.CustomLinearLayout>

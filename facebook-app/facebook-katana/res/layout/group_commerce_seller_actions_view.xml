@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/seller_actions_root_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/fbui_text_light" android:gravity="left" android:id="@id/seller_actions_expiration_notice" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/feed_story_feedback_height" android:layout_weight="1.0" />
+        <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/seller_actions_container" android:layout_width="fill_parent" android:layout_height="@dimen/feed_story_feedback_height" android:layout_weight="1.0" fb:showDividers="middle" fb:divider="@color/fbui_white" fb:dividerThickness="@dimen/seller_actions_button_space">
+            <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="@color/seller_actions_button_label" android:gravity="center" android:id="@id/seller_actions_edit_post" android:background="@drawable/seller_actions_edit_border" android:layout_width="1.0dip" android:layout_height="fill_parent" android:text="@string/group_commerce_seller_actions_edit" android:layout_weight="1.0" />
+            <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_medium" android:gravity="center" android:id="@id/seller_actions_change_availability" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </com.facebook.fbui.widget.layout.SegmentedLinearLayout>
+    </com.facebook.fbui.widget.layout.SegmentedLinearLayout>
+</merge>

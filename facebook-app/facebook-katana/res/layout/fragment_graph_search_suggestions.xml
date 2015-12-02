@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.widget.CustomRelativeLayout android:id="@id/suggestions_container_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.widget.listview.BetterListView android:scrollbarStyle="outsideOverlay" android:id="@id/suggestions_list_view" android:paddingTop="@dimen/typeahead_top_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/graph_search_list_divider" android:dividerHeight="0.0px" style="@style/Widget.ListView.FBUi" />
+    <ViewStub android:id="@id/loading_view_stub" android:layout="@layout/null_state_loading_indicator" android:layout_width="fill_parent" android:layout_height="@dimen/graph_search_suggestions_loading_spinner_height" android:layout_marginTop="@dimen/graph_search_suggestions_loading_spinner_margin" android:layout_marginBottom="@dimen/graph_search_suggestions_loading_spinner_margin" android:layout_below="@id/suggestions_list_view" />
+</com.facebook.widget.CustomRelativeLayout>

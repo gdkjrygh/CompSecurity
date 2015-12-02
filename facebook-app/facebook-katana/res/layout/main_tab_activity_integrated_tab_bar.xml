@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.apptab.ui.AppTabViewPager android:layout_gravity="bottom" android:id="@id/tab_content_viewpager" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.facebook.common.ui.keyboard.SoftInputDetectingLinearLayout android:orientation="vertical" android:id="@id/header_chrome_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/integrated_tab_bar_container" android:background="?titleBarBackground" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.widget.CustomLinearLayout android:orientation="horizontal" android:id="@id/navigation_container" android:layout_width="0.0dip" android:layout_height="@dimen/harrison_tab_bar_height" android:layout_alignParentLeft="true" />
+            <com.facebook.ui.titlebar.search.Fb4aSearchTitleBar android:id="@id/titlebar" android:clipChildren="false" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_alignParentRight="true" fb:hasJewel="true" fb:hasLauncherButton="true" />
+        </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    </com.facebook.common.ui.keyboard.SoftInputDetectingLinearLayout>
+    <ViewStub android:id="@id/zero_indicator_titlebar_stub" android:layout="@layout/fb4a_zero_indicator_wrapper" android:inflatedId="@id/zero_indicator_titlebar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/dialtone_switcher_bar_stub" android:layout="@layout/dialtone_switcher_bar_wrapper" android:inflatedId="@id/dialtone_switcher_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/preview_mode_banner_stub" android:layout="@layout/preview_banner_instance" android:inflatedId="@id/preview_mode_banner_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/tab_activity_fullscreen_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/tab_activity_main_expandable_photo" android:layout="@layout/tab_activity_main_expandable_photo" android:inflatedId="@id/tab_activity_main_expandable_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/activity_fab_stub" />
+</merge>

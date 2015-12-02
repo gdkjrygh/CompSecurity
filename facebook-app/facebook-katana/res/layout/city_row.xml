@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.places.views.PlaceContentView android:id="@id/city_content_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" fb:titleTextAppearance="@style/PlaceName" fb:thumbnailSize="large"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+        <FrameLayout android:layout_gravity="left|center" android:id="@id/place_thumbnail" android:layout_width="@dimen/default_place_image_size" android:layout_height="@dimen/default_place_image_size" fb:layout_useAsThumbnail="true">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="bottom|right|center" android:id="@id/place_image" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:actualImageScaleType="centerCrop" />
+        </FrameLayout>
+    </com.facebook.places.views.PlaceContentView>
+</com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>

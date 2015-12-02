@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/reaction_card_top" android:background="?reactionCardTopBackground" android:layout_width="fill_parent" android:layout_height="@dimen/reaction_card_top_bottom_view_height" android:layout_marginLeft="?reactionCardPadding" android:layout_marginRight="?reactionCardPadding" android:layout_marginStart="?reactionCardPadding" android:layout_marginEnd="?reactionCardPadding" />
+    <FrameLayout android:id="@id/reaction_card_header_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/reaction_attachment_container" android:background="?reactionCardPrimaryBackground" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:orientation="vertical" android:id="@id/reaction_card_footer_container" android:background="?reactionCardPrimaryBackground" android:paddingTop="@dimen/reaction_padding_small" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:showDividers="beginning" fb:divider="?reactionCardFooterSeparatorBackground" fb:dividerThickness="1.0px" />
+    <View android:id="@id/reaction_card_bottom" android:background="?reactionCardBottomBackground" android:layout_width="fill_parent" android:layout_height="@dimen/reaction_card_top_bottom_view_height" android:layout_marginLeft="?reactionCardPadding" android:layout_marginRight="?reactionCardPadding" android:layout_marginStart="?reactionCardPadding" android:layout_marginEnd="?reactionCardPadding" />
+    <ViewStub android:id="@id/reaction_card_shadow_stub" android:layout="@layout/reaction_card_shadow" android:layout_width="fill_parent" android:layout_height="?reactionCardStackShadowHeight" />
+</merge>

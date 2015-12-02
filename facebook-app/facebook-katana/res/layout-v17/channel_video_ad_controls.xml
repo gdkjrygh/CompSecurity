@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.facebook.resources.ui.FbTextView android:textColor="@color/white" android:layout_gravity="bottom|right|center" android:id="@id/channel_video_ad_control_countdown" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14.0dip" android:layout_marginBottom="20.0dip" android:layout_marginEnd="14.0dip" />
+        <LinearLayout android:layout_gravity="bottom|right|center" android:orientation="horizontal" android:id="@id/channel_video_ad_controls_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip">
+            <com.facebook.resources.ui.FbTextView android:textColor="@color/white" android:id="@id/channel_video_ad_control_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_marginEnd="16.0dip" />
+            <com.facebook.resources.ui.FbTextView android:textColor="@color/white" android:id="@id/channel_video_ad_control_skip_ad" android:background="@drawable/video_channel_skip_ad_button_border" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14.0dip" android:text="@string/skip_ad_button_text" android:layout_marginEnd="14.0dip" />
+        </LinearLayout>
+        <ProgressBar android:layout_gravity="bottom" android:id="@id/channel_video_ad_control_progress_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="4.0dip" android:minHeight="4.0dip" style="@style/FbVideoAdSeekBarHorizontal" />
+    </FrameLayout>
+</merge>

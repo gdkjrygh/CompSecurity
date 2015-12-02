@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.events.permalink.header.EventPermalinkCoverPhotoView android:id="@id/event_cover_photo_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/event_no_cover_photo_accessibility_description" />
+    <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/events_coverphoto_text_overlay" android:paddingLeft="@dimen/event_permalink_header_text_left_padding" android:paddingRight="@dimen/event_permalink_header_text_right_padding" android:paddingBottom="@dimen/event_permalink_header_text_left_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <com.facebook.widget.text.BetterTextView android:id="@id/event_name" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:fontFamily="roboto" fb:fontWeight="light" style="@style/EventPermalinkTitleText" />
+        <com.facebook.widget.text.BetterTextView android:id="@id/event_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:fontFamily="roboto" fb:fontWeight="medium" fb:allCaps="true" style="@style/EventPermalinkSubtitleText" />
+    </LinearLayout>
+</merge>

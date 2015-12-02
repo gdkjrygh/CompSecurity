@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/fbui_white" android:paddingLeft="@dimen/payment_bubble_padding_left" android:paddingRight="@dimen/payment_bubble_padding_right" android:layout_width="@dimen/payment_bubble_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.messaging.payment.thread.DollarAmountView android:id="@id/bubble_dollar_amount" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:view_type="type_message_bubble" />
+    <com.facebook.widget.text.BetterTextView android:textSize="@dimen/fbui_text_size_medium" android:ellipsize="end" android:gravity="top" android:id="@id/sent_to_text" android:layout_width="wrap_content" android:layout_height="@dimen/payment_bubble_sent_to_height" android:singleLine="true" fb:fontFamily="roboto" fb:fontWeight="light" />
+    <View android:id="@id/payment_bubble_divider" android:background="@color/payment_divider_gray" android:paddingLeft="@dimen/payment_bubble_padding_left" android:paddingRight="@dimen/payment_bubble_padding_right" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <include layout="@layout/orca_payment_view_viewstubs" />
+</LinearLayout>

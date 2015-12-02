@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/usage_description_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="@android:color/black">
+        <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_store_text_container_margin_sides" android:layout_marginTop="@dimen/feed_store_text_container_margin_top" android:layout_marginRight="@dimen/feed_store_text_container_margin_sides">
+            <com.facebook.widget.text.BetterTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/feed_store_title_subtext_v2" style="@style/shadowed_white_text.regular.medium" />
+        </LinearLayout>
+    </FrameLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/app_feed_store_loading_spinner" android:layout_width="33.0dip" android:layout_height="33.0dip" android:indeterminateOnly="true" android:indeterminateDrawable="@drawable/white_spinner_indeterminate" android:indeterminateDuration="1500" />
+    <FrameLayout android:id="@id/app_feed_store_content_container" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:layout_gravity="bottom" android:id="@id/pages_indicator" android:layout_width="fill_parent" android:layout_height="@dimen/pages_indicator_height" android:layout_marginBottom="@dimen/pages_indicator_bottom_margin" layout="@layout/custom_page_indicator" />
+        <FrameLayout android:layout_gravity="center" android:id="@id/app_feed_pager_container" android:clipChildren="false" android:layout_width="@dimen/feed_store_pager_container_width" android:layout_height="0.0dip" />
+    </FrameLayout>
+    <com.facebook.webview.FacebookWebView android:id="@id/authorisation_webview" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ProgressBar android:layout_gravity="bottom" android:id="@id/authorisation_webview_progressbar" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="1000" android:indeterminate="false" android:indeterminateOnly="false" style="?android:attr/progressBarStyleHorizontal" />
+</FrameLayout>
