@@ -1,0 +1,24 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.ut.mini.plugin;
+
+
+public class UTMsgIds
+{
+
+    public static final int IN_CRASH_OCCOUR = 1;
+    public static final int IN_DISPATCH_AGGREGATION_LOG_MAP = 5;
+    public static final int IN_DISPATCH_LOG_STRING_4_UTPERF_PLUGIN = 9;
+    public static final int IN_DISPATCH_SIMPLE_LOG_MAP = 3;
+    public static final int IN_LOG_CACHED_4_TEST_MODE = 6;
+    public static final int IN_NOMATCH_ONLINE_CONF = 7;
+    public static final int IN_SWITCH_BACKGROUND = 2;
+    public static final int IN_SWITCH_FOREGROUND = 8;
+    public static final int OUT_AGGREGATED_LOG_MAP = 0x10000;
+
+    public UTMsgIds()
+    {
+    }
+}
