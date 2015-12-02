@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.Button android:ellipsize="none" android:gravity="center" android:id="@id/ub__magic_button_devserver" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" uber:autoShrink="true" style="@style/Uber.Widget.Button.Accent" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/ub__launcher_activity" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="17.0dip" android:layout_marginTop="22.0dip" android:layout_marginRight="17.0dip">
+            <com.ubercab.ui.Button android:ellipsize="none" android:layout_gravity="center" android:id="@id/ub__magic_button_signin" android:layout_width="0.0dip" android:layout_height="51.0dip" android:text="@string/sign_in_title" android:layout_weight="1.0" uber:autoShrink="true" style="@style/Uber.Widget.Button.Split.Left" />
+            <com.ubercab.ui.Button android:ellipsize="none" android:layout_gravity="center" android:id="@id/ub__magic_button_register" android:layout_width="0.0dip" android:layout_height="51.0dip" android:text="@string/register" android:layout_weight="1.0" uber:autoShrink="true" style="@style/Uber.Widget.Button.Split.Right" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ub__magic_viewgroup_employee" android:padding="50.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <com.ubercab.ui.Button android:layout_gravity="center" android:id="@id/ub__magic_button_employee" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__employee_settings" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

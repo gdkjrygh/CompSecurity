@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <fragment android:name="com.ubercab.client.feature.signup.PromoBarFragment" android:id="@id/ub__signup_promo_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Style.Rider.Form">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__edittext_margin_top" android:layout_marginBottom="@dimen/ub__field_margin_y">
+                <com.ubercab.client.feature.payment.legacy.CreditCardEditText android:id="@id/ub__signup_edittext_cardnumber" android:nextFocusDown="@id/ub__signup_edittext_expirationmonth" android:layout_width="0.0dip" android:layout_height="wrap_content" android:drawableLeft="@drawable/ub__payment_type_unknown" android:drawablePadding="6.0dip" android:layout_weight="1.0" android:nextFocusForward="@id/ub__signup_edittext_expirationmonth" />
+                <include android:id="@id/ub__signup_button_scan_card" layout="@layout/ub__scan_card_button" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__field_margin_y">
+                <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ub__field_margin_x" android:layout_weight="1.0">
+                    <com.ubercab.client.core.ui.MonthEditText android:id="@id/ub__signup_edittext_expirationmonth" android:nextFocusDown="@id/ub__signup_edittext_expirationyear" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ub__field_margin_x" android:layout_weight="1.0" android:nextFocusForward="@id/ub__signup_edittext_expirationyear" />
+                    <com.ubercab.client.core.ui.YearEditText android:id="@id/ub__signup_edittext_expirationyear" android:nextFocusDown="@id/ub__signup_edittext_code" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:nextFocusForward="@id/ub__signup_edittext_code" />
+                </LinearLayout>
+                <com.ubercab.client.feature.payment.legacy.SecurityCodeEditText android:id="@id/ub__signup_edittext_code" android:nextFocusDown="@id/ub__signup_edittext_zip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:nextFocusForward="@id/ub__signup_edittext_zip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.locale.country.CountryButton android:textAppearance="@style/Style.Rider.TextAppearance.Field" android:gravity="left|center" android:id="@id/ub__signup_button_country" android:layout_width="0.0dip" android:layout_height="wrap_content" android:drawablePadding="4.0dip" android:layout_weight="1.0" />
+                <com.ubercab.ui.deprecated.view.ZipEditText android:id="@id/ub__signup_edittext_zip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/ub__field_margin_x" android:layout_weight="1.0" />
+            </LinearLayout>
+            <com.ubercab.ui.Button android:id="@id/ub__signup_button_done" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__signup_payment_button_margin_top" android:layout_marginBottom="@dimen/ub__signup_payment_button_margin_bottom" style="@style/Uber.Widget.Button.Primary" />
+            <com.ubercab.client.core.ui.DividerWithText android:id="@id/ub__signup_view_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:text="@string/or" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__signup_payment_thirdparty_margin_top" android:layout_marginBottom="@dimen/ub__margin_medium">
+                <ImageButton android:id="@id/ub__signup_button_paypal" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ub__field_margin_x" android:src="@drawable/ub__paypal_logo" android:layout_weight="1.0" android:contentDescription="@string/ub__empty" style="@style/Uber.Widget.Button.Secondary" />
+                <ImageButton android:id="@id/ub__signup_button_googlewallet" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/img_google_wallet" android:layout_weight="1.0" android:contentDescription="@string/ub__empty" style="@style/Uber.Widget.Button.Secondary" />
+                <ImageButton android:id="@id/ub__signup_button_alipay" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/ub__alipay_logo" android:layout_weight="1.0" android:contentDescription="@string/ub__empty" style="@style/Uber.Widget.Button.Secondary" />
+            </LinearLayout>
+            <View android:id="@id/ub__signup_line_skip" android:background="@drawable/ub__header_line_secondary_light_grey_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/ub__button_margin_y" />
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H2" android:gravity="center" android:id="@id/ub__signup_button_skip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__margin_medium" android:text="@string/payment_add_later" style="@style/Style.Rider.Button.Link" />
+            <include layout="@layout/ub__signup_tos" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

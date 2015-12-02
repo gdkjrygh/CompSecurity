@@ -1,0 +1,35 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.ubercab.android.partner.funnel.realtime.request.body;
+
+import com.ubercab.android.partner.funnel.realtime.request.param.DeviceData;
+
+// Referenced classes of package com.ubercab.android.partner.funnel.realtime.request.body:
+//            Shape_LoginBody
+
+public abstract class LoginBody
+{
+
+    public LoginBody()
+    {
+    }
+
+    public static LoginBody create()
+    {
+        return new Shape_LoginBody();
+    }
+
+    abstract DeviceData getDeviceData();
+
+    abstract String getPassword();
+
+    abstract String getUsername();
+
+    public abstract LoginBody setDeviceData(DeviceData devicedata);
+
+    public abstract LoginBody setPassword(String s);
+
+    public abstract LoginBody setUsername(String s);
+}

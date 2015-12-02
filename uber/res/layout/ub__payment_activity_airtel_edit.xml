@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/ub__payment_scrollview_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:src="@drawable/ub__payment_type_airtel_logo" android:scaleType="fitCenter" android:contentDescription="@string/ub__payment_airtel" />
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x">
+            <com.ubercab.ui.TextView android:textColor="@color/ub__uber_black_60" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:text="@string/ub__payment_current_balance" android:textAllCaps="true" />
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.TextView android:textColor="@color/ub__green" android:id="@id/ub__payment_airtel_edit_textview_current_balance_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ui__spacing_unit_1x" />
+                <ProgressBar android:layout_gravity="center" android:id="@id/ub__payment_airtel_edit_progressbar_balance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_alignTop="@id/ub__payment_airtel_edit_textview_current_balance_value" android:layout_alignBottom="@id/ub__payment_airtel_edit_textview_current_balance_value" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x">
+            <com.ubercab.ui.Button android:gravity="center" android:id="@id/ub__payment_airtel_edit_button_add_funds" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:text="@string/ub__payment_add_money" style="@style/Uber.Widget.Button.Primary" />
+            <com.ubercab.ui.Button android:id="@id/ub__payment_airtel_edit_button_delete" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__payment_delete" style="@style/Uber.Widget.Button.Primary" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

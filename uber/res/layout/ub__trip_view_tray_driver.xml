@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.trip.tray.TrayDriverLayout android:paddingTop="@dimen/ub__trip_tray_driver_padding" android:paddingBottom="@dimen/ub__trip_tray_driver_padding" style="@style/Style.Rider.Trip.Section"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="top|left|center" android:id="@id/ub__trip_image_section_driver" style="@style/Style.Rider.Trip.Driver.Section">
+        <FrameLayout android:id="@id/ub__trip_driver_image_container" style="@style/Style.Rider.Trip.Driver.Image.Container">
+            <ImageView android:id="@id/ub__trip_driver_image" android:src="@drawable/ub__emptystate_profile" android:contentDescription="@string/ub__driver_image" style="@style/Style.Rider.Trip.Driver.Circle" />
+            <LinearLayout android:id="@id/ub__trip_driver_box" style="@style/Style.Rider.Trip.Driver.BoxGroup">
+                <com.ubercab.ui.TextView android:id="@id/ub__trip_driver_boxtext" style="@style/Style.Rider.Trip.Driver.BoxText" />
+                <View android:background="@color/ub__uber_white_120" android:layout_width="0.5dip" android:layout_height="fill_parent" />
+                <com.ubercab.ui.TextView android:id="@id/ub__trip_driver_box_star" android:layout_marginTop="-1.0dip" android:text="@string/ub__star" style="@style/Style.Rider.Trip.Driver.BoxText" />
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/ub__trip_driver_text_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__trip_tray_driver_text_y">
+            <com.ubercab.ui.TextView android:id="@id/ub__trip_driver_text" style="@style/Style.Rider.Trip.Driver.Text" />
+            <com.ubercab.ui.TextView android:id="@id/ub__trip_driver_subtext" android:alpha="0.0" style="@style/Style.Rider.Trip.Driver.Text.Weak" />
+        </FrameLayout>
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="top|right|center" android:id="@id/ub__trip_image_section_vehicle" style="@style/Style.Rider.Trip.Driver.Section">
+        <FrameLayout android:id="@id/ub__trip_vehicle_image_container" style="@style/Style.Rider.Trip.Driver.Image.Container">
+            <ImageView android:id="@id/ub__trip_vehicle_image" android:src="@drawable/ub__emptystate_car" android:contentDescription="@string/ub__vehicle_image" style="@style/Style.Rider.Trip.Driver.Circle" />
+            <FrameLayout android:id="@id/ub__trip_vehicle_box" style="@style/Style.Rider.Trip.Driver.BoxGroup">
+                <ImageView android:layout_gravity="left|center" android:id="@id/ub__trip_vehicle_box_icon" style="@style/Style.Rider.Trip.Driver.BoxIcon" />
+                <com.ubercab.ui.TextView android:layout_gravity="left|center" android:id="@id/ub__trip_vehicle_boxtext" android:background="@color/ub__uber_white_20" style="@style/Style.Rider.Trip.Driver.BoxText" />
+            </FrameLayout>
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ub__trip_vehicle_text_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__trip_tray_driver_text_y">
+            <com.ubercab.ui.TextView android:id="@id/ub__trip_vehicle_text_make" android:paddingRight="3.0dip" style="@style/Style.Rider.Trip.Driver.Text" />
+            <com.ubercab.ui.TextView android:id="@id/ub__trip_vehicle_text_model" style="@style/Style.Rider.Trip.Driver.Text.Weak" />
+        </LinearLayout>
+    </FrameLayout>
+</com.ubercab.client.feature.trip.tray.TrayDriverLayout>

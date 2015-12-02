@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/ub__payment_listitem_creditcard_padding_left" android:paddingTop="@dimen/ub__list_item_padding" android:paddingRight="@dimen/ub__payment_listitem_creditcard_padding_right" android:paddingBottom="@dimen/ub__list_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.TextView android:ellipsize="none" android:id="@id/ub__payment_textview_profile" android:fadingEdge="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:drawablePadding="@dimen/ub__padding_small" android:layout_weight="1.0" android:requiresFadingEdge="0x1000" style="@style/Uber.TextAppearance.PaymentItem" />
+            <include layout="@layout/ub__profiles_payment_default_icon" />
+        </LinearLayout>
+    </LinearLayout>
+    <RadioButton android:id="@id/ub__payment_radiobutton_item" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checkMark="?android:listChoiceIndicatorSingle" />
+    <ImageView android:id="@id/ub__payment_check_item" android:focusable="false" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__check" />
+</LinearLayout>

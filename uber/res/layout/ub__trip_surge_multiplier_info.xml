@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/ub__hexagon" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:src="@drawable/ub__surge_icon_negative" />
+    <ImageView android:layout_gravity="bottom|center" android:id="@id/ub__trip_surge_fare_type_icon" android:layout_width="@dimen/ub__surge_multiplier_ride_icon_width" android:layout_height="@dimen/ub__surge_multiplier_ride_icon_height" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.TextAppearance.SurgeMultiplier" android:gravity="center_horizontal" android:id="@id/ub__trip_surge_textview_multiplier" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:autoShrink="true" />
+        <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.TextAppearance.SurgeFare" android:gravity="center" android:id="@id/ub__trip_surge_fare_type" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/surge_multiplier_fare" android:lineSpacingMultiplier="1.0" android:textAllCaps="false" />
+    </LinearLayout>
+</FrameLayout>

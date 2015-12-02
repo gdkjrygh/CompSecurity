@@ -1,0 +1,76 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+import android.text.TextUtils;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+final class esq
+    implements esl
+{
+
+    private esq()
+    {
+    }
+
+    esq(byte byte0)
+    {
+        this();
+    }
+
+    public final int a()
+    {
+        return 19;
+    }
+
+    public final boolean a(String s)
+    {
+        if (TextUtils.isEmpty(s))
+        {
+            return false;
+        } else
+        {
+            s = s.replaceAll("\\s", "");
+            return Pattern.compile("^(6706|6771|6709).*").matcher(s).matches();
+        }
+    }
+
+    public final int b()
+    {
+        return 3;
+    }
+
+    public final boolean b(String s)
+    {
+        if (!TextUtils.isEmpty(s))
+        {
+            if (TextUtils.isDigitsOnly(s = s.replaceAll("\\s", "")) && s.length() >= 16 && s.length() <= 19)
+            {
+                return esj.e(s);
+            }
+        }
+        return false;
+    }
+
+    public final boolean c(String s)
+    {
+        return esj.f(s);
+    }
+
+    public final String d(String s)
+    {
+        String s1 = s;
+        if (s == null)
+        {
+            s1 = "";
+        }
+        s1 = s1.replaceAll("\\s", "");
+        s = s1;
+        if (s1.length() > 19)
+        {
+            s = s1.substring(0, 19);
+        }
+        return s.replaceAll("\\S{4}", "$0 ").trim();
+    }
+}

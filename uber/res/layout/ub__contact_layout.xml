@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ub__contact_unread_indicator_imageview" android:visibility="gone" android:layout_width="@dimen/ub__rds__message_unread_indicator" android:layout_height="@dimen/ub__rds__message_unread_indicator" android:layout_marginTop="@dimen/ub__rds__spacing_unit_small" android:layout_marginRight="@dimen/ui__spacing_unit_1x" android:src="@drawable/ub__dot_indicator" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__rds__spacing_unit_small">
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:textColor="@color/ub__uber_black_100" android:ellipsize="end" android:id="@id/ub__contact_title_textview" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ub__rds__placeholder" android:singleLine="true" android:layout_weight="1.0" />
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline" android:textColor="@color/ub__uber_white_100" android:id="@id/ub__contact_time_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_1x" android:text="@string/ub__rds__placeholder" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_1x" android:src="@drawable/ub__right_arrow" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/ub__contact_status_badge_viewgroup" android:padding="@dimen/ub__rds__spacing_unit_micro" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ui__spacing_unit_1x">
+                <com.ubercab.ui.TextView android:id="@id/ub__contact_status_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__rds__placeholder" style="@style/Uber.RDS.Message.StatusBadge" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/ub__contact_trip_badge_viewgroup" android:background="@color/ub__uber_blue_20" android:padding="@dimen/ub__rds__spacing_unit_micro" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.TextView android:id="@id/ub__contact_trip_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__rds__placeholder" style="@style/Uber.RDS.Message.TripBadge" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

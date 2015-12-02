@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.rds.feature.trip.TripReceiptView android:orientation="vertical" android:id="@id/ub__trip_receipt_view" android:padding="@dimen/ub__rds__spacing_unit_large" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/ub__receipt_primary_charges_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ub__receipt_charge_modifiers_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ub__receipt_split_deductions_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__rds__spacing_unit_large" android:text="@string/ub__rds__charged" style="@style/Uber.TextAppearance.H5" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/ub__trip_problem_receipt_card_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ub__rds__spacing_unit_large" />
+        <com.ubercab.ui.TextView android:id="@id/ub__trip_problem_receipt_card_name" android:layout_width="@dimen/ub__rds__auto_size" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:lineSpacingMultiplier="1.0" uber:autoShrink="true" style="@style/Uber.TextAppearance.PaymentItem" />
+        <com.ubercab.ui.TextView android:textStyle="bold" android:textColor="@color/ub__uber_black_100" android:id="@id/ub__trip_problem_receipt_payment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ub__rds__spacing_unit_large" android:lineSpacingMultiplier="1.0" style="@style/Uber.TextAppearance.P" />
+    </LinearLayout>
+</com.ubercab.rds.feature.trip.TripReceiptView>

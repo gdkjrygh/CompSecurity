@@ -1,0 +1,29 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.ubercab.payment.internal.vendor.shared;
+
+import android.content.DialogInterface;
+
+// Referenced classes of package com.ubercab.payment.internal.vendor.shared:
+//            SharedEditPaymentActivity
+
+final class a
+    implements android.content.ner
+{
+
+    final SharedEditPaymentActivity a;
+
+    public final void onClick(DialogInterface dialoginterface, int i)
+    {
+        SharedEditPaymentActivity.a(a, a.i());
+        SharedEditPaymentActivity.c(a);
+    }
+
+    (SharedEditPaymentActivity sharededitpaymentactivity)
+    {
+        a = sharededitpaymentactivity;
+        super();
+    }
+}

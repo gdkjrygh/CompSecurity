@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/ub__divider_grey_light" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.DisplayLarge" android:gravity="center" android:id="@id/ub__receipt_textview_fare" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__padding_medium" android:singleLine="true" uber:autoShrink="true" />
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline" android:gravity="center" android:id="@id/ub__receipt_textview_fare_detail" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__padding_small" android:singleLine="true" android:textAllCaps="true" />
+            <LinearLayout android:orientation="vertical" android:id="@id/ub__receipt_viewgroup_rewards" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__padding_medium">
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:textColor="@color/ub__uber_black_80" android:layout_gravity="center_horizontal" android:id="@id/ub__receipt_textview_rewards_heading" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableTop="@drawable/ub__payment_rewards_amex_rewards" android:drawablePadding="8.0dip" />
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/ub__receipt_textview_rewards_details" android:paddingBottom="@dimen/ub__padding_large" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__padding_medium" android:divider="@drawable/ub__divider_grey_light" android:showDividers="end|beginning">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip">
+                    <ImageView android:layout_gravity="center" android:id="@id/ub__receipt_imageview_driver_photo" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_marginRight="8.0dip" android:contentDescription="@string/ub__empty" />
+                    <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H2" android:textColor="@color/ub__uber_black_80" android:layout_gravity="left|center" android:id="@id/ub__receipt_textview_driver_name" android:paddingTop="@dimen/ub__list_item_padding" android:paddingBottom="@dimen/ub__list_item_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <ImageView android:layout_gravity="center" android:id="@id/ub__receipt_imageview_vehicle" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/ub__empty" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.ubercab.ui.Button android:id="@id/ub__receipt_support_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/need_help" style="@style/Uber.Widget.Button.Supporting" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="24.0dip">
+                <com.ubercab.client.core.ui.DividerWithText android:id="@id/ub__receipt_divider_text" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:text="@string/rate_your_ride" />
+                <RatingBar android:gravity="center" android:layout_gravity="center" android:id="@id/ub__receipt_view_ratingbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__list_item_padding" android:layout_marginBottom="@dimen/ub__list_item_padding" android:max="5" android:numStars="5" android:stepSize="1.0" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <Spinner android:id="@id/ub__receipt_spinner_feedback" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__list_item_padding" />
+                    <com.ubercab.ui.EditText android:id="@id/ub__receipt_edittext_comment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textMultiLine" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.ubercab.ui.Button android:enabled="false" android:id="@id/ub__receipt_button_submit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="13.0sp" android:layout_marginRight="16.0dip" android:layout_marginBottom="13.0dip" style="@style/Uber.Widget.Button.Primary" />
+</LinearLayout>

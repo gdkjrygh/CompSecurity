@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.trip.map.PinView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="top" android:id="@id/ub__trip_viewgroup_pin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.0">
+        <LinearLayout android:layout_gravity="bottom|center" android:orientation="vertical" android:id="@id/ub__trip_view_capacity_popup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="43.0dip" android:alpha="0.0">
+            <FrameLayout android:background="@drawable/ub__popup_farequote_estimate" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <include android:id="@id/ub__trip_textview_capacity_pin" layout="@layout/ub__trip_textview_ridepool_capacity_popup" />
+            </FrameLayout>
+            <View android:layout_gravity="center_horizontal" android:background="@drawable/ub__popup_farequote_triangle" android:layout_width="@dimen/ub__farequote_popup_triangle_width" android:layout_height="@dimen/ub__farequote_popup_triangle_height" android:layout_marginTop="@dimen/ub__farequote_popup_triangle_offset" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="bottom|center" android:orientation="vertical" android:id="@id/ub__trip_view_low_accuracy_warning" android:background="@drawable/ub__tool_tip_container_blue_normal" android:padding="@dimen/ub__low_gps_accuracy_tooltip_padding" android:visibility="gone" android:layout_width="@dimen/ub__low_gps_accuracy_tooltip_width" android:layout_height="wrap_content" android:layout_marginBottom="31.0dip">
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline" android:textColor="@color/ub__white" android:ellipsize="none" android:gravity="center" android:layout_gravity="center" android:paddingBottom="@dimen/ub__farequote_popup_padding_med" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/low_gps_accuracy_warning_description" android:singleLine="false" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="bottom|center" android:id="@id/ub__trip_view_pin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__pin_pickup" />
+        <LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:id="@id/ub__trip_view_pin_button" android:background="@drawable/ub__button_request" android:paddingLeft="@dimen/ub__pin_margin_x" android:paddingRight="@dimen/ub__pin_margin_x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.0">
+            <FrameLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/ub__trip_viewgroup_eta" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.client.feature.trip.map.ETACircleView android:id="@id/ub__trip_viewgroup_eta_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.TextAppearance.EtaNumber" android:gravity="center" android:layout_gravity="center" android:id="@id/ub__trip_textview_eta_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-1.0dip" android:singleLine="true" />
+                    <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.TextAppearance.EtaLabel" android:gravity="center" android:layout_gravity="center" android:id="@id/ub__trip_textview_eta_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-2.0dip" android:singleLine="true" android:includeFontPadding="false" />
+                </LinearLayout>
+            </FrameLayout>
+            <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.TextAppearance.SetPickup" android:ellipsize="end" android:gravity="left|center" android:layout_gravity="center" android:id="@id/ub__trip_textview_pickup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ub__pin_text_margin_x" android:layout_marginRight="@dimen/ub__pin_text_margin_x" android:singleLine="true" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/ub__trip_view_circle_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__button_request_circle_arrow" />
+        </LinearLayout>
+    </FrameLayout>
+</com.ubercab.client.feature.trip.map.PinView>

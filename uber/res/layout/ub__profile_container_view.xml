@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.profiles.ProfileContainerView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="horizontal" android:id="@id/ub__profile_container_linear_layout" android:background="@drawable/ub__listitem_background_selector" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" style="@style/Style.Rider.Trip.Profiles.Section">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.client.feature.profiles.BadgeView android:layout_gravity="center_vertical" android:id="@id/ub__account_picker_view_badge_view" android:clickable="false" android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" android:layout_marginRight="@dimen/ui__spacing_unit_1x" />
+            <com.ubercab.ui.TextView android:layout_gravity="center_vertical" android:id="@id/ub__account_picker_view_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Style.Rider.Trip.Profiles.ItemText" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/ub__profile_picker_view_expand_image_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_1x" android:src="@drawable/ub__nav_drawer_expand" />
+        </LinearLayout>
+        <com.ubercab.ui.TextView android:id="@id/ub__account_picker_view_text_view_measuring" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Style.Rider.Trip.Profiles.ItemText" />
+    </FrameLayout>
+    <View android:id="@id/ub__profile_container_divider_left" style="@style/Style.Rider.Trip.Profiles.Divider" />
+    <FrameLayout android:id="@id/ub__profile_container_right_frame_layout" android:visibility="gone" style="@style/Style.Rider.Trip.Profiles.Section">
+        <LinearLayout android:orientation="horizontal" android:id="@id/ub__profile_container_payment_linear_layout" android:visibility="invisible" style="@style/Style.Rider.Trip.Profiles.SubSection">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/ub__profile_container_payment_click_area_linear_layout" android:background="@drawable/ub__listitem_background_selector" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/ub__profile_container_payment_image_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ui__spacing_unit_1x" />
+                <com.ubercab.ui.TextView android:id="@id/ub__profile_container_payment_text_view" style="@style/Style.Rider.Trip.Profiles.ItemText" />
+            </LinearLayout>
+            <View android:id="@id/ub__profile_container_divider_right" android:visibility="visible" android:layout_width="1.0px" style="@style/Style.Rider.Trip.Profiles.Divider" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/ub__profile_container_expense_info_linear_layout" android:background="@drawable/ub__listitem_background_selector" android:visibility="invisible" style="@style/Style.Rider.Trip.Profiles.SubSection">
+            <ImageView android:id="@id/ub__profile_container_expense_info_image_view" android:focusable="false" android:clickable="false" android:layout_width="@dimen/ub__profiles_icon_expense_info_width" android:layout_height="@dimen/ub__profiles_icon_expense_info_height" android:layout_marginRight="@dimen/ui__spacing_unit_1x" android:src="@drawable/ub__profiles_icon_expense_info" />
+            <com.ubercab.ui.TextView android:id="@id/ub__profile_container_expense_info_text_view" android:focusable="false" android:clickable="false" android:text="@string/expense_info" style="@style/Style.Rider.Trip.Profiles.ItemText" />
+        </LinearLayout>
+    </FrameLayout>
+</com.ubercab.client.feature.profiles.ProfileContainerView>

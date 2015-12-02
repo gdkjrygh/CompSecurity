@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Style.Rider.FormPadding">
+        <include layout="@layout/ub__signin_third_party" />
+        <com.ubercab.client.core.ui.StringListFloatingLabelEditText android:id="@id/ub__signin_edittext_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="textEmailAddress" android:imeOptions="actionNext" uber:floatingLabelLabelText="@string/email" uber:floatingLabelHintText="@string/email_placeholder" />
+        <com.ubercab.locale.phone.EmailPhoneNumberView android:id="@id/ub__signin_edittext_email_or_phone" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:imeOptions="actionNext" uber:countryCodeAlignment="right" uber:inputMode="email_or_phone" uber:floatingLabel="@string/email_or_phone" />
+        <com.ubercab.ui.FloatingLabelEditText android:id="@id/ub__signin_edittext_password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="textPassword" android:imeOptions="actionDone" android:imeActionLabel="@string/sign_in_title" uber:floatingLabelLabelText="@string/password" />
+        <com.ubercab.ui.Button android:layout_gravity="center_horizontal" android:id="@id/ub__signin_button_signin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__button_margin_y" android:layout_marginBottom="@dimen/ub__button_margin_y" android:text="@string/sign_in_title" style="@style/Uber.Widget.Button.Primary" />
+        <com.ubercab.ui.Button android:id="@id/ub__signin_button_forgotpassword" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__button_margin_y" android:text="@string/forgot_password_question" style="@style/Style.Rider.Button.Link" />
+    </LinearLayout>
+</ScrollView>

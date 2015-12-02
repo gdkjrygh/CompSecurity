@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/ub__white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/ub__support_form_scroll_view" android:padding="@dimen/ui__spacing_unit_2x" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never">
+        <com.ubercab.rds.feature.support.SupportFormView android:id="@id/ub__support_form_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.TextView android:textColor="@color/ub__uber_black_80" android:id="@id/ub__support_form_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" style="@style/Uber.TextAppearance.P" />
+            <com.ubercab.ui.TextView android:id="@id/ub__support_form_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_below="@id/ub__support_form_header" style="@style/Uber.TextAppearance.Byline" />
+            <LinearLayout android:orientation="vertical" android:id="@id/ub__support_form_container" android:focusable="true" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ub__support_form_body" />
+            <com.ubercab.ui.Button android:enabled="false" android:id="@id/ub__support_form_submit" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__rds__submit" android:layout_below="@id/ub__support_form_container" android:textAllCaps="true" style="@style/Uber.Widget.Button.Primary" />
+        </com.ubercab.rds.feature.support.SupportFormView>
+    </ScrollView>
+    <include layout="@layout/ub__support_loading_view" />
+    <include layout="@layout/ub__error_support" />
+</FrameLayout>

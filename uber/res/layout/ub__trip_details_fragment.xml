@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/ub__white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ub__trip_details_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <include layout="@layout/ub__trip_pickup_dropoff" />
+        <include layout="@layout/ub__divider_thin" />
+    </LinearLayout>
+    <ImageView android:id="@id/ub__trip_details_map" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/ub__trip_details_footer" android:layout_below="@id/ub__trip_details_header" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/ub__trip_details_footer">
+        <include layout="@layout/ub__divider_thin" />
+        <View android:background="@color/ub__white" android:layout_width="fill_parent" android:layout_height="@dimen/ub__rds__spacing_unit_large" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ub__trip_details_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/ub__rds__spacing_unit_medium" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/ub__trip_details_status" android:visibility="gone" android:layout_width="@dimen/ub__rds__auto_size" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:gravity="center" android:id="@id/ub__trip_details_status_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__rds__trip" />
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:gravity="center" android:id="@id/ub__trip_details_status_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__rds__canceled" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/ub__trip_details_duration" android:visibility="gone" android:layout_width="@dimen/ub__rds__auto_size" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:gravity="center" android:id="@id/ub__trip_details_duration_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__rds__duration" />
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:gravity="center" android:id="@id/ub__trip_details_duration_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__rds__placeholder" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/ub__trip_details_distance" android:visibility="gone" android:layout_width="@dimen/ub__rds__auto_size" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:gravity="center" android:id="@id/ub__trip_details_distance_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__rds__distance" />
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:gravity="center" android:id="@id/ub__trip_details_distance_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__rds__placeholder" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/ub__trip_details_fare" android:visibility="gone" android:layout_width="@dimen/ub__rds__auto_size" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:gravity="center" android:id="@id/ub__trip_details_fare_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__rds__total" />
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:gravity="center" android:id="@id/ub__trip_details_fare_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__rds__placeholder" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.ubercab.ui.Button android:layout_gravity="center_horizontal" android:id="@id/ub__trip_details_button_support" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ub__rds__trip_details_padding" android:text="@string/ub__rds__need_help" android:layout_centerHorizontal="true" style="@style/Uber.Widget.Button.Secondary" />
+    </LinearLayout>
+</RelativeLayout>

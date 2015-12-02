@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ub__safetynet_contact_picker" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="?android:dividerHorizontal" android:showDividers="middle">
+        <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline" android:textColor="@color/ub__white" android:id="@id/ub__safetynet_contact_picker_textview_limit_reached" android:background="@color/ub__uber_blue_100" android:padding="@dimen/ub__safetynet_padding_small" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/safety_net_contacts_picker_limit_reached" />
+        <com.ubercab.client.core.ui.ChipEditText android:textAppearance="?android:textAppearanceSmall" android:id="@id/ub__safetynet_contact_picker_edittext_selected" android:background="@android:color/white" android:padding="@dimen/ub__safetynet_padding_small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ub__safetynet_chip_edit_text_min_height" android:hint="@string/safety_net_contacts_picker_chip_placeholder" android:inputType="textMultiLine|textNoSuggestions" android:dropDownWidth="@dimen/ub__safetynet_chip_edit_text_drop_down_width" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ListView android:id="@id/ub__safetynet_contact_picker_listview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:dividerHeight="0.0dip" />
+            <include android:layout_gravity="center_horizontal" android:id="@id/ub__safetynet_contact_picker_permission_denied_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/ub__contact_picker_permission_denied_view" />
+        </FrameLayout>
+        <com.ubercab.ui.TextView android:gravity="center" android:id="@id/ub__safetynet_contact_picker_textview_footer" android:padding="@dimen/ub__safetynet_padding_small" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/ub__safetynet_contact_picker_progressbar_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+</FrameLayout>

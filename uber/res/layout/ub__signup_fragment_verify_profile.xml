@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/ub__signup_viewgroup_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Style.Rider.FormPadding">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.FloatingLabelEditText android:id="@id/ub__signup_edittext_firstname" android:nextFocusDown="@id/ub__signup_edittext_lastname" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ui__spacing_unit_2x" android:singleLine="true" android:layout_weight="1.0" android:inputType="textPersonName|textCapWords|textNoSuggestions" uber:floatingLabelLabelText="@string/first_name" />
+            <com.ubercab.ui.FloatingLabelEditText android:id="@id/ub__signup_edittext_lastname" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:inputType="textPersonName|textCapWords|textNoSuggestions" uber:floatingLabelLabelText="@string/last_name" />
+        </LinearLayout>
+        <com.ubercab.ui.AutoCompleteFloatingLabelEditText android:id="@id/ub__signup_edittext_email" android:nextFocusUp="@id/ub__signup_edittext_lastname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:completionThreshold="1" android:inputType="textEmailAddress" android:imeOptions="actionNext" uber:floatingLabelLabelText="@string/email" uber:floatingLabelHintText="@string/email_placeholder" />
+        <com.ubercab.locale.phone.PhoneNumberView android:id="@id/ub__signup_phone_number" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.Button android:id="@id/ub__signup_button_next" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__button_margin_y" android:layout_marginBottom="@dimen/ub__button_margin_y" style="@style/Uber.Widget.Button.Primary" />
+        <include layout="@layout/ub__signup_tos" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.trip.overlay.AddressOverlayView android:orientation="vertical" android:background="@color/ub__black_transparent_overlay_dark" android:paddingTop="?android:actionBarSize" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/ub__address_overlay_address" android:layout_width="fill_parent" android:layout_height="@dimen/ub__container_height" android:layout_marginLeft="@dimen/ub__container_margin" android:layout_marginRight="@dimen/ub__container_margin" layout="@layout/ub__trip_view_address" />
+    <com.ubercab.client.feature.trip.overlay.CoachMarkPathView android:id="@id/ub__address_overlay_coach_mark_path" android:paddingBottom="@dimen/ub__address_overlay_coachmark_padding" android:layout_width="fill_parent" android:layout_height="@dimen/ub__address_overlay_coachmark_height" uber:animation_direction="down" uber:coachmark_icon="@drawable/ub__ic_destinations_coachmark" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ub__address_overlay_text_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__map_view_coach_mark_text_padding">
+        <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H1.White.Solid" android:gravity="center" android:id="@id/ub__address_overlay_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline" android:textColor="@color/ub__white" android:gravity="center" android:id="@id/ub__address_overlay_body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ub__form_margin_x" android:layout_marginTop="@dimen/ub__map_view_coach_mark_text_padding" />
+    </LinearLayout>
+</com.ubercab.client.feature.trip.overlay.AddressOverlayView>

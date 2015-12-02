@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.core.ui.RiderDrawerLayout android:id="@id/ub__trip_drawerlayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/ub__trip_toolbar_education_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/ub__trip_viewgroup_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ub__toolbar_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:id="@id/ub__toolbar" layout="@layout/ub__toolbar" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:foreground="?compatWindowOverlay" android:layout_weight="1.0" />
+        </LinearLayout>
+    </FrameLayout>
+    <RelativeLayout android:layout_gravity="left" android:id="@id/ub__trip_viewgroup_drawer_container" android:background="@color/ub__uber_black_100" android:layout_width="@dimen/ub__trip_drawer_width" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/ub__profile_header_container">
+            <ListView android:id="@id/ub__trip_listview_drawer" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Uber.Lists.ListView.Dark" />
+            <View android:id="@id/ub__trip_listview_drawer_profiles_footer" android:background="@color/ub__black_transparent_overlay_dark" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ListView android:id="@id/ub__trip_listview_drawer_profiles_list" android:background="@color/ub__uber_black_90" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__profiles_profile_navigation_drawer_profile_list_divider" android:listSelector="@drawable/ub__listview_selector_dark" android:divider="@color/ub__black" android:dividerHeight="@dimen/ub__profiles_profile_navigation_drawer_profile_list_divider" android:footerDividersEnabled="true" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ub__profile_header_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/ub__trip_drawer_header_new" />
+            <include layout="@layout/ub__trip_drawer_header_old" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.ubercab.client.core.ui.RiderDrawerLayout>

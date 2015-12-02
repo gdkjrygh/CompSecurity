@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/ub__payment_listitem_creditcard_padding_right" android:paddingRight="@dimen/ub__payment_listitem_creditcard_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.PaymentItem" android:gravity="left|center" android:id="@id/ub__payment_textview_item" android:paddingTop="@dimen/ub__list_item_padding" android:paddingRight="8.0dip" android:paddingBottom="@dimen/ub__list_item_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:drawablePadding="@dimen/ub__padding_small" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ub__payment_check_item" android:focusable="false" android:visibility="visible" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__check" />
+    </LinearLayout>
+    <View android:id="@id/ub__payment_view_rewards_divider" android:background="@drawable/ub__header_line_secondary_light_grey_bg" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/ub__payment_listitem_rewards_left_margin" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ub__payment_container_rewards" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ub__payment_listitem_height">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ub__payment_listitem_rewards_left_margin">
+            <ImageView android:id="@id/ub__payment_imageview_rewards_status" android:paddingLeft="1.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__payment_rewards_amex_rewards" />
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline" android:gravity="center_vertical" android:id="@id/ub__payment_textview_rewards_status" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H5" android:textColor="@color/ub__uber_blue_100" android:gravity="right|center" android:id="@id/ub__payment_textview_rewards_learn_more" android:paddingLeft="@dimen/ub__container_padding" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0" uber:autoShrink="true" />
+    </LinearLayout>
+</LinearLayout>

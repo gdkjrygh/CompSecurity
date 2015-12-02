@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/ub__padding_inline" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <ImageView android:gravity="center" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_marginTop="@dimen/ub__alipay_hangouts_icon_vertical" android:layout_marginBottom="@dimen/ub__alipay_hangouts_icon_vertical" android:src="@drawable/ub__hangouts_icon" android:contentDescription="@string/ub__empty" />
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H1" android:gravity="center" android:id="@id/ub__verify_alipay_textview_header" android:paddingBottom="@dimen/ub__alipay_header_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline" android:gravity="center" android:id="@id/ub__verify_alipay_textview_complete_following_steps" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/ub__view_alipay_divider" />
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:layout_gravity="center" android:id="@id/ub__verify_alipay_textview_step_1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <include layout="@layout/ub__view_alipay_divider" />
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:layout_gravity="center" android:id="@id/ub__verify_alipay_textview_step_2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <include layout="@layout/ub__view_alipay_divider" />
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:layout_gravity="center" android:id="@id/ub__verify_alipay_textview_step_3" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <include layout="@layout/ub__view_alipay_divider" />
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H5" android:textColor="@color/ub__uber_black_40" android:gravity="center" android:layout_gravity="bottom" android:id="@id/ub__verify_alipay_textview_retry" android:padding="@dimen/ub__padding_small" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <com.ubercab.ui.Button android:id="@id/ub__verify_alipay_button_cancel" android:padding="@dimen/ub__list_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Uber.Widget.Button.Primary" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

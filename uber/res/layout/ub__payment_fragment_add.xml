@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/ub__field_margin_y" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.client.feature.payment.legacy.CreditCardEditText android:id="@id/ub__payment_edittext_cardnumber" android:nextFocusDown="@id/ub__payment_edittext_expirationmonth" android:layout_width="0.0dip" android:layout_height="wrap_content" android:drawableLeft="@drawable/ub__payment_type_unknown" android:drawablePadding="6.0dip" android:layout_weight="1.0" android:nextFocusForward="@id/ub__payment_edittext_expirationmonth" />
+            <include android:id="@id/ub__payment_button_scan_card" layout="@layout/ub__scan_card_button" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__field_margin_y">
+            <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ub__field_margin_x" android:layout_weight="1.0">
+                <com.ubercab.client.core.ui.MonthEditText android:id="@id/ub__payment_edittext_expirationmonth" android:nextFocusDown="@id/ub__payment_edittext_expirationyear" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ub__field_margin_x" android:layout_weight="1.0" android:nextFocusForward="@id/ub__payment_edittext_expirationyear" />
+                <com.ubercab.client.core.ui.YearEditText android:id="@id/ub__payment_edittext_expirationyear" android:nextFocusDown="@id/ub__payment_edittext_cardcode" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:nextFocusForward="@id/ub__payment_edittext_cardcode" />
+            </LinearLayout>
+            <com.ubercab.client.feature.payment.legacy.SecurityCodeEditText android:id="@id/ub__payment_edittext_cardcode" android:nextFocusDown="@id/ub__payment_edittext_zip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:nextFocusForward="@id/ub__payment_edittext_zip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__field_margin_y">
+            <com.ubercab.locale.country.CountryButton android:textAppearance="@style/Style.Rider.TextAppearance.Field" android:gravity="left|center" android:id="@id/ub__payment_button_country" android:layout_width="0.0dip" android:layout_height="wrap_content" android:drawablePadding="4.0dip" android:layout_weight="1.0" />
+            <com.ubercab.ui.deprecated.view.ZipEditText android:id="@id/ub__payment_edittext_zip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/ub__field_margin_x" android:hint="@string/zip" android:layout_weight="1.0" />
+        </LinearLayout>
+        <com.ubercab.ui.Button android:id="@id/ub__payment_button_add_payment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__button_margin_y" android:layout_marginBottom="@dimen/ub__field_margin_y" android:text="@string/add_credit_card" style="@style/Uber.Widget.Button.Primary" />
+        <com.ubercab.client.core.ui.DividerWithText android:id="@id/ub__payment_view_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:text="@string/or" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__button_margin_y">
+            <ImageButton android:id="@id/ub__payment_imagebutton_paypal" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__field_margin_y" android:src="@drawable/ub__paypal_logo" android:layout_weight="1.0" android:contentDescription="@string/ub__empty" style="@style/Uber.Widget.Button.Secondary" />
+            <ImageButton android:id="@id/ub__payment_imagebutton_googlewallet" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ub__field_margin_x" android:layout_marginTop="@dimen/ub__field_margin_y" android:src="@drawable/img_google_wallet" android:layout_weight="1.0" android:contentDescription="@string/ub__empty" style="@style/Uber.Widget.Button.Secondary" />
+            <ImageButton android:id="@id/ub__payment_imagebutton_alipay" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ub__field_margin_x" android:layout_marginTop="@dimen/ub__list_item_padding" android:src="@drawable/ub__alipay_logo" android:layout_weight="1.0" android:contentDescription="@string/ub__empty" style="@style/Uber.Widget.Button.Secondary" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

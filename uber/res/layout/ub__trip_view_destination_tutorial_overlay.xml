@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.trip.overlay.DestinationTutorialOverlayView android:background="@color/ub__black_transparent_overlay_dark" android:paddingTop="?android:actionBarSize" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/ub__trip_view_address" android:layout_width="fill_parent" android:layout_height="@dimen/ub__container_height" android:layout_marginLeft="@dimen/ub__container_margin" android:layout_marginRight="@dimen/ub__container_margin" layout="@layout/ub__trip_view_address" />
+        <com.ubercab.client.feature.trip.overlay.CoachMarkPathView android:layout_gravity="bottom|center" android:id="@id/ub__trip_view_coach_mark_path" android:paddingBottom="11.0dip" android:layout_width="fill_parent" android:layout_height="140.0dip" uber:animation_direction="down" uber:coachmark_icon="@drawable/ub__ic_destinations_coachmark" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ub__trip_viewgroup_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__map_view_coach_mark_text_padding">
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H1" android:textColor="@color/ub__white" android:gravity="center" android:id="@id/ub__trip_textview_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/destination_tutorial_title" />
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline" android:textColor="@color/ub__white" android:gravity="center" android:id="@id/ub__trip_textview_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ub__form_margin_x" android:layout_marginTop="@dimen/ub__map_view_coach_mark_text_padding" android:text="@string/destination_tutorial_message" />
+        </LinearLayout>
+    </LinearLayout>
+</com.ubercab.client.feature.trip.overlay.DestinationTutorialOverlayView>

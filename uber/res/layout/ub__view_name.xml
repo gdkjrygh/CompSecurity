@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/ub__name_layout_two_fields" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.deprecated.NonEmptyEditText android:textAppearance="@style/Style.Rider.TextAppearance.Field" android:id="@id/ub__name_edittext_firstname" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ub__field_margin_x" android:hint="@string/first_name" android:singleLine="true" android:layout_weight="1.0" android:inputType="textPersonName|textCapWords|textNoSuggestions" android:imeOptions="actionNext" android:nextFocusForward="@id/ub__name_edittext_lastname" />
+        <com.ubercab.ui.deprecated.NonEmptyEditText android:textAppearance="@style/Style.Rider.TextAppearance.Field" android:id="@id/ub__name_edittext_lastname" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/last_name" android:singleLine="true" android:layout_weight="1.0" android:inputType="textPersonName|textCapWords|textNoSuggestions" android:imeOptions="actionNext" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ub__name_layout_one_fields" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.deprecated.NonEmptyEditText android:textAppearance="@style/Style.Rider.TextAppearance.Field" android:id="@id/ub__name_edittext_full_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/full_name" android:singleLine="true" android:layout_weight="1.0" android:inputType="textPersonName|textCapWords|textNoSuggestions" />
+    </LinearLayout>
+</FrameLayout>

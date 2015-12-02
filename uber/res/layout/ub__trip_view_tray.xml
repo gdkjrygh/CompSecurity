@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.trip.tray.TripTrayView android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.client.feature.trip.slider.SlidePanelLayout android:layout_gravity="bottom" android:id="@id/ub__trip_tray_slide_panel" android:layout_width="fill_parent" android:layout_height="fill_parent" app:headerView="@id/ub__header" app:dragSensitivity="1.0">
+        <com.ubercab.client.feature.trip.tray.TrayWrapperLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ub__trip_tray_stack_layout" android:paddingTop="@dimen/ub__trip_tray_handle_slop" android:clickable="true" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/ub__trip_view_tray_message" />
+            <com.ubercab.client.feature.trip.tray.TrayWrapperLayout android:layout_gravity="bottom" android:orientation="vertical" style="@style/Style.Rider.Trip.Section">
+                <include android:id="@id/ub__header" layout="@layout/ub__trip_view_tray_driver" />
+                <include layout="@layout/ub__trip_view_tray_contact" />
+                <include layout="@layout/ub__trip_view_tray_secondary_actions" />
+                <include layout="@layout/ub__trip_view_tray_safetynet" />
+                <include layout="@layout/ub__trip_view_tray_ridepool_savings" />
+                <include layout="@layout/ub__trip_view_tray_music" />
+                <include layout="@layout/ub__trip_view_tray_profiles" />
+                <include layout="@layout/ub__trip_view_tray_actions" />
+                <include layout="@layout/ub__trip_view_tray_cc" />
+            </com.ubercab.client.feature.trip.tray.TrayWrapperLayout>
+        </com.ubercab.client.feature.trip.tray.TrayWrapperLayout>
+    </com.ubercab.client.feature.trip.slider.SlidePanelLayout>
+</com.ubercab.client.feature.trip.tray.TripTrayView>

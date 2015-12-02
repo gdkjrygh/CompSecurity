@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/ub__list_item_padding" android:paddingTop="@dimen/ub__container_padding_large" android:paddingRight="@dimen/ub__list_item_padding" android:paddingBottom="@dimen/ub__list_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.client.core.ui.DividerWithText android:layout_width="fill_parent" android:layout_height="wrap_content" uber:text="@string/action_required" />
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/ub__container_margin" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_horizontal" android:paddingTop="@dimen/ub__container_padding_large" android:paddingBottom="@dimen/ub__container_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ub__payment_rewards_amex_logo" />
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:gravity="center" android:id="@id/ub__payment_textview_reward_info" android:padding="@dimen/ub__container_margin" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <LinearLayout android:orientation="vertical" android:id="@id/ub__payment_textview_restrictions" android:background="@drawable/ub__payment_listitem_background_selector" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__container_margin">
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline" android:gravity="center_horizontal" android:id="@id/ub__payment_textview_reward_restrictions" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline" android:textColor="@color/ub__uber_blue_100" android:gravity="center_horizontal" android:id="@id/ub__payment_textview_reward_restrictions_link" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.ubercab.ui.Button android:gravity="center" android:id="@id/ub__payment_button_enroll_me" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__container_padding" style="@style/Uber.Widget.Button.Accent" />
+        <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.TextAppearance.PaymentCreditCard" android:textColor="@color/ub__uber_blue_100" android:gravity="center" android:id="@id/ub__payment_textview_not_right_now" android:background="@drawable/ub__payment_listitem_background_selector" android:padding="@dimen/ub__list_item_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAllCaps="true" />
+    </LinearLayout>
+</ScrollView>

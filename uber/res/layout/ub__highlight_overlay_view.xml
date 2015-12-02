@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.trip.overlay.HighlightOverlayView android:gravity="top" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.client.feature.trip.overlay.RectangleClipView android:id="@id/ub__rectangle_clip_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ub__overlay_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/ub__overlay_text_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__map_view_coach_mark_text_padding">
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H1.White.Solid" android:gravity="center" android:id="@id/ub__overlay_textview_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline" android:textColor="@color/ub__white" android:gravity="center" android:id="@id/ub__overlay_textview_body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ub__form_margin_x" android:layout_marginTop="@dimen/ub__map_view_coach_mark_text_padding" />
+        </LinearLayout>
+        <com.ubercab.client.feature.trip.overlay.CoachMarkPathView android:id="@id/ub__address_overlay_coach_mark_path" android:layout_width="fill_parent" android:layout_height="@dimen/ub__address_overlay_coachmark_height" />
+    </LinearLayout>
+</com.ubercab.client.feature.trip.overlay.HighlightOverlayView>

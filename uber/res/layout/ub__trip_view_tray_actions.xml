@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.trip.tray.TrayActionsLayout android:gravity="center" android:divider="@drawable/ub__trip_tray_actions_divider" android:minHeight="@dimen/ub__trip_tray_collapsed_item_height_large" android:showDividers="middle" style="@style/Style.Rider.Trip.Section.TopBorder"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/ub__trip_action_fare_split" style="@style/Style.Rider.Trip.Actions.Section">
+        <RelativeLayout android:gravity="center" android:layout_width="@dimen/ub__trip_tray_action_icon_size" android:layout_height="@dimen/ub__trip_tray_action_icon_size">
+            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__ic_fare_split" />
+            <com.ubercab.ui.TextView android:textSize="9.0dip" android:textColor="@color/ub__white" android:gravity="center" android:id="@id/ub__trip_tray_fare_split_indicator_text" android:background="@drawable/ub__fare_split_badge" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" fontPath="@string/ub__font_medium" />
+        </RelativeLayout>
+        <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.Trip.Actions.Text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__trip_tray_action_icon_margin" android:text="@string/fare_split" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ub__trip_action_share_eta" style="@style/Style.Rider.Trip.Actions.Section">
+        <ImageView android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__ic_share_eta" />
+        <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.Trip.Actions.Text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__trip_tray_action_icon_margin" android:text="@string/share_eta" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ub__trip_action_share_trip" android:visibility="gone" style="@style/Style.Rider.Trip.Actions.Section">
+        <ImageView android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__ic_share_trip" />
+        <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.Trip.Actions.Text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__trip_tray_action_icon_margin" android:text="@string/safety_net_share_trip" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ub__trip_action_cancel_trip" style="@style/Style.Rider.Trip.Actions.Section">
+        <ImageView android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__ic_cancel_trip" />
+        <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.Trip.Actions.Text" android:gravity="center" android:id="@id/ub__trip_action_cancel_trip_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__trip_tray_action_icon_margin" android:text="@string/cancel" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ub__trip_action_help" android:visibility="gone" style="@style/Style.Rider.Trip.Actions.Section">
+        <ImageView android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__ic_help" />
+        <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.Trip.Actions.Text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__trip_tray_action_icon_margin" android:text="@string/help" />
+    </LinearLayout>
+</com.ubercab.client.feature.trip.tray.TrayActionsLayout>

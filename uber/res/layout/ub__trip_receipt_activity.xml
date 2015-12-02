@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/ub__trip_receipt_root_view" android:background="@color/ub__white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x">
+                <ImageView android:id="@id/ub__trip_receipt_map" android:layout_width="fill_parent" android:layout_height="@dimen/ub__rds__auto_size" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/ub__trip_receipt_status_viewgroup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ub__trip_receipt_map">
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="@dimen/ub__rds__auto_size" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_weight="1.0">
+                        <com.ubercab.ui.TextView android:textColor="@color/ub__black" android:id="@id/ub__trip_receipt_status_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__rds__spacing_unit_micro" android:lineSpacingMultiplier="1.0" style="@style/Uber.TextAppearance.H3" />
+                        <com.ubercab.ui.TextView android:textColor="@color/ub__black" android:id="@id/ub__trip_receipt_status_value" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__rds__canceled" style="@style/Uber.TextAppearance.H3" />
+                        <RatingBar android:id="@id/ub__trip_receipt_ratingbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:isIndicator="true" style="@style/Uber.RDS.Trip.RatingBar" />
+                    </LinearLayout>
+                    <View android:id="@id/ub__trip_receipt_avatar_placeholder" android:layout_width="@dimen/ub__rds__trip_receipt_driver_picture_size" android:layout_height="@dimen/ub__rds__trip_receipt_driver_picture_spacer_height" />
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="@dimen/ub__rds__auto_size" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_weight="1.0">
+                        <com.ubercab.ui.TextView android:textColor="@color/ub__black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__rds__spacing_unit_micro" android:text="@string/ub__rds__total_fare" android:lineSpacingMultiplier="1.0" style="@style/Uber.TextAppearance.H3" />
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/ub__trip_receipt_surge" android:visibility="gone" android:layout_width="@dimen/ub__rds__trip_receipt_surge_image" android:layout_height="@dimen/ub__rds__trip_receipt_surge_image" android:layout_marginRight="@dimen/ub__rds__spacing_unit_small" android:src="@drawable/ub__icon_surge" />
+                            <com.ubercab.ui.TextView android:textColor="@color/ub__black" android:id="@id/ub__trip_receipt_fare" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.0" style="@style/Uber.TextAppearance.H3" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <com.ubercab.ui.CircleImageView android:id="@id/ub__trip_receipt_driver_picture" android:layout_width="@dimen/ub__rds__trip_receipt_driver_picture_size" android:layout_height="@dimen/ub__rds__trip_receipt_driver_picture_size" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" app:circleImageBorderWidth="@dimen/ub__rds__trip_receipt_driver_picture_border_width" />
+            </RelativeLayout>
+            <com.ubercab.ui.TextView android:textColor="@color/ub__black" android:id="@id/ub__trip_receipt_driver_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:text="" style="@style/Uber.TextAppearance.H5" />
+            <com.ubercab.ui.Button android:id="@id/ub__trip_receipt_button_help" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:text="@string/ub__rds__need_help" style="@style/Uber.Widget.Button.Supporting" />
+            <include layout="@layout/ub__trip_receipt_view" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/ub__support_loading_view" />
+    <include layout="@layout/ub__error_support" />
+</FrameLayout>

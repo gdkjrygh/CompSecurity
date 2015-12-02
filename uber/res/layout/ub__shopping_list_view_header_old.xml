@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/ub__transparent_header" android:layout_width="fill_parent" android:layout_height="@dimen/ub__shopping_no_header_margin" />
+    <View android:layout_gravity="bottom" android:background="@drawable/ub__shadow_footer" android:layout_width="fill_parent" android:layout_height="@dimen/ub__shopping_layout_top_shadow_height" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ub__shopping_header" android:background="@color/ub__white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/ub__uber_eats_logo_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:src="@drawable/ub__uber_eats_logo" />
+        <com.ubercab.client.core.ui.DividerWithText android:textAppearance="@style/Uber.TextAppearance.H3" android:textColor="@color/ub__uber_black_60" android:id="@id/ub__shopping_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_3x" android:layout_marginTop="@dimen/ub__shopping_cart_container_padding" android:layout_marginRight="@dimen/ui__spacing_unit_3x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" />
+        <FrameLayout android:gravity="center" android:id="@id/ub__shopping_cart_closed_banner" android:background="@color/ub__uber_black_80" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_4x">
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H3" android:textSize="@dimen/ub__text_size_medium" android:textColor="@color/ub__uber_white_20" android:layout_gravity="center" android:id="@id/ub__shopping_cart_closed_banner_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/ub__ic_clock" android:drawablePadding="@dimen/ub__shopping_margin_xsmall" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

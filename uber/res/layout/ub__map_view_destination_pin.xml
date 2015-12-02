@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.trip.map.layer.pins.DestinationPinView android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="bottom|center" android:id="@id/ub__destination_pin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__pin_destination" android:contentDescription="@string/ub__empty" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ub__pin_destination_viewgroup_popup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="44.0dip">
+        <TableLayout android:orientation="vertical" android:background="@drawable/ub__popup_farequote_estimate" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TableRow>
+                <com.ubercab.ui.TextView android:textSize="@dimen/ub__farequote_popup_textsize_tagline" android:textColor="@color/ub__uber_black_60" android:ellipsize="none" android:gravity="center" android:id="@id/ub__pin_destination_textview_tagline" android:background="@drawable/ub__popup_farequote_tagline" android:paddingLeft="@dimen/ub__farequote_popup_padding_med" android:paddingTop="@dimen/ub__farequote_popup_padding_small" android:paddingRight="@dimen/ub__farequote_popup_padding_med" android:paddingBottom="@dimen/ub__farequote_popup_padding_small" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:fontPath="@string/ub__font_medium" />
+            </TableRow>
+            <TableRow android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <include android:id="@id/ub__pin_destination_textview_capacity" layout="@layout/ub__trip_textview_ridepool_capacity_popup" />
+                <View android:id="@id/ub__pin_destination_view_fare_divider" android:background="@color/ub__uber_black_40" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/ub__farequote_popup_padding_med" android:layout_marginBottom="@dimen/ub__farequote_popup_padding_med" />
+                <com.ubercab.ui.TextView android:textSize="@dimen/ub__farequote_popup_textsize_fare" android:textColor="@color/ub__uber_black_80" android:ellipsize="none" android:id="@id/ub__pin_destination_textview_fare" android:paddingLeft="@dimen/ub__farequote_popup_padding_large" android:paddingTop="@dimen/ub__farequote_popup_padding_med" android:paddingRight="@dimen/ub__farequote_popup_padding_large" android:paddingBottom="@dimen/ub__farequote_popup_padding_med" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawablePadding="@dimen/ub__farequote_popup_padding_med" uber:fontPath="@string/ub__font_narrow_medium" />
+            </TableRow>
+        </TableLayout>
+        <View android:layout_gravity="center_horizontal" android:background="@drawable/ub__popup_farequote_triangle" android:layout_width="@dimen/ub__farequote_popup_triangle_width" android:layout_height="@dimen/ub__farequote_popup_triangle_height" android:layout_marginTop="@dimen/ub__farequote_popup_triangle_offset" />
+    </LinearLayout>
+</com.ubercab.client.feature.trip.map.layer.pins.DestinationPinView>

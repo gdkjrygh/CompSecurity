@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.music.MusicTrayView android:orientation="horizontal" android:id="@id/ub__music_tray_content" android:background="@drawable/ub__container_music_tray" android:layout_width="fill_parent" android:layout_height="@dimen/ub__music_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ub__music_bar_margin_x" android:layout_marginRight="@dimen/ub__music_tray_button_margin">
+        <ImageView android:id="@id/ub__music_imageview_tray_playback" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__music_tray_play_disabled" />
+        <FrameLayout android:id="@id/ub__music_imageview_tray_spinner_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/ub__music_imageview_tray_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__music_tray_spinner" />
+        </FrameLayout>
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/ub__music_bar_min_height" android:layout_weight="1.0">
+        <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.TextAppearance.MusicProviderAttribution" android:gravity="center_vertical" android:id="@id/ub__music_textview_attribution" android:padding="@dimen/ub__music_attribution_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/ub__music_attribution_padding" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline" android:textColor="@color/ub__uber_black_80" android:gravity="center" android:layout_gravity="center" android:id="@id/ub__music_textview_tray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loading_music" android:layout_weight="1.0" />
+            <ImageView android:id="@id/ub__music_imageview_tray_right_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ub__music_tray_button_margin" android:src="@drawable/ub__music_spotify_open_grey" android:layout_weight="0.0" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/ub__music_imageview_tray_right_placeholder" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ub__music_tray_button_margin" android:layout_marginRight="@dimen/ub__music_bar_margin_x" android:src="@drawable/ub__music_tray_play_disabled" />
+</com.ubercab.client.feature.music.MusicTrayView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.trip.map.PinEtaView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center" android:layout_gravity="top" android:id="@id/ub__trip_viewgroup_pin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.0">
+        <ImageView android:layout_gravity="center" android:id="@id/ub__trip_imageview_pin_dot" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__pin_pickup" />
+        <ImageView android:layout_gravity="center" android:id="@id/ub__trip_imageview_pin_eta" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__pin_eta_pickup" />
+        <LinearLayout android:gravity="center" android:layout_gravity="top|center" android:orientation="vertical" android:id="@id/ub__trip_viewgroup_eta" android:visibility="gone" android:layout_width="@dimen/ub__pin_circle_diameter" android:layout_height="@dimen/ub__pin_circle_diameter" android:layout_marginTop="@dimen/ub__pin_circle_eta_margin_top">
+            <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.TextAppearance.EtaNumber" android:gravity="center" android:layout_gravity="center" android:id="@id/ub__trip_textview_eta_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-1.0dip" android:singleLine="true" />
+            <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.TextAppearance.EtaLabel" android:gravity="center" android:layout_gravity="center" android:id="@id/ub__trip_textview_eta_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-2.0dip" android:text="@string/min" android:singleLine="true" android:includeFontPadding="false" android:textAllCaps="true" />
+        </LinearLayout>
+    </FrameLayout>
+</com.ubercab.client.feature.trip.map.PinEtaView>

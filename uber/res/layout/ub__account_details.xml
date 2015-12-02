@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="@color/ub__uber_white_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.CircleImageView android:layout_gravity="center_horizontal" android:id="@id/ub__account_imageview_picture" android:layout_width="@dimen/ub__account_picture_size" android:layout_height="@dimen/ub__account_picture_size" android:layout_margin="@dimen/ui__spacing_unit_4x" />
+    </FrameLayout>
+    <View android:background="@color/ub__uber_white_80" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <com.ubercab.locale.name.NameInput android:id="@id/ub__account_nameinput_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_2x" android:layout_marginRight="@dimen/ui__spacing_unit_2x" android:inputType="textEmailAddress" android:nextFocusForward="@id/ub__account_flet_email" />
+    <com.ubercab.ui.FloatingLabelEditText android:id="@id/ub__account_flet_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_2x" android:layout_marginRight="@dimen/ui__spacing_unit_2x" android:singleLine="true" android:inputType="textEmailAddress" android:nextFocusForward="@id/ub__account_phonenumber_mobile" uber:floatingLabelLabelText="@string/email" />
+    <com.ubercab.locale.phone.PhoneNumberView android:id="@id/ub__account_phonenumber_mobile" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_2x" android:layout_marginRight="@dimen/ui__spacing_unit_2x" uber:exampleNumberAsHint="false" />
+</LinearLayout>

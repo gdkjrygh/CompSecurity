@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.Button android:gravity="center" android:id="@id/ub__magic_button_devserver" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" uber:autoShrink="true" style="@style/Uber.Widget.Button.Accent" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/ub__magic_logotype_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0">
+        <ImageView android:layout_gravity="top|center" android:id="@id/ub__magic_logotype" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:src="@drawable/ub__logo" android:contentDescription="@string/ub__empty" />
+    </LinearLayout>
+    <FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/ub__magic_textview_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_3x" android:layout_marginRight="@dimen/ui__spacing_unit_3x">
+            <com.ubercab.ui.TextView android:textSize="@dimen/ub__new_magic_ride_now_text_size" android:textColor="@color/ub__white" android:id="@id/ub__magic_ride_now" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:text="@string/ride_now" android:textAllCaps="false" uber:autoShrink="true" style="@style/Uber.TextAppearance.H1.White" />
+            <com.ubercab.ui.TextView android:textSize="@dimen/ub__text_size_medium" android:textColor="@color/ub__white" android:id="@id/ub__magic_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ub__new_magic_message_margin_left" android:layout_marginRight="@dimen/ui__spacing_unit_6x" android:text="@string/magic_screen_message" android:textAllCaps="false" style="@style/Uber.TextAppearance.H1.White" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ub__magic_viewgroup_employee" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.TextView android:textStyle="bold" android:textColor="@color/ub__black" android:gravity="center" android:layout_gravity="center" android:id="@id/ub__magic_button_employee" android:background="@color/ub__white" android:padding="@dimen/ui__spacing_unit_1x" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="@dimen/ub__new_magic_button_height" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/ub__employee_settings" android:textAllCaps="true" uber:autoShrink="true" />
+        </LinearLayout>
+    </FrameLayout>
+</merge>

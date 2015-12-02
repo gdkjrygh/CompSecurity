@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ub__signin_viewgroup_third_party_signin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/ub__signin_third_party_general" android:paddingTop="@dimen/ub__button_margin_y" android:paddingBottom="@dimen/ub__button_margin_y" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/ub__signin_button_google" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ub__field_margin_x" android:src="@drawable/ub__icon_googleplus" android:layout_weight="1.0" android:contentDescription="@string/google_plus" style="@style/Style.Rider.Button.Google" />
+        <ImageButton android:id="@id/ub__signin_button_facebook" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/ub__icon_facebook" android:layout_weight="1.0" android:contentDescription="@string/facebook" style="@style/Style.Rider.Button.Facebook" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ub__signin_third_party_china" android:paddingTop="@dimen/ub__button_margin_y" android:paddingBottom="@dimen/ub__button_margin_y" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/ub__signin_button_baidu" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/ub__baidu_logo" android:layout_weight="1.0" android:contentDescription="@string/baidu" style="@style/Uber.Widget.Button.Secondary" />
+        <Space android:id="@id/ub__thirdparty_padding" android:visibility="gone" android:layout_width="@dimen/ub__field_margin_x" android:layout_height="fill_parent" />
+        <ImageButton android:id="@id/ub__signin_button_alipay" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/ub__alipay_logo" android:layout_weight="1.0" android:contentDescription="@string/ub__empty" style="@style/Uber.Widget.Button.Secondary" />
+    </LinearLayout>
+    <com.ubercab.client.core.ui.DividerWithText android:layout_width="fill_parent" android:layout_height="wrap_content" uber:text="@string/or" />
+</LinearLayout>

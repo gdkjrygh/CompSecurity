@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ub__account_image_container_new" android:background="@color/ub__uber_black_90" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingRight="@dimen/ui__spacing_unit_1x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/ub__drawer_account_image_new" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:contentDescription="@string/ub__empty" layout="@layout/ub__account_image_view" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:textColor="@color/ub__uber_white_100" android:ellipsize="end" android:id="@id/ub__drawer_account_name_new" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ub__drawer_account_profile_linear_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline.ListItem" android:id="@id/ub__drawer_account_sub_name" android:fadingEdge="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+            <ImageView android:id="@id/ub__trip_listview_drawer_header_expand_icon" android:layout_width="@dimen/ub__profiles_profile_navigation_drawer_expand_icon" android:layout_height="@dimen/ub__profiles_profile_navigation_drawer_expand_icon" android:layout_marginLeft="@dimen/ui__spacing_unit_1x" android:src="@drawable/ub__nav_drawer_expand" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

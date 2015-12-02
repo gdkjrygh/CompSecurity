@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ub__magic_no_copy" android:background="@color/ub__black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.Button android:gravity="center" android:id="@id/ub__magic_button_devserver" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" uber:autoShrink="true" style="@style/Uber.Widget.Button.Accent" />
+    <FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/ub__magic_logotype" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:src="@drawable/ub__logo" android:contentDescription="@string/ub__empty" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ub__magic_viewgroup_employee" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.TextView android:textStyle="bold" android:textColor="@color/ub__black" android:gravity="center" android:layout_gravity="center" android:id="@id/ub__magic_button_employee" android:background="@color/ub__white" android:padding="@dimen/ui__spacing_unit_1x" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="@dimen/ub__new_magic_button_height" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/ub__employee_settings" android:textAllCaps="true" uber:autoShrink="true" />
+        </LinearLayout>
+    </FrameLayout>
+    <include layout="@layout/ub__launch_activity_new_magic_lower" />
+</LinearLayout>

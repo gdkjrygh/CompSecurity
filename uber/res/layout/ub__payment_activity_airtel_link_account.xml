@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.payment.internal.ui.ContentLoadingView android:id="@id/ub__payment_content_loading" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:src="@drawable/ub__payment_type_airtel_logo" />
+            <com.ubercab.ui.TextView android:textColor="@color/ub__uber_black_60" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="@string/ub__payment_airtel_link_account_message" style="@style/Uber.TextAppearance.Byline" />
+            <com.ubercab.ui.FloatingLabelEditText android:gravity="center" android:id="@id/ub__payment_airtel_link_account_edit_text_mpin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_11x" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginRight="@dimen/ui__spacing_unit_11x" android:singleLine="true" android:maxLength="4" android:inputType="numberPassword" uber:floatingLabelLabelText="@string/ub__payment_airtel_link_account_enter_mpin" />
+            <com.ubercab.ui.Button android:id="@id/ub__payment_airtel_link_account_button_verify" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="@string/ub__payment_verify" android:onClick="onClickVerify" style="@style/Uber.Widget.Button.Primary" />
+        </LinearLayout>
+    </ScrollView>
+</com.ubercab.payment.internal.ui.ContentLoadingView>

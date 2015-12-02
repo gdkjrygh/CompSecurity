@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_5x" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Style.Rider.Form">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_5x" android:src="@drawable/ub__logo_paytm" android:contentDescription="@string/paytm" />
+        <com.ubercab.ui.TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/ub__payment_textview_description_paytm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" android:text="@string/choose_description_paytm" style="@style/Uber.TextAppearance.P" />
+        <com.ubercab.ui.Button android:layout_gravity="center_horizontal" android:id="@id/ub__payment_button_paytm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/choose_button_paytm" uber:autoShrink="true" style="@style/Uber.Widget.Button.Accent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ub__payment_viewgroup_intl_cc" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.client.core.ui.DividerWithText android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" uber:text="@string/or" />
+            <com.ubercab.ui.TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/ub__payment_textview_description_intl_cc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:text="@string/choose_description_intl_cc" style="@style/Uber.TextAppearance.Byline" />
+            <com.ubercab.ui.Button android:layout_gravity="center_horizontal" android:id="@id/ub__payment_button_intl_cc" android:padding="@dimen/ub__action_button_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/choose_button_intl_cc" uber:autoShrink="true" style="@style/Uber.Widget.Button.Supporting" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/ub__signup_viewgroup_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/ub__signup_viewgroup_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Style.Rider.FormPadding">
+            <include layout="@layout/ub__signup_third_party" />
+            <com.ubercab.locale.name.NameInput android:id="@id/ub__signup_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nextFocusForward="@id/ub__signup_edittext_email" />
+            <com.ubercab.ui.AutoCompleteFloatingLabelEditText android:id="@id/ub__signup_edittext_email" android:nextFocusUp="@id/ub__signup_edittext_lastname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:completionThreshold="1" android:inputType="textEmailAddress" android:imeOptions="actionNext" uber:floatingLabelLabelText="@string/email" uber:floatingLabelHintText="@string/email_placeholder" />
+            <com.ubercab.locale.phone.PhoneNumberView android:id="@id/ub__signup_phone_number" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.FloatingLabelEditText android:id="@id/ub__signup_edittext_password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="textPassword" android:imeOptions="actionDone" uber:floatingLabelLabelText="@string/password" />
+            <com.ubercab.ui.AutoCompleteFloatingLabelEditText android:id="@id/ub__signup_edittext_email_optional" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="textEmailAddress" uber:floatingLabelLabelText="@string/email_optional" uber:floatingLabelHintText="@string/email_optional" />
+            <com.ubercab.ui.Button android:id="@id/ub__signup_button_next" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__signup_button_margin" android:layout_marginBottom="@dimen/ub__margin_small" android:text="@string/next" style="@style/Uber.Widget.Button.Primary" />
+            <include layout="@layout/ub__signup_tos" />
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar android:layout_gravity="center" android:id="@id/ub__signup_progressbar_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

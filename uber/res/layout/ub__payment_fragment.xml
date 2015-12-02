@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ListView android:id="@id/ub__payment_listview_payment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:dividerHeight="0.0dip" />
+        <com.ubercab.client.core.ui.LoadingWithTextView android:layout_gravity="center_horizontal" android:id="@id/ub__payment_loading_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" uber:text="@string/retrieving_credit_balance" />
+    </LinearLayout>
+    <com.ubercab.ui.TextView android:id="@id/ub__payment_textview_footer" android:background="@drawable/ub__listitem_background_selector" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAllCaps="false" style="@style/Style.Rider.TextAppearance.FooterNote" />
+</LinearLayout>

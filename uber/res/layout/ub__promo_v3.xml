@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.card.view.CardView android:id="@id/ub__promo_form_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" card_view:cardBackgroundColor="@color/ub__white" card_view:cardCornerRadius="@dimen/ub__corner_radius_default" card_view:cardElevation="@dimen/ub__elevation_1x" card_view:cardUseCompatPadding="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/ub__promo_form" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.EditText android:id="@id/ub__promo_input_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_3x" android:layout_marginRight="@dimen/ui__spacing_unit_3x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:hint="@string/enter_promo_code" android:singleLine="true" android:inputType="textNoSuggestions" android:imeOptions="actionGo" />
+            <com.ubercab.ui.Button android:id="@id/ub__promo_button_apply" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_1x" android:layout_marginRight="@dimen/ui__spacing_unit_1x" android:text="@string/apply" style="@style/Uber.Widget.Button.Accent" />
+        </LinearLayout>
+        <ViewStub android:layout_gravity="center" android:id="@id/ub__promo_progress_stub" android:padding="@dimen/ui__spacing_unit_1x" android:layout="@layout/ub__request_progress_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.ubercab.ui.card.view.CardView>
+    <com.ubercab.ui.collection.RecyclerView android:id="@id/ub__promo_list" android:paddingTop="@dimen/ui__spacing_unit_1x" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

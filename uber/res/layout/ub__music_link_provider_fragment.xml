@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/ub__form_margin_y" android:paddingRight="@dimen/ub__form_margin_y" android:paddingBottom="@dimen/ub__music_padding_y" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <RelativeLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/ub__music_imageview_feature_focus" android:paddingBottom="@dimen/ub__music_padding_medium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__music_feature_focus" />
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:textColor="@color/ub__uber_black_80" android:gravity="center" android:id="@id/ub__music_textview_feature_focus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/spotify_feature" android:layout_below="@id/ub__music_imageview_feature_focus" android:layout_alignLeft="@id/ub__music_imageview_feature_focus" android:layout_alignRight="@id/ub__music_imageview_feature_focus" />
+        </RelativeLayout>
+    </ScrollView>
+    <com.ubercab.ui.Button android:gravity="center" android:layout_gravity="bottom" android:id="@id/ub__music_button_link_provider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableLeft="@drawable/ub__music_spotify_icon" style="@style/Uber.Widget.Button.Primary" />
+</LinearLayout>

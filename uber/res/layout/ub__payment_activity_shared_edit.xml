@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingTop="@dimen/ui__spacing_unit_4x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_4x" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ub__shared_edit_imageview" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:gravity="center" android:id="@id/ub__shared_edit_textview_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x">
+        <com.ubercab.ui.TextView android:gravity="center" android:id="@id/ub__shared_edit_textview_nodelete" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__payment_no_delete" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.Button android:id="@id/ub__shared_edit_button_delete" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__payment_delete" style="@style/Uber.Widget.Button.Primary" />
+            <com.ubercab.ui.Button android:id="@id/ub__shared_edit_button_set_as_payment" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__padding_medium" android:text="@string/ub__payment_set_as_payment_method" style="@style/Uber.Widget.Button.Secondary" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

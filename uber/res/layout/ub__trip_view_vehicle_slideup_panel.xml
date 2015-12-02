@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.trip.slider.VehicleSlideUpPanel android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.client.feature.trip.slider.SlidePanelLayout android:gravity="bottom" android:id="@id/ub__trip_panel" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:headerView="@id/ub__trip_panel_header">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/ub__trip_panel_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <View android:layout_gravity="bottom" android:background="@drawable/ub__shadow_footer" android:layout_width="fill_parent" android:layout_height="3.0dip" />
+                    <include android:layout_gravity="bottom" android:id="@id/ub__trip_panel_banner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/ub__trip_view_banner" />
+                    <include android:layout_gravity="bottom" android:id="@id/ub__trip_panel_options_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/ub__trip_view_vehicle_options_bar" />
+                    <com.ubercab.ui.TextView android:textColor="@color/ub__white" android:gravity="center" android:layout_gravity="bottom" android:id="@id/ub__trip_panel_bunker_message" android:background="@color/ub__uber_green_guided" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/ub__vehicle_option_bar_height" android:alpha="0.0" style="@style/Uber.TextAppearance.H2" />
+                </FrameLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/ub__trip_panel_slider" android:background="@color/ub__vehicle_panel_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <View android:background="@color/ub__vehicle_panel_divider_line_bg" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                    <com.ubercab.client.feature.trip.slider.VehicleLabelBar android:layout_gravity="center" android:id="@id/ub__trip_panel_labelbar" android:paddingLeft="8.0dip" android:paddingTop="14.0dip" android:paddingRight="8.0dip" android:paddingBottom="6.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <com.ubercab.client.feature.trip.slider.VehicleSeekBar android:layout_gravity="center_horizontal" android:id="@id/ub__trip_panel_seekbar" android:background="@android:color/transparent" android:paddingBottom="9.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:progressDrawable="@android:color/transparent" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/ub__trip_panel_content" android:background="@color/ub__vehicle_panel_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:id="@id/ub__trip_panel_rate_card" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/ub__trip_view_panel_rate_card" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.ubercab.client.feature.trip.slider.SlidePanelLayout>
+</com.ubercab.client.feature.trip.slider.VehicleSlideUpPanel>

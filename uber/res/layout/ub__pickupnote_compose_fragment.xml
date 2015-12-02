@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.EditText android:gravity="top|left|center" android:id="@id/ub__pickupnote_compose_edittext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:lines="@integer/ub__config_pickupnote_compose_number_of_lines">
+        <requestFocus />
+    </com.ubercab.ui.EditText>
+    <RelativeLayout android:gravity="center_vertical" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.TextView android:textSize="@dimen/ub__text_size_small" android:textColor="@color/ub__uber_white_120" android:id="@id/ub__pickupnote_compose_characters_left_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <com.ubercab.ui.TextView android:textSize="@dimen/ub__text_size_small" android:textColor="@color/ub__uber_black_80" android:gravity="center_vertical" android:id="@id/ub__pickupnote_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ui__spacing_unit_1x" android:drawableLeft="@drawable/ub__pickupnote_textfieldpickuppin" android:drawablePadding="@dimen/ui__spacing_unit_1x" android:layout_toLeftOf="@id/ub__pickupnote_compose_characters_left_count" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <com.ubercab.ui.TextView android:textSize="@dimen/ub__text_size_small" android:textColor="@color/ub__uber_black_60" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/pickupnote_compose_instruction" />
+</LinearLayout>

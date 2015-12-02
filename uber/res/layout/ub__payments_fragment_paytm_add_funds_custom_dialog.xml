@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/ub__dialog_layout_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.client.feature.payment.paytm.v2.RupeeEditText android:id="@id/ub__paytm_edittext_amount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:singleLine="true" android:inputType="number" android:imeOptions="actionDone" style="@style/Uber.Widget.EditText" />
+        <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline" android:textSize="@dimen/ub__text_size_micro" android:id="@id/ub__paytm_textview_bonus" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View android:background="@color/ub__uber_white_80" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:buttonBarStyle">
+        <com.ubercab.ui.Button android:id="@id/ub__paytm_button_cancel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="1.0" style="@style/Uber.Widget.DialogButton" />
+        <View android:background="@color/ub__uber_white_80" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <com.ubercab.ui.Button android:id="@id/ub__paytm_button_add_funds" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/add_funds" android:layout_weight="1.0" style="@style/Uber.Widget.DialogButton.Positive" />
+    </LinearLayout>
+</LinearLayout>

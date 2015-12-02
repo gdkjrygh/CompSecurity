@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.trip.address.AddressView android:orientation="horizontal" android:background="@drawable/ub__container_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ub__container_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="left|center" android:id="@id/ub__address_icon" android:background="@drawable/ub__pickup_dot_green_bg" android:layout_width="@dimen/ub__view_address_icon_width" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="left|center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H5" android:gravity="center" android:layout_gravity="center" android:id="@id/ub__address_text_label" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" fontPath="@string/ub__font_medium" />
+        <com.ubercab.client.feature.trip.address.AddressTextView android:textAppearance="@style/Uber.TextAppearance.P" android:textColor="@color/ub__uber_black_80" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/ub__address_text_address" android:saveEnabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+    <View android:layout_gravity="right|center" android:id="@id/ub__address_spacer" android:layout_width="@dimen/ub__view_address_icon_width" android:layout_height="fill_parent" />
+    <ImageButton android:layout_gravity="right|center" android:id="@id/ub__address_clear" android:background="@null" android:paddingRight="5.0dip" android:visibility="gone" android:layout_width="@dimen/ub__view_address_icon_width" android:layout_height="fill_parent" android:src="@drawable/ub__x" />
+    <ImageButton android:layout_gravity="right|center" android:id="@id/ub__address_add" android:background="@null" android:paddingRight="5.0dip" android:visibility="gone" android:layout_width="@dimen/ub__view_address_icon_width" android:layout_height="fill_parent" android:src="@drawable/ub__add" />
+</com.ubercab.client.feature.trip.address.AddressView>

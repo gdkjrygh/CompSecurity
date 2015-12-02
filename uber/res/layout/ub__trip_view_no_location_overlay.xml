@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.trip.overlay.NoLocationOverlayView android:gravity="center" android:orientation="vertical" android:background="@color/ub__black_transparent_overlay_dark" android:paddingTop="?android:actionBarSize" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/ub__no_local_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__map_view_no_location_margin_top" android:layout_weight="2.0" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="5.0">
+        <FrameLayout android:layout_gravity="center" android:background="@drawable/ub__no_local_circle" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@id/ub__no_location_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__no_local_arrow" />
+        </FrameLayout>
+        <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H1" android:textColor="@color/ub__white" android:layout_gravity="center" android:id="@id/ub__no_location_heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__map_view_coach_mark_text_padding" android:text="@string/no_location_title" />
+        <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.Byline" android:textColor="@color/ub__white" android:gravity="center" android:id="@id/ub__no_location_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ub__form_margin_x" android:layout_marginTop="@dimen/ub__map_view_coach_mark_text_padding" android:text="@string/no_location_description" />
+    </LinearLayout>
+</com.ubercab.client.feature.trip.overlay.NoLocationOverlayView>

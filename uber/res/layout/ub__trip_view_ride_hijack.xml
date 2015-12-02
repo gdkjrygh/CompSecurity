@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.trip.ridepool.RideHijackView android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ub__ride_hijack_callout_and_arrow_container" android:paddingLeft="@dimen/ub__container_margin" android:paddingRight="@dimen/ub__container_margin" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.TextView android:id="@id/ub__ride_hijack_callout" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Style.Rider.TextAppearance.RideHijackCallOut.TextView" />
+        <LinearLayout android:orientation="horizontal" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-8.0dip" android:weightSum="2.0">
+            <ImageView android:id="@id/ub__ride_hijack_callout_arrow" android:layout_width="0.0dip" android:layout_height="10.0dip" android:src="@drawable/ub__tool_tip_arrow_normal" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/ub__trip_confirmation_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/ub__container_margin" android:paddingRight="@dimen/ub__container_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/ub__ride_hijack_toggle_container" android:background="@drawable/ub__container" android:padding="@dimen/ub__container_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="horizontal" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <include android:id="@id/ub__ride_hijack_left_item" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="@dimen/ub__container_padding" android:layout_weight="1.0" layout="@layout/ub__trip_view_ride_hijack_item" />
+                    <include android:id="@id/ub__ride_hijack_right_item" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/ub__trip_view_ride_hijack_item" />
+                </LinearLayout>
+                <ViewSwitcher android:id="@id/ub__ride_hijack_memo_switcher" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__ride_hijack_memo_margin_bottom" android:inAnimation="@android:anim/slide_in_left">
+                    <LinearLayout android:layout_gravity="center" android:id="@id/ub__ride_hijack_right_memo_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <com.ubercab.ui.TextView android:id="@id/ub__ride_hijack_right_memo_textview" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Style.Rider.TextAppearance.RideHijackMemo" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_gravity="center" android:id="@id/ub__ride_hijack_left_memo_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <com.ubercab.ui.TextView android:id="@id/ub__ride_hijack_left_memo_textview" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Style.Rider.TextAppearance.RideHijackMemo" />
+                    </LinearLayout>
+                </ViewSwitcher>
+            </LinearLayout>
+            <FrameLayout android:id="@id/ub__ride_hijack_trip_summary_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ub__trip_tray_collapsed_item_height_small" />
+            <com.ubercab.client.feature.trip.confirm.ConfirmationRequestButton android:id="@id/ub__ride_hijack_button_request" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__ride_hijack_request_margin_y" android:textAllCaps="false" style="@style/Uber.Widget.Button.Primary" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ub__container_margin">
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H5" android:gravity="center" android:id="@id/ub__ride_hijack_text_eta" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__confirmation_margin_y" android:layout_marginBottom="@dimen/ub__confirmation_margin_y" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.ubercab.client.feature.trip.ridepool.RideHijackView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.client.feature.trip.estimate.TripTimeEstimateDetailView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/ub__trip_time_estimate_detail_popup_height">
+        <com.ubercab.android.map.MapView android:id="@id/ub__trip_mapview_map" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.ubercab.client.feature.trip.estimate.TripTimeEstimateOverlay android:id="@id/ub__trip_time_estimate_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.ubercab.ui.TextView android:id="@id/ub__trip_time_estimate_header" android:layout_marginTop="@dimen/ub__trip_time_estimate_detail_popup_header_margin_top" android:layout_marginBottom="@dimen/ub__trip_time_estimate_detail_popup_header_margin_Bottom" android:text="@string/trip_time_estimate_popup_header" android:drawableLeft="@drawable/ub__matched_icon" style="@style/Style.Rider.Trip.Time.Estimate.Detail.Popup.Header" />
+        <com.ubercab.ui.TextView android:id="@id/ub__destination_address" android:layout_below="@id/ub__trip_time_estimate_header" style="@style/Style.Rider.Trip.Time.Estimate.Detail.Popup.Destination.Address" />
+        <com.ubercab.ui.TextView android:id="@id/ub__late_arrival_message" android:layout_marginBottom="@dimen/ub__trip_time_estimate_detail_popup_header_margin_top" style="@style/Style.Rider.Trip.Time.Estimate.Detail.Popup.Late.Arrival.Message" />
+        <View android:id="@id/anchor" style="@style/Style.Rider.Trip.Time.Estimate.Detail.Popup.Center.Anchor" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/ub__tool_tip_container_up_blue_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ub__trip_time_estimate_detail_popup_horizontal_padding" android:layout_marginTop="@dimen/ub__trip_time_estimate_detail_popup_arrival_time_offset" android:layout_marginRight="@dimen/ub__trip_time_estimate_detail_popup_horizontal_padding" android:layout_below="@id/anchor">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.ubercab.ui.TextView android:id="@id/ub__trip_time_estimate_arrival_time" style="@style/Style.Rider.Trip.Time.Estimate.Content" />
+                <com.ubercab.ui.TextView android:text="@string/trip_time_estimate_arrival_time_footer" style="@style/Style.Rider.Trip.Time.Estimate.Footer" />
+            </LinearLayout>
+            <View style="@style/Style.Rider.Trip.Time.Estimate.Detail.Popup.Divider" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.ubercab.ui.TextView android:id="@id/ub__trip_time_estimate_time_range" style="@style/Style.Rider.Trip.Time.Estimate.Content" />
+                <com.ubercab.ui.TextView android:text="@string/trip_time_estimate_arrival_time_footer" style="@style/Style.Rider.Trip.Time.Estimate.Footer" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</com.ubercab.client.feature.trip.estimate.TripTimeEstimateDetailView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/ub__trip_context" />
+    <View android:background="@drawable/ub__rds__divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="@drawable/ub__rds__selectable_item_foreground">
+        <ImageView android:id="@id/ub__trip_map_imageview" android:layout_width="fill_parent" android:layout_height="@dimen/ub__rds__auto_size" android:scaleType="fitXY" android:adjustViewBounds="true" />
+    </FrameLayout>
+    <View android:background="@drawable/ub__rds__divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.TextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ub__rds__report_issue_with_trip" android:layout_weight="1.0" style="@style/Uber.TextAppearance.Byline" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__right_arrow" />
+    </LinearLayout>
+</LinearLayout>

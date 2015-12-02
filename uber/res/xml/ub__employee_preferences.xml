@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:key="@string/ub__employee_key_preference_screen"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:enabled="false" android:title="@string/ub__employee_category_account" android:key="@string/ub__employee_key_category_account">
+        <ListPreference android:persistent="false" android:title="@string/ub__employee_title_test_accounts" android:key="@string/ub__employee_key_test_accounts" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ub__employee_category_flags">
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_experiments" android:key="@string/ub__employee_key_experiments" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_simulate_views" android:key="@string/ub__employee_simulate_views" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/ub__employee_title_flag_map_animations" android:key="@string/ub__employee_key_flag_map_animations" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/ub__employee_title_flag_notifications_faresplit_clients" android:key="@string/ub__employee_key_flag_notifications_clients" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/ub__employee_title_flag_new_share_ui" android:key="@string/ub__employee_key_flag_new_share_ui" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ub__employee_category_network">
+        <EditTextPreference android:persistent="false" android:title="@string/ub__employee_title_network_server" android:key="@string/ub__employee_key_network_server" android:dialogTitle="@string/ub__employee_title_network_server" android:dialogMessage="@string/ub__employee_message_network_server" android:inputType="textNoSuggestions" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_send_logs" android:key="@string/ub__employee_key_send_logs" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ub__employee_category_location">
+        <CheckBoxPreference android:persistent="false" android:title="@string/ub__employee_title_location_fake" android:key="@string/ub__employee_key_location_fake" />
+        <ListPreference android:persistent="false" android:entries="@array/ub__employee_fake_geo_entries" android:title="@string/ub__employee_title_geo_fake" android:key="@string/ub__employee_key_geo_fake" android:entryValues="@array/ub__employee_fake_geo_values" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/ub__employee_title_rds_location_override" android:key="@string/ub__employee_key_rds_location_override" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ub__employee_category_payment">
+        <CheckBoxPreference android:persistent="false" android:title="@string/ub__employee_title_payment_braintree_env" android:key="@string/ub__employee_key_payment_braintree_env" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/ub__employee_title_payment_expense_service_fake" android:key="@string/ub__employee_key_payment_expense_service_fake" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/ub__employee_title_payment_payment_last_expense_info_fake" android:key="@string/ub__employee_key_payment_last_expense_info_fake" />
+        <ListPreference android:persistent="false" android:entries="@array/ub__employee_google_wallet_environment_entries" android:title="@string/ub__employee_title_payment_googlewallet" android:key="@string/ub__employee_key_payment_googlewallet_env" android:entryValues="@array/ub__employee_google_wallet_environment_values" />
+        <ListPreference android:persistent="false" android:entries="@array/ub__employee_payment_paypalenv_entries" android:title="@string/ub__employee_title_payment_paypal_env" android:key="@string/ub__employee_key_payment_paypal_env" android:entryValues="@array/ub__employee_payment_paypalenv_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ub__employee_category_fakesurge" android:key="@string/ub__employee_key_surge_fake">
+        <ListPreference android:persistent="false" android:entries="@array/ub__employee_fakesurge_screentype_entries" android:title="@string/ub__employee_title_surge_fake" android:key="@string/ub__employee_key_surge_fake_screentype" android:entryValues="@array/ub__employee_fakesurge_screentype_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ub__employee_category_notifications" android:key="@string/ub__employee_key_notifications">
+        <ListPreference android:persistent="false" android:entries="@array/ub__employee_notification_trip_entries" android:title="@string/ub__employee_title_notification_trip" android:key="@string/ub__employee_key_notification_trip" android:entryValues="@array/ub__employee_notification_trip_values" />
+        <ListPreference android:persistent="false" android:entries="@array/ub__employee_notification_trip_entries" android:title="@string/ub__employee_title_notification_trip_split" android:key="@string/ub__employee_key_notification_trip_split" android:entryValues="@array/ub__employee_notification_trip_values" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_notification_receipt" android:key="@string/ub__employee_key_notification_receipt" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_notification_faresplit_invite" android:key="@string/ub__employee_key_notification_faresplit_invite" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_notification_faresplit_accepted" android:key="@string/ub__employee_key_notification_faresplit_accepted" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_notification_surge" android:key="@string/ub__employee_key_notification_surge" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_notification_message" android:key="@string/ub__employee_key_notification_message" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ub__employee_category_mobile_messages" android:key="@string/ub__employee_key_mobile_messages">
+        <CheckBoxPreference android:persistent="false" android:title="@string/ub__employee_title_mobile_messaging" android:key="@string/ub__employee_key_mobile_messaging" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_mobile_messages_clear" android:key="@string/ub__employee_key_mobile_messages_clear" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ub__employee_category_safety">
+        <CheckBoxPreference android:persistent="false" android:title="@string/ub__employee_title_safety_net" android:key="@string/ub__employee_key_safety_net" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ub__employee_category_analytics">
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_analytics_logs" android:key="@string/ub__employee_key_analytics_logs" android:summary="@string/ub__employee_summary_analytics_logs" />
+        <SwitchPreference android:title="@string/ub__employee_title_analytics_logging" android:key="@string/ub__employee_key_analytics_logging" android:defaultValue="false" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_send_funnel_analytics" android:key="@string/ub__employee_key_send_funnel_analytics" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ub__employee_category_google_now">
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_google_now_force" android:key="@string/ub__employee_key_google_now_force" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_google_now_schedule" android:key="@string/ub__employee_key_google_now_schedule" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_google_now_unschedule" android:key="@string/ub__employee_key_google_now_unschedule" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ub__employee_category_other">
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_trip_tray_reset" android:key="@string/ub__employee_key_trip_tray_reset" android:summary="@string/ub__employee_summary_trip_tray_reset" />
+        <EditTextPreference android:persistent="false" android:title="@string/ub__employee_title_version_fake" android:key="@string/ub__employee_key_version_fake" android:dialogTitle="@string/ub__employee_title_version_fake" android:dialogMessage="@string/ub__employee_message_version_fake" android:inputType="textNoSuggestions" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/ub__employee_title_other_vehicles_show_all" android:key="@string/ub__employee_key_other_vehicles_show_all" />
+        <ListPreference android:entries="@array/ub__employee_slider_style_entries" android:title="@string/ub__employee_title_slider_style" android:key="@string/ub__employee_key_slider_style" android:defaultValue="" android:entryValues="@array/ub__employee_slider_style_values" />
+        <ListPreference android:persistent="false" android:entries="@array/ub__employee_destination_entry_entries" android:title="@string/ub__employee_title_destination_entry" android:key="@string/ub__employee_key_destination_entry" android:entryValues="@array/ub__employee_destination_entry_values" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_reset_destination_tutorial" android:key="@string/ub__employee_key_reset_destination_tutorial" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/ub__employee_title_unison_music_controls" android:key="@string/ub__employee_key_union_music_controls" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_reset_add_music_overlay" android:key="@string/ub__employee_key_reset_add_music_overlay" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_profiles_reset_on_boarding_impression_count" android:key="@string/ub__employee_key_profiles_reset_on_boarding_impression_count" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_fake_meal_pending_rating" android:key="@string/ub__employee_key_fake_meal_pending_rating" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_fake_trip_pending_rating" android:key="@string/ub__employee_key_fake_trip_pending_rating" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_other_arrears_screen" android:key="@string/ub__employee_key_other_arrears_screen" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_other_verification_sms_screen" android:key="@string/ub__employee_key_other_verification_sms_screen" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_other_verification_token_screen" android:key="@string/ub__employee_key_other_verification_token_screen" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_other_verification_auto_screen" android:key="@string/ub__employee_key_other_verification_auto_screen" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/ub__employee_title_fake_product_groups" android:key="@string/ub__employee_key_fake_product_groups" />
+        <Preference android:persistent="false" android:title="@string/ub__employee_title_force_crash" android:key="@string/ub__employee_key_force_crash" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/ub__employee_title_fake_dynamic_pickup" android:key="@string/ub__employee_key_fake_dynamic_pickup" />
+    </PreferenceCategory>
+</PreferenceScreen>

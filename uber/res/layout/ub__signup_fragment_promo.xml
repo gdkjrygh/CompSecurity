@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/ubc__signup_view_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="?android:dividerHorizontal" android:showDividers="middle">
+        <LinearLayout android:padding="@dimen/ub__form_margin_x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.EditText android:id="@id/ub__signup_edittext_promo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="textNoSuggestions" android:imeOptions="actionSend" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:dividerVertical" android:showDividers="middle" style="?android:buttonBarStyle">
+            <com.ubercab.ui.Button android:ellipsize="none" android:id="@id/ub__signup_button_cancel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@android:string/cancel" android:singleLine="true" android:layout_weight="1.0" uber:autoShrink="true" style="@style/Uber.Widget.DialogButton" />
+            <com.ubercab.ui.Button android:ellipsize="none" android:id="@id/ub__signup_button_addpromo" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" uber:autoShrink="true" style="@style/Uber.Widget.DialogButton" />
+        </LinearLayout>
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/ub__faresplit_progressbar_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

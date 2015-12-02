@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/ub__paytm_viewgroup_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_4x" android:paddingBottom="@dimen/ui__spacing_unit_4x" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Style.Rider.Form">
+            <LinearLayout android:orientation="vertical" android:id="@id/ub__paytm_viewgroup_balance" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x">
+                <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H4" android:textColor="@color/ub__uber_black_100" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:text="@string/current_balance" />
+                <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.TextAppearance.Promo" android:textColor="@color/ub__green" android:gravity="center" android:id="@id/ub__paytm_textview_balance" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawablePadding="10.0dip" />
+            </LinearLayout>
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:gravity="center" android:id="@id/ub__paytm_textview_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" />
+            <com.ubercab.ui.Button android:id="@id/ub__paytm_button_suggested" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" style="@style/Uber.Widget.Button.Accent" />
+            <com.ubercab.ui.Button android:id="@id/ub__paytm_button_change" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/change_amount" style="@style/Style.Rider.Button.Link" />
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar android:layout_gravity="center" android:id="@id/ub__paytm_progressbar_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+</FrameLayout>

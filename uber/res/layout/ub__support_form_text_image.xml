@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.TextView android:id="@id/ub__support_form_image_text_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__rds__spacing_unit_small" android:lineSpacingMultiplier="1.0" style="@style/Uber.TextAppearance.H5" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="@dimen/ub__rds__auto_size" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.ubercab.ui.EditText android:textColor="@color/ub__uber_black_80" android:gravity="top|left|center" android:id="@id/ub__support_form_image_text_input" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="3" android:minLines="3" android:singleLine="false" android:lineSpacingMultiplier="1.0" android:inputType="textMultiLine" style="@style/Uber.TextAppearance.P" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/ub__support_form_attach_image_container" android:paddingBottom="@dimen/ub__rds__spacing_unit_medium" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ub__rds__support_form_text_image_container" android:layout_marginLeft="@dimen/ub__rds__spacing_unit_micro" android:layout_marginRight="@dimen/ub__rds__spacing_unit_micro" android:weightSum="4.0" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_gravity="bottom" android:id="@id/ub__support_form_attach_image_button" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ub__rds__spacing_unit_small" android:src="@drawable/ub__support_form_attach_image" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

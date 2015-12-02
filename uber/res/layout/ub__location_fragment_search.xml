@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/ub__uber_white_20" android:padding="@dimen/ub__container_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/ub__container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__container_margin" android:divider="@drawable/ub__padding_divider" android:showDividers="middle">
+        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.ubercab.client.feature.search.LocationSearchIconView android:layout_gravity="left|center" android:id="@id/ub__locationsearch_icon" android:padding="@dimen/ub__search_padding_medium" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.ubercab.client.feature.search.LocationSearchEditText android:textAppearance="@style/Style.Rider.TextAppearance.DefaultParagraph" android:ellipsize="none" android:layout_gravity="left|center" android:id="@id/ub__locationsearch_edittext_search" android:background="@null" android:paddingTop="@dimen/ub__search_padding_medium" android:paddingBottom="@dimen/ub__search_padding_medium" android:fadingEdge="horizontal" android:fadingEdgeLength="16.0dip" android:saveEnabled="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:inputType="textNoSuggestions" android:imeOptions="actionSearch" android:requiresFadingEdge="0x1000" />
+            <ImageButton android:layout_gravity="right|center" android:id="@id/ub__locationsearch_imagebutton_clear" android:background="@null" android:paddingLeft="@dimen/ub__search_padding_large" android:paddingRight="@dimen/ub__search_padding_large" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ub__x" android:contentDescription="@string/ub__empty" />
+        </LinearLayout>
+        <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H3" android:textColor="@color/ub__uber_black_60" android:gravity="center_vertical" android:layout_gravity="right" android:id="@id/ub__locationsearch_textview_skip" android:paddingLeft="@dimen/ub__search_padding_large" android:paddingRight="@dimen/ub__search_padding_large" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/skip" android:textAllCaps="true" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ub__locationsearch_viewgroup_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ListView android:id="@id/ub__locationsearch_listview_locations" android:background="@color/ub__transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@android:color/transparent" android:divider="@null" android:dividerHeight="0.0dip" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/ub__locationsearch_viewgroup_loading" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ub__locationsearch_viewgroup_empty" android:paddingTop="50.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ub__icon_search_large" android:contentDescription="@string/ub__empty" />
+        <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:textColor="@color/ub__uber_black_40" android:gravity="center_horizontal" android:id="@id/ub__locationsearch_textview_empty" android:padding="@dimen/ub__search_padding_large" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</LinearLayout>

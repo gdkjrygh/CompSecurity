@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Style.Rider.Form"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.TextView android:textColor="@color/ub__uber_black_60" android:gravity="center" android:id="@id/ub__payment_textview_title_add_funds" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__field_margin_y" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ub__field_margin_x" android:layout_marginTop="@dimen/ub__field_margin_y" android:layout_marginRight="@dimen/ub__field_margin_x">
+        <com.ubercab.ui.TextView android:textSize="@dimen/ub__textsize_value_input" android:textColor="@color/ub__uber_black_60" android:layout_gravity="center" android:id="@id/ub__payment_textview_currency_code_add_funds" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.ubercab.ui.EditText android:id="@id/ub__payment_edittext_add_funds" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Style.Rider.EditText.AddFunds" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__field_margin_y">
+        <com.ubercab.ui.TextView android:textColor="@color/ub__uber_black_60" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/current_balance" android:textAllCaps="true" style="@style/Style.Rider.TextAppearance.PaymentValue" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.TextView android:textColor="@color/ub__green" android:id="@id/ub__payment_textview_current_balance_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ub__payment_value_margin_left" style="@style/Style.Rider.TextAppearance.PaymentValue" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/ub__payment_progressbar_current_balance_request" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_alignTop="@id/ub__payment_textview_current_balance_value" android:layout_alignBottom="@id/ub__payment_textview_current_balance_value" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ub__payment_viewgroup_denominations" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__field_margin_y">
+        <com.ubercab.ui.Button android:id="@id/ub__payment_button_denomination_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ub__field_margin_x" android:layout_weight="1.0" style="@style/Uber.Widget.Button.Secondary" />
+        <com.ubercab.ui.Button android:id="@id/ub__payment_button_denomination_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ub__field_margin_x" android:layout_weight="1.0" style="@style/Uber.Widget.Button.Secondary" />
+        <com.ubercab.ui.Button android:id="@id/ub__payment_button_denomination_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Uber.Widget.Button.Secondary" />
+    </LinearLayout>
+    <com.ubercab.ui.Button android:id="@id/ub__payment_button_submit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__field_margin_y" style="@style/Uber.Widget.Button.Primary" />
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__field_margin_y">
+        <com.ubercab.ui.TextView android:textColor="@color/ub__uber_black_60" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/minimum_balance" android:textAllCaps="true" style="@style/Style.Rider.TextAppearance.PaymentValue" />
+        <com.ubercab.ui.TextView android:textColor="@color/ub__uber_black_60" android:id="@id/ub__payment_textview_minimum_balance_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ub__payment_value_margin_left" style="@style/Style.Rider.TextAppearance.PaymentValue" />
+    </LinearLayout>
+</LinearLayout>

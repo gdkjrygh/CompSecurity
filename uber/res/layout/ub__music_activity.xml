@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/ub__uber_white_20" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.deprecated.view.FixedWidthSlidingTabLayout android:id="@id/ub__music_playlist_sliding_tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:tabBackground="@drawable/ub__tab_background_white" />
+        <FrameLayout android:id="@id/ub__music_content" android:background="@color/ub__uber_white_20" android:layout_width="fill_parent" android:layout_height="0.0dip" android:foreground="@drawable/ub__shadow" android:layout_weight="1.0">
+            <android.support.v4.view.ViewPager android:id="@id/ub__music_playlist_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+    <fragment android:id="@id/ub__music_control_fragment" android:layout_width="fill_parent" android:layout_height="@dimen/ub__music_controls_height" android:layout_alignParentBottom="true" class="com.ubercab.client.feature.music.MusicControlFragment" />
+</RelativeLayout>

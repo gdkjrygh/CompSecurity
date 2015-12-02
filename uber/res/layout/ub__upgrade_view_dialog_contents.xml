@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/ub__dialog_layout_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/ub__view_dialog_title" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/ub__uber_white_20" android:paddingLeft="@dimen/ub__upgrade_subtitle_horizontal_padding_left" android:paddingTop="@dimen/ub__upgrade_subtitle_vertical_padding" android:paddingRight="@dimen/ub__upgrade_subtitle_horizontal_padding_right" android:paddingBottom="@dimen/ub__upgrade_subtitle_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="@dimen/ub__upgrade_icon_side_size" android:layout_height="@dimen/ub__upgrade_icon_side_size" android:layout_marginRight="@dimen/ub__upgrade_icon_margin_right" android:src="@drawable/ub__ic_launcher" />
+        <com.ubercab.ui.TextView android:textColor="@color/ub__uber_black_80" android:id="@id/ub__employee_upgrade_textview_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/upgrade_subtitle" style="@style/Uber.TextAppearance.Byline" />
+    </LinearLayout>
+    <View android:background="@color/ub__uber_white_80" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/ub__upgrade_container_horizontal_padding" android:paddingTop="@dimen/ub__upgrade_container_vertical_padding" android:paddingRight="@dimen/ub__upgrade_container_horizontal_padding" android:paddingBottom="@dimen/ub__upgrade_changelog_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.TextView android:textSize="@dimen/ub__textsize_byline" android:textColor="@color/ub__uber_black_80" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:text="@string/upgrade_changes" android:textAllCaps="true" />
+            <com.ubercab.ui.TextView android:textAppearance="@style/Style.Rider.TextAppearance.EmployeeChangelog" android:id="@id/ub__upgrade_textview_changelog" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+    <View android:background="@color/ub__uber_white_80" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:dividerVertical" android:showDividers="middle" style="?android:buttonBarStyle">
+        <com.ubercab.ui.Button android:id="@id/ub__upgrade_button_skip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/not_now" android:layout_weight="1.0" style="@style/Uber.Widget.DialogButton" />
+        <com.ubercab.ui.Button android:id="@id/ub__upgrade_button_update" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/update" android:layout_weight="1.0" style="@style/Uber.Widget.DialogButton.Positive" />
+    </LinearLayout>
+</LinearLayout>

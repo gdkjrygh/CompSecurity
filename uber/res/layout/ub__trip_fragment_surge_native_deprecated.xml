@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/ub__white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@drawable/ub__surge_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H1.White.Solid" android:gravity="center" android:id="@id/ub__trip_surge_title" android:paddingTop="@dimen/ub__dialog_padding_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/surge_title" android:layout_alignParentTop="true" />
+        <include android:id="@id/ub__trip_surge_multiplier_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_below="@id/ub__trip_surge_title" android:layout_centerHorizontal="true" layout="@layout/ub__trip_surge_multiplier_info" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ub__trip_surge_body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ub__trip_surge_multiplier_info">
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:gravity="center" android:id="@id/ub__trip_surge_rationale" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/surge_rationale" />
+            <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H3" android:textColor="@color/ub__uber_white_100" android:gravity="center_horizontal" android:id="@id/ub__trip_surge_expiration" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" />
+            <View android:background="@drawable/ub__header_line_secondary_light_grey_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <com.ubercab.ui.Button android:id="@id/ub__trip_surge_button_notification" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__dialog_button_vertical_padding" android:text="@string/surge_notification_button" style="@style/Style.Rider.Widget.DialogButton" />
+            <com.ubercab.ui.Button android:id="@id/ub__trip_surge_button_accept" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/accept_higher_fare" style="@style/Style.Rider.Widget.DialogButton.Positive" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

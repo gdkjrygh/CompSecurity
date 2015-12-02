@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/ub__transparent_header" android:layout_width="fill_parent" android:layout_height="@dimen/ub__shopping_no_header_margin" />
+    <FrameLayout android:id="@id/ub__shopping_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:layout_gravity="top" android:background="@drawable/ub__shadow_footer" android:layout_width="fill_parent" android:layout_height="@dimen/ub__shopping_layout_top_shadow_height" android:layout_marginTop="@dimen/ui__spacing_unit_1x" />
+            <FrameLayout android:layout_gravity="bottom" android:id="@id/ub__shopping_list_header" android:background="@color/ub__white" android:layout_width="fill_parent" android:layout_height="@dimen/ub__shopping_list_header_default_height">
+                <ImageView android:layout_gravity="center" android:id="@id/ub__uber_eats_logo_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub__uber_eats_logo" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ub__shopping_meal_info" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H2" android:textColor="@color/ub__uber_black_80" android:id="@id/ub__shopping_menu_tagline_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="false" />
+                    <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H3" android:textColor="@color/ub__uber_black_40" android:id="@id/ub__shopping_menu_hours_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__meal_ratings_header_text_spacing" android:textAllCaps="false" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <com.ubercab.ui.TextView android:layout_gravity="top|center" android:id="@id/ub__eats_promo_banner_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/ub__shopping_promo_banner_height" android:layout_marginBottom="@dimen/ub__promo_banner_extra_bottom_margin" style="@style/Style.Rider.TextAppearance.EatsPromoBanner" />
+    </FrameLayout>
+</LinearLayout>

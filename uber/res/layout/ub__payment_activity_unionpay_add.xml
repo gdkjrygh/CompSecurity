@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.FloatingLabelEditText android:id="@id/ub__unionpay_add_edittext_nationalid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="textNoSuggestions" android:imeOptions="actionNext" android:nextFocusForward="@id/ub__unionpay_add_edittext_name" uber:floatingLabelLabelText="@string/ub__payment_national_id" />
+        <com.ubercab.ui.FloatingLabelEditText android:id="@id/ub__unionpay_add_edittext_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="textNoSuggestions" android:imeOptions="actionNext" android:nextFocusForward="@id/ub__unionpay_add_phonenumberview" uber:floatingLabelLabelText="@string/ub__payment_name" />
+        <com.ubercab.locale.phone.PhoneNumberView android:id="@id/ub__unionpay_add_phonenumberview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nextFocusForward="@id/ub__unionpay_add_creditcardfieldsview" />
+        <com.ubercab.payment.internal.ui.CreditCardFieldsView android:id="@id/ub__unionpay_add_creditcardfieldsview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" />
+        <com.ubercab.ui.Button android:enabled="false" android:id="@id/ub__unionpay_add_button_addpayment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:text="@string/ub__payment_add_credit_card" style="@style/Uber.Widget.Button.Primary" />
+    </LinearLayout>
+</ScrollView>

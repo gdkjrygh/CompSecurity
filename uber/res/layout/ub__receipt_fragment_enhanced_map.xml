@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ub__receipt_octane_map_view_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/ub__receipt_octane_map_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.ubercab.android.map.MapView android:id="@id/ub__receipt_octane_map_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/ub__receipt_octane_pickup_dropoff_info" android:background="@color/ub__white" android:paddingLeft="@dimen/ui__spacing_unit_3x" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/ub__receipt_imageview_pickup" android:background="@drawable/ub__receipt_pickup_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <View android:layout_gravity="center" android:id="@id/ub__receipt_view_vertical_line" android:background="@color/ub__uber_white_60" android:layout_width="@dimen/ub__octane_receipt_divider" android:layout_height="@dimen/ui__spacing_unit_2x" />
+            <ImageView android:id="@id/ub__receipt_imageview_dropoff" android:background="@drawable/ub__receipt_dropoff_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.ubercab.ui.TextView android:id="@id/ub__receipt_textView_pickup_address" android:paddingBottom="@dimen/ub__octane_receipt_ratingbar_map_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Style.Rider.TextAppearance.Octane.ReceiptDialog.MapPickDropDetail" />
+            <com.ubercab.ui.TextView android:id="@id/ub__receipt_textView_dropoff_address" android:paddingTop="@dimen/ub__octane_receipt_ratingbar_map_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Style.Rider.TextAppearance.Octane.ReceiptDialog.MapPickDropDetail" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

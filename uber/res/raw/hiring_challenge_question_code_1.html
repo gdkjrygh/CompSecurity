@@ -1,0 +1,32 @@
+<font color="#8080ff"><b>package</b></font>&nbsp;com.example.listaccounts;<br>
+<br>
+<font color="#8080ff"><b>import</b></font>&nbsp;android.accounts.Account;<br>
+<font color="#8080ff"><b>import</b></font>&nbsp;android.accounts.AccountManager;<br>
+<font color="#8080ff"><b>import</b></font>&nbsp;android.app.ListActivity;<br>
+<font color="#8080ff"><b>import</b></font>&nbsp;android.os.Bundle;<br>
+<font color="#8080ff"><b>import</b></font>&nbsp;android.widget.ArrayAdapter;<br>
+<br>
+<font color="#00ff00"><b>public</b></font>&nbsp;<font color="#00ff00"><b>class</b></font>&nbsp;ListOutput&nbsp;<font color="#00ff00"><b>extends</b></font>&nbsp;ListActivity {<br>
+<br>
+&nbsp;&nbsp;<font color="#8080ff"><b>@Override</b></font><br>
+&nbsp;&nbsp;<font color="#00ff00"><b>protected</b></font>&nbsp;<font color="#00ff00"><b>void</b></font>&nbsp;onCreate(Bundle savedInstanceState)&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#00ff00"><b>super</b></font>.onCreate(savedInstanceState);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#00ffff"><b>// Get the accounts</b></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Account[]&nbsp;accounts = AccountManager.get(<font color="#00ff00"><b>this</b></font>).getAccounts();<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#00ffff"><b>// Format for display</b></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;String[]&nbsp;displayStrings =&nbsp;<font color="#ffff00"><b>new</b></font>&nbsp;String[accounts.length];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffff00"><b>for</b></font>&nbsp;(<font color="#00ff00"><b>int</b></font>&nbsp;i =&nbsp;<font color="#ff40ff"><b>0</b></font>; i &lt; accounts.length; i++)&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Account account = accounts[i];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;displayStrings[i]&nbsp;= String.format(<font color="#ff40ff"><b>&quot;%s</b></font><font color="#ff6060"><b>\n</b></font><font color="#ff40ff"><b>(%s)&quot;</b></font>, account.name,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;account.type);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ArrayAdapter&lt;String&gt; adapter =&nbsp;<font color="#ffff00"><b>new</b></font>&nbsp;ArrayAdapter&lt;String&gt;(<font color="#00ff00"><b>this</b></font>,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;android.R.layout.simple_list_item_1, displayStrings);<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;setListAdapter(adapter);<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<br>
+}<br>

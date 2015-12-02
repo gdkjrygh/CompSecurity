@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/ub__trip_flow_address_textcontainer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/ub__address_flow_icon_width" android:layout_marginRight="@dimen/ub__address_flow_icon_width">
+        <com.ubercab.ui.TextView android:ellipsize="end" android:id="@id/ub__trip_flow_address_textview" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/Style.Rider.EditText.AddressFlow" />
+        <com.ubercab.client.feature.search.LocationSearchEditText android:ellipsize="none" android:id="@id/ub__trip_flow_address_edittext" android:visibility="gone" android:fadingEdge="horizontal" android:fadingEdgeLength="16.0dip" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:inputType="textNoSuggestions" android:imeOptions="actionSearch" android:requiresFadingEdge="0x1000" style="@style/Style.Rider.EditText.AddressFlow" />
+    </FrameLayout>
+    <ImageView android:layout_gravity="left|center" android:id="@id/ub__trip_flow_address_icon" android:layout_width="@dimen/ub__address_flow_icon_width" android:layout_height="fill_parent" android:scaleType="center" android:contentDescription="@null" />
+    <ImageView android:layout_gravity="left|center" android:id="@id/ub__trip_flow_address_arrow" android:visibility="gone" android:layout_width="@dimen/ub__address_flow_icon_width" android:layout_height="fill_parent" android:scaleType="center" android:contentDescription="@string/go_back" android:scaleX="0.0" android:scaleY="0.0" />
+    <ImageView android:layout_gravity="right|center" android:id="@id/ub__trip_flow_address_clear" android:visibility="gone" android:layout_width="@dimen/ub__address_flow_icon_width" android:layout_height="fill_parent" android:src="@drawable/ub__x" android:scaleType="center" android:contentDescription="@string/clear" android:scaleX="0.0" android:scaleY="0.0" />
+    <View android:id="@id/ub__trip_flow_address_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null" android:alpha="0.0" />
+</merge>

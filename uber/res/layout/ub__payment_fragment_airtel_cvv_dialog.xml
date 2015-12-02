@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ViewFlipper android:id="@id/viewFlipper" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.TextView android:textColor="@color/ub__uber_black_100" android:id="@id/ub__payment_textview_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Uber.TextAppearance.H5" />
+        <com.ubercab.payment.internal.ui.SecurityCodeEditText android:id="@id/ub__payment_edittext_cvv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="number" android:imeOptions="actionDone" />
+    </LinearLayout>
+    <View android:background="@color/ub__uber_white_80" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:buttonBarStyle">
+        <com.ubercab.ui.Button android:id="@id/ub__payment_button_cancel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ub__payment_cancel" android:layout_weight="1.0" style="@style/Uber.Widget.DialogButton" />
+        <View android:background="@color/ub__uber_white_80" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <com.ubercab.ui.Button android:id="@id/ub__payment_button_ok" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ub__payment_ok" android:layout_weight="1.0" style="@style/Uber.Widget.DialogButton.Positive" />
+    </LinearLayout>
+</LinearLayout>

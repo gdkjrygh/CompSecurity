@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:background="@drawable/ub__surge_tag_fare_estimate_bg" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:textSize="@dimen/ub__text_size_small" android:layout_gravity="center" android:id="@id/ub__destination_fare_cta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/get_fare_estimate" android:textAllCaps="true" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/ub__destination_fare_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ub__destination_fare_estimate_content_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.H2" android:textColor="@color/ub__uber_blue_100" android:layout_gravity="center" android:id="@id/ub__destination_fare_estimate_fare" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x">
+            <View android:layout_gravity="center" android:background="@color/ub__uber_white_40" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_1x" android:layout_marginRight="@dimen/ui__spacing_unit_1x" android:src="@drawable/ub__red_pin_icon" />
+            <View android:layout_gravity="center" android:background="@color/ub__uber_white_40" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+        <com.ubercab.ui.TextView android:textAppearance="@style/Uber.TextAppearance.P" android:textSize="@dimen/ub__text_size_small" android:gravity="center" android:id="@id/ub__destination_fare_estimate_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" />
+    </LinearLayout>
+</FrameLayout>

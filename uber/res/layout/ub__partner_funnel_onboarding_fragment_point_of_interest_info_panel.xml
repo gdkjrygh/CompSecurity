@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.android.partner.funnel.onboarding.infopanel.RevealAnimationView android:id="@id/ub__partner_funnel_onboarding_panel_backdrop" android:background="@color/ub__black_transparent_overlay_light" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:duration="@android:integer/config_longAnimTime" />
+    <com.ubercab.android.partner.funnel.onboarding.view.SlidePanelLayout android:id="@id/ub__partner_funnel_onboarding_slide_panel" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:partnerFunnelHeaderView="@id/ub__partner_funnel_onboarding_info_panel_header" uber:partnerFunnelDragSensitivity="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/ub__partner_funnel_onboarding_viewgroup_root" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ub__partner_funnel_onboarding_info_panel_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.android.partner.funnel.onboarding.view.PillView android:id="@id/ub__partner_funnel_onboarding_info_panel_pillview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_2x" android:layout_marginRight="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" />
+                <FrameLayout android:id="@id/ub__partner_funnel_onboarding_viewgroup_do_panel_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <include layout="@layout/ub__partner_funnel_onboarding_cardview_point_of_interest" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/ub__partner_funnel_onboarding_info_panel_detail_list" android:background="@color/ub__uber_white_20" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ViewStub android:id="@id/ub__partner_funnel_onboarding_info_panel_phone_stub" android:layout="@layout/ub__partner_funnel_onboarding_info_panel_detail" android:inflatedId="@id/ub__partner_funnel_onboarding_info_panel_phone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <ViewStub android:id="@id/ub__partner_funnel_onboarding_info_panel_address_stub" android:layout="@layout/ub__partner_funnel_onboarding_info_panel_detail" android:inflatedId="@id/ub__partner_funnel_onboarding_info_panel_address" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <ViewStub android:id="@id/ub__partner_funnel_onboarding_info_panel_misc_stub" android:layout="@layout/ub__partner_funnel_onboarding_info_panel_detail" android:inflatedId="@id/ub__partner_funnel_onboarding_info_panel_misc" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <com.ubercab.ui.Button android:id="@id/ub__partner_funnel_onboarding_button_email_inspection_form" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:text="@string/ub__partner_funnel_email_inspection_form" style="@style/Uber.Widget.Button.Accent" />
+                <com.ubercab.ui.Button android:id="@id/ub__partner_funnel_onboarding_button_start_navigation" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/ub__partner_funnel_get_directions" style="@style/Uber.Widget.Button.Secondary" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.ubercab.android.partner.funnel.onboarding.view.SlidePanelLayout>
+</FrameLayout>
