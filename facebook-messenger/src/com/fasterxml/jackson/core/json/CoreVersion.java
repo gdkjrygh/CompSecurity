@@ -1,0 +1,18 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.fasterxml.jackson.core.json;
+
+import com.fasterxml.jackson.core.util.VersionUtil;
+
+public class CoreVersion extends VersionUtil
+{
+
+    public static final CoreVersion instance = new CoreVersion();
+
+    public CoreVersion()
+    {
+    }
+
+}

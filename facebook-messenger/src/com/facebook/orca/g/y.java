@@ -1,0 +1,19 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.facebook.orca.g;
+
+import com.facebook.d.c.a;
+
+// Referenced classes of package com.facebook.orca.g:
+//            aa
+
+public class y extends a
+{
+
+    y(aa aa)
+    {
+        super(aa, "properties");
+    }
+}
