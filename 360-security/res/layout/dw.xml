@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/fn" android:background="@color/bm" android:layout_width="fill_parent" android:layout_height="96.0dip">
+        <com.qihoo.security.locale.widget.LocaleTextView android:textSize="30.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/o7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <com.qihoo.security.locale.widget.LocaleTextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/o8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+    <com.qihoo.security.ui.main.DragContainer android:id="@id/m" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/fs">
+        <RelativeLayout android:layout_gravity="top|left|center" android:id="@id/ft" android:background="@color/c3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="96.0dip">
+            <ListView android:id="@id/fu" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@android:color/transparent" android:divider="@null" android:dividerHeight="0.0dip" />
+            <com.qihoo.security.locale.widget.LocaleTextView android:textSize="16.0sp" android:textColor="#ff90caf9" android:id="@id/fv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/p6" android:layout_centerInParent="true" />
+            <FrameLayout android:id="@id/fw" android:background="#ff555555" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </com.qihoo.security.ui.main.DragContainer>
+    <include layout="@layout/abs_content_top_shadow_layout" />
+    <include android:id="@id/fs" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/cf" android:layout_alignParentBottom="true" layout="@layout/custom_list_button" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/fn" layout="@layout/base_loading_view" />
+</RelativeLayout>

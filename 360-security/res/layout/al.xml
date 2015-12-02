@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/bh" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/dj" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.qihoo.security.ui.result.view.AnnulusView android:layout_gravity="center" android:layout_width="@dimen/bk" android:layout_height="@dimen/bl" />
+        <ViewStub android:layout_gravity="center" android:id="@id/dk" android:layout="@layout/am" android:layout_width="@dimen/bm" android:layout_height="@dimen/bn" />
+        <com.qihoo.security.alasticbutton.ElasticImageButton android:layout_gravity="center" android:id="@id/dl" android:visibility="invisible" android:layout_width="@dimen/bm" android:layout_height="@dimen/bn" />
+    </FrameLayout>
+    <com.qihoo.security.ui.result.view.ResultScrollView android:id="@id/dm" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/dn" android:paddingLeft="@dimen/a6" android:paddingRight="@dimen/a6" android:paddingBottom="@dimen/a6" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:id="@id/do" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <include android:id="@id/dp" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/result_text_item" />
+            <include android:id="@id/dq" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/more_tips_item" />
+            <LinearLayout android:orientation="vertical" android:id="@id/dr" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View android:id="@id/ds" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <include android:id="@id/dt" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/custom_list_button" />
+        </LinearLayout>
+    </com.qihoo.security.ui.result.view.ResultScrollView>
+</FrameLayout>

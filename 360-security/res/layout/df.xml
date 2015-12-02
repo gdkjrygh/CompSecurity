@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/n5" android:background="@color/bc" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <HorizontalScrollView android:orientation="horizontal" android:id="@id/n6" android:background="@color/bc" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@id/n7" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+        <include layout="@layout/divider" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ListView android:id="@id/n8" android:layout_width="fill_parent" android:layout_height="fill_parent" android:dividerHeight="0.0px" android:headerDividersEnabled="true" android:footerDividersEnabled="true" style="@style/filemanager_listview" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/kv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cw" />
+                <com.qihoo.security.locale.widget.LocaleTextView android:textSize="27.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/c_" android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/n9" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="25.0dip" android:src="@drawable/b6" />
+                <com.qihoo.security.locale.widget.LocaleTextView android:textSize="22.0sp" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cb" />
+            </LinearLayout>
+        </FrameLayout>
+        <include layout="@layout/divider" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/n_" android:background="@color/ba" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="64.0dip">
+            <Button android:textSize="@dimen/cg" android:textColor="@color/b_" android:id="@id/na" android:background="@drawable/b4" android:layout_width="fill_parent" android:layout_height="46.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:text="@string/ci" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

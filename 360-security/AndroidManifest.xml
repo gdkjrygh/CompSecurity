@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.qihoo.security.lite" platformBuildVersionCode="14" platformBuildVersionName="4.0.2-238991">
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <permission android:description="@string/lw" android:label="ipc permission" android:name="com.qihoo.security.lite.PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="com.qihoo.security.lite.PERMISSION"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA"/>
+    <permission android:name="com.qihoo.antivirus.update.permission.i18n_security_lite" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.qihoo.antivirus.update.permission.i18n_security_lite"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <application android:allowBackup="false" android:icon="@drawable/bd" android:label="@string/lw" android:name="com.qihoo.security.SecurityApplication" android:theme="@style/fa">
+        <uses-library android:name="com.sec.android.app.multiwindow" android:required="false"/>
+        <meta-data android:name="com.sec.android.support.multiwindow" android:value="true"/>
+        <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_W" android:value="632.0dip"/>
+        <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_H" android:value="598.0dip"/>
+        <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_W" android:value="632.0dip"/>
+        <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_H" android:value="598.0dip"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/mt"/>
+        <provider android:authorities="com.qihoo.security.lite.provider.scanResult" android:name="com.qihoo.security.malware.db.ScanResultProvider" android:permission="com.qihoo.security.lite.PERMISSION"/>
+        <provider android:authorities="com.qihoo.security.lite.provider.ignorelist" android:name="com.qihoo.security.malware.db.IgnoreListProvider" android:permission="com.qihoo.security.lite.PERMISSION"/>
+        <provider android:authorities="com.qihoo.security.lite.appbox.bi" android:name="com.qihoo.security.appbox.bi.AppBoxStatisticianProvider" android:permission="com.qihoo.security.lite.PERMISSION"/>
+        <provider android:authorities="com.qihoo.security.lite.installreport" android:name="com.qihoo.security.installreport.InstallStatisticianProvider" android:permission="com.qihoo.security.lite.PERMISSION"/>
+        <provider android:authorities="com.qihoo.security.lite.provider.stat" android:name="com.qihoo.security.support.StatisticianProvider" android:permission="com.qihoo.security.lite.PERMISSION"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/lw" android:launchMode="singleTop" android:name=".AppEnterActivity" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/fg">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="i18nsecurity"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.qihoo.security.ui.main.HomeActivity" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/fh"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.opti.trashclear.ui.ClearWhiteListActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.qihoo.security.opti.trashclear.filemanager.FileBrowseActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name=".LicenseActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name=".BrowserActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.qihoo.security.dialog.monitor.MonitorDangerDialog" android:process=":ui" android:screenOrientation="portrait" android:taskAffinity="com.qihoo.security.dialog.monitor.MonitorDangerDialog" android:theme="@style/fw">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.qihoo.security.dialog.monitor.MonitorWarningDialog" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/fw">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.v5.UpdatedDialog" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/fw"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleInstance" android:name="com.qihoo.security.ui.main.ChargingStateDialog" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/fw"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleInstance" android:name="com.qihoo.security.ui.main.DisChargingStateDialog" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/fw"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.dialog.DataFailDialog" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/fw"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.v5.DownloadApkDialog" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/fw"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.v5.CheckUpdateDialog" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/fw"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.v5.MobileConnectWarningDialog" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/fw"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.crashhandler.UploadActivity" android:process=":crashhandler" android:screenOrientation="portrait" android:theme="@style/ff"/>
+        <service android:exported="false" android:label="Bsdiff" android:name="com.qihoo.security.service.BsPatchService" android:process=":ui"/>
+        <service android:exported="false" android:name="com.qihoo.security.services.DeepScanService"/>
+        <service android:exported="false" android:name="com.qihoo.security.services.ScanEngineService" android:process=":ui"/>
+        <service android:exported="false" android:label="PackageMonitorService" android:name="com.qihoo.security.service.PackageMonitorService" android:process=":ui"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleInstance" android:name="com.qihoo.security.notify.NotificationActivity" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/fg"/>
+        <service android:exported="false" android:name="com.qihoo.security.notify.NotificationService"/>
+        <service android:exported="false" android:label="SecurityService" android:name="com.qihoo.security.service.SecurityService">
+            <intent-filter>
+                <action android:name="com.qihoo.security.service.ROOTSERVICE"/>
+                <action android:name="com.qihoo.msafe.service.ROOTSERVICE"/>
+                <action android:name="com.qihoo.security.action.function.notification"/>
+                <action android:name="com.qihoo.security.service.UIBARRIER"/>
+                <action android:name="com.qihoo.security.service.PROFILE"/>
+                <action android:name="com.qihoo.security.clean.scan.status"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.ui.settings.SettingsActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.ui.settings.SettingsAdvancedActivity" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/f9"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.ui.settings.AboutUsActivity" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/f9"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.ui.settings.LocaleSettingActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <service android:exported="false" android:label="LoadingPermissionDataService" android:name="com.qihoo.security.service.LoadingPermissionDataService" android:process=":ui"/>
+        <service android:exported="false" android:label="UpdateDownloadUIService" android:name="com.qihoo.security.v5.UpdateDownloadUIService" android:process=":ui"/>
+        <service android:exported="false" android:name="com.qihoo.security.v5.UpdateService" android:process=":ui">
+            <intent-filter>
+                <action android:name="com.qihoo.security.ACTION_CHECK_UPDATE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.qihoo.security.leak.LeakTipsService" android:process=":ui"/>
+        <service android:exported="false" android:name="com.qihoo.security.locale.LocaleManagerService"/>
+        <receiver android:exported="false" android:name="com.qihoo.utils.notice.NotifyDeleteReceiver">
+            <intent-filter>
+                <action android:name="com.qihoo.security.notify.ACTION_MALWARE"/>
+                <action android:name="com.qihoo.security.notify.ACTION_RISKY_APP"/>
+                <action android:name="com.qihoo.security.notify.ACTION_SAFE_APP"/>
+                <action android:name="com.qihoo.security.notify.ACTION_ANTIVIRUS_UPGRADE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.qihoo.security.receiver.UsbUpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.qihoo.security.receiver.SystemBootReceiver">
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.qihoo.security.receiver.ScreenUnlockReceiver">
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.qihoo.security.receiver.TimeSetReceiver">
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.qihoo.security.receiver.PhoneStatusReceiver">
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.intent.action.PHONE_STATE"/>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.qihoo.security.receiver.PackageMonitorStatic">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_CHANGED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_RESTARTED"/>
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.qihoo.security.receiver.NetStatReceiver">
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.intent.action.ANY_DATA_STATE"/>
+                <action android:name="android.net.wifi.STATE_CHANGE"/>
+            </intent-filter>
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED"/>
+                <action android:name="android.intent.action.MEDIA_REMOVED"/>
+                <action android:name="android.intent.action.MEDIA_CHECKING"/>
+                <action android:name="android.intent.action.MEDIA_EJECT"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.intent.action.SERVICE_STATE"/>
+            </intent-filter>
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.intent.action.SIM_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.qihoo.security.receiver.MessageReceiver" android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.qihoo.security.receiver.UserActionReceiver">
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.intent.action.AIRPLANE_MODE"/>
+                <action android:name="android.intent.action.UID_REMOVED"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+                <action android:name="android.intent.action.HEADSET_PLUG"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.qihoo.security.receiver.BatteryStatusReceiver">
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.qihoo.security.receiver.CommonActionReceiver">
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.intent.action.CLOSE_SYSTEM_DIALOGS"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.qihoo.security.receiver.PlayReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.qihoo.security.receiver.DaemonReceiver">
+            <intent-filter>
+                <action android:name="com.qihoo.security.lite.action.DAEMON"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.ui.opti.sysclear.SysClearMainActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.ui.opti.sysclear.ProcessClearActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.ui.opti.sysclear.PowerActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.ui.opti.sysclear.ProcessClearWhiteListActivity" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/f9"/>
+        <activity android:launchMode="singleTask" android:name="com.qihoo.security.appbox.ui.AdMobvistaActActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.ui.settings.CleanupSettingActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.opti.trashclear.ui.mainpage.opti.ClearListActivity" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/f9"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.qihoo.security.opti.trashclear.ui.ResidualFileUninstallDialog" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/fw"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.qihoo.security.opti.trashclear.ui.ResidualFileInstallDialog" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/fw"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.ui.antivirus.list.VirusListActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.ui.antivirus.VirusIgnoreListActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.ui.antivirus.AppDetailActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.ui.antivirus.MalwareDetailActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.ui.antivirus.LeakDetailActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.ui.antivirus.ProtectionDetailActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.block.ui.AddToListDialogActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <service android:name="com.qihoo.security.clearengine.sdk.ApkScanService" android:process=":apk_scan"/>
+        <service android:exported="false" android:name="com.qihoo.security.clearengine.service.ClearEngineService"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.qihoo.security.appbox.ui.AppBoxActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.qihoo.security.appbox.ui.AppBoxSelfFuncActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/bc" android:label="@string/md" android:launchMode="singleInstance" android:name="com.qihoo.security.appbox.ui.AppBoxShortcutActivity" android:process=":ui" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/bc" android:label="@string/md" android:name="com.qihoo.security.appbox.ui.AppBoxCreateShortcutActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.qihoo.security.ui.result.view.AdvLoadingActivity" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/fw"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.qihoo.security.gamebooster.GameBoosterActivity" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/dr">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.gamebooster.GameBoosterInAppActivity" android:process=":ui" android:screenOrientation="portrait" android:theme="@style/dr">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.qihoo.security.gamebooster.CreateGameShortcutActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="com.qihoo.security.lite.gamebooster.CreateGameShortActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleInstance" android:name="com.qihoo.security.gamebooster.AddGamesActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleInstance" android:name="com.qihoo.security.gamebooster.GameRecommendListActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.qihoo.security.gamebooster.GamesBoostSettingListActivity" android:process=":ui" android:screenOrientation="portrait"/>
+        <receiver android:name="com.qihoo.security.receiver.NetworkReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+                <action android:name="android.net.wifi.STATE_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.qihoo.antivirus.update.UpdateService" android:process=":update"/>
+        <service android:exported="false" android:name="com.qihoo.security.v5.AveDBUpdateService" android:process=":ui"/>
+        <receiver android:name="com.qihoo.security.receiver.UsbStateReceiver">
+            <intent-filter android:priority="800">
+                <action android:name="android.hardware.usb.action.USB_STATE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.qihoo.security.service.ProcessClearService"/>
+        <service android:exported="false" android:name="com.qihoo.security.app.DaemonService"/>
+    </application>
+</manifest>

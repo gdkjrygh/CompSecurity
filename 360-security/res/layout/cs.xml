@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/bz" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:id="@id/fn" android:layout_width="fill_parent" android:layout_height="130.0dip">
+        <com.qihoo.security.locale.widget.LocaleTextView android:textSize="@dimen/co" android:textColor="#ffffffff" android:gravity="center" android:id="@id/kr" android:background="@drawable/t" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="26.0dip" android:layout_marginBottom="14.0dip" android:minWidth="160.0dip" android:text="@string/a3" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginBottom="14.0dip" android:layout_above="@id/kr" android:layout_centerHorizontal="true">
+            <com.qihoo.security.widget.ShadowTextView android:textSize="48.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/ks" android:layout_width="wrap_content" android:layout_height="60.0dip" android:text="0" app:stv_dx="0.0dip" app:stv_dy="5.0dip" app:stv_radius="3.0dip" app:stv_color="#33000000" style="?android:attr/textAppearanceMedium" />
+            <com.qihoo.security.locale.widget.LocaleTextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/kt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="10.0dip" android:text="@string/at" android:layout_toRightOf="@id/ks" android:layout_alignTop="@id/ks" />
+            <com.qihoo.security.locale.widget.LocaleTextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="-2.0dip" android:text="@string/ax" android:layout_alignLeft="@id/kt" android:layout_alignBottom="@id/ks" />
+        </RelativeLayout>
+        <include layout="@layout/abs_content_top_shadow_layout" />
+    </RelativeLayout>
+    <ExpandableListView android:id="@id/i4" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#ffe6e6e6" android:dividerHeight="1.0dip" android:layout_above="@id/ku" android:layout_below="@id/fn" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/ku" android:layout_below="@id/fn" layout="@layout/base_loading_view" />
+    <RelativeLayout android:id="@id/kv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/ku" android:layout_below="@id/fn">
+        <ImageView android:id="@id/kw" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:layout_centerHorizontal="true" />
+        <com.qihoo.security.locale.widget.LocaleTextView android:textSize="16.0sp" android:textColor="#66000000" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/ad" android:layout_below="@id/kw" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/abs_content_top_shadow_layout" />
+    <include android:id="@id/ku" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/cf" android:layout_alignParentBottom="true" layout="@layout/custom_list_button" />
+</RelativeLayout>
