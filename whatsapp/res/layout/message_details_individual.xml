@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:paddingLeft="@dimen/card_h_padding" android:paddingTop="@dimen/card_v_padding" android:paddingRight="@dimen/card_h_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/panel" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/section_played" android:paddingLeft="@dimen/card_h_padding" android:paddingRight="@dimen/card_h_padding" android:layout_width="fill_parent" android:layout_height="@dimen/group_participant_row_height">
+            <LinearLayout android:gravity="left" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="22.0dip" android:layout_height="wrap_content" android:src="@drawable/chats_mic_played" />
+                    <TextView android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message_played" style="@style/ListItemTitle" />
+                </LinearLayout>
+                <TextView android:layout_gravity="left" android:id="@id/date_time_played" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ListItemSubtitle" />
+            </LinearLayout>
+            <View style="@style/CardSeparator" />
+        </FrameLayout>
+        <FrameLayout android:paddingLeft="@dimen/card_h_padding" android:paddingRight="@dimen/card_h_padding" android:layout_width="fill_parent" android:layout_height="@dimen/group_participant_row_height">
+            <LinearLayout android:gravity="left" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="22.0dip" android:layout_height="wrap_content" android:src="@drawable/msg_status_client_read" />
+                    <TextView android:id="@id/title_read" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message_read" style="@style/ListItemTitle" />
+                </LinearLayout>
+                <TextView android:layout_gravity="left" android:id="@id/date_time_read" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ListItemSubtitle" />
+            </LinearLayout>
+            <View style="@style/CardSeparator" />
+        </FrameLayout>
+        <FrameLayout android:paddingLeft="@dimen/card_h_padding" android:paddingRight="@dimen/card_h_padding" android:layout_width="fill_parent" android:layout_height="@dimen/group_participant_row_height">
+            <LinearLayout android:gravity="left" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="22.0dip" android:layout_height="wrap_content" android:src="@drawable/msg_status_client_received" />
+                    <TextView android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message_delivered" style="@style/ListItemTitle" />
+                </LinearLayout>
+                <TextView android:layout_gravity="left" android:id="@id/date_time_delivered" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ListItemSubtitle" />
+            </LinearLayout>
+            <View android:visibility="gone" style="@style/CardSeparator" />
+        </FrameLayout>
+        <FrameLayout android:paddingLeft="@dimen/card_h_padding" android:paddingRight="@dimen/card_h_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/group_participant_row_height">
+            <LinearLayout android:gravity="left" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message_sent" style="@style/ListItemTitle" />
+                <TextView android:layout_gravity="left" android:id="@id/date_time_sent" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ListItemSubtitle" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

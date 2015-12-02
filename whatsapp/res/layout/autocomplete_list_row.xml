@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="9.0dip" android:paddingTop="8.0dip" android:paddingRight="9.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/contactpicker_row_photo" android:layout_width="46.0dip" android:layout_height="46.0dip" android:layout_marginLeft="0.0dip" android:layout_marginRight="9.0dip" android:scaleType="fitCenter" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/contact_name_type" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/contactpicker_row_photo">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="19.0sp" android:textColor="@color/list_item_title" android:ellipsize="end" android:layout_gravity="left" android:id="@id/contact_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </FrameLayout>
+        <TextView android:textSize="13.5sp" android:textColor="@color/contact_phone_type" android:gravity="left|center" android:id="@id/contacts_phone_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/contact_picker_type_max_width" android:singleLine="true" />
+    </LinearLayout>
+    <com.whatsapp.TextEmojiLabel android:textSize="14.0sp" android:textColor="@color/contact_phone_type" android:ellipsize="end" android:id="@id/contact_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/contactpicker_row_photo" android:layout_below="@id/contact_name_type" />
+</RelativeLayout>

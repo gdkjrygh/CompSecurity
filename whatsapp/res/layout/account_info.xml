@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:id="@id/choose_friend_panel" android:background="@drawable/panel" android:padding="20.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff515151" android:id="@id/choose_friend_button" android:background="@drawable/reg_button" android:paddingLeft="12.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/account_info_btn_height" android:text="@string/pay_for_a_friend_choose_contact" android:textAllCaps="true" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/user_details_panel" android:background="@drawable/panel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/friend_photo" android:layout_width="@dimen/small_avatar_size" android:layout_height="@dimen/small_avatar_size" android:layout_marginLeft="@dimen/list_row_padding" android:src="@drawable/avatar_contact" android:scaleType="fitCenter" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <LinearLayout android:orientation="horizontal" android:paddingLeft="16.0dip" android:paddingTop="12.0dip" android:paddingRight="16.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="14.5sp" android:textColor="#ffaeaeae" android:id="@id/account_info_row1_label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/account_info_account_num" android:layout_weight="1.0" />
+                            <TextView android:textSize="16.0sp" android:textColor="@color/section_text" android:layout_gravity="left" android:id="@id/account_info_row1_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+1 (555) 555-1212" />
+                        </LinearLayout>
+                        <View android:background="#ffe2e2e2" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" />
+                        <LinearLayout android:orientation="horizontal" android:paddingLeft="16.0dip" android:paddingTop="12.0dip" android:paddingRight="16.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="14.5sp" android:textColor="#ffaeaeae" android:id="@id/account_info_row2_label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/account_info_expiration" android:layout_weight="1.0" />
+                            <TextView android:textSize="16.0sp" android:textColor="@color/section_text" android:gravity="left" android:id="@id/account_info_row2_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="09/22/2011" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <ImageButton android:layout_gravity="center" android:id="@id/account_info_remove_friend" android:background="@drawable/selector_orange_gradient" android:padding="4.0dip" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/broadcast_cross" android:scaleType="center" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/payment_panel" android:background="@drawable/panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip">
+                <TextView android:textSize="14.0sp" android:textColor="@color/section_text" android:gravity="left" android:paddingLeft="16.0dip" android:paddingTop="12.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_info_purchase_extension_for" android:textAllCaps="true" />
+                <RadioGroup android:orientation="horizontal" android:id="@id/extension_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checkedButton="@id/sku1">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/sku1_group" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textStyle="bold" android:textColor="#ff626262" android:id="@id/sku1_text" android:paddingBottom="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 Year" android:textAllCaps="true" />
+                        <TextView android:textColor="#ff626262" android:id="@id/sku1_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="US$0.99" />
+                        <RadioButton android:id="@id/sku1" android:background="#00000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:drawableLeft="?android:listChoiceIndicatorSingle" android:drawablePadding="0.0dip" />
+                        <TextView android:textSize="13.0sp" android:textColor="#ffbfbfbf" android:id="@id/sku1_discount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:textAllCaps="true" />
+                    </LinearLayout>
+                    <View android:background="#ffe2e2e2" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/sku3_group" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textStyle="bold" android:textColor="#ff626262" android:id="@id/sku3_text" android:paddingBottom="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3 Years" android:textAllCaps="true" />
+                        <TextView android:textColor="#ff626262" android:id="@id/sku3_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="US$1.79" />
+                        <RadioButton android:id="@id/sku3" android:background="#00000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:drawableLeft="?android:listChoiceIndicatorSingle" android:drawablePadding="0.0dip" />
+                        <TextView android:textColor="#ffbfbfbf" android:id="@id/sku3_discount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/discount_10_percent" android:textAllCaps="true" />
+                    </LinearLayout>
+                    <View android:background="#ffe2e2e2" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/sku5_group" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textStyle="bold" android:textColor="#ff626262" android:id="@id/sku5_text" android:paddingBottom="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5 Years" android:textAllCaps="true" />
+                        <TextView android:textColor="#ff626262" android:id="@id/sku5_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="US$3.99" />
+                        <RadioButton android:id="@id/sku5" android:background="#00000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:drawableLeft="?android:listChoiceIndicatorSingle" android:drawablePadding="0.0dip" />
+                        <TextView android:textColor="#ffbfbfbf" android:id="@id/sku5_discount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/discount_25_percent" android:textAllCaps="true" />
+                    </LinearLayout>
+                </RadioGroup>
+                <LinearLayout android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingTop="18.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <Button android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff515151" android:id="@id/google_payment_button" android:background="@drawable/reg_button" android:paddingLeft="12.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/account_info_btn_height" android:text="@string/google_payment_button" android:drawableLeft="@drawable/via_google_wallet_c" android:textAllCaps="true" />
+                    <Button android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff515151" android:id="@id/website_payment_button" android:background="@drawable/reg_button" android:paddingLeft="12.0dip" android:paddingRight="24.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/account_info_btn_height" android:layout_marginTop="10.0dip" android:text="@string/payment_issues_button" android:drawableLeft="@drawable/em_1f30e" android:textAllCaps="true" />
+                    <Button android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff515151" android:id="@id/send_payment_button" android:background="@drawable/reg_button" android:paddingLeft="12.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/account_info_btn_height" android:layout_marginTop="10.0dip" android:text="@string/send_payment_button" android:drawableLeft="@drawable/via_mail_c" android:textAllCaps="true" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip">
+                <TextView android:textSize="15.0sp" android:textColor="@color/section_text" android:gravity="center" android:id="@id/help_link" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/why_dont_sell_adds" />
+            </LinearLayout>
+            <TextView android:textSize="14.299988dip" android:textColor="#ff939393" android:id="@id/footer_description" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/account_info_desc" android:lineSpacingMultiplier="1.25" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/camera_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/camera_holder" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.whatsapp.camera.CameraView android:layout_gravity="center" android:id="@id/camera" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <ImageView android:layout_gravity="bottom|center" android:id="@id/shutter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_shutter" />
+        <ImageButton android:layout_gravity="bottom|right|center" android:id="@id/switch_camera_btn" android:background="@null" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_switch_camera" />
+        <ImageButton android:layout_gravity="bottom|left|center" android:id="@id/flash_btn" android:background="@null" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_flash_auto" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/preview_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.whatsapp.PhotoView android:id="@id/photo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/video_holder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.whatsapp.VideoView android:layout_gravity="center" android:id="@id/video" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" />
+            <ImageView android:layout_gravity="center" android:id="@id/video_control" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mviewer_videoplay" android:scaleType="center" android:contentDescription="@string/play" />
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/seekbar_holder" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="152.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@android:color/white" android:id="@id/timer_current" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0:00" android:shadowColor="@android:color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="2.0" />
+                <SeekBar android:id="@id/seekbar" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:maxHeight="13.0dip" android:indeterminateOnly="false" android:indeterminateDrawable="@drawable/audio_scrubber_progress" android:progressDrawable="@drawable/audio_scrubber_progress" android:minHeight="13.0dip" android:thumb="@drawable/audio_scrubber_thumb" android:thumbOffset="16.0dip" android:layout_weight="1.0" />
+                <TextView android:textColor="@android:color/white" android:id="@id/timer_total" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0:00" android:shadowColor="@android:color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="2.0" />
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/caption_entry" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/media_caption_entry" />
+            <View android:id="@id/caption_entry_padding" android:layout_width="fill_parent" android:layout_height="96.0dip" />
+        </LinearLayout>
+        <ImageButton android:layout_gravity="bottom|right|center" android:id="@id/ok" android:background="@drawable/camera_preview_btn_background" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:src="@drawable/ic_done_normal" android:contentDescription="@string/ok" />
+        <ImageButton android:layout_gravity="bottom|left|center" android:id="@id/cancel" android:background="@drawable/camera_preview_btn_background" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:src="@drawable/ic_discard_normal" android:contentDescription="@string/cancel" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:background="#99000000" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <com.whatsapp.TextEmojiLabel android:ellipsize="end" android:gravity="left|center" android:id="@id/title" android:background="@null" android:paddingLeft="8.0dip" android:width="0.0dip" android:singleLine="true" android:layout_weight="1.0" style="@style/FullScreenDialogTitle" />
+                <ImageView android:id="@id/crop" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_action_crop" style="@style/ActionBarButtonStyle" />
+                <ImageView android:id="@id/rotate" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_action_rotate_right" style="@style/ActionBarButtonStyle" />
+                <TextView android:textColor="#ffffffff" android:gravity="center" android:id="@id/recording_time" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="0:00" android:drawableLeft="@drawable/ic_recording_indicator" android:drawablePadding="8.0dip" />
+            </LinearLayout>
+            <ProgressBar android:id="@id/recording_progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="4.0dip" android:indeterminateOnly="false" android:indeterminateDrawable="@drawable/progress_indeterminate_horizontal_holo" android:progressDrawable="@drawable/video_recording_progress" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+        <RelativeLayout android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="#ffffffff" android:gravity="center" android:id="@id/slide_up_to_cancel" android:background="@drawable/recording_indicator_background" android:paddingLeft="12.0dip" android:paddingTop="4.0dip" android:paddingRight="12.0dip" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/video_note_slide_to_cancel" android:layout_centerInParent="true" android:textAllCaps="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/save_progress" android:background="@drawable/image_download_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleLarge" />
+</FrameLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/gray_activity" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/header" android:text="@string/msg_store_backup_found_title" style="@style/FullScreenDialogTitle" />
+    <ScrollView android:background="#ffebebeb" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingTop="50.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <RelativeLayout android:gravity="center" android:id="@id/restore_illustration" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                        <ImageView android:id="@id/sdcard" android:padding="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sdcard" android:scaleType="center" />
+                        <ImageView android:id="@id/dot1" android:padding="6.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dot_dark" android:scaleType="center" />
+                        <ImageView android:id="@id/dot2" android:padding="6.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dot_dark" android:scaleType="center" />
+                        <ImageView android:id="@id/dot3" android:padding="6.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dot_dark" android:scaleType="center" />
+                        <ImageView android:id="@id/dot4" android:padding="6.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dot_dark" android:scaleType="center" />
+                        <ImageView android:id="@id/dot5" android:padding="6.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dot_dark" android:scaleType="center" />
+                        <ImageView android:id="@id/phone" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/phone" android:scaleType="center" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <View android:id="@id/filler" android:layout_width="fill_parent" android:layout_height="46.0dip" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="22.0dip" android:textColor="#ff000000" android:id="@id/message_backup_found_heading" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/msg_store_backup_found_registration" android:fontFamily="sans-serif" />
+                    <TextView android:textSize="16.0dip" android:textColor="#ff707070" android:id="@id/message_backup_found_question" android:paddingLeft="16.0dip" android:paddingTop="6.0dip" android:paddingRight="16.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/msg_store_creation_backup_message" android:fontFamily="sans-serif" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:paddingLeft="30.0dip" android:paddingTop="20.0dip" android:paddingRight="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/restore_backup" android:background="@drawable/btn_green" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_marginBottom="10.0dip" android:text="@string/msg_store_restore_db" android:layout_weight="1.0" />
+                <Button android:textSize="20.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/do_not_restore_backup" android:background="@drawable/btn_gray" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_marginBottom="10.0dip" android:text="@string/msg_store_do_not_restore_no_thanks" android:layout_weight="1.0" />
+                <Button android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/restore_done" android:background="@drawable/btn_green" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/btn_continue" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/restore_progress" android:paddingTop="10.0dip" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_weight="1.0">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:background="@drawable/btn_green_pressed" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <View android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                        <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:layout_gravity="center" android:id="@id/initializing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/msg_store_restoring_progress_title" android:layout_weight="0.0" />
+                        <View android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                    </LinearLayout>
+                    <TextView android:textSize="20.0sp" android:textColor="#ff707070" android:gravity="center" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/msg_store_restoring_progress_descr" />
+                </LinearLayout>
+                <View android:layout_width="fill_parent" android:layout_height="50.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

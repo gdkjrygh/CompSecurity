@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/panel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout style="@style/CardHeader">
+            <TextView android:id="@id/status_title" android:text="@string/current_status" style="@style/CardTitle" />
+            <TextView android:id="@id/status_info" style="@style/CardInfo" />
+            <View style="@style/CardSeparator" />
+        </FrameLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/status_layout" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.whatsapp.TextEmojiLabel android:textSize="18.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:layout_gravity="left|center" android:id="@id/status_tv" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="2" android:layout_weight="1.0" />
+            <FrameLayout android:layout_width="48.0dip" android:layout_height="48.0dip">
+                <View android:layout_gravity="left|center" android:background="@color/divider_gray" android:layout_width="1.0dip" android:layout_height="32.0dip" />
+                <ProgressBar android:layout_gravity="center" android:id="@id/progressbar_small" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleSmallInverse" />
+                <ImageView android:layout_gravity="center" android:id="@id/round_more_btn" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/btn_edit" style="@style/ActionBarButtonStyle" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+        <FrameLayout style="@style/CardHeader">
+            <TextView android:id="@id/select_status_title" android:text="@string/select_status" style="@style/CardTitle" />
+            <TextView android:id="@id/select_status_info" style="@style/CardInfo" />
+            <View style="@style/CardSeparator" />
+        </FrameLayout>
+        <ListView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" style="@style/List" />
+        <View android:id="@id/list_empty" android:layout_width="fill_parent" android:layout_height="48.0dip" />
+    </LinearLayout>
+</LinearLayout>

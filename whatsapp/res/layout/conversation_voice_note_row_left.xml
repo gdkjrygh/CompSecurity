@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.whatsapp.DividerView android:id="@id/date_divider" style="@style/DateDivider" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="280.0dip" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:layout_marginRight="40.0dip" android:layout_below="@id/date_divider" android:layout_alignParentLeft="true">
+        <FrameLayout android:layout_gravity="left|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:layout_gravity="left" android:orientation="horizontal" android:id="@id/name_in_group" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.5dip" android:layout_marginTop="4.0dip" android:layout_marginRight="8.5dip">
+                <TextView android:textSize="@dimen/conversation_participant_name_tv" android:textColor="#ff000000" android:id="@id/name_in_group_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="First Last" android:lines="1" android:singleLine="true" />
+                <com.whatsapp.TextEmojiLabel android:textSize="@dimen/conversation_participant_name_tv" android:textColor="#ff999999" android:id="@id/pushname_in_group_tv" android:paddingLeft="12.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/controls" android:paddingTop="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageButton android:gravity="center" android:id="@id/control_btn" android:background="#00000000" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="4.0dip" android:src="@drawable/inline_audio_play" android:scaleType="center" />
+                <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="16.0dip" android:indeterminateOnly="false" android:indeterminateDrawable="@drawable/progress_indeterminate_horizontal_holo" android:progressDrawable="@drawable/download_progress" android:minHeight="16.0dip" />
+                    <com.whatsapp.VoiceNoteSeekBar android:layout_gravity="center" android:id="@id/audio_seekbar" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="13.0dip" android:indeterminateOnly="false" android:indeterminateDrawable="@drawable/inline_scrubber_progress" android:progressDrawable="@drawable/inline_scrubber_progress" android:minHeight="13.0dip" android:thumb="@drawable/inline_scrubber_thumb" android:thumbOffset="16.0dip" />
+                    <TextView android:textColor="#66000000" android:layout_gravity="center" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="0.6MB" />
+                </FrameLayout>
+            </LinearLayout>
+            <TextView android:layout_gravity="bottom|right|center" android:id="@id/date" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" style="@style/ConversationDate" />
+        </FrameLayout>
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/thumbnail" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/picture_frame" android:paddingLeft="11.0dip" android:paddingTop="3.0dip" android:paddingRight="3.0dip" android:paddingBottom="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <ImageView android:id="@id/picture" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/avatar_contact" android:scaleType="fitCenter" />
+                <ImageView android:id="@id/picture_in_group" android:visibility="gone" android:layout_width="66.0dip" android:layout_height="66.0dip" android:src="@drawable/avatar_contact" android:scaleType="fitCenter" />
+                <ImageView android:layout_gravity="bottom" android:background="@drawable/pic_overlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" />
+            </FrameLayout>
+            <ImageView android:id="@id/mic_overlay" android:background="@drawable/mic_background_incoming" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:src="@drawable/mic_new" android:scaleType="fitCenter" android:layout_alignLeft="@id/picture_frame" android:layout_alignBottom="@id/picture_frame" />
+            <View android:background="#22000000" android:visibility="invisible" android:layout_width="0.5dip" android:layout_height="fill_parent" android:layout_marginLeft="8.5dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="0.0dip" android:layout_above="@id/mic_overlay" android:layout_alignLeft="@id/picture_frame" />
+            <TextView android:textSize="12.5sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/duration" android:background="#00000000" android:paddingLeft="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0:30" android:lines="1" android:singleLine="true" android:layout_alignRight="@id/picture_frame" android:layout_alignBottom="@id/picture_frame" />
+        </RelativeLayout>
+    </LinearLayout>
+</merge>

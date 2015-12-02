@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="right|center" android:layout_gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.whatsapp.DividerView android:id="@id/date_divider" style="@style/DateDivider" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginRight="9.0dip" android:layout_below="@id/date_divider" android:layout_alignParentRight="true">
+        <RelativeLayout android:id="@id/large_layout" android:visibility="gone" android:layout_width="256.0dip" android:layout_height="@dimen/media_message_thumb" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/small_layout" android:layout_width="wrap_content" android:layout_height="@dimen/media_message_thumb" android:layout_alignParentRight="true">
+            <FrameLayout android:id="@id/map_frame" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <ImageView android:id="@id/thumb" android:background="#00000000" android:layout_width="@dimen/media_message_thumb" android:layout_height="@dimen/media_message_thumb" android:scaleType="centerCrop" />
+                <Button android:id="@id/thumb_button" android:background="@drawable/media_overlay_outgoing" android:layout_width="@dimen/media_message_thumb" android:layout_height="@dimen/media_message_thumb" android:scaleType="fitCenter" />
+                <ProgressBar android:layout_gravity="bottom|left|center" android:id="@id/map_progressbar" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_margin="8.0dip" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/message_info_holder" android:paddingTop="4.0dip" android:layout_width="0.0dip" android:layout_height="@dimen/media_message_thumb" android:minWidth="128.0dip" android:layout_weight="1.0">
+                <com.whatsapp.TextEmojiLabel android:textSize="@dimen/conversation_location_name" android:textColor="#ff000000" android:ellipsize="end" android:id="@id/place_name" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+                <TextView android:textSize="@dimen/conversation_location_address" android:textColor="#99000000" android:ellipsize="end" android:id="@id/place_address" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" />
+                <View android:layout_width="16.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="right" android:orientation="horizontal" android:id="@id/conversation_layout_gravity_right_ar" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ConversationDate" />
+                    <ImageView android:id="@id/status" android:paddingLeft="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <Button android:id="@id/control_btn" style="@style/ConversationControlButtonIncoming" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</merge>

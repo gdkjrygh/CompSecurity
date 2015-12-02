@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.4">
+        <FrameLayout android:id="@id/map_holder" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:id="@id/map_center_anchor" android:layout_width="1.0px" android:layout_height="1.0px" android:layout_centerInParent="true" />
+        <FrameLayout android:id="@id/map_center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/map_center_anchor" android:layout_centerHorizontal="true">
+            <ImageView android:layout_gravity="bottom|center" android:id="@id/map_center_pos" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pin_dot" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/map_center_content" android:paddingBottom="4.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                <View android:layout_width="fill_parent" android:layout_height="12.0dip" />
+                <TextView android:textSize="14.0sp" android:textColor="@drawable/flat_button_text_color" android:gravity="center" android:id="@id/map_center_info" android:background="@drawable/panel" android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="3.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/send_this_location" android:lineSpacingMultiplier="1.15" />
+                <ImageView android:id="@id/map_center_pin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pin" />
+                <View android:id="@id/map_center_filler" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="12.0dip" />
+            </LinearLayout>
+        </FrameLayout>
+        <ProgressBar android:id="@id/progressbar_map" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="?android:attr/progressBarStyleLarge" />
+        <ImageView android:id="@id/full_screen" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_map_fullscreen_on" android:layout_alignParentLeft="true" />
+        <ImageView android:id="@id/my_location" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_compass_mode" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/edge_right" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="vertical" android:id="@id/places_holder" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.65">
+        <Button android:textSize="16.0sp" android:textColor="@drawable/flat_button_text_color" android:id="@id/send_my_location_btn" android:background="@drawable/panel" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="6.0dip" android:text="@string/send_your_current_location" />
+        <LinearLayout android:orientation="vertical" android:background="@drawable/panel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="6.0dip">
+            <FrameLayout style="@style/CardHeader">
+                <TextView android:id="@id/places_title" android:text="@string/place_list_title" style="@style/CardTitle" />
+                <View style="@style/CardSeparator" />
+            </FrameLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ListView android:id="@id/places_list" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/List" />
+                <ProgressBar android:id="@id/progressbar_small" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="?android:attr/progressBarStyleLarge" />
+                <TextView android:id="@id/places_empty" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_places_found" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/verify_sms_pane_trying_layout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:background="@drawable/panel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:id="@id/roaming_warning" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_marginBottom="8.0dip" android:text="@string/verify_sms_roaming_warning" android:layout_weight="1.0" style="@style/Text.Description" />
+                    <TextView android:paddingLeft="16.0dip" android:paddingTop="12.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:text="@string/verify_sms_description" android:layout_weight="1.0" style="@style/Text.Description" />
+                    <LinearLayout android:gravity="center" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+                        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <TextView android:textSize="20.0sp" android:textColor="@color/section_text" android:layout_gravity="left" android:id="@id/verify_sms_phone_number" android:paddingLeft="4.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+1 (555) 555-5555" style="@style/Text.Field" />
+                        </FrameLayout>
+                        <View android:layout_gravity="left|center" android:background="@color/divider_gray" android:layout_width="1.0dip" android:layout_height="32.0dip" />
+                        <ImageButton android:layout_gravity="center" android:id="@id/edit_btn_1" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/btn_edit" style="@style/ActionBarButtonStyle" />
+                    </LinearLayout>
+                    <LinearLayout android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="12.0sp" android:textStyle="normal" android:textColor="#ff808080" android:id="@id/try_count" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="TRY 1 OF 2" android:layout_weight="1.0" />
+                        <TextView android:textSize="12.0sp" android:textColor="#ff808080" android:id="@id/countdown_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0:59" />
+                    </LinearLayout>
+                    <ProgressBar android:layout_gravity="bottom" android:id="@id/progress_bar" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="16.0dip" android:layout_alignParentBottom="true" style="?android:attr/progressBarStyleHorizontal" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/verify_sms_pane_progress_info_layout" android:background="@drawable/panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                    <TextView android:paddingLeft="16.0dip" android:paddingTop="12.0dip" android:paddingRight="16.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_marginTop="4.0dip" android:text="@string/verify_sms_description_part_2" android:layout_weight="1.0" style="@style/Text.Description" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/sms_pane_failed_layout" android:background="@drawable/panel" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+                    <TextView android:textSize="16.0sp" android:textColor="#ffff8800" android:gravity="left|center" android:layout_gravity="left|center" android:paddingLeft="4.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/verify_sms_failed" android:layout_weight="1.0" style="@style/Text.Description" />
+                    <ImageView android:id="@id/verify_sms_error" android:paddingLeft="8.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/register_error" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/verify_sms_voice_layout" android:background="@drawable/panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip">
+                <TextView android:id="@id/verify_sms_voice_header" android:visibility="visible" android:text="@string/verify_voice_header" style="@style/TextGrayDivider" />
+                <TextView android:id="@id/description_2_top" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_marginTop="12.0dip" android:text="@string/verify_voice_description_top" style="@style/Text.Description" />
+                <LinearLayout android:gravity="center" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+                    <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="20.0sp" android:textColor="@color/section_text" android:layout_gravity="left" android:id="@id/verify_sms_phone_number_2" android:paddingLeft="4.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+1 (555) 555-5555" style="@style/Text.Field" />
+                    </FrameLayout>
+                    <View android:layout_gravity="left|center" android:background="@color/divider_gray" android:layout_width="1.0dip" android:layout_height="32.0dip" />
+                    <ImageButton android:layout_gravity="center" android:id="@id/edit_btn_2" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/btn_edit" style="@style/ActionBarButtonStyle" />
+                </LinearLayout>
+                <TextView android:id="@id/description_2_bottom" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:visibility="visible" android:layout_width="fill_parent" android:text="@string/verify_voice_description_bottom" android:layout_weight="1.0" style="@style/Text.Description" />
+                <RelativeLayout android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/sms_pane_call_layout" android:background="@drawable/register_semitrans_pane" android:paddingTop="0.0dip" android:paddingBottom="6.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+                    <RelativeLayout android:gravity="center" android:id="@id/et_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                        <EditText android:textSize="22.0sp" android:typeface="monospace" android:textStyle="bold" android:gravity="center" android:id="@id/verify_sms_code_input" android:layout_width="wrap_content" android:layout_height="wrap_content" android:width="140.0dip" android:digits="0123456789" android:layout_centerInParent="true" android:inputType="phone" />
+                        <ImageView android:id="@id/code_input_blocked" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/edit_input_blocked" android:layout_centerInParent="true" />
+                        <ProgressBar android:layout_gravity="bottom" android:id="@id/progress_bar_code_input_blocked" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_below="@id/verify_sms_code_input" android:layout_alignLeft="@id/verify_sms_code_input" android:layout_alignRight="@id/verify_sms_code_input" android:layout_alignParentBottom="true" style="@android:style/Widget.ProgressBar.Horizontal" />
+                    </RelativeLayout>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/et_wrapper" android:layout_centerVertical="true">
+                        <ImageView android:layout_gravity="center_vertical" android:id="@id/verify_sms_phone" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/register_phone" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <LinearLayout android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <Button android:textStyle="bold" android:gravity="center" android:id="@id/call_btn" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="@string/verify_voice_call_button" android:layout_weight="1.0" android:layout_alignParentBottom="true" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="16.0dip" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

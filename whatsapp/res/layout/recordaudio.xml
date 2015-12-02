@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip">
+        <TextView android:textSize="18.0dip" android:textColor="?android:textColorPrimary" android:ellipsize="end" android:id="@id/title_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/whatsapp_recorder" android:singleLine="true" />
+        <TextView android:textSize="14.0dip" android:textColor="?android:textColorSecondary" android:ellipsize="end" android:id="@id/preview_name_tv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+    <View android:background="#ff484848" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="96.0dip">
+        <ImageButton android:id="@id/record_audio_play_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mviewer_play" style="@style/ActionBarButtonStyle" />
+        <TextView android:textSize="18.0sp" android:id="@id/record_audio_status_tv_1" android:padding="6.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0:00" android:singleLine="true" />
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ProgressBar android:id="@id/record_audio_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_centerInParent="true" style="?android:attr/progressBarStyleHorizontal" />
+            <SeekBar android:id="@id/audio_seekbar" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:focusable="true" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="13.0dip" android:indeterminateOnly="false" android:indeterminateDrawable="@drawable/audio_scrubber_progress" android:progressDrawable="@drawable/audio_scrubber_progress" android:minHeight="13.0dip" android:thumb="@drawable/audio_scrubber_thumb" android:thumbOffset="16.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <TextView android:textSize="18.0sp" android:id="@id/record_audio_status_tv" android:padding="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0:00" android:singleLine="true" />
+    </LinearLayout>
+    <View android:background="#ff484848" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:gravity="center_horizontal" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textColor="?android:textColorPrimary" android:id="@id/record_audio_control_btn" android:layout_width="0.0dip" android:layout_height="48.0dip" android:text="@string/cancel" android:layout_weight="1.0" style="@style/ActionBarButtonStyle" />
+        <View android:id="@id/record_audio_btn_separator" android:background="#ff484848" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="0.0dip" android:layout_marginBottom="0.0dip" />
+        <Button android:textColor="?android:textColorPrimary" android:id="@id/record_audio_cancel_btn" android:layout_width="0.0dip" android:layout_height="48.0dip" android:text="@string/cancel" android:layout_weight="1.0" style="@style/ActionBarButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

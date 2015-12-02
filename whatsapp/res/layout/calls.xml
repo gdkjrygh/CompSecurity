@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textFilterEnabled="true" android:cacheColorHint="@android:color/transparent" android:divider="@drawable/divider_gray" android:dividerHeight="0.5dip" android:headerDividersEnabled="true" android:footerDividersEnabled="true" />
+    <FrameLayout android:gravity="center" android:id="@android:id/empty" android:background="#fffafafa" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/calls_empty_no_calls" android:paddingLeft="32.0dip" android:paddingRight="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:paddingTop="32.0dip" android:layout_width="wrap_content" android:layout_height="0.0dip" android:src="@drawable/icon_calls_empty" android:layout_weight="1.0" />
+            <TextView android:textSize="17.0sp" android:textColor="#ff565656" android:gravity="center" android:paddingTop="48.0dip" android:paddingBottom="48.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/welcome_calls_message" style="@style/Text" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/calls_search_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="center" android:id="@id/search_no_call_matches" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="67.0dip" android:text="@string/no_calls" />
+        </LinearLayout>
+        <include android:id="@id/calls_empty_no_contacts" android:visibility="gone" layout="@layout/empty_tell_a_friend" />
+    </FrameLayout>
+</LinearLayout>

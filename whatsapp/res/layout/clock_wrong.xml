@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:text="@string/app_name" style="@style/FullScreenDialogTitle" />
+    <ScrollView android:background="#ffeaeaea" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="24.0dip" android:paddingTop="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/inaccurate_phone_date" />
+            <TextView android:textStyle="bold" android:paddingTop="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/clock_wrong" style="@style/Text.Field" />
+            <TextView android:id="@id/clock_wrong_date" android:paddingTop="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text.Field" />
+        </LinearLayout>
+    </ScrollView>
+    <View style="@style/FullScreenDialogSeparator" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:background="@color/full_screen_footer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:gravity="center" android:layout_gravity="center" android:id="@id/close" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="280.0dip" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/adjust_date" style="@style/ScreenFooterButton" />
+    </LinearLayout>
+</LinearLayout>

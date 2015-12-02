@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="horizontal" android:background="#66000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip">
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/emoji_btn_holder" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textColor="#99ffffff" android:layout_gravity="center_horizontal" android:id="@id/counter" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageButton android:layout_gravity="bottom" android:id="@id/emoji_picker_btn" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/emoji_btn_white" style="@style/ActionBarButtonStyle" />
+        </LinearLayout>
+        <com.whatsapp.ConversationTextEntry android:scrollbarStyle="outsideOverlay" android:textColor="@android:color/white" android:textColorHint="#66ffffff" android:layout_gravity="center_vertical" android:id="@id/caption" android:background="@drawable/textfield_image_caption" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/add_caption" android:maxLines="6" android:inputType="textCapSentences|textMultiLine" android:imeOptions="actionDone" />
+    </LinearLayout>
+</merge>

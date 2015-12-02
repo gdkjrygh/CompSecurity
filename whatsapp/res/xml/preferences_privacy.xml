@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/settings_privacy" android:key="privacy"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.whatsapp.preference.WaPreferenceCategory android:title="@string/personal_info_visibility" android:key="personal_info_visibility">
+        <com.whatsapp.preference.WaPrivacyPreference android:persistent="false" android:entries="@array/privacy_levels" android:title="@string/settings_privacy_last_seen" android:key="privacy_last_seen" android:widgetLayout="@layout/privacy_progress" android:defaultValue="0" android:entryValues="@array/privacy_values" />
+        <com.whatsapp.preference.WaPrivacyPreference android:persistent="false" android:entries="@array/privacy_levels" android:title="@string/settings_privacy_profile_photo" android:key="privacy_profile_photo" android:widgetLayout="@layout/privacy_progress" android:defaultValue="0" android:entryValues="@array/privacy_values" />
+        <com.whatsapp.preference.WaPrivacyPreference android:persistent="false" android:entries="@array/privacy_levels" android:title="@string/settings_privacy_status" android:key="privacy_status" android:widgetLayout="@layout/privacy_progress" android:defaultValue="0" android:entryValues="@array/privacy_values" />
+        <Preference android:layout="@layout/settings_privacy_message" android:selectable="false" android:key="settings_privacy_message" />
+    </com.whatsapp.preference.WaPreferenceCategory>
+    <com.whatsapp.preference.WaPreferenceCategory android:title="@string/privacy_messaging">
+        <com.whatsapp.preference.WaPreference android:title="@string/settings_block_list" android:key="block_list" android:summary="@string/settings_block_list_summary" />
+        <com.whatsapp.preference.WaCheckBoxPreference android:title="@string/settings_privacy_read_receipts" android:key="read_receipts_enabled" android:defaultValue="true" />
+        <Preference android:layout="@layout/settings_privacy_read_receipts_message" android:selectable="false" />
+    </com.whatsapp.preference.WaPreferenceCategory>
+</PreferenceScreen>

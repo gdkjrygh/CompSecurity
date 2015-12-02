@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/footer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="18.0sp" android:textColor="#ff6b7a81" android:gravity="left|center" android:id="@id/no_participant" android:background="@android:color/white" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:paddingBottom="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cannot_send_not_a_group_participant" />
+        <RelativeLayout android:id="@id/edit_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/buttons" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBottom="@id/text_entry_layout" android:layout_alignParentRight="true">
+                <ImageButton android:id="@id/send" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/send_button_selector" android:scaleType="fitCenter" style="@style/ActionBarButtonStyle" />
+                <ImageButton android:id="@id/voice_note_btn" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/input_mic" android:scaleType="center" style="@style/ActionBarButtonStyle" />
+            </FrameLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/text_entry_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/buttons">
+                <View android:id="@id/emoji_ancor" android:layout_width="0.0dip" android:layout_height="fill_parent" />
+                <ImageButton android:layout_gravity="bottom" android:id="@id/emoji_picker_btn" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/emoji_btn" style="@style/ActionBarButtonStyle" />
+                <com.whatsapp.ConversationTextEntry android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="outsideOverlay" android:layout_gravity="center_vertical" android:id="@id/entry" android:scrollbars="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip" android:layout_marginBottom="@dimen/conversation_text_entry_marginbottom" android:maxLines="6" android:capitalize="sentences" android:autoText="true" android:layout_weight="1.0" android:imeOptions="actionSend" android:scrollbarFadeDuration="300" android:scrollbarDefaultDelayBeforeFade="200" />
+                <ImageButton android:layout_gravity="bottom" android:id="@id/camera_btn" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_camera" android:scaleType="center" style="@style/ActionBarButtonStyle" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/voice_note_layout" android:visibility="gone" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/buttons" android:layout_centerVertical="true">
+                <FrameLayout android:id="@id/voice_note_indicator" android:padding="8.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip">
+                    <ImageView android:id="@id/voice_note_pulse" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/recording_mic_red" android:scaleType="center" />
+                </FrameLayout>
+                <TextView android:textSize="26.0dip" android:textColor="#ff4b4a49" android:gravity="left|center" android:id="@id/voice_note_info" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="00:00" android:lines="1" android:singleLine="true" />
+                <FrameLayout android:clipChildren="true" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_weight="1.0">
+                    <FrameLayout android:id="@id/voice_note_slide_to_cancel_scroller" android:paddingLeft="8.0dip" android:clipChildren="true" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                        <TextView android:textSize="16.0dip" android:textColor="#ff737271" android:ellipsize="none" android:gravity="right|center" android:layout_gravity="right" android:id="@id/voice_note_slide_to_cancel" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/audio_note_slide_to_cancel" android:lines="1" android:scrollHorizontally="false" android:singleLine="true" />
+                    </FrameLayout>
+                    <View android:id="@id/voice_note_slide_to_cancel_animation" android:background="@drawable/slide_cancel_animation_background" android:layout_width="96.0dip" android:layout_height="48.0dip" />
+                </FrameLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/voice_cancel_animation" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/recording_mic_red" android:scaleType="center" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/voice_cancel_trashcan" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/voice_cancel_trashcan_lid" android:layout_width="48.0dip" android:layout_height="wrap_content" android:src="@drawable/bucket_lid" android:scaleType="center" />
+        <ImageView android:layout_width="48.0dip" android:layout_height="wrap_content" android:src="@drawable/bucket_body" android:scaleType="center" />
+    </LinearLayout>
+</merge>

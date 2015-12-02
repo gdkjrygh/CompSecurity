@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/panel_full_width" android:paddingLeft="@dimen/horizontal_padding" android:paddingTop="6.0dip" android:paddingRight="@dimen/horizontal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="outsideOverlay" android:textColor="#ff000000" android:gravity="top" android:id="@id/describe_problem_description_et" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/describe_problem_description" android:maxLines="4" android:minLines="4" android:selectAllOnFocus="true" android:capitalize="sentences" android:autoText="true" android:imeOptions="actionDone" android:scrollbarFadeDuration="300" android:scrollbarDefaultDelayBeforeFade="200" />
+                <Button android:textStyle="bold" android:layout_gravity="center" android:id="@id/describe_problem_help" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="16.0dip" android:text="@string/faq" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/card_h_padding" android:layout_marginTop="@dimen/card_v_padding" android:layout_marginRight="@dimen/card_h_padding" android:layout_marginBottom="@dimen/card_v_padding">
+                <FrameLayout style="@style/CardHeader">
+                    <TextView android:id="@id/screenshots_title" android:text="@string/describe_problem_screenshots" style="@style/CardTitle" />
+                    <View style="@style/CardSeparator" />
+                </FrameLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/screenshots" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="8.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

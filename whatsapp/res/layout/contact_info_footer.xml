@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/phones_header" style="@style/CardHeader">
+        <TextView android:id="@id/phones_title" android:text="@string/contact_phone" style="@style/CardTitle" />
+        <TextView style="@style/CardInfo" />
+        <View style="@style/CardSeparator" />
+    </FrameLayout>
+    <LinearLayout android:gravity="left|center" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="@dimen/group_participant_row_height">
+        <LinearLayout android:gravity="left|center" android:id="@id/phone_btn" android:background="@drawable/selector_orange_gradient" android:paddingLeft="2.0dip" android:layout_width="0.0dip" android:layout_height="@dimen/group_participant_row_height" android:layout_weight="1.0">
+            <LinearLayout android:gravity="left|center" android:layout_gravity="left|center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="14.0sp" android:textColor="@color/contact_phone_type" android:gravity="center_vertical" android:layout_gravity="left|center" android:id="@id/phone_title" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/contact_phone_type" android:gravity="center_vertical" android:layout_gravity="left|center" android:id="@id/phone_tv" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+            <ImageView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/phone_icon" android:padding="8.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_action_call_dark" android:scaleType="center" />
+        </LinearLayout>
+        <View android:id="@id/whatsapp_btn_divider" android:background="#ffdedede" android:layout_width="1.0dip" android:layout_height="32.0dip" />
+        <ImageView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/whatsapp_btn" android:background="@drawable/selector_orange_gradient" android:layout_width="@dimen/group_participant_row_height" android:layout_height="@dimen/group_participant_row_height" android:src="@drawable/ic_action_message_dark" android:scaleType="center" />
+    </LinearLayout>
+    <View android:id="@id/divider" android:background="@drawable/divider_gray" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+</LinearLayout>

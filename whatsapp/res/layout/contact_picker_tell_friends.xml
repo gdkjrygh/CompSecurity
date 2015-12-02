@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/tell_friend_header" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <View android:background="@drawable/divider_gray" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="2.0dip" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/contactpicker_row_content" android:layout_width="fill_parent" android:layout_height="@dimen/contactpicker_help_row_height" android:layout_below="@id/tell_friend_header">
+        <ImageView android:gravity="left|center" android:layout_gravity="left|center" android:id="@id/image" android:layout_width="@dimen/small_avatar_size" android:layout_height="@dimen/small_avatar_size" android:layout_margin="@dimen/imageview_padding" android:src="@drawable/ic_share" android:scaleType="center" />
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="18.0sp" android:textColor="@color/description_gray" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="left|center" android:id="@id/text_tv" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/tell_friends" android:singleLine="true" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

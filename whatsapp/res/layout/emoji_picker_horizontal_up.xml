@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="right" android:layout_gravity="top" android:id="@id/emoji_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="230.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/emoji_main" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:background="@drawable/emoji_popup_main_horizontal_up" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.whatsapp.GalleryView android:id="@id/viewflipper" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ListView android:id="@id/emoji_recent_list" style="@style/EmojiList" />
+                    <TextView android:textColor="?android:textColorPrimaryInverse" android:gravity="center" android:id="@id/emoji_recent_empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_recent_emoji" />
+                </RelativeLayout>
+                <ListView android:id="@id/emoji_smile_list" style="@style/EmojiList" />
+                <ListView android:id="@id/emoji_flower_list" style="@style/EmojiList" />
+                <ListView android:id="@id/emoji_bell_list" style="@style/EmojiList" />
+                <ListView android:id="@id/emoji_car_list" style="@style/EmojiList" />
+                <ListView android:id="@id/emoji_symbols_list" style="@style/EmojiList" />
+            </com.whatsapp.GalleryView>
+        </FrameLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/emoji_group_layout" android:background="@drawable/emoji_popup_group_horizontal_up" android:layout_width="fill_parent" android:layout_height="54.0dip">
+            <RelativeLayout android:orientation="horizontal" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.25">
+                <ImageView android:id="@id/emoji_recent_btn" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/selector_emoji_recent" android:scaleType="center" />
+                <View android:id="@id/emoji_recent_marker" android:background="#ff2da693" android:layout_width="fill_parent" android:layout_height="2.5dip" android:layout_alignParentTop="true" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.25">
+                <ImageView android:id="@id/emoji_smile_btn" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/selector_emoji_smile" android:scaleType="center" />
+                <View android:id="@id/emoji_smile_marker" android:background="#ff2da693" android:layout_width="fill_parent" android:layout_height="2.5dip" android:layout_alignParentTop="true" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.25">
+                <ImageView android:id="@id/emoji_flower_btn" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/selector_emoji_flower" android:scaleType="center" />
+                <View android:id="@id/emoji_flower_marker" android:background="#ff2da693" android:layout_width="fill_parent" android:layout_height="2.5dip" android:layout_alignParentTop="true" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.25">
+                <ImageView android:id="@id/emoji_bell_btn" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/selector_emoji_bell" android:scaleType="center" />
+                <View android:id="@id/emoji_bell_marker" android:background="#ff2da693" android:layout_width="fill_parent" android:layout_height="2.5dip" android:layout_alignParentTop="true" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.25">
+                <ImageView android:id="@id/emoji_car_btn" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/selector_emoji_car" android:scaleType="center" />
+                <View android:id="@id/emoji_car_marker" android:background="#ff2da693" android:layout_width="fill_parent" android:layout_height="2.5dip" android:layout_alignParentTop="true" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.25">
+                <ImageView android:id="@id/emoji_symbols_btn" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/selector_emoji_symbols" android:scaleType="center" />
+                <View android:id="@id/emoji_symbols_marker" android:background="#ff2da693" android:layout_width="fill_parent" android:layout_height="2.5dip" android:layout_alignParentTop="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

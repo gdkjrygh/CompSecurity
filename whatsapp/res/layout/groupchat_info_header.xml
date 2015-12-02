@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/header_placeholder" android:layout_width="fill_parent" android:layout_height="@dimen/info_screen_header" />
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/no_participant" android:paddingLeft="@dimen/card_h_padding" android:paddingTop="@dimen/card_v_padding" android:paddingRight="@dimen/card_h_padding" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/not_a_group_participant" />
+    <LinearLayout android:orientation="vertical" android:id="@id/media_card" android:background="@drawable/panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_v_padding">
+        <FrameLayout style="@style/CardHeader">
+            <TextView android:id="@id/media_title" android:text="@string/view_conversation_media" style="@style/CardTitle" />
+            <TextView android:id="@id/media_info" style="@style/CardInfo" />
+            <View style="@style/CardSeparator" />
+        </FrameLayout>
+        <RelativeLayout android:id="@id/media_btn" android:paddingLeft="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <HorizontalScrollView android:gravity="center_vertical" android:id="@id/media_scroller" android:paddingLeft="4.0dip" android:paddingTop="4.0dip" android:paddingRight="10.0dip" android:paddingBottom="4.0dip" android:scrollbars="none" android:fadingEdgeLength="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:overScrollMode="never" android:requiresFadingEdge="0x1000">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/media_thumbs" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </HorizontalScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/show_friends_card" android:background="@drawable/panel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_v_padding">
+        <RelativeLayout android:paddingLeft="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/show_friends_btn" android:background="@drawable/selector_orange_gradient" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="@string/show_group_locations" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/CardTitle" />
+            <FrameLayout android:id="@id/show_friends_switch_placeholer" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <ProgressBar android:layout_gravity="center" android:id="@id/show_friends_switch_progress" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleSmallInverse" />
+            </FrameLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/locations_card" android:background="@drawable/panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_v_padding">
+        <FrameLayout style="@style/CardHeader">
+            <TextView android:id="@id/locations_title" android:text="@string/group_locations" style="@style/CardTitle" />
+            <TextView android:id="@id/locations_info" style="@style/CardInfo" />
+            <View style="@style/CardSeparator" />
+        </FrameLayout>
+        <RelativeLayout android:id="@id/locations_btn" android:paddingLeft="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <HorizontalScrollView android:gravity="center_vertical" android:id="@id/locations_scroller" android:paddingLeft="4.0dip" android:paddingTop="4.0dip" android:paddingRight="10.0dip" android:paddingBottom="4.0dip" android:scrollbars="none" android:fadingEdgeLength="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:overScrollMode="never" android:requiresFadingEdge="0x1000">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/location_thumbs" android:background="@drawable/selector_orange_gradient" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </HorizontalScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/participants_card" android:background="@drawable/panel_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_v_padding">
+        <FrameLayout style="@style/CardHeader">
+            <TextView android:id="@id/participants_title" android:text="@string/participants_title" style="@style/CardTitle" />
+            <TextView android:id="@id/participants_info" style="@style/CardInfo" />
+            <View style="@style/CardSeparator" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

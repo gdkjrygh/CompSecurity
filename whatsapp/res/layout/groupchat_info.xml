@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:whatsapp="http://schemas.android.com/apk/res-auto">
+    <ListView android:id="@android:id/list" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/card_h_padding" android:layout_marginRight="@dimen/card_h_padding" android:listSelector="@android:color/transparent" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="0.0dip" android:choiceMode="none" android:headerDividersEnabled="false" android:footerDividersEnabled="false" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/header" android:background="@drawable/panel_full_width" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/info_screen_header">
+        <FrameLayout android:gravity="center" android:layout_gravity="center_vertical" android:paddingLeft="9.0dip" android:paddingTop="3.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ProgressBar android:layout_gravity="center" android:id="@id/photo_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleSmallInverse" />
+            <com.whatsapp.ThumbnailPickerButton android:id="@id/photo_btn" android:background="#00000000" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/avatar_group" android:scaleType="center" android:contentDescription="@string/group_photo" whatsapp:tbtnRadius="@dimen/mid_avatar_radius" />
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="left|center" android:orientation="vertical" android:id="@id/subject_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="22.0sp" android:textColor="@color/black" android:ellipsize="end" android:gravity="left" android:layout_gravity="left" android:id="@id/subject_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" />
+            <TextView android:textSize="13.0sp" android:textStyle="normal" android:textColor="@color/dark_gray" android:ellipsize="end" android:gravity="left" android:id="@id/creation_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" />
+            <TextView android:textSize="13.0sp" android:textStyle="normal" android:textColor="@color/dark_gray" android:ellipsize="end" android:gravity="left" android:id="@id/creator_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" />
+        </LinearLayout>
+        <FrameLayout android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="48.0dip" android:layout_height="fill_parent">
+            <View android:layout_gravity="left|center" android:background="@color/divider_gray" android:layout_width="1.0dip" android:layout_height="32.0dip" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/change_subject_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleSmallInverse" />
+            <ImageButton android:layout_gravity="center" android:id="@id/change_subject_btn" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/btn_edit" style="@style/ActionBarButtonStyle" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

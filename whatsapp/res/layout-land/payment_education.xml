@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:background="@drawable/education_background_landscape" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <RelativeLayout android:gravity="center" android:id="@id/center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:id="@id/gift_box" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gift_box_landscape" android:scaleType="center" android:layout_centerInParent="true" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/service_lines" android:paddingBottom="10.0dip" android:layout_width="230.0dip" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <TextView android:textSize="18.0dip" android:typeface="serif" android:textColor="#ffa1a4a4" android:gravity="center" android:id="@id/service_line_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#ffffffff" android:shadowDx="0.0" android:shadowDy="1.5" android:shadowRadius="0.8" />
+                <TextView android:textSize="14.199982dip" android:typeface="serif" android:textStyle="italic" android:textColor="#ff6ca1a5" android:gravity="center" android:id="@id/service_cost" android:paddingTop="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="#ffffffff" android:shadowDx="0.0" android:shadowDy="1.5" android:shadowRadius="0.8" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingTop="120.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <TextView android:textSize="14.0dip" android:textColor="#ffa1a4a4" android:id="@id/help_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/why_dont_sell_adds" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <View style="@style/FullScreenDialogSeparator" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/normal_footer" android:background="@color/full_screen_footer" android:layout_width="fill_parent" android:layout_height="76.0dip">
+        <Button android:gravity="center" android:layout_gravity="center" android:id="@id/initial_sync_done" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:visibility="gone" android:layout_width="280.0dip" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/btn_continue" style="@style/ScreenFooterButton" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/initial_sync_progress" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="24.0dip" android:paddingBottom="4.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="22.0dip" android:textColor="#ffffffff" android:id="@id/initializing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/register_xmpp_title" android:shadowColor="#ff000000" android:shadowDx="0.0" android:shadowDy="-1.5" android:shadowRadius="0.8" />
+                <TextView android:textSize="16.0dip" android:textColor="#ff9faebc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/register_wait_message" android:shadowColor="#ff000000" android:shadowDx="0.0" android:shadowDy="-1.5" android:shadowRadius="0.8" />
+            </LinearLayout>
+            <ProgressBar android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginRight="20.0dip" style="?android:attr/progressBarStyle" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/payment_footer" android:background="@color/full_screen_footer" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:gravity="center" android:id="@id/pay_now" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/pay_now" android:layout_weight="1.0" style="@style/ScreenFooterButton" />
+        <Button android:gravity="center" android:id="@id/pay_later" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="@string/pay_later" android:layout_weight="1.0" style="@style/ScreenFooterButton" />
+        <Button android:gravity="center" android:layout_gravity="center" android:id="@id/pay_info" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/pay_info" android:layout_weight="1.0" style="@style/ScreenFooterButton" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:whatsapp="http://schemas.android.com/apk/res-auto">
+    <com.whatsapp.DividerView android:id="@id/date_divider" style="@style/DateDivider" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="@dimen/media_message_thumb" android:layout_marginLeft="9.0dip" android:layout_marginRight="@dimen/conversation_left_row_margin_right" android:layout_below="@id/date_divider" android:layout_alignParentLeft="true">
+        <LinearLayout android:gravity="bottom" android:layout_gravity="left|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="right" android:orientation="vertical" android:layout_width="@dimen/conversation_control_button_width" android:layout_height="@dimen/media_message_thumb">
+                <LinearLayout android:layout_gravity="left" android:orientation="horizontal" android:id="@id/name_in_group" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.5dip" android:layout_marginTop="4.0dip" android:layout_marginRight="8.5dip">
+                    <TextView android:textSize="@dimen/conversation_participant_name_tv" android:textColor="#ff000000" android:id="@id/name_in_group_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" />
+                    <com.whatsapp.TextEmojiLabel android:textSize="@dimen/conversation_participant_name_tv" android:textColor="#ff999999" android:id="@id/pushname_in_group_tv" android:paddingLeft="12.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" />
+                </LinearLayout>
+                <View android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <TextView android:layout_gravity="right" android:id="@id/date" android:paddingRight="8.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="12:04" style="@style/ConversationDate" />
+                <com.whatsapp.TextEmojiLabel android:textSize="13.5sp" android:ellipsize="end" android:id="@id/vcard_btn" android:maxLines="2" android:textAllCaps="false" style="@style/ConversationControlButtonIncoming" />
+            </LinearLayout>
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/thumb" android:background="#00000000" android:layout_width="@dimen/media_message_thumb" android:layout_height="@dimen/media_message_thumb" android:scaleType="centerCrop" />
+                <com.whatsapp.ThumbnailButton android:layout_gravity="center" android:id="@id/picture" android:layout_width="@dimen/contact_message_picture" android:layout_height="@dimen/contact_message_picture" android:scaleType="centerCrop" whatsapp:tbtnRadius="2.0dip" />
+                <Button android:id="@id/thumb_button" android:background="@drawable/media_overlay_incoming" android:layout_width="@dimen/media_message_thumb" android:layout_height="@dimen/media_message_thumb" android:scaleType="fitCenter" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</merge>

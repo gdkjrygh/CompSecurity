@@ -1,0 +1,27 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.whatsapp;
+
+
+// Referenced classes of package com.whatsapp:
+//            hv, AccountInfoActivity
+
+class tx
+    implements Runnable
+{
+
+    final hv a;
+
+    tx(hv hv1)
+    {
+        a = hv1;
+        super();
+    }
+
+    public void run()
+    {
+        AccountInfoActivity.e(a.a);
+    }
+}

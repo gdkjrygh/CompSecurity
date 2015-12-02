@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="@dimen/card_h_padding" android:paddingRight="@dimen/card_h_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/section_header" android:background="@drawable/panel_top" android:layout_marginTop="@dimen/card_v_padding" style="@style/CardHeader">
+            <TextView android:id="@id/section_title" style="@style/CardTitle" />
+            <TextView android:id="@id/section_icon" style="@style/CardInfo" />
+            <View style="@style/CardSeparator" />
+        </FrameLayout>
+        <RelativeLayout android:id="@id/content" android:background="@drawable/selector_orange_gradient" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="#40000000" android:gravity="left" android:id="@id/remaining" android:paddingLeft="12.0dip" android:paddingTop="4.0dip" android:paddingRight="12.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListItemSubtitle" />
+            <ImageView android:id="@id/contact_photo" android:layout_width="@dimen/thumbnail_size" android:layout_height="@dimen/thumbnail_size" android:layout_marginLeft="12.0dip" android:layout_marginTop="@dimen/thumbnail_padding" android:layout_marginRight="@dimen/thumbnail_padding_right" android:layout_marginBottom="@dimen/thumbnail_padding" android:scaleType="fitCenter" android:layout_alignParentLeft="true" />
+            <ImageView android:id="@id/status" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <LinearLayout android:gravity="left" android:orientation="vertical" android:id="@id/timestamps" android:paddingTop="6.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/status" android:layout_toRightOf="@id/contact_photo" android:layout_centerVertical="false">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:gravity="left" android:id="@id/contact_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/ListItemTitle" />
+                    <TextView android:textColor="@color/list_item_sub_title" android:id="@id/push_name" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ListItemTitle" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/date_time_played_group" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:gravity="left" android:id="@id/date_time_played_label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/message_played" android:layout_weight="1.0" style="@style/ListItemSubtitle" />
+                    <TextView android:id="@id/date_time_played" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ListItemSubtitle" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/date_time_read_group" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:gravity="left" android:id="@id/date_time_read_label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/message_read" android:layout_weight="1.0" style="@style/ListItemSubtitle" />
+                    <TextView android:id="@id/date_time_read" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ListItemSubtitle" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/date_time_delivered_group" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:gravity="left" android:id="@id/date_time_delivered_label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/message_delivered" android:layout_weight="1.0" style="@style/ListItemSubtitle" />
+                    <TextView android:id="@id/date_time_delivered" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ListItemSubtitle" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:id="@id/divider" android:background="@drawable/divider_gray" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

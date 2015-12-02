@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.whatsapp.VideoPreviewLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip">
+            <FrameLayout android:id="@id/video_holder" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.whatsapp.VideoView android:layout_gravity="center" android:id="@id/video" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" />
+                <ImageView android:layout_gravity="center" android:id="@id/video_control" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mviewer_videoplay" android:scaleType="center" />
+                <ImageView android:layout_gravity="center" android:id="@id/thumb" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxHeight="196.0dip" android:minHeight="196.0dip" />
+                <TextView android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/trim_info" android:background="@drawable/video_preview_label_background" android:paddingLeft="4.0dip" android:paddingTop="2.0dip" android:paddingRight="4.0dip" android:paddingBottom="2.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" />
+                <TextView android:textColor="@android:color/white" android:layout_gravity="bottom|left|center" android:id="@id/size" android:background="@drawable/video_preview_label_background" android:paddingLeft="4.0dip" android:paddingTop="2.0dip" android:paddingRight="4.0dip" android:paddingBottom="2.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" />
+                <TextView android:textColor="@android:color/white" android:layout_gravity="bottom|right|center" android:id="@id/duration" android:background="@drawable/video_preview_label_background" android:paddingLeft="4.0dip" android:paddingTop="2.0dip" android:paddingRight="4.0dip" android:paddingBottom="2.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/video_controls" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <SeekBar android:layout_gravity="center" android:id="@id/seekbar" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="2.0dip" android:maxHeight="13.0dip" android:indeterminateOnly="false" android:indeterminateDrawable="@drawable/audio_scrubber_track" android:progressDrawable="@drawable/audio_scrubber_track" android:minHeight="13.0dip" android:thumb="@drawable/seek_thumb_mid_normal" android:thumbOffset="16.0dip" />
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <FrameLayout android:id="@id/timeline_holder" android:paddingLeft="25.0dip" android:paddingRight="25.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+                    <FrameLayout android:id="@id/range_bar_holder" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/video_info" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/media_caption_entry" />
+            </LinearLayout>
+        </com.whatsapp.VideoPreviewLayout>
+        <View android:id="@id/loading" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:background="#ff313131" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="#ff4e4e4e" android:layout_width="fill_parent" android:layout_height="1.5dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+            <Button android:textColor="?textColorPrimary" android:ellipsize="end" android:id="@id/cancel_btn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="1.0" style="@style/ActionBarButtonStyle" />
+            <View android:background="#ff5d5d5d" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+            <Button android:textColor="?textColorPrimary" android:ellipsize="end" android:id="@id/ok_btn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ok" android:layout_weight="1.0" style="@style/ActionBarButtonStyle" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
