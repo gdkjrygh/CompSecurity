@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/iv_gift_icon" android:padding="2.0dip" android:layout_width="65.0dip" android:layout_height="65.0dip" android:scaleType="fitCenter" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/new_image" android:padding="2.0dip" android:layout_width="38.0dip" android:layout_height="25.0dip" android:layout_marginLeft="45.0dip" android:src="@drawable/new_image" android:layout_alignLeft="@id/iv_gift_icon" android:layout_alignParentTop="true" />
+        <ImageView android:id="@id/img_arrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:src="@drawable/listview_arrow" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@android:string/unknownName" />
+        <LinearLayout android:id="@id/tv_layout" android:background="#00ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="17.0sp" android:textColor="#ff000000" android:id="@id/tv_gift_des" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip" android:text="@android:string/unknownName" android:maxLines="3" />
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/gift_grid_item_textsize" android:textStyle="bold" android:textColor="#ffffffff" android:layout_gravity="center" android:id="@id/tv_gift_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@android:string/unknownName" android:singleLine="true" />
+</LinearLayout>

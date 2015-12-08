@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/my_background_color2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/res-auto">
+    <com.google.android.gms.ads.AdView android:id="@id/adView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" ads:adSize="BANNER" ads:adUnitId="@string/banner" />
+    <RelativeLayout android:orientation="vertical" android:background="@color/my_background_color2" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/adView">
+        <RelativeLayout android:orientation="vertical" android:background="@drawable/uiback" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip">
+            <LinearLayout android:orientation="vertical" android:id="@id/decodeParent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <Button android:textColor="#ff000000" android:gravity="center" android:layout_gravity="center" android:id="@id/decodeUrl" android:layout_width="180.0dip" android:layout_height="50.0dip" android:text="@string/decodeURL" />
+            </LinearLayout>
+            <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/decodeParent">
+                <LinearLayout android:orientation="vertical" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <EditText android:textColor="#ff000000" android:textColorHint="#ff000000" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/editURL" android:background="@drawable/uiback2" android:layout_width="fill_parent" android:layout_height="50.0dip" android:hint="http://" android:singleLine="true" />
+                    <RelativeLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/uiback2" android:layout_width="220.0dip" android:layout_height="220.0dip" android:layout_marginTop="15.0dip">
+                        <ImageView android:id="@id/imageQr" android:layout_width="210.0dip" android:layout_height="210.0dip" android:layout_centerInParent="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

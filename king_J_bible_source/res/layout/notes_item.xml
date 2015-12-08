@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rlNotesItem" android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <com.hmobile.common.RobotoTextView android:textSize="16.0dip" android:gravity="left" android:id="@id/txtNotesTitle" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_toLeftOf="@id/btnEdit" style="@style/verse_in_list" />
+        <com.hmobile.common.RobotoTextView android:ellipsize="end" android:gravity="left" android:id="@id/txtNotesDesc" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" android:layout_toLeftOf="@id/btnEdit" android:layout_below="@id/txtNotesTitle" style="@style/verse_in_list" />
+        <com.hmobile.common.RobotoTextView android:gravity="left" android:id="@id/txtBookName" android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/txtNotesDesc" style="@style/bookname_in_list" />
+        <com.hmobile.common.RobotoTextView android:id="@id/txtDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_below="@id/btnDelete" android:layout_alignParentRight="true" style="@style/bookname_in_list" />
+        <Button android:id="@id/btnEdit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/notes_edit_button_text" android:layout_toLeftOf="@id/btnDelete" android:layout_centerVertical="true" />
+        <Button android:id="@id/btnDelete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/notes_delete_button_text" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

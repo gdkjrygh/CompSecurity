@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="left" android:orientation="vertical" android:id="@id/slidingPanel" android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rlHeader" android:background="#ff447194" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <TextView android:id="@id/txtToday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_header" style="@style/header_font_style" />
+    </RelativeLayout>
+    <EditText android:gravity="top" android:id="@id/edtShareText" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_margin="10.0dip" android:layout_below="@id/rlHeader" />
+    <RelativeLayout android:id="@id/rlslidingPanel" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/edtShareText">
+        <TextView android:id="@id/txtContent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_txtContent" style="@style/share_verse_book_name" />
+        <TextView android:linksClickable="true" android:id="@id/txtContentLink" android:paddingTop="2.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/txtContent" style="@style/share_verse_book_name" />
+    </RelativeLayout>
+    <LinearLayout android:id="@id/slidingPanel" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/rlslidingPanel">
+        <ImageView android:id="@id/imgFacebook" android:background="@drawable/fb_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" />
+        <ImageView android:id="@id/imgTwitter" android:background="@drawable/twitter_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" />
+        <ImageView android:id="@id/imgShare" android:background="@drawable/share_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/RlAdview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include android:id="@id/view_ad" layout="@layout/ad_mob" />
+    </RelativeLayout>
+</RelativeLayout>

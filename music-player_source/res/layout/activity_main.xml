@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main_layout" android:background="@color/activity_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.arist.model.skin.ColorRelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <RelativeLayout android:id="@id/main_top" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Button android:id="@id/btn_slide_menu" android:background="@drawable/slide_menu_button_selector" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_alignParentLeft="true" />
+            <ImageView android:id="@id/ationbar_search" android:padding="8.0dip" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/main_search" android:scaleType="fitXY" android:layout_alignParentRight="true" />
+            <com.ijoysoft.appwall.AppWallView android:id="@id/app_wall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/ationbar_search" android:layout_centerVertical="true" my:textSize="11.0sp" my:textMargin="-6.0dip" my:textPadding="3.0dip" my:imageLength="24.0dip" my:imageDrawable="@drawable/gift" my:textBackground="@drawable/circle" my:text="7"
+              xmlns:my="http://schemas.android.com/apk/res/audio.mp3.music.player" />
+            <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:gravity="center_vertical" android:background="@android:color/transparent" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/app_name" android:layout_toRightOf="@id/btn_slide_menu" />
+        </RelativeLayout>
+        <com.arist.view.CustomEditText android:textSize="18.0sp" android:textColor="#ff121212" android:textColorHint="#ffbebebe" android:gravity="bottom" android:id="@id/ationbar_search_edittext" android:background="@drawable/search_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:hint="@string/scanLocalMusic" android:cursorVisible="true" android:singleLine="true" android:drawableRight="@drawable/search_cancel" android:layout_alignParentBottom="true" />
+    </com.arist.model.skin.ColorRelativeLayout>
+    <android.support.v4.view.ViewPager android:id="@id/vpContainer" android:focusable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="2.0dip" android:layout_weight="1.0" />
+    <RelativeLayout android:gravity="center" android:id="@id/iv_compatiblitity" android:layout_width="fill_parent" android:layout_height="10.0dip">
+        <ImageView android:id="@id/iv_comp2" android:layout_width="10.0dip" android:layout_height="fill_parent" android:src="@drawable/p_night" android:scaleType="fitCenter" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/iv_comp1" android:layout_width="10.0dip" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:src="@drawable/p_day" android:scaleType="fitCenter" android:layout_toLeftOf="@id/iv_comp2" />
+        <ImageView android:id="@id/iv_comp3" android:layout_width="10.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:src="@drawable/p_night" android:scaleType="fitCenter" android:layout_toRightOf="@id/iv_comp2" />
+    </RelativeLayout>
+    <include android:id="@id/main_bottom" android:layout_width="fill_parent" android:layout_height="64.0dip" layout="@layout/control_panel_main" />
+    <LinearLayout android:id="@id/main_adv_banner_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

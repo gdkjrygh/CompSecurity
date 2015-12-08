@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/my_background_color2" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/res-auto">
+    <com.google.android.gms.ads.AdView android:id="@id/adView" android:paddingTop="2.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" ads:adSize="FULL_BANNER" ads:adUnitId="@string/banner" />
+    <LinearLayout android:id="@id/clButtonParent" android:background="@drawable/uiback" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="10.0dip" android:weightSum="100.0" android:layout_alignParentBottom="true">
+        <Button android:textColor="#ff000000" android:layout_gravity="center_vertical" android:id="@id/pickcalendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pickc" android:layout_weight="50.0" />
+        <Button android:textColor="#ff000000" android:layout_gravity="center_vertical" android:id="@id/encodecalendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/encode" android:layout_weight="50.0" />
+    </LinearLayout>
+    <ScrollView android:scrollbarStyle="outsideOverlay" android:id="@id/scroll" android:background="@drawable/uiback" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_above="@id/clButtonParent" android:layout_below="@id/adView">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="20.0dip" android:textColor="@android:color/black" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/what" />
+            <EditText android:textColor="#ff000000" android:textColorHint="#ff000000" android:gravity="center" android:id="@id/editcalendar" android:background="@drawable/uiback2" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="2.0dip" android:hint="@string/evname" android:maxLines="1" android:singleLine="true" />
+            <TextView android:textSize="20.0dip" android:textColor="@android:color/black" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/from" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:weightSum="100.0">
+                <Button android:textSize="13.0dip" android:textColor="#ff000000" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select" android:layout_weight="70.0" />
+                <Button android:textSize="13.0dip" android:textColor="#ff000000" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select" android:layout_weight="30.0" />
+            </LinearLayout>
+            <TextView android:textSize="20.0dip" android:textColor="@android:color/black" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/to" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:weightSum="100.0">
+                <Button android:textSize="13.0dip" android:textColor="#ff000000" android:id="@id/date2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select" android:layout_weight="70.0" />
+                <Button android:textSize="13.0dip" android:textColor="#ff000000" android:id="@id/time2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select" android:layout_weight="30.0" />
+            </LinearLayout>
+            <TextView android:textSize="20.0dip" android:textColor="@android:color/black" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/where" />
+            <EditText android:textColor="#ff000000" android:textColorHint="#ff000000" android:gravity="center" android:id="@id/editwhere" android:background="@drawable/uiback2" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="2.0dip" android:hint="@string/evloc" android:maxLines="1" android:singleLine="true" />
+            <TextView android:textSize="20.0dip" android:textColor="@android:color/black" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/desc" />
+            <EditText android:textColor="#ff000000" android:textColorHint="#ff000000" android:gravity="center" android:id="@id/editdescription" android:background="@drawable/uiback2" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="2.0dip" android:hint="@string/evdesc" android:maxLines="1" android:singleLine="true" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

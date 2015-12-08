@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ff343434" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/frm_user_info" android:background="@drawable/top_login_panel_background" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <LinearLayout android:id="@id/layout_sinding_menu" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/icon_profile" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="50.0dip" android:layout_height="fill_parent" android:src="@drawable/app_icon" android:scaleType="fitCenter" android:contentDescription="@android:string/untitled" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="3.0dip" android:layout_marginBottom="3.0dip" android:text="@string/app_lable" style="@style/SlidingMenu.TextView.Title" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/frm_user_info">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+            <TextView android:id="@id/txt_scan" android:layout_width="fill_parent" android:text="@string/media_scan_title" android:drawableLeft="@drawable/ic_menu_scan" style="@style/SlidingMenu.TextView.ItemTitle" />
+            <View style="@style/SlidingMenu.View.SplitLine" />
+            <TextView android:id="@id/txt_search" android:layout_width="fill_parent" android:text="@string/search_music" android:drawableLeft="@drawable/ic_menu_search" style="@style/SlidingMenu.TextView.ItemTitle" />
+            <View style="@style/SlidingMenu.View.SplitLine" />
+            <TextView android:id="@id/txt_play_mode" android:layout_width="fill_parent" android:text="@string/play_mode" android:drawableLeft="@drawable/icon_shuffle" style="@style/SlidingMenu.TextView.ItemTitle" />
+            <View style="@style/SlidingMenu.View.SplitLine" />
+            <RelativeLayout android:orientation="horizontal" android:id="@id/gift_layout" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+                <include android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_alignParentLeft="true" layout="@layout/promotion_icon_layout" />
+                <TextView android:id="@id/txt_gift" android:paddingLeft="50.0dip" android:layout_width="wrap_content" android:text="@string/gift" android:layout_alignParentLeft="true" style="@style/SlidingMenu.TextView.ItemTitle" />
+            </RelativeLayout>
+            <View style="@style/SlidingMenu.View.SplitLine" />
+            <TextView android:id="@id/txt_equalizer" android:layout_width="fill_parent" android:text="@string/equalizer" android:drawableLeft="@drawable/ic_menu_effect" style="@style/SlidingMenu.TextView.ItemTitle" />
+            <View style="@style/SlidingMenu.View.SplitLine" />
+            <TextView android:id="@id/txt_skin" android:layout_width="fill_parent" android:text="@string/change_skin" android:drawableLeft="@drawable/ic_menu_skin" style="@style/SlidingMenu.TextView.ItemTitle" />
+            <View style="@style/SlidingMenu.View.SplitLine" />
+            <TextView android:id="@id/txt_sleep" android:layout_width="fill_parent" android:text="@string/sleep" android:drawableLeft="@drawable/ic_menu_sleepmode" style="@style/SlidingMenu.TextView.ItemTitle" />
+            <View style="@style/SlidingMenu.View.SplitLine" />
+            <TextView android:id="@id/preference_text" android:layout_width="fill_parent" android:text="@string/preferences" android:drawableLeft="@drawable/ic_menu_setting" style="@style/SlidingMenu.TextView.ItemTitle" />
+            <View style="@style/SlidingMenu.View.SplitLine" />
+            <TextView android:id="@id/txt_exit" android:layout_width="fill_parent" android:text="@string/exit" android:drawableLeft="@drawable/ic_menu_exit" style="@style/SlidingMenu.TextView.ItemTitle" />
+        </LinearLayout>
+    </ScrollView>
+    <View android:background="@drawable/top_shadow" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_below="@id/frm_user_info" />
+</RelativeLayout>

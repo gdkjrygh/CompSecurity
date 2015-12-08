@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/my_background_color2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@color/my_background_color2" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/adView">
+        <RelativeLayout android:id="@id/uiParent" android:background="@drawable/uiback" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:id="@id/firstButtonBox" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="2.0" android:layout_alignParentBottom="true">
+                <Button android:textColor="#ff000000" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/custom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="custom action" android:layout_weight="1.0" />
+                <Button android:textColor="#ff000000" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Share action" android:layout_weight="1.0" />
+            </LinearLayout>
+            <TextView android:textSize="26.0dip" android:textColor="#ff000000" android:id="@id/titolol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_centerHorizontal="true" />
+            <RelativeLayout android:id="@id/parentt" android:background="@drawable/uiback" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/titolol" android:layout_alignParentLeft="true">
+                <ImageView android:id="@id/barcodeimage" android:layout_width="120.0dip" android:layout_height="110.0dip" android:layout_centerVertical="true" />
+                <LinearLayout android:orientation="vertical" android:background="@drawable/uiback2" android:layout_width="141.0dip" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                    <RelativeLayout android:id="@id/format" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textColor="#ff000000" android:gravity="center" android:id="@id/formattext" android:layout_width="80.0dip" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+                        <TextView android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:id="@id/formattitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Format: " android:layout_toLeftOf="@id/formattext" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/type" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textColor="#ff000000" android:gravity="center" android:id="@id/typetext" android:layout_width="80.0dip" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+                        <TextView android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:id="@id/typetitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Type: " android:layout_toLeftOf="@id/typetext" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textColor="#ff000000" android:gravity="center" android:id="@id/timetext" android:layout_width="80.0dip" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+                        <TextView android:textStyle="bold" android:textColor="#ff000000" android:gravity="center_horizontal" android:id="@id/timetitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Details: " android:layout_toLeftOf="@id/timetext" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <TextView android:textSize="17.0dip" android:textColor="#ff000000" android:gravity="center_horizontal" android:id="@id/qrtext" android:background="@drawable/uiback2" android:padding="2.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="12.0dip" android:layout_above="@id/firstButtonBox" android:layout_below="@id/parentt" android:fadeScrollbars="false" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.google.android.gms.ads.AdView android:id="@id/adView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" ads:adSize="FULL_BANNER" ads:adUnitId="@string/banner" />
+</RelativeLayout>

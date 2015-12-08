@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.arist.model.skin.ColorProgressBar android:id="@id/musicProgressMain" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/musicProgressMain">
+        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" android:onClick="handleAlbumClicked">
+            <com.arist.model.skin.ColorImageView android:layout_gravity="center_vertical" android:id="@id/controlPanelAlbumPicMain" android:layout_width="54.0dip" android:layout_height="54.0dip" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:src="@drawable/default_album_identify" android:scaleType="centerCrop" android:layout_below="@id/musicProgressMain" />
+            <LinearLayout android:orientation="vertical" android:id="@id/controlPanelText_layout" android:paddingLeft="10.0dip" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="15.0sp" android:textColor="@color/text_black" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/controlPanelTitleMain" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="111111" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1.0" android:marqueeRepeatLimit="marquee_forever" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/controlPanelArtistMain" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="111111" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1.0" android:marqueeRepeatLimit="marquee_forever" />
+            </LinearLayout>
+        </LinearLayout>
+        <include android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/control_3buttons" />
+    </LinearLayout>
+</RelativeLayout>

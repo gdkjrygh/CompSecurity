@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="left" android:orientation="vertical" android:id="@id/slidingPanel" android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rlHeader" android:background="@color/top_blue_bar_color" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <TextView android:id="@id/txtToday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/today_header" style="@style/header_font_style" />
+        <ImageView android:id="@id/imgSearch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_action_search" android:layout_toLeftOf="@id/imgRefresh" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/imgRefresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/refresh" android:layout_toLeftOf="@id/imgActionMenu" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/imgActionMenu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_menu" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/llSearch" android:background="#ff232323" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_below="@id/rlHeader">
+        <ImageView android:id="@id/imgCancelSearch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cancel" />
+        <TextView android:id="@id/txtD" android:background="#ffcdcdcd" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_toRightOf="@id/imgCancelSearch" />
+        <RelativeLayout android:id="@id/rlEditSearch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/imgSearchText" android:layout_toRightOf="@id/txtD">
+            <AutoCompleteTextView android:textSize="14.0dip" android:textColor="#ff000000" android:id="@id/edtSearch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:hint="@string/today_search_hint_text" android:inputType="text" android:imeOptions="actionSearch" />
+            <ImageView android:id="@id/imgCancelSearchText" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/cancel" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/imgSearchText" android:layout_width="wrap_content" android:layout_height="45.0dip" android:src="@drawable/ic_action_search" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/RlAdview" android:layout_below="@id/llSearch" style="@style/all_screen_content_style">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/txtTitleVerse" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/verse_book_of_day_title_style" />
+            <TextView android:id="@id/txtTodayVerse" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/verse_book_of_day_content_style" />
+            <TextView android:id="@id/txtBookInfo" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/verse_book_of_day_info_style" />
+            <Button android:id="@id/btnShareTodayVerse" android:text="@string/share_verse_of_day_button" style="@style/verse_of_day_btn_style" />
+            <TextView android:id="@id/txtTitleBook" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/verse_book_of_day_title_style" />
+            <TextView android:id="@id/txtTodayBook" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/verse_book_of_day_content_style" />
+            <Button android:id="@id/btnReadBookOfDay" android:text="@string/read_verse_of_day_button" style="@style/verse_of_day_btn_style" />
+            <TextView android:id="@id/txtLastRead" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/verse_book_of_day_title_style" />
+            <Button android:id="@id/btnLastReadChapter" android:text="@string/last_read_chapter_button" style="@style/verse_of_day_btn_style" />
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@id/RlAdview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include android:id="@id/view_ad" layout="@layout/ad_mob" />
+    </RelativeLayout>
+</RelativeLayout>

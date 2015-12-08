@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:scrollbars="@null" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/main_linear_heiht_2">
+            <LinearLayout android:id="@id/main_local" android:tag="local" style="@style/main_layout_background">
+                <com.arist.model.skin.ColorImageView android:id="@id/main_icon_local" android:src="@drawable/main_local" style="@style/main_image_icon" />
+                <TextView android:id="@id/main_local_name" android:text="@string/name_all_music" style="@style/main_text" />
+                <TextView android:id="@id/main_local_count" android:text="(0)" style="@style/main_text_small" />
+            </LinearLayout>
+            <View style="@style/main_divider_vertical" />
+            <LinearLayout android:id="@id/main_folder" android:tag="folder" style="@style/main_layout_background">
+                <com.arist.model.skin.ColorImageView android:id="@id/main_icon_folder" android:src="@drawable/main_folder" style="@style/main_image_icon" />
+                <TextView android:id="@id/main_folder_name" android:text="@string/name_folder" style="@style/main_text" />
+                <TextView android:id="@id/main_folder_count" android:text="(0)" style="@style/main_text_small" />
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/main_divider_horizontal" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/main_linear_heiht_2">
+            <LinearLayout android:id="@id/main_artist" android:tag="artist" style="@style/main_layout_background">
+                <com.arist.model.skin.ColorImageView android:id="@id/main_icon_artist" android:src="@drawable/main_artist" style="@style/main_image_icon" />
+                <TextView android:id="@id/main_artist_name" android:text="@string/name_artist" style="@style/main_text" />
+                <TextView android:id="@id/main_artist_count" android:text="(0)" style="@style/main_text_small" />
+            </LinearLayout>
+            <View style="@style/main_divider_vertical" />
+            <LinearLayout android:id="@id/main_album" android:tag="album" style="@style/main_layout_background">
+                <com.arist.model.skin.ColorImageView android:id="@id/main_icon_album" android:src="@drawable/main_album" style="@style/main_image_icon" />
+                <TextView android:id="@id/main_album_name" android:text="@string/name_album" style="@style/main_text" />
+                <TextView android:id="@id/main_album_count" android:text="(0)" style="@style/main_text_small" />
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/main_divider_horizontal" />
+        <TextView android:gravity="center_vertical" android:paddingLeft="12.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/main_linear_heiht_2_half" android:text="@string/name_playlist" style="@style/main_text" />
+        <View style="@style/main_divider_horizontal" />
+        <LinearLayout android:orientation="vertical" android:id="@id/main_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

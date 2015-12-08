@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="left" android:orientation="vertical" android:id="@id/slidingPanel" android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/lltopbar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/btnMostLike" android:text="@string/like_top_btn_text" style="@style/like_share_top_btn_active" />
+        <Button android:id="@id/btnMostShare" android:text="@string/share_top_btn_text" style="@style/like_share_top_btn_inactive" />
+    </LinearLayout>
+    <TextView android:id="@id/txtbar" android:layout_below="@id/lltopbar" style="@style/top_bar_line" />
+    <ListView android:id="@id/lstMostLikeShare" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#00000000" android:divider="@color/divider_color" android:dividerHeight="1.0px" android:layout_above="@id/RlAdview" android:layout_below="@id/txtbar" />
+    <RelativeLayout android:id="@id/RlAdview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include android:id="@id/view_ad" layout="@layout/ad_mob" />
+    </RelativeLayout>
+</RelativeLayout>

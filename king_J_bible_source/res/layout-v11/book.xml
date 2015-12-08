@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="left" android:orientation="vertical" android:id="@id/slidingPanel" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rlHeader" android:background="@color/header_in_center_tab" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.hmobile.common.RobotoTextView android:textSize="16.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@id/txtBookNameAndChapter" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_toLeftOf="@id/imgSearch" />
+        <ImageView android:id="@id/imgSearch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_action_search" android:layout_toLeftOf="@id/imgActionMenu" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/imgActionMenu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_menu" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <LinearLayout android:id="@id/RLBookMarkMenu" android:background="@color/select_verse_header_in_center_tab" android:padding="3.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="45.0dip">
+            <ImageView android:id="@id/imgCancel" android:background="@drawable/cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:id="@id/txtD" android:background="#ffcdcdcd" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" />
+            <LinearLayout android:gravity="center" android:id="@id/llBookMark" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/imgBookMark" android:background="@drawable/highlight" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/llNotes" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/imgNotes" android:background="@drawable/notes" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/RLLike" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/imgLike" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/like_icon" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/RLCopy" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/imgCopy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/copy_icon" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/llFb" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/imgFacebook" android:background="@drawable/fb_icon" android:layout_width="32.0dip" android:layout_height="32.0dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/llTwitter" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/imgTwitter" android:background="@drawable/twitter_icon" android:layout_width="32.0dip" android:layout_height="32.0dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/llShare" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/imgShare" android:background="@drawable/share_icon" android:layout_width="32.0dip" android:layout_height="32.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:id="@id/llSearch" android:background="#50ababab" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="45.0dip">
+            <ImageView android:id="@id/imgCancelSearch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cancel" />
+            <TextView android:id="@id/txtD1" android:background="#ffcdcdcd" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_toRightOf="@id/imgCancelSearch" />
+            <RelativeLayout android:id="@id/rlEditSearch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/imgSearchText" android:layout_toRightOf="@id/txtD1">
+                <AutoCompleteTextView android:textSize="14.0dip" android:textColor="#ff000000" android:id="@id/edtSearch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:hint="@string/search_hint_text" android:inputType="text" android:imeOptions="actionSearch" />
+                <ImageView android:id="@id/imgCancelSearchText" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/cancel" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <ImageView android:id="@id/imgSearchText" android:layout_width="wrap_content" android:layout_height="45.0dip" android:src="@drawable/ic_action_search" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/LLShowBookMark" android:background="@drawable/bookmark_popup_shading" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/RLBookMarkMenu">
+            <EditText android:id="@id/edtBookmarkTitle" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="35.0dip" android:layout_marginTop="10.0dip" android:hint="@string/title_hint_text" />
+            <EditText android:id="@id/edtLable" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="35.0dip" android:layout_marginTop="10.0dip" android:hint="@string/lable_hint_text" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/LLShowBookMark1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/btnSaveNotes" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/save_bookmark_btn_text" android:layout_weight="1.0" style="@style/verse_of_day_btn_style" />
+                <Button android:id="@id/btnCancelNotes" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/cancel_bookmark_btn_text" android:layout_weight="1.0" style="@style/verse_of_day_btn_style" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/RL2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/RlAdview" android:layout_below="@id/rlHeader" style="@style/all_screen_content_style">
+        <ScrollView android:id="@id/scroll" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/ll" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:enabled="true" android:textColor="#80000000" android:id="@id/txtContent" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:selectAllOnFocus="false" android:textIsSelectable="false" />
+            </LinearLayout>
+        </ScrollView>
+        <RelativeLayout android:id="@id/RLAudioControl" android:background="#00000000" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/llNavigationFade">
+            <Button android:id="@id/imgPlay" android:background="#ff3286c7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/book_audio_play_btn_text" />
+            <Button android:id="@id/imgStop" android:background="#ff3286c7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/book_audio_stop_btn_text" android:layout_toRightOf="@id/imgPlay" />
+            <Button android:id="@id/imgPause" android:background="#ff3286c7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/book_audio_pause_btn_text" android:layout_toRightOf="@id/imgStop" />
+        </RelativeLayout>
+        <LinearLayout android:id="@id/llNavigationFade" android:background="#00000000" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <ImageView android:id="@id/imgPre" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/prev_img" android:layout_weight="1.0" />
+            <ImageView android:id="@id/imgAa" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/aa_img" android:layout_weight="1.0" />
+            <ImageView android:id="@id/imgAudio" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/microphn_img" android:layout_weight="1.0" style="@style/audio_btn_style" />
+            <ImageView android:id="@id/imgAudioSetting" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/music_equilizer" android:layout_weight="1.0" />
+            <ImageView android:id="@id/imgNext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/next_img" android:layout_weight="1.0" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/RlAdview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include android:id="@id/view_ad" layout="@layout/ad_mob" />
+    </RelativeLayout>
+    <com.hmobile.tooltip.ToolTipRelativeLayout android:id="@id/activity_main_tooltipframelayout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

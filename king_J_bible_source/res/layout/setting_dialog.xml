@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rlfontsize" android:layout_width="wrap_content" android:layout_height="55.0dip">
+        <com.hmobile.common.RobotoTextView android:id="@id/txtfontsize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_font_size" style="@style/setting_dialog_font" />
+        <Spinner android:entries="@array/font_size_array" android:id="@id/spnFontSize" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_toRightOf="@id/txtfontsize" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rlFontStyle" android:layout_width="wrap_content" android:layout_height="55.0dip" android:layout_below="@id/rlfontsize">
+        <com.hmobile.common.RobotoTextView android:id="@id/txtFontStyleLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_font_style" style="@style/setting_dialog_font" />
+        <Spinner android:entries="@array/font_style_robboto_array" android:id="@id/spnFontStyle" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/txtFontStyleLabel" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <Button android:id="@id/btnSaveSetting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/setting_dialog_save_btn" android:layout_below="@id/rlFontStyle" android:layout_centerHorizontal="true" />
+</RelativeLayout>

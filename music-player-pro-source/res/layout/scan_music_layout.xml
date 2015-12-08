@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/bg_001" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/scan_title_layout" android:background="@drawable/title_bottom_focus" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/scan_back" android:background="@drawable/back_button_selector" android:layout_width="60.0dip" android:layout_height="40.0dip" />
+        <TextView android:textSize="22.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/scanTitle" android:background="#00ffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/media_scan_title" android:singleLine="true" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="250.0dip" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:id="@id/tv_scan_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:layout_gravity="right" android:id="@id/tv_scan_total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <ProgressBar android:id="@id/pbScan" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginTop="10.0dip" android:max="1000" style="?android:attr/progressBarStyleHorizontal" />
+        <Button android:enabled="true" android:textSize="16.0sp" android:layout_gravity="center_horizontal" android:id="@id/btn_scan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/startScan" />
+    </LinearLayout>
+</RelativeLayout>

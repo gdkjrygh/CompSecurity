@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:background="#00ffffff" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/music_item_drag" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="60.0dip">
+        <com.arist.model.skin.ColorImageView android:id="@id/music_item_drag_image" android:background="#00ffffff" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/list_drag_image" android:scaleType="center" />
+        <com.arist.model.skin.ColorImageView android:id="@id/music_item_image" android:background="#00ffffff" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/default_album_identify" android:scaleType="centerCrop" />
+    </LinearLayout>
+    <ImageView android:id="@id/frm_menu" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/media_item_menu" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:contentDescription="@android:string/unknownName" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="#00ffffff" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="58.0dip" android:layout_toLeftOf="@id/frm_menu" android:layout_toRightOf="@id/music_item_drag">
+        <TextView android:textSize="17.0sp" android:textColor="@color/main_text" android:gravity="center_vertical" android:id="@id/itemName" android:background="#00ffffff" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginTop="5.0dip" android:text="@android:string/unknownName" android:singleLine="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/main_text_des" android:gravity="center_vertical" android:id="@id/itemDetail" android:background="#00ffffff" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_marginBottom="5.0dip" android:text="@android:string/unknownName" android:singleLine="true" />
+    </LinearLayout>
+</RelativeLayout>

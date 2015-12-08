@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:id="@id/layout_notify" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/notify_image" android:layout_width="72.0dip" android:layout_height="fill_parent" android:src="@drawable/default_album_identify" android:scaleType="centerCrop" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:layout_toRightOf="@id/notify_image">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <TextView android:gravity="center_vertical" android:id="@id/notify_text" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="单身情歌" android:singleLine="true" android:layout_weight="5.0" />
+            <ImageView android:id="@id/notify_exit" android:padding="4.0dip" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/notify_stop" android:scaleType="centerInside" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/playNotificationBtns" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <TextView android:gravity="center_vertical" android:id="@id/notify_msg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="林志炫" android:singleLine="true" android:layout_weight="3.0" />
+            <ImageView android:gravity="center_vertical" android:id="@id/notify_previous" android:padding="4.0dip" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/notify_previous_selector" android:scaleType="centerInside" android:layout_weight="1.0" />
+            <ImageView android:gravity="center_vertical" android:background="#ff6d6d6d" android:layout_width="1.3299866dip" android:layout_height="20.0dip" />
+            <ImageView android:gravity="center_vertical" android:id="@id/notify_play_pause" android:padding="4.0dip" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/notify_play_selector" android:scaleType="centerInside" android:layout_weight="1.0" />
+            <ImageView android:gravity="center_vertical" android:background="#ff6d6d6d" android:layout_width="1.3299866dip" android:layout_height="20.0dip" />
+            <ImageView android:gravity="center_vertical" android:id="@id/notify_next" android:padding="4.0dip" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="2.0dip" android:src="@drawable/notify_next_selector" android:scaleType="centerInside" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

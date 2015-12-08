@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/activity_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:color="http://schemas.android.com/apk/res/audio.mp3.music.player">
+    <com.arist.model.skin.ColorRelativeLayout android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@id/equalizer_back" android:padding="8.0dip" android:clickable="true" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_back" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:onClick="handleClicked" />
+        <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/equalizer" android:layout_centerInParent="true" />
+        <CheckBox android:id="@id/equalizer_toggler" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:checked="true" android:button="@drawable/btn_toggle_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </com.arist.model.skin.ColorRelativeLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/equalizer_btn_height">
+                <com.arist.model.skin.ColorTextView android:textSize="14.0sp" android:gravity="center" android:id="@id/equalizer_effect" android:background="@drawable/equalizer_spinner_bg" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/manually" android:layout_weight="1.0" android:onClick="handleClicked" color:isTextColorFilterEnabled="false" color:isBackgroundColorFilterEnabled="true" />
+                <com.arist.model.skin.ColorTextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/equalizer_effect_edit" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="3.0sp" android:text="@string/equize_edit" android:onClick="handleClicked" color:isTextColorFilterEnabled="false" color:isBackgroundColorFilterEnabled="true" />
+                <com.arist.model.skin.ColorTextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/equalizer_effect_save" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="3.0sp" android:layout_marginRight="3.0sp" android:text="@string/equize_save" android:onClick="handleClicked" color:isTextColorFilterEnabled="false" color:isBackgroundColorFilterEnabled="true" />
+            </LinearLayout>
+            <include android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:layout_weight="1.0" layout="@layout/include_equze_seekbars" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/equalizer_btn_height">
+                <TextView android:textSize="@dimen/reverb_textsize" android:textColor="@color/text_black" android:gravity="bottom" android:layout_gravity="center_vertical" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/equize_reverb" />
+                <com.arist.model.skin.ColorTextView android:gravity="center" android:id="@id/equalizer_reverb" android:background="@drawable/equalizer_spinner_bg" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="4.0dip" android:text="5656" android:layout_weight="2.5" android:onClick="handleClicked" color:isTextColorFilterEnabled="false" color:isBackgroundColorFilterEnabled="true" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_alignParentBottom="true">
+                <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.arist.model.equize.RotatView android:id="@id/equalizer_bass" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+                    <TextView android:textSize="15.0sp" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/equize_bass" android:layout_below="@id/equalizer_bass" android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.arist.model.equize.RotatView android:id="@id/equalizer_virtual" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+                    <TextView android:textSize="15.0sp" android:textColor="@color/text_black" android:id="@id/equize_tv_virtual" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/equize_virtual" android:layout_below="@id/equalizer_virtual" android:layout_centerHorizontal="true" />
+                    <com.arist.model.skin.ColorImageView android:id="@id/equalizer_help" android:padding="5.0dip" android:clickable="true" android:layout_width="40.0dip" android:layout_height="25.0dip" android:src="@drawable/help_selector" android:layout_alignBottom="@id/equize_tv_virtual" android:layout_alignParentRight="true" android:onClick="handleClicked" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@id/equalizer_enable_view" android:background="#60000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

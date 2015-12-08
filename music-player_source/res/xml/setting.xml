@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/pref_setting"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:layout="@layout/preference_categray" android:title="@string/pref_normal_setting">
+        <CheckBoxPreference android:layout="@layout/preference_list_item" android:title="@string/pref_volume_fade_in_out" android:key="preference_volume_fade" android:widgetLayout="@layout/preference_checkbox" android:defaultValue="false" android:summaryOn="@string/pref_volume_fade_summary_on" android:summaryOff="@string/pref_volume_fade_summary_off" />
+        <ListPreference android:entries="@array/sleep_mode_entries" android:layout="@layout/preference_list_item" android:title="@string/pref_sleep_mode" android:key="sleep_mode" android:defaultValue="1" android:dialogTitle="@string/pref_sleep_mode_dialog_title" android:entryValues="@array/sleep_mode_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preference_categray" android:title="@string/pref_personality_setting">
+        <CheckBoxPreference android:layout="@layout/preference_list_item" android:title="@string/pref_desktop_lrc" android:key="show_desktop_lyrics" android:widgetLayout="@layout/preference_checkbox" android:defaultValue="false" android:summaryOn="@string/pref_desktop_lrc_show" android:summaryOff="@string/pref_desktop_lrc_hide" />
+        <CheckBoxPreference android:layout="@layout/preference_list_item" android:title="@string/pref_shake_to_change_song" android:key="preference_shake_change_music" android:summary="@string/pref_shake_to_change_song_allowed" android:widgetLayout="@layout/preference_checkbox" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preference_categray" android:title="@string/pref_headset_control">
+        <CheckBoxPreference android:layout="@layout/preference_list_item" android:title="@string/pref_headset_extract_to_pause" android:key="preference_headset_out_stop" android:widgetLayout="@layout/preference_checkbox" android:defaultValue="true" />
+        <CheckBoxPreference android:layout="@layout/preference_list_item" android:title="@string/pref_headset_insert_to_play" android:key="preference_headset_in_play" android:widgetLayout="@layout/preference_checkbox" android:defaultValue="false" />
+        <CheckBoxPreference android:layout="@layout/preference_list_item" android:title="@string/pref_headset_control_allowed" android:key="headset_control_allow" android:summary="@string/pref_headset_control_allowed_summary" android:widgetLayout="@layout/preference_checkbox" android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

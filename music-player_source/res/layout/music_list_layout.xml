@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/music_list_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/simple_button_selector" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginBottom="1.0dip">
+            <LinearLayout android:orientation="horizontal" android:id="@id/random_music_layout" android:background="@drawable/simple_button_selector" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="44.0dip" android:layout_marginBottom="1.0dip" android:layout_weight="1.0">
+                <ImageView android:padding="11.0dip" android:layout_width="44.0dip" android:layout_height="fill_parent" android:src="@drawable/main_music_random" android:scaleType="centerInside" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/text_black" android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/play_mode_list_rand" android:singleLine="true" android:layout_weight="1.0" />
+            </LinearLayout>
+            <ImageView android:id="@id/add_music_image" android:background="@drawable/simple_button_selector" android:padding="11.0dip" android:visibility="gone" android:layout_width="44.0dip" android:layout_height="fill_parent" android:src="@drawable/main_add_music" android:scaleType="centerInside" />
+        </LinearLayout>
+        <ListView android:scrollbarSize="2.0dip" android:scrollbarStyle="outsideOverlay" android:id="@id/lvMusic" android:background="#00ffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="#00000000" android:divider="@color/main_divider" android:dividerHeight="1.0dip"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/music_empty_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/image_empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/music_empty_image" android:layout_centerInParent="true" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/main_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/music_empty" android:layout_below="@id/image_empty" android:layout_centerHorizontal="true" />
+        <com.arist.model.skin.ColorTextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/add_music" android:background="@drawable/scan_btn_selector" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/add_music" />
+    </LinearLayout>
+</FrameLayout>

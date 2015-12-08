@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/buttonquedingandshoudong" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="22.0sp" android:textColor="#ffffffff" android:id="@id/equzechoose" android:background="@drawable/equze11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:layout_marginRight="2.0sp" android:text="@string/manually" android:layout_weight="2.0" />
+        <Button android:textSize="22.0sp" android:textColor="#ffffffff" android:id="@id/equzesave" android:background="@drawable/equzesave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0sp" android:layout_marginRight="5.0sp" android:text="@string/ok" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/gsrherharhehgre" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/inggebgadjust" android:background="@drawable/equalizer_adjust_bgbg" android:layout_width="fill_parent" android:layout_height="300.0sp" />
+    </LinearLayout>
+    <LinearLayout android:paddingTop="12.0sp" android:paddingBottom="36.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/gsrherharhehgre" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="12.0sp" android:layout_weight="0.66666">
+            <yong.powerfull.equalizer.MySeekBar android:id="@id/barvolum" android:layout_width="wrap_content" android:layout_height="fill_parent" android:progressDrawable="@drawable/slider_bg" android:thumb="@drawable/thumbvol" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:paddingTop="15.0sp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <yong.powerfull.equalizer.MySeekBar android:gravity="center" android:id="@id/bar2" android:layout_width="wrap_content" android:layout_height="fill_parent" android:progressDrawable="@drawable/slider_bg" android:thumb="@drawable/thumbvol" />
+            <yong.powerfull.equalizer.MySeekBar android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/bar3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:progressDrawable="@drawable/slider_bg" android:thumb="@drawable/thumbvol" />
+            <yong.powerfull.equalizer.MySeekBar android:gravity="center" android:id="@id/bar4" android:layout_width="wrap_content" android:layout_height="fill_parent" android:progressDrawable="@drawable/slider_bg" android:thumb="@drawable/thumbvol" />
+            <yong.powerfull.equalizer.MySeekBar android:gravity="center" android:id="@id/bar5" android:layout_width="wrap_content" android:layout_height="fill_parent" android:progressDrawable="@drawable/slider_bg" android:thumb="@drawable/thumbvol" />
+            <yong.powerfull.equalizer.MySeekBar android:gravity="center" android:id="@id/bar6" android:layout_width="wrap_content" android:layout_height="fill_parent" android:progressDrawable="@drawable/slider_bg" android:thumb="@drawable/thumbvol" />
+        </LinearLayout>
+    </LinearLayout>
+    <yong.powerfull.equalizer.VisualizerView android:id="@id/activity_player_visualizer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_above="@id/gsrherharhehgre" android:layout_below="@id/buttonquedingandshoudong" android:layout_centerHorizontal="true" />
+</RelativeLayout>

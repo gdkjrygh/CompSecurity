@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="left" android:orientation="vertical" android:id="@id/slidingPanel" android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rlHeader" android:layout_width="fill_parent" android:layout_height="50.0dip" style="@style/header_style">
+        <TextView android:id="@id/txtToday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_header" style="@style/header_font_style" />
+        <ImageView android:id="@id/imgActionMenu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_menu" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/scroll" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/RlAdview" android:layout_below="@id/rlHeader">
+        <LinearLayout android:orientation="vertical" android:id="@id/llscrollContent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/rlAboutBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <com.hmobile.common.RobotoTextView android:id="@id/txt01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_about_tab" style="@style/setting_divider_text" />
+                <TextView android:id="@id/txt02" android:background="@color/divider_color" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_below="@id/txt01" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/llInner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@id/rlAboutBook" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/img01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:src="@drawable/ic_launcher" />
+                    <com.hmobile.common.RobotoTextView android:id="@id/txt3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_about_text" android:layout_toRightOf="@id/img01" style="@style/setting_font" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/rlRate" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.hmobile.common.RobotoTextView android:id="@id/txt03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_rate_app" android:layout_centerVertical="true" style="@style/setting_font" />
+                    <ImageView android:id="@id/img02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/navigation_arrow" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <TextView android:id="@id/divider2" android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/divider_dark" />
+                <RelativeLayout android:id="@id/rlMoreApps" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.hmobile.common.RobotoTextView android:id="@id/txt04" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_more_app" android:layout_centerVertical="true" style="@style/setting_font" />
+                    <ImageView android:id="@id/img03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/navigation_arrow" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <TextView android:id="@id/divider3" android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/divider_dark" />
+                <RelativeLayout android:id="@id/rlTerms" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.hmobile.common.RobotoTextView android:id="@id/txt05" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_terms_of_use" android:layout_centerVertical="true" style="@style/setting_font" />
+                    <ImageView android:id="@id/img04" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/navigation_arrow" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <TextView android:id="@id/divider4" android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/divider_dark" />
+                <RelativeLayout android:id="@id/rlPrivacy" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.hmobile.common.RobotoTextView android:id="@id/txt06" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_privacy_policy" android:layout_centerVertical="true" style="@style/setting_font" />
+                    <ImageView android:id="@id/img05" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/navigation_arrow" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <TextView android:id="@id/divider5" android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/divider_dark" />
+                <RelativeLayout android:id="@id/rlEmailUpdates" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.hmobile.common.RobotoTextView android:id="@id/txt08" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_email_update" android:layout_centerVertical="true" style="@style/setting_font" />
+                    <ImageView android:id="@id/img07" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/navigation_arrow" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <TextView android:id="@id/divider7" android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/divider_dark" />
+                <RelativeLayout android:id="@id/rlWebsite" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.hmobile.common.RobotoTextView android:id="@id/txt09" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_website" android:layout_centerVertical="true" style="@style/setting_font" />
+                    <ImageView android:id="@id/img08" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/navigation_arrow" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <TextView android:id="@id/divider8" android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/divider_dark" />
+                <RelativeLayout android:id="@id/rlFeedback" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.hmobile.common.RobotoTextView android:id="@id/txt10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_feedback" android:layout_centerVertical="true" style="@style/setting_font" />
+                    <ImageView android:id="@id/img09" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/navigation_arrow" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <TextView android:id="@id/divider9" android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/divider_dark" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/rlSettingBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <com.hmobile.common.RobotoTextView android:id="@id/txt11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_setting_tab" style="@style/setting_divider_text" />
+                <TextView android:id="@id/txt12" android:background="@color/divider_color" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_below="@id/txt11" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/llSetting" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@id/rlNotification" android:layout_width="fill_parent" android:layout_height="55.0dip">
+                    <com.hmobile.common.RobotoTextView android:gravity="left" android:id="@id/txtNotificationLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/setting_notification" style="@style/setting_font" />
+                    <CheckBox android:id="@id/chkOnOffNotification" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <TextView android:id="@id/divider11" android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/divider_dark" />
+                <RelativeLayout android:id="@id/rlAlertTime" android:layout_width="fill_parent" android:layout_height="55.0dip">
+                    <com.hmobile.common.RobotoTextView android:gravity="left" android:id="@id/txtAlertTimeLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/setting_set_alert_time" android:layout_centerVertical="false" style="@style/setting_font" />
+                    <com.hmobile.common.RobotoTextView android:gravity="left" android:id="@id/txtAlertTimeValue" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/setting_set_alert_timevalue" android:layout_below="@id/txtAlertTimeLabel" style="@style/setting_font" />
+                </RelativeLayout>
+                <TextView android:id="@id/divider12" android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/divider_dark" />
+                <RelativeLayout android:id="@id/rlfontsize" android:layout_width="fill_parent" android:layout_height="55.0dip" android:layout_below="@id/divline">
+                    <com.hmobile.common.RobotoTextView android:id="@id/txtfontsize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_font_size" style="@style/setting_font" />
+                    <Spinner android:entries="@array/font_size_array" android:id="@id/spnFontSize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <TextView android:id="@id/divider1" android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/divider_dark" />
+                <RelativeLayout android:id="@id/rlFontStyle" android:layout_width="fill_parent" android:layout_height="55.0dip">
+                    <com.hmobile.common.RobotoTextView android:id="@id/txtFontStyleLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_font_style" style="@style/setting_font" />
+                    <Spinner android:entries="@array/font_style_robboto_array" android:id="@id/spnFontStyle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <TextView android:id="@id/divider13" android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/divider_dark" />
+                <RelativeLayout android:id="@id/rlSpeechSpeed" android:layout_width="fill_parent" android:layout_height="55.0dip">
+                    <com.hmobile.common.RobotoTextView android:id="@id/txtSpeechSpeed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_audio_speed" style="@style/setting_font" />
+                    <Spinner android:entries="@array/audio_speed_array" android:id="@id/spnAudioSpeed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <TextView android:id="@id/divider14" android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/divider_dark" />
+                <RelativeLayout android:id="@id/rlSpeechPitch" android:layout_width="fill_parent" android:layout_height="55.0dip">
+                    <com.hmobile.common.RobotoTextView android:id="@id/txtSpeechPitch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_audio_pitch" style="@style/setting_font" />
+                    <SeekBar android:id="@id/seekAudioPitch" android:layout_width="120.0dip" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:max="22" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <TextView android:id="@id/divider15" android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/divider_dark" />
+                <RelativeLayout android:id="@id/rlLight" android:layout_width="fill_parent" android:layout_height="55.0dip">
+                    <RelativeLayout android:id="@id/rlLight01" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                        <com.hmobile.common.RobotoTextView android:textSize="16.0dip" android:textColor="#ff000000" android:id="@id/txtLowLightLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/setting_low_light" />
+                        <com.hmobile.common.RobotoTextView android:textColor="@color/gray_font_color" android:id="@id/txtLowLighthint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip" android:text="@string/setting_low_light_dark_hint" android:layout_below="@id/txtLowLightLabel" />
+                    </RelativeLayout>
+                    <CheckBox android:id="@id/chkLowLight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <TextView android:id="@id/divider16" android:layout_width="fill_parent" android:layout_height="1.0px" style="@style/divider_dark" />
+                <RelativeLayout android:id="@id/rlNavigationFade" android:layout_width="fill_parent" android:layout_height="55.0dip">
+                    <com.hmobile.common.RobotoTextView android:gravity="left" android:id="@id/txtNavigationLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/setting_navigation_fade_alwayes_visible" android:layout_toLeftOf="@id/chkNavigationFade" style="@style/setting_font" />
+                    <CheckBox android:id="@id/chkNavigationFade" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout android:id="@id/rlWidgetBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <com.hmobile.common.RobotoTextView android:id="@id/txtwidgetSetting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_widget_setting_tab" style="@style/setting_divider_text" />
+                <TextView android:id="@id/txtThirdDivider" android:background="@color/divider_color" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_below="@id/txtwidgetSetting" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/llWidget" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:id="@id/llIncludeWidget" layout="@layout/widget_setting" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@id/RlAdview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include android:id="@id/view_ad" layout="@layout/ad_mob" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/slidingPanel" android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rlHeader" android:background="#ff447194" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <TextView android:id="@id/txtHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_content_settings_title" style="@style/header_font_style" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rlBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/RlAdview" android:layout_below="@id/rlHeader" style="@style/all_screen_content_style">
+        <TextView android:id="@id/txtContentText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" style="@style/terms_privacy_content_text" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/RlAdview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include android:id="@id/view_ad" layout="@layout/ad_mob" />
+    </RelativeLayout>
+</RelativeLayout>

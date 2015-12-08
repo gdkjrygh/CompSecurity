@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/play_layout" android:background="@drawable/bg_001" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/music_bottom" android:background="#40000000" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <SeekBar android:orientation="horizontal" android:id="@id/musicProgress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="1000" />
+            <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:id="@id/tvCurrentTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0:00" android:layout_alignParentLeft="true" />
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:id="@id/tvTotalTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="180.0dip" android:text="0:00" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <include android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="64.0dip" layout="@layout/control_4buttons" />
+    </LinearLayout>
+    <RelativeLayout android:orientation="vertical" android:id="@id/music_top" android:background="#40000000" android:layout_width="fill_parent" android:layout_height="@dimen/play_layout_albam_hight">
+        <ImageView android:id="@id/albumPic" android:layout_width="fill_parent" android:layout_height="@dimen/play_layout_albam_hight" android:layout_marginTop="20.0dip" android:src="@drawable/bg_albumdetail_default" android:layout_centerHorizontal="true" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="30.0dip" android:paddingBottom="@dimen/play_layout_text_Bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:textSize="18.0sp" android:gravity="left" android:id="@id/tvMusicArtist" android:layout_weight="24.0" style="@style/textview1_style" />
+            <TextView android:textSize="25.0sp" android:ellipsize="marquee" android:gravity="left" android:id="@id/tvMusicName" android:focusable="true" android:focusableInTouchMode="true" android:scrollHorizontally="true" android:layout_weight="28.0" android:marqueeRepeatLimit="marquee_forever" style="@style/textview1_style" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@id/bg_shadow" android:background="@drawable/play_control_bar_bg_shadow" android:layout_width="fill_parent" android:layout_height="6.0dip" android:layout_below="@id/music_top" />
+    <com.arist.MyView.LyricView android:textSize="20.0sp" android:textColor="#ccffffff" android:gravity="center" android:id="@id/tvMusicLyric" android:background="#40000000" android:paddingLeft="30.0dip" android:paddingTop="5.0dip" android:paddingRight="30.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/music_bottom" android:layout_below="@id/bg_shadow" />
+    <yong.powerfull.equalizer.VisualizerView android:id="@id/activity_player_visualizer" android:layout_width="fill_parent" android:layout_height="150.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

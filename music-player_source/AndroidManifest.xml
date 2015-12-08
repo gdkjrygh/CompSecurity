@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="audio.mp3.music.player" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <application android:icon="@drawable/app_icon" android:label="@string/app_name" android:name="com.arist.activity.MyApplication" android:theme="@android:style/WindowTitleBackground">
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:exported="true" android:label="@string/app_name" android:name="com.arist.activity.WelcomeActivity" android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.arist.activity.MainActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.arist.activity.MusicPlayActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/app_name" android:name="com.arist.activity.SettingScreen"/>
+        <activity android:label="@string/app_name" android:name="com.arist.activity.ScanMusicActivity"/>
+        <activity android:name="com.arist.activity.EqualizerActivity" android:screenOrientation="portrait" android:theme="@android:style/WindowTitle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.arist.activity.LrcBrowseActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.arist.activity.AddToListActivity"/>
+        <service android:label="com.arist.service.MusicPlayService" android:name="com.arist.service.MusicPlayService" android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.arist.service.MusicPlayService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.arist.service.MusicDownloadService">
+            <intent-filter>
+                <action android:name="com.arist.service.MusicDownloadService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.arist.model.scan.MediaScanService"/>
+        <service android:name="com.arist.service.DeskLrcService"/>
+        <receiver android:label="@string/Widget4x1White" android:name="com.arist.widget.Widget4x1White">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="audio.mp3.music.player.action.music_changed"/>
+                <action android:name="audio.mp3.music.player.action.STATUS_CHANGED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_four_white"/>
+        </receiver>
+        <receiver android:label="@string/Widget4x1Transparent" android:name="com.arist.widget.Widget4x1Transparent">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="audio.mp3.music.player.action.music_changed"/>
+                <action android:name="audio.mp3.music.player.action.STATUS_CHANGED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_four_transparent"/>
+        </receiver>
+        <receiver android:label="@string/Widget2x2Transparent" android:name="com.arist.widget.Widget2x2Transparent">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="audio.mp3.music.player.action.music_changed"/>
+                <action android:name="audio.mp3.music.player.action.STATUS_CHANGED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_2x2"/>
+        </receiver>
+        <receiver android:exported="true" android:name="com.arist.service.MediaButtonReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.arist.service.RestartPlayerServiceReceiver">
+            <intent-filter>
+                <action android:name="audio.mp3.music.player.action.play"/>
+                <action android:name="audio.mp3.music.player.action.net_play"/>
+                <action android:name="audio.mp3.music.player.action.previous"/>
+                <action android:name="audio.mp3.music.player.action.next"/>
+                <action android:name="audio.mp3.music.player.action.clear_notify"/>
+                <action android:name="audio.mp3.music.player.action.CHECK_DESK_LRC"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="UMENG_APPKEY" android:value="53b6b76856240b45d705a6b5"/>
+        <meta-data android:name="UMENG_CHANNEL" android:value="googleplay"/>
+        <activity android:name="com.ijoysoft.appwall.GiftActivity"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.google.android.gms.ads.AdActivity"/>
+    </application>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+</manifest>

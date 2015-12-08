@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ff121212" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.hmobile.common.RobotoTextView android:id="@id/Title" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/exit_dialog_text_style" />
+    <RelativeLayout android:id="@id/rlContent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_below="@id/Title" android:layout_centerHorizontal="true">
+        <Button android:id="@id/btnOk" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="@string/close_dialog_ok" />
+        <Button android:id="@id/btnCancel" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="@string/close_dialog_cancel" android:layout_toRightOf="@id/btnOk" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rlRate" android:background="@drawable/rate_dialog_rounded" android:padding="5.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/rlContent" android:layout_centerHorizontal="true">
+        <com.hmobile.common.RobotoTextView android:id="@id/txtRateTitle" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/exit_dialog_text_style" />
+        <Button android:id="@id/btnNow" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="@string/exit_dialog_ok" android:layout_toLeftOf="@id/btnLater" android:layout_below="@id/txtRateTitle" />
+        <Button android:id="@id/btnLater" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="@string/exit_dialog_cancel" android:layout_below="@id/txtRateTitle" android:layout_centerHorizontal="true" />
+        <Button android:id="@id/btnNever" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="@string/exit_dialog_never" android:layout_toRightOf="@id/btnLater" android:layout_below="@id/txtRateTitle" />
+    </RelativeLayout>
+</RelativeLayout>

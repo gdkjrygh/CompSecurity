@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/music_play_layout_album" android:layout_width="300.0dip" android:layout_height="300.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/music_play_buttons" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/music_play_equalizer" android:padding="8.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="0.0dip" android:src="@drawable/music_play_equalizer" android:scaleType="centerInside" android:layout_weight="1.0" android:onClick="handleEqualizerClicked" />
+            <ImageView android:id="@id/music_play_mode" android:padding="8.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="0.0dip" android:src="@drawable/mode_list" android:scaleType="centerInside" android:layout_weight="1.0" android:onClick="handleModeClicked" />
+            <ImageView android:id="@id/music_play_share" android:padding="8.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="0.0dip" android:src="@drawable/music_play_share" android:scaleType="centerInside" android:layout_weight="1.0" android:onClick="handleShareClicked" />
+            <ImageView android:id="@id/music_play_favourite" android:padding="8.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="0.0dip" android:src="@drawable/music_play_favourite_selector" android:scaleType="centerInside" android:layout_weight="1.0" android:onClick="handleFavouriteClicked" />
+        </LinearLayout>
+        <ImageView android:id="@id/music_play_album_image" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/default_album_identify_large" android:scaleType="fitCenter" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:textSize="18.0sp" android:textColor="@color/text_black" android:id="@id/music_play_artist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="HHHHHHHH" android:singleLine="true" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="13.0sp" android:textColor="@color/text_gray" android:id="@id/music_play_album_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="HHHHHHHH" android:singleLine="true" android:layout_centerHorizontal="true" />
+</LinearLayout>

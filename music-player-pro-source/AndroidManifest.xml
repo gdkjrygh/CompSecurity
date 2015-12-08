@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="yong.media.moobo.musicplayer" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:icon="@drawable/app_icon" android:label="@string/app_lable" android:name="com.arist.MusicPlayer.MyApplication" android:theme="@style/AppBaseTheme">
+        <activity android:label="@string/app_lable" android:name="com.arist.MusicPlayer.WelcomeActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_lable" android:launchMode="singleTask" android:name="com.arist.MusicPlayer.MainActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_lable" android:launchMode="singleTask" android:name="com.arist.MusicPlayer.MusicPlayActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/skin_setting_name" android:name="com.arist.MusicPlayer.SkinSetting" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_lable" android:name="com.arist.MusicPlayer.SettingScreen"/>
+        <activity android:label="@string/app_lable" android:name="com.arist.MusicPlayer.AboutActivity"/>
+        <activity android:label="@string/app_lable" android:name="com.arist.MusicPlayer.AboutDialog" android:theme="@style/Theme.CustomDialog"/>
+        <activity android:label="@string/app_lable" android:name="com.arist.MusicPlayer.ScanMusicActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_lable" android:name="com.yong.gift.GiftActivity"/>
+        <service android:name="com.arist.service.MusicPlayService">
+            <intent-filter>
+                <action android:name="com.arist.service.MusicPlayService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.arist.service.MusicDownloadService">
+            <intent-filter>
+                <action android:name="com.arist.service.MusicDownloadService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.arist.service.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.arist.service.MusicPlayService$playControlReciever">
+            <intent-filter>
+                <action android:name="com.MediaPlayer.action.WIDGET_PLAY"/>
+                <action android:name="com.MediaPlayer.action.WIDGET_NEXT"/>
+                <action android:name="com.MediaPlayer.action.WIDGET_PREVIOUS"/>
+                <action android:name="com.MediaPlayer.action.WIDGET_EXIT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="yong.powerfull.equalizer.Equize" android:screenOrientation="portrait" android:theme="@style/test"/>
+        <receiver android:label="@string/Widget4x1White" android:name="com.arist.Widget.Widget4x1White">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.MediaPlayer.action.MUSIC_CHANGED"/>
+                <action android:name="com.MediaPlayer.action.MEDIAPLAYER_INFO"/>
+                <action android:name="com.MediaPlayer.action.STATUS_CHANGED"/>
+                <action android:name="com.MediaPlayer.action.ALBUM_PIC_CHANGED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_four_white"/>
+        </receiver>
+        <receiver android:label="@string/Widget4x1Transparent" android:name="com.arist.Widget.Widget4x1Transparent">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.MediaPlayer.action.MUSIC_CHANGED"/>
+                <action android:name="com.MediaPlayer.action.MEDIAPLAYER_INFO"/>
+                <action android:name="com.MediaPlayer.action.STATUS_CHANGED"/>
+                <action android:name="com.MediaPlayer.action.ALBUM_PIC_CHANGED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_four_transparent"/>
+        </receiver>
+        <receiver android:label="@string/Widget2x2Transparent" android:name="com.arist.Widget.Widget2x2Transparent">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.MediaPlayer.action.MUSIC_CHANGED"/>
+                <action android:name="com.MediaPlayer.action.MEDIAPLAYER_INFO"/>
+                <action android:name="com.MediaPlayer.action.STATUS_CHANGED"/>
+                <action android:name="com.MediaPlayer.action.ALBUM_PIC_CHANGED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_2x2"/>
+        </receiver>
+        <activity android:name="net.coocent.android.xmlparser.GiftActivity" android:screenOrientation="portrait"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.google.android.gms.ads.AdActivity"/>
+        <meta-data android:name="UMENG_APPKEY" android:value="5292fa7956240b948312e652"/>
+        <meta-data android:name="UMENG_CHANNEL" android:value="google"/>
+    </application>
+</manifest>

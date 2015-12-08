@@ -1,0 +1,80 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.gms.drive.internal;
+
+import android.os.Parcel;
+import com.google.android.gms.common.internal.safeparcel.a;
+import com.google.android.gms.common.internal.safeparcel.b;
+import com.google.android.gms.drive.DrivePreferences;
+
+// Referenced classes of package com.google.android.gms.drive.internal:
+//            OnDrivePreferencesResponse
+
+public class ap
+    implements android.os.Parcelable.Creator
+{
+
+    public ap()
+    {
+    }
+
+    static void a(OnDrivePreferencesResponse ondrivepreferencesresponse, Parcel parcel, int i)
+    {
+        int j = b.H(parcel);
+        b.c(parcel, 1, ondrivepreferencesresponse.CK);
+        b.a(parcel, 2, ondrivepreferencesresponse.QN, i, false);
+        b.H(parcel, j);
+    }
+
+    public OnDrivePreferencesResponse au(Parcel parcel)
+    {
+        int j = com.google.android.gms.common.internal.safeparcel.a.G(parcel);
+        int i = 0;
+        DrivePreferences drivepreferences = null;
+        do
+        {
+            if (parcel.dataPosition() < j)
+            {
+                int k = com.google.android.gms.common.internal.safeparcel.a.F(parcel);
+                switch (com.google.android.gms.common.internal.safeparcel.a.aH(k))
+                {
+                default:
+                    com.google.android.gms.common.internal.safeparcel.a.b(parcel, k);
+                    break;
+
+                case 1: // '\001'
+                    i = com.google.android.gms.common.internal.safeparcel.a.g(parcel, k);
+                    break;
+
+                case 2: // '\002'
+                    drivepreferences = (DrivePreferences)com.google.android.gms.common.internal.safeparcel.a.a(parcel, k, DrivePreferences.CREATOR);
+                    break;
+                }
+            } else
+            if (parcel.dataPosition() != j)
+            {
+                throw new com.google.android.gms.common.internal.safeparcel.a.a((new StringBuilder()).append("Overread allowed size end=").append(j).toString(), parcel);
+            } else
+            {
+                return new OnDrivePreferencesResponse(i, drivepreferences);
+            }
+        } while (true);
+    }
+
+    public OnDrivePreferencesResponse[] bJ(int i)
+    {
+        return new OnDrivePreferencesResponse[i];
+    }
+
+    public Object createFromParcel(Parcel parcel)
+    {
+        return au(parcel);
+    }
+
+    public Object[] newArray(int i)
+    {
+        return bJ(i);
+    }
+}

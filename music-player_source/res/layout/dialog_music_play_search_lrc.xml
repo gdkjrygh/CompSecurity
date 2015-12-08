@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/lrc_search_title" android:text="@string/lrc_search_title" style="@style/dialog_title_style" />
+    <View style="@style/dialog_title_divider_style" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:minHeight="120.0dip" android:layout_weight="1.0">
+        <ListView android:id="@id/lrc_search_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#00000000" android:divider="@color/splite_line_color" android:dividerHeight="1.0px" android:choiceMode="singleChoice" />
+    </LinearLayout>
+    <View style="@style/dialog_horizontal_divider_style" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <TextView android:id="@id/dialog_button_search_online" android:text="@string/search_online" style="@style/dialog_button_style" />
+        <View style="@style/dialog_vertical_divider_style" />
+        <TextView android:id="@id/dialog_button_ok" android:text="@string/lrc_manual_search" style="@style/dialog_button_style" />
+    </LinearLayout>
+</LinearLayout>

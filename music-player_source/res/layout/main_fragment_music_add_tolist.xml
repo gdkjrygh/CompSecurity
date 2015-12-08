@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.arist.model.skin.ColorRelativeLayout android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@id/music_play_back" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/back" android:layout_centerVertical="true" android:onClick="handleBackClicked" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/music_play_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/add_music" android:singleLine="true" android:layout_centerInParent="true" />
+    </com.arist.model.skin.ColorRelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="17.0sp" android:textColor="@color/main_text" android:gravity="center_vertical" android:background="#00ffffff" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textSize="17.0sp" android:textColor="@color/main_text" android:gravity="center_vertical" android:background="#00ffffff" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="6.0dip" android:text="@string/select_all" android:singleLine="true" />
+        <com.arist.model.skin.ColorCheckBox android:id="@id/main_info_checkbox" android:padding="10.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="2.0dip" android:layout_weight="1.0">
+        <ListView android:id="@id/music_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="#00000000" android:divider="@color/main_divider" android:dividerHeight="1.0px" android:choiceMode="multipleChoice" />
+        <RelativeLayout android:layout_gravity="bottom" android:id="@id/main_info_save_parent" android:background="#29000000" android:padding="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.arist.model.skin.ColorTextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/main_info_save" android:background="@drawable/scan_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_music" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

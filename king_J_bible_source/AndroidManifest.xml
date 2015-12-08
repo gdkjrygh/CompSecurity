@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.hmobile.biblekjv" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RAISED_THREAD_PRIORITY"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <application android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="com.hmobile.biblekjv.HolyBibleApplication" android:theme="@style/AppTheme">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/FACEBOOK_APP_ID"/>
+        <activity android:label="@string/title_activity_main" android:name=".TodayActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".BookActivity"/>
+        <activity android:name=".TermsOfUseActivity"/>
+        <activity android:name=".PrivacyPolicyActivity"/>
+        <activity android:name=".BookMarkesActivity"/>
+        <activity android:name=".FavoritesActivity"/>
+        <activity android:name=".SettingsActivity"/>
+        <activity android:name=".ShareActivity"/>
+        <activity android:name=".MostLikeShareActivity"/>
+        <activity android:name="com.facebook.LoginActivity"/>
+        <activity android:name=".SelectActivity"/>
+        <activity android:exported="true" android:name=".MainBookActivity"/>
+        <activity android:name=".SearchResultActivity"/>
+        <activity android:name=".InAppBillingActivity"/>
+        <activity android:name=".PickColorActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name=".EditNotesActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name="me.grantland.twitter.TwitterActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="TwitterClass" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/app_name" android:name="com.hmobile.biblekjv.WidgetSelectorActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <receiver android:label="@string/large_widget_name" android:name="com.hmobile.biblekjv.HolyBibleWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.hmobile.biblekjv.HolyBibleWidget.ACTION_WIDGET_RECEIVER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.hmobile.biblekjv.HolyBibleWidget.ACTION_WIDGET_CONFIGURE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_provider"/>
+        </receiver>
+        <receiver android:label="@string/small_widget_name" android:name="com.hmobile.biblekjv.HolyBibleWidgetSmall">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.hmobile.biblekjv.HolyBibleWidgetSmall.ACTION_WIDGET_RECEIVER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.hmobile.biblekjv.HolyBibleWidgetSmall.ACTION_WIDGET_CONFIGURE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_provider_small"/>
+        </receiver>
+        <service android:name="com.hmobile.biblekjv.WidgetUpdateService" android:process=":remote"/>
+        <service android:enabled="true" android:name="com.hmobile.common.DailyQouteService" android:process=":remote"/>
+        <receiver android:name="com.hmobile.common.MyDailyQuoteReceiver"/>
+        <receiver android:name="com.hmobile.common.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.hmobile.common.CancelNotification"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.google.android.gms.ads.AdActivity"/>
+        <service android:name="com.google.analytics.tracking.android.CampaignTrackingService"/>
+        <receiver android:exported="true" android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
