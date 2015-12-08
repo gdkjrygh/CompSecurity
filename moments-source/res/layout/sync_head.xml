@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="top|left|center" android:id="@id/sync_head_thumbnail_container" android:background="@drawable/sync_head_inbox" android:padding="3.5dip" android:layout_width="@dimen/sync_head_width" android:layout_height="@dimen/sync_head_height" android:layout_margin="@dimen/sync_head_margin" android:foreground="@drawable/sync_head_overlay">
+        <com.facebook.moments.ui.base.RoundedCornerImageView android:id="@id/photo_thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" fb:roundedRadius="2.0dip" />
+        <ImageView android:id="@id/success_overlay" android:background="@drawable/sync_head_success_state_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/sync_head_sync_icon" android:scaleType="centerCrop" />
+    </FrameLayout>
+    <com.facebook.resources.ui.FbTextView android:layout_gravity="top|left|center" android:id="@id/badge_count" android:background="@drawable/orca_chat_badge" style="@style/SyncHeadBadge" />
+</merge>

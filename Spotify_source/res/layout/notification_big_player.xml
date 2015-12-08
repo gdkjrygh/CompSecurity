@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/notification_bg_color" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/notification_coverart_and_text" />
+    <LinearLayout android:gravity="right|center" android:id="@id/controls" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/coverart" android:layout_below="@id/thirdLine" android:layout_alignParentRight="true">
+        <ImageButton android:id="@id/add_to" android:visibility="gone" android:src="@drawable/icn_notification_add_to" android:contentDescription="@string/content_description_add_to_collection" style="@style/NotificationButton" />
+        <ImageButton android:id="@id/add_to_disabled" android:visibility="gone" android:src="@drawable/icn_notification_add_to_disabled" android:contentDescription="@string/content_description_add_to_collection_disabled" style="@style/NotificationButton" />
+        <TextView style="@style/NotificationDividerLarge" />
+        <ImageButton android:id="@id/prev" android:src="@drawable/icn_notification_prev_normal" android:contentDescription="@string/content_description_previous_track" style="@style/NotificationButton" />
+        <ImageButton android:id="@id/prev_disabled" android:src="@drawable/icn_notification_prev_disabled" android:contentDescription="@string/content_description_previous_track_disabled" style="@style/NotificationButton" />
+        <TextView style="@style/NotificationDividerSmall" />
+        <include layout="@layout/notification_play_pause" />
+        <TextView style="@style/NotificationDividerSmall" />
+        <include layout="@layout/notification_next" />
+    </LinearLayout>
+</RelativeLayout>

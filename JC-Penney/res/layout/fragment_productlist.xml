@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/background_white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="top|left|center" android:orientation="horizontal" android:id="@id/relatedTerms" android:background="#fff0f0f0" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="30.0dip">
+        <com.jcp.views.TypefaceTextView android:textSize="16.25sp" android:textColor="#ff414042" android:gravity="top|left|center" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="@string/product_list_related_txt" app:customTypeface="GOTHAM_BOOK" />
+        <HorizontalScrollView android:id="@id/horizontalScrollView1" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="top|center" android:orientation="horizontal" android:id="@id/relatedTermsHolder" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        </HorizontalScrollView>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/filter_sort_header" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/relatedTerms">
+        <LinearLayout android:orientation="horizontal" android:id="@id/product_list_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="2.0">
+            <com.jcp.views.TypefaceButton android:textSize="15.0sp" android:textColor="@color/black" android:gravity="center" android:id="@id/sort_filter" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:text="@string/sort_filter" android:layout_weight="1.0" app:customTypeface="GOTHAM_MEDIUM" />
+            <include layout="@layout/full_height_gray_horizontal_line" />
+            <FrameLayout android:id="@id/product_list_switch" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.jcp.views.TypefaceButton android:textSize="15.0sp" android:textColor="@color/black" android:gravity="center" android:layout_gravity="center" android:id="@id/product_list_switch_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:text="@string/grid" android:drawableLeft="@drawable/icon_grid_view" android:drawablePadding="5.0dip" android:textAllCaps="true" android:drawableStart="@drawable/icon_grid_view" app:customTypeface="GOTHAM_MEDIUM" />
+            </FrameLayout>
+        </LinearLayout>
+        <RelativeLayout android:id="@id/productListEmptyView" android:background="#fff0f0f0" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+            <com.jcp.views.TypefaceTextView android:textSize="19.0sp" android:textStyle="bold" android:textColor="#ff999999" android:gravity="left|center" android:id="@id/productListEmptyMsg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:lineSpacingMultiplier="1.0" app:customTypeface="GOTHAM_BOOK" />
+            <RelativeLayout android:id="@id/search_producty_not_available" android:background="@drawable/rounded_corner_blue" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:layout_centerInParent="true">
+                <ImageView android:id="@id/info_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" android:src="@drawable/icon_info" android:layout_alignParentLeft="true" />
+                <com.jcp.views.HtmlTypefaceTextView android:textSize="19.0sp" android:textStyle="bold" android:textColor="#ff5f76d9" android:id="@id/product_not_available_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="40.0dip" android:layout_toRightOf="@id/info_icon" android:layout_centerInParent="true" android:lineSpacingMultiplier="1.0" app:htmlText=" " app:customTypeface="GOTHAM_BOOK" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/filter_sort_header">
+        <include layout="@layout/full_width_gray_horizontal_line" />
+        <com.jcp.views.TypefaceTextView android:textAppearance="?android:textAppearanceMedium" android:textColor="#ff333333" android:gravity="center" android:layout_gravity="center" android:id="@id/product_count_textview" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:customTypeface="LORA_ITALIC" />
+        <include layout="@layout/full_width_gray_horizontal_line" />
+        <FrameLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:id="@id/productListView" android:background="#ffffffff" android:visibility="gone" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/lightgray" android:dividerHeight="1.0dip" />
+            <com.jcp.widget.BackToTopButton android:layout_gravity="bottom|right|center" android:id="@id/back_to_top_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/products_loader" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+    <include layout="@layout/similar_search_progress" />
+</RelativeLayout>

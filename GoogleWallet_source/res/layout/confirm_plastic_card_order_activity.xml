@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/SendButton">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:paddingBottom="0.0dip" android:src="@drawable/img_large_envelope_card_color_360x218dp" android:contentDescription="@null" style="@style/SplashHeroImage.FullWidth" />
+            <LinearLayout android:orientation="vertical" android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/RecipientName" style="@style/Body" />
+                <TextView android:id="@id/AddressLine1" style="@style/Body" />
+                <TextView android:id="@id/AddressLine2" style="@style/Body" />
+                <TextView android:id="@id/AddressLine3" style="@style/Body" />
+                <TextView android:id="@id/EditAddress" android:text="@string/order_plastic_card_edit_address" style="@style/Body" />
+                <TextView android:id="@id/TermsOfUse" android:layout_marginTop="@dimen/default_spacing" style="@style/FinePrint" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/SendButton" android:text="@string/order_plastic_card_send_card" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+</RelativeLayout>

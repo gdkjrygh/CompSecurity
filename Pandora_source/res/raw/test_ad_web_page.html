@@ -1,0 +1,592 @@
+<html>
+<head>
+<script>
+if (navigator.userAgent.match(/iPad/)) {
+	document.write('<meta id="viewport" name="viewport" content="width=250; initial-scale=1.0; maximum-scale=1.0;"/>');
+} else {
+	document.write('<meta id="viewport" name="viewport" content="width=320"; initial-scale=1.0; maximum-scale=1.0;"/>');
+}
+</script>
+<script>
+var currentDiv = 0;
+function load() {
+	scrollTo(0);
+}
+function up() {
+	scrollTo(currentDiv - 1);
+	return false;
+}
+function down() {
+	scrollTo(currentDiv + 1);
+	return false;
+}
+function scrollTo(divIndex) {
+/* 	var divs = document.getElementsByClassName("section");
+	currentDiv = divIndex;
+	if (currentDiv < 0) {
+		currentDiv = divs.length - 1;
+	} else if (currentDiv >= divs.length) {
+		currentDiv = 0;
+	}
+	document.body.style.top = -divs[currentDiv].offsetTop;
+	PandoraApp.setViewportHeight(divs[currentDiv].offsetHeight);
+ */
+	PandoraApp.setViewportHeight(350);
+ }
+</script>
+<script type="text/javascript" src="http://beta.savagebeast.com:7001/mobile/js/stage-ix.js"></script>
+<style>
+.nav { position: absolute; right: 10px; }
+</style>
+</head>
+<body style="position:relative;background-color:white;padding:0px 20px;margin:0;" onload="load()">
+
+<hr/>
+
+<div class="section">
+    <span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+    <h3>@Web tests</h3>
+    <br/><a href="pandorav5:/createStation?test=@web:http://www.pandora.com/pink-floyd">@web:http://www.pandora.com/pink-floyd</a>  
+    <br/><a href="pandorav5:/createStation?test=@web:http://www.google.com">@web:http://www.google.com</a>  
+ </div>
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>Value Exchange test links</h3>
+    <button onclick="Pandora.startValueExchange({offerName:'offer1', rewardProperties:'{\x22brandName\x22:\x22Nike\x22,\x22offerText\x22:\x22Sponsored listening by \x22,\x22offerButtonLabel\x22:\x22GO\x22}'});">OFFER 1</button>
+ 	<button onclick="Pandora.startValueExchange({offerName : 'offer2', rewardProperties : '{}'}, 'callback2')">OFFER 2 TBD</button>
+</div>
+
+<div class="section">
+    <span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+    <h3>Ping Third Party ImpressionUrls</h3>
+    <button onclick="Pandora.pingImpressionUrls({trackingDescriptors:'[{\x22baseUrlKey\x22:\x22neilsonVCEBaseUrl\x22,\x22remainingUrl\x22:\x22p?c1=3&amp;c2=18678169&amp;c3=pandora_mtest&amp;c4=cr0001&amp;c5=pl0001&amp;c12=__SHA1IDFA__&amp;ns_ap_pn=__PLATFORM__&amp;ns_ap_device=android-hammerhead&amp;ns_ap_it=a&amp;ax_fwd=1&amp;rn=1903535358\x22,\x22limitAdTrackingReplacementString\x22:\x22none\x22},{\x22baseUrlKey\x22:\x22comscoreVCEBaseUrl\x22,\x22remainingUrl\x22:\x22p?c1=3&amp;c2=18678169&amp;c3=pandora_mtest&amp;c4=cr0001&amp;c5=pl0001&amp;c12=__SHA1IDFA__&amp;ns_ap_pn=__PLATFORM__&amp;ns_ap_device=android-hammerhead&amp;ns_ap_it=a&amp;ax_fwd=1&amp;rn=1903535358\x22,\x22limitAdTrackingReplacementString\x22:\x22zilch\x22}]'}, 'callback')">Ping</button>
+</div>
+
+<div class="section">
+    <span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+    <h3>Delay Ad Refresh</h3>
+    <button onclick="Pandora.delayAdRefresh({delaySeconds:15})">Delay Seconds</button>
+
+</div>
+<div class="section">
+    <span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+    <h3>Stage JS test links</h3>
+    <br/>for supports and getProperty calls, check the adb logs
+ 
+    <p>
+     <ul>
+        <li><a href="pandorastage://refreshStationList">pandorastage://refreshStationList</a></li>        
+     </ul>
+    </p>  
+    <p>
+     <ul><!-- britney-spears/circus/if-u-seek-amy-->
+        <li><a href="pandorastage://buyAmazon?amazonAlbumDigitalAsin=B001L2GARI&amazonSongDigitialAsin=B001L2BIHK&search=britney%20spears%20if%20u%20seed%20amy&default=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fdmusic%2Fdevice%2Fmp3%2Fstore%2Falbum%2FB001L2GARI%2Fhighlight%3AB001L2BIHK%3Ftag%3Dpandoramobile-20%26utm_source%3Dpandora%26utm_campaign%3Dpandora">Stage.buyAmazon (1)</a></li>        
+        <li><a href="javascript:if(Stage.supports('buyAmazon')) { alert('supports buyAmazon'); } else { alert('NO SUPPORTS buy amazon support!!');}">Stage.supports('buyAmazon')</a></li>
+        <li><a href="pandorastage://buyAmazon?amazonAlbumDigitalAsin=B00124FREW&amazonSongDigitialAsin=B001244B76&search=britney%20spears%20if%20u%20seed%20amy&default=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fdmusic%2Fdevice%2Fmp3%2Fstore%2Falbum%2FB00124FREW%2Fhighlight%3AB001244B76%3Ftag%3Dpandoramobile-20%26utm_source%3Dpandora%26utm_campaign%3Dpandora">Stage.buyAmazon (2)</a></li>        
+     </ul>
+     </ul>
+    </p>
+    <p>
+        <b>ARTIST links</b>
+        <ul>
+            <li><a href="javascript:Stage.openPage({'type': 'artist', 'title': 'The Goo Goo Dolls', 'tag': 'R85395', 'url': 'http://beta.savagebeast.com:7001/content/mobile/artist_detail.vm?token=goo-goo-dolls'}, null);">The Goo Goo Dolls</a></li>
+            <li><a href="javascript:Stage.openPage({'type': 'artist', 'title': 'Counting Crows', 'tag': 'R35159', 'url': 'http://beta.savagebeast.com:7001/content/mobile/artist_detail.vm?token=counting-crows'}, null);">Counting Crows</a></li>
+        </ul>
+    </p>
+    <p>
+        <b>ALBUM links</b>
+        <ul>
+            <li><a href="javascript:Stage.openPage({'type': 'album', 'title': 'Something For The Rest Of Us', 'tag': 'L137257', 'url': 'http://beta.savagebeast.com:7001/content/mobile/album_detail.vm?token=goo-goo-dolls/something-for-rest-of-us'}, null);">Something For The Rest Of Us</a></li>
+            <li><a href="javascript:Stage.openPage({'type': 'album', 'title': 'Big Whiskey And The Groogrux King', 'tag': 'L116943', 'url': 'http://beta.savagebeast.com:7001/content/mobile/album_detail.vm?token=dave-matthews-band/big-whiskey-groogrux-king'}, null);">Big Whiskey And The Groogrux King</a></li>
+        </ul>
+    </p>
+    <p>
+        <b>TRACK links</b>
+        <ul>
+            <li><a href="javascript:Stage.openPage({'type': 'track', 'title': 'Sweetest Lie', 'tag': 'S1565831', 'url': 'http://beta.savagebeast.com:7001/content/mobile/track_detail.vm?token=goo-goo-dolls/something-for-rest-of-us/sweetest-lie'}, null);">Sweetest Lie</a></li>
+            <li><a href="javascript:Stage.openPage({'type': 'track', 'title': 'Spaceman', 'tag': 'S1341883', 'url': 'http://beta.savagebeast.com:7001/content/mobile/track_detail.vm?token=dave-matthews-band/big-whiskey-groogrux-king/spaceman'}, null);">Spaceman</a></li>
+        </ul>
+    </p>
+    <!-- 1.8 feature 
+    <p>
+        <b>STATION links</b>
+        <ul>
+             <li><a href="javascript:Stage.openPage({'type': 'station', 'title': 'The Goo Goo Dolls Radio', 'tag': '899971742177574', 'url': 'http://beta.savagebeast.com:7001/content/mobile/station_detail.vm?stationId=899971742177574'}, null);">The Goo Goo Dolls Radio</a></li>
+             <li><a href="javascript:Stage.openPage({'type': 'station', 'title': 'Third Eye Blind Radio', 'tag': '899516475644198', 'url': 'http://beta.savagebeast.com:7001/content/mobile/station_detail.vm?stationId=899516475644198'}, null);">Third Eye Blind Radio</a></li>
+        </ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+    </p>
+    -->
+   <p>
+       <b> Stage.supports and Stage.getProperty links</b><br/>
+       Selecting links, generates messages in the Android log (adb log).
+   <ul>
+        <!-- tester for supports tag -->
+        <li><a href="javascript:if(Stage.supports('openPage')) { alert('supports openPage'); } else { alert('NO SUPPORTS open page support!!');}">Stage.supports('openPage')</a></li>
+        <li><a href="javascript:if(Stage.supports('openExternalPage')) { alert('supports openExternalPage'); } else { alert('NO SUPPORTS openPageExternal!!');}">Stage.supports('openExternalPage')</a></li>
+        <!-- verify !Stage.supports -->
+        <li><a href="javascript:if(!Stage.supports('openPage')) { alert('TRUE');  } else { alert('FALSE');}">!Stage.supports('openPage')</a></li>
+        <li><a href="javascript:if(!Stage.supports('share')) { alert('Stage.share not supported.');  } else { alert('Unexpected support for Stage.share!');}">Stage.supports('share')</a></li>
+        <li><a href="javascript:if(!Stage.supports('playSample')) { alert('Stage.playSample not supported.');  } else { alert('Unexpected support for Stage.playSample!');}">Stage.supports('playSample')</a></li>
+    
+        <!-- test for getProperty tag -->
+        <li><a href="javascript:if(Stage.getProperty('explicitContentFilterEnabled')) { alert('clean lyrics'); } else { alert('regular lyrics');}">Stage.getProperty('explicitContentFilterEnable')</a></li>
+        <li><a href="javascript:if(Stage.getProperty('itunes')) { alert('HAVE itunes'); } else { alert('itunes NOT SUPPORTED');}">Stage.getProperty('itunes')</a></li>
+        <li><a href="javascript:alert(Stage.getProperty('version'));">Stage.getProperty('version')</a></li>
+
+        <!-- tester for pause tag -->
+        <li><a href="javascript:Stage.pause({}, null);">PAUSE</a></li>
+        <!-- tester for play tag -->
+        <li><a href="javascript:Stage.play({}, null); ">PLAY</a></li>
+        <!-- tester for share tag -->
+        <!-- disabled for now, we are not supporting it for 1.7
+        <li><a href="javascript:Stage.share({'type': 'track', 'tag': '$esc.javascript($track.getMusicId())'}, null);;">SHARE TRACK</a></li>
+        -->
+        <li><a href="javascript:Stage.share({'type': 'station', 'tag': '523736902015270'}, null);;">SHARE STATION David Morales</a></li>
+        <!-- tester for open external -->
+        <li><a href="javascript:Stage.openExternalPage({'url': 'http://www.google.com'});">OPEN EXTERNAL PAGE </a></li>
+        
+    </ul>
+    </p>
+</div>
+
+<hr/>
+<div class="section">
+    <span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+    <h3>JS enforce method by protocol</h3>
+    Ie: can't call pandorastage:// methods from pandoraappinternal:// and vice versa.<br/>
+    see adb logs for NOT SUPPORTED errors like "share is not a web command type for protocol pandoraappinternal"<br/>
+    <!-- for testing MOBILE-4174 -->
+ 
+<p/>telephone JS
+    <ul>
+        <!-- pandoraappinternal:/ protocol only  -->
+        <li><a href="pandoraappinternal://telephone/1?number=510-451-4100">pandoraappinternal:// SUPPORTED</a></li>
+        <li><a href="pandorastage://telephone/1?number=510-451-4100">pandorastage:// NOT SUPPORTED</a></li>        
+     </ul>
+<p/>share JS
+    <ul>
+        <!-- pandorastage:// protocol only -->
+        <li><a href="pandorastage://share?type=track&tag=S47502">pandorastage:// SUPPORTED</a></li>
+        <li><a href="pandoraappinternal://share?type=track&tag=S47502">pandoraappinternal:// NOT SUPPORTED</a></li>
+     </ul>
+
+<p/>pause/play JS - supported by both protocols.
+    <ul>
+        <li><a href="pandorastage://pause">pandorastage:// PAUSE</a></li>
+        <li><a href="pandorastage://play">pandorastage:// PLAY</a></li>
+        <li><a href="pandoraappinternal://pause">pandoraappinternal:// PAUSE</a></li>
+        <li><a href="pandoraappinternal://play">pandoraappinternal:// PLAY</a></li>
+     </ul>
+
+ </div>
+
+<hr/>
+<script>
+	function runEvent() {
+		Pandora.sendEvent({context: "{'adIdentifiers':{'creativeId':'12345', 'lineId':'12345'}}"});
+	}
+</script>
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>Ad support</h3>
+	<button onclick="PandoraApp.refreshAd('test ad page (force)', true)">refresh (force)</button>
+	<button onclick="PandoraApp.refreshAd('test ad page (no force)', false)">refresh (no force)</button>
+	<br>
+	<button onclick="runEvent();">creativeId:54321, lineId:98765</button>
+	
+</div>
+
+<hr/>
+<div class="section">
+    <span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+    <h3>Launching Genre Page</h3>
+    
+    <button onClick="Stage.launchGenrePanel({'genreName':'summer'}, null);">stage summer</button><p/>
+    <button onClick="PandoraApp.openGenrePickerForGCat('g113');">ad alternative</button>
+</div>
+
+<hr/>
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>Landing page open transitions</h3>
+	<button onclick="PandoraApp.openLandingPage('http://dhaag.com/pandora/landing_page/4628_Interstitial.html', '#FFFFFF', PandoraApp.TRANSITION_TYPE_SLIDE)">slide</button>
+	<button onclick="PandoraApp.openLandingPage('http://dhaag.com/pandora/landing_page/4628_Interstitial.html', '#FFFFFF', PandoraApp.TRANSITION_TYPE_FLIP)">flip</button>
+	<button onclick="PandoraApp.openLandingPage('http://dhaag.com/pandora/landing_page/4628_Interstitial.html', '#FFFFFF', PandoraApp.TRANSITION_TYPE_CURL)">curl</button>
+	<button onclick="PandoraApp.openLandingPage('http://dhaag.com/pandora/landing_page/4628_Interstitial.html', '#FFFFFF', PandoraApp.TRANSITION_TYPE_FADE)">fade</button>
+	<button onclick="PandoraApp.openLandingPage('http://dhaag.com/pandora/landing_page/4628_Interstitial.html', '#FFFFFF', PandoraApp.TRANSITION_TYPE_GROW)">grow</button>
+	<button onclick="PandoraApp.openLandingPage('http://dhaag.com/pandora/landing_page/4628_Interstitial.html', '#FFFFFF')">default</button>
+</div>
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>Landing page close transitions</h3>
+	<button onclick="PandoraApp.closeLandingPage(PandoraApp.TRANSITION_TYPE_SLIDE)">slide</button>
+	<button onclick="PandoraApp.closeLandingPage(PandoraApp.TRANSITION_TYPE_FLIP)">flip</button>
+	<button onclick="PandoraApp.closeLandingPage(PandoraApp.TRANSITION_TYPE_CURL)">curl</button>
+	<button onclick="PandoraApp.closeLandingPage(PandoraApp.TRANSITION_TYPE_FADE)">fade</button>
+	<button onclick="PandoraApp.closeLandingPage(PandoraApp.TRANSITION_TYPE_GROW)">grow</button>
+	<button onclick="PandoraApp.closeLandingPage()">default</button>
+</div>
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>Landing page background colors</h3>
+	<button onclick="PandoraApp.openLandingPage('about:blank', '#44AAFF')">#44AAFF</button>
+	<button onclick="PandoraApp.openLandingPage('about:blank', 'rgba(255,200.,100,.7)')">rgba(255,200,100, .7)</button>
+	
+</div>
+
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>Web pages</h3>
+	<a href="http://www.google.com/">google</a><br>
+	<a href="about:blank">about:blank</a><br>
+	<a href="javascript:PandoraApp.openSafari('http://www.google.com')">in Safari</a><br>
+	<a href="market://details?id=com.google.earth">market://details?id=com.google.earth</a><br>
+	<a href="https://play.google.com/store/search?q=Pandora&so=1&c=apps">https://play.google.com/store/search?q=Pandora&so=1&c=apps</a><br>
+	<a href="https://play.google.com/store/apps/details?id=com.pandora.android">https://play.google.com/store/apps/details?id=com.pandora.android</a><br>
+</div>
+
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>iTunes</h3>
+	<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=284035177&mt=8">http</a>
+	|
+	<a href="itms://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=284035177&mt=8">itms</a>
+</div>
+
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>JavaScript bridging</h3>
+	<button onclick="PandoraApp.echo('test', function(response) {PandoraApp.alert('echo received value: ' + response.value)});">echo 'test'</button></script>
+	|
+	<button onclick="PandoraApp.registerImpression('http://beta.savagebeast.com:7001/test_impression')">impression URL</button>
+	|
+	<button onclick="PandoraApp.alert(1);PandoraApp.alert(2);">multiple calls</button>
+</div>
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>Telephone</h3>
+	<a href="tel:510-451-4100">tel:</a>
+	510-451-4100
+	|
+	<button onclick="PandoraApp.telephone('510-451-4100')">JS bridge</button>
+	|
+	<a href="PandoraApp:/telephone?number=510-451-4100">PandoraApp-telephone</a>
+	510-451-4100
+	
+</div>
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>Create station</h3>
+	<a href="pandora://iphone/createStation?stationId=60902636257281">pandora://iphone/createStation?stationId=60902636257281</a>
+	|
+	<button onclick="PandoraApp.createStationFromStationId('60902636257281')">JS-CreateStationFromStationId</button>
+    <br/><a href="#" onclick="PandoraApp.pause();">JS - Pause</a>
+    <br/><a href="#" onclick="PandoraApp.play();">JS - Play</a>
+    <br/><a href="#" onclick="PandoraApp.createStationFromMusicId('R850');">create station from artist - DEVO!</a>
+    <br/><a href="http://browser.pandora.com/createStationFromMusicId?musicId=R850">MORE DEVO!</a>
+    <br/><a href="http://pandoraiphoneapp.com/createStationFromStationId?stationId=123456">pandoraiphoneapp</a>
+    <br/><a href="PandoraApp://createStationFromStationId?stationId=123456">PandoraApp:/</a> 	
+</div>
+
+<div class="section">
+    <span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+    <h3>Open Backstage Pages (pandorav4)</h3>
+    <br/><a href="pandorav4:/backstage/artist?token=bow-wow">Artist: Bow Wow </a>   
+    <br/><a href="pandorav4:/backstage/artist?token=bow-wow&fullbio=1">Artist: Bow Wow (full bio)</a>
+    <br/><a href="pandorav4:/backstage/track?token=raconteurs/steady-as-she-goes/steady-as-she-goes">Track: Raconteurs</a>
+    <br/><a href="pandorav4:/backstage/track?token=raconteurs/steady-as-she-goes/steady-as-she-goes&fulllyrics=1">Track: Raconteurs (full lyrics) </a>
+    <br/><a href="pandorav4:/backstage/album?token=raconteurs/steady-as-she-goes">Album: Raconteurs Stead As she Goes</a>
+    <br/><a href="pandorav4:/backstage/profile?webname=ejessen">Profile: ejessen</a> 
+ </div>
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>Create station (pandorav2)</h3>
+	<a href="pandorav2:/createStation?stationId=G165">pandorav2:/createStation?stationId=G165</a>	
+    <br/><br/>
+    <a href="pandorav2:/createStation?stationId=G165&autoShare=facebook">pandorav2:/createStation?stationId=G165&autoShare=facebook</a>
+    <h3>Create station + start at track (pandorav2)</h3>
+	<br/><a href="pandorav2:/createStation?stationId=1094044134428525&startingTrackToken=9e39df8625e08c8a">all-you-need-is-love</a>  
+    <br/><a href="pandorav2:/createStation?stationId=1094044134428525&startingTrackToken=3d14699ad6170fee81efb2ebf25809ebb49d323b8f4a0637ac81cfa27c17130314eba0786f4afa9cec860b218cb66fb9">Alejandro</a>  
+    <br/><a href="pandorav2:/createStation?stationId=1094044134428525&startingTrackToken=b61bccc1bdd14fc481efb2ebf25809ebb49d323b8f4a0637d2f709c0ec5d5d4414eba0786f4afa9cec860b218cb66fb9">A Nightmare On My Street</a>  
+    <br/><a href="pandorav2:/createStation?stationId=1094044134428525&startingTrackToken=ffcd6c88bfc52f4381efb2ebf25809ebb49d323b8f4a063774b7a0884724d3e514eba0786f4afa9cec860b218cb66fb9">5 Little Monsters</a>
+</div>
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>Create station (pandorav4)</h3>
+    <a href="pandorav4:/createStation?stationId=1094044134428525&autoShare=facebook&autoShareLidToken=ABCDEFG">autoShare=facebook</a>
+    <br/>
+</div>
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>Create station + start at track (JS - ad support)</h3>
+	<button onclick="PandoraApp.createStationFromStationId('1094044134428525', '9e39df8625e08c8a')">all-you-need-is-love</button>
+	<button onclick="PandoraApp.createStationFromStationId('1094044134428525', '3d14699ad6170fee81efb2ebf25809ebb49d323b8f4a0637ac81cfa27c17130314eba0786f4afa9cec860b218cb66fb9')">Alejandro</button>
+	<button onclick="PandoraApp.createStationFromStationId('1094044134428525', 'b61bccc1bdd14fc481efb2ebf25809ebb49d323b8f4a0637d2f709c0ec5d5d4414eba0786f4afa9cec860b218cb66fb9')">A Nightmare On My Street</button>
+	<button onclick="PandoraApp.createStationFromStationId('1094044134428525', 'ffcd6c88bfc52f4381efb2ebf25809ebb49d323b8f4a063774b7a0884724d3e514eba0786f4afa9cec860b218cb66fb9')">5 Little Monsters</button>
+</div>
+
+
+<div class="section">
+    <span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+    <h3>DeepLink playTrack JS bridge</h3>
+    <!-- support from stage --> 
+    <br/><a href="#" onclick="Stage.play({'trackToken': 'ffcd6c88bfc52f4381efb2ebf25809ebb49d323b8f4a063774b7a0884724d3e514eba0786f4afa9cec860b218cb66fb9'});">Play Track '5 Little Monsters' (no station specified)</a>
+    <br/><a href="#" onclick="Stage.play({'stationId': '1092055564556582', 'trackToken': 'ffcd6c88bfc52f4381efb2ebf25809ebb49d323b8f4a063774b7a0884724d3e514eba0786f4afa9cec860b218cb66fb9'});">Play Track '5 Little Monsters' (w/station specified)</a>
+    
+    <h3>DeepLink createStation JS bridge</h3>
+    <!-- support from stage --> 
+    <br/><a href="#" onclick="Stage.createStation({'type': 'stationId', 'token': '1094044134428525', 'startingTrackToken': 'ffcd6c88bfc52f4381efb2ebf25809ebb49d323b8f4a063774b7a0884724d3e514eba0786f4afa9cec860b218cb66fb9'});">Launch Station and Play Track '5 Little Monsters'</a>
+ </div>
+
+<div class="section">
+    <span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+    <h3>Inside The Music Landing page (pandorav3)</h3>
+    <!--a href="pandorav3:/landing/insidethemusic/rock">pandorav3:/landing/insidethemusic/rock</a-->    
+    <a href="pandorav3:/landing/static/ads/landing_pages/6807_insidethemusic_mobile/6807_landing_page.html">pandorav3:/landing/insidethemusic/...</a>
+</div>
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>Click Link</h3>
+	<button onclick="PandoraApp.clickLink('http://weather.yahoo.com/');">PandoraApp.clickLink(http://weather.yahoo.com/)</button>
+</div>
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>Play movies</h3>
+	<script>
+	var cellURL = "http://www.neilmix.com/video/star-trek-128-30.mp4";
+	var wifiURL = "http://www.neilmix.com/video/star-trek-640-30.mp4";
+	var startUrl = "http://www.dhaag.com/startUrl";
+	var firstQuartileUrl = "http://www.dhaag.com/firstQuartileUrl";
+	var secondQuartileUrl = "http://www.dhaag.com/secondQuartileUrl";
+	var thirdQuartileUrl = "http://www.dhaag.com/thirdQuartileUrl";
+	var completeUrl = "http://www.dhaag.com/completeUrl";
+	var offerName = "uninterrupted1";
+	var rewardProperties = "{\"brandName\":\"Nike\", \"offerText\":\"Sponsored Listening by \", \"offerButtonLabel\":\"GO\"}";
+
+	</script>
+	<button onclick="PandoraApp.playMovie(cellURL,wifiURL,function(r){setTimeout(function(){Pandora.alert('time in movie: ' + r.viewingDuration + ' seconds')}, 1000)});">auto w/alert</button>
+	|
+	<button onclick="Pandora.playMovie({cellURL: cellURL});">force low</button>
+	|
+	<button onclick="Pandora.playMovie({wifiURL:wifiURL});">force high</button>
+	|
+	<button onclick="Pandora.playMovie({cellURL: cellURL, showScrubber:false});">no scrubber</button>
+	|
+	<button onclick="Pandora.playMovie({cellURL: cellURL, showScrubber:true});">with scrubber</button>
+	|
+	<button onclick="Pandora.playMovie({cellURL: cellURL, skipDelaySeconds:5});">5 second skip delay</button>
+    |
+    <button onclick="Pandora.playMovie({cellURL: cellURL, skipDelaySeconds:5, offerName : 'offer2', rewardProperties : '{}', rewardThresholdSeconds:10});">5 second skip delay with VX</button>
+	|
+	<button onclick="Pandora.playMovie({cellURL: cellURL, startUrl: startUrl, firstQuartileUrl:firstQuartileUrl, secondQuartileUrl:secondQuartileUrl, thirdQuartileUrl:thirdQuartileUrl, completeUrl:completeUrl});">with trackers</button>
+    |
+    <button
+            onclick="runEvent();Pandora.playMovie({cellURL: cellURL, startUrl: startUrl, firstQuartileUrl:firstQuartileUrl, secondQuartileUrl:secondQuartileUrl, thirdQuartileUrl:thirdQuartileUrl, completeUrl:completeUrl, offerName:offerName, rewardProperties:rewardProperties, rewardThresholdSeconds:15});">with VX</button>
+
+
+</div>
+
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>Offers</h3>
+	<button onclick="PandoraApp.offerUpgrade();">offer upgrade</button>
+	|
+	<a href="pandorav2:/offerUpgrade">pandorav2:/offerUpgrade</a>	
+	|
+	<button onclick="PandoraApp.offerTrial('PandoraP1HQ', function(result){PandoraApp.alert('offerTrial success = ' + result.success)});">offer PandoraP1HQ trial (callback)</button>
+	|
+	<button onclick="PandoraApp.offerTrial('PandoraP1HQ');">offer PandoraP1HQ trial (no callback)</button>
+	|
+	<button onclick="PandoraApp.offerTrial('device_test_30_day');">PandoraApp.offerTrial(\'device_test_30_day\')</button>
+	|
+	<a href="pandoraapp:/launchPandoraOneTrial/device_test_30_day">pandoraapp:/launchPandoraOneTrial/device_test_30_day</a>
+	|
+	<a href="pandoraapp:/launchPandoraOneTrial/p1_0927v2">pandoraapp:/launchPandoraOneTrial/p1_0927v2</a>
+	
+</div>
+
+
+<div class="section">
+	<a name="pandorav5 + misc"/>
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>pandorav5</h3>
+	<a href="pandorav5:/profile/ejessen">pandorav5:/profile/ejessen</a><br>
+	<a href="pandorav5:/profile/bookmarks">pandorav5:/profile/bookmarks</a><br>
+	<a href="pandorav5:/profile/likes">pandorav5:/profile/likes</a><br>
+	<a href="pandorav5:/profile/following">pandorav5:/profile/following</a><br>
+	<a href="pandorav5:/profile/followers">pandorav5:/profile/followers</a><br>
+	<a href="pandorav5:/profile/edit">pandorav5:/profile/edit</a><br>
+	<br>
+	<a href="pandorav5:/account">pandorav5:/account</a><br>
+	<a href="pandorav5:/account/privacy">pandorav5:/account/privacy</a><br>
+	<br>
+	<a href="pandorav5:/one">pandorav5:/one</a><br>
+	<br>
+	<a href="pandorav5:/feed">pandorav5:/feed</a><br>
+	<br>
+	<a href="pandorav5:/stations">pandorav5:/stations</a><br>
+	<a href="pandorav5:/stations/new">pandorav5:/stations/new</a><br>
+
+	<br>
+	<a href="pandorav2:/showPrivacySettings">pandorav2:/showPrivacySettings</a><br>
+	<a href="pandorav2:/">pandorav2:/</a><br>
+	
+
+</div>
+
+
+<div class="section">
+	<span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+	<h3>Misc</h3>
+	network type is <script>document.write(PandoraApp.networkType);</script>
+	
+	<br><br>
+	
+	<input id="canOpenInput"><button onclick="PandoraApp.canOpenURL(document.getElementById('canOpenInput').value, function(can) { can ? PandoraApp.alert('yes') : PandoraApp.alert('no') })">can open?</button>
+	<button onclick="window.open(document.getElementById('canOpenInput').value)">window.open</button>
+
+	<br><br>
+
+	<button onclick="PandoraApp.sendEmail('foo@bar.com','ad-test.txt', function(success){PandoraApp.alert(success?'sent':'cancelled')})">send email</button>
+
+	<br><br>
+
+	<a href="http://browser.pandora.com/sendEmail?fromAddress=foo@bar.com&amp;template=ad-test.txt">send email via browser.pandora.com</a>
+	
+	<br><br>
+	
+	<input type="checkbox" id="getEmail"> email<br>
+	<input type="checkbox" id="getZip"> zip<br>
+	<input type="checkbox" id="getAge"> age<br>
+	<input type="checkbox" id="getGender"> gender<br>
+	<button onclick="getPersonalInfo()">get personal info</button>
+	<script>
+	function getPersonalInfo() {
+		var fields = ["email", "zip", "age", "gender"];
+		if (document.getElementById("getEmail").checked) fields.push("email");
+		if (document.getElementById("getZip").checked) fields.push("zip");
+		if (document.getElementById("getAge").checked) fields.push("age");
+		if (document.getElementById("getGender").checked) fields.push("gender");
+		PandoraApp.getPersonalInfo(
+			"Test Page",
+			"to test this feature",
+			fields,
+			function (confirmed, result) {
+				if (confirmed) {
+					var display = "email: ";
+					display += result.email || "(none)";
+					display += "\nzip: ";
+					display += result.zip || "(none)";
+					display += "\nage: ";
+					display += result.age || "(none)";
+					display += "\ngender: ";
+					display += result.gender || "(none)";
+					PandoraApp.alert(display);
+				} else {
+					PandoraApp.alert("(refused)");
+				}
+			}
+		);
+	}
+	</script>
+	
+	<br><br>
+	
+	<button onclick="fetchURLTest()">getPersonalInfo/fetchURL test</button>
+	
+	<script>
+	function fetchURLTest() {
+		PandoraApp.getPersonalInfo(
+			"Fetch Url Test",
+			"to test getPersonalInfo() and fetchURL()",
+			["email", "zip"],
+			"onFetchURLTestPersonalInfo"
+		);
+	}
+	function onFetchURLTestPersonalInfo(confirmed, result) {
+		if (confirmed) {
+			PandoraApp.fetchURL(
+				{
+					method: "GET",
+					url: "http://www.dhaag.com/pandora/landing_page_url.txt",
+					params: {
+						email: result.email,
+						zip: result.zip,
+						ref: "pandora_mobile_1"
+					}
+				},
+				"onFetchURLResult"
+			);
+		} else {
+			PandoraApp.alert("denied");
+		}
+	}
+
+	function onFetchURLResult(responseText) {
+		if (responseText == null) {
+			PandoraApp.alert("request failed");
+		} else {
+			PandoraApp.openLandingPage(responseText);
+		}
+	}
+	</script>
+	
+	<button onclick="onAddCalendarItem()">Add calendar item</button>
+	<script>
+	function onAddCalendarItem() {
+ 		var start = new Date(2012, 2, 23, 13, 0, 0, 0);
+		var end = new Date(2012, 2, 23, 14, 0, 0, 0);
+	  	PandoraApp.addCalendarItem("kris", "kris's birthday", start.getTime(), end.getTime(), "Let's party", "home party"); 
+	}
+	</script>
+</div>
+
+<hr/>
+<div class="section">
+    <span class="nav"><a href="#" onclick="return up()">&lt;</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="return down()">&gt;</a></span>
+    <h3>Stage.playlistUpdated</h3>
+    Support JS notifications that a custom content station playlist has changed, so that it can be updated<p/>
+    
+    To verify the playlistUpdated JS callback - independently of actually changing the cc station or waiting for server support. 
+    <ul>
+    <li/>Login as user mcc@a.d/adada
+    <li/>Select Pandora Premiers CC station - starts playing from the first track...
+    <li/>Go to create station search, enter @web test
+    <li/>Scroll to the bottom of the page, select one of the following links (use pandorastage:// until server side support exists) 
+    <li/>Monitor adb logs - see a new playlist is requested immediately.
+    <li/>As soon as the track changes, it starts at either the beginning of the station (w/out replay) or at the track token specified, depending on the link selected.
+    </ul><p/>
+    
+    
+     Using pandorastage://playlistUpdated - <b>BETA</b><p/>
+     <ul> 
+     <!-- actual stationId on AdOps page: 1117378691753466 vs the id given when its added to your list (Maria's 1182967137311014)...--> 
+        <li><a href="pandorastage://playlistUpdated?stationId=1182967137311014">Pandora Premiers playlist updated, launch station from beginning</a></li>
+        <li><a href="pandorastage://playlistUpdated?stationId=1182967137311014&startingTrackToken=176093685242">Pandora Premiers playlist updated, launch station at track 'Tiny Tortures'</a></li>
+        <li><a href="pandorastage://playlistUpdated?stationId=1234">playlist updated for invalid stationId - noop </a></li>
+     </ul>
+     Using Stage.playlistUpdated(.., null) - <b>BETA</b><p/>
+     <ul> 
+        <li><a href="Stage.playlistUpdated({'stationId':'1182967137311014'}, null)">Pandora Premiers playlist updated, launch station from beginning</a></li>
+        <li><a href="Stage.playlistUpdated({'stationId':'1182967137311014', 'startingTrackToken':'176093685242'}, null)">Pandora Premiers playlist updated, launch station at track 'Tiny Tortures'</a></li>
+        <li><a href="Stage.playlistUpdated({'stationId':'1234'}, null)">playlist updated for invalid stationId - noop </a></li>
+     </ul>
+ </div>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:paddingLeft="@dimen/default_spacing" android:paddingTop="@dimen/default_spacing" style="@style/Card"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.p2p.IncomingMoneyRequestView android:orientation="vertical" android:id="@id/SingleRequestLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/MultiRequestLayout" android:paddingRight="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/MultiRequestHeader" android:paddingBottom="@dimen/default_spacing" style="@style/ListItemPrimaryText" />
+        <com.google.android.apps.wallet.p2p.SenderRowView android:id="@id/RequesterPhotos" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

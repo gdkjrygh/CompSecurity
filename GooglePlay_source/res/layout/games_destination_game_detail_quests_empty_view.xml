@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/game_detail_quests_empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/empty_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/empty_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/games_quests_empty_text" android:drawableTop="@drawable/games_null_quests" android:drawablePadding="16.0dip" style="@style/Games.EmptyViewText" />
+            <TextView android:gravity="center" android:id="@id/empty_action_message" android:paddingTop="16.0dip" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Games.EmptyViewActionText" />
+        </LinearLayout>
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true" layout="@layout/games_button" />
+    </LinearLayout>
+</ScrollView>

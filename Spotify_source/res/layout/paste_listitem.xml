@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/prefixAccessory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="5.0dip" />
+    <RelativeLayout android:id="@id/labels" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textAppearance="?pasteTextAppearance" android:ellipsize="end" android:id="@id/title" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textAppearance="?pasteTextAppearanceSecondary" android:ellipsize="end" android:id="@id/subtitle" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/subtitleAccessory" android:layout_below="@id/title" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/subtitleAccessory" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:layout_alignTop="@id/subtitle" android:layout_alignBottom="@id/subtitle" android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/accessory" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" />
+</merge>

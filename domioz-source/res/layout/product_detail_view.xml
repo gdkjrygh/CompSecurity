@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:gravity="left" android:id="@id/section_view_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:text="@string/textview" style="@style/SectionLabel" />
+        <RelativeLayout android:id="@id/detail_layout" android:background="@drawable/iphone_table_single" android:focusable="false" android:descendantFocusability="blocksDescendants" android:layout_below="@id/section_view_label" style="@style/ListItem">
+            <RelativeLayout android:id="@id/label_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+                <TextView android:id="@id/label" android:text="" style="@style/ListItemLabel" />
+                <TextView android:textStyle="bold" android:textColor="@color/hint_text_color" android:id="@id/tapTip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tap_to_add" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <com.dominos.views.ProductSpinner android:id="@id/sauce_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_below="@id/label_layout" />
+            <RelativeLayout android:id="@id/control_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/sauce_spinner" android:layout_alignLeft="@id/sauce_spinner">
+                <RadioGroup android:gravity="center" android:orientation="horizontal" android:id="@id/part" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <RadioButton android:id="@id/left_part_button" android:background="@drawable/topping_part_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" />
+                    <RadioButton android:id="@id/whole_part_button" android:background="@drawable/topping_part_whole" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:button="@null" />
+                    <RadioButton android:id="@id/right_part_button" android:background="@drawable/topping_part_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" />
+                </RadioGroup>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/quantity_control_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                    <ImageButton android:id="@id/decrement_button" android:background="@android:color/transparent" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_margin="5.0dip" android:src="@drawable/dec_btn" android:scaleType="centerInside" />
+                    <TextView android:textSize="@dimen/text_size_medium" android:textStyle="bold" android:textColor="@android:color/black" android:gravity="center" android:id="@id/quantity_label" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:minEms="3" />
+                    <ImageButton android:id="@id/increment_button" android:background="@android:color/transparent" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_margin="5.0dip" android:src="@drawable/inc_btn" android:scaleType="centerInside" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</merge>

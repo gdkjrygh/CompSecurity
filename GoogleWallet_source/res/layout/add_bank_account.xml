@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/Check" android:paddingTop="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_link_bank_account_color_208x118dp" android:layout_centerHorizontal="true" android:contentDescription="@null" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/routing_number_legend" android:layout_below="@id/Check" android:layout_alignLeft="@id/Check" android:contentDescription="@null" android:textAllCaps="true" style="@style/Body" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/account_number_legend" android:layout_below="@id/Check" android:layout_alignRight="@id/Check" android:contentDescription="@null" android:textAllCaps="true" style="@style/Body" />
+        </RelativeLayout>
+        <TextView android:padding="@dimen/default_spacing" android:text="@string/add_bank_account_section_header" style="@style/Subheader" />
+        <LinearLayout android:orientation="vertical" android:divider="@drawable/layout_horizontal_divider" android:showDividers="middle" style="@style/Card">
+            <Spinner android:id="@id/AccountTypeSpinner" style="@style/FullWidthSingleLineSpinner" />
+            <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/RoutingNumber" android:hint="@string/routing_number_hint" android:nextFocusForward="@id/AccountNumber" wallet:autoAdvance="true" style="@style/FullWidthSingleLineTextField" />
+            <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/AccountNumber" android:hint="@string/account_number_hint" android:nextFocusForward="@id/AccountNumberConfirmation" wallet:autoAdvance="true" style="@style/FullWidthSingleLineTextField" />
+            <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/AccountNumberConfirmation" android:hint="@string/account_number_confirmation_hint" android:nextFocusForward="@id/AccountHolderName" wallet:autoAdvance="true" style="@style/FullWidthSingleLineTextField" />
+            <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/AccountHolderName" android:hint="@string/name_on_account_hint" style="@style/FullWidthSingleLineTextField" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:paddingTop="@dimen/default_spacing" android:text="@string/bank_account_notice" style="@style/FinePrint" />
+            <TextView android:id="@id/BankAccountLearnMore" android:paddingTop="@dimen/default_spacing" style="@style/FinePrint" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

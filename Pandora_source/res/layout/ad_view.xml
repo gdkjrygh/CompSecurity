@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="#ffc0c0c0" android:gravity="center_horizontal" android:id="@id/ad_disclaimer_tablet" android:background="#ffececec" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ad_disclaimer_tablet" style="@android:style/TextAppearance.Small" />
+    <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/ad_wrapper" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="@dimen/ad_view_width" android:layout_height="fill_parent">
+        <WebView android:layout_gravity="center" android:id="@id/ad" android:background="@android:color/transparent" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true" />
+        <RelativeLayout android:layout_gravity="center" android:id="@id/admarvel_ad_wrapper" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.admarvel.android.ads.AdMarvelView android:layout_gravity="center_horizontal" android:id="@id/admarvel_ad" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" pandora:backgroundColor="\#726D6D" pandora:textFontColor="\#00FF00" pandora:textBackgroundColor="\#726D6D" pandora:textBorderColor="\#000000" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/google_ad_view_wrapper" android:background="@drawable/ad_border" android:padding="@dimen/ad_border_size" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include android:visibility="gone" layout="@layout/personal_info_ad_view" />
+        <FrameLayout android:id="@id/ad_close_wrapper" android:background="@color/transparent" android:clickable="true" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+            <ImageButton android:layout_gravity="top|left|center" android:id="@id/ad_close_button" android:background="@color/semi_transparent_black" android:padding="18.0dip" android:duplicateParentState="true" android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/ad_close_selector" android:adjustViewBounds="false" android:contentDescription="@string/cd_close_button" />
+        </FrameLayout>
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/mini_tile_ad_wrapper" android:background="@color/mini_banner_background_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <LinearLayout android:orientation="horizontal" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <TextView android:layout_gravity="center" android:id="@id/mini_tile_ad_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mini_tile_ad_label" style="@style/minibanner_text" />
+            <ImageView android:id="@id/mini_tile_ad_art" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="20.0dip" android:src="@drawable/ad_view_empty_art" android:contentDescription="@string/cd_album_art" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/why_ads_wrapper" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <TextView android:id="@id/why_ads_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/why_ads_label" android:layout_centerVertical="true" style="@style/whyads_text" />
+        <TextView android:id="@id/why_ads_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/why_ads_button_label" android:layout_toRightOf="@id/why_ads_label" android:layout_centerVertical="true" style="@style/whyads_button_text" />
+    </RelativeLayout>
+</LinearLayout>

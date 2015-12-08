@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/header" android:background="@color/rewards_light_gray" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/close_btn" android:padding="@dimen/reward_padding_18" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/white_close" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@null" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/top" android:background="@color/rewards_light_gray" android:layout_width="fill_parent" android:layout_height="@dimen/reward_scan_border_height" android:layout_alignParentTop="true" />
+        <ImageView android:id="@id/bottom" android:background="@color/rewards_light_gray" android:layout_width="fill_parent" android:layout_height="@dimen/reward_scan_border_height" android:layout_alignParentBottom="true" />
+        <ImageView android:id="@id/left" android:background="@color/rewards_light_gray" android:layout_width="@dimen/reward_scan_border_height" android:layout_height="fill_parent" android:layout_alignParentLeft="true" />
+        <ImageView android:id="@id/right" android:background="@color/rewards_light_gray" android:layout_width="@dimen/reward_scan_border_height" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+        <com.jcp.views.TypefaceTextView android:textSize="@dimen/reward_scan_font_size" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:id="@id/reward" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/reward_scan_margin" android:text="@string/earned_reward" android:layout_toLeftOf="@id/right" android:layout_toRightOf="@id/left" android:layout_below="@id/top" app:customTypeface="GOTHAM_BOLD" />
+        <com.jcp.views.TypefaceTextView android:textSize="@dimen/reward_scan_font_size" android:textColor="@color/light_dull_gray" android:gravity="center" android:id="@id/expiry" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/reward_margin_5" android:text="@string/exp_date_format" android:layout_toLeftOf="@id/right" android:layout_toRightOf="@id/left" android:layout_below="@id/reward" app:customTypeface="GOTHAM_BOOK" />
+        <ImageView android:id="@id/barcode" android:layout_width="@dimen/reward_scan_barcode_width" android:layout_height="@dimen/reward_scan_barcode_height" android:layout_marginTop="@dimen/reward_scan_margin" android:layout_below="@id/expiry" android:layout_centerHorizontal="true" />
+        <com.jcp.views.TypefaceTextView android:textSize="@dimen/reward_font_size_16" android:textColor="@color/black" android:id="@id/barcode_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/barcode" android:layout_centerHorizontal="true" app:customTypeface="GOTHAM_BOOK" />
+    </RelativeLayout>
+</LinearLayout>

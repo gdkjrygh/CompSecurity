@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.ex.photo.views.PhotoView android:id="@id/photo_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/photo_preview" android:layout_width="@dimen/photo_preview_size" android:layout_height="@dimen/photo_preview_size" android:layout_centerInParent="true">
+        <ImageView android:layout_gravity="center" android:id="@id/photo_preview_image" android:visibility="gone" android:layout_width="@dimen/photo_preview_size" android:layout_height="@dimen/photo_preview_size" android:src="@drawable/default_image" android:scaleType="centerCrop" />
+        <ProgressBar android:layout_gravity="bottom" android:id="@id/indeterminate_progress" android:visibility="gone" android:layout_width="@dimen/photo_preview_size" android:layout_height="wrap_content" android:indeterminate="true" style="?android:attr/progressBarStyleHorizontal" />
+        <ProgressBar android:layout_gravity="bottom" android:id="@id/determinate_progress" android:visibility="gone" android:layout_width="@dimen/photo_preview_size" android:layout_height="wrap_content" android:indeterminate="false" style="?android:attr/progressBarStyleHorizontal" />
+    </FrameLayout>
+    <TextView android:textColor="@android:color/white" android:id="@id/empty_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_below="@id/photo_preview" android:layout_centerHorizontal="true" />
+    <include layout="@layout/photo_retry_button" />
+</RelativeLayout>

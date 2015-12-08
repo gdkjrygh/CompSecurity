@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/tile_header_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/games_tile_header_wrapper_top_margin" android:layout_marginBottom="@dimen/games_tile_header_wrapper_bottom_margin" android:minHeight="@dimen/games_tile_header_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/content" android:background="@drawable/games_highlight_overlay" android:paddingLeft="@dimen/games_onyx_header_edge_padding" android:paddingRight="@dimen/games_onyx_header_edge_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PlayClusterTitle" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/header_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PlayClusterSubtitle" />
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/header_button" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:id="@id/header_button_text" android:background="@drawable/playnext_action_button_dest" android:layout_marginLeft="@dimen/games_tile_header_button_left_margin" style="@style/PlayClusterMore" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

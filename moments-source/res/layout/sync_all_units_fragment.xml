@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/all_units_fragment_container" android:clickable="true" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.moments.ui.titlebar.SyncTitleBar android:layout_gravity="top" android:id="@id/sync_titlebar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_gravity="top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/titlebar_height">
+        <com.facebook.moments.navui.NavRecyclerListView android:scrollbarStyle="outsideOverlay" android:id="@id/suggestion_collection_list_view" android:paddingBottom="@dimen/permalink_fab_affordance" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.facebook.moments.ui.EmptyView android:id="@id/suggestion_list_empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.facebook.moments.ui.common.FullWidthTooltipView android:id="@id/suggestion_list_empty_view_tooltip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="32.0dip" android:layout_marginTop="0.0dip" />
+    </FrameLayout>
+    <com.facebook.moments.ui.sync.SyncExtensibleStackView android:id="@id/suggestion_stack" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.facebook.moments.ui.syncnux.SyncMainTabOverlayMask android:id="@id/overlay_mask" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

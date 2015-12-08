@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/fragment_root" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="158.0dip" android:layout_alignParentBottom="true">
+        <RelativeLayout android:background="#ff333333" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <TextView android:textColor="@android:color/white" android:id="@id/const_has_shadow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="@string/has_shadow" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <CheckBox android:id="@id/edit_border_checkbox_shadow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_toRightOf="@id/const_has_shadow" android:layout_centerVertical="true" />
+            <TextView android:textColor="@android:color/white" android:id="@id/const_apply_to_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="@string/apply_to_all" android:layout_toRightOf="@id/edit_border_checkbox_shadow" android:layout_centerVertical="true" />
+            <CheckBox android:id="@id/edit_border_checkbox_apply_to_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_toRightOf="@id/const_apply_to_all" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/btn_apply" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/bn_nav_done" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView android:id="@id/border_color_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</RelativeLayout>

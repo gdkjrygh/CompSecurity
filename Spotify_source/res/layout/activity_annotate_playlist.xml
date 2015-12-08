@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center_vertical" android:id="@id/dialog_title" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="20.0dip" android:text="@string/annotate_playlist_edit_title_edit" />
+    <LinearLayout android:orientation="vertical" android:id="@id/bottom_container" android:paddingTop="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/offline_bar" android:background="@color/cat_grayscale_15" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/cat_light_green" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <TextView android:textSize="12.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/annotate_playlist_edit_offline_bar_title" />
+            <TextView android:textSize="12.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/annotate_playlist_edit_offline_bar_subtitle" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/button_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/single_button_negative" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:text="@string/annotate_playlist_edit_discard_button" android:textAllCaps="true" style="?pasteButtonStyleInfo" />
+            <Button android:id="@id/single_button_positive" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="16.0dip" android:text="@string/annotate_playlist_edit_create_button" android:textAllCaps="true" style="?pasteButtonStylePrimary" />
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom_container" android:layout_below="@id/dialog_title">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/image_container" android:layout_width="@dimen/annotate_dialog_image_size" android:layout_height="@dimen/annotate_dialog_image_size" android:layout_marginTop="20.0dip" android:layout_centerHorizontal="true">
+                <ImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/bg_placeholder_annotate_image" android:contentDescription="@string/annotate_playlist_content_description_playlist_image" />
+                <include android:id="@id/image_progress" layout="@layout/playlist_annotate_overlay" />
+            </FrameLayout>
+            <Button android:id="@id/edit_button_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/annotate_playlist_edit_image_text" android:layout_below="@id/image_container" android:layout_centerHorizontal="true" android:textAllCaps="true" style="?pasteButtonStyleInfoSmall" />
+            <View android:id="@id/image_divider" android:background="@color/cat_grayscale_20" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="20.0dip" android:layout_below="@id/edit_button_image" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/title_container" android:background="@color/cat_grayscale_12" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_below="@id/image_divider">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/annotate_playlist_edit_title_header" style="@style/AnnotationFieldLabel" />
+                <EditText android:gravity="center_vertical" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/annotate_playlist_edit_title_hint" android:singleLine="true" android:imeOptions="actionNext" style="@style/AnnotationFieldInput" />
+            </LinearLayout>
+            <View android:id="@id/title_divider" android:background="@color/cat_grayscale_20" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/title_container" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/description_container" android:background="@color/cat_grayscale_12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title_divider">
+                <TextView android:paddingTop="13.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/annotate_playlist_edit_description_header" style="@style/AnnotationFieldLabel" />
+                <EditText android:gravity="top|left|center" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:hint="@string/annotate_playlist_edit_description_hint" android:maxLines="5" android:minLines="5" android:singleLine="false" style="@style/AnnotationFieldInput" />
+            </LinearLayout>
+            <View android:id="@id/end_divider" android:background="@color/cat_grayscale_20" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/description_container" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

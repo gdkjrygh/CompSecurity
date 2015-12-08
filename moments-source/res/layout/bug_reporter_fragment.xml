@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:navless="true" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/fbui_padding_standard" android:paddingBottom="@dimen/fbui_padding_standard" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbEditText android:gravity="top" android:id="@id/text" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/fbui_padding_standard" android:layout_marginRight="@dimen/fbui_padding_standard" android:hint="@string/bug_report_hint" android:scrollHorizontally="false" android:singleLine="false" android:inputType="textCapSentences|textAutoCorrect|textMultiLine" android:layout_marginStart="@dimen/fbui_padding_standard" android:layout_marginEnd="@dimen/fbui_padding_standard" />
+            <fragment android:id="@id/image_picker_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.facebook.bugreporter.imagepicker.BugReporterImagePickerFragment" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textColor="#ff777777" android:id="@id/bug_report_disclaimer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/fbui_padding_standard" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/fbui_padding_standard" android:layout_marginBottom="@dimen/fbui_padding_standard" android:text="@string/bug_report_disclaimer" android:layout_marginStart="@dimen/fbui_padding_standard" android:layout_marginEnd="@dimen/fbui_padding_standard" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/landing_bg" android:layout_width="@dimen/home_box_width_large" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:layout_alignParentBottom="true" android:layout_centerInParent="true">
+        <TextView android:textSize="@dimen/your_order_text_size" android:textStyle="bold" android:gravity="center" android:id="@id/landingRepeatBoxTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/landing_repeat_box_title" android:layout_centerHorizontal="true" style="@style/LandingScreenText" />
+        <RelativeLayout android:gravity="center" android:id="@id/modeButtonContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_below="@id/landingRepeatBoxTitle">
+            <LinearLayout android:id="@id/linearLayout3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ImageButton android:gravity="center" android:id="@id/modeButtonDelivery" android:background="@drawable/btn_toggle_left" android:layout_width="@dimen/toggle_button_width" android:layout_height="@dimen/red_button_height_medium" android:src="@drawable/delivery_icon" android:scaleType="centerInside" android:onClick="onButtonClick" />
+                <ImageButton android:gravity="center" android:id="@id/modeButtonCarryout" android:background="@drawable/btn_toggle_right" android:layout_width="@dimen/toggle_button_width" android:layout_height="@dimen/red_button_height_medium" android:src="@drawable/carryout_icon" android:scaleType="centerInside" android:onClick="onButtonClick" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/addressBoxOut" android:background="@drawable/address_info_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="5.0dip" android:layout_below="@id/modeButtonContainer" android:layout_centerHorizontal="true">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/addressBoxIn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:onClick="onButtonClick">
+                <TextView android:textSize="@dimen/carry_out_title_size" android:textStyle="bold" android:textColor="@android:color/black" android:layout_gravity="center" android:id="@id/carryoutFrom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/carryout_from" />
+                <TextView android:textSize="@dimen/carry_out_address_size" android:textColor="@android:color/black" android:gravity="center" android:layout_gravity="center" android:id="@id/address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/current_address" />
+            </LinearLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/addressBoxIn" android:layout_alignParentRight="true">
+                <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_menu_search" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:id="@id/bottomButtonContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/addressBoxOut">
+            <LinearLayout android:gravity="center" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <Button android:textSize="@dimen/red_button_text_medium" android:id="@id/useThisButton" android:background="@drawable/red_button_enabled" android:layout_width="@dimen/red_button_width_small" android:layout_height="@dimen/red_button_height_medium" android:text="@string/btn_use_this" android:onClick="onButtonClick" style="@style/TitleBarActionButton" />
+                <Button android:textSize="@dimen/red_button_text_medium" android:id="@id/modifyButton" android:background="@drawable/red_button_enabled" android:layout_width="@dimen/red_button_width_small" android:layout_height="@dimen/red_button_height_medium" android:text="@string/btn_modify" android:singleLine="true" android:onClick="onButtonClick" style="@style/TitleBarActionButton" />
+            </LinearLayout>
+        </RelativeLayout>
+        <FrameLayout android:gravity="center_horizontal" android:id="@id/shoprunner_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_below="@id/bottomButtonContainer" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

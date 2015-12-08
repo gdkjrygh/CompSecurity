@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_synclair" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/body_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_gravity="center_horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/synclair_title_margin_left" android:layout_marginTop="@dimen/synclair_title_margin_top" android:layout_marginRight="@dimen/synclair_title_margin_right" style="@style/SynclairTitleText" />
+        <WebView android:layout_gravity="center_horizontal" android:id="@id/body" android:background="@android:color/transparent" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/synclair_body_margin_left" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/synclair_body_margin_right" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/image_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/body_layout" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <ImageView android:layout_gravity="top" android:id="@id/image_fill" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+        <com.fitbit.ui.views.GifImageView android:layout_gravity="bottom|center" android:id="@id/gif_fill" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <RelativeLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/synclair_body_margin_bottom" android:layout_above="@id/next_layout" android:layout_alignParentLeft="true" android:layout_alignParentRight="true">
+                <RelativeLayout android:id="@id/img_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentRight="true">
+                    <ImageView android:layout_gravity="center" android:id="@id/image_fit" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/synclair_image_fit_margin_left" android:layout_marginRight="@dimen/synclair_image_fit_margin_right" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_toLeftOf="@id/layout_stats" />
+                    <com.fitbit.ui.views.GifImageView android:layout_gravity="center" android:id="@id/gif_fit" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/layout_stats" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/img_layout" android:layout_alignParentLeft="true" android:layout_alignParentRight="true">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/layout_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentRight="true">
+                        <View android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="45.0" />
+                        <com.fitbit.synclair.ui.components.FWUpdateProgressBar android:id="@id/progress" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="55.0" />
+                        <View android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="45.0" />
+                    </LinearLayout>
+                    <TextView android:id="@id/progress_text" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_syncing" android:layout_centerHorizontal="true" style="@style/SynclairButtonText" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <FrameLayout android:id="@id/next_layout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <Button android:ellipsize="end" android:id="@id/btn_next" android:paddingLeft="@dimen/synclair_button_next_padding_left" android:paddingRight="@dimen/synclair_button_next_padding_right" android:layout_width="fill_parent" android:layout_height="@dimen/synclair_button_next_layout_height" android:layout_marginLeft="@dimen/synclair_button_next_margin_left" android:layout_marginRight="@dimen/synclair_button_next_margin_right" android:layout_marginBottom="@dimen/synclair_button_next_margin_bottom" android:text="@string/synclair_btn_next" android:lines="1" style="@style/SynclairNextButton" />
+                <ProgressBar android:id="@id/progress_btn_bar" android:visibility="invisible" android:layout_width="@dimen/synclair_progress_next_layout_width" android:layout_height="@dimen/synclair_progress_next_layout_height" android:layout_marginLeft="@dimen/synclair_progress_next_margin_left" android:layout_marginTop="@dimen/synclair_progress_next_margin_top" android:layout_marginRight="@dimen/synclair_progress_next_margin_right" android:layout_marginBottom="@dimen/synclair_progress_next_margin_bottom" android:indeterminate="true" />
+            </FrameLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

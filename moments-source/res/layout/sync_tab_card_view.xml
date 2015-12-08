@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/regular_card_container" android:paddingLeft="@dimen/sync_tab_card_inner_margin" android:paddingRight="@dimen/sync_tab_card_inner_margin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/sync_photo_card_top_bottom_margin">
+        <com.facebook.moments.ui.sync.SyncTabCardHeaderView android:id="@id/header_view" android:paddingTop="2.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/sync_tab_card_header_height" />
+        <com.facebook.moments.ui.sync.SyncTabPhotoRowsView android:id="@id/photos_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.moments.ui.sync.SyncTabCardBottomView android:id="@id/buttons_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sync_tab_card_bottom_top_margin" android:layout_marginBottom="@dimen/sync_tab_card_bottom_bottom_margin" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/loading_state_container" android:paddingLeft="@dimen/sync_tab_card_inner_margin" android:paddingRight="@dimen/sync_tab_card_inner_margin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/sync_photo_card_top_bottom_margin">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/sync_tab_card_header_height">
+            <ImageView android:layout_gravity="center_vertical" android:background="@drawable/nav_loading_header_square" android:layout_width="@dimen/sync_tab_card_header_square_view_height" android:layout_height="@dimen/sync_tab_card_header_square_view_height" android:layout_marginRight="7.0dip" android:layout_marginEnd="7.0dip" />
+            <View android:layout_gravity="center_vertical" android:background="@color/loading_card_grey" android:layout_width="fill_parent" android:layout_height="26.0dip" />
+        </LinearLayout>
+        <com.facebook.moments.navui.stack.NavStackPlaceHolderPhotoRowsView android:id="@id/loading_card_photos_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.facebook.moments.ui.widgets.AutoFitTextView android:textColor="@color/black_30a" android:ellipsize="none" android:gravity="center" android:id="@id/hang_tight_text" android:background="@drawable/hang_tight_button" android:layout_width="fill_parent" android:layout_height="36.0dip" android:layout_marginTop="@dimen/sync_tab_card_bottom_top_margin" android:layout_marginBottom="@dimen/sync_tab_card_bottom_bottom_margin" android:text="@string/sync_tab_loading_suggestions" android:maxLines="1" style="@style/regular.medium" />
+    </LinearLayout>
+</merge>

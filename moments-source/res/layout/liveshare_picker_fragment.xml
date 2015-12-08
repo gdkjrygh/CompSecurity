@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="5.0" />
+    <com.facebook.resources.ui.FbTextView android:textSize="17.0sp" android:gravity="center" android:id="@id/primary_text" android:paddingLeft="@dimen/liveshare_text_side_padding" android:paddingRight="@dimen/liveshare_text_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/live_share_picker_primary_text" />
+    <com.facebook.resources.ui.FbTextView android:textSize="13.0sp" android:textColor="#ffb4b4b4" android:gravity="center" android:id="@id/secondary_text" android:paddingLeft="@dimen/liveshare_text_side_padding" android:paddingRight="@dimen/liveshare_text_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:text="@string/live_share_picker_secondary_text" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="120.0dip" android:layout_marginTop="40.0dip">
+        <com.facebook.widget.CustomHorizontalScrollView android:id="@id/scrollview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="never">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="horizontal" android:id="@id/time_marker_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <ImageView android:id="@id/ruler" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/liveshare_picker_background" android:scaleType="fitXY" />
+            </LinearLayout>
+        </com.facebook.widget.CustomHorizontalScrollView>
+        <FrameLayout android:layout_gravity="bottom|left|center" android:id="@id/selection_bar" android:background="@drawable/liveshare_selection_bar" android:paddingBottom="@dimen/liveshare_selection_bar_margin_bottom" android:layout_width="100.0dip" android:layout_height="@dimen/liveshare_selection_bar_height" />
+        <TextView android:layout_gravity="bottom" android:id="@id/now_marker_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="60.0dip" android:text="@string/live_share_picker_marker_now" style="@style/moments_liveshare_now_marker_text" />
+        <TextView android:gravity="center" android:layout_gravity="bottom" android:id="@id/time_marker_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="60.0dip" style="@style/moments_liveshare_time_marker_text" />
+    </FrameLayout>
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="7.0" />
+</LinearLayout>

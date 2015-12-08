@@ -1,0 +1,179 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.aviary.android.feather.sdk;
+
+
+// Referenced classes of package com.aviary.android.feather.sdk:
+//            R
+
+public static final class 
+{
+
+    public static final int AviaryAnimations = 0x7f0c00a8;
+    public static final int AviaryAnimations_AviaryToast = 0x7f0c00a9;
+    public static final int AviaryBaseTheme = 0x7f0c000f;
+    public static final int AviaryBaseTheme_Dialog = 0x7f0c0010;
+    public static final int AviaryDialog = 0x7f0c00aa;
+    public static final int AviaryDialog_Divider = 0x7f0c00ab;
+    public static final int AviaryDialog_Feedback = 0x7f0c00ac;
+    public static final int AviaryDialog_Feedback_Text = 0x7f0c00ad;
+    public static final int AviaryDialog_MainLayout = 0x7f0c00ae;
+    public static final int AviaryGraphics = 0x7f0c00af;
+    public static final int AviaryGraphics_CropHighlightView = 0x7f0c00b0;
+    public static final int AviaryGraphics_GalleryBottomLine = 0x7f0c00b1;
+    public static final int AviaryGraphics_GalleryTopIndicator = 0x7f0c00b2;
+    public static final int AviaryGraphics_GalleryTopIndicator_Inverse = 0x7f0c00b3;
+    public static final int AviaryGraphics_PluginDividerText = 0x7f0c00b4;
+    public static final int AviaryGraphics_PreviewFill = 0x7f0c00b5;
+    public static final int AviaryGraphics_PreviewSpot = 0x7f0c00b6;
+    public static final int AviaryGraphics_StickerHighlightView = 0x7f0c00b7;
+    public static final int AviaryGraphics_TextHighlightView = 0x7f0c00b8;
+    public static final int AviaryStoreBuyButton = 0x7f0c00b9;
+    public static final int AviaryStoreBuyButtonTextStyle = 0x7f0c0000;
+    public static final int AviaryStoreDetailGridStyle = 0x7f0c00ba;
+    public static final int AviaryStoreDetailIcon = 0x7f0c00bb;
+    public static final int AviaryStoreDetailText = 0x7f0c00bc;
+    public static final int AviaryStoreDetailText_Description = 0x7f0c00bd;
+    public static final int AviaryStoreDetailText_Subscription = 0x7f0c00be;
+    public static final int AviaryStoreDetailText_Title = 0x7f0c00bf;
+    public static final int AviaryStoreDetailWorkspace = 0x7f0c00c0;
+    public static final int AviaryStoreFeaturedCellText = 0x7f0c00c1;
+    public static final int AviaryStoreFeaturedCellTitle = 0x7f0c00c2;
+    public static final int AviaryStoreFeaturedItemTitle = 0x7f0c00c3;
+    public static final int AviaryStoreFeaturedSeeMoreButton = 0x7f0c00c4;
+    public static final int AviaryStoreListDivider = 0x7f0c00c5;
+    public static final int AviaryStoreListItemSubTitle = 0x7f0c00c6;
+    public static final int AviaryStoreListItemTitle = 0x7f0c00c7;
+    public static final int AviaryStorePassportButton = 0x7f0c00c8;
+    public static final int AviarySubscriptionText = 0x7f0c00c9;
+    public static final int AviarySubscriptionTitle = 0x7f0c00ca;
+    public static final int AviaryTextAppearance = 0x7f0c00cb;
+    public static final int AviaryTextAppearance_Inverted = 0x7f0c00cc;
+    public static final int AviaryTextAppearance_Inverted_Large = 0x7f0c00cd;
+    public static final int AviaryTextAppearance_Inverted_Medium = 0x7f0c00ce;
+    public static final int AviaryTextAppearance_Inverted_Small = 0x7f0c00cf;
+    public static final int AviaryTextAppearance_Large = 0x7f0c00d0;
+    public static final int AviaryTextAppearance_Large_NoSelected = 0x7f0c00d1;
+    public static final int AviaryTextAppearance_Medium = 0x7f0c00d2;
+    public static final int AviaryTextAppearance_Medium_NoSelected = 0x7f0c00d3;
+    public static final int AviaryTextAppearance_Small = 0x7f0c00d4;
+    public static final int AviaryTextAppearance_Small_NoSelected = 0x7f0c00d5;
+    public static final int AviaryTheme = 0x7f0c00d6;
+    public static final int AviaryTheme_Dialog = 0x7f0c00d7;
+    public static final int AviaryTheme_Dialog_Custom = 0x7f0c00d8;
+    public static final int AviaryWidget = 0x7f0c00d9;
+    public static final int AviaryWidget_AdjustImageView = 0x7f0c00da;
+    public static final int AviaryWidget_AviaryGallery = 0x7f0c00db;
+    public static final int AviaryWidget_AviarySeekBar = 0x7f0c00dc;
+    public static final int AviaryWidget_AviaryWheel = 0x7f0c00dd;
+    public static final int AviaryWidget_BottomBar = 0x7f0c00de;
+    public static final int AviaryWidget_BottomBar_GalleryItem = 0x7f0c00df;
+    public static final int AviaryWidget_BottomBar_GalleryItem_Container = 0x7f0c00e0;
+    public static final int AviaryWidget_BottomBar_GalleryItem_Crop = 0x7f0c00e1;
+    public static final int AviaryWidget_BottomBar_GalleryItem_Crop_HighlightImageView = 0x7f0c00e2;
+    public static final int AviaryWidget_BottomBar_GalleryItem_Crop_TextView = 0x7f0c00e3;
+    public static final int AviaryWidget_BottomBar_GalleryItem_Crop_TextView_Custom = 0x7f0c00e4;
+    public static final int AviaryWidget_BottomBar_GalleryItem_Divider = 0x7f0c00e5;
+    public static final int AviaryWidget_BottomBar_GalleryItem_HighlightImageView = 0x7f0c00e6;
+    public static final int AviaryWidget_BottomBar_GalleryTopIndicatorView = 0x7f0c00e7;
+    public static final int AviaryWidget_BottomBar_GalleryTopIndicatorView_Inverse = 0x7f0c00e8;
+    public static final int AviaryWidget_BottomBar_HorizontalScrollView = 0x7f0c00e9;
+    public static final int AviaryWidget_BottomBar_Logo = 0x7f0c00ea;
+    public static final int AviaryWidget_BottomBar_Logo_Container = 0x7f0c00eb;
+    public static final int AviaryWidget_BottomBar_Logo_Image = 0x7f0c00ec;
+    public static final int AviaryWidget_BottomBar_OptionPanel = 0x7f0c00ed;
+    public static final int AviaryWidget_BottomBar_OptionPanelContainer = 0x7f0c00ee;
+    public static final int AviaryWidget_BottomBar_OptionPanelContainer_BorderLess = 0x7f0c00ef;
+    public static final int AviaryWidget_BottomBar_Tool = 0x7f0c00f0;
+    public static final int AviaryWidget_BottomBar_Tool_FeedBack = 0x7f0c00f1;
+    public static final int AviaryWidget_BottomBar_ViewFlipper = 0x7f0c00f2;
+    public static final int AviaryWidget_Button = 0x7f0c00f3;
+    public static final int AviaryWidget_Button_LightGray = 0x7f0c00f4;
+    public static final int AviaryWidget_Button_Meme = 0x7f0c00f5;
+    public static final int AviaryWidget_Button_NavButton = 0x7f0c00f6;
+    public static final int AviaryWidget_Button_NavButton_Apply = 0x7f0c00f7;
+    public static final int AviaryWidget_Button_Overlay = 0x7f0c00f8;
+    public static final int AviaryWidget_Button_Secondary = 0x7f0c00f9;
+    public static final int AviaryWidget_Button_Secondary_NavBarRestore = 0x7f0c00fa;
+    public static final int AviaryWidget_Button_Secondary_Toggle = 0x7f0c00fb;
+    public static final int AviaryWidget_CropImageView = 0x7f0c00fc;
+    public static final int AviaryWidget_EdgeEffect = 0x7f0c00fd;
+    public static final int AviaryWidget_EffectThumb = 0x7f0c00fe;
+    public static final int AviaryWidget_EffectThumb_Divider = 0x7f0c00ff;
+    public static final int AviaryWidget_EffectThumb_DividerContainer = 0x7f0c0101;
+    public static final int AviaryWidget_EffectThumb_DividerContainer_Left = 0x7f0c0102;
+    public static final int AviaryWidget_EffectThumb_Divider_Left = 0x7f0c0100;
+    public static final int AviaryWidget_EffectThumb_HiddenSelector = 0x7f0c0103;
+    public static final int AviaryWidget_EffectThumb_Layout = 0x7f0c0104;
+    public static final int AviaryWidget_EffectThumb_Layout_External = 0x7f0c0105;
+    public static final int AviaryWidget_EffectThumb_PacksDivider = 0x7f0c0106;
+    public static final int AviaryWidget_EffectThumb_Text = 0x7f0c0107;
+    public static final int AviaryWidget_EffectsHorizontalScrollView = 0x7f0c0108;
+    public static final int AviaryWidget_HiddenText = 0x7f0c0109;
+    public static final int AviaryWidget_HiddenText_TextTool = 0x7f0c010a;
+    public static final int AviaryWidget_HighlightImageView = 0x7f0c010b;
+    public static final int AviaryWidget_HighlightImageView_Clear = 0x7f0c010c;
+    public static final int AviaryWidget_HighlightImageView_Lens = 0x7f0c010d;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton = 0x7f0c010e;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton_Toggle = 0x7f0c010f;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton_Toggle_Center = 0x7f0c0110;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton_Toggle_Center_Enhance = 0x7f0c0111;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton_Toggle_Enhance = 0x7f0c0112;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton_Toggle_Left = 0x7f0c0113;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton_Toggle_Left_Adjust = 0x7f0c0114;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton_Toggle_Left_Enhance = 0x7f0c0115;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton_Toggle_Left_Focus = 0x7f0c0116;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton_Toggle_Left_TiltShift = 0x7f0c0117;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton_Toggle_Right = 0x7f0c0118;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton_Toggle_Right_Adjust = 0x7f0c0119;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton_Toggle_Right_Enhance = 0x7f0c011a;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton_Toggle_Right_Focus = 0x7f0c011b;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton_Toggle_Right_TiltShift = 0x7f0c011c;
+    public static final int AviaryWidget_HighlightImageView_OptionPanelButton_Toggle_TiltShift = 0x7f0c011d;
+    public static final int AviaryWidget_HighlightImageView_Tool = 0x7f0c011e;
+    public static final int AviaryWidget_IAPDialog = 0x7f0c011f;
+    public static final int AviaryWidget_IAPDialog_CellLayoutEffects = 0x7f0c0120;
+    public static final int AviaryWidget_IAPDialog_CellLayoutStickers = 0x7f0c0121;
+    public static final int AviaryWidget_IAPDialog_Container = 0x7f0c0122;
+    public static final int AviaryWidget_IAPDialog_Main = 0x7f0c0123;
+    public static final int AviaryWidget_IAPDialog_PackInfoPreviewCellLayout = 0x7f0c0124;
+    public static final int AviaryWidget_IAPDialog_ShadowBottom = 0x7f0c000d;
+    public static final int AviaryWidget_IAPDialog_ShadowTop = 0x7f0c000e;
+    public static final int AviaryWidget_IAPDialog_SingleCell = 0x7f0c0125;
+    public static final int AviaryWidget_IAPDialog_SingleCell_Stickers = 0x7f0c0126;
+    public static final int AviaryWidget_IAPDialog_Text = 0x7f0c0127;
+    public static final int AviaryWidget_IAPDialog_Text_Error = 0x7f0c0128;
+    public static final int AviaryWidget_IAPDialog_TopGrid = 0x7f0c000c;
+    public static final int AviaryWidget_IAPDialog_Workspace = 0x7f0c0129;
+    public static final int AviaryWidget_IAPDialog_WorkspaceIndicator = 0x7f0c012a;
+    public static final int AviaryWidget_ImageRestoreSwitcher = 0x7f0c012b;
+    public static final int AviaryWidget_ModalToastLoader = 0x7f0c012c;
+    public static final int AviaryWidget_ModalToastLoader_MainView = 0x7f0c012d;
+    public static final int AviaryWidget_NavBar = 0x7f0c012e;
+    public static final int AviaryWidget_NavBar_Divider = 0x7f0c012f;
+    public static final int AviaryWidget_NavBar_Main = 0x7f0c0130;
+    public static final int AviaryWidget_Overlay = 0x7f0c0131;
+    public static final int AviaryWidget_Overlay_Blemish = 0x7f0c0132;
+    public static final int AviaryWidget_Overlay_Blemish_Close = 0x7f0c0133;
+    public static final int AviaryWidget_Overlay_Frames = 0x7f0c0134;
+    public static final int AviaryWidget_Overlay_Stickers = 0x7f0c0135;
+    public static final int AviaryWidget_PreviewSpot = 0x7f0c0136;
+    public static final int AviaryWidget_StickerImageView = 0x7f0c0137;
+    public static final int AviaryWidget_SymbolMinus = 0x7f0c0138;
+    public static final int AviaryWidget_SymbolPlus = 0x7f0c0139;
+    public static final int AviaryWidget_TextImageView = 0x7f0c013a;
+    public static final int AviaryWidget_TextOverlay = 0x7f0c013b;
+    public static final int AviaryWidget_TextOverlay_BlemishClose = 0x7f0c013c;
+    public static final int AviaryWidget_TextView = 0x7f0c013d;
+    public static final int AviaryWidget_TextView_NavTitle = 0x7f0c013e;
+    public static final int AviaryWidget_TextView_Tool = 0x7f0c013f;
+    public static final int AviaryWidget_TiltShiftView = 0x7f0c0140;
+    public static final int AviaryWidget_TitleOverlay = 0x7f0c0141;
+    public static final int AviaryWidget_TitleOverlay_BlemishClose = 0x7f0c0142;
+
+    public ()
+    {
+    }
+}

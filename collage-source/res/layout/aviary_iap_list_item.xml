@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/aviary_iap_list_item_padding_left" android:paddingRight="@dimen/aviary_iap_list_item_padding_right" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingTop="@dimen/aviary_iap_list_item_padding_top" android:paddingBottom="@dimen/aviary_iap_list_item_padding_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/aviary_image" android:layout_width="@dimen/aviary_store_list_icon_size" android:layout_height="@dimen/aviary_store_list_icon_size" android:layout_marginRight="10.0dip" android:src="@drawable/aviary_store_placeholder" android:scaleType="fitXY" android:adjustViewBounds="false" android:layout_centerVertical="true" />
+        <com.aviary.android.feather.sdk.widget.AviaryTextView android:id="@id/aviary_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="0.0dip" android:layout_toRightOf="@id/aviary_image" android:layout_alignTop="@id/aviary_image" style="@style/AviaryStoreListItemTitle" />
+        <com.aviary.android.feather.sdk.widget.AviaryTextView android:id="@id/aviary_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_toRightOf="@id/aviary_image" android:layout_below="@id/aviary_title" style="@style/AviaryStoreListItemSubTitle" />
+        <include android:layout_width="@dimen/aviary_store_list_buy_button_width" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" layout="@layout/aviary_store_buy_button" />
+    </RelativeLayout>
+    <View android:background="@color/aviary_iap_list_divider" android:layout_width="fill_parent" android:layout_height="@dimen/aviary_iap_list_divider_height" android:layout_alignParentBottom="true" />
+</RelativeLayout>

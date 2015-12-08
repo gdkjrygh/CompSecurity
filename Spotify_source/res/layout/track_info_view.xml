@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:id="@id/track_info_view" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.spotify.android.paste.widget.CheckableImageButton android:id="@id/in_collection" android:background="@color/bg_transparent" android:layout_width="56.0dip" android:layout_height="fill_parent" android:scaleType="center" android:contentDescription="@string/player_content_description_collection_add" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.spotify.mobile.android.spotlets.player.views.MarqueeTextView android:textAppearance="@style/TextAppearance.Player.Title" android:gravity="center_horizontal" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PlayerTitle" />
+        <com.spotify.mobile.android.spotlets.player.views.MarqueeTextView android:textAppearance="@style/TextAppearance.Player.Subtitle" android:gravity="center_horizontal" android:id="@id/artistAndAlbum" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/suggested_song_label_margin_top" style="@style/PlayerSubtitle" />
+    </LinearLayout>
+    <ImageView android:id="@id/quickActionDotDotDot" android:background="@color/bg_transparent" android:layout_width="56.0dip" android:layout_height="fill_parent" android:scaleType="center" android:contentDescription="@string/content_description_show_context_menu" />
+</merge>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/sleep_detail_margin_left" android:layout_marginRight="@dimen/sleep_detail_margin_left">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/sleep_duration_title" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icn_header_clock" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/sleep_duration" style="@style/SleepDetailTitle" />
+        </LinearLayout>
+        <TextView android:id="@id/sleep_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sleep_detail_margin_top" android:layout_below="@id/sleep_duration_title" style="@style/SleepDetail.Secondary" />
+        <ImageView android:id="@id/star" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/star" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/sleep_detail_divider_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/sleep_detail_margin_left" android:layout_marginTop="25.0dip" android:layout_marginRight="@dimen/sleep_detail_margin_left">
+        <ImageView android:id="@id/half_moon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icn_header_moon" android:layout_centerVertical="true" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/sleep_quality" android:layout_toRightOf="@id/half_moon" android:layout_centerVertical="true" style="@style/SleepDetailTitle" />
+        <TextView android:textAppearance="@style/Fitbit.TextView.ProximaNovaFont.Regular" android:textSize="14.0sp" android:textColor="@color/sleep_summary_learn_more_text_color" android:gravity="center_vertical" android:id="@id/label_learn_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="25.0dip" android:text="@string/label_learn_more" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/sleep_detail_margin_left" android:layout_marginRight="@dimen/sleep_detail_margin_left">
+        <TextView android:id="@id/minutes_to_fall_asleep" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sleep_detail_margin_top" style="@style/SleepDetail.Secondary" />
+        <TextView android:id="@id/times_awakened" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sleep_detail_margin_top" style="@style/SleepDetail.Secondary" />
+        <TextView android:id="@id/times_restless" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sleep_detail_margin_top" style="@style/SleepDetail.Secondary" />
+        <TextView android:id="@id/min_awake_restless" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sleep_detail_margin_top" style="@style/SleepDetail.Secondary" />
+    </LinearLayout>
+</LinearLayout>

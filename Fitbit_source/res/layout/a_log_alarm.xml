@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/background_gray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:animateLayoutChanges="true">
+        <android.support.v7.widget.SwitchCompat android:textSize="16.0dip" android:textColor="#ff262626" android:id="@id/enabled_state" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="60.0dip" android:text="@string/label_turn_alarm_on" />
+        <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <TextView android:textSize="16.0dip" android:textColor="#ff262626" android:gravity="center_vertical" android:id="@id/txt_time" android:background="@drawable/bg_cell" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="60.0dip" android:text="@string/label_silent_alarm_enabled" />
+        <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <android.support.v7.widget.SwitchCompat android:gravity="center_vertical" android:id="@id/repeats" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="60.0dip" android:text="@string/label_repeats" android:layout_alignParentTop="true" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/week_day_selector_container" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/repeats">
+            <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <com.fitbit.ui.WeekDaySelectionView_ android:id="@id/week_day_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

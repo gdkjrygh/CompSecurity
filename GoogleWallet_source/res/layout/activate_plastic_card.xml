@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/ActivateCardButton" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:src="@drawable/img_card_back_silver" android:contentDescription="@null" style="@style/SplashHeroImage" />
+            <TextView android:text="@string/activate_plastic_card_instructions" style="@style/Title.Splash" />
+            <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/PlasticCardLastFourField" android:hint="@string/activate_plastic_card_hint" style="@style/SingleLineTextField" />
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/ActivateCardButton" android:text="@string/button_next" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+</RelativeLayout>

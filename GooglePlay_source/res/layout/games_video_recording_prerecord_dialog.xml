@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/abc_dialog_padding_material" android:paddingTop="@dimen/abc_dialog_padding_top_material" android:paddingRight="@dimen/abc_dialog_padding_material" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/games_video_recording_prerecord_description" style="@style/Games.AlertDialog.Body" />
+        <TextView android:id="@id/learn_more" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Games.AlertDialog.Body" />
+        <TextView android:id="@id/quality_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/games_dialog_above_title_padding" android:text="@string/games_video_recording_prerecord_quality_title" style="@style/Games.AlertDialog.Title" />
+        <RadioGroup android:orientation="horizontal" android:id="@id/quality_select" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/games_dialog_above_body_padding">
+            <RadioButton android:id="@id/quality_720p" android:layout_width="0.0dip" android:layout_height="wrap_content" android:checked="true" android:text="@string/games_video_recording_prerecord_quality_720p" android:layout_weight="1.0" />
+            <RadioButton android:id="@id/quality_480p" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/games_video_recording_prerecord_quality_480p" android:layout_weight="1.0" />
+        </RadioGroup>
+        <TextView android:textSize="@dimen/games_dialog_body_footnote_font_size" android:id="@id/time_remaining" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/games_dialog_between_body_padding" style="@style/Games.AlertDialog.Body" />
+    </LinearLayout>
+</ScrollView>

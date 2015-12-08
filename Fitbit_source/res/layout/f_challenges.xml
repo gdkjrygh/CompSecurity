@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <se.emilsjolander.stickylistheaders.StickyListHeadersListView android:scrollbarStyle="insideOverlay" android:id="@id/list" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:dividerHeight="0.0dip" />
+    <include android:id="@id/blocker_view" android:visibility="invisible" layout="@layout/l_data_is_unavailable_view" />
+    <TextView android:textStyle="bold" android:textColor="#ff9b9b9b" android:gravity="center" android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/label_no_challenge_found" />
+    <ProgressBar android:layout_gravity="center" android:id="@android:id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

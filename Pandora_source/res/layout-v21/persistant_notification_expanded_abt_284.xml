@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/e" android:background="@color/rich_notification_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" internal:layout_maxHeight="@dimen/notification_max_height" internal:layout_minHeight="@dimen/notification_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:internal="http://schemas.android.com/apk/prv/res/android">
+    <ImageView android:id="@id/close" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/notification_close_selector" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <ImageView android:id="@id/icon" android:background="@drawable/notification_template_icon_bg" android:layout_width="@dimen/notification_expanded_album_size_abt_284" android:layout_height="@dimen/notification_expanded_album_size_abt_284" android:src="@drawable/empty_art" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="vertical" android:paddingTop="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/notification_large_icon_height" android:layout_centerVertical="true" android:layout_toStartOf="@id/actions" android:layout_toEndOf="@id/icon">
+        <TextView android:textAppearance="@16974339" android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:singleLine="true" android:layout_marginStart="12.0dip" />
+        <TextView android:textAppearance="@16974334" android:ellipsize="end" android:id="@id/artist" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:singleLine="true" android:layout_marginStart="12.0dip" />
+        <TextView android:textAppearance="@16974337" android:ellipsize="end" android:id="@id/station" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:singleLine="true" android:layout_marginStart="12.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/actions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:layout_alignBottom="@id/icon" android:layout_alignParentEnd="true">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/play" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/notification_play_selector" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/skip" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/notification_skip_selector" />
+    </LinearLayout>
+    <ProgressBar android:id="@id/loading" android:background="#66000000" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/icon" android:layout_alignBottom="@id/icon" android:layout_alignStart="@id/icon" android:layout_alignEnd="@id/icon" style="?android:attr/progressBarStyleLarge" />
+</RelativeLayout>

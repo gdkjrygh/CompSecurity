@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.HackyDrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/public_collage_layout" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.view.HackyViewPager android:id="@id/viewpager_collages" android:layout_width="fill_parent" android:layout_height="fill_parent" android:transitionName="@string/transition_collage" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/layout_caption" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:gravity="center" android:id="@id/textview_caption" android:background="@drawable/public_collage_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/publicCollageInfoTextAppearance" />
+            <RelativeLayout android:gravity="center_vertical" android:background="@drawable/bg_show_tool_bar" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/container_collage_detail" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+                    <ImageButton android:id="@id/button_like" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/bn_view_like_n" />
+                    <ImageButton android:id="@id/button_echo" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/bn_view_resp" />
+                    <ImageButton android:id="@id/shareButton" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/selector_view_share" />
+                </LinearLayout>
+                <LinearLayout android:gravity="right" android:orientation="vertical" android:id="@id/container_collage_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/fragment_selected_tab_title_color" android:gravity="center_vertical" android:id="@id/textview_like_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" />
+                        <TextView android:textSize="11.0sp" android:textColor="@color/fragment_selected_tab_title_color" android:gravity="center_vertical" android:id="@id/textview_like_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/fragment_selected_tab_title_color" android:gravity="center_vertical" android:id="@id/textview_response_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" />
+                        <TextView android:textSize="11.0sp" android:textColor="@color/fragment_selected_tab_title_color" android:gravity="center_vertical" android:id="@id/textview_response_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <android.support.v7.widget.Toolbar android:id="@id/tool_bar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" android:elevation="@dimen/headerbar_elevation" app:titleTextAppearance="@style/CBlue.TextAppearance.Toolbar.Title" />
+    </RelativeLayout>
+    <include layout="@layout/cblue_drawer" />
+</android.support.v4.widget.HackyDrawerLayout>

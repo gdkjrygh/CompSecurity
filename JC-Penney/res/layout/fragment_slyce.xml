@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SurfaceView android:id="@id/preview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/scan_area" android:padding="@dimen/slyce_dimen_15dp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <ImageView android:id="@id/scan_borders" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/slyce_frame" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/snapped_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_centerInParent="true" />
+    <RelativeLayout android:id="@id/top_layout" android:background="@drawable/top_frame" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_alignParentTop="true">
+            <ImageButton android:id="@id/close_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/slyce_close" android:layout_centerVertical="true" android:soundEffectsEnabled="false" />
+            <ImageButton android:id="@id/scan_tips_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/slyce_scantip" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:soundEffectsEnabled="false" />
+            <RelativeLayout android:gravity="center_vertical" android:id="@id/slyce_logo_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true">
+                <ImageView android:id="@id/slyce_powered_by" android:background="@drawable/slyce_poweredby" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <ImageView android:background="@drawable/slyce_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/slyce_powered_by" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/bottom_layout" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="115.0dip" android:layout_alignParentBottom="true">
+        <RelativeLayout android:background="@drawable/bottom_frame" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <ImageButton android:id="@id/flip_camera_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/slyce_flip" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:soundEffectsEnabled="false" />
+            <Button android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="right|center" android:id="@id/use_or_crop_button" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Use or Crop" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:textAllCaps="false" />
+            <CheckBox android:id="@id/flash_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:button="@drawable/slyce_flash_selector" android:layout_toLeftOf="@id/flip_camera_button" android:layout_centerVertical="true" android:soundEffectsEnabled="false" />
+            <ImageButton android:id="@id/gallery_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/slyce_gallery" android:layout_centerVertical="true" android:soundEffectsEnabled="false" />
+            <Button android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="left|center" android:id="@id/retake_button" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retake" android:layout_centerVertical="true" android:textAllCaps="false" />
+        </RelativeLayout>
+        <ImageButton android:id="@id/snap_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/slyce_snap_selector" android:layout_centerInParent="true" android:soundEffectsEnabled="false" />
+    </RelativeLayout>
+    <ImageView android:id="@id/on_tap_view" android:visibility="gone" android:layout_width="@dimen/slyce_dimen_50dp" android:layout_height="@dimen/slyce_dimen_50dp" android:src="@drawable/slyce_scan_focus_on_tap" />
+    <RelativeLayout android:id="@id/dialog_layout" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

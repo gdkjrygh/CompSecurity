@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/titleBar" style="@style/TitleBarRed">
+        <include android:id="@id/titleBarBackground" layout="@layout/bar_blue" />
+        <TextView android:id="@id/titleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_activity_edit_credit_card" android:layout_centerInParent="true" style="@style/TitleBarText" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/scroller" android:background="@drawable/appbkgr" android:paddingLeft="15.0dip" android:paddingTop="15.0dip" android:paddingRight="15.0dip" android:paddingBottom="15.0dip" android:scrollbars="none" android:fadingEdge="none" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_below="@id/titleBar">
+        <LinearLayout android:orientation="vertical" android:id="@id/add_credit_card_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/iphone_table_single" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:visibility="visible" android:text="@string/card_nickname_hint" style="@style/AddCreditCardHintBlock" />
+                    <EditText android:id="@id/cardNickname" android:visibility="visible" android:maxLength="20" android:inputType="textCapCharacters" android:imeOptions="flagNoExtractUi" style="@style/UserAccountEditTextBlock" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" style="@style/UserAccountLineDivider" />
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:text="@string/card_number_hint" style="@style/AddCreditCardHintBlock" />
+                    <EditText android:id="@id/cardNumber" android:nextFocusDown="@id/credit_card_month" android:maxLength="16" android:inputType="number" android:imeOptions="flagNoExtractUi" style="@style/UserAccountEditTextBlock" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" style="@style/UserAccountLineDivider" />
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/TextView1" android:text="@string/month_" style="@style/AddCreditCardHintBlock" />
+                    <Spinner android:id="@id/credit_card_month" android:nextFocusDown="@id/credit_card_year" android:layout_marginLeft="5.0dip" style="@style/CreditCardExpirationControl" />
+                    <TextView android:id="@id/TextView2" android:layout_width="30.0dip" android:text="@string/year_" style="@style/CreditCardExpirationControl" />
+                    <Spinner android:id="@id/credit_card_year" android:layout_width="wrap_content" style="@style/CreditCardExpirationControl" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginTop="5.0dip" android:weightSum="2.0">
+                <Button android:textSize="20.0sp" android:textStyle="bold" android:id="@id/delete_this_credit_card_button" android:background="@drawable/btn_blue" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginRight="3.0dip" android:text="@string/delete_credit_card" android:layout_weight="1.0" android:onClick="onDeleteThisCreditCardClick" style="@style/LandingScreenButtonText" />
+                <Button android:textSize="20.0sp" android:textStyle="bold" android:id="@id/update_this_credit_card_button" android:background="@drawable/btn_blue" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:layout_marginTop="10.0dip" android:text="@string/update_credit_card" android:layout_weight="1.0" android:onClick="onUpdateThisCreditCardClick" style="@style/LandingScreenButtonText" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/prefs_application_version" android:key="@string/prefs_key_application_version" />
+    <PreferenceCategory android:title="@string/prefs_debug_settings_title">
+        <ListPreference android:entries="@array/debugServers" android:title="@string/prefs_debug_settings_power_CDN" android:key="@string/prefs_key_power_URL" android:entryValues="@array/debugServers" />
+        <ListPreference android:entries="@array/configServers" android:title="@string/prefs_debug_settings_config_CDN" android:key="@string/prefs_key_config_URL" android:entryValues="@array/configServers" />
+        <EditTextPreference android:title="@string/prefs_prompt_URL" android:key="@string/prefs_key_prompt_URL" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefs_nuance_title">
+        <com.dominos.views.CustomSwitchPreference android:title="@string/prefs_nuance_speech_enable" android:key="@string/prefs_key_speech_enable" />
+        <EditTextPreference android:title="@string/prefs_nuance_grammar" android:key="@string/prefs_key_nuance_grammar_version" />
+        <EditTextPreference android:title="@string/prefs_nuance_prompt" android:key="@string/prefs_key_nuance_prompts_version" />
+        <ListPreference android:entries="@array/nuanceEnvironmentSettingsArray" android:title="@string/prefs_nuance_gateway" android:key="@string/prefs_key_nuance_gateway" android:entryValues="@array/nuanceServers" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Extensions">
+        <PreferenceScreen android:title="@string/prefs_beacon_title">
+            <com.dominos.views.CustomSwitchPreference android:title="@string/prefs_beacon_title" android:key="@string/prefs_key_beacon" />
+            <com.dominos.views.CustomSwitchPreference android:title="@string/beacon_enabled_all_store" android:key="@string/prefs_key_beacon_all_store" />
+            <Preference android:title="@string/prefs_beacon_restart" android:key="@string/prefs_key_beacon_restart" />
+        </PreferenceScreen>
+        <com.dominos.views.CustomSwitchPreference android:title="@string/prefs_push_notification" android:key="@string/prefs_key_push_notification" />
+        <com.dominos.views.CustomSwitchPreference android:title="@string/prefs_pebble_watch" android:key="@string/prefs_key_pebble_watch" />
+        <com.dominos.views.CustomSwitchPreference android:title="@string/prefs_samsung_tv" android:key="@string/prefs_key_samsung_tv" />
+        <PreferenceScreen android:title="@string/prefs_payment_shoprunner_title" android:key="@string/prefs_key_shoprunner_title">
+            <com.dominos.views.CustomSwitchPreference android:title="@string/prefs_payment_shoprunner_enable" android:key="@string/prefs_key_shoprunner_enable" />
+            <com.dominos.views.CustomSwitchPreference android:title="@string/prefs_payment_shoprunner_hard_enable" android:key="@string/prefs_key_shoprunner_hard_enable" />
+            <com.dominos.views.CustomSwitchPreference android:title="@string/prefs_payment_shoprunner_discontinued" android:key="@string/prefs_key_shoprunner_discontinued" />
+            <ListPreference android:entries="@array/shoprunnerLearnMoreWebURLArray" android:title="@string/prefs_payment_shoprunner_learnmore_webURL" android:key="@string/prefs_key_shoprunner_learnmore_webURL" android:entryValues="@array/shoprunnerLearnMoreWebURLArray" />
+            <ListPreference android:entries="@array/shopRunnerLoginWebUrlArray" android:title="@string/prefs_payment_shoprunner__login_webURL" android:key="@string/prefs_key_shoprunner_login_webURL" android:entryValues="@array/shopRunnerLoginWebUrlArray" />
+            <ListPreference android:entries="@array/shopRunnerValidateMemberTokenUrlLArray" android:title="@string/prefs_payment_shoprunner_member_tokenURL" android:key="@string/prefs_key_shoprunner_member_tokenURL" android:entryValues="@array/shopRunnerValidateMemberTokenUrlLArray" />
+            <ListPreference android:entries="@array/shopRunnerValidateSessionTokenUrlArray" android:title="@string/prefs_payment_shoprunner_session_tokenURL" android:key="@string/prefs_key_shoprunner_session_tokenURL" android:entryValues="@array/shopRunnerValidateSessionTokenUrlArray" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefs_ford_sync_title">
+        <com.dominos.views.CustomSwitchPreference android:title="@string/prefs_ford_sync_enable" android:key="@string/prefs_key_ford_sync_enable" />
+        <EditTextPreference android:title="@string/prefs_ford_sync_version" android:key="@string/prefs_key_ford_sync_version" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefs_payment_title">
+        <com.dominos.views.CustomSwitchPreference android:title="@string/prefs_payment_gift_card" android:key="@string/prefs_key_gift_card" />
+        <com.dominos.views.CustomSwitchPreference android:title="@string/prefs_payment_google_wallet" android:key="@string/prefs_key_google_wallet" />
+        <ListPreference android:entries="@array/walletEnvironmentSettingsArray" android:title="@string/prefs_payment_google_wallet_environment" android:key="@string/prefs_key_google_wallet_environment" android:entryValues="@array/walletEnvironmentSettingsArray" />
+        <ListPreference android:entries="@array/creditCardsSettingsArray" android:title="@string/prefs_payment_credit_card_expired" android:key="@string/prefs_key_credit_card_expired" android:defaultValue="none" android:entryValues="@array/creditCardsSettingsArray" />
+        <ListPreference android:entries="@array/creditCardsSettingsArray" android:title="@string/prefs_payment_credit_card_not_taken_store" android:key="@string/prefs_key_credit_card_not_taken_by_stores" android:defaultValue="none" android:entryValues="@array/creditCardsSettingsArray" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefs_others_title">
+        <PreferenceScreen android:title="@string/prefs_loyalty_title" android:key="@string/prefs_key_loyalty_title">
+            <com.dominos.views.CustomSwitchPreference android:title="@string/prefs_loyalty_is_available" android:key="@string/prefs_key_loyalty_is_available" />
+            <com.dominos.views.CustomSwitchPreference android:title="@string/prefs_loyalty_is_enabled" android:key="@string/prefs_key_loyalty_is_enabled" />
+        </PreferenceScreen>
+        <ListPreference android:entries="@array/inactivityTimeoutSettingsArray" android:title="@string/prefs_inactive_time" android:key="@string/prefs_key_inactive_time" android:entryValues="@array/inactivityTimeoutSettingsArray" />
+        <com.dominos.views.CustomSwitchPreference android:title="@string/prefs_upgrade_recommended" android:key="@string/prefs_key_upgrade_recommended" />
+        <com.dominos.views.CustomSwitchPreference android:title="@string/prefs_upgrade_required" android:key="@string/prefs_key_upgrade_required" />
+        <Preference android:title="@string/prefs_reset" android:key="@string/prefs_key_reset" />
+        <PreferenceScreen android:title="@string/prefs_oauth_clear_title" android:key="@string/prefs_oauth_key" />
+    </PreferenceCategory>
+</PreferenceScreen>

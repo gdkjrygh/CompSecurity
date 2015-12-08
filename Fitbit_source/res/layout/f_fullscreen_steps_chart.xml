@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/summary" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="36.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/txt_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" fitbit:font="proxima_nova_semibold" style="@style/MarqueeText" />
+            <TextView android:textSize="24.0sp" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/txt_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/txt_title" fitbit:font="proxima_nova_light" style="@style/MarqueeText" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/txt_average" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_below="@id/txt_subtitle" fitbit:font="proxima_nova_light" style="@style/MarqueeText" />
+            <ImageButton android:id="@id/btn_shrink" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/FullscreenShrinkButton" />
+        </RelativeLayout>
+        <com.fitbit.activity.ui.charts.views.ActivityInteractiveChartView android:id="@id/chart" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <include layout="@layout/l_placeholder_and_progress" />
+</FrameLayout>

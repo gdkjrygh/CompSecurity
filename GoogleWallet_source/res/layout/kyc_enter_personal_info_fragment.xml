@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/KycInstruction" android:paddingTop="@dimen/default_spacing" android:layout_width="0.0dip" android:text="@string/kyc_instruction" android:layout_weight="1.0" style="@style/Body.Dark" />
+                <ImageView android:layout_gravity="top" android:id="@id/KycImageBadge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginRight="@dimen/default_spacing" android:src="@drawable/img_verifytag_tilted" android:contentDescription="@null" />
+                <ImageView android:gravity="center_vertical" android:id="@id/KycImageCaution" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginTop="@dimen/default_spacing" android:layout_marginRight="@dimen/default_spacing" android:src="@drawable/img_kyc_caution" />
+            </LinearLayout>
+            <View android:id="@id/KycInstructionDivider" android:background="@color/light" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/default_spacing" />
+            <TextView android:text="@string/kyc_legal_name" style="@style/Subheader" />
+            <LinearLayout android:orientation="vertical" style="@style/Card">
+                <TextView android:id="@id/KycLegalNameInstruction" android:text="@string/kyc_retry_legal_name_instruction" style="@style/TextFieldInfo" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/KycFirstName" android:layout_width="0.0dip" android:hint="@string/kyc_hint_first_name" android:layout_weight="1.0" android:nextFocusForward="@id/KycLastName" wallet:autoAdvance="true" style="@style/SingleLineTextField" />
+                    <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/KycLastName" android:layout_width="0.0dip" android:layout_marginLeft="0.0dip" android:hint="@string/kyc_hint_last_name" android:layout_weight="1.0" android:nextFocusForward="@id/KycAddressView" wallet:autoAdvance="true" style="@style/SingleLineTextField" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:text="@string/kyc_home_address" style="@style/Subheader" />
+            <LinearLayout android:orientation="vertical" style="@style/Card">
+                <TextView android:id="@id/KycHomeAddressInstruction" android:text="@string/kyc_home_address_instruction" style="@style/TextFieldInfo" />
+                <com.google.android.apps.wallet.widgets.address.AddressView android:id="@id/KycAddressView" android:layout_width="fill_parent" style="@style/SingleLineTextField" />
+                <Spinner android:id="@id/KycAddressSpinner" android:layout_width="fill_parent" style="@style/SingleLineTextField.Spinner" />
+            </LinearLayout>
+            <TextView android:text="@string/kyc_date_of_birth" style="@style/Subheader" />
+            <LinearLayout android:orientation="vertical" style="@style/Card">
+                <TextView android:text="@string/kyc_date_of_birth_instruction" style="@style/TextFieldInfo" />
+                <com.google.android.apps.wallet.widgets.validation.ValidatedDatePicker android:id="@id/KycDateOfBirth" android:layout_width="fill_parent" android:nextFocusForward="@id/KycSsnSegment3" style="@style/SingleLineTextField" />
+            </LinearLayout>
+            <TextView android:id="@id/KycSsnSectionHeader" android:text="@string/kyc_ssn_last_four" style="@style/Subheader" />
+            <LinearLayout android:orientation="vertical" android:id="@id/KycSsnSectionBody" style="@style/Card">
+                <TextView android:text="@string/kyc_ssn_subheader" style="@style/TextFieldInfo" />
+                <TextView android:id="@id/KycSsnInstruction" android:text="@string/kyc_retry_ssn_instruction" style="@style/TextFieldInfo" />
+                <RelativeLayout android:id="@id/KycSsnLast4Section" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="@style/Text_Subhead" android:id="@id/KycSsnFirst5Mask" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginRight="@dimen/narrow_spacing" android:text="@string/kyc_ssn_first_five_mask" />
+                    <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:gravity="center_vertical" android:id="@id/KycSsnLast4" android:layout_width="wrap_content" android:layout_marginLeft="0.0dip" android:hint="@string/kyc_hint_ssn_last_four" android:maxLength="4" android:layout_toRightOf="@id/KycSsnFirst5Mask" android:layout_alignBaseline="@id/KycSsnFirst5Mask" android:inputType="number" style="@style/SingleLineTextField" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/KycFullSsnSection" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/KycSsnSegment1" android:nextFocusDown="@id/KycSsnSegment2" android:layout_width="wrap_content" android:hint="@string/kyc_retry_hint_ssn_first_three" android:maxLength="3" android:inputType="number" android:nextFocusForward="@id/KycSsnSegment2" wallet:autoAdvance="true" style="@style/SingleLineTextField" />
+                    <TextView android:textAppearance="@style/Text_Subhead" android:id="@id/KycSsnSegment1Separator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.0dip" android:text="@string/kyc_retry_ssn_separator" android:layout_toRightOf="@id/KycSsnSegment1" android:layout_alignBaseline="@id/KycSsnSegment1" />
+                    <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/KycSsnSegment2" android:nextFocusDown="@id/KycSsnSegment3" android:layout_width="wrap_content" android:layout_margin="@dimen/default_spacing" android:hint="@string/kyc_retry_hint_ssn_middle_two" android:maxLength="2" android:layout_toRightOf="@id/KycSsnSegment1Separator" android:layout_alignBaseline="@id/KycSsnSegment1Separator" android:inputType="number" android:nextFocusForward="@id/KycSsnSegment3" wallet:autoAdvance="true" style="@style/SingleLineTextField" />
+                    <TextView android:textAppearance="@style/Text_Subhead" android:id="@id/KycSsnSegment2Separator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.0dip" android:text="@string/kyc_retry_ssn_separator" android:layout_toRightOf="@id/KycSsnSegment2" android:layout_alignBaseline="@id/KycSsnSegment2" />
+                    <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/KycSsnSegment3" android:layout_width="wrap_content" android:layout_margin="@dimen/default_spacing" android:hint="@string/kyc_hint_ssn_last_four" android:maxLength="4" android:layout_toRightOf="@id/KycSsnSegment2Separator" android:layout_alignBaseline="@id/KycSsnSegment2Separator" android:inputType="number" style="@style/SingleLineTextField" />
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout android:paddingLeft="10.0dip" android:paddingTop="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <CheckBox android:id="@id/CheckboxP2b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/narrow_spacing" />
+                <TextView android:textAppearance="@style/Text_Subtext" android:id="@id/DescriptionP2b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/CheckboxP2b" />
+                <ProgressBar android:id="@id/CategoryProgressP2b" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_below="@id/DescriptionP2b" android:layout_centerHorizontal="true" style="@style/ProgressSpinner" />
+                <com.google.android.apps.wallet.widgets.validation.ValidatedSpinner android:id="@id/CategorySpinnerP2b" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/CheckboxP2b" android:layout_below="@id/DescriptionP2b" />
+            </RelativeLayout>
+        </LinearLayout>
+        <Button android:id="@id/VerifyButton" android:text="@string/kyc_verify_button" style="@style/FlatButton.Docked" />
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

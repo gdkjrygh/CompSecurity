@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/ActionButton" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/BankAccountImage" android:src="@drawable/img_bankaccount_details_color_226x144dp" android:contentDescription="@null" style="@style/SplashHeroImage" />
+            <TextView android:id="@id/AccountName" style="@style/Title.Splash" />
+            <View style="@style/HorizontalDivider" />
+            <LinearLayout android:orientation="vertical" android:id="@id/AccountStateDetailSection" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/AccountStateDetailText" android:paddingTop="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" style="@style/Body.Splash" />
+                <TextView android:id="@id/AccountAlert" android:visibility="gone" style="@style/Body.Splash.Error" />
+                <View style="@style/HorizontalDivider" />
+            </LinearLayout>
+            <RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/default_spacing">
+                <TextView android:id="@id/AccountStateLabel" android:layout_width="wrap_content" android:layout_marginRight="@dimen/default_spacing" android:text="@string/bank_account_details_status_label" style="@style/Body.Dark" />
+                <TextView android:id="@id/AccountState" android:layout_width="wrap_content" android:layout_toRightOf="@id/AccountStateLabel" android:layout_alignBaseline="@id/AccountStateLabel" style="@style/Body" />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/ActionButton" android:visibility="gone" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+</RelativeLayout>

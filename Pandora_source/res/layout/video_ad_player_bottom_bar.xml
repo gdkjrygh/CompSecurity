@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/video_ad_player_bottom_bar" android:background="@color/less_transparent_black" android:padding="@dimen/video_ad_player_bottom_bar_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/videoad_ad_playpause" android:background="@android:color/transparent" android:visibility="visible" android:layout_width="@dimen/video_ad_player_bottom_bar_play_pause_button_width" android:layout_height="fill_parent" android:src="@drawable/pause_selector" android:scaleType="center" android:contentDescription="@string/cd_pause" />
+    <TextView android:textStyle="bold" android:textColor="@color/progress_text_color" android:id="@id/video_ad_progress_bar_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <ProgressBar android:id="@id/video_ad_progress_bar" android:paddingLeft="@dimen/video_ad_player_bottom_bar_padding_left" android:paddingRight="@dimen/video_ad_player_bottom_bar_padding_right" android:layout_width="wrap_content" android:layout_height="@dimen/video_ad_player_bottom_bar_progress_bar_height" android:layout_toLeftOf="@id/video_ad_progress_bar_right" android:layout_toRightOf="@id/videoad_ad_playpause" android:layout_centerVertical="true" style="?android:attr/progressBarStyleHorizontal" />
+</RelativeLayout>

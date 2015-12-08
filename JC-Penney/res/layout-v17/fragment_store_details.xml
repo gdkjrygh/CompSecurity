@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/store_detail_layout" android:background="@drawable/fs_list_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <TextView android:textSize="19.0sp" android:textColor="#ffcc0000" android:gravity="center" android:id="@id/store_detail_tv" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_store_detail_title" />
+    </RelativeLayout>
+    <include layout="@layout/full_width_gray_horizontal_line" />
+    <FrameLayout android:id="@id/mapview1" android:clickable="false" android:layout_width="fill_parent" android:layout_height="@dimen/store_details_map_height" android:layout_below="@id/store_detail_layout" android:layout_centerHorizontal="true" />
+    <include layout="@layout/full_width_gray_horizontal_line" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/mapview1">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.jcp.views.TypefaceTextView android:textSize="15.0sp" android:textColor="@android:color/black" android:id="@id/nametv" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:customTypeface="GOTHAM_BOLD" />
+                <com.jcp.views.TypefaceTextView android:textSize="14.0sp" android:textColor="#ff333333" android:id="@id/distancetv" android:layout_width="wrap_content" android:layout_height="wrap_content" app:customTypeface="LORA_ITALIC" />
+            </LinearLayout>
+            <include layout="@layout/full_width_gray_horizontal_line" />
+            <RelativeLayout android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.jcp.views.TypefaceTextView android:textSize="15.0sp" android:textColor="#ff333333" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/set_my_find_in_store" android:layout_toLeftOf="@id/toggleButton" android:layout_centerVertical="true" android:layout_toStartOf="@id/toggleButton" app:customTypeface="GOTHAM_BOLD" />
+                <ToggleButton android:textSize="63.0sp" android:textColor="#ffffffff" android:id="@id/toggleButton" android:background="@drawable/toggletoswitch" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="90.0dip" android:layout_height="25.0dip" android:textOn="" android:textOff="" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <include layout="@layout/full_width_gray_horizontal_line" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/addresslayout" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="4.0">
+                <com.jcp.views.TypefaceTextView android:textSize="13.0sp" android:textColor="#ff333333" android:id="@id/address" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/address" android:layout_weight="1.0" app:customTypeface="GOTHAM_BOLD" />
+                <com.jcp.views.TypefaceTextView android:textSize="14.0sp" android:textColor="#ff333333" android:id="@id/addresstv" android:layout_width="0.0dip" android:layout_height="wrap_content" android:drawableRight="@drawable/next_arrow" android:layout_weight="3.0" android:drawableEnd="@drawable/next_arrow" app:customTypeface="GOTHAM_BOOK" />
+            </LinearLayout>
+            <include layout="@layout/full_width_gray_horizontal_line" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/phnlayout" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="4.0">
+                <com.jcp.views.TypefaceTextView android:textSize="13.0sp" android:textColor="#ff333333" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/phone" android:layout_weight="1.0" app:customTypeface="GOTHAM_BOLD" />
+                <com.jcp.views.TypefaceTextView android:textSize="14.0sp" android:textColor="#ff157efb" android:id="@id/phonetv" android:layout_width="0.0dip" android:layout_height="wrap_content" android:drawableRight="@drawable/call_icon" android:layout_weight="3.0" android:drawableEnd="@drawable/call_icon" app:customTypeface="GOTHAM_BOOK" />
+            </LinearLayout>
+            <include layout="@layout/full_width_gray_horizontal_line" />
+            <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="4.0">
+                <com.jcp.views.TypefaceTextView android:textSize="13.0sp" android:textColor="#ff333333" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/store_hours" android:layout_weight="1.0" app:customTypeface="GOTHAM_BOLD" />
+                <com.jcp.views.TypefaceTextView android:textSize="15.0sp" android:textColor="#ff333333" android:id="@id/timingstv" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="3.0" app:customTypeface="GOTHAM_BOOK" />
+            </LinearLayout>
+            <include layout="@layout/full_width_gray_horizontal_line" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/store_services_layout" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="4.0">
+                <com.jcp.views.TypefaceTextView android:textSize="13.0sp" android:textColor="#ff333333" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/store_services" android:layout_weight="1.0" app:customTypeface="GOTHAM_BOLD" />
+                <com.jcp.views.TypefaceTextView android:textSize="14.0sp" android:textColor="#ff333333" android:id="@id/servicestv" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="3.0" app:customTypeface="GOTHAM_BOOK" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

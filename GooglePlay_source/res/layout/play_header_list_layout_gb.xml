@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/background_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/alt_play_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/controls_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="-1.0px">
+        <TextView android:gravity="center" android:id="@id/play_header_banner" android:background="@color/play_header_list_banner_background_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/play_header_list_banner_height" style="@style/PlayHeaderListBannerText" />
+        <FrameLayout android:id="@id/toolbar_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <FrameLayout android:id="@id/tab_bar" android:layout_width="fill_parent" android:layout_height="@dimen/play_header_list_tab_strip_height">
+            <com.google.android.play.headerlist.PlayHeaderListTabStrip android:id="@id/pager_tab_strip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <HorizontalScrollView android:id="@id/play_header_list_tab_scroll" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <com.google.android.play.headerlist.PlayHeaderListTabContainer android:orientation="horizontal" android:id="@id/play_header_list_tab_container" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                </HorizontalScrollView>
+            </com.google.android.play.headerlist.PlayHeaderListTabStrip>
+            <TextView android:textColor="@android:color/white" android:layout_gravity="center" android:id="@id/tab_bar_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PlayHeaderListTabText" />
+        </FrameLayout>
+    </LinearLayout>
+    <View android:id="@id/header_shadow" android:background="@drawable/play_header_list_shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/play_header_list_header_shadow_height" />
+    <include layout="@layout/play_header_list_pull_refresh" />
+</merge>

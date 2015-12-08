@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/empty_card_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.resources.ui.FbTextView android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/empty_state_big_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nav_empty_stack_no_suggestions" android:maxLines="1" style="@style/sync_tab_empty_card_big_title_text" />
+    <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:layout_gravity="bottom" android:background="@color/empty_card_button_grey" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_margin="1.0dip" fb:showDividers="middle" fb:dividerPadding="8.0dip" fb:divider="@color/black_20a" fb:dividerThickness="1.0dip">
+        <com.facebook.resources.ui.FbTextView android:ellipsize="end" android:gravity="center" android:id="@id/hide_button" android:background="@drawable/empty_card_button_pressable_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/nav_empty_stack_hide" android:maxLines="1" android:layout_weight="0.5" style="@style/sync_tab_empty_card_title_text" />
+        <com.facebook.resources.ui.FbTextView android:ellipsize="end" android:gravity="center" android:id="@id/view_skipped_button" android:background="@drawable/empty_card_button_pressable_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/nav_empty_stack_view_skipped" android:maxLines="1" android:layout_weight="0.5" style="@style/sync_tab_empty_card_title_text" />
+    </com.facebook.fbui.widget.layout.SegmentedLinearLayout>
+</FrameLayout>

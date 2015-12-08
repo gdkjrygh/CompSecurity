@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/tablet_home_above_container" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/tablet_station_pane_container" android:layout_width="@dimen/station_pane_width" android:layout_height="fill_parent">
+        <com.pandora.android.view.HeaderLayout android:gravity="top|center" android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" pandora:roundedCorners="none" pandora:headerType="stationPane" pandora:hideDividerLine="false">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="right" android:orientation="vertical" android:id="@id/tablet_station_pane" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/ad_view_wrapper_tablet" />
+                <LinearLayout android:gravity="bottom|center" android:orientation="vertical" android:id="@id/ad_view_wrapper_tablet" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </com.pandora.android.view.HeaderLayout>
+        <View android:id="@id/tablet_station_pane_overlay" android:background="@color/semi_transparent_black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:layout_gravity="right" android:id="@id/tablet_station_pane_separator" android:background="@android:color/black" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <LinearLayout android:id="@id/tablet_center_single_pane_container" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/tablet_center_single_pane" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.pandora.android.view.StickyScrollView android:id="@id/tablet_center_pane_scrollview" android:layout_width="0.0dip" android:layout_height="fill_parent" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/tablet_center_pane" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/tablet_center_top" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:id="@id/tablet_center_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.pandora.android.view.StickyScrollView>
+    <View android:layout_gravity="right" android:id="@id/tablet_third_pane_separator" android:background="@android:color/black" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:weightSum="2.0" style="@style/layout_f_w">
+        <TextView android:textSize="16.0dip" android:textColor="@android:color/black" android:gravity="center" android:id="@id/tab1" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/united_states" android:layout_weight="1.0" />
+        <View android:id="@id/hamburger_footer" android:background="#ffd5d5d5" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+        <TextView android:textSize="16.0dip" android:textColor="@android:color/black" android:gravity="center" android:id="@id/tab2" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/apo_fpo_dpo" android:layout_weight="1.0" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/indicator" />
+    <android.support.v4.view.ViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

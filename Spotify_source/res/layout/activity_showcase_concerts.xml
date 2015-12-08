@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/header_layout" android:background="@color/cat_medium_green" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@id/header" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/home_title" android:singleLine="true" android:layout_weight="1.0" android:textAllCaps="true" />
+        <TextView android:ellipsize="end" android:gravity="right|center" android:id="@id/header_done" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:text="@string/events_hub_showcase_done_button" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+    <Button android:id="@id/view_concerts" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="50.0dip" android:layout_marginBottom="30.0dip" android:text="@string/events_hub_showcase_button" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="?pasteButtonStylePrimary" />
+    <FrameLayout android:id="@id/container" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/view_concerts" android:layout_below="@id/header_layout" />
+</RelativeLayout>

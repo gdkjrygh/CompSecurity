@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingTop="@dimen/games_quest_carousel_section_padding_top" android:paddingBottom="@dimen/games_quest_carousel_section_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/games_quest_carousel_bg_height" android:src="@drawable/bg_play_games_quest_banner" android:scaleType="centerCrop" android:layout_alignParentTop="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/quest_carousel_header_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/games_quest_carousel_icon_size" android:layout_height="@dimen/games_quest_carousel_icon_size" android:src="@drawable/games_ic_quest" />
+            <TextView android:gravity="left|center" android:id="@id/quest_carousel_header" android:layout_width="wrap_content" android:layout_height="@dimen/games_quest_carousel_header_height" android:layout_marginLeft="@dimen/games_quest_carousel_header_margin_left" android:text="@string/games_dest_main_quest_carousel_title" style="@style/Games.QuestCarouselHeader" />
+        </LinearLayout>
+        <com.google.android.gms.games.ui.destination.quests.QuestCarouselViewPager android:layout_gravity="center_horizontal" android:id="@id/quest_carousel_pager" android:layout_width="fill_parent" android:layout_height="@dimen/games_tile_quest_fixed_height" android:layout_below="@id/quest_carousel_header_container" />
+    </RelativeLayout>
+</FrameLayout>

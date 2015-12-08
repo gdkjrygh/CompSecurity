@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/share_to_profile_main" android:background="@android:color/white" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="ignoreClick"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup android:gravity="center" android:orientation="horizontal" android:id="@id/share_radio_group" android:background="@color/station_list_row_divider_color" android:paddingTop="0.5dip" android:paddingBottom="0.5dip" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <RadioButton android:textColor="@drawable/radiobutton_text_selector" android:gravity="center" android:id="@id/share_station_radio" android:background="@drawable/radiobutton_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:checked="true" android:button="@null" android:text="@string/station" android:layout_weight="1.0" />
+        <RadioButton android:textColor="@drawable/radiobutton_text_selector" android:gravity="center" android:id="@id/share_track_radio" android:background="@drawable/radiobutton_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:button="@null" android:text="@string/track" android:layout_weight="1.0" />
+    </RadioGroup>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/share_details_wrapper" android:background="@color/station_list_row_bg_color" android:clickable="false" android:layout_width="fill_parent" android:layout_height="@dimen/list_item_height">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/share_art" android:layout_width="@dimen/mini_album_art_size" android:layout_height="@dimen/mini_album_art_size" android:layout_marginLeft="10.0dip" android:src="@drawable/empty_art" android:contentDescription="@string/cd_album_art" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/share_details" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+            <TextView android:textSize="17.0sp" android:textColor="@color/station_personalization_cell_title" android:ellipsize="end" android:id="@id/share_details_line1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/station_personalization_cell_subtitle" android:ellipsize="end" android:id="@id/share_details_line2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-2.0dip" android:maxLines="1" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/station_list_row_divider_color" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <LinearLayout android:id="@id/share_comments_edit_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:textSize="16.0sp" android:textColor="@color/station_personalization_cell_title" android:gravity="top|left|center" android:id="@id/share_comments_edit" android:background="@android:color/white" android:padding="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="80.0dip" android:hint="@string/listening_to" android:inputType="textMultiLine|textNoSuggestions" android:imeActionLabel="@string/action_share" android:textCursorDrawable="@null" />
+    </LinearLayout>
+    <View android:background="@color/station_list_row_divider_color" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/share_to_facebook" android:background="@drawable/share_facebook_button_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="5.0dip" android:layout_centerVertical="true" android:contentDescription="@string/cd_share_button" />
+        <ImageButton android:id="@id/share_to_twitter" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/share_twitter_button_selector" android:layout_toRightOf="@id/share_to_facebook" android:layout_centerVertical="true" android:contentDescription="@string/cd_share_button" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip">
+            <TextView android:textSize="17.0sp" android:textColor="@color/station_list_row_divider_color" android:ellipsize="end" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/label_or" android:maxLines="1" android:layout_centerInParent="true" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                <Button android:enabled="true" android:textSize="17.0sp" android:textColor="@drawable/share_email_text_selector" android:id="@id/share_to_email" android:background="@android:color/transparent" android:clickable="true" android:layout_width="wrap_content" android:layout_height="42.0dip" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:text="@string/edittext_hint_email" android:drawableRight="@drawable/share_email_selector" android:drawablePadding="5.0sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

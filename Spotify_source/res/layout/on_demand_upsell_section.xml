@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="180.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:paste="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/on_demand_bg" android:scaleType="centerCrop" />
+    <View android:background="@drawable/on_demand_upsell_gradient" android:layout_width="fill_parent" android:layout_height="20.0dip" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="@style/TextAppearance.Cat" android:textSize="20.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/on_demand_upsell_heading_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="5.0dip" android:text="@string/upsell_dialog_on_demand_track_title" />
+        <TextView android:textAppearance="@style/TextAppearance.Cat" android:textSize="16.0sp" android:gravity="center" android:id="@id/on_demand_upsell_subheading_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="20.0dip" android:text="@string/upsell_dialog_on_demand_track_body" />
+        <Button android:id="@id/upgrade_call_to_action_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" style="?pasteButtonStyleSmall" />
+    </LinearLayout>
+    <FrameLayout android:layout_gravity="top|right|center" android:id="@id/dismiss_icon_container" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_margin="10.0dip" android:contentDescription="@string/generic_content_description_close">
+        <com.spotify.android.paste.widget.SpotifyIconView android:layout_gravity="center" android:id="@id/dismiss_icon_view" android:layout_width="16.0dip" android:layout_height="16.0dip" paste:iconColor="@color/cat_profile_panel" paste:iconType="icon_x_16" />
+    </FrameLayout>
+</FrameLayout>

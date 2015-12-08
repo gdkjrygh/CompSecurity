@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/log_actionbar" android:background="@color/darkest_grey" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_bar_default_height_material">
+        <LinearLayout android:gravity="center" android:id="@id/actionbar_button_cancel" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="0.5" style="@style/Widget.AppCompat.ActionButton">
+            <TextView android:textColor="?android:textColorPrimaryInverse" android:gravity="center" android:id="@id/actionbar_label_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_cancel" android:singleLine="true" android:drawableLeft="@drawable/actionbar_button_cancel" android:drawablePadding="5.0dip" />
+        </LinearLayout>
+        <View android:background="@drawable/abc_item_background_holo_dark" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+        <LinearLayout android:gravity="center" android:id="@id/actionbar_button_ok" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="0.5" style="@style/Widget.AppCompat.ActionButton">
+            <TextView android:textColor="?android:textColorPrimaryInverse" android:gravity="center" android:id="@id/actionbar_label_ok" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/send" android:singleLine="true" android:drawableLeft="@drawable/ic_menu_send" android:drawablePadding="5.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/input_layout" android:background="#fff3f3f3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <EditText android:id="@id/input" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:inputType="textMultiLine|textShortMessage" />
+            <LinearLayout android:orientation="vertical" android:id="@id/counter_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:layout_gravity="center_horizontal" android:id="@id/counter" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" android:textIsSelectable="false" />
+            </LinearLayout>
+        </LinearLayout>
+        <include android:id="@id/message_layout" android:paddingBottom="16.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:transcriptMode="normal" android:divider="@null" android:dividerHeight="0.0dip" android:layout_above="@id/input_layout" android:layout_alignParentTop="true" layout="@layout/i_conversation_from" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ProgressSpinner" />
+    </RelativeLayout>
+</LinearLayout>

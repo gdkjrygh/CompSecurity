@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_white_popup_corner" android:paddingBottom="10.0dip" android:layout_width="@dimen/common_dialog_max_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="top" android:orientation="vertical" android:background="@drawable/popup_title_bg" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upsell_title" android:layout_centerInParent="true" style="@style/TitleBarText" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/big_product_image" android:background="@null" android:layout_width="@dimen/upsell_popup_image_width" android:layout_height="@dimen/upsell_popup_image_height" android:layout_margin="10.0dip" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/productDescription" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textColor="@color/white_darkgrey_text" android:id="@id/upsellMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/would_you_like_to_add" />
+                <TextView android:textSize="16.0sp" android:gravity="center" android:id="@id/upsell_product_description" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/LandingScreenText" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/stjudesLayout" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:paddingBottom="15.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/dominos_blue" android:gravity="center" android:id="@id/stjudesMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stjude_message" />
+                <TextView android:textSize="14.0sp" android:gravity="center" android:id="@id/stjudeSavings" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/stjude_savings" style="@style/LandingScreenText" />
+                <RadioGroup android:orientation="horizontal" android:id="@id/rbGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                    <RadioButton android:textColor="@color/dominos_blue" android:id="@id/rbOne" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:checked="true" android:text="$1" />
+                    <RadioButton android:textColor="@color/dominos_blue" android:id="@id/rbTwo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:text="$2" />
+                    <RadioButton android:textColor="@color/dominos_blue" android:id="@id/rbFive" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:text="$5" />
+                    <RadioButton android:textColor="@color/dominos_blue" android:id="@id/rbTen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:text="$10" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/LinearLayout02" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Button android:textSize="12.0sp" android:gravity="center" android:id="@id/upsell_go_to_checkout" android:background="@drawable/btn_blue" android:layout_width="125.0dip" android:layout_height="50.0dip" android:layout_margin="3.0dip" android:text="@string/upsell_go_to_checkout" style="@style/ButtonStyle" />
+                    <Button android:textSize="12.0sp" android:gravity="center" android:id="@id/upsell_add_to_order" android:background="@drawable/btn_red_add" android:layout_width="125.0dip" android:layout_height="50.0dip" android:layout_margin="3.0dip" android:text="@string/upsell_add_to_order" android:drawablePadding="3.0dip" android:layout_toRightOf="@id/upsell_go_to_checkout" style="@style/ButtonStyle" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

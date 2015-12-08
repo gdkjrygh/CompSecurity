@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/summary" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageButton android:id="@id/btn_shrink" style="@style/SleepShrinkButton" />
+            <TextView android:gravity="center_horizontal" android:id="@id/txt_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_sleep_pattern" android:layout_centerInParent="true" style="@style/FullscreenChartTitle.Sleep.Intraday" />
+        </RelativeLayout>
+        <GridView android:gravity="center_horizontal" android:id="@id/grid_view" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:horizontalSpacing="@dimen/sleep_log_legend_horizontal_spacing" android:verticalSpacing="@dimen/sleep_log_legend_row_vertical_spacing" android:stretchMode="columnWidth" android:columnWidth="@dimen/sleep_log_legend_item_width" android:numColumns="auto_fit" />
+        <com.fitbit.sleep.ui.intraday.SleepIntradayInteractiveChartView android:id="@id/chart" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="13.0dip" />
+    </LinearLayout>
+    <include layout="@layout/l_placeholder_and_progress" />
+</FrameLayout>

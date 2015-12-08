@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/station_rename_holder" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/station_add_variety_header" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/StationPersonalizationStyle.Row.LargeHeader">
+        <ImageView android:id="@id/station_add_variety_plus_icon" android:layout_width="@dimen/station_album_art_size" android:layout_height="@dimen/station_album_art_size" android:src="@drawable/add_station_selector" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/station_album_art_size" android:layout_toRightOf="@id/station_add_variety_plus_icon">
+            <TextView android:textColor="@color/station_personalization_seeds_header" android:id="@id/station_add_variety" android:paddingLeft="@dimen/station_row_sides_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/stationlist_add_variety" style="@style/StationPersonalizationStyle.TextAppearence.Medium" />
+            <TextView android:id="@id/station_add_variety_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/station_personalization_add_variety_subtitle" style="@style/StationPersonalizationStyle.Row.Description" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout style="@style/StationPersonalizationStyle.Row.Header">
+        <TextView android:textAppearance="@style/StationPersonalizationStyle.TextAppearence.Small" android:textColor="@color/station_personalization_seeds_header" android:gravity="center_vertical" android:id="@id/station_settings_header" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/station_personalization_settings" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/setting_station_artist_messaging_row" android:background="@drawable/station_list_row_bg_divider" android:paddingTop="10.0dip" android:paddingRight="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/station_personalization_seeds_list_item_height">
+        <TextView android:id="@id/setting_station_artist_messaging_title" android:background="@null" android:text="@string/station_personalization_settings_station_artist_messaging" android:singleLine="true" style="@style/StationPersonalizationStyle.Row.ArtistMessageSetting" />
+        <TextView android:id="@id/setting_station_artist_messaging_tap_to_settings_text" android:background="@null" android:text="@string/station_personalization_settings_tap_to_settings" android:singleLine="true" android:layout_below="@id/setting_station_artist_messaging_title" style="@style/StationPersonalizationStyle.Row.ArtistMessageSettingTapTo" />
+        <com.pandora.android.util.Switch android:id="@id/setting_station_artist_message_enabled_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/PSwitch" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@color/station_personalization_bg_color" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/station_name" android:background="@null" android:paddingRight="5.0dip" android:layout_width="0.0dip" android:singleLine="true" android:drawableRight="@drawable/edit_station_selector" android:layout_weight="1.0" style="@style/StationPersonalizationStyle.Row.StationName" />
+        <Button android:textSize="@dimen/station_personalization_text_xsmall" android:textStyle="bold" android:textColor="@color/brand_text_color" android:id="@id/save_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save" android:textAllCaps="true" />
+    </LinearLayout>
+    <EditText android:id="@id/station_description" android:background="@color/station_personalization_bg_color" android:paddingTop="5.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/station_description_hint" android:inputType="textMultiLine" style="@style/StationPersonalizationStyle.Row.Description" />
+</LinearLayout>

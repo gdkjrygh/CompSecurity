@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/ContinueButton" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/ExplainAutofundingImage" android:layout_width="fill_parent" android:src="@drawable/img_addcard_nfc_tutorial_color_360x218dp" android:contentDescription="@string/explain_auto_funding" style="@style/SplashHeroImage.FullWidth" />
+            <TextView android:text="@string/explain_auto_funding_subtitle" style="@style/Title.Splash" />
+            <TextView android:text="@string/explain_auto_funding" android:lineSpacingExtra="0.0dip" style="@style/Body.Splash" />
+            <TextView android:text="@string/explain_auto_funding_security" android:lineSpacingExtra="0.0dip" style="@style/Body.Splash.Subcopy" />
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/ContinueButton" android:text="@string/button_continue" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/games_onyx_card_external_margin" card_view:cardCornerRadius="@dimen/games_onyx_card_corner_radius"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/root_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/horiz_layout" android:padding="@dimen/games_onyx_internal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentRight="true">
+            <LinearLayout android:orientation="vertical" android:paddingRight="@dimen/games_onyx_internal_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/games_onyx_title_font_size" android:textColor="@color/games_onyx_title_text_color" android:ellipsize="end" android:gravity="bottom|left|center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="0.0dip" android:singleLine="true" android:layout_weight="0.5" />
+                <TextView android:textSize="@dimen/games_onyx_subtitle_font_size" android:textColor="@color/games_onyx_subtitle_text_color" android:ellipsize="end" android:gravity="top|left|center" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="0.0dip" android:singleLine="true" android:layout_weight="0.5" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/info_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/games_ic_info_grey" />
+        </LinearLayout>
+        <View android:id="@id/overlay" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignLeft="@id/horiz_layout" android:layout_alignTop="@id/horiz_layout" android:layout_alignRight="@id/horiz_layout" android:layout_alignBottom="@id/horiz_layout" style="@style/Games.SelectableItemBackground" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

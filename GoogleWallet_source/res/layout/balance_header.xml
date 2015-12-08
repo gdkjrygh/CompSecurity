@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout android:orientation="vertical" android:background="@color/primary" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:paddingBottom="10.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/StoredValueBox" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.wallet.widgets.roundedimage.RoundedImage android:layout_gravity="left" android:id="@id/ProfilePhoto" android:layout_width="@dimen/large_contact_photo" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="@dimen/default_spacing" wallet:defaultImage="@drawable/img_avatar_circle_color_80dp" />
+        <com.google.android.apps.wallet.storedvalue.BalanceView android:layout_gravity="left|center" android:id="@id/WalletBalanceView" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ButtonBar" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/SendMoneyButton" android:text="@string/send_money" android:layout_weight="1.0" style="@style/PrimaryButton" />
+        <Button android:id="@id/SettleBalanceButton" android:visibility="gone" android:text="@string/settle_balance_pay_off_button" android:layout_weight="1.0" style="@style/PrimaryButton" />
+        <Space android:layout_width="4.0dip" android:layout_height="@dimen/minimum_touch_target" android:layout_weight="0.0" />
+        <Button android:id="@id/RequestMoneyButton" android:text="@string/request_money" android:layout_weight="1.0" style="@style/PrimaryButton" />
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout>

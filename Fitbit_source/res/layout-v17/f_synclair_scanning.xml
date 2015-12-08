@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:background="@drawable/gradient_light_teal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/tracker_photo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <RelativeLayout android:gravity="center_horizontal" android:id="@id/loader" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_below="@id/tracker_photo" android:layout_centerHorizontal="true">
+        <ProgressBar android:id="@id/loading_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textStyle="italic" android:textColor="@android:color/white" android:gravity="center" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Searching" android:layout_toRightOf="@id/loading_view" android:layout_alignTop="@id/loading_view" android:layout_alignBottom="@id/loading_view" android:layout_toEndOf="@id/loading_view" />
+        <Button android:id="@id/retry" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/retry_ok" android:layout_below="@id/text" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

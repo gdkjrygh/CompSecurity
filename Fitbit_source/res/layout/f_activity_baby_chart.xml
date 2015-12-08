@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/main_layout" android:layout_width="fill_parent" android:layout_height="288.0dip" style="?attr/loggingBabyChartStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/chart_wrapper" android:background="?android:selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageButton android:id="@id/fullscreen_icon" style="@style/UnclickableCornerFullscreenIcon" />
+        <com.fitbit.ui.charts.ExtendedChartView android:id="@id/chart" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/activity_baby_chart_right_margin" android:layout_below="@id/fullscreen_icon" chart="@xml/resting_heartrate_fullscreen_chart" />
+        <TextView android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/placeholder" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_measurements" />
+    </RelativeLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

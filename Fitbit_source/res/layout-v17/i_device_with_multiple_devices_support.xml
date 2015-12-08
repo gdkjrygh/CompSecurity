@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/device_cell" android:background="?android:selectableItemBackground" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="90.0dip" android:paddingEnd="8.0dip">
+        <com.fitbit.ui.loadable.LoadablePicassoImageView android:layout_gravity="right|center" android:id="@id/img_device" android:paddingLeft="5.0dip" android:paddingRight="9.0dip" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginBottom="6.0dip" android:scaleType="fitCenter" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_weight="0.6">
+            <TextView android:id="@id/txt_device_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aria" style="@style/DeviceListItemTitleTextStyle" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/txt_last_sync_time" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginBottom="1.0dip" android:minHeight="19.0dip" android:text="Yesterday at 8:18 AM" style="@style/DeviceListItemDescriptionTextStyle" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/text_battery" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:minHeight="19.0dip" android:text="@string/battery_level_full" style="@style/DeviceListItemDescriptionTextStyle" />
+        </LinearLayout>
+        <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/sync_panel_cell" android:layout_width="40.0dip" android:layout_height="40.0dip">
+            <ImageButton android:id="@id/btn_sync" android:background="@drawable/btn_sync" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <ImageButton android:id="@id/btnFirmwareUpdate" android:background="@drawable/device_tile_firmware_update" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <ProgressBar android:id="@id/sync_progress_bar" android:visibility="gone" android:layout_width="30.0dip" android:layout_height="30.0dip" android:indeterminate="true" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

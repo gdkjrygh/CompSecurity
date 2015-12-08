@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="insideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Card">
+        <include layout="@layout/wobs_card_preview" />
+        <View style="@style/HorizontalDivider" />
+        <TextView android:paddingLeft="@dimen/default_spacing" android:paddingTop="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wobs_customize_choose_icon" style="@style/Text_Subhead" />
+        <com.google.android.apps.wallet.widgets.swatchpicker.SwatchPicker android:id="@id/IconSwatchPicker" android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" wallet:rowCount="1" />
+        <TextView android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wobs_customize_choose_color" style="@style/Text_Subhead" />
+        <com.google.android.apps.wallet.widgets.swatchpicker.SwatchPicker android:id="@id/ColorSwatchPicker" android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" wallet:rowCount="2" />
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

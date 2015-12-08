@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/ZipCodeScreen" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="bottom|center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="35.0">
+        <Space android:layout_gravity="center_horizontal" android:id="@id/WalletLogoSpot" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_marginBottom="@dimen/default_spacing" />
+        <TextView android:layout_gravity="center_horizontal" android:layout_marginBottom="0.0dip" android:text="@string/setup_zip_code_title" style="@style/SetupTitle" />
+        <TextView android:layout_gravity="center_horizontal" android:text="@string/setup_zip_code_subtitle" style="@style/SetupSubtitle" />
+    </LinearLayout>
+    <com.google.android.apps.wallet.usersetup.ZipCodeView android:orientation="vertical" android:id="@id/ZipCodeView" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="65.0" style="@style/Card" />
+</LinearLayout>

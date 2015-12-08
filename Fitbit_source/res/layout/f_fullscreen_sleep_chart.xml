@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/summary" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageButton android:id="@id/btn_shrink" style="@style/SleepShrinkButton" />
+            <TextView android:gravity="center_horizontal" android:id="@id/txt_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/FullscreenChartTitle" />
+        </RelativeLayout>
+        <com.fitbit.sleep.ui.charts.SleepScrollableChartView android:id="@id/chart" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <include layout="@layout/l_placeholder_and_progress" />
+</FrameLayout>

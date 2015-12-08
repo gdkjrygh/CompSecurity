@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.play.games" platformBuildVersionCode="23" platformBuildVersionName="6.0-2166767">
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.WRITE_GSERVICES"/>
+    <uses-permission android:name="com.google.android.gms.permission.INTERNAL_BROADCAST"/>
+    <permission android:name="com.google.android.gms.permission.GAMES_DEBUG_SETTINGS" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.gms.permission.GAMES_DEBUG_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <compatible-screens>
+        <screen android:screenDensity="hdpi" android:screenSize="small"/>
+        <screen android:screenDensity="hdpi" android:screenSize="large"/>
+        <screen android:screenDensity="hdpi" android:screenSize="xlarge"/>
+        <screen android:screenDensity="hdpi" android:screenSize="normal"/>
+    </compatible-screens>
+    <application android:allowBackup="false" android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.app.PowerUpApplication" android:restrictedAccountType="com.google">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.gms.games.APP_ID" android:value="@string/games_dest_app_id"/>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_launcher_name" android:name="com.google.android.gms.games.ui.destination.main.MainActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.MAIN_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_launcher_name" android:name="com.google.android.gms.games.ui.destination.onboarding.GamesOnboardHostActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme.FullScreen"/>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:label="@string/games_dest_my_games_list_label" android:name="com.google.android.gms.games.ui.destination.games.MyGamesListActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme"/>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:label="@string/games_dest_shop_games_list_label" android:name="com.google.android.gms.games.ui.destination.games.ShopGamesActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.VIEW_SHOP_GAMES_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:icon="@drawable/games_ic_ab_logo" android:name="com.google.android.gms.games.ui.destination.games.GameDetailActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.VIEW_GAME_DETAIL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:label="@string/games_dest_player_list_label" android:name="com.google.android.gms.games.ui.destination.players.PlayerActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme"/>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:name="com.google.android.gms.games.ui.destination.players.PlayerDetailActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.VIEW_MY_PROFILE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.VIEW_PROFILE_COMPARISON"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:name="com.google.android.gms.games.ui.destination.players.PlayerDetailGameComparisonActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.VIEW_GAME_COMPARISON_RECYCLER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:name="com.google.android.gms.games.ui.destination.players.AchievementComparisonListActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.VIEW_ACHIEVEMENT_COMPARISON_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:label="@string/games_player_search_label" android:name="com.google.android.gms.games.ui.destination.players.DestinationPlayerSearchActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme"/>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:label="@string/games_game_search_label" android:launchMode="singleTop" android:name="com.google.android.gms.games.ui.destination.games.DestinationGameSearchActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+        </activity>
+        <provider android:authorities="com.google.android.gms.games.ui.destination.games.search_suggestion_provider" android:name="com.google.android.gms.games.ui.destination.games.GamesSuggestionProvider" android:syncable="false"/>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:name="com.google.android.gms.games.ui.destination.leaderboards.DestinationLeaderboardScoreActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.VIEW_LEADERBOARD_SCORES"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:name="com.google.android.gms.games.ui.destination.inbox.DestinationInboxActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.SHOW_INBOX"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:name="com.google.android.gms.games.ui.destination.matches.DestinationMultiplayerListActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.SHOW_MULTIPLAYER_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:name="com.google.android.gms.games.ui.destination.matches.DestinationPublicInvitationActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.SHOW_PUBLIC_INVITATIONS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/games_dest_participant_list_label" android:name="com.google.android.gms.games.ui.destination.matches.DestinationParticipantListActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.Activity.Light.Dialog.SmallTitle">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.VIEW_PARTICIPANT_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.gms.games.ui.destination.achievements.DestinationAchievementDescriptionActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.Activity.Light.Dialog.SmallTitle">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.ACTION_VIEW_ACHIEVEMENT_DESCRIPTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:name="com.google.android.gms.games.ui.destination.requests.DestinationRequestListActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.SHOW_REQUEST_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:name="com.google.android.gms.games.ui.destination.requests.DestinationPublicRequestActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.SHOW_PUBLIC_REQUESTS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:label="@string/games_dest_completed_quest_list_label" android:name="com.google.android.gms.games.ui.destination.quests.CompletedQuestListActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.VIEW_COMPLETED_QUEST_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@drawable/games_ic_ab_logo" android:name="com.google.android.gms.games.ui.destination.videos.DestinationVideoRecordingOnboardingActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.DestinationActivityTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.destination.SHOW_VIDEO_RECORDING_ONBOARDING"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:autoRemoveFromRecents="true" android:excludeFromRecents="true" android:name="com.google.android.gms.games.ui.client.ClientUiProxyActivity" android:process="com.google.android.play.games.ui" android:taskAffinity="com.google.android.games.ui.client.CLIENT_PROXY" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.CLIENT_PROXY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.android.gms.games.ui.common.players.ProfileSummaryActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.Activity.Light.Dialog">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.VIEW_PROFILE"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="true" android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.service.PlayGamesBridgeService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.service.GAMES_BRIDGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <activity android:exported="true" android:name="com.google.android.gms.games.ui.restricted.matches.RestrictedParticipantListActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.Activity.Light.Dialog">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.VIEW_PARTICIPANTS"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.ui.client.achievements.ClientAchievementListActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentMaterialTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.VIEW_ACHIEVEMENTS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.VIEW_ACHIEVEMENTS"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:name="com.google.android.gms.games.ui.restricted.achievements.RestrictedAchievementDescriptionActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.Activity.Light.Dialog">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.VIEW_ACHIEVEMENT"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.ui.client.leaderboards.ClientLeaderboardListActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentMaterialTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.VIEW_LEADERBOARDS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.VIEW_LEADERBOARDS"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.ui.client.leaderboards.ClientLeaderboardScoreActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentMaterialTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.VIEW_LEADERBOARD_SCORES"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.VIEW_LEADERBOARD_SCORES"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.ui.client.matches.SelectOpponentsActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentTheme" android:windowSoftInputMode="stateHidden">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SELECT_PLAYERS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SELECT_PLAYERS"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SELECT_OPPONENTS_REAL_TIME"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SELECT_OPPONENTS_TURN_BASED"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_player_search_label" android:name="com.google.android.gms.games.ui.client.players.ClientPlayerSearchActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.PLAYER_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.PLAYER_SEARCH"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.ui.client.matches.RealTimeWaitingRoomActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SHOW_REAL_TIME_WAITING_ROOM"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SHOW_REAL_TIME_WAITING_ROOM"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:name="com.google.android.gms.games.ui.client.matches.ClientMultiplayerInboxActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SHOW_INVITATIONS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SHOW_INVITATIONS"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SHOW_MULTIPLAYER_INBOX"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:icon="@mipmap/ic_launcher_play_games" android:name="com.google.android.gms.games.ui.client.matches.ClientPublicInvitationActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SHOW_PUBLIC_INVITATIONS"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:name="com.google.android.gms.games.ui.client.requests.SendRequestActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentTheme" android:windowSoftInputMode="stateHidden">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SEND_REQUEST"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:name="com.google.android.gms.games.ui.client.requests.ClientRequestInboxActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SHOW_REQUEST_INBOX"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:icon="@mipmap/ic_launcher_play_games" android:name="com.google.android.gms.games.ui.client.requests.ClientPublicRequestActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SHOW_PUBLIC_REQUESTS"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.ui.client.main.ClientSettingsActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SHOW_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SHOW_SETTINGS"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.ui.client.snapshots.ClientSnapshotListActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SHOW_SELECT_SNAPSHOT"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.ui.client.quests.ClientQuestListActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SHOW_QUESTS"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.ui.client.quests.ClientQuestDetailActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SHOW_QUEST"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.ui.dialog.InterstitialDialogLauncher" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentMaterialTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.DIALOG_LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.DIALOG_LAUNCHER"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.google.android.gms.games.ui.restricted.videos.RestrictedVideoCapturedActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentMaterialTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.VIEW_VIDEO_CAPTURED"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.ui.restricted.videos.RestrictedVideoRecordingOnboardingActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentMaterialTheme">
+            <intent-filter>
+                <action android:name="com.google.android.gms.games.SHOW_VIDEO_RECORDING_ONBOARDING"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.testcompat.ParcelTestCompatActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.ClientUiTranslucentTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.PARCEL_COMPAT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.PARCEL_COMPAT"/>
+                <data android:scheme="version"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.ui.GamesSettingsActivity" android:parentActivityName="com.google.android.gms.app.settings.GoogleSettingsActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.GamesSettings">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".app.settings.GoogleSettingsActivity"/>
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SHOW_GOOGLE_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.ui.GamesSettingsDebugActivity" android:permission="com.google.android.gms.permission.GAMES_DEBUG_SETTINGS" android:process="com.google.android.play.games.ui" android:theme="@style/Games.GamesSettings">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SHOW_GOOGLE_DEBUG_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:icon="@mipmap/ic_launcher_play_games" android:label="@string/games_app_name" android:name="com.google.android.gms.games.ui.signin.SignInActivity" android:process="com.google.android.play.games.ui" android:theme="@style/Games.SignInFlowTheme">
+            <intent-filter android:priority="10">
+                <action android:name="com.google.android.gms.games.SIGN_IN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

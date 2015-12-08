@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.fitbit.runtrack.ui.SquareImageCropView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.fitbit.runtrack.ui.ExerciseStatsView android:id="@id/stats" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/image" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/stats">
+        <ImageButton android:id="@id/btn_share" android:background="@drawable/pink_btn" android:layout_width="@dimen/exercise_share_btn_size" android:layout_height="@dimen/exercise_share_btn_size" android:src="@drawable/ic_send_white" android:scaleType="center" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/similar_items_spacer_top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/content_padding" />
+    <TextView android:textStyle="bold" android:ellipsize="end" android:id="@id/similar_items_grid_view_title" android:visibility="gone" android:layout_marginBottom="@dimen/content_padding" android:text="@string/label_similar_shows" android:maxLines="2" android:singleLine="true" style="@style/PrimaryText.Medium" />
+    <com.netflix.mediaclient.android.widget.StaticGridView android:gravity="center" android:id="@id/similar_items_grid_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@color/transparent" android:stretchMode="columnWidth" />
+</LinearLayout>

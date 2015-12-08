@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/description_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/run_shortcut" android:layout_marginRight="@dimen/horizontal_margin_step" android:text="@string/exercise_shortcuts_run" style="@style/ExerciseShortcutsItemText.Primary" />
+        <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <TextView android:id="@id/txt_desc" android:text="@string/exercise_shortcuts_reordered" style="@style/ExerciseShortcutsItemText.Detail" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/remove_place" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" />
+        <View android:id="@id/header_position_fixer" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent" android:filterTouchesWhenObscured="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pandora.android.view.SafeImageView android:id="@id/album_art" android:layout_width="@dimen/now_playing_landscape_art_size" android:layout_height="@dimen/now_playing_landscape_art_size" android:layout_margin="@dimen/now_playing_track_view_padding" android:src="@drawable/empty_art" android:scaleType="fitCenter" android:layout_centerVertical="true" />
+    <include layout="@layout/featured_track_viewstub" />
+    <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:layout_toRightOf="@id/album_art" android:layout_centerVertical="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/track_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/chromecast_button" android:layout_alignParentLeft="true">
+            <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/NowPlayingText.Track" />
+            <TextView android:textColor="@android:color/white" android:id="@id/artist" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/NowPlayingText.Artist" />
+            <TextView android:textColor="@android:color/white" android:id="@id/album" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/NowPlayingText.Album" />
+        </LinearLayout>
+        <TextView android:ellipsize="none" android:id="@id/welcome_message" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="3" style="@style/NowPlayingText.Welcome" />
+        <com.pandora.android.eureka.DisappearingMediaRouteButton android:id="@id/chromecast_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_alignParentRight="true" />
+        <FrameLayout android:id="@id/mini_player_fragment_container" android:layout_width="fill_parent" android:layout_height="@dimen/mini_player_height" android:layout_below="@id/track_info" />
+    </RelativeLayout>
+</merge>

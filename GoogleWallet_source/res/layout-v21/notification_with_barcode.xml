@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/NotificationExpandedView" android:background="@color/inverted" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip">
+        <ImageView android:id="@id/BigLogo" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginRight="20.0dip" android:scaleType="fitXY" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <RelativeLayout android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+            <FrameLayout android:id="@id/SmallLogoFrame" android:background="@color/medium" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+                <ImageView android:id="@id/SmallLogo" android:layout_width="16.0dip" android:layout_height="16.0dip" android:scaleType="fitXY" />
+            </FrameLayout>
+        </RelativeLayout>
+        <TextView android:textAppearance="@style/Text_Body" android:id="@id/Title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/BigLogo" android:layout_alignParentTop="true" />
+        <TextView android:textAppearance="@style/Text_Body" android:id="@id/Description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/BigLogo" android:layout_below="@id/Title" />
+    </RelativeLayout>
+    <include android:id="@id/BarcodeSection" layout="@layout/notification_barcode_section" />
+</LinearLayout>

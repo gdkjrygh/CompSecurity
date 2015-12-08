@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:wallet="http://schemas.android.com/apk/res/com.google.android.apps.walletnfcrel">
+    <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/P2pHeaderContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <TextView android:id="@id/MoneyFromText" android:padding="@null" android:paddingLeft="@dimen/default_spacing" android:paddingTop="0.0dip" android:paddingRight="@dimen/default_spacing" android:paddingBottom="0.0dip" android:layout_marginTop="@dimen/p2p_header_offset" style="@style/Title.Splash" />
+        <TextView android:id="@id/ContactEmail" android:padding="@null" android:paddingLeft="@dimen/default_spacing" android:paddingTop="0.0dip" android:paddingRight="@dimen/default_spacing" android:paddingBottom="12.0dip" android:layout_below="@id/MoneyFromText" style="@style/Body.Splash" />
+        <View android:id="@id/Divider1" android:layout_below="@id/ContactEmail" style="@style/HorizontalDivider" />
+        <com.google.android.apps.wallet.widgets.money.MoneyInputSection android:id="@id/MoneyInputSection" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/Divider1" />
+        <View android:id="@id/Divider2" android:layout_below="@id/MoneyInputSection" style="@style/HorizontalDivider" />
+        <EditText android:id="@id/Memo" android:padding="@dimen/default_spacing" android:hint="@string/send_money_memo" android:singleLine="true" android:layout_below="@id/Divider2" android:imeOptions="actionDone" style="@style/MemoField" />
+    </RelativeLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

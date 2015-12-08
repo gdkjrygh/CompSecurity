@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background" android:left="-2.0dip" android:top="-2.0dip" android:right="-2.0dip">
+        <shape>
+            <solid android:color="@color/goal_tile_background_color" />
+            <stroke android:width="1.0dip" android:color="@color/goal_progress_bar_bg_conor_color" />
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <solid android:color="@color/goal_tile_background_color" />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@id/progress">
+        <shape>
+            <gradient android:startColor="@color/goal_progress_bar_blue_start_color" android:endColor="@color/goal_progress_bar_blue_end_color" android:angle="@integer/goal_progress_bar_progress_angle" android:centerY="@raw/goal_progress_bar_progress_center_y" />
+        </shape>
+    </item>
+</layer-list>

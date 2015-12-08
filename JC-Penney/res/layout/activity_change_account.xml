@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ffffffff" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/mainLayout" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/change_FName_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.jcp.views.TypefaceEditText android:textSize="16.0sp" android:textColor="#ff333333" android:id="@id/change_firstname" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:hint="@string/first_name" android:ems="10" android:singleLine="true" android:inputType="text" android:textCursorDrawable="@null" app:customTypeface="GOTHAM_BOOK" />
+            <requestFocus />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/change_LastName_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/change_FName_layout">
+            <com.jcp.views.TypefaceEditText android:textSize="16.0sp" android:textColor="#ff333333" android:id="@id/change_lastname" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:hint="@string/last_name" android:ems="10" android:singleLine="true" android:inputType="text" android:textCursorDrawable="@null" app:customTypeface="GOTHAM_BOOK" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/change_email_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/change_LastName_layout">
+            <com.jcp.views.TypefaceEditText android:textSize="16.0sp" android:textColor="#ff333333" android:id="@id/change_email" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:hint="@string/hint_email_address" android:ems="10" android:singleLine="true" android:inputType="textEmailAddress" android:textCursorDrawable="@null" app:customTypeface="GOTHAM_BOOK" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.jcp.views.TypefaceTextView android:textSize="16.0sp" android:textColor="#ffcc0000" android:id="@id/error_msg_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/requirdfields" android:layout_below="@id/mainLayout" android:layout_centerHorizontal="true" app:customTypeface="GOTHAM_BOOK" />
+    <com.jcp.views.TypefaceTextView android:textSize="15.0sp" android:textColor="#ff333333" android:gravity="center" android:id="@id/change_description_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="24.0dip" android:text="@string/changing_this_email_desc" android:layout_below="@id/error_msg_textview" app:customTypeface="GOTHAM_BOOK" />
+</RelativeLayout>

@@ -1,0 +1,48 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.pandora.radio.provider;
+
+import android.database.sqlite.SQLiteDatabase;
+import java.util.ArrayList;
+import java.util.Collection;
+
+// Referenced classes of package com.pandora.radio.provider:
+//            b
+
+private static class <init>
+    implements <init>
+{
+
+    public Collection a()
+    {
+        ArrayList arraylist = new ArrayList(1);
+        <init> a_3C_init>[] = b.c();
+        int j = a_3C_init>.length;
+        for (int i = 0; i < j; i++)
+        {
+            <init> <init>1 = a_3C_init>[i];
+            arraylist.add(new <init>(<init>1.a, <init>1.c));
+        }
+
+        return arraylist;
+    }
+
+    public void a(SQLiteDatabase sqlitedatabase)
+    {
+    }
+
+    public void a(SQLiteDatabase sqlitedatabase, int i, int j)
+    {
+    }
+
+    private atabase()
+    {
+    }
+
+    atabase(atabase atabase)
+    {
+        this();
+    }
+}

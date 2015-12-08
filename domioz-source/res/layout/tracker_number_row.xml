@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/container" android:background="@drawable/iphone_table_middle" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/storeSection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip">
+        <ImageView android:id="@id/imageView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/defaultstore" />
+        <LinearLayout android:orientation="vertical" android:id="@id/addressSection" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@android:color/black" android:id="@id/label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/store_address_label" />
+            <TextView android:textSize="12.0sp" android:textColor="@android:color/black" android:id="@id/sAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/store_address" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/orderSection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/storeSection">
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@android:color/black" android:id="@id/orderLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/order_description" />
+        <TextView android:textSize="12.0sp" android:textColor="@android:color/black" android:id="@id/orderDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/textview" />
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@android:color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/order_placed" />
+        <TextView android:textSize="12.0sp" android:textColor="@android:color/black" android:id="@id/orderTimestamp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/textview" />
+    </LinearLayout>
+</RelativeLayout>

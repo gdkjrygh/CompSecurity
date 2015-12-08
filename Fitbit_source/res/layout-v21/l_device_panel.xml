@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/profile_holder" android:background="@color/goal_tile_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:paddingTop="6.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.fitbit.ui.loadable.LoadablePicassoImageView android:layout_gravity="center_vertical" android:id="@id/deviceImageView" android:paddingLeft="12.0dip" android:paddingRight="9.0dip" android:layout_width="@dimen/device_icon_area" android:layout_height="@dimen/device_icon_area" android:scaleType="fitCenter" android:transitionName="device_image_transition" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textColor="@color/device_panel_tracker_name_color" android:id="@id/txtProfileName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/TilePrimaryText" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/profileSummaryContainer" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/imgSyncing" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/syncing_sm" />
+                    <TextView android:id="@id/txtProfileSummary" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/LightGreyNormalText" />
+                    <ImageView android:id="@id/batteryLevel" android:paddingLeft="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <FrameLayout android:layout_gravity="center_vertical" android:paddingRight="11.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageButton android:layout_gravity="center" android:id="@id/btnSync" android:background="@null" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/syncing_lg" />
+                <ImageButton android:layout_gravity="center" android:id="@id/btnLiveData" android:background="@null" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_data_streaming" />
+                <ImageButton android:layout_gravity="center" android:id="@id/btnConnectivityInfo" android:background="@null" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/connectivity_info" />
+                <ImageButton android:layout_gravity="center" android:id="@id/btnError" android:background="@null" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/device_tile_sync_error" />
+                <ImageButton android:layout_gravity="center" android:id="@id/btnAlertConnected" android:background="@null" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/alert_connected" />
+                <ImageView android:layout_gravity="center" android:id="@id/syncProgressImageView" android:padding="5.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/syncing_lg" />
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/errorOverlay" android:background="#e6000000" android:paddingLeft="3.0dip" android:paddingTop="13.0dip" android:paddingRight="7.0dip" android:paddingBottom="13.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:layout_gravity="left|center" android:id="@id/txtError" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_weight="1.0" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/imgConnectivityInfo" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="9.0dip" android:src="@drawable/connectivity_info" android:layout_weight="0.0" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/imgAlertConnected" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="9.0dip" android:src="@drawable/alert_connected" android:layout_weight="0.0" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/imgAlertDisconnected" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="9.0dip" android:src="@drawable/device_tile_sync_error" android:layout_weight="0.0" />
+        </LinearLayout>
+    </FrameLayout>
+    <View android:id="@id/separator" android:background="#ffdedede" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="@dimen/dashboard_tile_bottom_line_height" />
+</LinearLayout>

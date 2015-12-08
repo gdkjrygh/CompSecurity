@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fitbit.challenges.ui.progress.ChallengeProgressView android:orientation="vertical" android:id="@id/base_menu_embedded_content" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/progress_bg" android:background="@color/challenge_progress_graph_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ListView android:id="@android:id/content" android:padding="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:dividerHeight="0.0dip" />
+        <LinearLayout android:orientation="vertical" android:id="@id/footer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip">
+            <Button android:textSize="@dimen/challenge_end_text_medium" android:id="@id/rematch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/challenge_end_rematch" style="@style/StartChallengeButton" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/challenge_controls" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="true" android:minHeight="44.0dip">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textColor="@color/white_transparent" android:gravity="center_horizontal" android:id="@id/challenge_time" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Fitbit.Onboarding.TextView" />
+                <View android:layout_gravity="center" android:id="@id/drag_handle" android:layout_width="28.0dip" android:layout_height="6.0dip" android:alpha="0.0" style="@style/StartChallengeButton" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/challenge_controls_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:background="@color/white_transparent" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="true">
+                    <TextView android:id="@id/challenge_play" android:text="@string/play_challenge_button_text" android:textAlignment="4" style="@style/ChallengeProgressGraphTextButton" />
+                    <View android:background="@drawable/gradient_white_transparant_to_transparant_vertical" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                    <TextView android:id="@id/challenge_ignore" android:text="@string/ignore_challenge_button_text" android:textAlignment="4" style="@style/ChallengeProgressGraphTextButton" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.fitbit.challenges.ui.progress.ChallengeProgressView>

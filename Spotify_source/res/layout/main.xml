@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.DrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.spotify.mobile.android.ui.view.MainLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+            <com.spotify.mobile.android.ui.view.snackbar.SnackBar android:id="@id/snack_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+            <com.spotify.mobile.android.spotlets.tinkerbell.TooltipContainer android:id="@id/tooltip_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:id="@id/content_lock" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.spotify.mobile.android.ui.view.MainLayout>
+        <FrameLayout android:layout_gravity="left" android:id="@id/navigation" android:layout_width="300.0dip" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/view_debug_toolbar" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    </android.support.v4.widget.DrawerLayout>
+    <FrameLayout android:id="@id/screensaver_ad_container" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

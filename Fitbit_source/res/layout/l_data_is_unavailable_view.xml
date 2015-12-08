@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ffe8f0f1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/data_unavailable_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:src="@drawable/data_unavailable" android:layout_above="@id/cant_connect_textview" android:layout_centerHorizontal="true" />
+    <TextView android:textAppearance="@android:style/TextAppearance.Large" android:textStyle="bold" android:textColor="#ff61757f" android:gravity="center" android:id="@id/cant_connect_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/can_t_connect_to_fitbit" android:layout_centerInParent="true" />
+    <TextView android:textAppearance="@android:style/TextAppearance.Medium" android:textColor="#ff61757f" android:gravity="center" android:layout_gravity="center" android:id="@id/check_connection_textview" android:layout_width="250.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/please_check_your_network_connection_and_try_again" android:layout_below="@id/cant_connect_textview" android:layout_centerHorizontal="true" />
+    <FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_below="@id/check_connection_textview" android:layout_centerHorizontal="true">
+        <Button android:textSize="12.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:layout_gravity="center" android:id="@id/retry_button" android:background="@drawable/btn_set" android:layout_width="250.0dip" android:layout_height="wrap_content" android:minWidth="120.0dip" android:text="@string/try_again_capitalized" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</RelativeLayout>

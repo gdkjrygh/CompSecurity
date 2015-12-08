@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/AccountPickerScreen" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="40.0">
+        <Space android:layout_gravity="center" android:id="@id/WalletLogoSpot" android:layout_width="80.0dip" android:layout_height="80.0dip" />
+        <TextView android:layout_gravity="bottom|center" android:text="@string/setup_select_account_title" style="@style/SetupTitle" />
+    </FrameLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="60.0" style="@style/Card">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Card">
+            <Spinner android:id="@id/AccountPickerSpinner" android:paddingLeft="0.0dip" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:prompt="@string/setup_select_account_prompt" android:spinnerMode="dialog" style="@style/FullWidthSingleLineSpinner" />
+        </FrameLayout>
+        <CheckBox android:id="@id/MarketingOptIn" android:paddingTop="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginRight="@dimen/default_spacing" android:text="@string/setup_marketing_email_optin" android:layout_above="@id/ContinueButton" />
+        <Button android:id="@id/ContinueButton" android:text="@string/button_continue" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+    </RelativeLayout>
+</LinearLayout>

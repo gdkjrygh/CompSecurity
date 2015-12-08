@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/appbkgr" style="@style/FullScreen"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/RelativeLayout1" style="@style/TitleBarRed">
+        <include android:id="@id/titleBarBackground" layout="@layout/bar_blue" />
+        <ImageButton android:id="@id/home_button" android:src="@drawable/ic_title_home" android:contentDescription="@string/main_home_description" style="@style/TitleBarAction" />
+        <ImageView android:id="@id/ImageView1" android:layout_toRightOf="@id/home_button" android:layout_alignBaseline="@id/home_button" style="@style/TitleBarSeparator" />
+        <TextView android:id="@id/menu_list_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/TitleBarText" />
+    </RelativeLayout>
+    <GridView android:id="@id/grid_view_grid" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:listSelector="#ff000000" android:numColumns="3" android:layout_below="@id/RelativeLayout1" android:layout_centerHorizontal="true" />
+    <ListView android:id="@id/grid_view_list" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingRight="15.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:listSelector="#ff000000" android:layout_below="@id/RelativeLayout1" android:layout_centerHorizontal="true" />
+    <ImageView android:background="@drawable/black_fade_down" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_below="@id/RelativeLayout1" />
+    <Button android:id="@id/grid_view_build_pizza" android:background="@drawable/build_pizza_button" android:layout_width="220.0dip" android:layout_height="40.0dip" android:layout_below="@id/grid_view_grid" android:layout_centerHorizontal="true" />
+</RelativeLayout>

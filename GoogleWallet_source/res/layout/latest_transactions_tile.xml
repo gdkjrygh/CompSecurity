@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/LatestTransactionsTitle" android:text="@string/latest_transactions_title" style="@style/Subheader" />
+    <LinearLayout android:orientation="vertical" style="@style/Card">
+        <TextView android:id="@id/TransactionsLoading" android:padding="@dimen/default_spacing" android:visibility="gone" android:text="@string/latest_transactions_loading" style="@style/Body" />
+        <LinearLayout android:orientation="vertical" android:id="@id/TransactionErrorLoading" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/latest_transactions_title_error_loading" style="@style/Font_CardListNormal" />
+        </LinearLayout>
+        <TextView android:id="@id/TransactionListEmpty" android:padding="@dimen/default_spacing" android:visibility="gone" style="@style/ListItemPrimaryText" />
+        <LinearLayout android:orientation="vertical" android:id="@id/TransactionList" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.wallet.purchaserecord.PurchaseRecordExpandedListView android:id="@id/PurchaseRecordListView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/layout_horizontal_divider" android:showDividers="middle" />
+            <TextView android:id="@id/ViewAllActionText" android:text="@string/latest_transactions_view_all_action" style="@style/CardButton" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

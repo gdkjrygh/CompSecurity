@@ -1,0 +1,162 @@
+{
+    "product-name": "Charge HR",
+    "stylesheet": "../pairing-styles.css",
+    "screens": {
+        "preparation": [
+            {   "title": "Meet your Charge HR close to your {deviceName} for this",
+                "body": "<ol><li>Charging Cable<\/li><li>Charge HR Wristband<\/li><li>Wireless Sync Dongle<\/li><\/ol>",
+                "content-mode": "fit",
+                "mixpanel-event": "FConnect: Meet your tracker"
+            }
+        ],
+        "searching": {
+            "waiting": {
+                "title": "Power on Your Charge HR",
+                "body": "Press and hold the button for 3 seconds.",
+                "image-url": "images/power_on.jpg",
+                "content-mode": "fill",
+                "mixpanel-event": "FConnect: Power On Your Tracker"
+            },
+            "still-waiting": {
+                "title": "Is your Charge HR powered on?",
+                "body": "Make sure your Charge HR display turns on when you press its button. If the display doesn’t turn on, charge your device.",
+                "image-url": "images/power_on.jpg",
+                "content-mode": "fill",
+                "mixpanel-event": "FConnect: Error - Powered On?"
+            },
+            "multiple-candidates": {
+                "title": "More than one tracker found",
+                "body": "<p>If there are other trackers nearby, move them away.<\/p><p>Make sure your Charge HR is nearby.<\/p>",
+                "image-url": "images/power_on.jpg",
+                "content-mode": "fill",
+                "mixpanel-event": "FConnect: Error - More Than One"
+            },
+            "found": {
+                "title": "We found your Charge HR!",
+                "image-url": "images/power_on.jpg",
+                "content-mode": "fill",
+                "mixpanel-event": "FConnect: Tracker Found"
+            }
+        },
+        "code-input": {
+            "title": "Enter the number you see on your Charge HR",
+            "mixpanel-event": "FConnect: Enter Number"
+        },
+        "edit-greeting": {
+            "title": "How do you want your Charge HR to greet you?",
+            "mixpanel-event": "FConnect: Greeting"
+        },
+		"firmware-update": {
+            "optional-update": {
+                "title": "Software update",
+                "body": "Fresh from the Fitbit kitchen.",
+                "image-url": "images/charge.jpg",
+                "content-mode": "fit"
+            },
+            "preparation": [
+                {   "title": "Final setup",
+                    "body": "Keep your Charge close to your {deviceName} for this last step.",
+                    "image-url~iOS": "images/charge_iphone.jpg",
+                    "image-url~Android": "images/charge_android.jpg",
+                    "content-mode": "fit"
+                }
+            ],
+            "progress": {
+                "searching": {
+                    "title": "Searching for your Fitbit Charge",
+                    "body": "Make sure your tracker is nearby.",
+                    "animation-url": "/content/mobile-common/images/searching.gif",
+                    "video-url": "/content/mobile-common/images/searching.mov",
+                    "content-mode": "fit"
+                },
+                "connecting": {
+                    "title": "Connecting to your Fitbit Charge",
+                    "animation-url": "/content/mobile-common/images/connecting.gif",
+                    "video-url": "/content/mobile-common/images/connecting.mov",
+                    "content-mode": "fit"
+                },
+                "updating": {
+                    "title": "Setting up your Fitbit Charge",
+                    "body": "Hold tight… this can take up to 10 minutes.",
+                    "animation-url": "/content/mobile-common/images/connecting.gif",
+                    "video-url": "/content/mobile-common/images/connecting.mov",
+                    "content-mode": "fit"
+                }
+            },
+            "done": [
+                {   "title": "Setup complete!",
+                    "body": "Before you go, learn how to wear and use your Charge.",
+                    "image-url": "/content/mobile-common/images/complete.png",
+                    "animation-url": "/content/mobile-common/images/complete.gif",
+                    "video-url": "/content/mobile-common/images/complete.mov",
+                    "video-loops": false,
+                    "content-mode": "fit"
+                }
+            ],
+            "errors": {
+                "low-battery": {
+                    "title": "Your Charge’s battery is too low to continue",
+                    "body": "Plug it in and charge it up before trying again.",
+                    "image-url": "/content/mobile-common/images/error_battery_low.png",
+                    "animation-url": "/content/mobile-common/images/error_battery_low.gif",
+                    "video-url": "/content/mobile-common/images/error_battery_low.mov",
+                    "video-loops": false,
+                    "content-mode": "fit",
+                    "mixpanel-event": "FConnect: Error - Battery too low"
+                },
+                "bluetooth-connection-failure": {
+                    "title": "Is your Charge powered on?",
+                    "body": "Make sure its display turns on when you press the button. If nothing happens, plug it into the charger.",
+                    "image-url": "images/power_on.jpg",
+                    "content-mode": "fill"
+                }
+            }
+        },
+        "orientation": [
+            {   "title": "Setup complete!",
+                "body": "Before you go, learn how to wear and use your Charge HR.",
+                "image-url": "/content/mobile-common/images/complete.png",
+                "animation-url": "/content/mobile-common/images/complete.gif",
+                "video-url": "/content/mobile-common/images/complete.mov",
+                "video-loops": false,
+                "content-mode": "fit"
+            },
+            {   "title": "Care tips",
+                "body": "<p>Clean and dry Charge HR regularly - particularly under the band.<\/p><p>Use skin care products sparingly on areas of the wrist covered by Charge HR.<\/p><p>If you notice any signs of irriation or experience discomfort, please discountinue use.<\/p>",
+                "image-url": "images/care_tips.jpg",
+                "content-mode": "fit",
+                "mixpanel-event": "FConnect: Care tips"
+            },
+            {   "title": "Wearing Charge HR",
+                "body": "<p>For the best heart rate reading, Charge HR should rest a finger’s width below your wristbone and lay flat.<\/p><p>When exercising, tighten the band so that Charge HR doesn’t move around a lot.<\/p>",
+                "image-url": "images/wearing.jpg",
+                "animation-url": "images/wearing.gif",
+                "video-url": "images/wearing.mov",
+                "content-mode": "fill"
+            },
+            {   "title": "View your daily stats",
+                "body": "Press the button to see your stats.",
+                "image-url": "images/view_stats.jpg",
+                "animation-url": "images/view_stats.gif",
+                "video-url": "images/view_stats.mov",
+                "content-mode": "fill"
+            },
+            {   "title": "Seeing goal progress",
+                "body": "<p>To start, your goal is set to 10,000 steps.<\/p><p>Charge HR buzzes when you reach your goal.<\/p>",
+                "animation-url": "images/view_progress.gif",
+                "video-url": "images/view_progress.mov",
+                "content-mode": "fill"
+            },
+            {   "title": "You’re all set!",
+                "body": "Now, get movin’ and make your Charge HR happy.",
+                "image-url": "images/chargehr.jpg",
+                "content-mode": "fit"
+            }
+        ],
+        "troubleshooting": {
+            "title": "Not working?",
+            "body": "<ol class=\"large-numbers\"><li>If there are other trackers nearby, move them away.<\/li><li>Make sure your Charge HR is nearby.<\/li><li>If your Charge HR doesn’t turn on when you press and hold its button, charge it.<\/li><\/ol>",
+            "mixpanel-event": "FConnect: Error - Not Working?"    
+        }
+    }
+}

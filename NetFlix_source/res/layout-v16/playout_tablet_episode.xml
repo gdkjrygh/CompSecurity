@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.mediaclient.android.widget.TappableSurfaceView android:id="@id/surface" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+    <TextureView android:id="@id/surface2" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+    <include layout="@layout/postplay_phone_episode" />
+    <include layout="@layout/playout_interrupter" />
+    <com.netflix.mediaclient.android.widget.SafeViewFlipper android:id="@id/flipper" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/playoutSplash" layout="@layout/playout_splash" />
+        <include android:id="@id/playoutPlay" layout="@layout/playout_play_tablet" />
+    </com.netflix.mediaclient.android.widget.SafeViewFlipper>
+</RelativeLayout>

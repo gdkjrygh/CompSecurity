@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/activity_gradient" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/chart_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <ImageButton style="@style/UnclickableCornerFullscreenIcon" />
+            <LinearLayout android:orientation="vertical" android:id="@id/titles_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_centerHorizontal="true">
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                    <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textStyle="bold" android:textColor="@color/white" android:id="@id/title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/txt_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/details_date_top_margin" />
+            </LinearLayout>
+        </RelativeLayout>
+        <com.fitbit.activity.ui.details.IntradayActivityBabyChartView android:id="@id/chart_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/activity_intraday_baby_chart_vertical_margin" android:layout_marginRight="@dimen/activity_intraday_baby_chart_horizintal_margin" android:layout_below="@id/chart_header" />
+    </RelativeLayout>
+    <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/placeholder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_measurements" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Fitbit.ProgressBar.White" />
+</FrameLayout>

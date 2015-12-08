@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/graph_background" android:padding="@dimen/graph_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/container_chart" android:background="@drawable/graph_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.fitbit.ui.ChartViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center" android:layout_gravity="top" android:orientation="horizontal" android:id="@id/container_settings" android:background="@drawable/graph_topbar" android:padding="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Spinner android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/spn_chart_type" android:paddingBottom="11.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-4.0dip" android:spinnerMode="dialog" style="@style/Widget.HoloLightSpinner" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff484848" android:ellipsize="marquee" android:id="@id/text_body_weight" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" android:drawablePadding="3.0dip" android:marqueeRepeatLimit="marquee_forever" android:textIsSelectable="false" style="@style/LightGreyBoldSmallText" />
+            <TextView android:ellipsize="marquee" android:id="@id/txt_date_interval" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" android:textIsSelectable="false" style="@style/DateIntervalText" />
+        </LinearLayout>
+        <RadioGroup android:gravity="center" android:orientation="horizontal" android:id="@id/radio_group_interval" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RadioButton android:id="@id/btn_week" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/activity_graph_radio_button_margin" android:text="@string/wk1" style="@style/Widget.GraphIntervalRadioButton" />
+            <RadioButton android:id="@id/btn_month" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/activity_graph_radio_button_margin" android:text="@string/mo1" style="@style/Widget.GraphIntervalRadioButton" />
+            <RadioButton android:id="@id/btn_3months" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/activity_graph_radio_button_margin" android:text="@string/mo3" style="@style/Widget.GraphIntervalRadioButton" />
+            <RadioButton android:id="@id/btn_year" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/activity_graph_radio_button_margin" android:text="@string/yr1" style="@style/Widget.GraphIntervalRadioButton" />
+        </RadioGroup>
+        <ImageButton android:id="@id/btn_collapse_graph" android:background="@null" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_collapse_graph" android:contentDescription="@null" />
+    </LinearLayout>
+</FrameLayout>

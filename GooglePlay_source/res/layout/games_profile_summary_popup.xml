@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/profile_container" android:background="@drawable/games_tile_bg" android:layout_width="fill_parent" android:layout_height="0.0dip">
+        <FrameLayout android:id="@id/player_banner_container" android:layout_width="fill_parent" android:layout_height="@dimen/games_tile_profile_top_height" android:layout_alignParentTop="true">
+            <View android:id="@id/player_banner_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:id="@id/player_banner" android:background="@drawable/banner_bg_default_games_profile_tiled" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <View android:id="@id/circle_overlap" android:layout_width="fill_parent" android:layout_height="@dimen/games_tile_profile_circle_overlap" android:layout_below="@id/player_banner_container" />
+        <View android:id="@id/circle_bottom" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_below="@id/circle_overlap" />
+        <com.google.android.gms.games.ui.widget.MetagameAvatarView android:id="@id/avatar_container" android:layout_width="120.0dip" android:layout_height="114.0dip" android:layout_above="@id/circle_bottom" android:layout_centerHorizontal="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/player_info_container" android:padding="@dimen/games_tile_profile_summary_edge_padding" android:layout_width="fill_parent" android:layout_height="@dimen/games_tile_profile_middle_height" android:layout_below="@id/player_banner_container">
+            <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/games_tile_profile_player_name_font_size" android:textColor="@android:color/black" android:layout_gravity="center" android:id="@id/player_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textColor="@color/games_grey_text" android:layout_gravity="center" android:id="@id/player_nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PlayCardSubtitle" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@id/message_container" android:paddingRight="@dimen/games_tile_profile_summary_edge_padding" android:layout_width="fill_parent" android:layout_height="@dimen/games_tile_profile_bottom_height" android:layout_below="@id/player_info_container">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/games_tile_profile_game_image_size" android:layout_height="@dimen/games_tile_profile_game_image_size" android:src="@drawable/games_badge_logo_green" />
+            <TextView android:textColor="@color/games_tile_profile_card_action_text" android:layout_gravity="center_vertical" android:id="@id/message" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PlayCardAction" />
+        </LinearLayout>
+        <View android:id="@id/overlay" android:background="@drawable/games_highlight_overlay" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</FrameLayout>

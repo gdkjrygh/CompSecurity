@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/unbounded_rippleable" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:id="@id/BalanceAmount" android:paddingTop="@dimen/gap_small" android:paddingRight="@dimen/gap_medium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_alignParentTop="true" android:layout_alignParentStart="true" style="@style/Font_MyWalletWalletBalanceFullPositive" />
+    <ProgressBar android:id="@id/LoadingSpinner" android:layout_width="@dimen/balance_progress_spinner_size" android:layout_height="@dimen/balance_progress_spinner_size" android:indeterminate="true" android:layout_toRightOf="@id/BalanceAmount" android:layout_alignBottom="@id/BalanceAmount" style="@style/ProgressSpinner" />
+    <ImageView android:id="@id/ErrorImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_warning_color_24dp" android:baselineAlignBottom="true" android:layout_toRightOf="@id/BalanceAmount" android:layout_alignBaseline="@id/BalanceAmount" android:contentDescription="@null" />
+    <TextView android:id="@id/BalanceDescription" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/balance_tile_pending" android:layout_below="@id/BalanceAmount" style="@style/Font_MyWalletWalletBalanceHalfLabel" />
+</RelativeLayout>

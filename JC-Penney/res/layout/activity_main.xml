@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/drawer_layout" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/text_box" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/searchinclude" android:background="#fff0f0f0" android:padding="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/search_layout" layout="@layout/roundedlyt" />
+        </RelativeLayout>
+        <FrameLayout android:id="@id/frame_container" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="left" android:orientation="vertical" android:id="@id/slidemenu_root_layout" android:background="@color/background_white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ListView android:id="@id/list_department" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:dividerHeight="0.0dip" />
+        <ListView android:id="@id/list_slidermenu" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:dividerHeight="0.0dip" />
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

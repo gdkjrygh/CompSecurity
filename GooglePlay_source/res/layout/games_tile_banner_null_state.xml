@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/tile_banner_null_state_wrapper" android:paddingLeft="@dimen/games_tile_list_padding" android:paddingRight="@dimen/games_tile_list_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/games_tile_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/tile_banner_null_state_content" android:layout_width="fill_parent" android:layout_height="@dimen/games_tile_banner_null_state_content_height">
+            <ImageView android:id="@id/image" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="centerInside" android:layout_alignParentRight="true" />
+            <TextView android:textSize="@dimen/games_tile_banner_null_state_font_size_text" android:textColor="@color/games_tile_banner_null_state_text" android:id="@id/text" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:layout_width="@dimen/games_tile_banner_null_state_text_width" android:layout_height="0.0dip" android:layout_above="@id/divider" android:layout_below="@id/title_text" android:layout_alignWithParentIfMissing="true" />
+            <View android:id="@id/divider" android:layout_width="@dimen/games_tile_banner_null_state_divider_width" android:layout_above="@id/button" style="@style/Games.Tile.Divider.Horizontal" />
+            <TextView android:textSize="@dimen/games_tile_banner_null_state_font_size_button" android:textColor="@color/play_games_theme_primary" android:gravity="center_vertical" android:id="@id/button" android:paddingLeft="8.0dip" android:layout_width="@dimen/games_tile_banner_null_state_divider_width" android:layout_height="48.0dip" android:layout_marginLeft="8.0dip" android:layout_alignParentBottom="true" />
+            <View android:id="@id/tile_overlay" android:background="@drawable/games_highlight_overlay" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:id="@id/button_overlay" android:background="@drawable/games_highlight_overlay" android:focusable="true" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginLeft="8.0dip" android:layout_below="@id/text" android:layout_alignRight="@id/button" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</FrameLayout>

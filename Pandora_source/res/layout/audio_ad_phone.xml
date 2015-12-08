@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/why_ads_wrapper" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="@dimen/now_playing_track_view_padding" android:layout_alignParentBottom="true">
+        <TextView android:id="@id/why_ads_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/why_ads_button_label" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/whyads_button_text" />
+        <TextView android:id="@id/why_ads_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/why_ads_label" android:layout_toLeftOf="@id/why_ads_button" android:layout_centerVertical="true" style="@style/whyads_text" />
+    </RelativeLayout>
+    <com.pandora.android.view.SafeImageView android:id="@id/album_art" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/now_playing_track_view_padding" android:layout_marginRight="@dimen/now_playing_track_view_padding" android:src="@drawable/empty_art" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_above="@id/why_ads_wrapper" />
+</merge>

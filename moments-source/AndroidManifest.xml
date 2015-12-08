@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.facebook.moments" platformBuildVersionCode="23" platformBuildVersionName="6.0-2166767">
+    <compatible-screens>
+        <screen android:screenDensity="560" android:screenSize="small"/>
+        <screen android:screenDensity="560" android:screenSize="normal"/>
+        <screen android:screenDensity="560" android:screenSize="large"/>
+        <screen android:screenDensity="560" android:screenSize="xlarge"/>
+        <screen android:screenDensity="420" android:screenSize="small"/>
+        <screen android:screenDensity="420" android:screenSize="normal"/>
+        <screen android:screenDensity="420" android:screenSize="large"/>
+        <screen android:screenDensity="420" android:screenSize="xlarge"/>
+        <screen android:screenDensity="640" android:screenSize="small"/>
+        <screen android:screenDensity="640" android:screenSize="normal"/>
+        <screen android:screenDensity="640" android:screenSize="large"/>
+        <screen android:screenDensity="640" android:screenSize="xlarge"/>
+        <screen android:screenDensity="400" android:screenSize="small"/>
+        <screen android:screenDensity="400" android:screenSize="normal"/>
+        <screen android:screenDensity="400" android:screenSize="large"/>
+        <screen android:screenDensity="400" android:screenSize="xlarge"/>
+        <screen android:screenDensity="280" android:screenSize="small"/>
+        <screen android:screenDensity="280" android:screenSize="normal"/>
+        <screen android:screenDensity="280" android:screenSize="large"/>
+        <screen android:screenDensity="280" android:screenSize="xlarge"/>
+        <screen android:screenDensity="360" android:screenSize="small"/>
+        <screen android:screenDensity="360" android:screenSize="normal"/>
+        <screen android:screenDensity="360" android:screenSize="large"/>
+        <screen android:screenDensity="360" android:screenSize="xlarge"/>
+        <screen android:screenDensity="480" android:screenSize="small"/>
+        <screen android:screenDensity="480" android:screenSize="normal"/>
+        <screen android:screenDensity="480" android:screenSize="large"/>
+        <screen android:screenDensity="480" android:screenSize="xlarge"/>
+    </compatible-screens>
+    <uses-feature android:glEsVersion="0x20000" android:required="false"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:allowBackup="false" android:debuggable="false" android:icon="@drawable/icon_launcher" android:label="Moments" android:largeHeap="true" android:name="com.facebook.moments.MomentsApplication" android:theme="@style/MomentsActionBarTheme">
+        <meta-data android:name="com.facebook.rscmp" android:value="true"/>
+        <meta-data android:name="com.facebook.build_rule" android:value="moments_art_staticdi_comp_xxhdpi_armv7_release_fbsign"/>
+        <meta-data android:name="com.facebook.package_type" android:value="release"/>
+        <meta-data android:name="com.facebook.build_time" android:value="1448919177000L"/>
+        <meta-data android:name="com.facebook.versioncontrol.branch" android:value="releases/release-moments-v3.2.0.0-2015.11.23"/>
+        <meta-data android:name="com.facebook.versioncontrol.revision" android:value="7.0970998E9"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:exported="false" android:name="com.facebook.abtest.qe.settings.QuickExperimentListActivity" android:theme="@style/Theme.Orca.Preferences"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:exported="false" android:name="com.facebook.abtest.qe.settings.QuickExperimentViewActivity" android:theme="@style/Theme.Orca.Preferences"/>
+        <provider android:authorities="com.facebook.moments.experiments" android:name="com.facebook.abtest.qe.db.QuickExperimentContentProvider"/>
+        <service android:label="EventService" android:name="com.facebook.analytics.service.AnalyticsService"/>
+        <service android:exported="true" android:name="com.facebook.analytics2.logger.LollipopUploadService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.facebook.analytics2.logger.AlarmBasedUploadService"/>
+        <service android:exported="true" android:name="com.facebook.analytics2.logger.GooglePlayUploadService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.facebook.auth.login.LoginApprovalNotificationService"/>
+        <activity android:name="com.facebook.common.init.DefaultSplashScreenActivity"/>
+        <service android:name="com.facebook.conditionalworker.ConditionalWorkerService"/>
+        <provider android:authorities="com.facebook.moments.properties" android:exported="false" android:name="com.facebook.database.properties.DbPropertiesContentProvider"/>
+        <service android:name="com.facebook.delayedworker.DelayedWorkerService"/>
+        <receiver android:name="com.facebook.device_id.UniqueDeviceIdBroadcastSender$LocalBroadcastReceiver"/>
+        <receiver android:name="com.facebook.device_id.UniqueIdSupplier" android:permission="com.facebook.receiver.permission.ACCESS">
+            <intent-filter>
+                <action android:name="com.facebook.GET_UNIQUE_ID"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.facebook.device_id.DefaultPhoneIdRequestReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.GET_PHONE_ID"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.facebook.dialtone.activity.DialtoneModeTransitionInterstitialActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:launchMode="singleTop" android:name="com.facebook.dialtone.activity.DialtoneModeSelectionActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.facebook.dialtone.activity.DialtoneWifiInterstitialActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.facebook.dialtone.activity.DialtoneUnsupportedCarrierInterstitialActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.facebook.dialtone.activity.DialtoneIntentInterstitialActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <service android:name="com.facebook.fbservice.service.DefaultBlueService"/>
+        <service android:exported="false" android:name="com.facebook.graphql.executor.GraphQLMutationService"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAQ-b5BfGjjG8sN3ClD0biXYrbeuaZii0Y"/>
+        <activity android:label="Moments" android:launchMode="singleTask" android:name="com.facebook.moments.MomentsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="Moments" android:launchMode="singleTask" android:name="com.facebook.moments.login.LoginActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="com.facebook.moments.NodexMomentsActivity" android:process=":nodex" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data android:name="crash.loop.exclude" android:value="true"/>
+        </activity>
+        <activity android:label="Moments" android:launchMode="singleTop" android:name="com.facebook.moments.gallery.GalleryActivity" android:screenOrientation="sensor" android:theme="@style/GalleryDialogTheme" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout" android:name="com.facebook.maps.GoogleEmbeddableMapActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.facebook.bugreporter.activity.BugReportActivity"/>
+        <activity android:name="com.facebook.SelfUpdateInstallActivity"/>
+        <activity android:name="com.facebook.SelfUpdateSettingsActivity"/>
+        <service android:label="FaceRecNotificationService" android:name="com.facebook.moments.notification.FaceRecNotificationIntentService"/>
+        <service android:label="PhotoService" android:name="com.facebook.moments.services.NewPhotoIntentService"/>
+        <service android:label="PhotoService" android:name="com.facebook.moments.syncheads.SyncHeadService"/>
+        <service android:label="MutationsService" android:name="com.facebook.moments.data.CloudMutationsService"/>
+        <service android:label="PhotoUploadService" android:name="com.facebook.moments.data.uploader.PhotoUploadService"/>
+        <service android:name="com.facebook.SelfUpdateFetchService"/>
+        <receiver android:enabled="true" android:name="com.facebook.moments.services.NewPhotoBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.android.camera.NEW_PICTURE"/>
+                <action android:name="android.hardware.action.NEW_PICTURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.facebook.moments.SYNC_HEAD"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.facebook.moments.notification.CloudMutationsBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.moments.NETWORK_FETCH"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.facebook.moments.notification.CheckTopApplicationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.moments.APPLICATION_CHECK_TOP_APPLICATION"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="@string/app_fileprovider_authority" android:exported="false" android:grantUriPermissions="true" android:name="com.facebook.moments.content.MomentsFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/fileprovider"/>
+        </provider>
+        <uses-library android:name="com.google.android.maps" android:required="false"/>
+        <service android:enabled="true" android:exported="false" android:label="MessagingService" android:name="com.facebook.mqttlite.MqttService"/>
+        <service android:exported="false" android:name="com.facebook.nodex.startup.crashloop.FixCrashLoopService" android:process=":nodex">
+            <meta-data android:name="crash.loop.exclude" android:value="true"/>
+        </service>
+        <receiver android:enabled="false" android:exported="false" android:name="com.facebook.nodex.startup.crashloop.CrashLoop$TransactionInProgress" android:process=":nodex">
+            <meta-data android:name="crash.loop.exclude" android:value="true"/>
+        </receiver>
+        <receiver android:exported="false" android:name="com.facebook.nodex.startup.crashloop.CrashLoop$LastState" android:process=":nodex">
+            <meta-data android:name="crash.loop.exclude" android:value="true"/>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:exported="false" android:name="com.facebook.nodex.startup.splashscreen.NodexSplashActivity" android:process=":nodex" android:theme="@style/Theme.FBUi.Login" android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data android:name="crash.loop.exclude" android:value="true"/>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:exported="false" android:launchMode="singleInstance" android:name="com.facebook.nodex.startup.splashscreen.NodexErrorActivity" android:process=":nodex" android:theme="@style/Theme.FBUi.Login" android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data android:name="crash.loop.exclude" android:value="true"/>
+        </activity>
+        <provider android:authorities="com.facebook.moments.nodex.startup.warmup" android:exported="false" android:name="com.facebook.nodex.startup.warmup.NodexWarmupContentProvider"/>
+        <service android:name="com.facebook.push.fbpushdata.FbPushDataHandlerService"/>
+        <service android:enabled="false" android:name="com.facebook.push.adm.ADMRegistrarService"/>
+        <service android:enabled="false" android:name="com.facebook.push.adm.ADMService"/>
+        <service android:enabled="false" android:exported="false" android:name="com.facebook.push.adm.ADMBroadcastReceiver"/>
+        <service android:enabled="false" android:name="com.facebook.push.nna.NNAService"/>
+        <service android:enabled="false" android:name="com.facebook.push.c2dm.C2DMService"/>
+        <service android:name="com.facebook.push.registration.RegistrarHelperService"/>
+        <service android:exported="false" android:name="com.facebook.push.fbnslite.FbnsLitePushNotificationHandler"/>
+        <service android:name="com.facebook.push.crossapp.PackageRemovedReporterService"/>
+        <receiver android:name="com.facebook.push.PushInitializer$LocalBroadcastReceiver"/>
+        <receiver android:enabled="false" android:name="com.facebook.push.adm.ADMBroadcastReceiver$MessageAlertReceiver" android:permission="com.amazon.device.messaging.permission.SEND">
+            <intent-filter>
+                <action android:name="com.amazon.device.messaging.intent.REGISTRATION"/>
+                <action android:name="com.amazon.device.messaging.intent.RECEIVE"/>
+                <category android:name="com.facebook.moments"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:name="com.facebook.push.nna.NNABroadcastReceiver" android:permission="com.nokia.pushnotifications.permission.SEND">
+            <intent-filter>
+                <action android:name="com.nokia.pushnotifications.intent.RECEIVE"/>
+                <action android:name="com.nokia.pushnotifications.intent.REGISTRATION"/>
+                <category android:name="com.facebook.moments"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:name="com.facebook.push.c2dm.C2DMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.facebook.moments"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.facebook.push.registration.RegistrarHelperReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.push.registration.ACTION_TOKEN_REQUEST_RETRY"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.facebook.push.registration.FacebookPushServerRegistrar$LocalBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.push.registration.ACTION_ALARM"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:name="com.facebook.push.crossapp.PackageFullyRemovedBroadcastReceiver">
+            <intent-filter>
+                <data android:scheme="package" android:sspPrefix="com.facebook"/>
+                <action android:name="android.intent.action.PACKAGE_FULLY_REMOVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.facebook.push.fbnslite.FbnsLitePushNotificationHandler$FbnsLiteCallbackReceiver">
+            <intent-filter>
+                <category android:name="com.facebook.moments"/>
+                <action android:name="com.facebook.rti.fbns.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <uses-library android:name="com.amazon.device.messaging" android:required="false"/>
+        <service android:enabled="true" android:exported="false" android:name="com.facebook.push.mqtt.service.MqttPushService"/>
+        <service android:enabled="false" android:exported="false" android:name="com.facebook.push.mqtt.service.MqttPushServiceInSeperateProcess" android:process=":mqtt"/>
+        <service android:name="com.facebook.push.mqtt.receiver.MqttReceiver"/>
+        <service android:name="com.facebook.push.mqtt.service.MqttPushHelperService"/>
+        <receiver android:exported="false" android:name="com.facebook.push.mqtt.receiver.CrossProcessMqttBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.push.mqtt.ACTION_MQTT_PUBLISH_ARRIVED"/>
+                <category android:name="com.facebook.push.mqtt.category.SAME_APP"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.facebook.push.mqtt.receiver.BootCompleteBroadcastReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.facebook.reportaproblem.base.bugreport.BugReportUploadService"/>
+        <service android:enabled="false" android:exported="true" android:label="NotificationService" android:name="com.facebook.rti.push.service.FbnsService" android:process=":fbns"/>
+        <service android:enabled="false" android:exported="false" android:name="com.facebook.rti.config.ConfigProxyService" android:process=":fbns"/>
+        <receiver android:exported="true" android:name="com.facebook.rti.push.service.idsharing.FbnsSharingStateReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.rti.fbns.intent.SHARE_IDS"/>
+                <action android:name="com.facebook.rti.intent.SHARED_QE_FLAG_REQUEST"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:name="com.facebook.rti.orca.UpdateQeBroadcastReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:name="com.facebook.rti.orca.UserPresentBroadcastReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:name="com.facebook.rti.orca.KeepAliveBroadcastReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:name="com.facebook.rti.orca.NetworkBroadcastReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:name="com.facebook.rti.orca.NetworkChangeImmediateBroadcastReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE_IMMEDIATE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.facebook.selfupdate.SelfUpdateInstallActivity"/>
+        <activity android:name="com.facebook.selfupdate.SelfUpdateSettingsActivity"/>
+        <service android:name="com.facebook.selfupdate.SelfUpdateFetchService"/>
+        <service android:exported="false" android:name="com.facebook.trace.DebugTraceUploadService"/>
+        <activity-alias android:exported="true" android:launchMode="singleTask" android:name="com.facebook.moments.MomentsStartActivity" android:targetActivity="com.facebook.moments.NodexMomentsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="moments"/>
+            </intent-filter>
+        </activity-alias>
+    </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <permission android:name="com.facebook.moments.permission.CROSS_PROCESS_BROADCAST_MANAGER" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.facebook.moments.permission.CROSS_PROCESS_BROADCAST_MANAGER"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <permission android:name="com.facebook.receiver.permission.ACCESS" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.facebook.receiver.permission.ACCESS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <permission android:name="com.facebook.moments.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <permission android:name="com.facebook.permission.prod.FB_APP_COMMUNICATION" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.facebook.moments.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.facebook.katana.provider.ACCESS"/>
+    <uses-permission android:name="com.facebook.wakizashi.provider.ACCESS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="com.facebook.permission.prod.FB_APP_COMMUNICATION"/>
+    <permission android:name="com.facebook.moments.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <permission android:name="com.facebook.moments.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.facebook.moments.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.nokia.pushnotifications.permission.RECEIVE"/>
+    <uses-permission android:name="com.facebook.moments.permission.RECEIVE_ADM_MESSAGE"/>
+    <uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE"/>
+</manifest>

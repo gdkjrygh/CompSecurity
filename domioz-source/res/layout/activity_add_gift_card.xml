@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/appbkgr" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/header" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <include android:id="@id/titleBar" layout="@layout/bar_blue" />
+        <ImageView android:id="@id/checkout_title_divider" android:visibility="gone" android:layout_alignRight="@id/home_button" style="@style/TitleBarSeparator" />
+        <TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gift_card" android:layout_centerInParent="true" style="@style/TopShadow" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/checkout_form_subheader" android:background="#ffffffff" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/header">
+        <TextView android:textStyle="bold" android:textColor="@color/text_grey" android:id="@id/order_total" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_centerHorizontal="true" style="@style/CheckoutSubHeaderText" />
+        <TextView android:textStyle="bold" android:textColor="@color/text_grey" android:id="@id/balance_due" android:paddingBottom="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@id/order_total" android:layout_centerHorizontal="true" style="@style/CheckoutSubHeaderText" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/main_view" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/checkout_form_subheader">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tableContainer" android:background="@drawable/bg_card" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:textColor="@color/hint_text_color" android:id="@id/number_static_text" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="120.0dip" android:text="@string/gift_card_number_static" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/AddGiftCardHintBlock" />
+                    <EditText android:textSize="15.0sp" android:id="@id/gift_card_number" android:background="@drawable/table_button_top" android:layout_height="wrap_content" android:maxLength="23" android:digits="0123456789 " android:layout_toRightOf="@id/number_static_text" android:inputType="numberSigned" android:imeOptions="flagNoExtractUi" style="@style/TableStyle" />
+                    <ImageButton android:id="@id/number_info" android:background="@android:color/transparent" android:padding="5.0dip" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/ic_question_mark" android:scaleType="centerInside" android:layout_alignTop="@id/gift_card_number" android:layout_alignBottom="@id/gift_card_number" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="horizontal" android:background="@color/grey_down" style="@style/TableDivider" />
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:textColor="@color/hint_text_color" android:id="@id/pin_static_text" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="120.0dip" android:text="@string/gift_card_pin_static" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/AddGiftCardHintBlock" />
+                    <EditText android:textSize="15.0sp" android:id="@id/gift_card_pin" android:background="@drawable/table_button_middle" android:layout_height="wrap_content" android:maxLength="4" android:layout_toRightOf="@id/pin_static_text" android:inputType="number" android:imeOptions="flagNoExtractUi" style="@style/TableStyle" />
+                    <ImageButton android:id="@id/pin_info" android:background="@android:color/transparent" android:padding="5.0dip" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/ic_question_mark" android:scaleType="centerInside" android:layout_alignTop="@id/gift_card_pin" android:layout_alignBottom="@id/gift_card_pin" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <Button android:textSize="16.0sp" android:id="@id/addGiftCard" android:background="@drawable/btn_blue" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginTop="20.0dip" android:text="@string/gift_card_apply" android:layout_below="@id/tableContainer" style="@style/ButtonStyle" />
+            <RelativeLayout android:id="@id/edit_area" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tableContainer">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/balance_section" android:background="@drawable/bg_card" android:padding="1.0dip" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                    <RelativeLayout android:id="@id/balance_area" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textStyle="bold" android:textColor="@color/hint_text_color" android:id="@id/balance_static_text" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/CheckoutTableText" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/amount_to_apply_section" android:background="@drawable/bg_card" android:padding="1.0dip" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_below="@id/balance_section">
+                    <RelativeLayout android:id="@id/amount_to_apply" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textStyle="bold" android:textColor="@color/hint_text_color" android:id="@id/amount_to_apply_static_text" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/gift_card_amount_to_apply" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/CheckoutTableText" />
+                        <EditText android:textStyle="bold" android:textColor="@color/black" android:id="@id/new_amount" android:background="@drawable/table_button_middle" android:paddingLeft="1.0dip" android:layout_width="fill_parent" android:layout_marginLeft="0.0dip" android:layout_toRightOf="@id/amount_to_apply_static_text" android:inputType="numberDecimal" android:imeOptions="flagNoExtractUi" style="@style/TableStyle" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <Button android:textSize="16.0sp" android:id="@id/updateGiftCard" android:background="@drawable/btn_blue" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginTop="20.0dip" android:text="@string/gift_card_update" android:layout_below="@id/amount_to_apply_section" style="@style/ButtonStyle" />
+                <Button android:textSize="16.0sp" android:id="@id/deleteGiftCard" android:background="@drawable/btn_blue" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginTop="20.0dip" android:text="@string/gift_card_remove" android:layout_below="@id/updateGiftCard" style="@style/ButtonStyle" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

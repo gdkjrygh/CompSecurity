@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/l_list_loading_footer" />
+    <com.fitbit.ui.FixedFocusScrollView android:id="@id/content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/activity_goals_group" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:id="@id/steps_container" style="@style/GoalsItemLinearContainer">
+                    <TextView android:text="@string/steps" style="@style/GoalsItemMajor" />
+                    <TextView android:id="@id/steps" style="@style/GoalsItemMinor" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/distance_container" style="@style/GoalsItemLinearContainer">
+                    <TextView android:text="@string/distance" style="@style/GoalsItemMajor" />
+                    <TextView android:id="@id/distance" android:text="string for layout" style="@style/GoalsItemMinor" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/calories_container" style="@style/GoalsItemLinearContainer">
+                    <TextView android:text="@string/calories" style="@style/GoalsItemMajor" />
+                    <TextView android:id="@id/calories" android:text="string for layout" style="@style/GoalsItemMinor" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/active_minutes_container" style="@style/GoalsItemLinearContainer">
+                    <TextView android:text="@string/active_minutes" style="@style/GoalsItemMajor" />
+                    <TextView android:id="@id/active_minutes" android:text="string for layout" style="@style/GoalsItemMinor" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/floors_container" style="@style/GoalsItemLinearContainer">
+                    <TextView android:text="@string/floors" style="@style/GoalsItemMajor" />
+                    <TextView android:id="@id/floors" android:text="string for layout" style="@style/GoalsItemMinor" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/nutrition_goals_group" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:text="@string/nutrition" style="@style/GoalsGroup" />
+                <LinearLayout android:id="@id/food_plan_container" style="@style/GoalsItemLinearContainer">
+                    <TextView android:text="@string/label_food_plan" style="@style/GoalsItemMajor" />
+                    <TextView android:id="@id/food_plan" android:text="@string/create_food_plan" style="@style/GoalsItemMinor" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/water_container" style="@style/GoalsItemLinearContainer">
+                    <TextView android:text="@string/label_water" style="@style/GoalsItemMajor" />
+                    <TextView android:id="@id/water" android:text="string for layout" style="@style/GoalsItemMinor" />
+                </LinearLayout>
+                <TextView android:text="@string/weight_cap" style="@style/GoalsGroup" />
+                <LinearLayout android:id="@id/weight_container" style="@style/GoalsItemLinearContainer">
+                    <TextView android:text="@string/weight_cap" style="@style/GoalsItemMajor" />
+                    <TextView android:id="@id/weight" android:text="string for layout" style="@style/GoalsItemMinor" />
+                </LinearLayout>
+                <TextView android:text="@string/body_fat_some_caps" style="@style/GoalsGroup" />
+                <LinearLayout android:id="@id/body_fat_container" style="@style/GoalsItemLinearContainer">
+                    <TextView android:text="@string/weight_logging_legend_body_fat" style="@style/GoalsItemMajor" />
+                    <TextView android:id="@id/body_fat" android:text="string for layout" style="@style/GoalsItemMinor" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/sleep_goals_group" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:id="@id/sleep_container" style="@style/GoalsItemLinearContainer">
+                    <TextView android:text="@string/label_sleep" style="@style/GoalsItemMajor" />
+                    <TextView android:id="@id/sleep" android:text="string for layout" style="@style/GoalsItemMinor" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.fitbit.ui.FixedFocusScrollView>
+</FrameLayout>

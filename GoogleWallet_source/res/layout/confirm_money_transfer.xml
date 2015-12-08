@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:background="@color/inverted" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_alignParentTop="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/default_spacing">
+        <TextView android:layout_gravity="center" android:id="@id/MoneyTransferLargeDescription" android:paddingTop="@dimen/default_spacing" android:visibility="gone" style="@style/HeroText" />
+        <TextView android:gravity="center_horizontal" android:id="@id/MoneyTransferDescription" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Body" />
+        <fragment android:id="@id/P2pHeaderFragment" android:layout_width="fill_parent" android:layout_height="wrap_content" wallet:paymentDirection="fromUserToContact" class="com.google.android.apps.wallet.transfer.ui.P2pHeaderFragment" />
+        <TextView android:id="@id/RecipientName" android:padding="@null" android:paddingLeft="@dimen/default_spacing" android:paddingTop="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:paddingBottom="0.0dip" style="@style/Title.Splash" />
+        <TextView android:id="@id/RecipientEmail" android:padding="@null" android:paddingLeft="@dimen/default_spacing" android:paddingTop="0.0dip" android:paddingRight="@dimen/default_spacing" android:paddingBottom="8.0dip" style="@style/Body.Splash" />
+        <TextView android:gravity="center_horizontal" android:id="@id/RequestMemo" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:visibility="gone" style="@style/MemoText" />
+        <View style="@style/HorizontalDivider" />
+        <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.wallet.paymentcard.widgets.FundingSourceView android:id="@id/FundingSourceIcon" android:layout_width="@dimen/list_item_primary_action" android:layout_height="@dimen/list_item_primary_action" android:layout_margin="@dimen/default_spacing" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@null" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/FundingSourceButton" android:layout_toRightOf="@id/FundingSourceIcon" android:layout_centerVertical="true">
+                <TextView android:id="@id/FundingSourceName" android:lines="1" android:maxLength="26" style="@style/ListItemPrimaryText" />
+                <TextView android:id="@id/FundingSourceMessage" android:visibility="gone" style="@style/ListItemSecondaryText" />
+            </LinearLayout>
+            <Button android:layout_gravity="right" android:id="@id/FundingSourceButton" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/FlatButton" />
+        </RelativeLayout>
+        <TextView android:id="@id/FundingSourceError" android:visibility="gone" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginRight="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing" style="@style/Title.Error" />
+        <View android:layout_marginBottom="@dimen/default_spacing" style="@style/HorizontalDivider" />
+        <RelativeLayout android:id="@id/AmountSection" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="right" android:id="@id/TransferAmount" android:layout_width="wrap_content" android:layout_marginRight="@dimen/default_spacing" android:singleLine="true" android:layout_alignParentRight="true" style="@style/ListItemPrimaryText" />
+            <TextView android:ellipsize="end" android:id="@id/TransferAmountDescription" android:layout_width="wrap_content" android:layout_marginLeft="@dimen/default_spacing" android:singleLine="true" android:layout_toLeftOf="@id/TransferAmount" android:layout_alignTop="@id/TransferAmount" android:layout_alignParentLeft="true" style="@style/ListItemPrimaryText" />
+            <TextView android:gravity="right" android:id="@id/FeeAmount" android:layout_width="wrap_content" android:layout_marginRight="@dimen/default_spacing" android:singleLine="true" android:layout_below="@id/TransferAmount" android:layout_alignParentRight="true" style="@style/ListItemPrimaryText" />
+            <TextView android:ellipsize="end" android:id="@id/FeeDescription" android:layout_marginLeft="@dimen/default_spacing" android:singleLine="true" android:layout_toLeftOf="@id/FeeAmount" android:layout_alignTop="@id/FeeAmount" android:layout_alignParentLeft="true" style="@style/AmountText.ListItem" />
+            <View android:id="@id/FeeDivider" android:layout_marginTop="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing" android:layout_below="@id/FeeAmount" style="@style/HorizontalDivider" />
+            <TextView android:gravity="right" android:id="@id/TotalAmount" android:layout_marginRight="@dimen/default_spacing" android:layout_below="@id/FeeDivider" android:layout_alignParentRight="true" style="@style/AmountText.ListItem" />
+            <TextView android:id="@id/TotalLabel" android:layout_marginRight="@dimen/default_spacing" android:text="@string/fee_confirmation_dialog_total_amount_label" android:layout_toLeftOf="@id/TotalAmount" android:layout_below="@id/FeeDivider" android:layout_alignTop="@id/TotalAmount" style="@style/AmountText.ListItem" />
+        </RelativeLayout>
+        <Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:gravity="center" android:id="@id/FeeDelayText" android:visibility="gone" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginTop="@dimen/default_spacing" android:layout_marginRight="@dimen/default_spacing" style="@style/FinePrint" />
+        <LinearLayout android:gravity="center" android:id="@id/FeeDelayBanner" android:padding="0.0dip" android:visibility="gone" android:layout_marginTop="@dimen/default_spacing" style="@style/ButterBar">
+            <ImageButton android:id="@id/FeeDelayBannerButton" android:background="@drawable/unbounded_rippleable" android:layout_width="@dimen/minimum_touch_target" android:layout_height="@dimen/minimum_touch_target" android:src="@drawable/quantum_ic_info_outline_grey600_24" android:contentDescription="@null" />
+            <TextView android:gravity="center" android:id="@id/FeeDelayBannerText" android:paddingTop="@dimen/narrow_spacing" android:paddingRight="@dimen/narrow_spacing" android:paddingBottom="@dimen/narrow_spacing" android:layout_width="wrap_content" style="@style/Body.Dark" />
+        </LinearLayout>
+        <Button android:theme="@style/Theme_RaisedButton.Action" android:gravity="center" android:orientation="horizontal" android:id="@id/ConfirmButton" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/default_spacing" style="@style/RaisedButton.Action" />
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

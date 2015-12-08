@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <fragment android:name="com.google.android.apps.wallet.storedvalue.WalletBalanceAmountFragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <fragment android:name="com.google.android.apps.wallet.storedvalue.WalletBalanceKycFragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:id="@id/TilesHeader" android:padding="@dimen/default_spacing" android:text="@string/wallet_balance_tiles_header" style="@style/Title" />
+            <LinearLayout android:orientation="vertical" android:id="@id/FragmentTileListActivityContent" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/layout_horizontal_divider" android:showDividers="middle">
+                <fragment android:name="com.google.android.apps.wallet.storedvalue.WalletBalanceRecurringTopupFragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <fragment android:name="com.google.android.apps.wallet.storedvalue.WalletBalancePlasticCardFragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <fragment android:name="com.google.android.apps.wallet.storedvalue.WalletBalanceKycToClaimMoneyFragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <fragment android:name="com.google.android.apps.wallet.storedvalue.WalletBalanceLinkBankAccountFragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <fragment android:name="com.google.android.apps.wallet.storedvalue.WalletBalanceLowBalanceFragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <fragment android:name="com.google.android.apps.wallet.storedvalue.WalletBalancePendingTransactionFragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@id/collage_container" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?android:selectableItemBackground" app:cardBackgroundColor="@android:color/white" app:cardCornerRadius="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.gms.ads.formats.NativeContentAdView android:id="@id/native_content_ad" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/contentad_image_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/collage_item_style_less_action_container_height" android:scaleType="centerCrop" />
+                <View android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <ImageView android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ad_badge" />
+                <ImageView android:id="@id/contentad_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+                <View android:background="@drawable/bg_admob_native_ad" android:layout_width="fill_parent" android:layout_height="118.0dip" android:layout_above="@id/contentad_footer" />
+                <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/contentad_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginBottom="10.0dip" android:maxLines="2" android:layout_above="@id/contentad_footer" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/contentad_footer" android:background="@color/fragment_selected_tab_title_color" android:layout_width="fill_parent" android:layout_height="@dimen/collage_item_style_less_action_container_height" android:layout_alignParentBottom="true">
+                    <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/contentad_headline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:maxLines="1" />
+                    <TextView android:textSize="10.0sp" android:textColor="@android:color/white" android:id="@id/contentad_advertiser" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:maxLines="1" />
+                </LinearLayout>
+            </RelativeLayout>
+        </com.google.android.gms.ads.formats.NativeContentAdView>
+        <com.google.android.gms.ads.formats.NativeAppInstallAdView android:id="@id/native_install_ad" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/appinstall_image_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/collage_item_style_less_action_container_height" android:scaleType="centerCrop" />
+                <View android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <ImageView android:id="@id/appinstall_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+                <ImageView android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ad_badge" />
+                <View android:background="@drawable/bg_admob_native_ad" android:layout_width="fill_parent" android:layout_height="118.0dip" android:layout_above="@id/appinstall_footer" />
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/appinstall_headline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginBottom="10.0dip" android:maxLines="1" android:layout_above="@id/appinstall_stars" />
+                <RatingBar android:id="@id/appinstall_stars" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginBottom="10.0dip" android:numStars="5" android:stepSize="0.5" android:isIndicator="true" android:layout_above="@id/appinstall_footer" style="?android:attr/ratingBarStyleSmall" />
+                <RelativeLayout android:id="@id/appinstall_footer" android:background="@color/fragment_selected_tab_title_color" android:layout_width="fill_parent" android:layout_height="@dimen/collage_item_style_less_action_container_height" android:layout_alignParentBottom="true">
+                    <ImageView android:id="@id/appinstall_store" android:paddingLeft="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_google_play" android:layout_centerVertical="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/appinstall_call_to_action" android:paddingRight="6.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </com.google.android.gms.ads.formats.NativeAppInstallAdView>
+    </FrameLayout>
+</android.support.v7.widget.CardView>

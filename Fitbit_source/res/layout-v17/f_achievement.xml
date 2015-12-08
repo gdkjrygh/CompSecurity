@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/close" android:layout_width="wrap_content" android:layout_height="?actionBarSize" android:layout_marginLeft="@dimen/horizontal_margin_step" android:layout_marginRight="@dimen/horizontal_margin_step" android:src="@drawable/abc_ic_clear_mtrl_alpha" android:scaleType="centerInside" android:minWidth="45.0dip" android:layout_marginStart="@dimen/horizontal_margin_step" android:layout_marginEnd="@dimen/horizontal_margin_step" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/horizontal_margin_step" android:layout_marginRight="@dimen/horizontal_margin_step" android:fillViewport="true" android:layout_marginStart="@dimen/horizontal_margin_step" android:layout_marginEnd="@dimen/horizontal_margin_step">
+        <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="24.0sp" android:textColor="?android:textColorSecondaryInverse" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" fitbit:font="proxima_nova_semibold" />
+            <TextView android:textSize="18.0sp" android:textColor="?android:textColorSecondaryInverse" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip" android:layout_below="@id/title" android:layout_centerHorizontal="true" fitbit:font="proxima_nova_light" />
+            <com.fitbit.ui.loadable.LoadablePicassoImageView android:id="@id/image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/description" android:layout_centerHorizontal="true" />
+            <Button android:textSize="24.0sp" android:textColor="@color/white" android:id="@id/share" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/vertical_margin_step" android:text="@string/share" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/Fitbit.Translucent.Button" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

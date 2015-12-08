@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/press_state_background" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/people_picker_people_row_margin_top_bottom" android:paddingBottom="@dimen/people_picker_people_row_margin_top_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/people_picker_people_row_height">
+        <com.facebook.moments.ui.peoplepicker.InviteBadgedAvatarView android:id="@id/profile_pic" android:layout_width="@dimen/people_picker_avatar_size" android:layout_height="@dimen/people_picker_avatar_size" android:layout_marginLeft="@dimen/people_picker_side_padding" android:layout_marginStart="@dimen/people_picker_side_padding" />
+        <LinearLayout android:gravity="left|center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_weight="1.0" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+            <com.facebook.resources.ui.FbTextView android:id="@id/name_text" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/sync_picker_list_text" />
+            <com.facebook.resources.ui.FbTextView android:id="@id/subtitle_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/sync_picker_people_invited_text" />
+        </LinearLayout>
+        <com.facebook.moments.ui.requests.AskButton android:id="@id/ask_button" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/people_picker_side_padding" android:layout_marginEnd="@dimen/people_picker_side_padding" />
+    </LinearLayout>
+    <View android:background="@color/requests_picker_separator" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+</LinearLayout>

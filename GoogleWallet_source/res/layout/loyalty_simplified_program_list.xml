@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveListView android:id="@id/loyalty_ProgramList" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/card_list_rippleable" android:fastScrollEnabled="true" style="@style/List" />
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@android:id/empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/list_empty" style="@style/Font_ListEmpty" />
+    <include android:id="@id/loading_list_error_view" android:visibility="gone" layout="@layout/retry_widget" />
+    <com.google.android.apps.wallet.widgets.progressspinner.ProgressSpinnerView android:id="@id/loyalty_ProgressSpinner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:id="@id/scroller" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:src="@drawable/img_rt_splash_color_160dp" style="@style/SplashHeroImage" />
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0">
+                <TextView android:id="@id/PrefixMoneySymbol" android:visibility="gone" android:layout_weight="0.0" android:contentDescription="@null" style="@style/AmountText" />
+                <com.google.android.apps.wallet.widgets.money.MonetaryValueInput android:id="@id/Amount" android:layout_width="0.0dip" android:maxLength="10" android:layout_weight="1.0" android:inputType="numberDecimal" android:textAlignment="2" style="@style/AmountText" />
+                <TextView android:id="@id/SuffixMoneySymbol" android:visibility="gone" android:layout_weight="0.0" android:contentDescription="@null" style="@style/AmountText" />
+            </LinearLayout>
+            <TextView android:id="@id/AmountError" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:visibility="gone" android:layout_width="wrap_content" style="@style/Title.Error" />
+            <View android:layout_marginTop="@dimen/default_spacing" style="@style/HorizontalDivider" />
+            <LinearLayout android:orientation="horizontal" android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Spinner android:id="@id/FrequencySpinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/UnderlinedSpinner" />
+                <FrameLayout android:id="@id/OptionContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/UnderlinedSpinner">
+                    <TextView android:id="@id/OptionText" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:attr/spinnerItemStyle" />
+                </FrameLayout>
+            </LinearLayout>
+            <TextView android:id="@id/FundingSourceText" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" style="@style/Body" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

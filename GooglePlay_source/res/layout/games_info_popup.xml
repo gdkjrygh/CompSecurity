@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/info_popup_container" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="left" android:orientation="horizontal" android:id="@id/info_popup" android:background="@drawable/bg_play_games_toast" android:layout_width="fill_parent" android:layout_height="@dimen/games_popup_background_height">
+        <com.google.android.gms.games.ui.widget.MetagameAvatarView android:id="@id/avatar_container" android:layout_width="@dimen/games_popup_image_size" android:layout_height="@dimen/games_popup_image_size" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:layout_gravity="left" android:id="@id/popup_text_label" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/games_popup_text_data_max_width" style="@style/Games.PopupTextLabel" />
+            <TextView android:layout_gravity="left" android:id="@id/popup_text_data" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/games_popup_text_data_max_width" style="@style/Games.PopupTextData" />
+            <TextView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/popup_text_single_line_message" android:paddingLeft="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/games_popup_text_data_max_width" style="@style/Games.PopupTextSingleLineMessage" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="left" android:orientation="horizontal" android:id="@id/info_popup_curtain" android:background="@drawable/bg_play_games_toast" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/games_popup_background_height">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_gravity="center" android:id="@id/popup_curtain_label" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/games_popup_text_data_max_width" style="@style/Games.PopupTextLabel" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

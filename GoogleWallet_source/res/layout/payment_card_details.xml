@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/CardWrapper" android:layout_width="fill_parent" android:layout_height="170.0dip">
+            <com.google.android.apps.wallet.paymentcard.widgets.FundingSourceView android:layout_gravity="center_horizontal" android:id="@id/Card" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="12.0dip" android:layout_marginBottom="14.0dip" android:scaleType="fitCenter" />
+        </FrameLayout>
+        <RelativeLayout android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/Card">
+            <TextView android:ellipsize="end" android:id="@id/CardName" android:paddingRight="@dimen/narrow_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/narrow_spacing" android:singleLine="true" style="@style/Font_Paragraph01" />
+            <TextView android:id="@id/ErrorMessage" android:paddingRight="@dimen/narrow_spacing" android:visibility="gone" android:layout_below="@id/CardName" style="@style/StatusSubheader" />
+        </RelativeLayout>
+        <View style="@style/HorizontalDivider" />
+        <include android:id="@id/CardNumberLayout" layout="@layout/card_details_row" />
+        <View style="@style/HorizontalDivider" />
+        <include android:id="@id/CardHolderNameLayout" layout="@layout/card_details_row" />
+        <View style="@style/HorizontalDivider" />
+        <include android:id="@id/CardExpirationDateLayout" layout="@layout/card_details_row" />
+        <View style="@style/HorizontalDivider" />
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

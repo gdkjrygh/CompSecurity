@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/mdx_mini_player_images_group" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <com.netflix.mediaclient.android.widget.AdvancedImageView android:layout_gravity="center_horizontal" android:id="@id/mdx_mini_player_image_view" android:paddingLeft="@dimen/double_padding" android:paddingTop="@dimen/double_padding" android:paddingRight="@dimen/double_padding" android:paddingBottom="@dimen/content_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="#44444444" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_weight="1.0" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/mdx_mini_player_device_name_group" android:background="@drawable/selectable_item_background" android:padding="@dimen/content_padding" style="@style/wrap">
+            <ImageView android:layout_gravity="center_vertical" android:layout_marginRight="@dimen/content_padding" android:src="@drawable/ic_mdx_blue" style="@style/wrap" />
+            <LinearLayout android:orientation="vertical" style="@style/wrap">
+                <TextView android:textColor="@color/chromecast_blue" android:ellipsize="end" android:id="@id/mdx_mini_player_text_device_name" android:singleLine="true" android:lineSpacingMultiplier="1.0" style="@style/PrimaryText.Small" />
+                <TextView android:text="@string/label_tap_to_change" android:singleLine="true" android:lineSpacingMultiplier="1.0" style="@style/SecondaryText.Micro" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@id/mdx_mini_player_bif_seek_time" android:visibility="gone" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/PrimaryText.Large" />
+    <ImageView android:id="@id/mdx_mini_player_bif_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/double_padding" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_above="@id/mdx_mini_player_bif_seek_time" android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@id/collage_container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:cardBackgroundColor="@android:color/white" app:cardCornerRadius="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/collage_thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/collage_item_style_less_action_container_height" android:scaleType="centerCrop" />
+    <LinearLayout android:gravity="right|center" android:layout_gravity="bottom|right|center" android:orientation="horizontal" android:id="@id/container_collage_detail" android:layout_width="wrap_content" android:layout_height="@dimen/collage_item_style_less_action_container_height" android:layout_marginRight="16.0dip" android:layout_alignRight="@id/collage_thumbnail">
+        <ImageView android:id="@id/ic_like_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_card_like" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/fragment_selected_tab_title_color" android:id="@id/textview_like_number" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <de.hdodenhof.circleimageview.CircleImageView android:layout_gravity="bottom|left|center" android:id="@id/creator_avatar" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="5.0dip" android:layout_marginBottom="4.0dip" android:layout_alignLeft="@id/collage_thumbnail" app:border_width="2.0dip" app:border_color="@android:color/white" />
+</android.support.v7.widget.CardView>

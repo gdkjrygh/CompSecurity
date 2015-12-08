@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/BottomButtons" android:layout_alignParentTop="true">
+        <FrameLayout android:id="@id/DetailsContainer" android:padding="@dimen/screen_spacing_regular" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout android:orientation="horizontal" android:id="@id/BottomButtons" style="@style/BottomButtonBar">
+        <Button android:id="@id/LinkButton" android:layout_width="0.0dip" android:text="@string/loyalty_add_existing_card" android:layout_weight="1.0" style="@style/FlatButton.Docked" />
+        <View style="@style/VerticalDivider" />
+        <Button android:id="@id/JoinButton" android:layout_width="0.0dip" android:text="@string/loyalty_join_now" android:layout_weight="1.0" style="@style/FlatButton.Docked" />
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout>
+</RelativeLayout>

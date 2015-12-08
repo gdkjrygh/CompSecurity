@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/super_content" android:background="@color/primary_teal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/settings_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/Fitbit.ProgressBar.White" />
+    <FrameLayout android:id="@id/user_profile_info_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <com.fitbit.ui.views.ViewPagerTabIndicator android:id="@id/settings_tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/user_profile_info_fragment" />
+    <android.support.v4.view.ViewPager android:id="@id/profile_view_pager" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/friend_request_overlay" android:layout_below="@id/settings_tabs" android:layout_alignWithParentIfMissing="true" android:filterTouchesWhenObscured="true" />
+    <ViewStub android:id="@id/friend_request_overlay_stub" android:layout="@layout/l_friend_request_overlay" android:inflatedId="@id/friend_request_overlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</RelativeLayout>

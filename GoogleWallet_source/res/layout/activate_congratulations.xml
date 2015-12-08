@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_above="@id/ButtonSection" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:src="@drawable/img_wcard_active" android:contentDescription="@null" style="@style/SplashHeroImage" />
+            <TextView android:text="@string/activate_complete_header" style="@style/Title.Splash" />
+            <TextView android:text="@string/activate_complete" style="@style/Body.Splash" />
+            <TextView android:gravity="center_horizontal" android:id="@id/LearnMore" android:padding="@dimen/default_spacing" android:text="@string/activate_complete_learn_more" style="@style/Body.Action" />
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout android:orientation="horizontal" android:id="@id/ButtonSection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@id/AddMoneyButton" android:layout_width="0.0dip" android:text="@string/add_money" android:layout_weight="1.0" style="@style/FlatButton.Docked" />
+        <View style="@style/VerticalDivider" />
+        <Button android:id="@id/DoneButton" android:layout_width="0.0dip" android:text="@string/button_done" android:layout_weight="1.0" style="@style/FlatButton.Docked" />
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout>
+</RelativeLayout>

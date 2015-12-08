@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.wallet.widgets.validation.ValidatedAutoCompleteEditText android:id="@id/AddressViewStreetAddress" android:layout_width="fill_parent" android:hint="@string/hint_street_address" android:nextFocusForward="@id/AddressViewStreetAddress2" wallet:autoAdvance="true" style="@style/SingleLineTextField" />
+    <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/AddressViewStreetAddress2" android:layout_width="fill_parent" android:hint="@string/hint_street_address_two" android:nextFocusForward="@id/AddressViewCity" wallet:autoAdvance="true" style="@style/SingleLineTextField" />
+    <com.google.android.apps.wallet.widgets.validation.ValidatedAutoCompleteEditText android:id="@id/AddressViewCity" android:layout_width="fill_parent" android:hint="@string/hint_city" android:nextFocusForward="@id/AddressViewState" wallet:autoAdvance="true" style="@style/SingleLineTextField" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/AddressViewState" android:nextFocusDown="@id/AddressViewZipCode" android:layout_width="0.0dip" android:hint="@string/hint_state" android:layout_weight="1.0" android:nextFocusForward="@id/AddressViewZipCode" wallet:autoAdvance="true" style="@style/SingleLineTextField" />
+        <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/AddressViewZipCode" android:layout_width="0.0dip" android:layout_marginLeft="0.0dip" android:hint="@string/hint_zip_code" android:layout_weight="1.0" wallet:autoAdvance="true" style="@style/SingleLineTextField" />
+    </LinearLayout>
+    <TextView android:id="@id/AddressViewCountryCode" android:visibility="gone" style="@style/Body" />
+</merge>

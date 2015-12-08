@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/login_logo_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:layout_weight="9.0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/nux_moments_icon" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/nux_moments_text" />
+        </LinearLayout>
+        <LinearLayout android:gravity="top|center" android:orientation="vertical" android:id="@id/login_main_group" android:paddingLeft="@dimen/sync_login_screen_side_padding" android:paddingRight="@dimen/sync_login_screen_side_padding" android:addStatesFromChildren="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="11.0">
+            <com.facebook.resources.ui.FbTextView android:gravity="center" android:id="@id/title" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="50.0dip" android:text="@string/moments_login_approval_instruction" android:singleLine="false" style="@style/login_approval_screen_title_text" />
+            <com.facebook.resources.ui.FbEditText android:textColorHint="@color/login_text_hint" android:gravity="left" android:id="@id/password" android:background="@drawable/login_edit_text_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/login_approval_code_hint" android:singleLine="true" android:inputType="number" android:imeOptions="actionGo" style="@style/login_credential_text" />
+            <com.facebook.widget.text.BetterTextView android:id="@id/login" android:background="@drawable/login_button" android:layout_width="fill_parent" android:layout_height="@dimen/sync_login_button_height" android:layout_marginTop="@dimen/sync_login_button_margin_top" android:text="@string/login_button_text" style="@style/login_button_text" />
+        </LinearLayout>
+        <com.facebook.widget.FlowLayout android:gravity="center" android:orientation="horizontal" android:id="@id/login_bottom_group" android:paddingLeft="32.0dip" android:paddingTop="16.0dip" android:paddingRight="32.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/login_bottom_helper_links" />
+            <include layout="@layout/orca_login_help_button" />
+        </com.facebook.widget.FlowLayout>
+    </LinearLayout>
+</ScrollView>

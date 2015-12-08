@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@id/activity_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" style="@style/DetailsSummaryTitle" />
+    </LinearLayout>
+    <View android:background="@color/heart_rate_divider_line" android:layout_width="fill_parent" android:layout_height="@dimen/details_summary_divider_line_height" android:layout_marginTop="@dimen/activity_details_summary_divider_vertical_margin" android:layout_marginBottom="@dimen/activity_details_summary_divider_vertical_margin" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/text_size_medium" android:textColor="@color/heart_rate_black" android:id="@id/primary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_alignParentLeft="true" android:layout_centerVertical="true" fitbit:font="proxima_nova_light" />
+        <ImageView android:id="@id/star" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/activity_list_star_right_margin" android:src="@drawable/star" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

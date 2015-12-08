@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/l_list_loading_footer" />
+    <TextView android:layout_gravity="center" android:id="@id/empty_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" fitbit:font="proxima_nova_regular" />
+    <LinearLayout android:orientation="vertical" android:id="@id/graph_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/v_details_header" />
+        <com.artfulbits.aiCharts.ChartView android:id="@id/chart" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="12.0dip" />
+    </LinearLayout>
+</FrameLayout>

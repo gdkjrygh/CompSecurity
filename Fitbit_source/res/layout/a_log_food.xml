@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/food_log_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.fitbit.food.ui.logging.views.AddedFoodLogView android:id="@id/added_logs_list" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View android:background="@color/settings_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <com.fitbit.food.ui.logging.views.FoodItemDescriptionView_ android:id="@id/food_desc" android:layout_marginBottom="5.0dip" style="@style/AddFoodLogView" />
+            <View android:background="@color/settings_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <RelativeLayout android:orientation="horizontal" style="@style/AddFoodLogView">
+                <TextView android:textSize="18.0sp" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:maxWidth="@dimen/food_log_serving_size_title_max_width" android:text="@string/food_logging_serving_size" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <com.fitbit.food.ui.logging.views.ServingSizeView_ android:id="@id/edit_serving_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/calories" android:layout_toRightOf="@id/title" android:layout_centerVertical="true" />
+                <TextView android:textSize="18.0sp" android:gravity="right" android:id="@id/calories" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="100 cals." android:lines="1" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/estimate_calories_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:background="@color/settings_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <LinearLayout android:orientation="vertical" style="@style/AddFoodLogView">
+                    <TextView android:textSize="18.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/estimate_cals_title" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/light_grey_color" android:id="@id/estimate_calories_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:text="@string/estimate_cals_desc" />
+                    <com.fitbit.food.ui.logging.views.EstimateCaloriesView_ android:id="@id/estimate_calories" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@color/settings_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <com.fitbit.food.ui.logging.views.ChooseMealTypeView android:id="@id/choose_meal_type_view" style="@style/AddFoodLogView" />
+            <View android:background="@color/settings_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" style="@style/AddFoodLogView">
+                <TextView android:textSize="18.0sp" android:id="@id/day" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/food_logging_date_title" android:lines="1" android:singleLine="true" android:layout_weight="1.0" />
+                <com.fitbit.food.ui.logging.views.FoodLogDateView android:id="@id/edit_date" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View android:background="@color/settings_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/create_btns_content" android:padding="5.0dip" style="@style/AddFoodLogView">
+                <com.fitbit.customui.ShadowButton android:id="@id/log_and_add_more_btn" android:background="@drawable/btn_log_more" android:layout_height="fill_parent" android:layout_marginRight="5.0dip" android:text="@string/log_and_add_more_btn" android:layout_weight="1.0" style="@style/AddLogButton" />
+                <com.fitbit.customui.ShadowButton android:textColor="@color/white" android:id="@id/log_this_btn" android:background="@drawable/btn_log_this" android:layout_height="fill_parent" android:text="@string/log_this_btn" android:layout_weight="1.0" style="@style/AddLogButton" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/edit_btns_content" android:padding="5.0dip" style="@style/AddFoodLogView">
+                <com.fitbit.customui.ShadowButton android:id="@id/delete_btn" android:background="@drawable/btn_log_more" android:layout_marginRight="10.0dip" android:text="@string/delete_log_btn" android:layout_weight="1.0" style="@style/AddLogButton" />
+                <com.fitbit.customui.ShadowButton android:textColor="@color/white" android:id="@id/save_btn" android:background="@drawable/btn_log_this" android:text="@string/save_log_btn" android:layout_weight="1.0" style="@style/AddLogButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include android:id="@id/blocker_view" layout="@layout/l_data_is_unavailable_view" />
+</FrameLayout>

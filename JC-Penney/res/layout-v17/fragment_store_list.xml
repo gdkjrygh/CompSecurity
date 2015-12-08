@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/header" android:background="@drawable/bg_textbox" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:background="@drawable/text" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_toLeftOf="@id/devider" android:layout_toStartOf="@id/devider">
+            <com.jcp.views.TypefaceEditText android:gravity="center_vertical" android:id="@id/search_view" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:hint="@string/search_hint" android:inputType="text" android:imeOptions="actionSearch" app:customTypeface="GOTHAM_BOOK_OTF" />
+            <RelativeLayout android:id="@id/location_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentEnd="true">
+                <ImageView android:id="@id/location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/target" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:contentDescription="@null" />
+                <ProgressBar android:id="@id/progress" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="@android:style/Widget.ProgressBar.Small" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <View android:id="@id/devider" android:background="#ffd5d5d5" android:layout_width="0.5dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/spinner" android:layout_alignBottom="@id/spinner" android:layout_toStartOf="@id/spinner" />
+        <Button android:textSize="14.0sp" android:textColor="#ff303030" android:id="@id/spinner" android:background="@drawable/filter_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/filter" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/header">
+        <ImageView android:id="@id/imgid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/zipcodemessage" android:layout_centerInParent="true" android:contentDescription="@null" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0" android:layout_below="@id/header">
+        <FrameLayout android:id="@id/map_caontainer" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="4.0" />
+        <com.jcp.views.PagingListView android:id="@id/store_list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:choiceMode="singleChoice" android:layout_weight="6.0" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/screen_spacing_regular" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing">
+            <TextView android:id="@id/WobNotificationSwitchLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wobs_notification_settings_explanation" android:layout_toLeftOf="@id/WobNotificationSettingsToggle" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/Font_CardListSmallStrong" />
+            <include android:id="@id/WobNotificationSettingsToggle" layout="@layout/checkbox_or_switch" />
+        </RelativeLayout>
+        <View style="@style/HorizontalDivider" />
+        <TextView android:id="@id/WobNotificationSubtext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_spacing" style="@style/Font_CardBodyTiny" />
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/cover_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <View android:id="@id/scrim" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="64.0dip" style="@style/AccountsSwitcher.SelectedAccountStyle">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/avatar" android:layout_width="36.0dip" android:layout_height="36.0dip" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/AccountsSwitcher.AccountDetailsStyle">
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/account_display_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" style="@style/AccountsSwitcher.AccountDisplayNameStyle" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/account_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+        </LinearLayout>
+        <com.google.android.gms.people.accountswitcherview.ExpanderView android:id="@id/account_list_button" android:layout_height="fill_parent" android:src="@drawable/expander_group" android:scaleType="center" android:contentDescription="@string/show_account_list" style="@style/AccountsSwitcher.SelectedAccountButtonStyle" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/water_adjust_top_padding">
+        <requestFocus />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.fitbit.customui.WaterEditText android:textAppearance="@style/WaterLoggingEditText" android:id="@id/water_edit_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/water_edit_text_padding" android:layout_marginRight="@dimen/water_edit_text_padding" android:layout_marginBottom="@dimen/water_adjust_bottom_padding" android:layout_weight="0.8" android:layout_marginStart="@dimen/water_edit_text_padding" fitbit:filterDecimalSymbols="false" fitbit:imeOptionsForKindleFire="actionNone" fitbit:forceNextImeOption="true" />
+        <Spinner android:id="@id/spinner" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/water_edit_text_padding" android:layout_weight="0.2" android:layout_toRightOf="@id/water_edit_text" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:padding="@dimen/water_title_margin_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:paddingLeft="@dimen/water_quick_add_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_quick_add" style="@style/GrayTitle" />
+        <com.fitbit.customui.WaterQuickAddSelector android:id="@id/water_quick_add_selector" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

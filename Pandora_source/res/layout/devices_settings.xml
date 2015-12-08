@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/blue_bar_layout" android:background="@color/settings_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:orientation="vertical" android:id="@id/settings_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textStyle="bold" android:paddingLeft="@dimen/settings_row_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/settings_row_margin" android:text="@string/pebble" style="@style/settings_text_large" />
+            <com.pandora.android.view.RoundLinearLayout android:id="@id/auto_share_row_layout" pandora:roundedCorners="none" style="@style/settings_row_style">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_row_margin" android:layout_marginRight="@dimen/settings_row_margin">
+                    <TextView android:id="@id/launch_pebble_app_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/launch_watch_app" android:layout_centerVertical="true" style="@style/settings_text_large" />
+                    <com.pandora.android.util.Switch android:id="@id/auto_launch_pebble_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/PSwitch" />
+                </RelativeLayout>
+            </com.pandora.android.view.RoundLinearLayout>
+            <TextView android:textColor="@color/settings_text_color_secondary" android:paddingLeft="@dimen/settings_row_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/settings_row_margin" android:text="@string/watch_app_launch_message" style="@style/settings_text_medium" />
+            <Button android:id="@id/install_watch_app" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_row_margin" android:layout_marginRight="@dimen/settings_row_margin" android:text="@string/install_watch_app" style="@style/PandoraDarkBlueButton" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

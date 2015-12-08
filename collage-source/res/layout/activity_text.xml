@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.HackyDrawerLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/cblue_toolbar_with_elevation" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/option_container" android:layout_width="fill_parent" android:layout_height="288.0dip" android:layout_alignParentBottom="true">
+                <com.google.samples.apps.iosched.ui.widget.SlidingTabLayout android:id="@id/text_editor_tabs_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <android.support.v4.view.HackyViewPager android:id="@id/text_editor_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+            <ScrollView android:id="@id/text_scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/option_container">
+                <LinearLayout android:gravity="center" android:background="@color/text_edit_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.cardinalblue.android.piccollage.view.PreviewTextView android:id="@id/text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_marginBottom="30.0dip" />
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v4.widget.HackyDrawerLayout>

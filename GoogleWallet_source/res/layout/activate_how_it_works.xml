@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/NextButton" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/HowPlasticCardWorkImage" android:paddingBottom="@dimen/gap_xlarge" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/img_illustration_usingwb" android:adjustViewBounds="true" android:contentDescription="@null" />
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/splash_screen_text_marign_left_right" android:paddingRight="@dimen/splash_screen_text_marign_left_right" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/gap_regular" android:text="@string/activate_how_it_works_header" style="@style/Font_WalletNoCardHeadlineNormal" />
+                <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/activate_how_it_works" style="@style/Font_NoCardBodyNormal" />
+                <LinearLayout android:orientation="vertical" android:id="@id/HowPlasticCardWorkBalanceSection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/gap_xlarge">
+                    <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/gap_small" android:text="@string/activate_plastic_card_current_balance" style="@style/Font_NoCardBodyNormal" />
+                    <TextView android:gravity="center_horizontal" android:id="@id/HowPlasticCardWorkBalanceAmount" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Font_MyWalletWalletBalanceHalfPositive" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/NextButton" android:layout_width="fill_parent" android:text="@string/button_next" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/KycQuestionProgress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/default_spacing" android:layout_alignParentLeft="true" style="@style/Text_Body" />
+                <TextView android:id="@id/KycTimeRemaining" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/default_spacing" android:layout_alignParentRight="true" style="@style/Text_Body" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" style="@style/Card">
+                <TextView android:id="@id/KycQuestionPrompt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/default_spacing" style="@style/Text_Subhead3" />
+                <LinearLayout android:orientation="vertical" android:id="@id/KycAnswersContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:id="@id/KycNextButton" android:text="@string/button_next" style="@style/FlatButton.Docked" />
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

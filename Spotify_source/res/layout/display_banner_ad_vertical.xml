@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/ad_banner_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ad_banner_content" android:background="@color/pasteTransparent" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="3.0" />
+        <TextView android:id="@id/ad_banner_sponsored_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ads_title_sponsored" style="?pasteTextAppearanceArticleLead" />
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.google.android.gms.ads.doubleclick.PublisherAdView android:id="@id/ad_view" android:layout_width="300.0dip" android:layout_height="250.0dip" ads:adSize="MEDIUM_RECTANGLE" ads:adUnitId="/6465052/android" />
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <Button android:id="@id/ad_banner_dismiss_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ads_banner_dismiss" style="?pasteButtonStyleInfoSmall" />
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="3.0" />
+    </LinearLayout>
+</FrameLayout>

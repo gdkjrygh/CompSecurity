@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/insetwhite_bg" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TableLayout android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TableRow>
+                <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/dark_grey" android:gravity="center_vertical" android:id="@id/txt_chart_title" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_column="0" android:layout_weight="1.0" style="@style/GrayTitle" />
+                <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/dark_grey" android:layout_gravity="right|center" android:id="@id/txt_chart_date_range" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="1" />
+                <ImageButton android:id="@id/btn_enlarge_graph" android:background="@null" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_enlarge_graph" android:contentDescription="@null" />
+            </TableRow>
+            <TableRow>
+                <TextView android:textSize="14.0dip" android:textStyle="normal" android:textColor="#ffaaaaaa" android:gravity="center_vertical" android:id="@id/txt_time_start" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_column="0" android:text="@string/time_format" android:layout_weight="1.0" style="@style/GrayTitle" />
+                <TextView android:textSize="14.0dip" android:textStyle="normal" android:textColor="#ffaaaaaa" android:layout_gravity="right|center" android:id="@id/txt_time_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="1" android:text="@string/time_format" />
+                <ImageButton android:background="@null" android:paddingLeft="10.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_enlarge_graph" android:contentDescription="@null" />
+            </TableRow>
+        </TableLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-10.0dip">
+            <ProgressBar android:layout_gravity="center" android:id="@android:id/progress" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" style="@android:style/Widget.ProgressBar.Small.Inverse" />
+            <com.fitbit.ui.SleepPatternView android:id="@id/sleep_pattern" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_marginTop="2.0dip" />
+            <com.fitbit.ui.AutoOrientedLinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:id="@id/container_legend" android:background="@drawable/legend_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="25.0dip">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <View android:background="@color/restless_color" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+                    <TextView android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_restless" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <View android:background="@color/awake_color" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+                    <TextView android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_awake" />
+                </LinearLayout>
+            </com.fitbit.ui.AutoOrientedLinearLayout>
+            <TextView android:textSize="14.0dip" android:layout_gravity="top|left|center" android:id="@id/txt_chart_upper" android:paddingLeft="8.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/GrayTitle" />
+            <TextView android:textSize="14.0dip" android:layout_gravity="bottom|left|center" android:id="@id/txt_chart_lower" android:paddingLeft="8.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/GrayTitle" />
+        </FrameLayout>
+    </LinearLayout>
+    <TextView android:layout_gravity="center" android:id="@id/txt_chart_empty" android:padding="0.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.0dip" android:text="@string/no_measurements" />
+</FrameLayout>

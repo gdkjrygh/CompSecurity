@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/aviary_main_iap_dialog_container" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="100.0" style="@style/AviaryWidget.IAPDialog.Container"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/aviary_main_iap_dialog" android:focusable="true" android:focusableInTouchMode="true" android:clickable="false" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="100.0" android:layout_weight="@integer/aviary_iap_dialog_width_weight" style="@style/AviaryWidget.IAPDialog.Main">
+        <View android:layout_width="1.0dip" android:layout_height="0.0dip" android:layout_weight="@integer/aviary_iap_dialog_margin_top_weight" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:baselineAligned="false" android:layout_weight="@integer/aviary_iap_dialog_height_weight">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AviaryWidget.IAPDialog.TopGrid" />
+            <ViewAnimator android:id="@id/aviary_view_animator" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="0.0dip" android:inAnimation="@anim/aviary_slide_in_right" android:outAnimation="@anim/aviary_slide_out_left" android:layout_weight="1.0" android:animateFirstView="false">
+                <include android:id="@id/aviary_iap_list" layout="@layout/aviary_iap_dialog_list" />
+                <include android:id="@id/aviary_iap_detail" layout="@layout/aviary_iap_dialog_detail" />
+            </ViewAnimator>
+            <RelativeLayout android:background="@drawable/aviary_iap_grid_background" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

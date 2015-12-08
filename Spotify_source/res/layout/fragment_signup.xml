@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.spotify.mobile.android.service.flow.login.ReorderableLinearLayout android:orientation="vertical" android:id="@id/reordering_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?pasteActionBarTitleTextAppearance" android:gravity="center" android:id="@id/login_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" android:text="@string/email_signup_header" />
+        <RelativeLayout android:orientation="horizontal" android:id="@id/facebook_button" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CatLoginButton.Facebook">
+            <TextView android:id="@id/facebook_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/signup_button_facebook" android:layout_centerInParent="true" style="@style/CatFacebookButtonText" />
+            <com.spotify.android.paste.widget.SpotifyIconView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" app:iconColor="@color/cat_white" app:iconType="icon_facebook_32" />
+        </RelativeLayout>
+        <TextView android:textAppearance="?pasteTextAppearanceSecondary" android:gravity="center" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="40.0dip" android:text="@string/signup_v1_or_signup" />
+        <LinearLayout android:orientation="vertical" android:background="@color/cat_grayscale_12" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CatLoginFieldGroup">
+                <com.spotify.android.paste.widget.SpotifyIconView android:layout_width="wrap_content" android:layout_height="fill_parent" app:iconType="icon_email_16" style="@style/CatLoginFieldIcon" />
+                <EditText android:id="@id/email_text" android:layout_width="0.0px" android:layout_height="wrap_content" android:hint="@string/email_signup_email_hint" android:cursorVisible="true" android:layout_weight="1.0" android:inputType="textEmailAddress" android:imeOptions="actionNext" style="@style/CatLoginFieldInput" />
+            </LinearLayout>
+            <View android:background="@color/cat_grayscale_20" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CatLoginFieldGroup">
+                <com.spotify.android.paste.widget.SpotifyIconView android:layout_width="wrap_content" android:layout_height="fill_parent" app:iconType="icon_locked_16" style="@style/CatLoginFieldIcon" />
+                <EditText android:id="@id/password_text" android:layout_width="0.0px" android:layout_height="wrap_content" android:hint="@string/email_signup_password_hint" android:layout_weight="1.0" android:inputType="textNoSuggestions|textPassword" android:imeOptions="actionDone" style="@style/CatLoginFieldInput" />
+            </LinearLayout>
+            <View android:background="@color/cat_grayscale_20" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CatLoginFieldGroup">
+                <com.spotify.android.paste.widget.SpotifyIconView android:layout_width="wrap_content" android:layout_height="fill_parent" app:iconType="icon_user_16" style="@style/CatLoginFieldIcon" />
+                <AutoCompleteTextView android:id="@id/username_text" android:layout_width="0.0px" android:layout_height="wrap_content" android:hint="@string/email_signup_username_hint" android:layout_weight="1.0" android:inputType="textAutoComplete" android:imeOptions="actionNext" style="@style/CatLoginFieldInput" />
+            </LinearLayout>
+            <View android:background="@color/cat_grayscale_20" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CatLoginFieldGroup">
+                <com.spotify.android.paste.widget.SpotifyIconView android:layout_width="wrap_content" android:layout_height="fill_parent" app:iconType="icon_released_16" style="@style/CatLoginFieldIcon" />
+                <EditText android:id="@id/birthdate_text" android:focusable="true" android:layout_width="0.0px" android:layout_height="wrap_content" android:hint="@string/signup_v1_birth_date_hint" android:layout_weight="1.0" android:inputType="date" android:imeOptions="actionNext" style="@style/CatLoginFieldInput" />
+            </LinearLayout>
+            <View android:background="@color/cat_grayscale_20" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CatLoginFieldGroup">
+                <com.spotify.android.paste.widget.SpotifyIconView android:layout_width="wrap_content" android:layout_height="fill_parent" app:iconType="icon_follow_16" style="@style/CatLoginFieldIcon" />
+                <TextView android:gravity="center_vertical" android:id="@id/gender_picker" android:layout_width="0.0px" android:layout_height="wrap_content" android:hint="@string/choose_username_gender_hint" android:layout_weight="1.0" style="@style/CatLoginFieldInput" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:layout_gravity="center" android:id="@id/signup_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/email_signup_header" style="@style/CatLoginButton.Primary" />
+        <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/progress_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/signup_padding" />
+        <TextView android:textAppearance="?pasteTextAppearanceSecondary" android:gravity="bottom|center" android:id="@id/signup_terms" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/email_signup_parent_offset" android:layout_weight="1.0" />
+    </com.spotify.mobile.android.service.flow.login.ReorderableLinearLayout>
+</ScrollView>

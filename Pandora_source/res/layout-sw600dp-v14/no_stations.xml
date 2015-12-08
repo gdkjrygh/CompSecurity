@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/stationlist_empty_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <com.pandora.android.view.BannerImageView android:layout_gravity="center" android:id="@id/background_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/no_stations_image" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/no_stations_container" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:isScrollContainer="false">
+        <TextView android:textSize="@dimen/no_stations_title_textSize" android:textStyle="normal" android:textColor="@color/no_stations_title_text_color" android:gravity="center" android:id="@id/no_stations_title_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/no_stations_title" android:maxLines="2" android:lines="2" android:singleLine="false" />
+        <com.pandora.android.util.SearchBox android:layout_gravity="center" android:id="@id/no_stations_search_box" android:paddingTop="8.0dip" android:layout_width="@dimen/no_stations_width" android:layout_height="wrap_content" pandora:hintTextSizeSmall="@bool/displayHintTextSizeSmall" />
+        <com.pandora.android.util.SearchMusicLayout android:layout_gravity="center" android:id="@id/search_result_list_layout" android:layout_width="@dimen/no_stations_width" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" />
+    </LinearLayout>
+</FrameLayout>

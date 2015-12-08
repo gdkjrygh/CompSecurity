@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:paste="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/devices_list_header" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/DeviceFragmentHeader">
+        <com.spotify.android.paste.widget.SpotifyIconView android:layout_gravity="center_horizontal" android:id="@id/devices_list_header_icon" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_margin="8.0dip" paste:iconType="icon_spotify_connect_32" />
+        <TextView android:textAppearance="?pasteTextAppearanceHeading" android:gravity="center_horizontal" android:id="@id/devices_list_header_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/connect_onboarding_picker_header_title" />
+        <ImageView android:id="@id/devices_list_header_img" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:src="@drawable/connect_header_img" />
+        <TextView android:gravity="center_horizontal" android:id="@id/devices_list_header_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="30.0dip" android:text="@string/connect_picker_footer" />
+        <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+</FrameLayout>

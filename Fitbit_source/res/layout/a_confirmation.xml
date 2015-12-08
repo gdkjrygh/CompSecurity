@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/gradient_dark_green" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:layout_above="@id/buttons_panel" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:src="@drawable/onboarding_no_network" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/confirmation_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/china_confirmation_network_message" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/white_transparent" android:gravity="center" android:id="@id/confirmation_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/china_confirmation_terms_and_conditions" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/buttons_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip" android:layout_marginBottom="30.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/dont_show_again" android:paddingLeft="15.0dip" android:paddingRight="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip">
+            <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:gravity="center_vertical" android:layout_width="0.0px" android:layout_height="fill_parent" android:text="@string/china_confirmation_dialog_checkbox_title" android:layout_weight="1.0" />
+            <CheckBox android:id="@id/checkbox_dont_show_again" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" />
+        </LinearLayout>
+        <Button android:textStyle="bold" android:textColor="@color/white_transparent" android:id="@id/button_dont_allow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" android:text="@string/china_confirmation_dialog_dont_allow_title" />
+        <Button android:textColorLink="@color/device_panel_tracker_name_color" android:id="@id/button_allow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ok" />
+    </LinearLayout>
+</RelativeLayout>

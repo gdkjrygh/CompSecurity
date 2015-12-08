@@ -1,0 +1,44 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.bumptech.glide.load.b.b;
+
+import android.content.Context;
+import android.net.Uri;
+import com.bumptech.glide.load.b.c;
+import com.bumptech.glide.load.b.l;
+import com.bumptech.glide.load.b.m;
+import com.bumptech.glide.load.b.p;
+import java.io.InputStream;
+
+// Referenced classes of package com.bumptech.glide.load.b.b:
+//            d
+
+public class f extends p
+    implements d
+{
+    public static class a
+        implements m
+    {
+
+        public l a(Context context, c c1)
+        {
+            return new f(c1.a(android/net/Uri, java/io/InputStream));
+        }
+
+        public void a()
+        {
+        }
+
+        public a()
+        {
+        }
+    }
+
+
+    public f(l l)
+    {
+        super(l);
+    }
+}

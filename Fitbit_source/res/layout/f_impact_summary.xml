@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/v_details_header" />
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/l_list_loading_footer" />
+    <TextView android:gravity="center" android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/can_not_view_offline" fitbit:font="proxima_nova_semibold" />
+</LinearLayout>

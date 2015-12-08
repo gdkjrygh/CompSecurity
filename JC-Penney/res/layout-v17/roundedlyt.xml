@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/header" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/search_suggestion_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/rectangle_shape" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.jcp.views.TypefaceEditText android:textSize="19.0sp" android:textColor="#ff999999" android:id="@id/search_edit" android:background="@drawable/text_box" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/search" android:maxLines="1" android:singleLine="true" android:digits="abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ " android:layout_weight="1.0" android:inputType="text" android:imeOptions="actionDone" app:customTypeface="GOTHAM_BOOK" />
+            <ImageButton android:id="@id/search_clear_icon" android:background="@null" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/close_black" />
+        </LinearLayout>
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ListView android:id="@id/autocomplete_tv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/search_default_layout" android:background="@drawable/rectangle_shape" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/search" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/search_icon" android:layout_marginEnd="5.0dip" />
+        <com.jcp.views.TypefaceTextView android:textSize="19.0sp" android:textColor="#ff999999" android:gravity="left|center" android:id="@id/search_tv" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/search" android:singleLine="true" android:layout_weight="1.0" app:customTypeface="GOTHAM_BOOK" />
+        <ImageView android:layout_gravity="center" android:id="@id/scan" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/camera" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <com.pandora.android.util.SearchBox android:id="@id/search_box" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" pandora:hintTextSizeSmall="@bool/is_tablet" pandora:displaySearchIcon="@bool/is_tablet" />
+    <LinearLayout android:orientation="vertical" android:id="@id/no_results_list_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/search_result_list_layout" android:layout_below="@id/search_box">
+        <ListView android:id="@android:id/list" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="@android:color/white" android:headerDividersEnabled="true" android:overScrollFooter="@null" style="?attr/listDividerStyle" />
+        <include layout="@layout/horizontal_line" />
+    </LinearLayout>
+    <com.pandora.android.util.SearchMusicLayout android:id="@id/search_result_list_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/search_box" android:overScrollFooter="@null" />
+</RelativeLayout>

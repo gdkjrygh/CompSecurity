@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/thumb_history_progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_centerInParent="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/thumb_history_empty_state" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:text="@string/thumbed_up_tracks" style="?attr/listHeaderRowStyle" />
+            <TextView android:textColor="@color/station_personalization_cell_subtitle" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/thumbed_up_empty_msg" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:text="@string/thumbed_down_tracks" style="?attr/listHeaderRowStyle" />
+            <TextView android:textColor="@color/station_personalization_cell_subtitle" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/thumbed_down_empty_msg" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

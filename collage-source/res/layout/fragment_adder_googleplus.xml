@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher android:id="@id/viewswitcher" android:background="@color/dark_gray_solid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/photo_adder_hint_container" android:background="@color/photo_adder_item_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:id="@id/progressbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="?android:attr/progressBarStyleLarge" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:id="@id/hint_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/im_connect_google_dark" />
+            <Button android:id="@id/hint_action" android:layout_marginTop="30.0dip" android:text="@string/connect_to_google" style="@style/CblueButtonBig.Red" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ListView android:id="@android:id/list" android:paddingTop="12.0dip" android:fadingEdge="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</ViewSwitcher>

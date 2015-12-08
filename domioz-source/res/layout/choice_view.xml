@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="left" android:id="@id/section_view_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:text="@string/textview" style="@style/SectionLabel" />
+    <RelativeLayout android:id="@id/choice_container" android:background="@drawable/iphone_table_single" android:paddingLeft="10.0dip" android:paddingTop="8.0dip" android:paddingRight="10.0dip" android:paddingBottom="8.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/section_view_label">
+        <ImageButton android:id="@id/choice_view_image" android:background="@null" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="5.0dip" android:paddingBottom="10.0dip" android:layout_width="@dimen/menu_product_image_width" android:layout_height="@dimen/menu_product_image_height" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:onClick="onProductPopupClick" />
+        <TextView android:id="@id/choice_view_label" android:layout_marginTop="5.0dip" android:layout_toRightOf="@id/choice_view_image" android:layout_alignParentRight="true" style="@style/ListItemLabel" />
+        <TextView android:id="@id/choice_view_description" android:visibility="gone" android:layout_toRightOf="@id/choice_view_image" android:layout_below="@id/choice_view_label" android:layout_alignParentRight="true" style="@style/ListItemDescription" />
+        <LinearLayout android:id="@id/choice_view_glass" android:background="@drawable/box_white_glass" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="5.0dip" android:layout_marginBottom="5.0dip" android:layout_alignLeft="@id/choice_view_image" android:layout_alignBottom="@id/choice_view_image">
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_menu_search" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

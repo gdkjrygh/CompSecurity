@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/inner" android:padding="?EoCPaddingSixTen" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="?EoCLayoutHeightSixTen">
+        <FrameLayout android:id="@id/circles_holder" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?EoCCirclesMarginLeftSixTen" android:layout_alignParentLeft="true">
+            <View android:layout_gravity="center" android:background="@drawable/end_of_challenge_circle" android:layout_width="?EoCBigCircleSizeSixTen" android:layout_height="?EoCBigCircleSizeSixTen" />
+            <View android:layout_gravity="center" android:background="@drawable/end_of_challenge_circle" android:layout_width="?EoCMedCircleSizeSixTen" android:layout_height="?EoCMedCircleSizeSixTen" />
+            <View android:layout_gravity="center" android:background="@drawable/end_of_challenge_circle" android:layout_width="?EoCSmallCircleSizeSixTen" android:layout_height="?EoCSmallCircleSizeSixTen" />
+        </FrameLayout>
+        <TextView android:textSize="?EoCTextSizeSixTen" android:gravity="center" android:id="@id/place" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?EoCPlaceMarginLeftSixTen" android:minWidth="?EoCPlaceMinWidthSixTen" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <com.fitbit.ui.loadable.CircleLoadablePicassoImageView android:id="@id/profile_picture" android:layout_width="?EoCProfPicSizeSixTen" android:layout_height="?EoCProfPicSizeSixTen" android:layout_marginLeft="?EoCProfPicMarginSixTen" android:layout_marginRight="?EoCProfPicMarginSixTen" android:layout_toRightOf="@id/place" android:layout_centerVertical="true" />
+        <FrameLayout android:id="@id/progress_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/score" android:layout_toRightOf="@id/profile_picture" android:layout_centerVertical="true">
+            <com.fitbit.challenges.ui.progress.ProgressChart android:id="@id/challenge_progress" android:layout_width="fill_parent" android:layout_height="?EoCProgressBarHeight" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/shimmer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?EoCShimmerMarginLeft">
+                <ImageView android:layout_width="wrap_content" android:layout_height="?EoCProgressBarHeight" android:layout_marginLeft="?EoCProgressBarInitialMargin" android:src="@drawable/shimmerwide" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="?EoCProgressBarHeight" android:layout_marginLeft="?EoCProgressBarSmallMargin" android:src="@drawable/shimmermed" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="?EoCProgressBarHeight" android:layout_marginLeft="?EoCProgressBarMargin" android:src="@drawable/shimmerthin" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="right|center" android:id="@id/star" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="?EoCGoalStarHeight" android:layout_marginRight="?EoCGoalStarMarginRight" android:src="@drawable/goalstar" />
+            <TextView android:textSize="?EoCTextSizeSixTen" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_half_step" android:singleLine="true" />
+        </FrameLayout>
+        <TextView android:textSize="?EoCTextSizeSixTen" android:textColor="@color/white" android:id="@id/score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?EoCPlaceMarginLeftSixTen" android:layout_marginRight="?EoCPlaceMarginLeftSixTen" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Fitbit.Onboarding.TextView" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/fancy_stars" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?EoCFancyStarsMarginLeftSixTen" android:layout_marginTop="?EoCFancyStarsMarginTopSixTen">
+        <ImageView android:layout_width="?EoCCrossStarWidthSixTen" android:layout_height="?EoCCrossStarHeightSixTen" android:layout_marginTop="?EoCCrossStarMarginTopSixTen" android:src="@drawable/crossstar" />
+        <ImageView android:layout_width="?EoCAsteriskStarWidthSixTen" android:layout_height="?EoCAsteriskStarHeightSixTen" android:layout_marginLeft="?EoCAsteriskStarMarginLeftSixTen" android:layout_marginTop="?EoCAsteriskStarMarginTopSixTen" android:src="@drawable/asteriskstar" />
+        <ImageView android:layout_width="?EoCFancyStarWidthSixTen" android:layout_height="?EoCFancyStarHeightSixTen" android:layout_marginLeft="?EoCDiamondStarMarginLeftSixTen" android:src="@drawable/end_of_challenge_star" />
+    </LinearLayout>
+</LinearLayout>

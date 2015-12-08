@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/daydream_main_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pandora.android.daydream.LightshowView android:id="@id/daydream_lightshow" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/daydream_background" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/empty_art" android:scaleType="centerCrop" />
+    <ImageView android:id="@id/daydream_sliding_background" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/empty_art" android:scaleType="centerCrop" />
+    <ViewStub android:id="@id/stub_daydream_inactive" android:layout="@layout/daydream_inactive" android:inflatedId="@id/daydream_inactive_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/stub_daydream_active" android:layout="@layout/daydream_active" android:inflatedId="@id/daydream_active_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:id="@id/daydream_toast_mimic" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/UndoBar">
+        <TextView android:id="@id/daydream_toast_mimic_message" android:padding="5.0dip" style="@style/UndoBarMessage" />
+    </LinearLayout>
+</RelativeLayout>

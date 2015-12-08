@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.Toolbar android:id="@id/tool_bar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:titleTextAppearance="@style/CBlue.TextAppearance.Toolbar.Title" />
+        <RelativeLayout android:id="@id/rootView" android:background="@color/darker_gray_solid" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.cardinalblue.android.piccollage.view.PhotoProtoView android:id="@id/stageView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_centerInParent="true" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0" android:layout_alignLeft="@id/stageView" android:layout_alignTop="@id/stageView" android:layout_alignRight="@id/stageView" android:layout_alignBottom="@id/stageView" android:layout_centerHorizontal="true">
+                <Space android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="0.4" />
+                <TextView android:textSize="20.0sp" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:id="@id/txtTapAnywhere" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/tap_anywhere_to_add_a_photo" android:maxLines="3" />
+            </LinearLayout>
+            <ImageButton android:id="@id/undoButton" android:background="@android:color/transparent" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bn_editor_del_0" android:layout_alignTop="@id/stageView" android:layout_alignParentRight="true" />
+            <ImageButton android:id="@id/frameButton" android:background="@android:color/transparent" android:paddingLeft="@dimen/main_btn_padding" android:paddingRight="@dimen/main_btn_padding" android:paddingBottom="@dimen/main_btn_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/selector_frame" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+            <ImageButton android:id="@id/addPhotoButton" android:background="@android:color/transparent" android:paddingLeft="@dimen/main_btn_padding" android:paddingRight="@dimen/main_btn_padding" android:paddingBottom="@dimen/main_btn_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/selector_add" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/echoCompletedButton" android:background="@drawable/bn_editor_post" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/main_btn_padding" android:layout_marginBottom="8.0dip" android:text="@string/done" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/content_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/editor_help_stub" android:layout="@layout/editor_help_overlay" android:inflatedId="@id/editor_help" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

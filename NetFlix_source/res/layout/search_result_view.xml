@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/match">
+        <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/search_result_img" android:layout_width="@dimen/search_result_boxart_width" android:layout_height="@dimen/search_result_boxart_height" android:layout_marginRight="@dimen/text_padding" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignParentLeft="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/search_result_img" android:layout_centerVertical="true">
+            <TextView android:ellipsize="end" android:id="@id/search_result_title" android:layout_marginLeft="@dimen/content_padding" android:maxLines="3" style="@style/PrimaryText.Medium" />
+            <TextView android:id="@id/search_result_rating" android:background="@color/search_result_rating_text_bg" android:layout_marginLeft="@dimen/content_padding" style="@style/VideoRatingText" />
+        </LinearLayout>
+        <View android:id="@id/search_result_vertical_divider" android:background="@color/search_results_divider_bg" android:layout_height="@dimen/search_result_boxart_height" android:layout_alignParentRight="true" style="@style/VerticalDivider" />
+        <View android:background="@color/search_results_divider_bg" android:layout_below="@id/search_result_vertical_divider" style="@style/HorizontalDivider" />
+    </RelativeLayout>
+</merge>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:visibility="visible" style="?attr/toolbarStyle" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0" android:layout_below="@id/toolbar">
+        <com.google.android.apps.wallet.widgets.dynamicwidth.DynamicWidthFrameLayout android:id="@id/ChildActivityContainer" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ViewStub android:id="@id/memorymonitor_stub" android:layout="@layout/memory_monitor" android:inflatedId="@id/memorymonitor_widget" android:layout_width="60.0dip" android:layout_height="180.0dip" android:layout_alignParentRight="true" />
+    <com.google.android.apps.wallet.widgets.progressspinner.ProgressSpinnerView android:id="@id/FullScreenProgressSpinner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

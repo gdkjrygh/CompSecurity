@@ -1,0 +1,158 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.gms.drive;
+
+import com.google.android.gms.common.config.GservicesValue;
+import java.util.concurrent.TimeUnit;
+
+public final class G
+{
+
+    public static final GservicesValue actionQueueBackoffInitWaitMillis;
+    public static final GservicesValue actionQueueBackoffMaxWaitMillis;
+    public static final GservicesValue actionQueueBackoffWaitGrowthFactor = GservicesValue.value("drive:operation_queue_backoff_wait_growth_factor", Float.valueOf(2.0F));
+    public static final GservicesValue actionQueueMaxAttemptCount = GservicesValue.value("drive:operation_queue_max_attempt_count", Integer.valueOf(6));
+    public static final GservicesValue actionQueueNumThreads = GservicesValue.value("drive:action_queue_num_threads", Integer.valueOf(4));
+    public static final GservicesValue actionQueueNumThreadsNonUploads = GservicesValue.value("drive:action_queue_num_threads_non_uploads", Integer.valueOf(1));
+    public static final GservicesValue actionQueueRateLimitedRetryCheckIntervalMs;
+    public static final GservicesValue activityLevelHighMinCountThreshold = GservicesValue.value("drive:activity_level_high_min_count_threshold", Integer.valueOf(2));
+    public static final GservicesValue activityLevelHighPushNotificationSyncIntervalMs;
+    public static final GservicesValue activityLevelHighWindowSizeMs;
+    public static final GservicesValue activityLevelLowMinCountThreshold = GservicesValue.value("drive:activity_level_low_min_count_threshold", Integer.valueOf(1));
+    public static final GservicesValue activityLevelLowPushNotificationSyncIntervalMs;
+    public static final GservicesValue activityLevelLowWindowSizeMs;
+    public static final GservicesValue alwaysSendModifiedDate = GservicesValue.value("drive:always_send_modified_date", true);
+    public static final GservicesValue apiaryTraceToken = GservicesValue.value("drive:apiary_trace_token", "");
+    public static final GservicesValue appAuthCacheTimeMs;
+    public static final GservicesValue autoContentSyncIntervalMillis;
+    public static final GservicesValue binaryDiffUploadChunksizeScaling = GservicesValue.value("drive:binary_diff_upload_chunksize_scaling", Double.valueOf(0.25D));
+    public static final GservicesValue binaryDiffUploadMaximumChunksize = GservicesValue.value("drive:binary_diff_upload_max_chunksize", Integer.valueOf(16384));
+    public static final GservicesValue binaryDiffUploadMinimumChunksize = GservicesValue.value("drive:binary_diff_upload_min_chunksize", Integer.valueOf(32));
+    public static final GservicesValue binaryDiffUploadMinimumFilesize = GservicesValue.value("drive:binary_diff_upload_min_filesize", Integer.valueOf(170));
+    public static final GservicesValue changelogSyncLimit = GservicesValue.value("drive:changelog_sync_limit", Integer.valueOf(2499));
+    public static final GservicesValue cleanupActionMinIntervalMillis;
+    public static final GservicesValue connectivityTypeForApiTests = GservicesValue.value("drive:connectivity_type_for_api_tests", null);
+    public static final GservicesValue contentCacheInternalMaxBytes = GservicesValue.value("drive:content_cache_internal_max_bytes", Long.valueOf(0x5f5e100L));
+    public static final GservicesValue contentCacheInternalMaxTotalSpaceFraction = GservicesValue.value("drive:content_cache_internal_max_total_space_fraction", Float.valueOf(0.05F));
+    public static final GservicesValue contentCacheInternalMinFreeSpaceBytes = GservicesValue.value("drive:content_cache_internal_min_free_space_bytes", Long.valueOf(0x1312d00L));
+    public static final GservicesValue contentCacheSharedMaxBytes = GservicesValue.value("drive:content_cache_shared_max_bytes", Long.valueOf(0x5f5e100L));
+    public static final GservicesValue contentCacheSharedMaxTotalSpaceFraction = GservicesValue.value("drive:content_cache_shared_max_total_space_fraction", Float.valueOf(0.05F));
+    public static final GservicesValue contentInternalMaxBytes = GservicesValue.value("drive:content_internal_max_bytes", Long.valueOf(0xbebc200L));
+    public static final GservicesValue contentInternalMaxTotalSpaceFraction = GservicesValue.value("drive:content_internal_max_total_space_fraction", Float.valueOf(0.25F));
+    public static final GservicesValue contentInternalMinFreeSpaceBytes = GservicesValue.value("drive:content_internal_min_free_space_bytes", Long.valueOf(0x500000L));
+    public static final GservicesValue contentMaintenanceMinIntervalMillis;
+    public static final GservicesValue controlProgressApiWhiteList = GservicesValue.value("drive:control_progress_api_whitelist", "");
+    public static final GservicesValue deviceStatusReportMinIntervalMillis;
+    public static final GservicesValue disableFeatures = GservicesValue.value("drive:disable_features_manchego", "");
+    public static final GservicesValue disableSync = GservicesValue.value("drive:disable_sync", false);
+    public static final GservicesValue enableApiaryBackendTraces = GservicesValue.value("drive:enable_apiary_backend_traces", true);
+    public static final GservicesValue enableDatabaseTransactionCounterCheckMinApi = GservicesValue.value("drive:enable_db_transaction_counter_check_min_api", Integer.valueOf(0));
+    public static final GservicesValue enableFolderColorInFilePicker = GservicesValue.value("drive:enable_folder_color_in_file_picker", false);
+    public static final GservicesValue enableFolderColorSync = GservicesValue.value("drive:enable_folder_color_sync", true);
+    public static final GservicesValue enableFolderColorUpdate = GservicesValue.value("drive:enable_folder_color_update", true);
+    public static final GservicesValue enableOpenFileDialogSearch = GservicesValue.value("drive:enable_open_file_dialog_search", true);
+    public static final GservicesValue enableOpenFileDialogSortOptions = GservicesValue.value("drive:enable_open_file_dialog_sort_options", true);
+    public static final GservicesValue enablePermissions = GservicesValue.value("drive:enable_permission", false);
+    public static final GservicesValue enablePushNotification = GservicesValue.value("drive:enable_push_notification", true);
+    public static final GservicesValue enableQueryResultProjection = GservicesValue.value("drive:enable_query_result_projection", true);
+    public static final GservicesValue enableSyncMoreImplicitly = GservicesValue.value("drive:enable_sync_more_implicitly", true);
+    public static final GservicesValue eventRouterIdleTimeoutMillis;
+    public static final GservicesValue folderColorDefaultColor = GservicesValue.value("drive:folder_color_default_color", "#8f8f8f");
+    public static final GservicesValue forceFullSyncLevel = GservicesValue.value("drive:force_full_sync_level", Long.valueOf(0L));
+    public static final GservicesValue limiterDefaultMaxTokens = GservicesValue.value("drive:limiter_default_max_tokens", Integer.valueOf(10));
+    public static final GservicesValue limiterDefaultTokenPeriodMillis = GservicesValue.value("drive:limiter_token_period_millis", Long.valueOf(10L));
+    public static final GservicesValue maxConcurrentDownloads = GservicesValue.value("drive:max_concurrent_downloads", Integer.valueOf(5));
+    public static final GservicesValue maxConcurrentPinDownloads = GservicesValue.value("drive:max_concurrent_pin_downloads", Integer.valueOf(4));
+    public static final GservicesValue maxDescriptionCodePoints = GservicesValue.value("drive:max_description_code_points", Integer.valueOf(0x186a0));
+    public static final GservicesValue maxIncompleteDownloads = GservicesValue.value("drive:max_incomplete_downloads", Integer.valueOf(10));
+    public static final GservicesValue maxMimeTypeCodePoints = GservicesValue.value("drive:max_mime_type_code_points", Integer.valueOf(0x186a0));
+    public static final GservicesValue maxPinDownloadRetries = GservicesValue.value("drive:max_pin_download_retries", Integer.valueOf(5));
+    public static final GservicesValue maxTitleCodePoints = GservicesValue.value("drive:max_title_code_points", Integer.valueOf(0x186a0));
+    public static final GservicesValue metricsLoggingMode = GservicesValue.value("drive:metrics_logging_mode", Integer.valueOf(0));
+    public static final GservicesValue mimeTypePattern = GservicesValue.value("drive:mime_type_pattern", ".+");
+    public static final GservicesValue minNumEntriesToDisableImplicitSyncMore = GservicesValue.value("drive:min_num_entries_to_disable_implicit_sync_more", Integer.valueOf(1000));
+    public static final GservicesValue permissionsApiWhiteList = GservicesValue.value("drive:permission_api_whitelist", "383787855441");
+    public static final GservicesValue persistedEventAttempts = GservicesValue.value("drive:persisted_event_attempts", Integer.valueOf(3));
+    public static final GservicesValue persistedEventRetryIntervalMillis;
+    public static final GservicesValue persistedEventSnoozeGrowthBase = GservicesValue.value("drive:persisted_event_snooze_growth_base", Integer.valueOf(2));
+    public static final GservicesValue persistedEventSnoozeIntervalMillis;
+    public static final GservicesValue propagateFileScope = GservicesValue.value("drive:propagate_file_scope", false);
+    public static final GservicesValue realtimeCacheDurationMillis;
+    public static final GservicesValue realtimeCompactionMutationThreshold = GservicesValue.value("drive:realtime_compaction_mutation_threshold", Integer.valueOf(100));
+    public static final GservicesValue realtimeEnableCaching = GservicesValue.value("drive:realtime_enable_caching", true);
+    public static final GservicesValue realtimeOldestSupportedClientLib = GservicesValue.value("drive:realtime_oldest_supported_client_lib_version", Integer.valueOf(0x5b8d80));
+    public static final GservicesValue realtimeOldestSupportedGMSCoreVersion = GservicesValue.value("drive:realtime_oldest_supported_gmscore_version", Integer.valueOf(0x5b8d80));
+    public static final GservicesValue realtimePersistUndo = GservicesValue.value("drive:realtime_persist_undo", false);
+    public static final GservicesValue realtimeServerUrl = GservicesValue.value("drive:realtime_server_url", "https://drive.google.com/otservice");
+    public static final GservicesValue requestPhotosSpaceWhenSyncing = GservicesValue.value("drive:request_photos_space_when_syncing", true);
+    public static final GservicesValue resetOnRebootDelayMillis;
+    public static final GservicesValue searchMaxFeedsToRetrieve = GservicesValue.value("drive:search_max_feeds_to_retrieve", Integer.valueOf(1));
+    public static final GservicesValue searchQueryCacheExpirationMs;
+    public static final GservicesValue serverDefaultTimeoutMs = GservicesValue.value("drive:server_default_timeout_ms", Integer.valueOf(2500));
+    public static final GservicesValue serverJobset = GservicesValue.value("drive:server_jobset", "prod");
+    public static final GservicesValue serverUrl = GservicesValue.value("drive:server_url", "https://www.googleapis.com");
+    public static final GservicesValue singletonLocalIdVersion = GservicesValue.value("drive:singleton_local_id_version", "");
+    public static final GservicesValue sleepAfterRecursiveApplyOnServerMillis;
+    public static final GservicesValue streamingApiWhiteList = GservicesValue.value("drive:streaming_api_whitelist", "");
+    public static final GservicesValue syncDatabaseYieldBackoffMillis = GservicesValue.value("drive:sync_database_yield_backoff_millis", Long.valueOf(600L));
+    public static final GservicesValue syncDownDescriptionLengthLimit = GservicesValue.value("drive:sync_down_description_length_limit", Integer.valueOf(0x186a0));
+    public static final GservicesValue syncDownMimeTypeLengthLimit = GservicesValue.value("drive:sync_down_mime_type_length_limit", Integer.valueOf(0x186a0));
+    public static final GservicesValue syncDownTitleLengthLimit = GservicesValue.value("drive:sync_down_title_length_limit", Integer.valueOf(0x186a0));
+    public static final GservicesValue syncMaxFeedsAppData = GservicesValue.value("drive:sync_max_feeds_app_data", Integer.valueOf(40));
+    public static final GservicesValue syncMaxFeedsDriveFiles = GservicesValue.value("drive:sync_max_feeds_drive_files", Integer.valueOf(28));
+    public static final GservicesValue syncMaxFeedsDriveFolders = GservicesValue.value("drive:sync_max_feeds_drive_folders", Integer.valueOf(10));
+    public static final GservicesValue syncMaxFeedsPhotos = GservicesValue.value("drive:sync_max_feeds_photos", Integer.valueOf(2));
+    public static final GservicesValue syncMaxNumDatabaseBackoffAttempts = GservicesValue.value("drive:sync_max_num_backoff", Integer.valueOf(2));
+    public static final GservicesValue syncMoreMaxFeedsToRetrieve = GservicesValue.value("drive:sync_more_max_feeds_to_retrieve", Integer.valueOf(1));
+    public static final GservicesValue syncSchedulerFirstPartyRateLimitMaxStoredTokens = GservicesValue.value("drive:sync_scheduler_first_party_rate_limit_max_stored_tokens", Integer.valueOf(20));
+    public static final GservicesValue syncSchedulerFirstPartyRateLimitTokenPeriodMillis;
+    public static final GservicesValue syncSchedulerMaxConcurrent = GservicesValue.value("drive:sync_scheduler_max_concurrent", Integer.valueOf(1));
+    public static final GservicesValue syncSchedulerOnConnectRateLimitMaxStoredTokens = GservicesValue.value("drive:sync_scheduler_on_connect_rate_limit_max_stored_tokens", Integer.valueOf(5));
+    public static final GservicesValue syncSchedulerOnConnectRateLimitTokenPeriodMillis;
+    public static final GservicesValue syncSchedulerRateLimitMaxStoredTokens = GservicesValue.value("drive:sync_scheduler_rate_limit_max_stored_tokens", Integer.valueOf(5));
+    public static final GservicesValue syncSchedulerRateLimitTokenPeriodMillis;
+    public static final GservicesValue syncSchedulerWakelockTimeoutSeconds;
+    public static final GservicesValue thumbnailUrlFormat = GservicesValue.value("drive:thumbnail_url_format", "https://googledrive.com/p/thumb/%s");
+    public static final GservicesValue tombstoneOldMaxSize = GservicesValue.value("drive:tombstone_old_max_size", Integer.valueOf(0));
+    public static final GservicesValue tombstoneTimeIntervalMs;
+    public static final GservicesValue unsubscribedKeepTimeMs;
+    public static final GservicesValue unsubscribedRefreshTimeMs;
+    public static final GservicesValue uploadChunkBackoffGrowthFactor = GservicesValue.value("drive:upload_chunk_backoff_growth_factor", Float.valueOf(2.0F));
+    public static final GservicesValue uploadChunkInitialBackoffSeconds = GservicesValue.value("drive:upload_initial_chunk_backoff_seconds", Float.valueOf(1.0F));
+    public static final GservicesValue uploadChunkRetryCountMax = GservicesValue.value("drive:upload_chunk_retry_count_max", Integer.valueOf(4));
+    public static final GservicesValue useFullAccessForDownloads = GservicesValue.value("drive:use_full_access_for_downloads", true);
+    public static final GservicesValue verboseVolleyLogging = GservicesValue.value("drive:verbose_volley_logging", false);
+    public static final GservicesValue wifiLockWorkaroundDevicesRegex = GservicesValue.value("drive:wifi_lock_workaround_device_regex", "ZTE~(SmartTab7|SmartTab10)~13");
+
+    static 
+    {
+        actionQueueBackoffInitWaitMillis = GservicesValue.value("drive:operation_queue_backoff_init_wait", Long.valueOf(TimeUnit.MILLISECONDS.convert(1L, TimeUnit.SECONDS)));
+        actionQueueBackoffMaxWaitMillis = GservicesValue.value("drive:operation_queue_backoff_max_wait_millis", Long.valueOf(TimeUnit.MILLISECONDS.convert(1L, TimeUnit.MINUTES)));
+        actionQueueRateLimitedRetryCheckIntervalMs = GservicesValue.value("drive:action_queue_rate_limited_retry_check_interval_ms", Long.valueOf(TimeUnit.MILLISECONDS.convert(15L, TimeUnit.SECONDS)));
+        activityLevelLowPushNotificationSyncIntervalMs = GservicesValue.value("drive:activity_level_low_push_notification_sync_interval_ms", Long.valueOf(TimeUnit.MILLISECONDS.convert(3L, TimeUnit.HOURS)));
+        activityLevelLowWindowSizeMs = GservicesValue.value("drive:activity_level_low_window_size_ms", Long.valueOf(TimeUnit.MILLISECONDS.convert(24L, TimeUnit.HOURS)));
+        activityLevelHighPushNotificationSyncIntervalMs = GservicesValue.value("drive:activity_level_high_push_notification_sync_interval_ms", Long.valueOf(TimeUnit.MILLISECONDS.convert(5L, TimeUnit.MINUTES)));
+        activityLevelHighWindowSizeMs = GservicesValue.value("drive:activity_level_high_window_size_ms", Long.valueOf(TimeUnit.MILLISECONDS.convert(30L, TimeUnit.MINUTES)));
+        appAuthCacheTimeMs = GservicesValue.value("drive:app_auth_cache_time_ms", Long.valueOf(TimeUnit.MILLISECONDS.convert(1L, TimeUnit.HOURS)));
+        autoContentSyncIntervalMillis = GservicesValue.value("drive:auto_content_sync_interval_seconds", Long.valueOf(TimeUnit.MILLISECONDS.convert(6L, TimeUnit.HOURS)));
+        cleanupActionMinIntervalMillis = GservicesValue.value("drive:cleanup_action_min_interval_millis", Long.valueOf(TimeUnit.MILLISECONDS.convert(5L, TimeUnit.MINUTES)));
+        contentMaintenanceMinIntervalMillis = GservicesValue.value("drive:content_maintenance_min_interval_millis", Long.valueOf(TimeUnit.MILLISECONDS.convert(30L, TimeUnit.SECONDS)));
+        deviceStatusReportMinIntervalMillis = GservicesValue.value("drive:device_status_report_min_interval_millis", Long.valueOf(TimeUnit.MILLISECONDS.convert(1L, TimeUnit.HOURS)));
+        eventRouterIdleTimeoutMillis = GservicesValue.value("drive:event_router_idle_timeout_millis", Long.valueOf(TimeUnit.MILLISECONDS.convert(5L, TimeUnit.SECONDS)));
+        persistedEventRetryIntervalMillis = GservicesValue.value("drive:persisted_event_retry_interval_millis", Long.valueOf(TimeUnit.MILLISECONDS.convert(10L, TimeUnit.MINUTES)));
+        persistedEventSnoozeIntervalMillis = GservicesValue.value("drive:persisted_event_snooze_interval_millis", Long.valueOf(TimeUnit.MILLISECONDS.convert(5L, TimeUnit.MINUTES)));
+        realtimeCacheDurationMillis = GservicesValue.value("drive:realtime_cache_duration_millis", Long.valueOf(TimeUnit.MILLISECONDS.convert(1L, TimeUnit.DAYS)));
+        resetOnRebootDelayMillis = GservicesValue.value("drive:reset_on_reboot_delay_millis", Long.valueOf(TimeUnit.MILLISECONDS.convert(2L, TimeUnit.MINUTES)));
+        searchQueryCacheExpirationMs = GservicesValue.value("drive:search_query_cache_expiration_ms", Long.valueOf(TimeUnit.MILLISECONDS.convert(2L, TimeUnit.MINUTES)));
+        sleepAfterRecursiveApplyOnServerMillis = GservicesValue.value("drive:sleep_after_recursive_apply_on_server_millis", Long.valueOf(TimeUnit.MILLISECONDS.convert(10L, TimeUnit.SECONDS)));
+        syncSchedulerFirstPartyRateLimitTokenPeriodMillis = GservicesValue.value("drive:sync_scheduler_first_party_rate_limit_token_period_millis", Long.valueOf(TimeUnit.MILLISECONDS.convert(5L, TimeUnit.SECONDS)));
+        syncSchedulerOnConnectRateLimitTokenPeriodMillis = GservicesValue.value("drive:sync_scheduler_on_connect_rate_limit_token_period_millis", Long.valueOf(TimeUnit.MILLISECONDS.convert(1L, TimeUnit.HOURS)));
+        syncSchedulerRateLimitTokenPeriodMillis = GservicesValue.value("drive:sync_scheduler_rate_limit_token_period_millis", Long.valueOf(TimeUnit.MILLISECONDS.convert(1L, TimeUnit.MINUTES)));
+        syncSchedulerWakelockTimeoutSeconds = GservicesValue.value("drive:sync_scheduler_wakelock_timeout_seconds", Long.valueOf(TimeUnit.SECONDS.convert(10L, TimeUnit.MINUTES)));
+        tombstoneTimeIntervalMs = GservicesValue.value("drive:tombstone_time_interval_ms", Long.valueOf(TimeUnit.MILLISECONDS.convert(30L, TimeUnit.DAYS)));
+        unsubscribedKeepTimeMs = GservicesValue.value("drive:unsubscribed_keep_time_ms", Long.valueOf(TimeUnit.MILLISECONDS.convert(1L, TimeUnit.DAYS)));
+        unsubscribedRefreshTimeMs = GservicesValue.value("drive:unsubscribed_refresh_time_ms", Long.valueOf(TimeUnit.MILLISECONDS.convert(1L, TimeUnit.DAYS)));
+    }
+}

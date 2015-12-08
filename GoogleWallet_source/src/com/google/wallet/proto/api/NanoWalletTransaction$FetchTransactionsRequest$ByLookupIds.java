@@ -1,0 +1,139 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.wallet.proto.api;
+
+import com.google.protobuf.nano.CodedInputByteBufferNano;
+import com.google.protobuf.nano.CodedOutputByteBufferNano;
+import com.google.protobuf.nano.ExtendableMessageNano;
+import com.google.protobuf.nano.MessageNano;
+import com.google.protobuf.nano.WireFormatNano;
+import java.io.IOException;
+
+// Referenced classes of package com.google.wallet.proto.api:
+//            NanoWalletTransaction
+
+public static final class clear extends ExtendableMessageNano
+{
+
+    public String purchaseRecordLookupIds[];
+
+    private clear clear()
+    {
+        purchaseRecordLookupIds = WireFormatNano.EMPTY_STRING_ARRAY;
+        unknownFieldData = null;
+        cachedSize = -1;
+        return this;
+    }
+
+    private cachedSize mergeFrom(CodedInputByteBufferNano codedinputbytebuffernano)
+        throws IOException
+    {
+        do
+        {
+            int i = codedinputbytebuffernano.readTag();
+            switch (i)
+            {
+            default:
+                if (storeUnknownField(codedinputbytebuffernano, i))
+                {
+                    continue;
+                }
+                // fall through
+
+            case 0: // '\0'
+                return this;
+
+            case 10: // '\n'
+                int k = WireFormatNano.getRepeatedFieldArrayLength(codedinputbytebuffernano, 10);
+                String as[];
+                int j;
+                if (purchaseRecordLookupIds == null)
+                {
+                    j = 0;
+                } else
+                {
+                    j = purchaseRecordLookupIds.length;
+                }
+                as = new String[j + k];
+                k = j;
+                if (j != 0)
+                {
+                    System.arraycopy(purchaseRecordLookupIds, 0, as, 0, j);
+                    k = j;
+                }
+                for (; k < as.length - 1; k++)
+                {
+                    as[k] = codedinputbytebuffernano.readString();
+                    codedinputbytebuffernano.readTag();
+                }
+
+                as[k] = codedinputbytebuffernano.readString();
+                purchaseRecordLookupIds = as;
+                break;
+            }
+        } while (true);
+    }
+
+    protected final int computeSerializedSize()
+    {
+        int j1 = super.computeSerializedSize();
+        int i = j1;
+        if (purchaseRecordLookupIds != null)
+        {
+            i = j1;
+            if (purchaseRecordLookupIds.length > 0)
+            {
+                int l = 0;
+                int j = 0;
+                for (i = 0; i < purchaseRecordLookupIds.length;)
+                {
+                    String s = purchaseRecordLookupIds[i];
+                    int i1 = l;
+                    int k = j;
+                    if (s != null)
+                    {
+                        i1 = l + 1;
+                        k = j + CodedOutputByteBufferNano.computeStringSizeNoTag(s);
+                    }
+                    i++;
+                    l = i1;
+                    j = k;
+                }
+
+                i = j1 + j + l * 1;
+            }
+        }
+        return i;
+    }
+
+    public final volatile MessageNano mergeFrom(CodedInputByteBufferNano codedinputbytebuffernano)
+        throws IOException
+    {
+        return mergeFrom(codedinputbytebuffernano);
+    }
+
+    public final void writeTo(CodedOutputByteBufferNano codedoutputbytebuffernano)
+        throws IOException
+    {
+        if (purchaseRecordLookupIds != null && purchaseRecordLookupIds.length > 0)
+        {
+            for (int i = 0; i < purchaseRecordLookupIds.length; i++)
+            {
+                String s = purchaseRecordLookupIds[i];
+                if (s != null)
+                {
+                    codedoutputbytebuffernano.writeString(1, s);
+                }
+            }
+
+        }
+        super.writeTo(codedoutputbytebuffernano);
+    }
+
+    public ()
+    {
+        clear();
+    }
+}
