@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/bg" android:padding="@dimen/padding_small" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/icon_holder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tour_list_icon_margin_left" android:layout_centerVertical="true">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/default_icon" android:layout_width="@dimen/tour_list_icon_size" android:layout_height="@dimen/tour_list_icon_size" android:src="@drawable/list_image_default" android:scaleType="fitXY" />
+            <com.android.volley.toolbox.NetworkImageView android:id="@id/icon" android:layout_width="@dimen/tour_list_icon_size" android:layout_height="@dimen/tour_list_icon_size" android:src="@drawable/ic_no_image_circular" android:scaleType="fitXY" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/icon_mask" android:visibility="visible" android:layout_width="@dimen/tour_list_icon_size" android:layout_height="@dimen/tour_list_icon_size" android:src="@drawable/tour_list_image_mask_light_grey" />
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip">
+            <TextView android:typeface="sans" android:textStyle="bold" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin_large" android:text="Title" android:maxLines="2" style="@style/TourListItemTitle" />
+            <TextView android:typeface="sans" android:id="@id/city" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="CHICAGO, IL" style="@style/TourListItemCity" />
+            <TextView android:typeface="sans" android:id="@id/mileage" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="24M" style="@style/TourListItemMileage" />
+            <com.android.volley.toolbox.NetworkImageView android:id="@id/sponsor_image" android:layout_width="173.0dip" android:layout_height="40.0dip" android:scaleType="fitXY" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

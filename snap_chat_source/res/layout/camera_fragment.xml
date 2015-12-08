@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center_vertical" android:id="@id/camera_activity_layout" android:background="@android:color/black" android:clickable="true" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/camera_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.snapchat.android.camera.ui.viewflipper.CameraViewFlipper android:id="@id/profile_view_flipper" android:background="@color/profile_page_background" android:layout_width="fill_parent" android:layout_height="fill_parent" customAttr:defaultPage="1" xmlns:customAttr="http://schemas.android.com/apk/res-auto">
+        <FrameLayout android:id="@id/flipper_profile_page" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/flipper_camera_page" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/camera_fragment_decor_container" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:id="@id/front_facing_flash_overlay" android:background="#ccffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:id="@id/dummy_overlay" android:background="@drawable/aa_blank" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/snap_preview_text_size" android:textColor="@android:color/white" android:id="@id/prefilled_caption" android:background="@color/camera_activity_picture_text_message_background" android:paddingLeft="6.0dip" android:paddingTop="4.0dip" android:paddingRight="6.0dip" android:paddingBottom="5.0dip" android:visibility="invisible" android:longClickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+        </FrameLayout>
+    </com.snapchat.android.camera.ui.viewflipper.CameraViewFlipper>
+    <com.snapchat.android.discover.ui.OpenChannelAnimationView android:id="@id/discover_opening_animation" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

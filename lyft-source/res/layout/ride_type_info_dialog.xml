@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.passenger.RideTypeInfoDialogView style="@style/DialogContainerView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout style="@style/DialogWithCloseButtonView">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/title_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="22.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" style="@style/PrimaryText" />
+                <ImageView android:layout_gravity="center" android:id="@id/ride_type_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/prime_time_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="16.0dip">
+                    <TextView android:id="@id/prime_time_title_text_view" android:drawableLeft="@drawable/ic_pt_white" android:drawablePadding="8.0dip" style="@style/RideTypeDescriptionTitle" />
+                    <TextView android:id="@id/prime_time_description_text_view" android:layout_marginTop="8.0dip" android:text="@string/ride_info_prime_time_description" style="@style/RideTypeDescriptionMessage" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:layout_weight="1.0">
+                        <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:id="@id/seats_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ride_type_seats_label" style="@style/SecondaryText" />
+                        <TextView android:textSize="22.0sp" android:textColor="@android:color/black" android:id="@id/seats_number_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PrimaryText" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:layout_weight="1.0">
+                        <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:id="@id/minimum_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ride_type_minimum_label" style="@style/SecondaryText" />
+                        <TextView android:textSize="22.0sp" android:textColor="@android:color/black" android:id="@id/minimum_fare_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PrimaryText" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="@color/grey_2" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:layout_weight="1.0">
+                        <TextView android:textSize="14.0sp" android:textColor="@android:color/black" android:id="@id/pickup_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:text="@string/ride_type_pickup_label" style="@style/SecondaryText" />
+                        <TextView android:textSize="18.0sp" android:textColor="@android:color/black" android:id="@id/pickup_fare_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PrimaryText" />
+                    </LinearLayout>
+                    <View android:background="@color/grey_2" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_weight="1.0">
+                        <TextView android:textSize="14.0sp" android:textColor="@android:color/black" android:id="@id/pre_mile_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:text="@string/ride_type_per_mile_label" style="@style/SecondaryText" />
+                        <TextView android:textSize="18.0sp" android:textColor="@android:color/black" android:id="@id/per_mile_fare_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PrimaryText" />
+                    </LinearLayout>
+                    <View android:background="@color/grey_2" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_weight="1.0">
+                        <TextView android:textSize="14.0sp" android:textColor="@android:color/black" android:id="@id/per_minute_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:text="@string/ride_type_per_minute_label" style="@style/SecondaryText" />
+                        <TextView android:textSize="18.0sp" android:textColor="@android:color/black" android:id="@id/per_minute_fare_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PrimaryText" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="@color/grey_2" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <TextView android:textSize="14.0sp" android:textStyle="italic" android:gravity="center" android:id="@id/description_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" style="@style/PrimaryText" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <ImageView android:id="@id/cancel_button" style="@style/CloseDialogButton" />
+</me.lyft.android.ui.passenger.RideTypeInfoDialogView>

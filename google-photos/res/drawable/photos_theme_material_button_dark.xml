@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetLeft="@dimen/photos_theme_button_inset_horizontal" android:insetRight="@dimen/photos_theme_button_inset_horizontal" android:insetTop="@dimen/photos_theme_button_inset_vertical" android:insetBottom="@dimen/photos_theme_button_inset_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <selector>
+        <item android:state_enabled="false">
+            <shape android:shape="rectangle">
+                <corners android:radius="@dimen/photos_theme_button_radius" />
+                <solid android:color="@color/photos_theme_button_dark_color_disabled" />
+                <padding android:left="@dimen/photos_theme_padding" android:top="@dimen/photos_theme_button_padding_vertical" android:right="@dimen/photos_theme_padding" android:bottom="@dimen/photos_theme_button_padding_vertical" />
+            </shape>
+        </item>
+        <item android:state_enabled="true" android:state_pressed="true">
+            <shape android:shape="rectangle">
+                <corners android:radius="@dimen/photos_theme_button_radius" />
+                <solid android:color="@color/photos_theme_button_dark_pressed" />
+                <padding android:left="@dimen/photos_theme_padding" android:top="@dimen/photos_theme_button_padding_vertical" android:right="@dimen/photos_theme_padding" android:bottom="@dimen/photos_theme_button_padding_vertical" />
+            </shape>
+        </item>
+        <item android:state_focused="true" android:state_enabled="true">
+            <shape android:shape="rectangle">
+                <corners android:radius="@dimen/photos_theme_button_radius" />
+                <solid android:color="@color/photos_theme_button_dark_focused" />
+                <padding android:left="@dimen/photos_theme_padding" android:top="@dimen/photos_theme_button_padding_vertical" android:right="@dimen/photos_theme_padding" android:bottom="@dimen/photos_theme_button_padding_vertical" />
+            </shape>
+        </item>
+        <item android:state_enabled="true">
+            <shape android:shape="rectangle">
+                <corners android:radius="@dimen/photos_theme_button_radius" />
+                <solid android:color="@color/photos_theme_button_dark_color" />
+                <padding android:left="@dimen/photos_theme_padding" android:top="@dimen/photos_theme_button_padding_vertical" android:right="@dimen/photos_theme_padding" android:bottom="@dimen/photos_theme_button_padding_vertical" />
+            </shape>
+        </item>
+    </selector>
+</inset>

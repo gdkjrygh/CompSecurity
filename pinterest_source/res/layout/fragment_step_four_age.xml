@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_white_full_opacity" style="@style/full_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+    <RelativeLayout android:paddingLeft="@dimen/margin" android:paddingTop="@dimen/margin" android:paddingRight="@dimen/margin" android:paddingBottom="@dimen/margin_half" style="@style/fullline_view">
+        <TextView android:id="@id/skip_tv" android:text="@string/skip" style="@style/skip_option" />
+        <TextView android:textSize="@dimen/text_subhead" android:textColor="@color/text_dark" android:paddingRight="@dimen/margin" android:text="@string/what_is_age" style="@style/fullline_view" />
+    </RelativeLayout>
+    <com.pinterest.ui.text.PEditText android:id="@id/age_et" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="number" style="@style/GraySignupEditText" />
+    <include layout="@layout/multistep_next" />
+</LinearLayout>

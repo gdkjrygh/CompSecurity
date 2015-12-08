@@ -1,0 +1,20 @@
+<h1>Welcome!</h1>
+
+<p>{{user.name}}</p>
+<img ng-src="https://s3.amazonaws.com/chars.bitstrips.com/profiles/{{user.user_id_short}}.png?version={{user.a_version}}" width="50"/><br/>
+<img ng-src="https://s3.amazonaws.com/chars.bitstrips.com/{{user.avatar_id}}.png?version={{user.a_version}}" width="50"/>
+<br/>
+
+
+<input type="button" value="Launch" ng-click="launch()"/>
+
+<input type="button" value="Reload" onclick="window.location.reload();"/>
+
+<a href="blahblah">Blah!</a>
+<p>
+<a href="#/">Home</a>
+</p>
+
+
+<pre style="font-size: 8px; margin-top: 50px;">{{user | json}}</pre>
+<input type="hidden" id="flash_ref"/>

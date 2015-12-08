@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/container" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="right" android:id="@id/track_number" android:paddingLeft="@dimen/small_padding" android:paddingTop="@dimen/small_padding" android:paddingRight="@dimen/small_padding" android:layout_width="48.0dip" android:layout_height="wrap_content" style="@style/TextAppearance.Medialist.Title" />
+    <ImageView android:id="@id/list_context_menu" android:padding="@dimen/default_icon_padding" android:layout_width="@dimen/default_icon_size" android:layout_height="@dimen/default_icon_size" android:src="?iconOverflow" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/action_options" style="@style/Widget.Button.Borderless" />
+    <TextView android:id="@id/song_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/list_context_menu" android:layout_toRightOf="@id/track_number" android:layout_alignBottom="@id/track_number" style="@style/TextAppearance.Medialist.Title" />
+    <TextView android:id="@id/duration" android:paddingBottom="@dimen/small_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/song_title" android:layout_alignLeft="@id/song_title" style="@style/TextAppearance.Medialist.Details" />
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_height="wrap_content" style="@style/module_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/breaking_news_module_title" android:paddingLeft="@dimen/breaking_rowpadding_default" android:text="@string/breaking_news_activity_label" style="@style/module_header" />
+    <LinearLayout android:orientation="vertical" android:id="@id/breaking_news_module_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/article_grid_item_1" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/video2_grid_item_large" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:gravity="center" android:id="@id/breaking_news_module_no_data" android:visibility="gone" android:text="@string/breaking_news_module_no_data" android:minLines="2" weather:font="Roboto-Medium.ttf" style="@style/ski_module_no_data" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+            <include android:id="@id/article_grid_item_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/video2_grid_item_small" />
+            <include android:id="@id/article_grid_item_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/video2_grid_item_small" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

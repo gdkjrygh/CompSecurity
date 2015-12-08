@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:state_pressed="false">
+        <layer-list
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:drawable="@drawable/focus_highlight" />
+            <item android:drawable="@drawable/heart_in_app_notification_background" />
+        </layer-list>
+    </item>
+    <item android:state_focused="true" android:state_pressed="true" android:drawable="@drawable/heart_in_app_notification_background" />
+    <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/heart_in_app_notification_background" />
+    <item android:drawable="@drawable/heart_in_app_notification_background" />
+</selector>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/profile_header" style="@style/Profile.HeaderContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/header_info_layout" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Profile.HeaderInfoLayout">
+        <com.soundcloud.android.view.CircularBorderImageView android:id="@id/image" style="@style/Profile.HeaderImage" />
+        <com.soundcloud.android.view.CustomFontTextView android:textColor="@color/list_primary" android:id="@id/username" android:layout_toLeftOf="@id/toggle_btn_follow" android:layout_toRightOf="@id/image" android:layout_alignTop="@id/image" style="@style/Profile.Username" />
+        <com.soundcloud.android.view.CustomFontTextView android:id="@id/followers_count" android:drawableLeft="@drawable/stats_followers" android:layout_toRightOf="@id/image" android:layout_below="@id/username" android:drawableStart="@drawable/stats_followers" style="@style/Profile.Stats" />
+        <ToggleButton android:id="@id/toggle_btn_follow" android:checked="false" android:layout_alignTop="@id/username" android:layout_alignParentRight="true" style="@style/Profile.ToggleButton.Follow.Large" />
+    </RelativeLayout>
+</FrameLayout>

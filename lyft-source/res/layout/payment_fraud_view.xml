@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.payment.PaymentFraudView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.controls.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include layout="@layout/scan_card_button" />
+    <ScrollView android:id="@id/enter_credit_card_info_group" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/span32" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <me.lyft.android.ui.payment.cardinput.CreditCardInput android:layout_gravity="center" android:id="@id/creditcardinput" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span16" android:layout_marginRight="@dimen/span16" />
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/span16" android:layout_weight="1.0" />
+            <Button android:gravity="center" android:layout_gravity="bottom" android:id="@id/save_button" android:text="@string/save_button" style="@style/PinkFullBleedButton" />
+        </LinearLayout>
+    </ScrollView>
+</me.lyft.android.ui.payment.PaymentFraudView>

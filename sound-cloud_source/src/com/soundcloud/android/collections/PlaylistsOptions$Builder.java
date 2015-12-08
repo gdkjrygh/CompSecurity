@@ -1,0 +1,27 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.soundcloud.android.collections;
+
+
+// Referenced classes of package com.soundcloud.android.collections:
+//            PlaylistsOptions
+
+public static abstract class A
+{
+
+    public abstract PlaylistsOptions build();
+
+    public abstract A showLikes(boolean flag);
+
+    public abstract A showOfflineOnly(boolean flag);
+
+    public abstract A showPosts(boolean flag);
+
+    public abstract A sortByTitle(boolean flag);
+
+    public A()
+    {
+    }
+}

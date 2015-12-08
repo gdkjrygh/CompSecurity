@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:gravity="center" android:id="@id/mpay_setup_btn_continue" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/payment_margin" android:layout_marginTop="@dimen/payment_margin" android:layout_marginRight="@dimen/payment_margin" android:text="@string/mpay_setup_btn_cc_continue_many" android:layout_above="@id/mpay_setup_btn_add_cc_next" style="@style/Payment.PrimaryButton.Orange" />
+    <TextView android:id="@id/mpay_setup_btn_add_cc_next" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/payment_margin" android:text="@string/mpay_setup_btn_add_cc_next" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/Payment.Text.ButtonText.Medium" />
+    <com.walmart.android.ui.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/mpay_setup_btn_continue">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/payment_margin" android:layout_marginRight="@dimen/payment_margin">
+            <TextView android:textColor="@color/mpay_text_setup_dark" android:gravity="left" android:id="@id/mpay_setup_headline_cc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/payment_margin_large" android:text="@string/mpay_setup_headline_cc_many" android:singleLine="false" style="@style/Payment.Text.Headline.Light" />
+            <TextView android:textColor="@color/mpay_text_setup_medium" android:gravity="left" android:id="@id/mpay_setup_subhead_cc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/mpay_setup_subhead_cc_many" style="@style/Payment.Text.Subhead" />
+            <com.walmartlabs.ui.recycler.ListRecyclerView android:id="@id/mpay_setup_cc_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/payment_margin" android:overScrollMode="never" />
+        </LinearLayout>
+    </com.walmart.android.ui.SafeScrollView>
+    <include android:id="@id/loading_page" android:visibility="gone" layout="@layout/loading_page" />
+</RelativeLayout>

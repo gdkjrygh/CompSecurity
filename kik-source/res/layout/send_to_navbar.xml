@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/talk_to_background" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/native_topbar_height" />
+    <FrameLayout android:id="@id/add_button_container" android:background="@xml/topbar_button_selector" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="@dimen/native_topbar_height" android:layout_alignParentRight="true">
+        <ImageView android:layout_gravity="center" android:id="@id/search_button" android:duplicateParentState="true" android:layout_width="@dimen/material_navbar_button_width" android:layout_height="@dimen/material_navbar_button_height" android:src="@drawable/search_grey" android:scaleType="center" />
+    </FrameLayout>
+    <include android:id="@id/layout_back" layout="@layout/kik_back_button" />
+    <kik.android.widget.RobotoEditText android:id="@id/contacts_compose_to" android:background="@drawable/send_to_username_name_bar" android:layout_width="fill_parent" android:layout_height="@dimen/username_textview_height" android:hint="@string/find_people_search_placeholder" android:singleLine="true" android:layout_below="@id/layout_back" android:inputType="textVisiblePassword" />
+    <FrameLayout android:background="@drawable/topbar_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/contacts_compose_to" android:layout_alignParentLeft="true" />
+    <FrameLayout android:id="@id/nav_bar_shadow" android:background="@drawable/nav_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/layout_back" />
+</RelativeLayout>

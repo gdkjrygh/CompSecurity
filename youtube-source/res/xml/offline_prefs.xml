@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:key="offline_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <PreferenceCategory android:title="@string/pref_offline_storage_title_primary">
+        <com.google.android.apps.youtube.app.ui.StorageBarPreference android:layout="@layout/pref_offline_storage" yt:forSdCard="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_offline_storage_title_sdcard" android:key="offline_category_sdcard_storage">
+        <com.google.android.apps.youtube.app.ui.StorageBarPreference android:layout="@layout/pref_offline_storage" yt:forSdCard="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_offline_options_title" android:key="offline_category">
+        <ListPreference android:title="@string/pref_offline_quality_title" android:key="offline_quality" />
+        <CheckBoxPreference android:title="@string/pref_offline_network_policy_title" android:key="offline_policy" android:defaultValue="true" />
+        <Preference android:title="@string/pref_offline_insert_sd_card_title" android:key="offline_insert_sd_card" android:summary="@string/pref_offline_insert_sd_card_summary" />
+        <CheckBoxPreference android:title="@string/pref_offline_use_sd_card_title" android:key="offline_use_sd_card" android:summary="@string/pref_offline_use_sd_card_summary" android:defaultValue="true" />
+        <Preference android:title="@string/pref_offline_help_title" android:key="offline_help" android:summary="@string/pref_offline_help_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>

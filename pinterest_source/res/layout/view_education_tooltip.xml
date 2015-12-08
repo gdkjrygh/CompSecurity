@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/tooltip_triangle" android:layout_width="@dimen/tooltip_triangle_side" android:layout_height="@dimen/tooltip_triangle_side" android:src="@drawable/tooltip_triangle" />
+    <LinearLayout android:orientation="vertical" android:id="@id/tooltip_rectangle_container" android:background="@drawable/tooltip_rounded_rect" android:layout_width="@dimen/tooltip_width" android:layout_height="wrap_content">
+        <me.grantland.widget.AutofitLayout android:id="@id/tooltip_title_wrapper" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_three_quarter" android:layout_marginTop="@dimen/margin_half" android:layout_marginRight="@dimen/margin_three_quarter">
+            <com.pinterest.ui.text.PTextView android:textSize="@dimen/tooltip_title_size" android:textColor="@color/white" android:id="@id/tooltip_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        </me.grantland.widget.AutofitLayout>
+        <me.grantland.widget.AutofitTextView android:textSize="@dimen/tooltip_description_text_size" android:textColor="@color/white" android:id="@id/tooltip_description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_three_quarter" android:layout_marginTop="@dimen/margin_half" android:layout_marginRight="@dimen/margin_three_quarter" android:layout_marginBottom="@dimen/margin_three_quarter" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_three_quarter" android:layout_marginRight="@dimen/margin_three_quarter" android:layout_marginBottom="@dimen/margin_three_quarter">
+            <Button android:textColor="@color/bt_education_back_color" android:gravity="center" android:id="@id/tooltip_dismiss_button" android:background="@drawable/button_edu_secondary_states" android:visibility="gone" style="@style/tooltip_button" />
+            <View android:id="@id/tooltip_button_spacing" android:visibility="gone" android:layout_width="@dimen/tooltip_button_spacing_side" android:layout_height="@dimen/tooltip_button_spacing_side" />
+            <Button android:textColor="@color/cyan" android:gravity="center" android:id="@id/tooltip_complete_button" android:background="@drawable/button_edu_primary_states" android:visibility="gone" style="@style/tooltip_button" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/tooltip_triangle_inverted" android:layout_width="@dimen/tooltip_triangle_side" android:layout_height="@dimen/tooltip_triangle_side" android:src="@drawable/tooltip_triangle_inverted" />
+</FrameLayout>

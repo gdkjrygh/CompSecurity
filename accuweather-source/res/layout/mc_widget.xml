@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/mc_widget_container" android:layout_width="@dimen/mc_widget_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/mc_widget_top_box" android:background="@color/mc_widget_background_color_mc_widget" android:paddingLeft="@dimen/mc_widget_padding" android:paddingTop="@dimen/mc_widget_padding" android:paddingRight="@dimen/mc_widget_padding" android:layout_width="fill_parent" android:layout_height="@dimen/mc_widget_height_top_box" android:weightSum="5.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/mc_widget_top_left" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.5">
+            <TextView android:textSize="@dimen/mc_widget_text_size_time" android:id="@id/tv_clock" android:text="12:08 PM" android:fontFamily="sans-serif-light" style="@style/mc_widget_textview" />
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mc_widget_margin_top_text_view">
+                <TextView android:textSize="@dimen/mc_widget_text_size_temperature" android:id="@id/tv_temperature" android:text="62°" android:fontFamily="sans-serif-light" style="@style/mc_widget_textview" />
+                <ImageView android:layout_gravity="bottom" android:id="@id/alertImageView" android:paddingBottom="8.0dip" android:visibility="invisible" android:layout_width="34.0dip" android:layout_height="34.0dip" android:src="@drawable/alert_icon_mc" />
+            </LinearLayout>
+            <TextView android:id="@id/tv_weather_desc" android:layout_marginTop="@dimen/mc_widget_margin_top_weather_desc" android:text="Mostly Sunny" android:maxLines="@integer/mc_widget_max_line" style="@style/mc_widget_textView_18_pt" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:text="@string/UpdatedAt" style="@style/mc_widget_textView_italic" />
+                <TextView android:id="@id/tv_updated_at_time" android:layout_marginLeft="2.0dip" android:text="11:06 AM " style="@style/mc_widget_textView_italic" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:layout_gravity="right" android:id="@id/mc_widget_top_right" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.5">
+            <TextView android:gravity="right" android:id="@id/tv_location" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:text="San Francisco, CA" android:layout_alignParentRight="true" style="@style/mc_widget_textview_28_pt" />
+            <include android:layout_below="@id/tv_location" layout="@layout/mc_widget_date" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/logo_accuweather" android:visibility="visible" android:layout_width="@dimen/mc_widget_logo_accu_width" android:layout_height="@dimen/mc_widget_logo_accu_height" android:layout_margin="@dimen/mc_widget_logo_margin" android:src="@drawable/ic_branding_accuweather" android:scaleType="fitXY" android:layout_alignBottom="@id/mc_widget_top_box" android:layout_alignParentRight="true" />
+    <TextView android:id="@id/divider" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/mc_widget_top_box" />
+    <RelativeLayout android:id="@id/mc_widget_bottom_box" android:background="@color/mc_widget_background_color_mc_widget" android:layout_width="fill_parent" android:layout_height="@dimen/mc_widget_height_bottom_box" android:layout_below="@id/divider">
+        <ImageView android:id="@id/img_minute_cast" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="@dimen/mc_widget_image_size" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:scaleType="fitCenter" />
+        <TextView android:id="@id/view_center" android:layout_width="fill_parent" android:layout_height="3.0px" android:layout_marginTop="-6.0dip" android:layout_marginBottom="4.0dip" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/logo_minute_cast" android:paddingLeft="15.0dip" android:layout_width="@dimen/mc_widget_logo_accu_width" android:layout_height="@dimen/mc_widget_logo_mc_height" android:layout_margin="@dimen/mc_widget_logo_margin" android:src="@drawable/ic_branding_minutecast" android:scaleType="fitEnd" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        <TextView android:gravity="left" android:id="@id/tv_minute_cast_summary" android:paddingTop="5.0dip" android:text="Snow in 17 min" android:layout_toRightOf="@id/img_minute_cast" android:layout_above="@id/view_center" style="@style/mc_widget_textview_28_pt" />
+        <TextView android:id="@id/tv_address" android:text="385 Science Park" android:layout_toLeftOf="@id/logo_minute_cast" android:layout_below="@id/view_center" android:layout_alignLeft="@id/tv_minute_cast_summary" style="@style/mc_widget_textView_14_pt" />
+    </RelativeLayout>
+</RelativeLayout>

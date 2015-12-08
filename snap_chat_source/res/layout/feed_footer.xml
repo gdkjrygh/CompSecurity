@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/loading_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.snapchat.android.ui.FeedLoadingAnimationView android:id="@id/icon_loading" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:layout_marginLeft="@dimen/default_gap" android:layout_marginTop="16.0dip" android:layout_marginRight="@dimen/default_gap" android:layout_marginBottom="16.0dip" />
+        <TextView android:textColor="#ff666666" android:id="@id/loading_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feed_footer_loading" style="@android:style/TextAppearance.Medium" />
+    </LinearLayout>
+    <TextView android:textColor="#ff666666" android:gravity="center" android:id="@id/failed_title" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/feed_footer_failed" android:layout_centerVertical="true" style="@android:style/TextAppearance.Medium" />
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="right" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="right" android:id="@id/stories_scroll_bar_elements" android:background="@android:color/white" android:paddingTop="@dimen/stories_slider_top_padding" android:paddingBottom="@dimen/stories_slider_bottom_padding" android:layout_width="@dimen/stories_slider_container_thickness" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/stories_scroll_bar_all_stories_section" android:layout_width="@dimen/stories_scroll_bar_thickness" android:layout_height="fill_parent" android:src="@drawable/stories_slider_all_stories" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/stories_scroll_bar_recent_updates_section" android:layout_width="@dimen/stories_scroll_bar_thickness" android:layout_height="fill_parent" android:src="@drawable/stories_slider_recent_updates" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/stories_scroll_bar_position_indicator" android:layout_width="@dimen/stories_slider_position_indicator_view_size" android:layout_height="@dimen/stories_slider_position_indicator_view_size" android:src="@drawable/stories_slider_position_indicator" />
+    </FrameLayout>
+    <TextView android:textSize="@dimen/story_slider_text_box_text_size" android:textColor="@color/stories_slider_time_letter_text" android:gravity="right" android:id="@id/stories_scroll_bar_time_letter" android:background="@drawable/stories_slider_description_background" android:padding="@dimen/story_slider_text_box_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLength="16" android:layout_toLeftOf="@id/stories_scroll_bar_elements" />
+</RelativeLayout>

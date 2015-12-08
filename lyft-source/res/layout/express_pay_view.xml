@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.driver.expresspay.ExpressPayView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.controls.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/span32" android:src="@drawable/graphic_bolt_large" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span16" android:layout_marginRight="@dimen/span16">
+        <LinearLayout android:orientation="vertical" android:id="@id/items_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View android:background="@color/charcoal_2" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/span8" android:layout_marginBottom="@dimen/span8" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span8" android:layout_marginBottom="@dimen/span8">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/charcoal_2" android:layout_gravity="left" android:id="@id/total_label" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableRight="@drawable/ic_info" android:drawablePadding="@dimen/span8" />
+            <TextView android:textSize="@dimen/text_16" android:textStyle="bold" android:textColor="@color/charcoal_2" android:layout_gravity="right" android:id="@id/total_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <me.lyft.android.controls.AdvancedButton android:textSize="@dimen/micro_text" android:textStyle="normal" android:textColor="@color/grey_4" android:gravity="center" android:layout_gravity="center" android:id="@id/add_or_edit_debit_card" android:background="@drawable/transparent_grey_with_error_state_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span8" android:layout_marginBottom="@dimen/span8" android:text="@string/add_debit_card" />
+        <TextView android:textColor="@color/red_1" android:gravity="center" android:id="@id/inline_error_txt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_marginBottom="0.0dip" style="@style/InlineErrorText" />
+    </LinearLayout>
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <Button android:textSize="@dimen/big_text_3" android:id="@id/get_paid_button" android:padding="@dimen/span16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/confirm_deposit_label" style="@style/FullyBleeded.GetPaidButton" />
+</me.lyft.android.ui.driver.expresspay.ExpressPayView>

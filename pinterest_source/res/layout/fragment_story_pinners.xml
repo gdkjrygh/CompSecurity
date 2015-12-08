@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg_grid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="@integer/width_weight_sum_base10">
+        <ListView android:id="@id/listview" android:paddingTop="@dimen/actionbar_height" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_weight="10.0" style="@style/listview_white" />
+    </LinearLayout>
+    <ScrollView android:id="@id/empty_wrapper_sv" android:paddingTop="@dimen/actionbar_height" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/actionbar" style="@style/listview">
+        <com.pinterest.ui.grid.AdapterEmptyView android:id="@id/empty_vw" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+</RelativeLayout>

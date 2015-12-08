@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/photo_main_background" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/main_layout" layout="@layout/photo_upload_main" />
+    <LinearLayout android:orientation="vertical" android:id="@id/idle_layout" android:background="@drawable/photo_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/photo_main_padding">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/message_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/photo_main_padding" android:src="@drawable/photo_photocenter_blue" android:contentDescription="@string/photo_image_description" />
+            <TextView android:textColor="@color/photo_grey_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/photo_main_padding" android:text="@string/photo_no_pending_orders" style="@style/PhotoTextStyle.Medium" />
+            <TextView android:textColor="@color/photo_grey_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/photo_main_padding" android:text="@string/photo_tap_ok_to_exit" style="@style/PhotoTextStyle.Small" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/photo_light_grey_text" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="@dimen/photo_main_padding_2x" />
+            <Button android:textSize="@dimen/photo_text_size_medium" android:id="@id/idle_button" android:layout_width="fill_parent" android:layout_height="@dimen/photo_touch_size" android:text="@string/photo_ok" style="@style/PhotoTransparentButton" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

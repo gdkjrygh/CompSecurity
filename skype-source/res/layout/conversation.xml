@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/chat_root_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.skype.android.app.chat.MessageArea android:id="@id/message_area" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <com.skype.android.app.chat.MediaBar android:id="@id/media_bar" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/chat_media_bar_height" android:layout_above="@id/message_area" />
+    <ViewStub android:id="@id/conversation_view_stub" android:visibility="gone" android:layout="@layout/chat_stub_layout_no_history" android:inflatedId="@id/inflated_empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/message_area" android:layout_alignParentTop="true" />
+    <android.support.v7.widget.RecyclerView android:scrollbarThumbVertical="@drawable/list_view_thumb" android:scrollbarTrackVertical="@drawable/list_view_track" android:id="@id/conversation_list" android:background="@color/white" android:focusable="true" android:focusableInTouchMode="true" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/media_bar" android:isScrollContainer="false" />
+    <View android:id="@id/message_area_divider" android:background="@color/skype_grey_cool40" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/conversation_list" />
+    <LinearLayout android:gravity="center" android:id="@id/heart_in_app_notification" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" style="@style/HeartInAppNotification">
+        <com.skype.android.widget.SymbolView android:textSize="@dimen/heart_text_size" android:textColor="@color/presence_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" app:symbol_code="Up" />
+        <TextView android:textSize="@dimen/font_medium" android:textColor="@color/skype_blue" android:gravity="center" android:id="@id/heart_in_app_notification_text" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_hearts_in_app_notification_new" />
+        <com.skype.android.widget.SymbolView android:textSize="@dimen/heart_text_size" android:textColor="@color/skype_blue" android:layout_width="wrap_content" android:layout_height="wrap_content" app:symbol_code="Heart" />
+    </LinearLayout>
+</RelativeLayout>

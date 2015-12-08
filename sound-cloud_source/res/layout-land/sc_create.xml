@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/MetadataContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip">
+        <RelativeLayout android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <FrameLayout android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <ImageButton android:id="@id/btn_action" android:layout_width="@dimen/rec_record_button_dimension" android:layout_height="@dimen/rec_record_button_dimension" style="@style/RecordButton" />
+            </FrameLayout>
+            <FrameLayout android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <ImageButton android:id="@id/btn_play_edit" android:adjustViewBounds="false" style="@style/RecordPlayButton" />
+            </FrameLayout>
+        </RelativeLayout>
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_weight="1.0">
+            <com.soundcloud.android.creators.record.ChronometerView android:gravity="center_vertical" android:id="@id/chronometer" android:layout_width="wrap_content" android:layout_height="fill_parent" android:keepScreenOn="true" style="@style/RecordTextChrono" />
+        </FrameLayout>
+        <ImageButton android:id="@id/btn_play" android:layout_marginRight="5.0dip" style="@style/RecordPlayButton" />
+        <ImageButton android:id="@id/btn_edit" style="@style/RecordEditButton" />
+        <android.support.v7.widget.SwitchCompat android:id="@id/toggle_fade" style="@style/RecordFadeSwitch" />
+    </LinearLayout>
+    <TextView android:id="@id/action_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:text="@string/record_tap_to_record" style="?android:textAppearanceMedium" />
+    <RelativeLayout android:id="@id/gauge_holder" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="4.0" />
+    <include android:layout_width="fill_parent" android:layout_height="@dimen/btn_min_height" layout="@layout/record_bottom_bar" />
+</LinearLayout>

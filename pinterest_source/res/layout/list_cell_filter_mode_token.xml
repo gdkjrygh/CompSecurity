@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/padding_left_view" android:layout_width="@dimen/margin" android:layout_height="fill_parent" />
+    <FrameLayout android:paddingTop="@dimen/margin_half" android:paddingBottom="@dimen/margin_half" android:layout_width="@dimen/search_filter_width" android:layout_height="fill_parent">
+        <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.pinterest.ui.imageview.GrayWebImageView android:id="@id/category_token" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="center" android:id="@id/token_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ImageView android:id="@id/token_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin_extra_small" />
+                <TextView android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/token_query" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <ImageView android:id="@id/token_caret" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_quarter" android:src="@drawable/ic_filter_down_caret" android:layout_below="@id/token_content" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/divider_view" android:background="@drawable/circle_divider" android:visibility="gone" android:layout_width="@dimen/dot_indicator_size" android:layout_height="@dimen/dot_indicator_size" android:layout_marginLeft="@dimen/margin_half" />
+    <View android:id="@id/padding_right_view" android:layout_width="@dimen/margin" android:layout_height="fill_parent" />
+</merge>

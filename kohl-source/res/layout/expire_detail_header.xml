@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/transaction_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/title_bottom_margin" android:text="Title" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/LoyaltyHeaderStyle" />
+    <TextView android:id="@id/transaction_eventtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="EventTitle" android:layout_below="@id/transaction_title" android:layout_alignParentLeft="true" style="@style/TransactionEventType" />
+    <TextView android:id="@id/transaction_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Date" android:layout_below="@id/transaction_eventtitle" android:layout_alignParentLeft="true" style="@style/LoyaltyTextStyle" />
+    <TextView android:id="@id/transaction_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Description" android:layout_below="@id/transaction_date" android:layout_alignLeft="@id/transaction_date" style="@style/LoyaltyTextStyle" />
+    <TextView android:id="@id/transaction_totalpoints" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/total_point_margin" android:text="Total Points:" android:layout_below="@id/transaction_description" android:layout_alignLeft="@id/transaction_description" style="@style/LoyaltyTextStyle" />
+    <TextView android:id="@id/transaction_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/transaction_totalpoints" android:layout_alignLeft="@id/transaction_totalpoints" style="@style/LoyaltyTextStyle" />
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/photos_cast_impl_pinwheel" android:paddingBottom="20.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pinwheel_no_star" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/photos_cast_impl_pinwheel_star" android:paddingBottom="20.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pinwheel_star" android:layout_alignLeft="@id/photos_cast_impl_pinwheel" android:layout_alignTop="@id/photos_cast_impl_pinwheel" />
+        <ImageView android:id="@id/photos_cast_impl_logo" android:paddingBottom="40.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/intro_google_logo" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <ViewSwitcher android:id="@id/photos_cast_impl_switcher" android:background="@color/quantum_black_100" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:inAnimation="@anim/zoom_fade_in" android:outAnimation="@anim/slide_out_left">
+        <include layout="@layout/cast_photo" />
+        <include layout="@layout/cast_photo" />
+    </ViewSwitcher>
+</merge>

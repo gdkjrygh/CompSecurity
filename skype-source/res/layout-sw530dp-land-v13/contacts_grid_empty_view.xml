@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/contact_list_empty_view" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/EmptyViewLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/contact_list_empty_text_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <com.skype.android.widget.SymbolView android:textSize="72.0dip" android:textColor="@color/skype_light_fog" android:id="@id/contact_top_picks_empty_avatar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-20.0dip" app:symbol_code="SkypeAddressBook" />
+        <TextView android:id="@id/contact_empty_add_contacts_text" android:paddingTop="@dimen/size_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_could_not_find_skype_contacts" android:layout_below="@id/contact_top_picks_empty_avatar" style="@style/EmptyViewText" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/contact_list_empty_text_container" android:layout_alignParentBottom="true">
+        <Button android:gravity="left" android:id="@id/contact_empty_add_contacts_button" android:background="@drawable/focus_highlight" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxWidth="@dimen/empty_item_max_width" android:text="@string/text_contacts_pnv_empty_add_link" style="@style/EmptyViewClickableText" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<div class="small-12 homecast">
+    <ul id="items" >
+        <li id='char_a' coach-mark="Tap to replace with a friend" coach-mark-style="left">
+            <div class="cast" queued="{{user_a.thumb}}" q-fail="profile-fail.png" q-retry="true" q-click="select_char('a')"></div>
+            <p class="mini" ng-bind="user_a | displayName"></p>
+        </li>
+        <li ng-show="comic.type != 0" coach-mark="Trade places in a comic!" coach-mark-style="middle">
+            <a class="swap" ng-click="swap_users()" ng-class="{disabled:!user_b}"><i class="icon-swap"></i></a>
+        </li>
+        <li id='char_b' ng-show="comic.type != 0" coach-mark="Add a friend to unlock more scenes" coach-mark-style="right">
+            <div ng-if="user_b" class="cast" queued="{{user_b.thumb}}" q-fail="profile-fail.png" q-retry="true" q-click="select_char('b')"></div>
+			<div ng-if="!user_b" ng-click="select_char('b')">
+                <div class="add"></div>
+                <p class="mini">Add Friend</p>
+            </div>
+            <p class="mini" ng-bind="user_b | displayName"></p></a>
+            <div ng-if="can_remove_costar()" class="remove"><i class="icon-close-circle icon-large" ng-click="remove_costar()"></i></div>
+        </li>
+    </ul>
+</div>

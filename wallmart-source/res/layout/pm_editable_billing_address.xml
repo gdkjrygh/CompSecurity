@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="top|left|center" android:orientation="vertical" android:id="@id/pm_billing_addr_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="bottom|left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pm_add_credit_card_address_title" style="@style/Payment.ContentHeading" />
+    <com.walmartlabs.ui.FloatLabel android:id="@id/pm_add_cc_address1_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pm_add_credit_card_hint_address1" style="@style/Payment.FloatLabel.White" />
+    <EditText android:id="@id/pm_add_cc_address1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:hint="@string/pm_add_credit_card_hint_address1" android:inputType="textPostalAddress" style="@style/Payment.EditText" />
+    <com.walmartlabs.ui.FloatLabel android:id="@id/pm_add_cc_address2_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pm_add_credit_card_hint_address2" style="@style/Payment.FloatLabel.White" />
+    <EditText android:id="@id/pm_add_cc_address2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:hint="@string/pm_add_credit_card_hint_address2" android:inputType="text" style="@style/Payment.EditText" />
+    <com.walmartlabs.ui.FloatLabel android:id="@id/pm_add_cc_zip_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pm_add_credit_card_hint_zip" style="@style/Payment.FloatLabel.White" />
+    <EditText android:id="@id/pm_add_cc_zip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:hint="@string/pm_add_credit_card_hint_zip" android:maxLength="5" android:inputType="number" style="@style/Payment.EditText" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.walmartlabs.ui.FloatLabel android:id="@id/pm_add_cc_city_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pm_add_credit_card_hint_city" style="@style/Payment.FloatLabel.White" />
+            <EditText android:id="@id/pm_add_cc_city" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="1.0dip" android:hint="@string/pm_add_credit_card_hint_city" android:inputType="text" style="@style/Payment.EditText" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.walmartlabs.ui.FloatLabel android:id="@id/pm_add_cc_state_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pm_add_credit_card_hint_state" style="@style/Payment.FloatLabel.White" />
+            <com.walmartlabs.ui.NoDefaultSpinner android:id="@id/pm_add_cc_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:spinnerMode="dropdown" style="@style/Payment.Dropdown" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

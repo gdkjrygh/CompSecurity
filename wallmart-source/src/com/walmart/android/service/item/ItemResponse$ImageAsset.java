@@ -1,0 +1,32 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.walmart.android.service.item;
+
+
+// Referenced classes of package com.walmart.android.service.item:
+//            ItemResponse
+
+public static class Versions
+{
+    public static class Versions
+    {
+
+        public String hero;
+        public String thumbnail;
+        public String tile;
+        public String zoom;
+
+        public Versions()
+        {
+        }
+    }
+
+
+    public Versions versions;
+
+    public Versions()
+    {
+    }
+}

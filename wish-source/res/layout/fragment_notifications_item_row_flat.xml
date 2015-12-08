@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/fragment_notifications_item_row_bg_selector_flat" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="top" android:orientation="horizontal" android:id="@id/fragment_notifications_item_row_highlight" android:background="@color/wish_new_item_highlight" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.contextlogic.wish.ui.components.image.BorderedImageView android:id="@id/fragment_notifications_item_row_image" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+        <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:layout_weight="1.0">
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="11.0dip" android:textColor="@color/wish_extra_light_text" android:layout_gravity="top|left|center" android:id="@id/fragment_notifications_item_row_timestamp_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="13.0dip" android:textColor="@color/wish_main_text" android:layout_gravity="top|left|center" android:id="@id/fragment_notifications_item_row_notification_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <RelativeLayout android:layout_gravity="right|center" android:id="@id/fragment_notifications_item_row_action_button" android:layout_width="70.0dip" android:layout_height="35.0dip" android:layout_margin="5.0dip">
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/blue_button_bg_selector_flat" />
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="12.0dip" android:textStyle="bold" android:textColor="@color/wish_white" android:ellipsize="end" android:gravity="center" android:id="@id/fragment_notifications_item_row_action_button_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" />
+        </RelativeLayout>
+        <com.contextlogic.wish.ui.fragment.profile.userlist.ProfileUserListFollowButton android:layout_gravity="right|center" android:id="@id/fragment_notifications_item_row_follow_button" android:layout_width="80.0dip" android:layout_height="35.0dip" android:layout_margin="5.0dip" />
+    </LinearLayout>
+</FrameLayout>

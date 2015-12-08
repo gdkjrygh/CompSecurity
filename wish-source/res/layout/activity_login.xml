@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.contextlogic.wish.ui.components.grid.StaggeredGridView android:layout_gravity="top" android:id="@id/activity_login_gridview" android:animationCache="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollingCache="false" android:cacheColorHint="@color/wish_transparent" />
+    <View android:background="@color/wish_login_splash_fader" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/login_container" android:padding="10.0dip" android:layout_width="220.0dip" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/activity_login_logged_out_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:layout_width="120.0dip" android:layout_height="46.0dip" android:src="@drawable/splash_logo_dark" />
+            <com.contextlogic.wish.ui.components.text.AutoResizeTextView android:textSize="16.0dip" android:textColor="@color/wish_login_tagline" android:gravity="top|center" android:id="@id/activity_login_tagline_text" android:layout_width="fill_parent" android:layout_height="80.0dip" android:maxLines="1" android:singleLine="true" />
+            <com.contextlogic.wish.ui.components.button.UnifiedFontButton android:textSize="15.0dip" android:textStyle="bold" android:textColor="@color/wish_white" android:layout_gravity="right|center" android:id="@id/activity_login_create_account_button" android:background="@drawable/splash_button_bg_selector" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="@string/create_account" />
+            <com.contextlogic.wish.ui.components.button.UnifiedFontButton android:textSize="15.0dip" android:textStyle="bold" android:textColor="@color/wish_white" android:layout_gravity="right|center" android:id="@id/activity_login_sign_in_button" android:background="@drawable/splash_button_bg_selector" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginTop="10.0dip" android:text="@string/sign_in" />
+            <FrameLayout android:id="@id/activity_login_loading_spinner" android:layout_width="fill_parent" android:layout_height="100.0dip">
+                <ProgressBar android:layout_gravity="center" android:layout_width="30.0dip" android:layout_height="30.0dip" android:indeterminateOnly="true" android:layout_centerInParent="true" style="@style/WishAppThemeProgressIndicator" />
+            </FrameLayout>
+            <com.contextlogic.wish.ui.components.view.PoweredByWishDarkView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/activity_login_relogin_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.contextlogic.wish.ui.components.image.BorderedImageView android:layout_gravity="center" android:id="@id/activity_login_profile_image" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginBottom="5.0dip" />
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/wish_login_name_text" android:ellipsize="end" android:gravity="center" android:id="@id/activity_login_name_text" android:layout_width="fill_parent" android:layout_height="30.0dip" android:singleLine="true" />
+            <com.contextlogic.wish.ui.components.button.UnifiedFontButton android:textSize="15.0dip" android:textStyle="bold" android:textColor="@color/wish_white" android:layout_gravity="right|center" android:id="@id/activity_login_relogin_button" android:background="@drawable/splash_button_bg_selector" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="30.0dip" android:text="@string/sign_in" />
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="14.0dip" android:textColor="@color/wish_light_text" android:gravity="center" android:layout_width="fill_parent" android:layout_height="25.0dip" android:text="@string/not_you" android:singleLine="false" />
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/wish_blue" android:gravity="center" android:id="@id/activity_login_change_user_button" android:layout_width="fill_parent" android:layout_height="30.0dip" android:text="@string/change_user" android:singleLine="false" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="14.0dip" android:textColor="@android:color/white" android:layout_gravity="top|left|center" android:id="@id/activity_login_dev_settings_button" android:background="@color/wish_dev_overlay" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dev_settings" android:singleLine="true" />
+    <LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:id="@id/activity_login_page_gwallet_offer" android:background="@drawable/activity_login_gwallet_offer" android:padding="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/wallet_payment_mark" />
+        <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="12.0dip" android:textColor="@color/wish_login_gwallet_offer" android:gravity="left|center" android:layout_gravity="center" android:id="@id/activity_login_page_gwallet_offer_text" android:paddingRight="8.0dip" android:layout_width="220.0dip" android:layout_height="wrap_content" android:singleLine="false" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/activity_login_modal_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="top" android:id="@id/activity_login_tablet_modal_mask" android:background="@color/wish_black_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/activity_login_tablet_modal_container_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_gravity="center" android:id="@id/activity_login_tablet_modal_container" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    </FrameLayout>
+</merge>

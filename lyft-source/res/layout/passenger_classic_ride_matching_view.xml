@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.passenger.PassengerClassicRideMatchingView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.ui.HeightObservableLayout android:orientation="vertical" android:id="@id/passenger_ride_top" android:background="@drawable/actionbar_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <me.lyft.android.controls.MenuButtonToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </me.lyft.android.ui.HeightObservableLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <include layout="@layout/warning" />
+        <View android:layout_gravity="top" android:background="@drawable/bg_top_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+        <View android:layout_gravity="bottom" android:background="@drawable/bg_footer_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+    </FrameLayout>
+    <me.lyft.android.ui.HeightObservableLayout android:orientation="vertical" android:id="@id/passenger_ride_bottom" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <me.lyft.android.ui.passenger.PassengerRideAddressInput android:id="@id/passenger_ride_address_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" />
+        <me.lyft.android.ui.passenger.PassengerMatchingBottomView android:orientation="vertical" android:id="@id/contacting_driver_bottom_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </me.lyft.android.ui.HeightObservableLayout>
+</me.lyft.android.ui.passenger.PassengerClassicRideMatchingView>

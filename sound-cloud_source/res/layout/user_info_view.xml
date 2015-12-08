@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.soundcloud.android.view.MultiSwipeRefreshLayout android:id="@id/str_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.soundcloud.android.view.EmptyView android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ScrollView android:id="@id/user_details_holder" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/website" android:visibility="gone" android:text="@string/website" android:drawableLeft="@drawable/favicon_website" style="@style/Profile.Info.Link" />
+                <TextView android:id="@id/discogs_name" android:visibility="gone" android:text="@string/discogs" android:drawableLeft="@drawable/favicon_discogs" style="@style/Profile.Info.Link" />
+                <TextView android:id="@id/myspace_name" android:visibility="gone" android:text="@string/myspace" android:drawableLeft="@drawable/favicon_myspace" style="@style/Profile.Info.Link" />
+                <TextView android:id="@id/description" android:padding="4.0dip" android:visibility="gone" style="@style/Profile.Info" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</com.soundcloud.android.view.MultiSwipeRefreshLayout>

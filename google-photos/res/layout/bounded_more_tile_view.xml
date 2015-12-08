@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.photos.list.PhotoTileView android:id="@id/more_image" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/quantum_grey600" android:gravity="center_vertical" android:layout_gravity="top|left|center" android:id="@id/selected_count" android:background="@drawable/bg_selection" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:textIsSelectable="false" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/album_image_more_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@id/overflow_count" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" style="@style/quantum_text_title_white" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_keyboard_arrow_right_18x24" android:contentDescription="@string/photos_list_more_photos" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/mm_theme_panel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:paddingLeft="@dimen/mm_unit" android:paddingTop="@dimen/mm_small_unit_3" android:paddingRight="@dimen/mm_unit" android:paddingBottom="@dimen/mm_small_unit_3" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:layout_gravity="left" android:id="@id/mm_theme_cancel" android:background="@color/mm_transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_clear_white_24" android:contentDescription="@string/mm_content_cancel_theme" />
+        <ImageButton android:layout_gravity="right" android:id="@id/mm_theme_save" android:background="@color/mm_transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_check_white_24" android:contentDescription="@string/mm_content_save_theme" />
+    </FrameLayout>
+    <com.google.android.apps.moviemaker.ui.ListenableHorizontalScrollView android:id="@id/mm_theme_scroll" android:layout_width="fill_parent" android:layout_height="@dimen/mm_unit_5">
+        <com.google.android.apps.moviemaker.ui.ThemeScrollView android:orientation="horizontal" android:id="@id/mm_theme_scroll_container" android:paddingLeft="@dimen/mm_small_unit_2" android:paddingRight="@dimen/mm_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mm_small_unit_2" />
+    </com.google.android.apps.moviemaker.ui.ListenableHorizontalScrollView>
+</LinearLayout>

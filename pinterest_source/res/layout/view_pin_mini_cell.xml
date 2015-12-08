@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/rounded_rect_white" android:layout_width="@dimen/dynamic_story_width" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pinterest.ui.imageview.GrayWebImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/margin_half" android:layout_weight="1.0" />
+    <TextView android:textSize="@dimen/text_caption" android:textColor="@color/blue_commerce" android:id="@id/price_tv" android:visibility="gone" android:layout_marginLeft="@dimen/margin_half" android:layout_marginBottom="@dimen/margin_half" style="@style/list_cell_text" />
+    <TextView android:textSize="@dimen/text_grid_caption" android:textStyle="normal" android:textColor="@color/text_dark" android:id="@id/desc_tv" android:visibility="gone" android:layout_width="fill_parent" android:layout_marginLeft="@dimen/margin_half" android:layout_marginRight="@dimen/margin_half" android:layout_marginBottom="@dimen/margin_half" android:maxLines="3" android:singleLine="false" android:lineSpacingMultiplier="1.1" style="@style/list_cell_subtext" />
+    <TextView android:textSize="@dimen/text_caption" android:id="@id/title_tv" android:layout_width="fill_parent" android:layout_marginLeft="@dimen/margin_half" android:layout_marginRight="@dimen/margin_half" android:layout_marginBottom="@dimen/margin_half" android:maxLines="2" android:singleLine="false" android:lineSpacingMultiplier="1.1" style="@style/list_cell_text" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/info_container" android:visibility="visible" android:layout_marginLeft="@dimen/margin_half" android:layout_marginRight="@dimen/margin_half" android:layout_marginBottom="@dimen/margin_half" style="@style/fullline_view">
+        <com.pinterest.ui.imageview.ProportionalImageView android:id="@id/icon_iv" android:visibility="gone" android:layout_width="@dimen/text_grid_body" android:layout_height="@dimen/text_grid_body" android:layout_marginRight="@dimen/margin_half" />
+        <com.pinterest.ui.text.PTextView android:textSize="@dimen/text_grid_caption" android:textColor="@color/text_light" android:id="@id/subtitle_tv" android:layout_width="fill_parent" style="@style/list_cell_subtext" />
+    </LinearLayout>
+</LinearLayout>

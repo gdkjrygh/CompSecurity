@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:background="@drawable/bg_popup_black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <RelativeLayout android:id="@id/cb_left_panel" android:background="@drawable/bg_popup_blue_splite_right" android:layout_width="wrap_content" android:layout_height="@dimen/grid_thumbnail_bg_item" android:layout_centerVertical="true">
+            <ImageView android:id="@id/btn_up" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/folder_back_selector_new" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <HorizontalScrollView android:id="@id/cb_right_panel" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/cb_left_panel">
+            <LinearLayout android:orientation="horizontal" android:id="@id/colorthumb_panel" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+    </RelativeLayout>
+</RelativeLayout>

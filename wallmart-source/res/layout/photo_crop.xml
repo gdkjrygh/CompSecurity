@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ff272727" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="#fff0f0f0" android:gravity="center" android:id="@id/description" android:paddingLeft="@dimen/photo_main_padding_2x" android:paddingTop="@dimen/photo_main_padding_2x" android:paddingRight="@dimen/photo_main_padding_2x" android:paddingBottom="@dimen/photo_main_padding_half" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/photo_crop_text_full" style="@style/PhotoTextStyle.Small" />
+    <LinearLayout android:orientation="vertical" android:id="@id/bottom_layout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <View android:id="@id/shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <Button android:id="@id/crop_button" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_margin="@dimen/photo_main_padding" android:text="Crop" style="@style/PhotoPrimaryButton" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/bottom_layout" android:layout_below="@id/description">
+        <ProgressBar android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <com.walmartlabs.android.photo.view.crop.CropView android:id="@id/cropview" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

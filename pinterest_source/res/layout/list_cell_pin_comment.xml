@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_vertical" android:paddingLeft="@dimen/margin" android:paddingTop="@dimen/list_cell_padding_topbottom" android:paddingRight="@dimen/margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pinterest.ui.imageview.GrayWebImageView android:id="@id/icon_wiv" style="@style/list_cell_thumbnail_image" />
+        <TextView android:textStyle="bold" android:id="@id/name_tv" android:layout_width="fill_parent" android:layout_marginTop="1.0dip" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="2.0dip" android:layout_toRightOf="@id/icon_wiv" android:layout_alignTop="@id/icon_wiv" style="@style/pin_username" />
+        <TextView android:id="@id/comment_tv" android:layout_marginBottom="1.0dip" android:layout_below="@id/name_tv" android:layout_alignLeft="@id/name_tv" android:layout_alignRight="@id/name_tv" style="@style/pin_comment" />
+        <TextView android:id="@id/date_tv" android:paddingBottom="@dimen/list_cell_padding_topbottom" android:layout_below="@id/comment_tv" android:layout_alignLeft="@id/comment_tv" android:layout_alignRight="@id/comment_tv" style="@style/pin_date" />
+        <ViewStub android:id="@id/description_counts" android:layout="@layout/list_cell_pin_description_counts" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/date_tv" android:layout_alignLeft="@id/date_tv" />
+    </RelativeLayout>
+    <View android:id="@id/divider" style="@style/list_cell_divider" />
+</merge>

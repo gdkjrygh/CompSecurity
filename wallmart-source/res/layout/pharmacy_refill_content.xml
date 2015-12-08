@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/pharmacy_light_gray_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.walmart.android.ui.SafeListView android:scrollbarStyle="outsideOverlay" android:id="@id/refill_list" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@color/transparent" android:cacheColorHint="@color/transparent" android:divider="@null" android:dividerHeight="0.0dip" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/empty_view" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icn_no_refills" />
+        <TextView android:textSize="15.0sp" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/pharmacy_no_refills_text" />
+    </LinearLayout>
+    <include android:id="@id/loading_view" layout="@layout/loading_page" />
+</FrameLayout>

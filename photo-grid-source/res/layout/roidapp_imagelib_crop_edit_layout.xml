@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.roidapp.imagelib.crop.CropImageView android:layout_gravity="center" android:id="@id/roidapp_imagelib_imageCropPhoto" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/roidapp_imagelib_crop_horizontalScrollCropView" />
+    <TextView android:textSize="@dimen/crop_original_textsize" android:textColor="@color/white" android:gravity="center" android:id="@id/roidapp_imagelib_revert_original" android:background="@drawable/roidapp_imagelib_crop_original_bg" android:paddingLeft="@dimen/crop_original_textpadding" android:paddingRight="@dimen/crop_original_textpadding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/crop_original_bg_height" android:layout_marginLeft="@dimen/crop_original_textpadding" android:layout_marginTop="@dimen/crop_original_textpadding" android:layout_marginRight="@dimen/crop_original_textpadding" android:text="@string/roidapp_imagelib_original" android:drawableLeft="@drawable/roidapp_imagelib_icon_original" android:drawablePadding="5.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <HorizontalScrollView android:id="@id/roidapp_imagelib_crop_horizontalScrollCropView" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/roidapp_imagelib_crop_btnCropRatio" android:background="@drawable/roidapp_imagelib_bg_popup" android:layout_width="wrap_content" android:layout_height="@dimen/crop_bottom_height">
+            <RelativeLayout android:gravity="center" android:id="@id/roidapp_imagelib_crop_Proportion" android:background="@drawable/roidapp_imagelib_bg_popup" android:layout_width="@dimen/crop_layout_width" android:layout_height="@dimen/crop_layout_width">
+                <TextView android:textSize="@dimen/banner_text_size" android:textColor="@color/text_white" android:gravity="center" android:id="@id/roidapp_imagelib_crop_btnProportionMode" android:background="@drawable/roidapp_imagelib_bg_popup_blue_splite_right" android:paddingTop="@dimen/roidapp_imagelib_crop_proportion_top" android:layout_width="@dimen/crop_confirm_button_width" android:layout_height="@dimen/crop_confirm_button_width" android:drawableTop="@drawable/roidapp_imagelib_icon_htw" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:id="@id/roidapp_imagelib_crop_layout_ratiofree" android:layout_width="@dimen/crop_layout_width" android:layout_height="@dimen/crop_layout_width">
+                <ImageButton android:id="@id/roidapp_imagelib_crop_btnRatiofree" android:background="@drawable/roidapp_imagelib_icon_ratiofree" android:clickable="false" android:layout_width="@dimen/crop_button_width" android:layout_height="@dimen/crop_button_width" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:id="@id/roidapp_imagelib_crop_layout_1to1" android:layout_width="@dimen/crop_layout_width" android:layout_height="@dimen/crop_layout_width">
+                <ImageButton android:id="@id/roidapp_imagelib_crop_btn1to1" android:background="@drawable/roidapp_imagelib_icon_1to1" android:clickable="false" android:layout_width="@dimen/crop_button_width" android:layout_height="@dimen/crop_button_width" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:id="@id/roidapp_imagelib_crop_layout_4to3" android:layout_width="@dimen/crop_layout_width" android:layout_height="@dimen/crop_layout_width">
+                <ImageButton android:id="@id/roidapp_imagelib_crop_btn4to3" android:background="@drawable/roidapp_imagelib_icon_4to3" android:clickable="false" android:layout_width="@dimen/crop_button_width" android:layout_height="@dimen/crop_button_width" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:id="@id/roidapp_imagelib_crop_layout_3to4" android:layout_width="@dimen/crop_layout_width" android:layout_height="@dimen/crop_layout_width">
+                <ImageButton android:id="@id/roidapp_imagelib_crop_btn3to4" android:background="@drawable/roidapp_imagelib_icon_3to4" android:clickable="false" android:layout_width="@dimen/crop_button_width" android:layout_height="@dimen/crop_button_width" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:id="@id/roidapp_imagelib_crop_layout_5to7" android:layout_width="@dimen/crop_layout_width" android:layout_height="@dimen/crop_layout_width">
+                <ImageButton android:id="@id/roidapp_imagelib_crop_btn5to7" android:background="@drawable/roidapp_imagelib_icon_5to7" android:clickable="false" android:layout_width="@dimen/crop_button_width" android:layout_height="@dimen/crop_button_width" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:id="@id/roidapp_imagelib_crop_layout_7to5" android:layout_width="@dimen/crop_layout_width" android:layout_height="@dimen/crop_layout_width">
+                <ImageButton android:id="@id/roidapp_imagelib_crop_btn7to5" android:background="@drawable/roidapp_imagelib_icon_7to5" android:clickable="false" android:layout_width="@dimen/crop_button_width" android:layout_height="@dimen/crop_button_width" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:id="@id/roidapp_imagelib_crop_layout_2to3" android:layout_width="@dimen/crop_layout_width" android:layout_height="@dimen/crop_layout_width">
+                <ImageButton android:id="@id/roidapp_imagelib_crop_btn2to3" android:background="@drawable/roidapp_imagelib_icon_2to3" android:clickable="false" android:layout_width="@dimen/crop_button_width" android:layout_height="@dimen/crop_button_width" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:id="@id/roidapp_imagelib_crop_layout_3to2" android:layout_width="@dimen/crop_layout_width" android:layout_height="@dimen/crop_layout_width">
+                <ImageButton android:id="@id/roidapp_imagelib_crop_btn3to2" android:background="@drawable/roidapp_imagelib_icon_3to2" android:clickable="false" android:layout_width="@dimen/crop_button_width" android:layout_height="@dimen/crop_button_width" android:layout_marginLeft="@dimen/crop_ratio_margin_gap" android:layout_marginRight="@dimen/crop_ratio_margin_gap" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:id="@id/roidapp_imagelib_crop_layout_3to5" android:layout_width="@dimen/crop_layout_width" android:layout_height="@dimen/crop_layout_width">
+                <ImageButton android:id="@id/roidapp_imagelib_crop_btn3to5" android:background="@drawable/roidapp_imagelib_icon_3to5" android:clickable="false" android:layout_width="@dimen/crop_button_width" android:layout_height="@dimen/crop_button_width" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:id="@id/roidapp_imagelib_crop_layout_5to3" android:layout_width="@dimen/crop_layout_width" android:layout_height="@dimen/crop_layout_width">
+                <ImageButton android:id="@id/roidapp_imagelib_crop_btn5to3" android:background="@drawable/roidapp_imagelib_icon_5to3" android:clickable="false" android:layout_width="@dimen/crop_button_width" android:layout_height="@dimen/crop_button_width" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:id="@id/roidapp_imagelib_crop_layout_9to16" android:layout_width="@dimen/crop_layout_width" android:layout_height="@dimen/crop_layout_width">
+                <ImageButton android:id="@id/roidapp_imagelib_crop_btn9to16" android:background="@drawable/roidapp_imagelib_icon_9to16" android:clickable="false" android:layout_width="@dimen/crop_button_width" android:layout_height="@dimen/crop_button_width" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:id="@id/roidapp_imagelib_crop_layout_16to9" android:layout_width="@dimen/crop_layout_width" android:layout_height="@dimen/crop_layout_width">
+                <ImageButton android:id="@id/roidapp_imagelib_crop_btn16to9" android:background="@drawable/roidapp_imagelib_icon_16to9" android:clickable="false" android:layout_width="@dimen/crop_button_width" android:layout_height="@dimen/crop_button_width" />
+            </RelativeLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/camera_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/fab_button_size" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/bottom_bar_background" android:background="@color/camera_controlbar_bg_dark" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_alignTop="@id/btn_gallery" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    <FrameLayout android:id="@id/btn_gallery" android:background="@drawable/bg_clickable_light" android:paddingTop="@dimen/camera_button_padding_top" android:paddingBottom="@dimen/camera_button_padding_top" android:layout_width="0.0dip" android:layout_height="@dimen/default_touch_target" android:layout_toLeftOf="@id/btn_translate" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_photo_library_white_24dp" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/btn_translate" android:background="@drawable/bg_action_button_red" android:paddingTop="@dimen/camera_button_padding_top" android:paddingBottom="@dimen/camera_button_padding_top" android:layout_width="@dimen/fab_button_size" android:layout_height="@dimen/fab_button_size" android:layout_marginBottom="-4.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_photo_camera_white_24" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/btn_retake" android:background="@drawable/bg_clickable_light" android:paddingTop="@dimen/camera_button_padding_top" android:paddingBottom="@dimen/camera_button_padding_top" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="@dimen/default_touch_target" android:layout_toRightOf="@id/btn_translate" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <ImageView android:layout_gravity="center" android:id="@id/btn_retake_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_play_circle_outline_white_24" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/btn_pause" android:background="@drawable/bg_clickable_light" android:paddingTop="@dimen/camera_button_padding_top" android:paddingBottom="@dimen/camera_button_padding_top" android:layout_width="0.0dip" android:layout_height="@dimen/default_touch_target" android:layout_toRightOf="@id/btn_translate" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <ImageView android:layout_gravity="center" android:id="@id/btn_pause_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_pause_circle_outline_white_24" />
+    </FrameLayout>
+</RelativeLayout>

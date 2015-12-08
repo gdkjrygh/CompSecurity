@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.placesearch.PlaceItemView android:id="@id/place_search_item_view" android:background="@drawable/selectable_item" android:paddingRight="@dimen/span16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/span64"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_vertical" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/place_icon_image_view" android:duplicateParentState="true" android:layout_width="@dimen/span56" android:layout_height="wrap_content" android:src="@drawable/ic_place_default" android:scaleType="centerInside" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span56" android:layout_marginRight="@dimen/span32">
+            <TextView android:textSize="@dimen/normal_text" android:textStyle="bold" android:textColor="@color/charcoal_2" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/place_title_text_view" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+            <TextView android:textSize="@dimen/small_text" android:textColor="@color/grey_4" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/place_subtitle_text_view" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+    </FrameLayout>
+    <ImageView android:layout_gravity="right|center" android:id="@id/place_edit_button" android:clickable="true" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/edit_shortcut_button" />
+    <ProgressBar android:layout_gravity="right|center" android:id="@id/place_progress_spinner" android:duplicateParentState="true" android:layout_width="24.0dip" android:layout_height="24.0dip" android:indeterminateDrawable="@drawable/place_search_item_progress" />
+</me.lyft.android.ui.placesearch.PlaceItemView>

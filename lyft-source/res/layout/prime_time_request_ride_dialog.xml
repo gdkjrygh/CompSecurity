@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.passenger.PrimeTimeRequestRideDialogView style="@style/DialogContainerView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout style="@style/DialogWithCloseButtonView">
+        <LinearLayout android:id="@id/dialog_container" style="@style/DialogContainer">
+            <ImageView android:background="@color/grey_5" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/bg_prime_time_request_ride_dialog" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/grey_5" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pt_charcoal" />
+                <TextView android:textSize="@dimen/big_text_2" android:textColor="@color/charcoal_2" android:id="@id/prime_time_percentage_text" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView android:gravity="center_horizontal" android:id="@id/prime_time_percentage_description_text" android:paddingLeft="16.0dip" android:paddingTop="22.0dip" android:paddingRight="16.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PrimaryText" />
+            <TextView android:textStyle="italic" android:gravity="center_horizontal" android:id="@id/courier_discount_text" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/prime_time_try_lyft_line" style="@style/SecondaryText" />
+            <View android:layout_marginTop="10.0dip" style="@style/HorizontalDialogDivider" />
+            <Button android:id="@id/confirm_lyft" android:text="@string/confirm_lyft" style="@style/DialogButtonPrimary" />
+            <View android:id="@id/confirm_courier_switch_divider" style="@style/HorizontalDialogDivider" />
+            <Button android:id="@id/confirm_courier_switch" android:text="@string/switch_to_lyft_line" style="@style/DialogButton" />
+        </LinearLayout>
+    </FrameLayout>
+    <ImageView android:id="@id/cancel_button" android:layout_marginBottom="20.0dip" style="@style/CloseDialogButton" />
+    <TextView android:layout_gravity="bottom|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/cancel_request" style="@style/CancelRequestDialogBackground" />
+</me.lyft.android.ui.passenger.PrimeTimeRequestRideDialogView>

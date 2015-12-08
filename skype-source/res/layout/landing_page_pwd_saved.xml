@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/skype_blue" android:paddingTop="@dimen/sign_in_header_logo_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/sign_in_header" layout="@layout/sign_in_header" style="@style/SignInHeaderVisibility" />
+    <TextView android:textSize="@dimen/landing_create_account_font" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/login_as_other_label" android:background="@drawable/square_blue_btn_focus_selector" android:layout_width="fill_parent" android:layout_height="@dimen/landing_create_height" android:text="@string/label_login_as_other" android:layout_alignParentBottom="true" android:onClick="onClick" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/sign_in_header" android:layout_alignWithParentIfMissing="true">
+        <RelativeLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.skype.android.widget.PathClippedImageView android:id="@id/user_avatar_image" android:layout_width="@dimen/landing_saved_pwd_avatar_size" android:layout_height="@dimen/landing_saved_pwd_avatar_size" android:layout_marginTop="@dimen/landing_saved_pwd_avatar_margin_top" android:layout_marginBottom="@dimen/size_2x" android:src="@drawable/avatar_medium_default_icon" android:layout_centerHorizontal="true" app:border_color="@color/white" app:border_width="@dimen/landing_saved_pwd_avatar_stroke_width" />
+            <TextView android:textSize="@dimen/landing_saved_pwd_text_size" android:textColor="@color/white" android:id="@id/login_as_header" android:paddingLeft="@dimen/size_1x" android:paddingRight="@dimen/size_1x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/user_avatar_image" android:layout_centerHorizontal="true" />
+            <com.skype.android.widget.SymbolView android:id="@id/next_arrow" android:layout_below="@id/login_as_header" android:layout_centerHorizontal="true" android:onClick="onClick" android:contentDescription="@string/label_next" app:symbol_code="Right" app:symbolBackground="@color/button_bg_on_blue_positive_idle" app:symbolCircleBackground="true" style="@style/LandingPageNextButton" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

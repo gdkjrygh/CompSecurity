@@ -1,0 +1,17 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+import java.util.concurrent.TimeUnit;
+
+public interface jyt
+{
+
+    public abstract jyw a();
+
+    public abstract jyw a(long l, TimeUnit timeunit);
+
+    public abstract void a(jyx jyx);
+
+    public abstract void b();
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/loyalty_page_top_margin" />
+    <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:id="@id/share_donate_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/loyalty_page_left_margin" android:layout_marginRight="@dimen/loyalty_page_right_margin" android:text="@string/share_donate_title" android:layout_below="@id/line" style="@style/LoyaltyTextStyle" />
+    <RelativeLayout android:id="@id/points_indicator_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="12.0dip" android:layout_below="@id/share_donate_title">
+        <include layout="@layout/points_indicator_fragment" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/top_btn_layout" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_below="@id/points_indicator_layout">
+        <Button android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff645f59" android:gravity="center" android:id="@id/share_btn" android:background="@drawable/share_button_selector" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="wrap_content" android:layout_height="50.0dip" android:text="@string/share_btn_str" android:layout_weight="0.5" android:layout_below="@id/points_indicator" />
+        <Button android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff645f59" android:gravity="center" android:id="@id/donate_btn" android:background="@drawable/white_button_selector" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="wrap_content" android:layout_height="50.0dip" android:text="@string/donate_btn_str" android:layout_weight="0.5" android:layout_toRightOf="@id/share_btn" android:layout_below="@id/points_indicator" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/top_btn_layout" />
+</RelativeLayout>

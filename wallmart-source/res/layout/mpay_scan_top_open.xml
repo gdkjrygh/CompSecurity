@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/payment_background_drawer" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="@dimen/payment_margin" android:paddingTop="@dimen/payment_margin_small" android:paddingRight="@dimen/payment_margin_small" android:paddingBottom="@dimen/payment_margin_small" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+            <TextView android:id="@id/mpay_scan_gc_order_open" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Payment.Text.Subhead.White" />
+            <TextView android:id="@id/mpay_scan_gc_balance_open" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Payment.Text.Body.White.Translucent" />
+        </LinearLayout>
+        <android.support.v7.widget.SwitchCompat android:id="@id/mpay_scan_gc_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Payment.SwitchButton" />
+        <TextView android:id="@id/mpay_scan_gc_balance_open_noswitch" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/payment_margin_small" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Payment.Text.Body.White.Translucent" />
+    </RelativeLayout>
+    <View android:background="@color/text_white_translucent" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <RelativeLayout android:paddingLeft="@dimen/payment_margin" android:paddingTop="@dimen/payment_margin_small" android:paddingRight="@dimen/payment_margin_small" android:paddingBottom="@dimen/payment_margin_small" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/mpay_scan_cc_info_open" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerVertical="true" style="@style/Payment.Text.Subhead.White" />
+        <android.support.v7.widget.SwitchCompat android:id="@id/mpay_scan_cc_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Payment.SwitchButton" />
+    </RelativeLayout>
+    <View android:background="@color/text_white_translucent" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

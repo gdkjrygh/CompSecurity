@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="master_config_schema.xsd">
+    <!-- IMPORTANT: the TokenService and XML Service below MUST be complete -->
+    <!--            to successfully retrieve weather data.                  -->
+    <!--            The MemberID must also match the list of layers below   -->
+    <TokenService><!-- Tessera 2.0 configuraion -->
+        <SharedKey>css78e9f-1225-55hc-r13t-j1a04k33hdd7</SharedKey>
+        <MemberID>MOBILESDK</MemberID>
+    </TokenService>
+
+    <!--
+        OverlayID should correspond to the GeoDataType Ids defined as follows:
+        STORM_CELL       = 2;
+        EARTHQUAKE       = 4;
+        HURRICANE        = 7;
+        WEATHER_ALERT    = 10.
+        TRAFFIC_INCIDENT = 13.
+    -->
+    <Overlays>
+        <Overlay>
+            <OverlayID>10</OverlayID>
+            <Name>Weather Alerts</Name>
+            <Polling units="sec">600</Polling>
+            <Decluttering>FALSE</Decluttering>
+            <Categories>
+                <Category>
+                    <Name>Tropical</Name>
+                    <FeatureID>WatchWarningTropical</FeatureID>
+                </Category>
+                <Category>
+                    <Name>Severe</Name>
+                    <FeatureID>WatchWarningThunderstorm</FeatureID>
+                </Category>
+                <Category>
+                    <Name>Flood</Name>
+                    <FeatureID>WatchWarningFlood</FeatureID>
+                </Category>
+                <Category>
+                    <Name>Winter</Name>
+                    <FeatureID>WatchWarningWinter</FeatureID>
+                </Category>
+                <Category>
+                    <Name>Marine</Name>
+                    <FeatureID>WatchWarningMarine</FeatureID>
+                </Category>
+                <Category>
+                    <Name>Other</Name>
+                    <FeatureID>WatchWarningOther</FeatureID>
+                </Category>
+            </Categories>
+        </Overlay>
+        <Overlay>
+            <OverlayID>4</OverlayID>
+            <Name>Earthquakes</Name>
+            <Polling units="sec">300</Polling>
+            <Decluttering>TRUE</Decluttering>
+            <TurnOnByDefault>FALSE</TurnOnByDefault>
+        </Overlay>
+        <Overlay>
+            <OverlayID>2</OverlayID>
+            <Name>Storm Tracks</Name>
+            <Polling units="sec">60</Polling>
+            <Decluttering>TRUE</Decluttering>
+            <TurnOnByDefault>FALSE</TurnOnByDefault>
+            <ExcludeOptions>
+                <ValidDate>
+                    <SinceDay>3/16</SinceDay>
+                    <UpToDay>10/1</UpToDay>
+                </ValidDate>
+                <Height>
+                    <LessOrEqual>340</LessOrEqual>
+                </Height>
+            </ExcludeOptions>
+        </Overlay>
+        <Overlay>
+            <OverlayID>7</OverlayID>
+            <Name>Tropical Tracks</Name>
+            <Polling units="sec">3600</Polling>
+            <Decluttering>FALSE</Decluttering>
+            <TurnOnByDefault>FALSE</TurnOnByDefault>
+        </Overlay>
+    </Overlays>
+    
+    <RasterLayers>
+        <Layer>
+            <Name locale="en">Radar (CONUS)</Name>
+            <Name locale="es">Radar (EEUU)</Name>
+            <Url>hdRadarSmoothPaletteA</Url>
+            <Polling units="sec">120</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>LegendsPrecipitation.png</LegendFileName>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+        <Layer>
+            <Name>Global Satellite</Name>
+            <Url>satellite</Url>
+            <Polling units="sec">120</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>LegendsPrecipitation.png</LegendFileName>
+            <Transparency units="percent">20</Transparency>
+        </Layer>
+        <Layer>
+            <Name>Sky Alert Radar</Name>
+            <Url>NEXRAD_A860</Url>
+            <Polling units="sec">60</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>LegendsPrecipitation.png</LegendFileName>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+            <LogoName>logo.PNG</LogoName>
+        </Layer>
+        <Layer>
+            <Name locale="en">HD Satellite (N America)</Name>
+            <Name locale="es">Satelite HD (N America)</Name>
+            <Url>hdVisSatIRBlend</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>FALSE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName/>
+            <Transparency units="percent">5</Transparency>
+            <BumpMapping>TRUE</BumpMapping>
+        </Layer>
+        <Layer>
+            <Name>Road Weather</Name>
+            <Url>RoadWeather</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>FALSE</ShowLoop>
+            <LegendFileName>LegendRoadIndex.png</LegendFileName>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+        <Layer>
+            <Name>Wind Speed</Name>
+            <Url>WindSpeed</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>LegendsWindspeed_MPH.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+        <Layer>
+            <Name locale="en">HD Satellite (Tropics)</Name>
+            <Name locale="es">Satelite HD (Tropicos)</Name>
+            <Url>TropicalSatellite</Url>
+            <Polling units="sec">1800</Polling>
+            <ShowLegend>FALSE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName/>
+            <Transparency units="percent">0</Transparency>
+        </Layer>
+        <Layer>
+           <Name locale="en">Temperature (CONUS)</Name>
+           <Name locale="es">Temperatura (EEUU)</Name>
+           <Url>Temperature</Url>
+           <Polling units="sec">300</Polling>
+           <ShowLegend>TRUE</ShowLegend>
+           <ShowLoop>TRUE</ShowLoop>
+           <LegendFileName>LegendsTemp_F.png</LegendFileName>
+           <UnitDependent>TRUE</UnitDependent>
+           <Transparency units="percent">40</Transparency>
+        </Layer>
+        <Layer>
+            <Name locale="en">Water Temp (Atlantic)</Name>
+            <Name locale="es">Temperatura del agua (Atlántico)</Name>
+            <Url>WaterTempsAtlantic</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>LegendsWater_F.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+        </Layer>
+        <Layer>
+           <Name locale="en">Snow Cover (CONUS)</Name>
+           <Name locale="es">Cubierta Nieve (EEUU)</Name>
+           <Url>SnowCover</Url>
+           <Polling units="sec">300</Polling>
+           <ShowLegend>TRUE</ShowLegend>
+           <ShowLoop>TRUE</ShowLoop>
+           <LegendFileName>LegendsSnow_MPH.png</LegendFileName>
+           <UnitDependent>TRUE</UnitDependent>
+           <Transparency units="percent">40</Transparency>
+        </Layer>
+    </RasterLayers>
+
+    <MeasurementUnits>METRIC</MeasurementUnits>
+    <LoopingRestrictions>
+        <WIFI>12</WIFI>
+        <CELL>5</CELL>
+    </LoopingRestrictions>
+
+    <!-- Layer Tiles URL -->
+    <LayerTilesURL>http://tile.intellicast.com</LayerTilesURL>
+</Configuration>

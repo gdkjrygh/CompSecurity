@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/edit_country_button" android:background="@drawable/transparent_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableRight="@drawable/small_arrow_right_selector" android:drawablePadding="@dimen/padding2" style="@style/DefaultSpinnerText" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" style="@style/AddContactInputFieldLayout">
+        <TextView android:textSize="@dimen/font_medium" android:textColor="@color/skype_light_grey" android:gravity="center_vertical" android:id="@id/add_number_country_prefix" android:background="@drawable/transparent_background" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <com.skype.android.widget.AccessibleEditText android:gravity="center_vertical" android:id="@id/input_number" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:hint="@string/label_phone_number" android:singleLine="true" android:inputType="phone" style="@style/AddContactInputFieldText">
+            <requestFocus />
+        </com.skype.android.widget.AccessibleEditText>
+    </LinearLayout>
+</merge>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="?iconOnOffToolbar" android:id="@id/action_on_off" android:orderInCategory="1" android:title="@string/power" app:showAsAction="ifRoom">
+        <menu>
+            <item android:id="@id/action_wake_up" android:title="@string/wake_up" />
+            <item android:id="@id/action_quit" android:title="@string/quit" />
+            <item android:id="@id/action_suspend" android:title="@string/suspend" />
+            <item android:id="@id/action_reboot" android:title="@string/reboot" />
+            <item android:id="@id/action_shutdown" android:title="@string/shutdown" />
+        </menu>
+    </item>
+    <item android:id="@id/send_text" android:orderInCategory="2" android:title="@string/send_text" app:showAsAction="never" />
+    <item android:orderInCategory="3" android:title="@string/library_actions" app:showAsAction="never">
+        <menu>
+            <item android:id="@id/update_video_library" android:orderInCategory="1" android:title="@string/update_video_library" app:showAsAction="never" />
+            <item android:id="@id/clean_video_library" android:orderInCategory="2" android:title="@string/clean_video_library" app:showAsAction="never" />
+            <item android:id="@id/update_audio_library" android:orderInCategory="3" android:title="@string/update_audio_library" app:showAsAction="never" />
+            <item android:id="@id/clean_audio_library" android:orderInCategory="4" android:title="@string/clean_audio_library" app:showAsAction="never" />
+        </menu>
+    </item>
+    <item android:id="@id/toggle_fullscreen" android:orderInCategory="4" android:title="@string/toggle_fullscreen" app:showAsAction="never" />
+</menu>

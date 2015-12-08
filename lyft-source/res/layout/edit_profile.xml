@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.profile.EditProfileView android:orientation="vertical" android:id="@id/edit_profile" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <me.lyft.android.controls.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:id="@id/edit_profile_scroll_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@id/profile_photo_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.makeramen.roundedimageview.RoundedImageView android:id="@id/user_photo" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_margin="@dimen/span16" android:src="@drawable/ic_silhouette_square" app:riv_oval="true" />
+                <TextView android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_photo_title" style="@style/PrimaryText" />
+            </LinearLayout>
+            <View android:layout_marginBottom="@dimen/span16" style="@style/SplitterMaterial" />
+            <LinearLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/span48" android:layout_marginLeft="@dimen/span16" android:layout_marginTop="@dimen/span8" android:layout_marginRight="@dimen/span16" android:layout_marginBottom="@dimen/span8">
+                <ImageView android:layout_gravity="top" android:paddingRight="@dimen/span16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span4" android:src="@drawable/ic_home" />
+                <TextView android:id="@id/edit_profile_hometown" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/profile_field_hint" style="@style/NewProfileEditText" />
+            </LinearLayout>
+            <LinearLayout android:focusable="true" android:focusableInTouchMode="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/span48" android:layout_marginLeft="@dimen/span16" android:layout_marginTop="@dimen/span8" android:layout_marginRight="@dimen/span16" android:layout_marginBottom="@dimen/span8">
+                <ImageView android:layout_gravity="top" android:paddingRight="@dimen/span16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span4" android:src="@drawable/ic_music" />
+                <me.lyft.android.controls.AdvancedEditText android:id="@id/edit_profile_field_filler" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/profile_field_hint" style="@style/NewProfileEditText" />
+            </LinearLayout>
+            <LinearLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/span48" android:layout_marginLeft="@dimen/span16" android:layout_marginTop="@dimen/span8" android:layout_marginRight="@dimen/span16" android:layout_marginBottom="@dimen/span8">
+                <ImageView android:layout_gravity="top" android:paddingRight="@dimen/span16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span4" android:src="@drawable/ic_music" />
+                <me.lyft.android.controls.AdvancedEditText android:id="@id/music" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/profile_field_hint" style="@style/NewProfileEditText" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/edit_profile_about_layout" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/span48" android:layout_marginLeft="@dimen/span16" android:layout_marginTop="@dimen/span8" android:layout_marginRight="@dimen/span16" android:layout_marginBottom="@dimen/span8">
+                <ImageView android:layout_gravity="top" android:paddingRight="@dimen/span16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span4" android:src="@drawable/ic_profile" />
+                <me.lyft.android.controls.AdvancedEditText android:id="@id/about" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/profile_field_hint" android:maxLength="120" android:imeOptions="actionDone" style="@style/NewProfileEditText" />
+            </LinearLayout>
+            <View android:id="@id/mutual_friends_toggle_divider" android:layout_marginTop="@dimen/span8" style="@style/SplitterMaterial" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/edit_profile_switcher_view" android:layout_width="wrap_content" android:layout_height="@dimen/span48" android:layout_marginLeft="@dimen/span20" android:layout_marginTop="@dimen/span8" android:layout_marginRight="@dimen/span8" android:layout_marginBottom="@dimen/span8">
+                <TextView android:textSize="@dimen/normal_text" android:textColor="@color/profile_primary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/profile_friends_in_common" android:drawableLeft="@drawable/ic_profile_facebook_toggle" android:drawablePadding="16.0dip" />
+                <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <me.lyft.android.controls.Toggle android:id="@id/mutual_friends_toggle_switch" android:layout_width="50.0dip" android:layout_height="36.0dip" />
+            </LinearLayout>
+            <View style="@style/SplitterMaterial" />
+            <TextView android:textSize="@dimen/text_14" android:textStyle="italic" android:gravity="center" android:id="@id/edit_profile_disclaimer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span40" android:layout_marginTop="@dimen/span8" android:layout_marginRight="@dimen/span40" android:text="@string/profile_edit_disclaimer" style="@style/TertiaryText" />
+        </LinearLayout>
+    </ScrollView>
+</me.lyft.android.ui.profile.EditProfileView>

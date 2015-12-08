@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/setting_offical_stories_layout" android:background="@android:color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_centerHorizontal="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_panel" style="@style/TopPanel">
+        <RelativeLayout android:id="@id/settings_back_button_area_from_official" android:background="@drawable/action_bar_touch_selector" android:paddingRight="@dimen/default_gap" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/up_arrow" android:background="@drawable/aa_action_bar_up_arrow_green" android:layout_width="9.0dip" android:layout_height="26.0dip" android:layout_marginLeft="@dimen/default_gap" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/text_size_default" android:textStyle="normal" android:textColor="@color/green" android:id="@id/settings_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap" android:text="@string/settings_services_official_story" android:layout_toRightOf="@id/up_arrow" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:background="@color/divider_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <TextView android:gravity="center" android:id="@id/sync_collaborators_error_messege" android:visibility="gone" android:layout_marginTop="30.0dip" style="@style/settings_item_text" />
+    <include android:id="@id/sync_collaborators_progress_bar" android:visibility="gone" layout="@layout/loading_progress_bar" />
+    <android.support.v7.widget.RecyclerView android:orientation="vertical" android:id="@id/all_collaborators_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap_2x" android:layout_marginRight="@dimen/default_gap_2x" android:divider="@null" />
+</LinearLayout>

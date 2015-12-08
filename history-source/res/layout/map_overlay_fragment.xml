@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_medium" android:layout_marginTop="@dimen/margin_medium" layout="@layout/include_map_settings_nav" />
+    <include android:layout_gravity="bottom" android:id="@id/menu_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/include_map_nav" />
+    <LinearLayout android:orientation="vertical" android:id="@id/detail_pager_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:background="#bb000000" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.aetn.history.android.historyhere.widgets.CustomViewPager android:id="@id/detail_view_pager" android:background="@android:color/transparent" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/detail_pager_height" />
+            <ImageView android:layout_gravity="left" android:id="@id/previous_poi" android:layout_width="@dimen/detail_pager_next_previous_icon_width" android:layout_height="@dimen/detail_pager_next_previous_icon_height" android:layout_marginLeft="@dimen/margin_very_small" android:layout_marginTop="@dimen/detail_pager_icon_margin_top" android:src="@drawable/ic_previous_poi" />
+            <ImageView android:layout_gravity="right" android:id="@id/next_poi" android:layout_width="@dimen/detail_pager_next_previous_icon_width" android:layout_height="@dimen/detail_pager_next_previous_icon_height" android:layout_marginTop="@dimen/detail_pager_icon_margin_top" android:layout_marginRight="@dimen/margin_very_small" android:src="@drawable/ic_next_poi" />
+        </FrameLayout>
+        <ImageView android:layout_gravity="center" android:id="@id/pulltab" android:layout_width="60.0dip" android:layout_height="32.0dip" android:layout_marginTop="-1.0dip" android:src="@drawable/ic_pull_tab" />
+    </LinearLayout>
+    <include android:id="@id/tour_header" layout="@layout/tour_header" />
+</FrameLayout>

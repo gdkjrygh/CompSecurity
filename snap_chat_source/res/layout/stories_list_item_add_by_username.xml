@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/story_cell_height" android:layout_marginRight="@dimen/default_gap"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap_3x" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <TextView android:id="@id/stories_list_item_add_by_username_primary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@android:style/TextAppearance.Medium" />
+        <TextView android:textColor="@color/list_view_secondary_text" android:ellipsize="end" android:id="@id/stories_list_item_add_by_username_secondary_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" style="@android:style/TextAppearance.Small" />
+    </LinearLayout>
+    <com.snapchat.android.ui.EmojiTextView android:id="@id/stories_list_item_add_by_username_friendmoji" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/default_gap_3x" android:layout_toLeftOf="@id/stories_list_item_add_by_username_checkbox_layout" android:layout_centerVertical="true" style="@android:style/TextAppearance.Small" />
+    <FrameLayout android:id="@id/stories_list_item_add_by_username_checkbox_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/default_gap_3x" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageButton android:id="@id/stories_list_item_add_by_username_checkbox" android:background="@color/transparent" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:src="@drawable/add_friend_button_selector_opaque" android:scaleType="centerInside" />
+        <ProgressBar android:id="@id/stories_list_item_add_by_username_progress_bar" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" />
+    </FrameLayout>
+</RelativeLayout>

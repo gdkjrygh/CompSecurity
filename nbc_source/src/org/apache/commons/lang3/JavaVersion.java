@@ -1,0 +1,164 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package org.apache.commons.lang3;
+
+
+public final class JavaVersion extends Enum
+{
+
+    private static final JavaVersion $VALUES[];
+    public static final JavaVersion JAVA_0_9;
+    public static final JavaVersion JAVA_1_1;
+    public static final JavaVersion JAVA_1_2;
+    public static final JavaVersion JAVA_1_3;
+    public static final JavaVersion JAVA_1_4;
+    public static final JavaVersion JAVA_1_5;
+    public static final JavaVersion JAVA_1_6;
+    public static final JavaVersion JAVA_1_7;
+    public static final JavaVersion JAVA_1_8;
+    public static final JavaVersion JAVA_1_9;
+    public static final JavaVersion JAVA_RECENT;
+    private final String name;
+    private final float value;
+
+    private JavaVersion(String s, int i, float f, String s1)
+    {
+        super(s, i);
+        value = f;
+        name = s1;
+    }
+
+    static JavaVersion get(String s)
+    {
+        Object obj = null;
+        JavaVersion javaversion;
+        if ("0.9".equals(s))
+        {
+            javaversion = JAVA_0_9;
+        } else
+        {
+            if ("1.1".equals(s))
+            {
+                return JAVA_1_1;
+            }
+            if ("1.2".equals(s))
+            {
+                return JAVA_1_2;
+            }
+            if ("1.3".equals(s))
+            {
+                return JAVA_1_3;
+            }
+            if ("1.4".equals(s))
+            {
+                return JAVA_1_4;
+            }
+            if ("1.5".equals(s))
+            {
+                return JAVA_1_5;
+            }
+            if ("1.6".equals(s))
+            {
+                return JAVA_1_6;
+            }
+            if ("1.7".equals(s))
+            {
+                return JAVA_1_7;
+            }
+            if ("1.8".equals(s))
+            {
+                return JAVA_1_8;
+            }
+            if ("1.9".equals(s))
+            {
+                return JAVA_1_9;
+            }
+            javaversion = obj;
+            if (s != null)
+            {
+                javaversion = obj;
+                if ((double)toFloatVersion(s) - 1.0D < 1.0D)
+                {
+                    int i = Math.max(s.indexOf('.'), s.indexOf(','));
+                    javaversion = obj;
+                    if (Float.parseFloat(s.substring(i + 1, Math.max(s.length(), s.indexOf(',', i)))) > 0.9F)
+                    {
+                        return JAVA_RECENT;
+                    }
+                }
+            }
+        }
+        return javaversion;
+    }
+
+    static JavaVersion getJavaVersion(String s)
+    {
+        return get(s);
+    }
+
+    private static float maxVersion()
+    {
+        float f = toFloatVersion(System.getProperty("java.version", "2.0"));
+        if (f > 0.0F)
+        {
+            return f;
+        } else
+        {
+            return 2.0F;
+        }
+    }
+
+    private static float toFloatVersion(String s)
+    {
+        s = s.split("\\.");
+        if (s.length < 2)
+        {
+            break MISSING_BLOCK_LABEL_47;
+        }
+        float f = Float.parseFloat((new StringBuilder()).append(s[0]).append('.').append(s[1]).toString());
+        return f;
+        s;
+        return -1F;
+    }
+
+    public static JavaVersion valueOf(String s)
+    {
+        return (JavaVersion)Enum.valueOf(org/apache/commons/lang3/JavaVersion, s);
+    }
+
+    public static JavaVersion[] values()
+    {
+        return (JavaVersion[])$VALUES.clone();
+    }
+
+    public boolean atLeast(JavaVersion javaversion)
+    {
+        return value >= javaversion.value;
+    }
+
+    public String toString()
+    {
+        return name;
+    }
+
+    static 
+    {
+        JAVA_0_9 = new JavaVersion("JAVA_0_9", 0, 1.5F, "0.9");
+        JAVA_1_1 = new JavaVersion("JAVA_1_1", 1, 1.1F, "1.1");
+        JAVA_1_2 = new JavaVersion("JAVA_1_2", 2, 1.2F, "1.2");
+        JAVA_1_3 = new JavaVersion("JAVA_1_3", 3, 1.3F, "1.3");
+        JAVA_1_4 = new JavaVersion("JAVA_1_4", 4, 1.4F, "1.4");
+        JAVA_1_5 = new JavaVersion("JAVA_1_5", 5, 1.5F, "1.5");
+        JAVA_1_6 = new JavaVersion("JAVA_1_6", 6, 1.6F, "1.6");
+        JAVA_1_7 = new JavaVersion("JAVA_1_7", 7, 1.7F, "1.7");
+        JAVA_1_8 = new JavaVersion("JAVA_1_8", 8, 1.8F, "1.8");
+        JAVA_1_9 = new JavaVersion("JAVA_1_9", 9, 1.9F, "1.9");
+        JAVA_RECENT = new JavaVersion("JAVA_RECENT", 10, maxVersion(), Float.toString(maxVersion()));
+        $VALUES = (new JavaVersion[] {
+            JAVA_0_9, JAVA_1_1, JAVA_1_2, JAVA_1_3, JAVA_1_4, JAVA_1_5, JAVA_1_6, JAVA_1_7, JAVA_1_8, JAVA_1_9, 
+            JAVA_RECENT
+        });
+    }
+}

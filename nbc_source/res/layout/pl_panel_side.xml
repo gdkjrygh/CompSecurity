@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nbcsports.liveextra.ui.player.premierleague.PanelSide android:orientation="vertical" android:id="@id/pl_side_panel" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/pl_game_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="2.0dip" layout="@layout/pl_game_info" />
+    <include android:id="@id/pl_match_score" android:layout_width="fill_parent" android:layout_height="108.0dip" android:layout_margin="2.0dip" android:layout_below="@id/pl_game_info" layout="@layout/pl_match_score" />
+    <android.support.design.widget.TabLayout android:id="@id/blade_tabs" android:background="@drawable/pl_mesh_tb" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:layout_below="@id/pl_match_score" app:tabIndicatorHeight="0.0dip" app:tabMode="scrollable" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="2.0dip" android:layout_below="@id/blade_tabs" android:layout_alignParentBottom="true">
+        <include android:id="@id/pl_blade_player_card" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/pl_blade_player_card" />
+        <include android:id="@id/pl_blade_stats" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/pl_blade_stats" />
+        <include android:id="@id/pl_blade_plays" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/pl_blade_plays" />
+        <include android:id="@id/pl_blade_standings" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/pl_blade_standings" />
+    </FrameLayout>
+</com.nbcsports.liveextra.ui.player.premierleague.PanelSide>

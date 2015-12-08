@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/dialpad_top_layout" android:background="@color/skype_grey_cool30" android:paddingLeft="@dimen/dialpad_side_margin" android:paddingRight="@dimen/dialpad_side_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/font_small_medium" android:textColor="@color/text_link_blue" android:id="@id/dialpad_contact" android:paddingLeft="4.0dip" android:paddingBottom="@dimen/padding1b" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:textIsSelectable="false" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.skype.android.app.dialer.NoImeEditText android:id="@id/dialpad_edit_text" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/padding2" android:layout_toLeftOf="@id/dialpad_erase_button" style="@style/DialpadEditText" />
+        <com.skype.android.widget.SymbolView android:id="@id/dialpad_erase_button" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:symbol_code="BackspaceStroke" style="@style/DialPadEraseSymbol" />
+    </RelativeLayout>
+    <Button android:id="@id/dialpad_country_button" android:paddingTop="@dimen/padding3" android:paddingRight="@dimen/padding2" android:paddingBottom="@dimen/padding3" android:layout_marginLeft="@dimen/padding3" android:drawablePadding="@dimen/padding3" style="@style/DialPadCountryButton" />
+</LinearLayout>

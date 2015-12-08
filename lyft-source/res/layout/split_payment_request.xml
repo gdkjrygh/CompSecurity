@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.splitfare.SplitPaymentRequestView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:textSize="30.0sp" android:textColor="@color/charcoal_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/split_payment_title_text" />
+            <FrameLayout android:layout_width="150.0dip" android:layout_height="150.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:foreground="@drawable/split_fare_profile_image_frame">
+                <com.makeramen.roundedimageview.RoundedImageView android:id="@id/user_image" android:layout_width="fill_parent" android:layout_height="fill_parent" app:riv_oval="true" />
+            </FrameLayout>
+            <TextView android:textSize="16.0sp" android:textColor="@color/charcoal_2" android:gravity="center" android:id="@id/split_payment_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/grey_3" android:gravity="center_vertical" android:layout_gravity="top|left|center" android:id="@id/split_payment_fee" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:textSize="16.0sp" android:textColor="@color/grey_3" android:gravity="center_vertical" android:layout_gravity="top|left|center" android:id="@id/decline_button" android:background="@drawable/selectable_item" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/decline" android:drawableLeft="@drawable/ic_decline_grey" android:drawablePadding="6.0dip" />
+    </FrameLayout>
+    <Button android:layout_gravity="bottom|center" android:id="@id/accept_button" android:background="@drawable/btn_charcoal" android:layout_width="fill_parent" android:text="@string/accept_split_text" style="@style/FullBleedButton" />
+</me.lyft.android.ui.splitfare.SplitPaymentRequestView>

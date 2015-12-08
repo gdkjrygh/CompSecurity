@@ -1,0 +1,17 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package twitter4j.internal.http;
+
+
+// Referenced classes of package twitter4j.internal.http:
+//            HttpRequest, HttpResponse
+
+public interface HttpClient
+{
+
+    public abstract HttpResponse request(HttpRequest httprequest);
+
+    public abstract void shutdown();
+}

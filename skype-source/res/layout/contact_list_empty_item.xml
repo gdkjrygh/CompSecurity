@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/contact_list_empty_view" android:paddingBottom="@dimen/action_bar_height" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="top" android:id="@id/contact_progress_spinner" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/progress_circle_blue" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/contact_list_empty_text_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <com.skype.android.widget.SymbolView android:textSize="140.0dip" android:textColor="@color/skype_light_fog" android:id="@id/people_item_icon" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="-32.0dip" app:symbol_code="SkypeAddressBook" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="140.0dip">
+            <TextView android:gravity="center_horizontal" android:id="@id/contact_empty_add_contacts_text" android:layout_width="@dimen/empty_item_max_width" android:layout_height="wrap_content" android:text="@string/text_contacts_empty_content" style="@style/EmptyViewText" />
+            <Button android:layout_gravity="center_horizontal" android:id="@id/contact_empty_add_contacts_button" android:background="@drawable/focus_highlight" android:paddingBottom="@dimen/padding4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/empty_item_max_width" android:text="@string/text_contacts_empty_add_link" style="@style/EmptyViewClickableText" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layout_filter_favorites_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <com.skype.android.widget.SymbolView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-30.0dip" app:symbol_code="Favourite" style="@style/FavoriteEmptyViewSymbol" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="140.0dip">
+            <TextView android:textSize="@dimen/font_small_medium" android:textColor="@color/skype_hint_color" android:id="@id/favorites_empty_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_favorites_empty" />
+            <TextView android:textSize="@dimen/font_small_medium" android:textColor="@color/skype_color_blue_link" android:id="@id/favorites_add2" android:paddingTop="@dimen/size_1_5x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/link_favorites_add" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/form_screen_padding_left" android:paddingTop="@dimen/form_screen_padding_top" android:paddingRight="@dimen/form_screen_padding_right" android:paddingBottom="@dimen/form_screen_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/sign_in_form_ref" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/sign_in_form" />
+        <LinearLayout android:orientation="vertical" android:id="@id/sign_in_create_account" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:id="@id/sign_in_divider" android:background="@drawable/sign_in_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="30.0dip" android:layout_marginBottom="15.0dip" />
+            <Button android:layout_gravity="center_horizontal" android:id="@id/guest_sign_in_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sign_in_guest_checkout" style="@style/PrimaryButton.Blue" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/form_field_bigger_spacing" android:layout_marginBottom="@dimen/form_field_spacing" android:text="@string/sign_in_new_to_walmart_text" style="@style/InstructionalText" />
+            <Button android:layout_gravity="center_horizontal" android:id="@id/sign_in_create_account_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sign_in_create_button_text" style="@style/PrimaryButton.Gray" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

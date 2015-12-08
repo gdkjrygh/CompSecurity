@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SurfaceView android:id="@id/preview_view" android:paddingTop="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <Button android:textSize="16.0sp" android:textColor="@android:color/white" android:layout_gravity="top|center" android:id="@id/id_centerhelp" android:background="@drawable/scanhelp_back" android:visibility="gone" android:layout_width="@dimen/instruction_btn_height_width" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/msg_barcode_help" />
+    <com.google.zxing.client.android.ViewfinderView android:id="@id/viewfinder_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/result_view" android:background="@color/result_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:padding="@dimen/standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <LinearLayout android:gravity="right|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <ImageView android:id="@id/barcode_image_view" android:layout_width="160.0dip" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/half_padding" android:scaleType="centerInside" android:adjustViewBounds="true" android:maxWidth="160.0dip" android:maxHeight="160.0dip" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:textColor="@color/result_minor_text" android:paddingRight="@dimen/half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/msg_default_format" />
+                    <TextView android:textColor="@color/result_minor_text" android:id="@id/format_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:textColor="@color/result_minor_text" android:paddingRight="@dimen/half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/msg_default_type" />
+                    <TextView android:textColor="@color/result_minor_text" android:id="@id/type_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:textColor="@color/result_minor_text" android:paddingRight="@dimen/half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/msg_default_time" />
+                    <TextView android:textColor="@color/result_minor_text" android:id="@id/time_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:textColor="@color/result_minor_text" android:id="@id/meta_text_view_label" android:paddingRight="@dimen/half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/msg_default_meta" />
+                    <TextView android:textColor="@color/result_minor_text" android:id="@id/meta_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="22.0sp" android:textColor="@color/result_text" android:textColorLink="@color/result_text" android:autoLink="web" android:id="@id/contents_text_view" android:paddingLeft="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textColor="@color/result_text" android:textColorLink="@color/result_text" android:autoLink="web" android:id="@id/contents_supplement_text_view" android:paddingLeft="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/result_button_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:visibility="gone" style="@style/ResultButton" />
+            <Button android:visibility="gone" style="@style/ResultButton" />
+            <Button android:visibility="gone" style="@style/ResultButton" />
+            <Button android:visibility="gone" style="@style/ResultButton" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textColor="@color/status_text" android:layout_gravity="bottom|center" android:id="@id/switch_to_manual" android:background="@color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="40.0dip" android:text="@string/switch_to_manual_entry" android:singleLine="true" android:layout_below="@id/result_button_view" />
+    <ImageButton android:layout_gravity="top|right|center" android:id="@id/id_cancel_btn" android:background="@color/transparent" android:visibility="gone" android:layout_width="@dimen/help_btn_height_width" android:layout_height="@dimen/help_btn_height_width" android:layout_marginTop="30.0dip" android:src="@drawable/ic_scan_action_cancel" android:scaleType="fitXY" />
+    <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldTextView android:textSize="14.0sp" android:gravity="center" android:layout_gravity="top|center" android:id="@id/id_scan_here_txt" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="90.0dip" android:text="@string/msg_scan_here" android:maxLines="1" android:layout_alignParentTop="true" />
+    <TextView android:textColor="@color/status_text" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/status_view" android:background="@color/transparent" android:visibility="gone" android:layout_width="@dimen/help_btn_height" android:layout_height="wrap_content" android:text="@string/msg_default_status" android:layout_below="@id/id_centerhelp" />
+</merge>

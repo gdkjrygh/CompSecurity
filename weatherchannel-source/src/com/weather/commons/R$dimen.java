@@ -1,0 +1,186 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.weather.commons;
+
+
+// Referenced classes of package com.weather.commons:
+//            R
+
+public static final class 
+{
+
+    public static final int account_settings_avatar_edit_margin = 0x7f0a005a;
+    public static final int account_settings_avatar_margin = 0x7f0a005b;
+    public static final int account_settings_avatar_size = 0x7f0a005c;
+    public static final int account_settings_change_email_margin_bottom = 0x7f0a005d;
+    public static final int account_settings_change_email_margin_top = 0x7f0a005e;
+    public static final int account_settings_dalton_margin = 0x7f0a005f;
+    public static final int account_settings_description_margin = 0x7f0a0060;
+    public static final int account_settings_divider_margin = 0x7f0a0061;
+    public static final int account_settings_login_type_margin = 0x7f0a0062;
+    public static final int account_settings_login_type_text_size = 0x7f0a0063;
+    public static final int account_settings_regular_text_size = 0x7f0a0064;
+    public static final int account_settings_text_margin_bottom = 0x7f0a0065;
+    public static final int account_settings_text_margin_left = 0x7f0a0066;
+    public static final int account_settings_text_margin_top = 0x7f0a0067;
+    public static final int activity_horizontal_margin = 0x7f0a0051;
+    public static final int activity_vertical_margin = 0x7f0a006a;
+    public static final int alert_dialog_description_padding_bottom = 0x7f0a006d;
+    public static final int alert_dialog_padding_sides = 0x7f0a006e;
+    public static final int alert_dialog_padding_title_padding = 0x7f0a006f;
+    public static final int alert_dialog_title_text_size = 0x7f0a0070;
+    public static final int allergy_details_tab_height = 0x7f0a0075;
+    public static final int allergy_details_tab_text_size = 0x7f0a0076;
+    public static final int almost_done_text_size = 0x7f0a0079;
+    public static final int arrow_height_width = 0x7f0a0085;
+    public static final int breaking_news_viewpager_title_text_size = 0x7f0a008a;
+    public static final int cable_provider_bump_done_button_margin_bottom = 0x7f0a008c;
+    public static final int cable_provider_bump_logo_layout_height = 0x7f0a008d;
+    public static final int cable_provider_bump_skip_text_layout_height = 0x7f0a008e;
+    public static final int cable_provider_bump_skip_text_margin_bottom = 0x7f0a008f;
+    public static final int cable_provider_bump_spinner_margin_bottom = 0x7f0a0090;
+    public static final int cable_provider_bump_spinner_margin_top = 0x7f0a0091;
+    public static final int cable_provider_bump_text_size = 0x7f0a0092;
+    public static final int change_password_screen_margin = 0x7f0a0096;
+    public static final int com_facebook_likeboxcountview_border_radius = 0x7f0a00d5;
+    public static final int com_facebook_likeboxcountview_border_width = 0x7f0a00d6;
+    public static final int com_facebook_likeboxcountview_caret_height = 0x7f0a00d7;
+    public static final int com_facebook_likeboxcountview_caret_width = 0x7f0a00d8;
+    public static final int com_facebook_likeboxcountview_text_padding = 0x7f0a00d9;
+    public static final int com_facebook_likeboxcountview_text_size = 0x7f0a00da;
+    public static final int com_facebook_likebutton_compound_drawable_padding = 0x7f0a00db;
+    public static final int com_facebook_likebutton_padding_bottom = 0x7f0a00dc;
+    public static final int com_facebook_likebutton_padding_left = 0x7f0a00dd;
+    public static final int com_facebook_likebutton_padding_right = 0x7f0a00de;
+    public static final int com_facebook_likebutton_padding_top = 0x7f0a00df;
+    public static final int com_facebook_likebutton_text_size = 0x7f0a00e0;
+    public static final int com_facebook_likeview_edge_padding = 0x7f0a00e1;
+    public static final int com_facebook_likeview_internal_padding = 0x7f0a00e2;
+    public static final int com_facebook_likeview_text_size = 0x7f0a00e3;
+    public static final int com_facebook_loginview_compound_drawable_padding = 0x7f0a00e4;
+    public static final int com_facebook_loginview_padding_bottom = 0x7f0a00e5;
+    public static final int com_facebook_loginview_padding_left = 0x7f0a00e6;
+    public static final int com_facebook_loginview_padding_right = 0x7f0a00e7;
+    public static final int com_facebook_loginview_padding_top = 0x7f0a00e8;
+    public static final int com_facebook_loginview_text_size = 0x7f0a00e9;
+    public static final int com_facebook_picker_divider_width = 0x7f0a0000;
+    public static final int com_facebook_picker_place_image_size = 0x7f0a00ea;
+    public static final int com_facebook_profilepictureview_preset_size_large = 0x7f0a00eb;
+    public static final int com_facebook_profilepictureview_preset_size_normal = 0x7f0a00ec;
+    public static final int com_facebook_profilepictureview_preset_size_small = 0x7f0a00ed;
+    public static final int com_facebook_tooltip_horizontal_padding = 0x7f0a00ee;
+    public static final int com_facebook_usersettingsfragment_profile_picture_height = 0x7f0a00ef;
+    public static final int com_facebook_usersettingsfragment_profile_picture_width = 0x7f0a00f0;
+    public static final int dalton_padding = 0x7f0a00f1;
+    public static final int home_icon_padding_left = 0x7f0a000c;
+    public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f0a0142;
+    public static final int line_margintop = 0x7f0a014f;
+    public static final int match_parent = 0x7f0a0160;
+    public static final int max_width_410dp = 0x7f0a0050;
+    public static final int news_action_bar_horizontal_margin = 0x7f0a000d;
+    public static final int news_action_bar_text_size = 0x7f0a016b;
+    public static final int news_action_bar_text_width = 0x7f0a016c;
+    public static final int news_action_bar_vertical_margin = 0x7f0a016d;
+    public static final int news_article_detail_linespaceextra = 0x7f0a016e;
+    public static final int news_article_detail_textSize = 0x7f0a000e;
+    public static final int news_article_detail_title_text_size = 0x7f0a0035;
+    public static final int news_article_detail_title_top_margin = 0x7f0a000f;
+    public static final int news_article_more_list_height = 0x7f0a016f;
+    public static final int news_article_more_list_top_margin = 0x7f0a0170;
+    public static final int news_article_more_top_padding = 0x7f0a0171;
+    public static final int news_article_publish_date = 0x7f0a0172;
+    public static final int news_article_publish_date_textSize = 0x7f0a0173;
+    public static final int news_article_slideshow_height = 0x7f0a0174;
+    public static final int news_default_padding = 0x7f0a0005;
+    public static final int news_image_article_height = 0x7f0a0175;
+    public static final int news_image_article_padding = 0x7f0a0176;
+    public static final int news_main_image_margin = 0x7f0a0006;
+    public static final int news_next_image_article_height = 0x7f0a0177;
+    public static final int news_preview_image_height = 0x7f0a0178;
+    public static final int news_preview_image_margin = 0x7f0a0007;
+    public static final int news_preview_image_width = 0x7f0a0179;
+    public static final int news_preview_publish_date_textSize = 0x7f0a017a;
+    public static final int news_preview_text_margin = 0x7f0a017b;
+    public static final int news_preview_text_vertical_padding = 0x7f0a0008;
+    public static final int news_preview_title_textSize = 0x7f0a0009;
+    public static final int news_preview_width = 0x7f0a017c;
+    public static final int news_viewpager_default_margin = 0x7f0a017d;
+    public static final int news_viewpager_height = 0x7f0a017e;
+    public static final int news_viewpager_indicator_bottom_margin = 0x7f0a017f;
+    public static final int news_viewpager_indicator_top_margin = 0x7f0a0180;
+    public static final int news_viewpager_title_text_size = 0x7f0a0181;
+    public static final int news_viewpager_width = 0x7f0a0024;
+    public static final int notifications_icon_padding = 0x7f0a0186;
+    public static final int see_more_collapse_text_size = 0x7f0a01d3;
+    public static final int settings_default_margin = 0x7f0a01dc;
+    public static final int settings_default_marginleft = 0x7f0a01dd;
+    public static final int settings_main_margin = 0x7f0a01de;
+    public static final int settings_nodata_textSize = 0x7f0a01df;
+    public static final int settings_small_text_size = 0x7f0a01e3;
+    public static final int ski_viewpager_height = 0x7f0a004c;
+    public static final int storm_track_line_width = 0x7f0a01fa;
+    public static final int style_settings_input_text_size = 0x7f0a004e;
+    public static final int style_settings_personal_weather_title_text_size = 0x7f0a004f;
+    public static final int test_mode_alert_item_padding = 0x7f0a022d;
+    public static final int text_size_large = 0x7f0a022e;
+    public static final int text_size_medium = 0x7f0a022f;
+    public static final int text_size_small = 0x7f0a0230;
+    public static final int thick_grey_line_height = 0x7f0a0231;
+    public static final int thin_grey_line_height = 0x7f0a0232;
+    public static final int time_of_day_text_margin_left = 0x7f0a0233;
+    public static final int ups_alert_activation_button_margin = 0x7f0a0237;
+    public static final int ups_button_text_size = 0x7f0a0025;
+    public static final int ups_done_button_margin_top = 0x7f0a0238;
+    public static final int ups_generic_button_padding = 0x7f0a0239;
+    public static final int ups_login_button_corner_radius = 0x7f0a023a;
+    public static final int ups_login_button_height = 0x7f0a0010;
+    public static final int ups_login_button_icon_margin = 0x7f0a023b;
+    public static final int ups_login_button_layout_width = 0x7f0a0011;
+    public static final int ups_login_button_width = 0x7f0a000a;
+    public static final int ups_login_small_button_text_size = 0x7f0a000b;
+    public static final int ups_sign_in_or_line_side_margin = 0x7f0a023c;
+    public static final int ups_sign_up_view_margin = 0x7f0a023d;
+    public static final int ups_sign_up_view_right_padding = 0x7f0a023e;
+    public static final int ups_signup_default_margin = 0x7f0a023f;
+    public static final int ups_signup_line_height = 0x7f0a0240;
+    public static final int ups_signup_terms_padding = 0x7f0a0241;
+    public static final int ups_signup_terms_text_size = 0x7f0a0242;
+    public static final int ups_signup_text_size = 0x7f0a0002;
+    public static final int ups_switch_line_height = 0x7f0a0243;
+    public static final int ups_switch_margin_right = 0x7f0a0244;
+    public static final int ups_switch_margin_rop_bottom = 0x7f0a0245;
+    public static final int ups_switch_padding_default = 0x7f0a0246;
+    public static final int ups_switch_text_size = 0x7f0a0247;
+    public static final int video_loading_indicator_size = 0x7f0a025b;
+    public static final int video_media_controller_share_margin_right = 0x7f0a025f;
+    public static final int video_minimum_play_pause_size = 0x7f0a0260;
+    public static final int wx_profile_experience_text_size = 0x7f0a0026;
+    public static final int wx_profile_forgot_password_left_padding = 0x7f0a0299;
+    public static final int wx_profile_links_text_size = 0x7f0a0027;
+    public static final int wx_profile_login_button_height = 0x7f0a0028;
+    public static final int wx_profile_login_button_top_margin = 0x7f0a0029;
+    public static final int wx_profile_login_button_width = 0x7f0a029a;
+    public static final int wx_profile_login_page_no_account_top_margin = 0x7f0a002a;
+    public static final int wx_profile_login_page_side_margin = 0x7f0a029b;
+    public static final int wx_profile_login_page_top_margin = 0x7f0a002b;
+    public static final int wx_profile_no_account_text_padding_right = 0x7f0a029c;
+    public static final int wx_profile_page_delete_dialog_padding = 0x7f0a029d;
+    public static final int wx_profile_page_top_margin = 0x7f0a029e;
+    public static final int wx_profile_view_margin = 0x7f0a002c;
+    public static final int wx_sign_up_checkbox_left_margin = 0x7f0a029f;
+    public static final int wx_sign_up_checkbox_right_margin = 0x7f0a02a0;
+    public static final int wx_sign_up_checkbox_scale_factor = 0x7f0a02a1;
+    public static final int wx_sign_up_checkbox_top_margin = 0x7f0a02a2;
+    public static final int wx_sign_up_profile_links_text_size = 0x7f0a002d;
+    public static final int wx_sign_up_profile_login_button_top_margin = 0x7f0a02a3;
+    public static final int wx_sign_up_terms_wrapper_bottom_margin = 0x7f0a02a4;
+    public static final int wx_sign_up_terms_wrapper_bottom_padding = 0x7f0a02a5;
+    public static final int wx_sign_up_terms_wrapper_top_margin = 0x7f0a02a6;
+    public static final int wx_sing_up_terms_text_bottom_padding = 0x7f0a02a7;
+
+    public ()
+    {
+    }
+}

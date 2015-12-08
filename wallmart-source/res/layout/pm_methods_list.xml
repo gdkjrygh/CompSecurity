@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.walmart.android.ui.SafeScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/payment_methods" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Walmart Gift Cards" />
+            <com.walmartlabs.ui.LoadingContainerView android:id="@id/payment_gift_cards" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:loadingContainerEmptyText="@string/pm_methods_gift_card_empty" custom:loadingContainerContentLayout="@layout/pm_method_list" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Credit or Debit Cards" />
+            <com.walmartlabs.ui.LoadingContainerView android:id="@id/payment_credit_cards" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:loadingContainerContentLayout="@layout/pm_method_list" />
+        </LinearLayout>
+    </com.walmart.android.ui.SafeScrollView>
+    <include android:id="@id/payments_empty" layout="@layout/pm_methods_empty" />
+    <include android:id="@id/payments_loading_view" layout="@layout/loading_page" />
+</FrameLayout>

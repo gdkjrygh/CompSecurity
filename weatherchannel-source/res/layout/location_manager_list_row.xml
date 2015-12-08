@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/check_box" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/checkbox_off" android:layout_centerVertical="true" android:contentDescription="@string/location_manager_list_row_checkbox_description" />
+    <LinearLayout android:orientation="vertical" android:id="@id/location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:singleLine="true" android:layout_toLeftOf="@id/icon" android:layout_toRightOf="@id/check_box" android:layout_centerVertical="true">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textAppearance="?android:textAppearanceMedium" android:ellipsize="end" android:id="@id/location_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" weather:font="Roboto-Regular.ttf" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textAppearance="?android:textAppearanceSmall" android:textColor="#ffafafaf" android:ellipsize="end" android:id="@id/location_key" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" weather:font="Roboto-Light.ttf" />
+    </LinearLayout>
+    <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/grabberlines" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/location_manager_list_row_grabber_description" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:textStyle="italic" android:ellipsize="marquee" android:id="@id/location_type" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:singleLine="true" android:layout_toRightOf="@id/location" android:layout_centerVertical="true" />
+    <View android:id="@id/divider" android:background="#ffd9d9d9" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

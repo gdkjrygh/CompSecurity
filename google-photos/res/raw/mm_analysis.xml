@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph>
+    <!-- Packages -->
+    <import package="androidx.media.filterpacks.base"/>
+    <import package="androidx.media.filterpacks.decoder"/>
+    <import package="androidx.media.filterpacks.face"/>
+    <import package="androidx.media.filterpacks.image"/>
+    <import package="androidx.media.filterpacks.text"/>
+    <import package="androidx.media.filterpacks.transform"/>
+    <import package="com.google.android.apps.moviemaker.filterpacks.audio"/>
+    <import package="com.google.android.apps.moviemaker.filterpacks.base"/>
+    <import package="com.google.android.apps.moviemaker.filterpacks.decoder"/>
+    <import package="com.google.android.apps.moviemaker.filterpacks.face"/>
+    <import package="com.google.android.apps.moviemaker.filterpacks.image"/>
+    <import package="com.google.android.apps.moviemaker.filterpacks.miscellaneous"/>
+    <import package="com.google.android.apps.moviemaker.filterpacks.numeric"/>
+    <import package="com.google.android.apps.moviemaker.stabilizer"/>
+
+    <!--  Variables -->
+    <!--  The default quad over which the sharpness will be calculated;
+          should be set to the whole image from the app. -->
+    <var name="defaultImageQuad"/>
+    <var name="decoderStartTime"/>
+
+    <!-- Filters -->
+    <filter class="VariableSource" name="path"/>
+    <filter class="MediaDecoderSource" name="decoder"/>
+    <filter class="FrameDropFilter" name="dropper">
+        <input name="dropRate" floatValue="0.9" />
+    </filter>
+
+    <filter class="ToGrayValuesFilter" name="droppedToGray"/>
+
+    <filter class="ValueTarget" name="duration"/>
+
+    <filter class="ToggleableBranchFilter" name="rawBranch"/>
+    <filter class="ToggleableBranchFilter" name="audioBranch"/>
+    <filter class="ToggleableBranchFilter" name="resizedBranch"/>
+    <filter class="ToggleableBranchFilter" name="resizedDroppedBranch"/>
+    <filter class="ToggleableBranchFilter" name="resizedDroppedGrayBranch"/>
+    <filter class="ToggleableBranchFilter" name="frameNumberBranch"/>
+    <filter class="ToggleableBranchFilter" name="mfccBranch"/>
+    <filter class="ToggleableBranchFilter" name="interframeTransformBranch"/>
+
+    <!-- Video stabilization -->
+    <filter class="ScaleToAreaFilter" name="scalingForStabilization">
+        <!-- scale to 320x180 size -->
+        <input name="targetArea" intValue="57600"/>
+        <input name="useMipmaps" booleanValue="false"/>
+    </filter>
+    <filter class="ToGrayValuesFilter" name="toGrayForStabilization"/>
+    <filter class="StabilizationMotionEstimationFilter" name="stabilizationMotionEstimation"/>
+
+    <filter class="FrameCountFilter" name="frameCounter"/>
+
+    <filter class="AutoColorCorrectAnalysisFilter" name="autoCorrectEmitter"/>
+
+    <filter class="ScaleToAreaFilter" name="resizer">
+        <!-- scale to 240x160 equivalent -->
+        <input name="targetArea" intValue="38400"/>
+        <!-- newChromaHistogram and sharpness require frame width to be a multiple of 8 and
+             MotionSaliencyFilter requires width and height to be multiples of 10. -->
+        <input name="widthMultiple" intValue="40"/>
+        <input name="heightMultiple" intValue="10"/>
+        <input name="useMipmaps" booleanValue="false"/>
+    </filter>
+
+    <filter class="SaliencyFilter" name="saliency"/>
+
+    <!-- The purpose of this filter is to bring frame numbers to saliencyMapProjectionFilter on
+         the frame rate on which it operates. The saliencyMapProjectionFilter uses the frame
+         numbers to drop some input saliency maps, so it outputs the projections on the same
+         frames as the motionSaliencyMapProjectionFilter. The output of
+         saliencyMapProjectionFilter is processed together with the output of
+         motionSaliencyMapProjectionFilter, so they must be synchronized. -->
+    <filter class="FrameDropFilter" name="frameNumberDropperForSaliencyProjections">
+        <input name="dropRate" floatValue="0.9" />
+    </filter>
+
+    <filter class="MapProjectionFilter" name="saliencyMapProjectionFilter">
+        <!-- This makes the saliency map projections the same size as motion saliency map
+             projections, so they can be later linearly combined. -->
+        <input name="batchSize" intValue="8"/>
+        <!-- This makes saliency map projections synchronized with motion saliency map projections.
+             I.e. both types of projections are computed on the same frames - that is on 1 frame in
+             30 frames. -->
+        <input name="dropRate" floatValue="0.966666"/>
+    </filter>
+
+    <filter class="MapProjectionFilter" name="motionSaliencyMapProjectionFilter"/>
+
+    <!-- Creates linear combination of vertical motion saliency projections and vertical saliency
+         projections. -->
+    <filter class="VectorLinearCombinationFilter"
+            name="saliencyMapVerticalProjectionsCombiningFilter">
+        <!-- This gives higher weight to motion saliency to compensate that its values are usually
+             much lower than the saliency's values. -->
+        <input name="coefficientB" intValue="200"/>
+    </filter>
+
+    <!-- Creates linear combination of horizontal motion saliency projections and horizontal
+         saliency projections. -->
+    <filter class="VectorLinearCombinationFilter"
+            name="saliencyMapHorizontalProjectionsCombiningFilter">
+        <!-- This gives higher weight to motion saliency to compensate that its values are usually
+             much lower than the saliency's values. -->
+        <input name="coefficientB" intValue="200"/>
+    </filter>
+
+    <!-- Transforms combined vertical saliency projections into cumulative projections. -->
+    <filter class="VectorAccumulationFilter"
+            name="saliencyMapVerticalProjectionsAccumulationFilter"/>
+
+    <!-- Transforms combined horizontal saliency projections into cumulative projections. -->
+    <filter class="VectorAccumulationFilter"
+            name="saliencyMapHorizontalProjectionsAccumulationFilter"/>
+
+    <filter class="ToGrayValuesFilter" name="grayForNewMotion"/>
+
+    <filter class="LucasKanadeMotionSaliencyFilter" name="newMotionSaliency">
+        <input name="dropRate" floatValue="0.666666" />
+        <!-- This synchronizes motion saliency map production with the production of saliency map
+             projections. -->
+        <input name="mapDropRate" floatValue="0.966666"/>
+    </filter>
+
+    <filter class="AudioRmsFilter" name="rmsFilter"/>
+    <filter class="AudioMfccFilter" name="mfccFilter"/>
+    <filter class="DeltaMfccFilter" name="deltaMfccFilter"/>
+
+    <filter class="BitmapEmitterFilter" name="frameBitmapEmitter">
+        <input name="emitIntervalMillis" intValue="5000"/>
+    </filter>
+
+    <filter class="TimestampEmitterFilter" name="frameTimestampEmitter"/>
+    <filter class="StatisticEmitterFilter" name="frameNumberEmitter"/>
+    <filter class="StatisticEmitterFilter" name="sharpnessEmitter"/>
+    <filter class="StatisticEmitterFilter" name="faceScoreEmitter"/>
+    <filter class="StatisticEmitterFilter" name="saliencyEmitter"/>
+    <filter class="StatisticEmitterFilter" name="saliencyMapCumulativeVerticalProjectionEmitter"/>
+    <filter class="StatisticEmitterFilter"
+            name="saliencyMapCumulativeHorizontalProjectionEmitter"/>
+    <filter class="StatisticEmitterFilter" name="audioRmsEmitter"/>
+    <filter class="StatisticEmitterFilter" name="audioPeakAmplitudeEmitter"/>
+    <filter class="FloatMatrixEmitterFilter" name="newChromaHistogramEmitter"/>
+    <filter class="StatisticEmitterFilter" name="newColorfulnessEmitter"/>
+    <filter class="FloatMatrixEmitterFilter" name="audioMfccEmitter"/>
+    <filter class="FloatMatrixEmitterFilter" name="audioDeltaMfccEmitter"/>
+    <filter class="KeyFrameEmitterFilter" name="keyFrameNumberEmitter"/>
+    <filter class="StatisticEmitterFilter" name="stabilizationInterframeTransformEmitter"/>
+    <filter class="StatisticEmitterFilter" name="newMotionSaliencyEmitter"/>
+
+    <!-- SobelFilter and ToGrayValuesFilter for gradient calculation and packing it to a
+         buffer respectively. -->
+    <filter class="SobelFilter" name="gradientCalc"/>
+    <filter class="ToGrayValuesFilter" name="toGrayValuesGrad"/>
+
+    <!-- Gradients are needed by both sharpness scorer and face sharpness scorer. -->
+    <filter class="ToggleableBranchFilter" name="gradientBufferBranch"/>
+
+    <!-- MetaFilter for calculating image sharpness. -->
+    <filter class="MetaFilter" name="sharpnessScorer">
+        <!--  The default quad will be used for this case. -->
+        <input name="elem" varValue="defaultImageQuad"/>
+    </filter>
+
+    <!-- IterateFilter for calculating face-illumination. Will iterate over all
+         the faces in the image and call underlying subgraph for each. -->
+    <filter class="IterateFilter" name="faceIlluminationScorer"/>
+
+    <!-- MetaFilter for calculating new chroma histogram. -->
+    <filter class="MetaFilter" name="newChromaHistogram"/>
+
+    <!-- Face to Quad is needed for the face sharpness. Sharpness over only
+         the facial region will be calculated. -->
+    <filter class="FaceToRectFilter" name="faceToRectQuad">
+        <input name="scale" floatValue="3"/>
+    </filter>
+
+    <!-- Faces are needed by face illumination scorers. -->
+    <filter class="ToggleableBranchFilter" name="facesBranch"/>
+
+    <!-- Face tracking features -->
+    <filter class="ScaleToAreaFilter" name="scalingForFaceTracker">
+        <!-- scale to CIF size (320x240) -->
+        <input name="targetArea" intValue="76800"/>
+        <input name="useMipmaps" booleanValue="false"/>
+    </filter>
+    <filter class="AsyncFaceTrackerFilter" name="faceTracker">
+        <input name="minEyeDist" intValue="15"/>
+        <input name="waitForDetector" booleanValue="true"/>
+        <!-- skip frames for running detector -->
+        <input name="numSkipFrames" intValue="5"/>
+    </filter>
+    <filter class="ToGrayValuesFilter" name="toGrayForFaceTracker"/>
+    <filter class="ToggleableBranchFilter" name="cifGrayBranch"/>
+
+    <!--  Filter for assembling all the face score components -->
+    <filter class="AssembleFaceScoreFilter" name="faceScoreAssembler"/>
+
+    <!--                        CONNECTIONS                                  -->
+
+    <!-- Decoder connections -->
+    <connect sourceFilter="path" sourcePort="value"
+             targetFilter="decoder" targetPort="uri"/>
+
+    <connect sourceFilter="decoderStartTime" sourcePort="value"
+             targetFilter="decoder" targetPort="start"/>
+
+    <connect sourceFilter="decoder" sourcePort="video"
+             targetFilter="frameTimestampEmitter" targetPort="input"/>
+
+    <!-- Generate and export frame numbers -->
+    <connect sourceFilter="rawBranch" sourcePort="frameCounter"
+             targetFilter="frameCounter" targetPort="input"/>
+
+    <connect sourceFilter="frameCounter" sourcePort="frameNumber"
+             targetFilter="frameNumberBranch" targetPort="input"/>
+
+    <connect sourceFilter="frameNumberBranch" sourcePort="emitter"
+             targetFilter="frameNumberEmitter" targetPort="input"/>
+
+    <!-- Emit frame timestamp -->
+    <connect sourceFilter="frameTimestampEmitter" sourcePort="output"
+             targetFilter="rawBranch" targetPort="input"/>
+
+    <!-- Emit frame bitmap -->
+    <connect sourceFilter="rawBranch" sourcePort="frameBitmap"
+             targetFilter="frameBitmapEmitter" targetPort="input"/>
+
+    <!-- Emit key frame information -->
+    <connect sourceFilter="decoder" sourcePort="videoInfo"
+             targetFilter="keyFrameNumberEmitter" targetPort="videoInfo"/>
+
+    <connect sourceFilter="frameNumberBranch" sourcePort="keyFrameNumberEmitter"
+             targetFilter="keyFrameNumberEmitter" targetPort="frameNumber"/>
+
+    <!-- Calculate audio features -->
+    <connect sourceFilter="decoder" sourcePort="audio"
+             targetFilter="audioBranch" targetPort="input"/>
+
+    <connect sourceFilter="audioBranch" sourcePort="rms"
+             targetFilter="rmsFilter" targetPort="audio"/>
+
+    <connect sourceFilter="rmsFilter" sourcePort="rms"
+             targetFilter="audioRmsEmitter" targetPort="input"/>
+
+    <connect sourceFilter="rmsFilter" sourcePort="peakAmplitude"
+             targetFilter="audioPeakAmplitudeEmitter" targetPort="input"/>
+
+    <connect sourceFilter="audioBranch" sourcePort="mfcc"
+             targetFilter="mfccFilter" targetPort="audio"/>
+
+    <connect sourceFilter="mfccFilter" sourcePort="mfcc"
+             targetFilter="mfccBranch" targetPort="input"/>
+
+    <connect sourceFilter="mfccBranch" sourcePort="toMfcc"
+             targetFilter="audioMfccEmitter" targetPort="input"/>
+
+    <connect sourceFilter="mfccBranch" sourcePort="toDeltaMfcc"
+             targetFilter="deltaMfccFilter" targetPort="mfcc"/>
+
+    <connect sourceFilter="deltaMfccFilter" sourcePort="delta"
+             targetFilter="audioDeltaMfccEmitter" targetPort="input"/>
+
+    <!-- Calculate stabilization information -->
+
+    <connect sourceFilter="rawBranch" sourcePort="toStabilization"
+             targetFilter="scalingForStabilization" targetPort="image"/>
+
+    <connect sourceFilter="scalingForStabilization" sourcePort="image"
+             targetFilter="toGrayForStabilization" targetPort="image"/>
+
+    <connect sourceFilter="toGrayForStabilization" sourcePort="image"
+             targetFilter="stabilizationMotionEstimation" targetPort="image"/>
+
+    <connect sourceFilter="stabilizationMotionEstimation" sourcePort="interframetransform"
+             targetFilter="interframeTransformBranch" targetPort="input"/>
+
+    <connect sourceFilter="interframeTransformBranch" sourcePort="toInterframeTransformEmitter"
+             targetFilter="stabilizationInterframeTransformEmitter" targetPort="input"/>
+
+    <!-- Resize -->
+    <connect sourceFilter="rawBranch" sourcePort="resizer"
+             targetFilter="resizer" targetPort="image"/>
+    <connect sourceFilter="resizer" sourcePort="image"
+             targetFilter="resizedBranch" targetPort="input"/>
+
+    <!-- Drop 95% of frames -->
+    <connect sourceFilter="frameNumberBranch" sourcePort="dropper"
+             targetFilter="dropper" targetPort="frameNumber"/>
+    <connect sourceFilter="resizedBranch" sourcePort="dropper"
+             targetFilter="dropper" targetPort="input"/>
+    <connect sourceFilter="dropper" sourcePort="output"
+             targetFilter="resizedDroppedBranch" targetPort="input"/>
+
+    <!-- Convert to gray values -->
+    <connect sourceFilter="resizedDroppedBranch" sourcePort="gray"
+             targetFilter="droppedToGray" targetPort="image"/>
+    <connect sourceFilter="droppedToGray" sourcePort="image"
+             targetFilter="resizedDroppedGrayBranch" targetPort="input"/>
+
+    <!-- Export duration -->
+    <connect sourceFilter="decoder" sourcePort="duration"
+             targetFilter="duration" targetPort="value"/>
+
+    <!-- Analyze video for automatic color and exposure correction -->
+    <connect sourceFilter="resizedDroppedBranch" sourcePort="autoCorrectEmitter"
+             targetFilter="autoCorrectEmitter" targetPort="image"/>
+
+    <!--  Calculate gradient buffer and connect gradientBufferBranch. -->
+    <connect sourceFilter="resizedBranch" sourcePort="gradient"
+             targetFilter="gradientCalc" targetPort="image"/>
+
+    <connect sourceFilter="gradientCalc" sourcePort="magnitude"
+             targetFilter="toGrayValuesGrad" targetPort="image"/>
+
+    <connect sourceFilter="toGrayValuesGrad" sourcePort="image"
+             targetFilter="gradientBufferBranch" targetPort="input"/>
+
+    <!--  Calculate sharpness. -->
+    <connect sourceFilter="gradientBufferBranch" sourcePort="sharpness"
+             targetFilter="sharpnessScorer" targetPort="gradientBuffer"/>
+
+    <connect sourceFilter="sharpnessScorer" sourcePort="score"
+             targetFilter="sharpnessEmitter" targetPort="input"/>
+
+    <!--  Connect the face branch. -->
+    <connect sourceFilter="faceTracker" sourcePort="faces"
+             targetFilter="facesBranch" targetPort="input"/>
+
+    <connect sourceFilter="facesBranch" sourcePort="faceSIllumination"
+             targetFilter="faceToRectQuad" targetPort="faces"/>
+
+    <!-- Run face tracking -->
+    <connect sourceFilter="rawBranch" sourcePort="toFaceTracking"
+             targetFilter="scalingForFaceTracker" targetPort="image"/>
+
+    <connect sourceFilter="scalingForFaceTracker" sourcePort="image"
+             targetFilter="toGrayForFaceTracker" targetPort="image"/>
+
+    <connect sourceFilter="toGrayForFaceTracker" sourcePort="image"
+             targetFilter="cifGrayBranch" targetPort="input"/>
+
+    <connect sourceFilter="cifGrayBranch" sourcePort="toFaceTracker"
+             targetFilter="faceTracker" targetPort="image"/>
+
+    <!--  Connect all face score component filters' outputs to the face score assembler. -->
+    <connect sourceFilter="facesBranch" sourcePort="faceScores"
+             targetFilter="faceScoreAssembler" targetPort="faces"/>
+
+    <connect sourceFilter="faceIlluminationScorer" sourcePort="score"
+             targetFilter="faceScoreAssembler" targetPort="histogramDistances"/>
+
+    <!--  Pass the assembled FaceScore to the faceScoreEmitter. -->
+    <connect sourceFilter="faceScoreAssembler" sourcePort="faceScores"
+             targetFilter="faceScoreEmitter" targetPort="input"/>
+
+    <!--  Calculate face illumination -->
+    <connect sourceFilter="resizedBranch" sourcePort="faceIllumination"
+             targetFilter="faceIlluminationScorer" targetPort="image"/>
+
+    <connect sourceFilter="faceToRectQuad" sourcePort="quads"
+             targetFilter="faceIlluminationScorer" targetPort="array"/>
+
+    <!--  Calculate new chroma histogram -->
+    <connect sourceFilter="resizedBranch" sourcePort="toNewChromaHistogram"
+             targetFilter="newChromaHistogram" targetPort="image"/>
+
+    <connect sourceFilter="newChromaHistogram" sourcePort="newChromaHistogramOut"
+             targetFilter="newChromaHistogramEmitter" targetPort="input"/>
+
+    <connect sourceFilter="newChromaHistogram" sourcePort="newColorfulnessOut"
+             targetFilter="newColorfulnessEmitter" targetPort="input"/>
+
+    <!-- Calculate saliency -->
+    <connect sourceFilter="resizedDroppedGrayBranch" sourcePort="saliency"
+             targetFilter="saliency" targetPort="input"/>
+
+    <connect sourceFilter="saliency" sourcePort="saliency"
+             targetFilter="saliencyEmitter" targetPort="input"/>
+
+    <connect sourceFilter="saliency" sourcePort="saliencyMap"
+             targetFilter="saliencyMapProjectionFilter" targetPort="map"/>
+
+    <connect sourceFilter="frameNumberBranch" sourcePort="inputToDropperForSaliencyProjections"
+             targetFilter="frameNumberDropperForSaliencyProjections" targetPort="input"/>
+
+    <connect sourceFilter="frameNumberBranch" sourcePort="numberToDropperForSaliencyProjections"
+             targetFilter="frameNumberDropperForSaliencyProjections" targetPort="frameNumber"/>
+
+    <connect sourceFilter="frameNumberDropperForSaliencyProjections" sourcePort="output"
+             targetFilter="saliencyMapProjectionFilter" targetPort="frameNumber"/>
+
+    <connect sourceFilter="saliencyMapProjectionFilter" sourcePort="verticalProjection"
+             targetFilter="saliencyMapVerticalProjectionsCombiningFilter" targetPort="vectorA"/>
+
+    <connect sourceFilter="saliencyMapProjectionFilter" sourcePort="horizontalProjection"
+             targetFilter="saliencyMapHorizontalProjectionsCombiningFilter" targetPort="vectorA"/>
+
+    <!-- Calculate new motion saliency -->
+    <!--  grayForMotion is taken from original motion saliency subgraph -->
+    <connect sourceFilter="resizedBranch" sourcePort="newMotionSaliency"
+             targetFilter="grayForNewMotion" targetPort="image"/>
+
+    <connect sourceFilter="grayForNewMotion" sourcePort="image"
+             targetFilter="newMotionSaliency" targetPort="image"/>
+
+    <connect sourceFilter="frameNumberBranch" sourcePort="toNewMotionSaliency"
+             targetFilter="newMotionSaliency" targetPort="frameNumber"/>
+
+    <connect sourceFilter="interframeTransformBranch" sourcePort="toNewMotionSaliency"
+             targetFilter="newMotionSaliency" targetPort="interframetransform"/>
+
+    <connect sourceFilter="newMotionSaliency" sourcePort="score"
+             targetFilter="newMotionSaliencyEmitter" targetPort="input"/>
+
+    <connect sourceFilter="newMotionSaliency" sourcePort="map"
+             targetFilter="motionSaliencyMapProjectionFilter" targetPort="map"/>
+
+    <connect sourceFilter="motionSaliencyMapProjectionFilter" sourcePort="verticalProjection"
+             targetFilter="saliencyMapVerticalProjectionsCombiningFilter" targetPort="vectorB"/>
+
+    <connect sourceFilter="motionSaliencyMapProjectionFilter" sourcePort="horizontalProjection"
+             targetFilter="saliencyMapHorizontalProjectionsCombiningFilter" targetPort="vectorB"/>
+
+    <!-- Combine saliency and motion saliency vertical and horizontal projections and emit them -->
+
+    <connect sourceFilter="saliencyMapVerticalProjectionsCombiningFilter" sourcePort="vector"
+             targetFilter="saliencyMapVerticalProjectionsAccumulationFilter" targetPort="input"/>
+
+    <connect sourceFilter="saliencyMapVerticalProjectionsAccumulationFilter" sourcePort="output"
+             targetFilter="saliencyMapCumulativeVerticalProjectionEmitter" targetPort="input"/>
+
+    <connect sourceFilter="saliencyMapHorizontalProjectionsCombiningFilter" sourcePort="vector"
+             targetFilter="saliencyMapHorizontalProjectionsAccumulationFilter" targetPort="input"/>
+
+    <connect sourceFilter="saliencyMapHorizontalProjectionsAccumulationFilter" sourcePort="output"
+             targetFilter="saliencyMapCumulativeHorizontalProjectionEmitter" targetPort="input"/>
+
+</graph>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/wish_black_overlay" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="top" android:id="@id/cart_modal_animation_group" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="bottom|center" android:layout_gravity="top" android:orientation="vertical" android:id="@id/cart_modal_frame_close_button" android:layout_width="fill_parent" android:layout_height="125.0dip">
+            <ImageView android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/white_x" />
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="11.0dip" android:textColor="@color/wish_white" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:text="@string/continue_shopping" app:useAllCaps="true" xmlns:app="http://schemas.android.com/apk/res-auto" />
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="top" android:id="@id/cart_modal_frame_content" android:background="@color/wish_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="125.0dip" />
+    </FrameLayout>
+</merge>

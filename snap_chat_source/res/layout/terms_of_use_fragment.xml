@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/add_friends_activity_layout" android:background="@android:color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_panel" style="@style/TopPanel">
+        <TextView android:textSize="@dimen/text_size_default" android:textColor="@color/link_blue" android:gravity="center" android:id="@id/logout_button" android:background="@drawable/tou_tab_button_selector" android:paddingLeft="@dimen/default_gap_2x" android:paddingRight="@dimen/default_gap_2x" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/tos_logout" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <TextView android:id="@id/accept_button" android:text="@string/tos_accept" android:layout_alignParentBottom="true" style="@style/TermsOfUseContinueButton" />
+    <LinearLayout android:orientation="vertical" android:id="@id/tou_overview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/accept_button" android:layout_below="@id/top_panel">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/tos_pp_illustration" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap" android:layout_marginRight="@dimen/default_gap" android:src="@drawable/tos_quarterheight_illustration" android:adjustViewBounds="true" />
+                <TextView android:id="@id/tou_pp_title" android:text="@string/tos_updated_message_title" style="@style/TermsOfUseTitleText" />
+                <TextView android:id="@id/tou_pp_description" style="@style/TermsOfUseBodyText" />
+            </LinearLayout>
+        </ScrollView>
+        <include layout="@layout/list_separator" />
+        <com.snapchat.android.ui.LinkFriendlyTextView android:textSize="@dimen/text_size_fine_print" android:gravity="center" android:text="@string/tos_accept_action_description" style="@style/TermsOfUseText" />
+    </LinearLayout>
+</RelativeLayout>

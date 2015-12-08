@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.translate.copydrop.views.PopoverView android:orientation="vertical" android:background="@color/quantum_googblue50" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/popover_header_start" android:layout_width="fill_parent" android:layout_height="@dimen/popover_header_height">
+        <ImageView android:id="@id/popover_small_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/main_icon" android:layout_centerVertical="true" android:contentDescription="@null" />
+        <ImageButton android:id="@id/popover_expand_button" android:background="@null" android:padding="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_expand_more_black_24" android:layout_alignTop="@id/popover_small_icon" android:layout_alignBottom="@id/popover_small_icon" android:layout_centerVertical="true" android:contentDescription="@null" android:layout_alignParentEnd="true" />
+        <TextView android:textColor="#ff000000" android:gravity="center_vertical" android:id="@id/popover_translation_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/popover_translation_text" android:layout_alignTop="@id/popover_small_icon" android:layout_alignBottom="@id/popover_small_icon" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" android:layout_toStartOf="@id/popover_expand_button" android:layout_toEndOf="@id/popover_small_icon" />
+        <View android:background="#ffcccccc" android:layout_width="1.0dip" android:layout_height="35.0dip" android:layout_centerVertical="true" android:layout_toStartOf="@id/popover_expand_button" />
+    </RelativeLayout>
+    <include android:id="@id/popover_header_main" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/popover_header_height" layout="@layout/view_popover_header_main" />
+    <LinearLayout android:id="@id/language_header" android:layout_width="fill_parent" android:layout_height="@dimen/default_touch_target" android:layout_centerHorizontal="true">
+        <LinearLayout android:gravity="center" android:id="@id/spinner1_frame" android:background="@drawable/bg_clickable_blue" android:clipChildren="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.google.android.apps.translate.widget.LangSpinner android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/secondary_text" android:gravity="center" android:layout_gravity="center" android:id="@id/spinner1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:textAllCaps="true" ns:isForTarget="false" ns:disablePinButton="true" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_arrow_drop_down_grey600_24" />
+        </LinearLayout>
+        <ImageView android:id="@id/btn_swap" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_swap_horiz_grey600_24" android:contentDescription="@null" />
+        <LinearLayout android:gravity="center" android:id="@id/spinner2_frame" android:background="@drawable/bg_clickable_blue" android:clipChildren="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.google.android.apps.translate.widget.LangSpinner android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/secondary_text" android:gravity="center" android:layout_gravity="center" android:id="@id/spinner2" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:textAllCaps="true" ns:isForTarget="true" ns:disablePinButton="true" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_arrow_drop_down_grey600_24" />
+        </LinearLayout>
+    </LinearLayout>
+    <include android:id="@id/translated_text_view_with_icon" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_popover_translated_text_view" />
+    <include android:id="@id/translation_edit_text_views" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" layout="@layout/view_popover_translate_edit_text" />
+</com.google.android.apps.translate.copydrop.views.PopoverView>

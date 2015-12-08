@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/offline_resync_debug_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:layout_gravity="center_horizontal" android:id="@id/account_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" />
+        <Button android:layout_gravity="center_horizontal" android:id="@id/resync_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Resync now!" />
+        <Button android:layout_gravity="center_horizontal" android:id="@id/expire_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Expire ALL the offline videos!" />
+        <Button android:layout_gravity="center_horizontal" android:id="@id/refresh_periodic_syncs_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Refresh registered periodic syncs" />
+        <TextView android:layout_gravity="center_horizontal" android:id="@id/current_saved_resync_interval" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" />
+        <ListView android:layout_gravity="center_horizontal" android:id="@id/periodic_syncs_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/not_signed_in_error_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Please sign into an account within the app to test offline resync." />
+</LinearLayout>

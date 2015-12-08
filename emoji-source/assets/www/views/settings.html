@@ -1,0 +1,70 @@
+<nav class="top-bar fixed-header">
+    <a id="back_button" class="back" ng-click="back()"><i class="icon-chevron-left"></i></a>
+    <h1>Settings</h1>
+</nav>
+
+<div class="row add-to-bottom">
+	<div class="large-10 small-12 large-centered columns">
+			<h6>Account</h6>
+			<div class="settings-list">
+				<a ng-click="settings_notifications()">
+					Notifications
+					<span><i class="icon-angle-right"></i></span>
+				</a>
+				<a ng-click="reset_avatar()">
+					Reset my Avatar
+					<span><i class="icon-warning-sign"></i></span>
+				</a>
+			</div>
+			<!-- Not yet
+			<h6>Share Settings</h6>
+
+			<div class="settings-list">
+				<a> Facebook
+					<span><i class="icon-chevron-right"></i></span>
+				</a>
+			</div>
+			-->
+			<h6>Support</h6>
+
+			<div class="settings-list">
+				<a id='faq' ng-click="settings_faq()">
+					Frequently Asked Questions
+					<span><i class="icon-angle-right"></i></span>
+				</a>
+
+				<a id='privacy' ng-click="settings_privacy()">
+					Privacy
+					<span><i class="icon-angle-right"></i></span>
+				</a>
+
+				<a id='terms' ng-click="settings_tou()">
+					Terms of Use
+					<span><i class="icon-angle-right"></i></span>
+				</a>
+				<a ng-show="version" ng-click="version_click();">
+					App Version
+					<span>{{version}}</span>
+				</a>
+
+				<a ng-show="view_log >= 2" ng-click="prompt_rate_app()">
+					Prompt to rate app
+					<span><i class="icon-angle-right"></i></span>
+				</a>
+
+				<a ng-show="view_log" ng-click="view_web_log()">
+					View Web Log
+					<span><i class="icon-angle-right"></i></span>
+				</a>
+			</div>
+
+
+	<div ng-if="web_log">
+		<pre style="font-size: 10px; padding-top: 20px;">{{web_log}}</pre>
+	</div>
+		<a class="logout btn" ng-click="logout_click()">LOG OUT</a>
+
+
+	</div>
+</div>
+<input type="hidden" id="flash_ref"/>

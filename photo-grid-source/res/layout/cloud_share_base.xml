@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/layout_root" android:background="@color/save_finish_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/title_lo" android:background="@drawable/roidapp_imagelib_bg_titlebar_gray" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/editer_textSize" android:textColor="@color/white" android:gravity="left|center" android:id="@id/backBtn" android:background="@drawable/btn_back" android:paddingLeft="0.0dip" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/image_merger_title_height" android:drawableLeft="@drawable/icon_back" />
+        <TextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/share_hashtags_exceed" android:background="@color/blue" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="30.0dip" android:text="@string/share_hashtags_exceed" android:layout_below="@id/backBtn" />
+        <TextView android:textSize="@dimen/editer_textSize" android:textColor="@color/white" android:gravity="center" android:id="@id/btn_share_options" android:background="@drawable/btn_main_setting" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/image_merger_title_height" android:text="@string/p_share" android:drawablePadding="6.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ListView android:id="@id/listview" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@null" android:cacheColorHint="@color/colourless" android:divider="@null" android:dividerHeight="8.0dip" android:layout_below="@id/title_lo" android:overScrollMode="never" />
+    <RelativeLayout android:id="@id/failedTopLayout" android:background="#ff4a5f66" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="35.0dip" android:layout_below="@id/title_lo" android:alpha="0.8">
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/failedTopTip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Couldn't Load News" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/refresh" android:background="@drawable/cloud_lib_loading_white" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/failedTopTip" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/up_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:contentDescription="@null" />
+    <RelativeLayout android:id="@id/loading_layout" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/progressbar" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="bottom" android:id="@id/tag_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</RelativeLayout>

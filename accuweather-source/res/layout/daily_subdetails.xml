@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="right" android:id="@id/amazon_condition_rl" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/amazon_triangle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/amazon_triangle" />
+        <ImageView android:id="@id/amazon_condition" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/primary_text" android:id="@id/day_info" android:paddingLeft="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18.0dip" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/primary_text" android:id="@id/day_shorttext" android:paddingLeft="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18.0dip" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/primary_text" android:id="@id/sunrise_info" android:paddingLeft="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18.0dip" android:text="@string/Sunrise" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/primary_text" android:id="@id/uv" android:paddingLeft="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18.0dip" />
+        <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/primary_text" android:id="@id/night_info" android:paddingLeft="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginRight="18.0dip" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/primary_text" android:id="@id/night_shorttext" android:paddingLeft="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18.0dip" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/primary_text" android:id="@id/sunset_info" android:paddingLeft="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18.0dip" android:text="@string/Sunset" />
+        <TextView android:textSize="18.0dip" android:textColor="@color/darker_blue" android:id="@id/more_details_label" android:paddingLeft="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="18.0dip" android:text="@string/MoreDetails" />
+        <TableLayout android:id="@id/table" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="18.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/place_holder_alarm_img" android:paddingLeft="4.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_alarm" />
+                    <TextView android:textSize="14.0dip" android:textColor="@color/primary_text" android:id="@id/wind_label" android:paddingLeft="4.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/Wind" android:layout_weight="2.0" />
+                    <TextView android:textSize="14.0dip" android:textColor="@color/primary_text" android:gravity="right" android:id="@id/day_label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/Day" android:layout_weight="3.0" />
+                    <TextView android:textSize="14.0dip" android:textColor="@color/primary_text" android:gravity="right" android:id="@id/night_label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="@string/Night" android:layout_weight="3.0" />
+                </LinearLayout>
+                <View android:background="@color/light_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="18.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" />
+                <com.accuweather.android.details.views.DailyDetailsWindView android:orientation="vertical" android:id="@id/wind_custom_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                    <ImageView android:id="@id/place_holder_alarm_img" android:paddingLeft="4.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_alarm" />
+                    <TextView android:textSize="14.0dip" android:textColor="@color/primary_text" android:id="@id/precip_label" android:paddingLeft="4.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/Precip_Abbr10" android:layout_weight="2.0" />
+                </LinearLayout>
+                <View android:background="@color/light_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="18.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" />
+                <com.accuweather.android.details.views.DailyDetailsPrecipView android:orientation="vertical" android:id="@id/precip_custom_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </TableLayout>
+        <TextView android:textSize="12.0dip" android:textColor="@color/primary_text" android:layout_gravity="right" android:id="@id/update_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="18.0dip" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/amazon_details" />
+    </LinearLayout>
+</LinearLayout>

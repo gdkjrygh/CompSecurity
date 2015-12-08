@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="top|left|center" android:orientation="vertical" android:layout_width="104.0dip" android:layout_height="194.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/share_photo_watermark4_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/weather_icon" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginTop="12.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:contentDescription="@null" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/temp_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="20.0dip" android:layout_below="@id/weather_icon" android:layout_alignParentLeft="true">
+            <ImageView android:layout_gravity="center" android:id="@id/temp_minus" android:layout_width="14.0dip" android:layout_height="24.0dip" android:contentDescription="@null" />
+            <ImageView android:id="@id/temp_num1" android:layout_width="14.0dip" android:layout_height="24.0dip" android:contentDescription="@null" />
+            <ImageView android:id="@id/temp_num2" android:visibility="gone" android:layout_width="14.0dip" android:layout_height="24.0dip" android:contentDescription="@null" />
+            <ImageView android:id="@id/temp_num3" android:layout_width="14.0dip" android:layout_height="24.0dip" android:contentDescription="@null" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/temp_symbol" android:layout_width="14.0dip" android:layout_height="24.0dip" android:layout_marginLeft="2.0dip" android:contentDescription="@null" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/temp_high_low_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/temp_layout" android:layout_alignParentRight="true">
+            <TextView android:textSize="12.0sp" android:textColor="#ff2f2f2f" android:ellipsize="end" android:id="@id/temp_high_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:text="18°F" android:singleLine="true" android:drawableLeft="@drawable/share_photo_watermark4_high" android:drawablePadding="2.0dip" android:contentDescription="@null" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff2f2f2f" android:ellipsize="end" android:id="@id/temp_low_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12°F" android:singleLine="true" android:drawableLeft="@drawable/share_photo_watermark4_low" android:drawablePadding="2.0dip" android:contentDescription="@null" />
+        </LinearLayout>
+        <TextView android:textSize="13.0sp" android:textColor="#ffe48100" android:ellipsize="end" android:id="@id/weather_info_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="Rainy day" android:singleLine="true" android:layout_below="@id/temp_high_low_layout" android:layout_alignRight="@id/temp_high_low_layout" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff2f2f2f" android:ellipsize="end" android:id="@id/date_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="2/14/2014" android:singleLine="true" android:layout_below="@id/weather_info_tv" android:layout_alignRight="@id/weather_info_tv" />
+    </RelativeLayout>
+</LinearLayout>

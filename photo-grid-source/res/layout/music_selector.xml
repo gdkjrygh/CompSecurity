@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/title2_lo" android:background="@drawable/roidapp_imagelib_bg_titlebar_gray" android:layout_width="fill_parent" android:layout_height="@dimen/image_selector_title2Lo_height">
+            <TextView android:ellipsize="end" android:id="@id/back_btn" android:background="@drawable/btn_back" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:drawableLeft="@drawable/icon_back" android:layout_alignParentLeft="true" style="@style/backBtn_text" />
+            <View android:id="@id/selector_tittle_divider" android:background="@drawable/btn_splite_righthalf" android:layout_width="1.0dip" android:layout_height="@dimen/image_selector_linearLayout1_height" android:layout_toRightOf="@id/back_btn" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/music_local_size" android:textColor="@color/btn_green" android:gravity="center" android:id="@id/toLocal" android:background="@drawable/btn_cancel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/music_local_margin_right" android:text="@string/music_local" android:drawableTop="@drawable/icon_music_local" android:drawablePadding="-5.0dip" android:layout_alignParentRight="true" />
+            <ProgressBar android:id="@id/progress_2_bar" android:visibility="invisible" android:layout_width="@dimen/image_selector_progress2Bar_width" android:layout_height="@dimen/image_selector_progress2Bar_height" android:layout_marginRight="@dimen/image_selector_progress2Bar_marginRight" android:layout_toLeftOf="@id/toLocal" android:layout_centerVertical="true" />
+            <LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@id/selector_switch_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/progress_2_bar" android:layout_toRightOf="@id/selector_tittle_divider">
+                <RelativeLayout android:gravity="left|center" android:orientation="vertical" android:id="@id/selector_switchModelBtn" android:background="@drawable/moremenu_background" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="0.0dip">
+                    <TextView android:textSize="@dimen/fit_instagram_textsize" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:id="@id/selector_model_text" android:paddingLeft="7.0dip" android:paddingRight="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/network_error_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@id/network_error_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <TextView android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/music_select_network_error" />
+                <ImageView android:id="@id/network_error_restore" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:src="@drawable/icon_restore" />
+            </LinearLayout>
+            <ProgressBar android:id="@id/network_error_progress" android:visibility="gone" android:layout_width="@dimen/image_selector_progress2Bar_width" android:layout_height="@dimen/image_selector_progress2Bar_height" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <com.roidapp.baselib.view.FixedDrawerLayout android:id="@id/drawer_layout" android:background="@drawable/bg_merge_repeat" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.roidapp.photogrid.video.XListView android:id="@id/music_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/music_network_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/music_select_network_error" />
+                    <Button android:layout_gravity="center" android:id="@id/retry_musiclist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/download_retry" />
+                </LinearLayout>
+            </FrameLayout>
+            <LinearLayout android:layout_gravity="left" android:orientation="vertical" android:id="@id/slingdingmenu_layout" android:background="@color/titlebackground" android:layout_width="@dimen/slidingmenu_width" android:layout_height="fill_parent">
+                <ListView android:id="@id/left_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/slidingmenu_count_background" android:dividerHeight="1.0dip" />
+            </LinearLayout>
+        </com.roidapp.baselib.view.FixedDrawerLayout>
+    </LinearLayout>
+    <include layout="@layout/progressbar" />
+</RelativeLayout>

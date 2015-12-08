@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/top_level_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.accuweather.android.views.SlidingMenuLayout android:id="@id/sliding_menu_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.accuweather.android.views.NavigationDrawer android:id="@id/navigation_drawer" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <RelativeLayout android:id="@id/content" android:background="@color/primary_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/background_lines" android:background="@drawable/background_lines_10_tiled" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+                <com.accuweather.android.views.AccuViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <RelativeLayout android:id="@id/progress_layout" android:background="#88808080" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ProgressBar android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </com.accuweather.android.views.SlidingMenuLayout>
+        <com.amobee.adsdk.AmobeeAdPlaceholder android:id="@id/adView_AMOBEE" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.accuweather.android.dma.DmaView android:id="@id/dma" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.accuweather.android.dma.CustomDmaView android:id="@id/custom_dma" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView android:layout_width="fill_parent" android:layout_height="8.0dip" android:src="@drawable/action_bar_shadow" android:scaleType="fitXY" android:layout_alignParentTop="true" />
+</RelativeLayout>

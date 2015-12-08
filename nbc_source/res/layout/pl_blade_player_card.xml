@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nbcsports.liveextra.ui.player.premierleague.player.PlayerCardsView android:tag="layout/pl_blade_player_card_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true" style="@style/Blade"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/blade_content" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Blade">
+        <FrameLayout android:id="@id/field" android:layout_width="260.0dip" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+            <FrameLayout android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/home_formation" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/pl_formation_none" android:adjustViewBounds="true" />
+                <TextView android:textColor="@color/textColorPrimary" android:layout_gravity="top|center" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="2.0dip" />
+            </FrameLayout>
+            <FrameLayout android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/away_formation" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/pl_formation_none" android:adjustViewBounds="true" />
+                <TextView android:textColor="@color/textColorPrimary" android:layout_gravity="top|center" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="2.0dip" />
+            </FrameLayout>
+        </FrameLayout>
+        <FrameLayout android:background="@drawable/pl_mesh_center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/field" android:layout_alignBottom="@id/field" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+            <TextView android:textStyle="bold" android:textColor="@color/pl_player_card_team_selector" android:gravity="center" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:background="@drawable/gradient_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/field" android:layout_alignParentTop="true" />
+            <View android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        </FrameLayout>
+        <FrameLayout android:background="@drawable/pl_mesh_center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/field" android:layout_alignBottom="@id/field" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+            <TextView android:textStyle="bold" android:textColor="@color/pl_player_card_team_selector" android:gravity="center" android:tag="binding_9" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:background="@drawable/gradient_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/field" android:layout_alignParentTop="true" />
+            <View android:tag="binding_10" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_toRightOf="@id/field" android:layout_alignParentTop="true" />
+        </FrameLayout>
+        <android.support.v4.view.ViewPager android:id="@id/home_players" android:tag="binding_11" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/field" android:layout_alignParentBottom="true" />
+        <android.support.v4.view.ViewPager android:id="@id/away_players" android:tag="binding_12" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/field" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</com.nbcsports.liveextra.ui.player.premierleague.player.PlayerCardsView>

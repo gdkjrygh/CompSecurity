@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/bg_white_full_opacity" style="@style/full_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/unauth_signup_board_page" layout="@layout/unauth_board" style="@style/full_view" />
+    </ScrollView>
+    <RelativeLayout android:id="@id/unauth_overlay" android:background="@color/bg_dark_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:layout_gravity="bottom" android:id="@id/warm_signup_interstitial_half" android:layout_width="@dimen/match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/interstitial_half" />
+    <com.pinterest.ui.imageview.WebImageView android:id="@id/warm_signup_fallback_image" android:paddingTop="@dimen/margin_half" android:visibility="gone" android:scaleType="centerCrop" android:layout_above="@id/warm_signup_interstitial_half" style="@style/full_view" />
+    <View android:layout_gravity="bottom" android:id="@id/warm_signup_gradient" android:background="@drawable/white_to_transparent_gradient" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/warm_signup_gradient_height" android:layout_above="@id/warm_signup_interstitial_half" />
+</RelativeLayout>

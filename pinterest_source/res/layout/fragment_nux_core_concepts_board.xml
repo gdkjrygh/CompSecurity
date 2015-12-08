@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/gray_lightest" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.grantland.widget.AutofitLayout android:id="@id/core_concepts_board_title_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pinterest.ui.text.PTextView android:id="@id/core_concepts_board_title" style="@style/core_concepts_title" />
+    </me.grantland.widget.AutofitLayout>
+    <FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/core_concepts_pin_or_board_frame">
+        <com.pinterest.ui.imageview.WebImageView android:layout_gravity="center" android:id="@id/core_concepts_board_board" android:layout_width="@dimen/core_concepts_board_width" android:layout_height="wrap_content" android:adjustViewBounds="true" android:alpha="0.0" />
+        <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.pinterest.ui.imageview.WebImageView android:id="@id/core_concepts_board_tip" android:layout_marginTop="@dimen/core_concepts_board_tip_margin_top" style="@style/core_concepts_tip" />
+            <me.grantland.widget.AutofitLayout android:layout_gravity="center_vertical" android:layout_width="@dimen/core_concepts_board_name_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/core_concepts_board_name_margin_left">
+                <com.pinterest.ui.text.PTextView android:textSize="@dimen/core_concepts_board_name_size" android:textColor="@color/black" android:id="@id/core_concepts_board_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:alpha="0.0" />
+            </me.grantland.widget.AutofitLayout>
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

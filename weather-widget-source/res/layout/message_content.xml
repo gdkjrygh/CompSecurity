@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffeeeeee" android:addStatesFromChildren="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="@drawable/share_weather_top_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/back" android:layout_width="@dimen/title_height" android:layout_height="fill_parent" android:src="@drawable/title_back_selector" android:scaleType="centerInside" android:contentDescription="@null" />
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:ellipsize="marquee" android:gravity="left|center" android:layout_gravity="left|center" android:id="@id/title" android:paddingRight="10.0dip" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/msg_center" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" style="@style/title_style" />
+    </LinearLayout>
+    <include android:id="@id/webviewlayout" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/message_content_webview" />
+</LinearLayout>

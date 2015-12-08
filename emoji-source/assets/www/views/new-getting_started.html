@@ -1,0 +1,48 @@
+<!-- Header and Nav -->
+<nav class="top-bar fixed-header">
+	<h1>Make Your Avatar</h1>
+</nav>
+
+<div class="row make-avatar">
+
+    	<div class="bitstripped" ng-repeat="design in user.pre_designs">
+
+	    	<div class="panel author large-6 large-centered columns">		        	
+				<img ng-src="{{user.thumb}}" q-fail="profile-fail.png" q-retry="true">
+				<p> <span>{{user.pre_designs[0].name}}</span> has designed an avatar for you!</p>
+	    	</div>
+
+	    	<img ng-src="{{design.src}}">
+
+	    	<div class="avatar-menu">
+	    		<a ng-click="discard($index)" class="done btn full blue">Redesign <i class="icon-arrow-right"></i></a>
+	    		<a ng-click="tweak_it(design.char_id)" class="done btn full blue-alt">Tweak <i class="icon-arrow-right"></i></a>
+	    		<a ng-click="use_it(design.char_id)" class="done btn full">Accept <i class="icon-ok"></i></a>
+	    	</div>
+
+    	</div>
+
+    <a class="slide previous"><i class="icon-chevron-left"></i></a>
+	<a class="slide next"><i class="icon-chevron-right"></i></a>
+
+</div>
+
+<div class="row add-to-top gender" ng-if="user.pre_designs.length == 0">
+	<div class="large-6 large-centered columns" ng-hide="launching">
+
+		<p class="blue-title">Choose a gender to begin</p>
+
+		<div ng-if="user.sex == 2">
+			<a class="av btn" ng-click="launch_f()">Female</a>
+			<a class="av btn" ng-click="launch_m()">Male</a>
+		</div>
+		
+		<div ng-if="user.sex == 1">
+			<a class="av btn"  ng-click="launch_m()">Male</a>
+			<a class="av btn"  ng-click="launch_f()">Female</a>
+		</div>
+
+	</div>
+</div>
+
+<input type="hidden" id="flash_ref"/>

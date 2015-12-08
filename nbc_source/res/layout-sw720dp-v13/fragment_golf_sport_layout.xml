@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/home_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+        <include android:id="@id/showcase_content" android:background="@android:color/transparent" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:animationCache="true" android:layout_width="fill_parent" android:layout_height="@dimen/showcase_image_height" android:animateLayoutChanges="true" layout="@layout/showcase_pager_view" />
+        <include layout="@layout/section_dropdown_layout" />
+        <TextView android:textColor="@android:color/white" android:gravity="left" android:layout_gravity="left" android:id="@id/no_data_label" android:padding="14.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="55.0dip" android:layout_marginRight="10.0dip" android:text="@string/no_content" />
+        <include android:id="@id/listing_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="50.0" android:animateLayoutChanges="true" layout="@layout/home_list_view" />
+    </LinearLayout>
+    <com.nbcsports.liveextra.ui.views.ContentLoadingOverlay android:id="@id/content_progress_modal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/ContentProgressDialog">
+        <ProgressBar android:id="@id/content_progress" style="@style/ContentProgressBar" />
+    </com.nbcsports.liveextra.ui.views.ContentLoadingOverlay>
+</FrameLayout>

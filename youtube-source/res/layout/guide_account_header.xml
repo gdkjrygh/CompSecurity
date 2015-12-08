@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <FrameLayout android:id="@id/guide_sign_in_item" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:layout_gravity="bottom" android:background="@color/guide_background" android:layout_width="fill_parent" android:layout_height="@dimen/guide_separator_height" />
+        <View android:layout_gravity="bottom" android:id="@id/separator" android:background="@color/guide_label_divider" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/guide_item" android:paddingLeft="@dimen/guide_item_horizontal_padding" android:paddingRight="@dimen/guide_item_horizontal_padding" android:layout_width="fill_parent" android:layout_height="@dimen/guide_height" android:layout_marginBottom="@dimen/guide_separator_height">
+            <FrameLayout android:id="@id/thumbnail_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/list_item_padding">
+                <ImageView android:id="@id/thumbnail" android:layout_width="@dimen/guide_small_avatar_width" android:layout_height="@dimen/guide_small_avatar_height" android:scaleType="centerCrop" />
+            </FrameLayout>
+            <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/medium_font_size" android:textColor="@color/guide_item" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" yt:robotoFont="regular" />
+        </LinearLayout>
+    </FrameLayout>
+    <RelativeLayout android:id="@id/guide_account_item" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/guide_height">
+        <FrameLayout android:id="@id/thumbnail_layout" android:paddingLeft="@dimen/guide_item_account_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <ImageView android:id="@id/thumbnail" android:layout_width="@dimen/guide_small_avatar_width" android:layout_height="@dimen/guide_small_avatar_height" android:scaleType="centerCrop" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/thumbnail_layout" android:layout_centerVertical="true">
+            <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/extra_small_font_size" android:textColor="@color/guide_label" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/username" android:paddingRight="@dimen/guide_item_horizontal_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/list_item_padding" android:maxLines="1" yt:robotoFont="regular" yt:allCaps="true" />
+            <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/extra_small_font_size" android:textColor="@color/guide_label" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/email_address" android:paddingRight="@dimen/guide_item_horizontal_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/list_item_padding" android:maxLines="1" yt:robotoFont="regular" />
+        </LinearLayout>
+        <View android:id="@id/divider" android:background="@color/guide_label_divider" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_alignParentBottom="true" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/ic_guide_account_selector" android:layout_above="@id/divider" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

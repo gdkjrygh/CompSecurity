@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:paddingTop="?android:actionBarSize" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/root_fragment" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <include android:layout_width="wrap_content" android:layout_height="fill_parent" layout="@layout/fragment_confirm_email" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/loyalty_enrollment_view" android:background="@color/white" android:padding="@dimen/activity_horizontal_margin" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:id="@id/points_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/header_footer_internal_padding" android:text="@string/yes2yourewards_title" />
+                <RelativeLayout android:id="@id/points_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/activity_horizontal_margin">
+                    <ImageView android:id="@id/save_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip" android:src="@drawable/ic_save_green" android:contentDescription="Points" />
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_horizontal_margin" android:layout_toRightOf="@id/save_image">
+                        <TextView android:textSize="@dimen/loyalty_title_fontsize" android:textStyle="bold" android:textColor="@color/loyalty_green" android:id="@id/save_title" android:paddingBottom="@dimen/wallet_padding_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="S A V E" />
+                        <TextView android:textSize="@dimen/loyalty_content_fontsize" android:textColor="@color/loyalty_default" android:id="@id/save_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loyalty_not_enrolled" android:layout_below="@id/save_title" android:lineSpacingMultiplier="1.3" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_horizontal_margin" android:layout_marginBottom="@dimen/activity_horizontal_margin">
+                    <ImageView android:id="@id/save_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip" android:src="@drawable/ic_share_pink" android:contentDescription="Points" />
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_horizontal_margin" android:layout_toRightOf="@id/save_image">
+                        <TextView android:textSize="@dimen/loyalty_title_fontsize" android:textStyle="bold" android:textColor="@color/loyalty_pink" android:id="@id/share_title" android:paddingBottom="@dimen/wallet_padding_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="S H A R E" />
+                        <TextView android:textSize="@dimen/loyalty_content_fontsize" android:textColor="@color/loyalty_default" android:id="@id/share_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loyalty_not_enrolled_2" android:layout_below="@id/share_title" android:lineSpacingMultiplier="1.3" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_horizontal_margin" android:layout_marginBottom="@dimen/activity_horizontal_margin">
+                    <ImageView android:id="@id/save_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip" android:src="@drawable/ic_surprise_yellow" android:contentDescription="Points" />
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_horizontal_margin" android:layout_toRightOf="@id/save_image">
+                        <TextView android:textSize="@dimen/loyalty_title_fontsize" android:textStyle="bold" android:textColor="@color/loyalty_yellow" android:id="@id/surprise_title" android:paddingBottom="@dimen/wallet_padding_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="S U R P R I S E" />
+                        <TextView android:textSize="@dimen/loyalty_content_fontsize" android:textColor="@color/loyalty_default" android:id="@id/surprise_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loyalty_not_enrolled_3" android:layout_below="@id/surprise_title" android:lineSpacingMultiplier="1.3" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/id_createProfile_rewardPointsLayout" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="32.0dip">
+                <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <RadioButton android:id="@id/id_createProfile_joinInStoreRadioButton" android:layout_width="30.0dip" android:layout_height="30.0dip" android:checked="true" android:button="@drawable/radio_button_state" android:text="CheckBox" />
+                    <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="@dimen/radio_text_size" android:textColor="@android:color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/joinInStoreRadioTitle" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/id_createProfile_joinedInStoreSection" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip">
+                    <EditText android:id="@id/id_createProfile_rewardNumberEditText" android:paddingLeft="@dimen/wallet_padding_small" android:hint="@string/enterOrScanRewardNumber" android:maxLength="11" android:digits="0123456789" android:drawableRight="@drawable/scanner_icon" android:inputType="number" style="@style/account_edit_text_style" />
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:id="@id/id_createProfile_rewardNumberEditTextError" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/error_text_view_style" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip">
+                        <EditText android:id="@id/id_createProfile_joinInStoreBirthday" android:paddingLeft="@dimen/wallet_padding_small" android:focusableInTouchMode="false" android:hint="@string/birthdayOptional" android:layout_weight="1.0" android:inputType="date" style="@style/account_edit_text_style" />
+                        <ImageView android:id="@id/id_createProfile_joinInStoreBirthdayHelp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/help" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip">
+                    <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <RadioButton android:id="@id/id_createProfile_signMeUpRadioButton" android:layout_width="30.0dip" android:layout_height="30.0dip" android:checked="false" android:button="@drawable/radio_button_state" android:text="CheckBox" />
+                        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+                            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="@dimen/radio_text_size" android:textColor="@android:color/black" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/signMeUp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <Space android:layout_width="30.0dip" android:layout_height="30.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/id_createProfile_layoutPhysicalCard" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:id="@id/id_createProfile_joinedInStoreSection" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/edit_text_height">
+                            <Spinner android:entries="@array/phoneTypeSelector" android:id="@id/id_createProfile_phoneNumberTypeSpinner" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                            <EditText android:id="@id/id_createProfile_phoneNumber" android:layout_width="0.0dip" android:layout_marginLeft="8.0dip" android:hint="@string/phoneNumberOptional" android:maxLength="14" android:layout_weight="1.0" android:inputType="phone" style="@style/account_edit_text_style" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:id="@id/id_createProfile_phoneNumberEditTextError" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" style="@style/error_text_view_style" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                            <EditText android:id="@id/id_createProfile_signMeUpBirthday" android:focusableInTouchMode="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/birthdayOptional" android:layout_weight="1.0" android:inputType="date" style="@style/account_edit_text_style" />
+                            <ImageView android:id="@id/id_createProfile_signMeUpBirthdayHelp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/help" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip">
+                        <CheckBox android:id="@id/id_createProfile_physicalCardCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:button="@drawable/checkbox_state" />
+                        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="@dimen/radio_text_size" android:textColor="@android:color/black" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="-10.0dip" android:text="@string/iWantToReceiveAPhysicalCard" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/id_createProfile_physicalCardSubLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip">
+                        <RadioGroup android:orientation="horizontal" android:id="@id/id_createProfile_stateTypeRadioGroup" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookRadioButton android:textSize="@dimen/radio_text_size" android:textColor="@android:color/black" android:id="@id/id_createProfile_stateNormal" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:button="@null" android:text="@string/unitedStates" android:drawableLeft="@drawable/radio_button_state" android:drawablePadding="8.0dip" />
+                            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookRadioButton android:textSize="@dimen/radio_text_size" android:textColor="@android:color/black" android:id="@id/id_createProfile_stateArmedForces" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:button="@null" android:text="@string/apoFpoDpo" android:drawableLeft="@drawable/radio_button_state" android:drawablePadding="8.0dip" />
+                        </RadioGroup>
+                        <com.kohls.mcommerce.opal.framework.view.component.views.GothamEditText android:id="@id/id_createProfile_addr1EditText" android:layout_height="43.0dip" android:layout_marginLeft="@dimen/sign_up_secondry_edittext_left_space" android:layout_marginTop="20.0dip" android:hint="@string/streetAddress" android:imeOptions="actionDone" style="@style/account_edit_text_style" />
+                        <com.kohls.mcommerce.opal.framework.view.component.views.GothamEditText android:id="@id/id_createProfile_addr2EditText" android:layout_height="43.0dip" android:layout_marginLeft="@dimen/sign_up_secondry_edittext_left_space" android:layout_marginTop="20.0dip" android:hint="@string/aptSuit" android:imeOptions="actionDone" style="@style/account_edit_text_style" />
+                        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="@dimen/radio_text_size" android:id="@id/id_createPrifile_tapLocateOrEnterTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/tapLocateOrEnter" android:imeOptions="actionDone" />
+                        <Spinner android:id="@id/id_createProfile_armedForcesStatesCategorySpinner" android:layout_width="fill_parent" android:layout_height="43.0dip" android:layout_marginLeft="@dimen/sign_up_secondry_edittext_left_space" android:layout_marginTop="15.0dip" />
+                        <com.kohls.mcommerce.opal.framework.view.component.views.GothamEditText android:id="@id/id_createProfile_cityEditText" android:layout_height="43.0dip" android:layout_marginLeft="@dimen/sign_up_secondry_edittext_left_space" android:layout_marginTop="5.0dip" android:hint="@string/city" android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ " android:imeOptions="actionDone" style="@style/account_edit_text_style" />
+                        <LinearLayout android:gravity="bottom" android:layout_width="fill_parent" android:layout_height="43.0dip" android:layout_marginLeft="@dimen/sign_up_secondry_edittext_left_space" android:layout_marginTop="20.0dip">
+                            <Spinner android:id="@id/id_createProfile_stateSpinner" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0" />
+                            <com.kohls.mcommerce.opal.framework.view.component.views.GothamEditText android:id="@id/id_createProfile_zipEditText" android:layout_width="0.0dip" android:layout_height="43.0dip" android:layout_marginLeft="8.0dip" android:hint="@string/zip" android:maxLength="5" android:layout_weight="2.0" android:inputType="number" android:imeOptions="actionDone" style="@style/account_edit_text_style" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="3.0" />
+                            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:id="@id/id_createProfile_ZipCodeEditTextError" android:paddingLeft="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0" style="@style/error_text_view_style" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="#80454545" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="31.0dip" android:layout_marginBottom="31.0dip" />
+                <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="@dimen/radio_text_size" android:gravity="left" android:id="@id/id_createProfile_agreementTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/agreement" />
+            </LinearLayout>
+            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldButton android:enabled="false" android:textSize="12.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/id_createProfile_CreateAccountButton" android:background="@drawable/btn_default_green_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:text="@string/create_account" android:textAllCaps="true" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

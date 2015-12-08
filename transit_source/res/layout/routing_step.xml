@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="#00000000" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:layout_weight="0.17">
+        <TextView android:textSize="@dimen/medium" android:textColor="@color/routing_step_text" android:gravity="right" android:layout_gravity="right" android:id="@id/routing_step_time_start" style="@style/elipse_text_view" />
+        <View android:id="@id/routing_step_spacer" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/medium" android:textColor="@color/routing_step_text" android:gravity="right" android:layout_gravity="right" android:id="@id/routing_step_time_end" style="@style/elipse_text_view" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center" android:id="@id/routing_step_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/route" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="0.73">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.thetransitapp.droid.ui.ShadowImageView android:layout_gravity="center" android:id="@id/routing_step_title_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:contentDescription="@string/route" />
+            <TextView android:textSize="@dimen/content" android:textStyle="bold" android:textColor="#ffffffff" android:layout_gravity="center_vertical" android:id="@id/routing_step_title" style="@style/elipse_text_view" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/medium" android:textColor="@color/routing_step_text" android:id="@id/routing_step_start_stop" style="@style/elipse_text_view" />
+        <TextView android:textSize="@dimen/medium" android:textColor="@color/routing_step_text" android:id="@id/routing_step_end_stop" android:layout_marginTop="20.0dip" style="@style/elipse_text_view" />
+    </LinearLayout>
+</LinearLayout>

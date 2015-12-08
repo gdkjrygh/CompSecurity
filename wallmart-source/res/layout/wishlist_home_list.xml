@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/walmart_bright_grey" android:focusable="true" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:ellipsize="end" android:gravity="center" android:layout_gravity="bottom" android:id="@id/wishlist_sign_in" android:background="@color/white" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wishlist_sign_in_prompt_landing_page" android:singleLine="true" style="@style/WishListTextStyle.Micro" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/wishlist_find_list_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:text="@string/wishlist_find_list" style="@style/PrimaryButton.Orange" />
+                <LinearLayout android:orientation="vertical" android:id="@id/wishlist_lists_card" android:background="@drawable/card_bg" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip">
+                    <TextView android:id="@id/wishlist_title" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wishlist_my_list" style="@style/WishListTextStyle.ExtraLarge" />
+                    <include layout="@layout/wishlist_loading_lists" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/wishlist_lists_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" layout="@layout/wishlist_create_container" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <include android:id="@id/wishlist_loading_view" android:visibility="gone" layout="@layout/loading_page" />
+</FrameLayout>

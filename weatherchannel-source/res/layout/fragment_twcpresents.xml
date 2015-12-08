@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/twcpresents_image_icon" android:layout_width="fill_parent" android:layout_height="150.0dip" android:layout_marginRight="@dimen/news_viewpager_default_margin" android:layout_alignParentTop="true" android:contentDescription="@string/news_line_icon_contentDescription" />
+    <RelativeLayout android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/news_viewpager_default_margin" android:layout_below="@id/twcpresents_image_icon">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/news_viewpager_title_text_size" android:textColor="@color/twcpresents_title_color" android:ellipsize="end" android:id="@id/twcpresents_viewpager_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" weather:font="Roboto-Regular.ttf" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textColor="@android:color/white" android:id="@id/twcpresents_viewpager_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/twcpresents_viewpager_title" weather:font="Roboto-Regular.ttf" />
+    </RelativeLayout>
+</RelativeLayout>

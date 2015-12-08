@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <view android:id="@id/image" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/linear_buttons" class="eu.janmuller.android.simplecropimage.CropImageView" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/linear_buttons" android:layout_width="fill_parent" android:layout_height="61.0dip" android:layout_alignParentBottom="true">
+        <Button android:textSize="20.0dip" android:textColor="@android:color/white" android:gravity="center" android:id="@id/discard" android:background="@drawable/selector_crop_buttons" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_weight="1.0" android:layout_alignParentLeft="true" android:textAllCaps="true" />
+        <Button android:textSize="20.0dip" android:textColor="@android:color/white" android:gravity="center" android:id="@id/save" android:background="@drawable/selector_crop_buttons" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_toRightOf="@id/discard" android:textAllCaps="true" />
+    </LinearLayout>
+</RelativeLayout>

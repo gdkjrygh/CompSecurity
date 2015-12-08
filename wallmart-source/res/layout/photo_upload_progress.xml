@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.walmartlabs.android.photo.view.upload.UploadProgressView android:background="@drawable/photo_card" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_margin="@dimen/photo_main_padding_half" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <RelativeLayout android:gravity="center" android:id="@id/photo_stack" android:layout_width="@dimen/photo_upload_stack_size" android:layout_height="@dimen/photo_upload_stack_size">
+            <ProgressBar android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/uploading_layout" android:paddingBottom="@dimen/photo_touch_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <TextView android:id="@id/upload_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/photo_main_padding" style="@style/PhotoTextStyle.Small" />
+                <ProgressBar android:id="@id/total" android:layout_width="200.0dip" android:layout_height="wrap_content" android:progressDrawable="@drawable/photo_progressbar" android:minHeight="16.0dip" style="?android:attr/progressBarStyleHorizontal" />
+                <TextView android:id="@id/upload_speed" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/photo_main_padding_half" style="@style/PhotoTextStyle.Micro" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/sending_layout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <TextView android:id="@id/sending_main" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_sending_order" android:layout_centerInParent="true" style="@style/PhotoTextStyle.Medium" />
+                <TextView android:id="@id/sending_aux" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@id/sending_main" android:layout_centerVertical="true" style="@style/PhotoTextStyle.Medium" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/retry_layout" android:paddingLeft="@dimen/photo_main_padding_2x" android:paddingRight="@dimen/photo_main_padding_2x" android:paddingBottom="@dimen/photo_touch_size" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <TextView android:gravity="center" android:id="@id/retry_main" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/photo_main_padding_half" android:text="@string/photo_thank_you" style="@style/PhotoTextStyle.Large" />
+                <TextView android:gravity="center" android:id="@id/retry_aux" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/photo_main_padding" android:text="@string/photo_look_for_your_order_email" style="@style/PhotoTextStyle.Micro" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/result_layout" android:paddingLeft="@dimen/photo_main_padding_2x" android:paddingRight="@dimen/photo_main_padding_2x" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <TextView android:gravity="center" android:id="@id/result_main" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/photo_main_padding_half" android:text="@string/photo_thank_you" style="@style/PhotoTextStyle.Large" />
+                <TextView android:gravity="center" android:id="@id/result_aux" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/photo_main_padding" android:text="@string/photo_look_for_your_order_email" style="@style/PhotoTextStyle.Micro" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <View android:background="@color/photo_light_grey_text" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="@dimen/photo_main_padding_2x" />
+        <Button android:textSize="@dimen/photo_text_size_medium" android:id="@id/button" android:layout_width="fill_parent" android:layout_height="@dimen/photo_touch_size" android:text="@string/photo_cancel_order" style="@style/PhotoTransparentButton" />
+    </LinearLayout>
+</com.walmartlabs.android.photo.view.upload.UploadProgressView>

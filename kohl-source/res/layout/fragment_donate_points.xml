@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:gravity="center" android:id="@id/select_charity" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/loyalty_page_left_margin" android:layout_marginTop="@dimen/loyalty_page_top_margin" android:layout_marginBottom="@dimen/loyalty_page_botom_margin" android:text="@string/select_charity_string" style="@style/LoyaltyTextStyle" />
+    <View android:id="@id/top_line" android:background="@color/line_color" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/select_charity" />
+    <ListView android:id="@id/charitylist" android:paddingLeft="@dimen/loyalty_page_left_margin" android:paddingRight="@dimen/loyalty_page_right_margin" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/list_item_selector" android:divider="@color/line_color" android:dividerHeight="1.0dip" android:layout_below="@id/top_line" />
+    <View android:id="@id/bottom_line" android:background="@color/line_color" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/charitylist" />
+    <include layout="@layout/processbar" />
+</RelativeLayout>

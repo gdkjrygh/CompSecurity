@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.payment.PaymentView android:id="@id/payment_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/normal_text" android:id="@id/card_number_title" android:layout_margin="16.0dip" android:text="@string/payment_card_list_title" style="@style/SecondaryText" />
+        <LinearLayout android:orientation="vertical" android:id="@id/card_list" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View style="@style/SplitterMaterial" />
+        <TextView android:textSize="@dimen/normal_text" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="10.0dip" android:text="@string/payment_credits_title" style="@style/SecondaryText" />
+        <LinearLayout android:orientation="vertical" android:id="@id/add_card" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include layout="@layout/add_coupon_view" />
+        <View style="@style/SplitterMaterial" />
+        <me.lyft.android.ui.payment.ConcurView android:id="@id/concur" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</me.lyft.android.ui.payment.PaymentView>

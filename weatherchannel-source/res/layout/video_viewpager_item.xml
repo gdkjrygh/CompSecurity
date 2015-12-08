@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/video_image_layout" android:background="@drawable/video_item_background" android:layout_width="@dimen/video_viewpager_item_width" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="left" android:id="@id/video_image_caption" android:padding="@dimen/video_viewpager_default_margin" android:layout_width="fill_parent" android:layout_height="@dimen/video_viewpager_title_height" android:layout_alignParentBottom="true" android:alpha="0.8">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/video_title_textsize" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/tv_video_teaser" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_centerVertical="true" weather:font="Roboto-Regular.ttf" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/video_image_caption">
+        <ImageView android:id="@id/video_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/news_video_default" android:scaleType="centerInside" android:contentDescription="@string/video_row_thumbnail_contentDescription" />
+        <ImageView android:id="@id/video_play_button" android:layout_width="@dimen/video2_grid_item_play_icon_large" android:layout_height="@dimen/video2_grid_item_play_icon_large" android:src="@drawable/btn_video_play" android:layout_centerInParent="true" android:contentDescription="@string/content_description" />
+    </RelativeLayout>
+</RelativeLayout>

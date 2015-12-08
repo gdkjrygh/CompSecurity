@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.passenger.PassengerCancelRideDialogView style="@style/DialogContainerView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/DialogView">
+        <TextView android:textSize="@dimen/normal_text" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:background="@color/pink_1" android:paddingTop="@dimen/span8" android:paddingBottom="@dimen/span8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/span8" android:text="@string/passenger_cancel_ride_confirmation_title" />
+        <TextView android:textStyle="bold" android:id="@id/penalty_message_text_view" android:layout_marginBottom="@dimen/span16" android:includeFontPadding="false" style="@style/DialogMessage" />
+        <TextView android:id="@id/penalty_detail_message_text_view" android:visibility="gone" android:layout_marginBottom="@dimen/span16" style="@style/DialogMessage" />
+        <TextView android:id="@id/multi_options_message_text_view" android:layout_marginBottom="@dimen/span16" style="@style/DialogMessage" />
+        <View style="@style/HorizontalDialogDivider" />
+        <LinearLayout android:orientation="vertical" android:id="@id/cancellation_options_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/horizontal_divider" android:showDividers="middle|end" />
+        <Button android:id="@id/do_not_cancel_button" android:text="@string/do_not_cancel_button" style="@style/DialogButton" />
+    </LinearLayout>
+</me.lyft.android.ui.passenger.PassengerCancelRideDialogView>

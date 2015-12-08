@@ -1,0 +1,38 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.kik.g;
+
+
+// Referenced classes of package com.kik.g:
+//            p
+
+static final class chFieldError
+{
+
+    static final int a[];
+
+    static 
+    {
+        a = new int[a().length];
+        try
+        {
+            a[b - 1] = 1;
+        }
+        catch (NoSuchFieldError nosuchfielderror2) { }
+        try
+        {
+            a[d - 1] = 2;
+        }
+        catch (NoSuchFieldError nosuchfielderror1) { }
+        try
+        {
+            a[c - 1] = 3;
+        }
+        catch (NoSuchFieldError nosuchfielderror)
+        {
+            return;
+        }
+    }
+}

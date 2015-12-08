@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.snapchat.android.discover.ui.ChannelView android:id="@id/channel_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.snapchat.android.discover.ui.ChannelSquareView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/discover_channel_margin" android:layout_marginTop="@dimen/discover_channel_quarter_margin" android:layout_marginRight="@dimen/discover_channel_margin">
+        <FrameLayout android:layout_gravity="top" android:id="@id/channel_icon_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/discover_channel_margin" android:layout_marginTop="@dimen/discover_channel_quarter_margin" android:layout_marginRight="@dimen/discover_channel_margin" android:layout_marginBottom="@dimen/discover_channel_one_and_half_margin" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/channel_view_brand_icon" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/channel_view_progress_bar" android:visibility="invisible" android:layout_width="@dimen/discover_channel_progress_bar" android:layout_height="@dimen/discover_channel_progress_bar" android:indeterminate="true" />
+            <ImageView android:id="@id/channel_view_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <ViewStub android:layout_gravity="bottom|center" android:id="@id/sponsored_channel_text_view_stub" android:layout="@layout/sponsored_channel_text_view" android:layout_width="fill_parent" android:layout_height="@dimen/discover_sponsored_text_view_height" />
+    </com.snapchat.android.discover.ui.ChannelSquareView>
+</com.snapchat.android.discover.ui.ChannelView>

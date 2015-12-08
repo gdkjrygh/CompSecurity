@@ -1,0 +1,93 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.gson.internal.a;
+
+import com.google.gson.b.a;
+import com.google.gson.e;
+import com.google.gson.r;
+import com.google.gson.s;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonToken;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.Collection;
+import java.util.Iterator;
+
+// Referenced classes of package com.google.gson.internal.a:
+//            l
+
+public final class b
+    implements s
+{
+    private static final class a extends r
+    {
+
+        private final r a;
+        private final com.google.gson.internal.e b;
+
+        public final Object a(JsonReader jsonreader)
+            throws IOException
+        {
+            if (jsonreader.peek() == JsonToken.NULL)
+            {
+                jsonreader.nextNull();
+                return null;
+            }
+            Collection collection = (Collection)b.a();
+            jsonreader.beginArray();
+            for (; jsonreader.hasNext(); collection.add(a.a(jsonreader))) { }
+            jsonreader.endArray();
+            return collection;
+        }
+
+        public final void a(JsonWriter jsonwriter, Object obj)
+            throws IOException
+        {
+            obj = (Collection)obj;
+            if (obj == null)
+            {
+                jsonwriter.nullValue();
+                return;
+            }
+            jsonwriter.beginArray();
+            Object obj1;
+            for (obj = ((Collection) (obj)).iterator(); ((Iterator) (obj)).hasNext(); a.a(jsonwriter, obj1))
+            {
+                obj1 = ((Iterator) (obj)).next();
+            }
+
+            jsonwriter.endArray();
+        }
+
+        public a(e e1, Type type, r r1, com.google.gson.internal.e e2)
+        {
+            a = new l(e1, r1, type);
+            b = e2;
+        }
+    }
+
+
+    private final com.google.gson.internal.b a;
+
+    public b(com.google.gson.internal.b b1)
+    {
+        a = b1;
+    }
+
+    public final r a(e e1, com.google.gson.b.a a1)
+    {
+        Type type = a1.b;
+        Class class1 = a1.a;
+        if (!java/util/Collection.isAssignableFrom(class1))
+        {
+            return null;
+        } else
+        {
+            type = com.google.gson.internal..Gson.Types.a(type, class1);
+            return new a(e1, type, e1.a(com.google.gson.b.a.a(type)), a.a(a1));
+        }
+    }
+}

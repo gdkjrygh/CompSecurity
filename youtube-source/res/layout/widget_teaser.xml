@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/widget_teaser" android:background="@drawable/frame_top_youtube_widget_holo" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/thumbnail" android:layout_width="@dimen/widget_teaser_width" android:layout_height="@dimen/widget_teaser_height" android:scaleType="centerCrop" />
+    <RelativeLayout android:id="@id/bottom_bar" android:background="#b2000000" android:padding="2.0dip" android:layout_width="@dimen/widget_teaser_width" android:layout_height="wrap_content" android:layout_alignBottom="@id/thumbnail">
+        <ImageView android:id="@id/logo" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-2.0dip" android:layout_marginBottom="-2.0dip" android:src="@drawable/ic_logo_square" android:layout_alignParentTop="true" />
+        <TextView android:textSize="@dimen/extra_small_font_size" android:textColor="@color/white" android:ellipsize="end" android:id="@id/title" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_toRightOf="@id/logo" />
+        <TextView android:textSize="@dimen/extra_small_font_size" android:textColor="@color/light_grey" android:ellipsize="end" android:id="@id/source" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_toRightOf="@id/logo" android:layout_below="@id/title" />
+    </RelativeLayout>
+</RelativeLayout>

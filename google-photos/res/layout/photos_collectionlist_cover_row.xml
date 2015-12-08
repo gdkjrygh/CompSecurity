@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/photos_collectionlist_cover_image_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/collection_cover_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null" />
+    <View android:id="@id/collection_cover_gradient" android:background="@drawable/photos_collectionlist_cover_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/photos_collectionlist_cover_image_gradient_height" android:layout_alignParentBottom="true" />
+    <ImageView android:id="@id/collection_type_icon" android:layout_width="@dimen/photos_collectionlist_icon_circle_diameter" android:layout_height="@dimen/photos_collectionlist_icon_circle_diameter" android:layout_margin="@dimen/photos_collectionlist_content_padding" android:scaleType="center" android:layout_alignParentBottom="true" android:contentDescription="@null" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/photos_collectionlist_content_padding" android:minHeight="@dimen/photos_collectionlist_icon_circle_diameter" android:layout_alignParentBottom="true">
+        <TextView android:ellipsize="end" android:gravity="left|center" android:layout_gravity="left|center" android:id="@id/collection_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/photos_collectionlist_text_start_padding" android:maxLines="2" style="@style/quantum_text_title_white" />
+        <TextView android:ellipsize="end" android:gravity="left|center" android:id="@id/collection_subtitle" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/photos_collectionlist_text_start_padding" android:maxLines="2" android:layout_weight="1.0" style="@style/quantum_text_body_1_white" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/fragment_nux_start_screen" android:background="@drawable/background_textured_dark_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/nux_animation_iv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="32.0dip">
+        <ImageView android:id="@id/right_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/illustrated_pin_camping" />
+        <ImageView android:id="@id/left_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/illustrated_pin_backpack" />
+        <ImageView android:id="@id/center_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/illustrated_pin_robot" />
+    </FrameLayout>
+    <RelativeLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/text_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.pinterest.ui.text.PTextView android:textSize="@dimen/text_display" android:textColor="@android:color/white" android:gravity="center_horizontal" android:id="@id/nux_get_started_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/nux_lets_get_started" android:layout_centerHorizontal="true" />
+        <com.pinterest.ui.text.PTextView android:textSize="16.0dip" android:textColor="@android:color/white" android:gravity="center_horizontal" android:id="@id/nux_get_started_title_desc" android:layout_width="@dimen/nux_max_text_width" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:text="@string/nux_lets_get_started_desc" android:layout_below="@id/nux_get_started_title" android:layout_centerHorizontal="true" android:textAlignment="4" />
+        <com.pinterest.ui.text.PButton android:enabled="true" android:textColor="@android:color/white" android:id="@id/nux_get_started_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nux_lets_get_started_bt" android:layout_below="@id/nux_get_started_title_desc" android:layout_centerHorizontal="true" style="@style/button_red" />
+    </RelativeLayout>
+</LinearLayout>

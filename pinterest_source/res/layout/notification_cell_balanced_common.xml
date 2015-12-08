@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" style="@style/fullline_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" style="@style/fullline_view">
+        <com.pinterest.ui.imageview.GrayWebImageView android:id="@id/left_object_iv" style="@style/list_cell_image_left_large" />
+        <LinearLayout android:orientation="vertical" android:layout_weight="1.0" style="@style/list_cell_padding_row_base">
+            <TextView android:id="@id/message_body_tv" style="@style/notif_primary_text" />
+            <TextView android:id="@id/caption_tv" style="@style/notif_comment_text" />
+            <View android:id="@id/context_text_divider" android:visibility="gone" android:layout_marginTop="@dimen/margin" android:layout_marginBottom="@dimen/margin" style="@style/section_item_divider" />
+            <TextView android:id="@id/context_text_tv" android:visibility="gone" style="@style/notif_comment_text" />
+        </LinearLayout>
+        <com.pinterest.ui.imageview.GrayWebImageView android:id="@id/right_object_iv" style="@style/list_cell_image_right" />
+    </LinearLayout>
+    <View android:id="@id/bottom_divider" style="@style/list_cell_divider" />
+</LinearLayout>

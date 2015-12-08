@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout android:gravity="bottom" android:id="@id/sliding_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" sothree:panelHeight="@dimen/player_footer" sothree:dragView="@id/player_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sothree="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/toolbar" />
+        <com.soundcloud.android.view.SafeViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar_id" />
+        <View style="@style/ToolbarShadow" />
+    </RelativeLayout>
+    <fragment android:name="com.soundcloud.android.playback.ui.PlayerFragment" android:id="@id/player_root" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

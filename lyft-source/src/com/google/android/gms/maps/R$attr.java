@@ -1,0 +1,50 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.gms.maps;
+
+
+public final class 
+{
+
+    public static final int appTheme = 0x7f010034;
+    public static final int buyButtonAppearance = 0x7f01003b;
+    public static final int buyButtonHeight = 0x7f010038;
+    public static final int buyButtonText = 0x7f01003a;
+    public static final int buyButtonWidth = 0x7f010039;
+    public static final int cameraBearing = 0x7f010016;
+    public static final int cameraTargetLat = 0x7f010017;
+    public static final int cameraTargetLng = 0x7f010018;
+    public static final int cameraTilt = 0x7f010019;
+    public static final int cameraZoom = 0x7f01001a;
+    public static final int circleCrop = 0x7f010014;
+    public static final int environment = 0x7f010035;
+    public static final int fragmentMode = 0x7f010037;
+    public static final int fragmentStyle = 0x7f010036;
+    public static final int imageAspectRatio = 0x7f010013;
+    public static final int imageAspectRatioAdjust = 0x7f010012;
+    public static final int liteMode = 0x7f01001b;
+    public static final int mapType = 0x7f010015;
+    public static final int maskedWalletDetailsBackground = 0x7f01003e;
+    public static final int maskedWalletDetailsButtonBackground = 0x7f010040;
+    public static final int maskedWalletDetailsButtonTextAppearance = 0x7f01003f;
+    public static final int maskedWalletDetailsHeaderTextAppearance = 0x7f01003d;
+    public static final int maskedWalletDetailsLogoImageType = 0x7f010042;
+    public static final int maskedWalletDetailsLogoTextColor = 0x7f010041;
+    public static final int maskedWalletDetailsTextAppearance = 0x7f01003c;
+    public static final int uiCompass = 0x7f01001c;
+    public static final int uiMapToolbar = 0x7f010024;
+    public static final int uiRotateGestures = 0x7f01001d;
+    public static final int uiScrollGestures = 0x7f01001e;
+    public static final int uiTiltGestures = 0x7f01001f;
+    public static final int uiZoomControls = 0x7f010020;
+    public static final int uiZoomGestures = 0x7f010021;
+    public static final int useViewLifecycle = 0x7f010022;
+    public static final int windowTransitionStyle = 0x7f01000e;
+    public static final int zOrderOnTop = 0x7f010023;
+
+    public ()
+    {
+    }
+}

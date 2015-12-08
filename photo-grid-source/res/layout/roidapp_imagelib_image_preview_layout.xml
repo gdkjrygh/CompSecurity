@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/preview_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.roidapp.imagelib.facedetector.LoadImageView android:layout_gravity="center" android:id="@id/roidapp_imagelib_loadImageView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textColor="@color/text_color" android:gravity="center" android:id="@id/roidapp_imagelib_text_tip" android:background="@color/text_background_color" android:layout_width="fill_parent" android:layout_height="@dimen/text_tip_height" android:text="@string/roidapp_imagelib_text_tip_text" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <RelativeLayout android:id="@id/roidapp_imagelib_btnConfirmlayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="25.0dip" android:layout_above="@id/roidapp_imagelib_text_tip1" android:layout_centerHorizontal="true">
+        <ImageButton android:id="@id/roidapp_imagelib_btncancelCrop" android:background="@drawable/roidapp_imagelib_cancel" android:layout_width="@dimen/confirm_layout_height" android:layout_height="@dimen/confirm_layout_height" android:src="@drawable/icon_cancel" />
+        <Button android:textSize="@dimen/confirm_text_size" android:id="@id/roidapp_imagelib_btnheadCrop" android:background="@drawable/roidapp_imagelib_bg_confirm" android:layout_width="wrap_content" android:layout_height="@dimen/confirm_layout_height" android:layout_marginLeft="5.0dip" android:minWidth="@dimen/confirm_layout_width" android:text="@string/roidapp_imagelib_confirm" android:layout_toRightOf="@id/roidapp_imagelib_btncancelCrop" />
+    </RelativeLayout>
+    <TextView android:id="@id/roidapp_imagelib_text_tip1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root_container" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:theme="@style/Theme.Walmart.Toolbar" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" />
+    <com.walmart.android.wmui.SafeDrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar">
+        <FrameLayout android:id="@id/fragment_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ListView android:layout_gravity="left" android:id="@id/left_drawer" android:background="@color/drawer_item_bg_default" android:scrollbars="none" android:fadingEdge="none" android:layout_width="286.0dip" android:layout_height="fill_parent" android:divider="@android:color/transparent" android:dividerHeight="0.0dip" android:choiceMode="singleChoice" android:overScrollMode="never" />
+    </com.walmart.android.wmui.SafeDrawerLayout>
+    <include layout="@layout/toolbar_shadow" />
+</RelativeLayout>

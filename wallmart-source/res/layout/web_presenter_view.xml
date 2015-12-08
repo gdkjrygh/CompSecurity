@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/webview_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include android:id="@id/web_loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/loading_page" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/screenshot_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/screenshot_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include android:id="@id/screenshot_loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/loading_page" />
+    </FrameLayout>
+</FrameLayout>

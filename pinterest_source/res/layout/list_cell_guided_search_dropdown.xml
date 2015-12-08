@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.pinterest.activity.search.ui.GuidedSearchDropDownCell android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/section_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/header_history_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/text_caption" android:textStyle="bold" android:textColor="@color/text_medium" android:gravity="center_vertical" android:id="@id/header_history" android:paddingLeft="@dimen/margin" android:paddingTop="@dimen/margin" android:paddingRight="@dimen/margin" android:paddingBottom="@dimen/search_typeahead_header_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/text_caption" android:textStyle="bold" android:textColor="@drawable/clear_all_states" android:gravity="right" android:id="@id/header_history_clear" android:paddingBottom="@dimen/search_typeahead_header_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin" android:text="@string/clear_all" android:layout_alignBottom="@id/header_history" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/header_autocomplete" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginTop="@dimen/margin_half" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin_half">
+            <com.pinterest.ui.text.IconView android:id="@id/search_left_icon" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginRight="@dimen/margin" android:src="@drawable/ic_search" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/text_subhead" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/autocomplete_text" android:layout_width="wrap_content" android:layout_height="@dimen/search_typeahead_tail_height" android:layout_toRightOf="@id/search_left_icon" />
+            <ImageView android:id="@id/search_more_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_search_more_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:id="@id/head_divider" style="@style/list_cell_divider_dark" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/section_body" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/list_guided_cell_person" />
+        <LinearLayout android:id="@id/search_right_wrapper" android:background="@drawable/touch_clear_bg" android:paddingLeft="@dimen/margin" android:paddingTop="@dimen/list_cell_padding_topbottom" android:paddingRight="@dimen/margin" android:paddingBottom="@dimen/list_cell_padding_topbottom" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.pinterest.ui.text.IconView android:layout_gravity="right|center" android:id="@id/search_right_icon" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/button_cancel_states" android:tint="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</com.pinterest.activity.search.ui.GuidedSearchDropDownCell>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/widget_bg_rl" android:background="@drawable/appwidget_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_container" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="8.0">
+        <RelativeLayout android:id="@id/city_time_rl" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.5">
+            <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/dk_blue" android:ellipsize="end" android:id="@id/city" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:text="MECHANICSBURG" android:maxLines="1" android:singleLine="true" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/dk_blue" android:ellipsize="end" android:id="@id/current_location_tv" android:paddingLeft="6.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:layout_toRightOf="@id/city" />
+            <ImageView android:id="@id/alert_icon" android:visibility="gone" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="24.0dip" android:src="@drawable/alert_img" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/time_ll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-8.0dip" android:layout_below="@id/city" android:layout_centerHorizontal="true">
+                <TextView android:textSize="40.0dip" android:textStyle="bold" android:textColor="@color/dk_blue" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:textColor="@color/primary_text" android:gravity="center" android:id="@id/widget_bg" android:background="#ffc8c8c8" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/SearchingForYourLocation" android:layout_weight="4.5" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/clickthrough_ll" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <RelativeLayout android:id="@id/full_app_rl" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="horizontal" android:id="@id/getfullapp_ll" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <ImageView android:id="@id/download" android:layout_width="23.0dip" android:layout_height="28.0dip" android:layout_marginLeft="6.0dip" android:src="@drawable/download" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/dk_blue" android:layout_gravity="center_vertical" android:id="@id/get_full_app" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="@string/GetFullApp" />
+                </LinearLayout>
+                <ImageView android:id="@id/adc_logo" android:layout_width="117.0dip" android:layout_height="12.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/adc_logo" android:scaleType="fitXY" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="AccuWeather Logo" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="24.0dip" android:textColor="@color/dk_blue" android:id="@id/tap_to_launch_tv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tap to set a location" android:layout_centerInParent="true" />
+</RelativeLayout>

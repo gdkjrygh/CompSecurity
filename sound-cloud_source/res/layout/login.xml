@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.soundcloud.android.onboarding.auth.LoginLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/SignUp.Content">
+        <include layout="@layout/auth_buttons_social" />
+        <TextView android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:text="@string/tour_login_header" style="@style/SignUp.Header" />
+        <TableLayout style="@style/SignUp.LoginForm">
+            <TableRow style="@style/SignUp.LabelRow">
+                <TextView android:text="@string/email" style="@style/SignUp.Label" />
+                <AutoCompleteTextView android:id="@id/auto_txt_email_address" android:hint="@string/authentication_your_email_address" android:requiresFadingEdge="0x1000" style="@style/SignUp.EmailEntry" />
+            </TableRow>
+            <TableRow style="@style/SignUp.SeparatorRow">
+                <View style="@style/SignUp.SeparatorView" />
+            </TableRow>
+            <TableRow style="@style/SignUp.LabelRow">
+                <TextView android:text="@string/password" style="@style/SignUp.Label" />
+                <com.soundcloud.android.view.ClearText android:id="@id/txt_password" android:hint="@string/authentication_your_password" android:imeOptions="actionDone" android:requiresFadingEdge="0x1000" style="@style/SignUp.PasswordEntry" />
+            </TableRow>
+        </TableLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="@dimen/tour_buttons_height" android:layout_marginTop="10.0dip">
+            <Button android:id="@id/btn_cancel" android:layout_height="@dimen/tour_buttons_height" android:layout_marginRight="10.0dip" android:text="@string/btn_cancel" style="@style/Tour.CancelButton" />
+            <Button android:id="@id/btn_login" android:layout_height="@dimen/tour_buttons_height" android:text="@string/btn_done" style="@style/Tour.NextButton" />
+        </LinearLayout>
+        <TextView android:id="@id/txt_i_forgot_my_password" android:text="@string/authentication_I_forgot_my_password" style="@style/SignUp.Info" />
+    </LinearLayout>
+</com.soundcloud.android.onboarding.auth.LoginLayout>

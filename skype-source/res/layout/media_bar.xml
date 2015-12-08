@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="@dimen/size_5_5x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="left|center" android:orientation="horizontal" android:id="@id/media_bar_buttons_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.skype.android.widget.SymbolView android:id="@id/media_bar_files_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:symbol_code="FileMultiple" style="@style/MediaBarBtn" />
+        <com.skype.android.widget.SymbolView android:id="@id/media_bar_gallery_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:symbol_code="Picture" style="@style/MediaBarBtn" />
+        <com.skype.android.widget.SymbolView android:id="@id/media_bar_camera_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:symbol_code="Camera" style="@style/MediaBarBtn" />
+        <com.skype.android.widget.BadgeDecoratorView android:layout_gravity="center" android:id="@id/media_bar_vim_btn" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" app:badgeDistanceFromEdgeToCenter="@dimen/mediabar_vim_badge_position" app:badgeSize="@dimen/mediabar_vim_badge_size" style="@style/MediaBarBtn">
+            <com.skype.android.widget.SymbolView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.0dip" app:symbol_code="VideoMessage" style="@style/MediaBarBtn" />
+        </com.skype.android.widget.BadgeDecoratorView>
+        <com.skype.android.widget.SymbolView android:id="@id/media_bar_location_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:symbol_code="Location" style="@style/MediaBarBtn" />
+    </LinearLayout>
+</merge>

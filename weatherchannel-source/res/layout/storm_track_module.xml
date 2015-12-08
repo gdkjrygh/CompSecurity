@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/storm_track_module_view" android:background="@drawable/module_background_with_small_top_inset" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/map_module_thumbnail" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="@dimen/storm_tracker_image_bottom_margin" android:src="@drawable/news_video_default" android:scaleType="centerCrop" android:contentDescription="@string/hurricane_central_storm_track_description" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/storm_tracker_module_update_time_text_size" android:textColor="@android:color/white" android:gravity="right" android:layout_gravity="top" android:id="@id/storm_track_module_update_time" android:background="@drawable/storm_tracker_update_time_background" android:layout_width="fill_parent" android:layout_height="wrap_content" weather:font="Roboto-Regular.ttf" />
+    </FrameLayout>
+    <include android:id="@id/storm_track_module_category" layout="@layout/storm_track_info_row" />
+    <include android:id="@id/storm_track_module_wind" layout="@layout/storm_track_info_row" />
+    <include android:id="@id/storm_track_module_pressure" layout="@layout/storm_track_info_row" />
+    <include android:id="@id/storm_track_module_moving" layout="@layout/storm_track_info_row" />
+    <include android:id="@id/storm_track_module_location" layout="@layout/storm_track_info_row" />
+    <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/hourly_more" android:text="@string/more" style="@style/module_more" />
+</LinearLayout>

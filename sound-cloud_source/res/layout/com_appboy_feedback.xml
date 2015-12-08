@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/com_appboy_feedback_root" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Appboy.Feedback.Layout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/com_appboy_feedback_navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/Appboy.Feedback.NavigationBar">
+        <Button android:id="@id/com_appboy_feedback_cancel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Appboy.Feedback.NavigationBarCancelButton" />
+        <Button android:id="@id/com_appboy_feedback_send" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Appboy.Feedback.NavigationBarSendButton" />
+    </LinearLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/com_appboy_feedback_navigation_bar" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="4.0dip" android:paddingTop="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:id="@id/com_appboy_feedback_message" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/Appboy.Feedback.MessageEditText" />
+            <EditText android:id="@id/com_appboy_feedback_email" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Appboy.Feedback.EmailEditText" />
+            <CheckBox android:id="@id/com_appboy_feedback_is_bug" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Appboy.Feedback.IsBugCheckBox" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

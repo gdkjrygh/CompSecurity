@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.weather.Weather.ui.FrontPageView android:id="@id/now_main_container" android:paddingTop="?android:actionBarSize" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <Space android:id="@id/severe_alert_placeholder" android:layout_width="fill_parent" android:layout_height="@dimen/now_severe_alert_height" android:layout_alignParentTop="true" />
+    <RelativeLayout android:id="@id/icon_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/severe_alert_placeholder" android:layout_centerInParent="true">
+        <ImageView android:id="@id/now_weather_checkin_icon" android:layout_width="@dimen/now_weathercheckin_icon_width_height" android:layout_height="@dimen/now_weathercheckin_icon_width_height" android:layout_marginTop="@dimen/now_weathercheckin_icon_margintop" android:layout_marginRight="10.0dip" android:layout_marginBottom="@dimen/now_weathercheckin_icon_marginbottom" android:src="@drawable/weather_checkin" />
+        <ImageView android:id="@id/picture_chat_icon" android:visibility="gone" android:layout_width="@dimen/now_weathercheckin_icon_width_height" android:layout_height="@dimen/now_weathercheckin_icon_width_height" android:src="@drawable/camera" android:layout_toRightOf="@id/now_weather_checkin_icon" android:layout_alignBottom="@id/now_weather_checkin_icon" />
+    </RelativeLayout>
+    <include android:id="@id/now_circle_include" android:layout_width="@dimen/now_circle_width_height" android:layout_height="@dimen/now_circle_width_height" android:layout_below="@id/icon_group" android:layout_centerHorizontal="true" layout="@layout/now_circle_layout" />
+    <include android:id="@id/now_circle_data_refresh_include" android:layout_width="@dimen/now_circle_width_height" android:layout_height="@dimen/now_circle_width_height" android:layout_below="@id/icon_group" android:layout_centerHorizontal="true" layout="@layout/now_circle_data_refresh_layout" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="80.0" />
+        <View android:id="@id/background_ad_clickable" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="20.0" />
+    </LinearLayout>
+    <com.weather.Weather.ui.TransparentNonClickableRelativeLayout android:id="@id/ad_view_parent" android:background="@color/feed_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerInParent="true">
+        <com.weather.util.ui.PassThroughTouchLinearLayout android:layout_gravity="bottom|center" android:id="@id/ad_view_holder" android:background="@null" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_centerInParent="true" />
+    </com.weather.Weather.ui.TransparentNonClickableRelativeLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/now_tutorial_container" android:background="@drawable/now_tutorial_background" android:paddingTop="@dimen/now_tutorial_container_padding" android:paddingBottom="@dimen/now_tutorial_container_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/ad_view_parent" android:layout_alignWithParentIfMissing="true">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/now_tutorial_text_size" android:textColor="@color/now_tutorial_text_color" android:ellipsize="end" android:id="@id/now_tutorial_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/now_tutorial_text" android:singleLine="true" weather:font="Roboto-Regular.ttf" />
+        <ImageView android:layout_width="@dimen/now_tutorial_icon_width_height" android:layout_height="@dimen/now_tutorial_icon_width_height" android:src="@drawable/down_arrow" android:contentDescription="@string/now_tutorial_text" />
+    </LinearLayout>
+</com.weather.Weather.ui.FrontPageView>

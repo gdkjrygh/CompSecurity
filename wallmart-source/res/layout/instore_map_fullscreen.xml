@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/store_map_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/instore_map_section_progress" android:background="@color/walmart_blue" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Spinner.Dark" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/store_map_item_container" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <android.support.v7.widget.CardView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:cardBackgroundColor="@color/white" style="@style/CardViewStyle">
+            <LinearLayout android:orientation="vertical" android:id="@id/store_map_pager_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <android.support.v4.view.ViewPager android:id="@id/store_map_pager" android:background="@drawable/list_default_selector" android:layout_width="wrap_content" android:layout_height="80.0dip" android:layout_marginLeft="@dimen/shelf_item_margin_half" android:layout_marginTop="@dimen/shelf_item_margin_half" android:layout_marginRight="@dimen/shelf_item_margin_half" android:layout_marginBottom="@dimen/shelf_item_margin_half" android:overScrollMode="never" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/store_map_pager_control" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/store_map_pager_control_prev" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/chevron_prev_selector" />
+                    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/store_map_pager_control_position" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="1 / 10" android:layout_weight="1.0" />
+                    <ImageView android:id="@id/store_map_pager_control_next" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/chevron_next_selector" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView android:id="@id/store_map_item_image" android:visibility="gone" android:layout_width="78.0dip" android:layout_height="78.0dip" android:layout_marginLeft="@dimen/shelf_item_margin_half" android:layout_marginTop="@dimen/shelf_item_margin_half" android:layout_marginRight="@dimen/shelf_item_margin_half" android:layout_marginBottom="@dimen/shelf_item_margin_half" android:scaleType="fitStart" />
+        </android.support.v7.widget.CardView>
+    </FrameLayout>
+</RelativeLayout>

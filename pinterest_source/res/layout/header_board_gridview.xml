@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View style="@style/list_cell_divider" />
+    <com.pinterest.ui.text.PTextView android:textSize="@dimen/text_body" android:textColor="@color/text_light" android:ellipsize="end" android:gravity="center" android:id="@id/desc_tv" android:background="@drawable/touch_clear_bg" android:paddingLeft="54.0dip" android:paddingTop="@dimen/margin" android:paddingRight="48.0dip" android:paddingBottom="@dimen/margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tap_to_show_map" android:maxLines="3" android:lineSpacingMultiplier="1.15" />
+    <View style="@style/list_cell_divider" />
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/collab_wrapper" android:background="@drawable/touch_clear_bg" android:padding="@dimen/margin" style="@style/fullline_view">
+        <com.pinterest.ui.text.PTextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="@color/text_light" android:gravity="center_vertical" android:id="@id/info_tv" android:drawablePadding="@dimen/margin" android:layout_toLeftOf="@id/user_container" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/text_base" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/user_container" android:layout_marginLeft="@dimen/list_cell_related_news_gap" android:layout_alignParentRight="true" style="@style/wrap_view" />
+    </RelativeLayout>
+    <View style="@style/list_cell_divider" />
+</merge>

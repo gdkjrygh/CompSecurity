@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.enterprise.WorkPerksEnterEmailView android:orientation="vertical" android:id="@id/work_perks_enter_email_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.controls.MenuButtonToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:id="@id/work_perks_scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.4" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:src="@drawable/ic_inline_work" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="@dimen/big_text_1" android:textStyle="bold" android:gravity="center" android:id="@id/work_perks_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="60.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="60.0dip" android:text="@string/work_perks_title_text" style="@style/DialogAddressEditText" />
+            <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/work_perks_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="70.0dip" android:text="@string/work_perks_description_text" style="@style/PrimaryText" />
+            <me.lyft.android.controls.AdvancedEditText android:gravity="center" android:id="@id/work_perks_verify_email" android:layout_marginLeft="8.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="0.0dip" android:hint="@string/work_perks_email_edit_text" android:inputType="textEmailAddress" style="@style/EditText" />
+            <TextView android:gravity="center" android:id="@id/inline_error_txt" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="0.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="0.0dip" style="@style/InlineErrorText" />
+            <TextView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.6" />
+        </LinearLayout>
+    </ScrollView>
+    <Button android:id="@id/work_perks_submit_button" android:background="@drawable/btn_charcoal" android:layout_width="fill_parent" android:text="@string/work_perks_submit_button_text" android:layout_alignParentBottom="true" style="@style/FullBleedButton" />
+</me.lyft.android.ui.enterprise.WorkPerksEnterEmailView>

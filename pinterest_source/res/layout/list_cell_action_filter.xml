@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/text_subhead" android:gravity="center_vertical" android:id="@id/title_only_tv" android:background="@drawable/touch_clear_bg" android:paddingLeft="@dimen/margin" android:paddingRight="@dimen/margin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height" style="@style/list_cell_text" />
+    <LinearLayout android:layout_gravity="center" android:id="@id/icon_text_wrapper" android:layout_width="fill_parent" style="@style/list_cell_padding_row">
+        <com.pinterest.ui.imageview.WebImageView android:id="@id/icon_wiv" android:layout_marginRight="@dimen/list_cell_text_image_gap" android:layout_weight="0.0" style="@style/thumbnail_image" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/title_tv" android:layout_width="wrap_content" android:layout_weight="1.0" style="@style/list_cell_text" />
+        <TextView android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/count_tv" android:background="@drawable/bg_item_count" android:layout_width="wrap_content" android:layout_weight="0.0" style="@style/list_cell_count_text" />
+    </LinearLayout>
+    <View style="@style/list_cell_divider" />
+</merge>

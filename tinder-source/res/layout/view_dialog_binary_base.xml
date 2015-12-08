@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/linear_container" android:background="@drawable/rounded_rectangle_white" android:layout_width="@dimen/width_dialog" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/dialog_content_padding" android:paddingTop="@dimen/dialog_content_padding" android:paddingRight="@dimen/dialog_content_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/img_dialog_icon" android:layout_width="@dimen/dialog_icon_length" android:layout_height="@dimen/dialog_icon_length" android:layout_marginBottom="@dimen/margin_med" />
+        <com.tinder.views.CustomTextView android:id="@id/txt_dialog_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Title" app:font="semi_bold" style="@style/dialog_standard_title" />
+    </LinearLayout>
+    <ScrollView android:scrollbarStyle="outsideOverlay" android:id="@id/scroll_txt" android:paddingLeft="24.0dip" android:paddingTop="@dimen/padding_large" android:paddingRight="24.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="never">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.tinder.views.CustomTextView android:id="@id/txt_dialog_txt" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="This is content for our dialogs This is a second line." app:font="semi_bold" style="@style/dialog_standard_body" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:layout_gravity="right" android:orientation="horizontal" android:id="@id/linear_binary_choices" android:paddingRight="@dimen/padding_med" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.tinder.views.CustomTextView android:textColor="@color/text_light" android:id="@id/txt_choice_one" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Button 1" app:font="semi_bold" style="@style/dialog_standard_action" />
+        <com.tinder.views.CustomTextView android:id="@id/txt_choice_two" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Button 2" app:font="semi_bold" style="@style/dialog_standard_action" />
+    </LinearLayout>
+    <com.tinder.views.CustomTextView android:layout_gravity="right" android:id="@id/txt_mono_choice" android:padding="@dimen/padding_large" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:font="semi_bold" style="@style/dialog_standard_action" />
+</LinearLayout>

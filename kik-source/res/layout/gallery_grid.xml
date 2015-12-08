@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/gallery_picker_top_divider" android:background="#3a000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <kik.android.widget.RobotoTextView android:textSize="14.0dip" android:textColor="#ff7e8796" android:layout_gravity="center" android:id="@id/no_photos_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/title_no_photos" />
+    <kik.android.util.KikSpinner android:id="@id/gallery_folder_list" android:background="@drawable/galleryarrow" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+    <View android:background="#3a000000" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <kik.android.widget.ClickableGridView android:gravity="fill" android:id="@id/gallery_grid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/gallery_grid_selector" android:drawSelectorOnTop="true" android:horizontalSpacing="2.0dip" android:verticalSpacing="2.0dip" android:stretchMode="columnWidth" android:columnWidth="100.0dip" android:numColumns="auto_fit" android:layout_below="@id/gallery_folder_list" />
+        <View android:id="@id/gallery_dim_layout" android:background="@color/gallery_dimmed_background_color" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

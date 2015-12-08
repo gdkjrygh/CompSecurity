@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/premium_content" android:background="@color/premium_color_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/premium_height_top">
+                <TextView android:textSize="@dimen/premium_textsize_tittle" android:textStyle="bold" android:textColor="@color/premium_color_blue" android:gravity="center" android:id="@id/premium_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/savedialog_marginleft" android:text="@string/premium_tittle" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/premium_cancel" android:background="@drawable/btn_save" android:layout_width="@dimen/premium_height_top" android:layout_height="@dimen/premium_height_top" android:scaleType="center" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <View android:background="@color/premium_color_blue" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <TextView android:textSize="@dimen/premium_textsize_explanation" android:textColor="@color/white" android:gravity="left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/savedialog_marginleft" android:layout_marginTop="@dimen/custom_ratio_padding_top" android:layout_marginRight="@dimen/savedialog_marginleft" android:layout_marginBottom="27.0dip" android:text="@string/premium_explanation" />
+            <RadioGroup android:id="@id/radioGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+                <RadioButton android:textSize="@dimen/premium_textsize_per" android:textColor="@color/premium_color_yellow" android:id="@id/radioYearBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/savedialog_marginleft" android:layout_marginBottom="18.0dip" android:button="@null" android:text="$1.99 Per Year" android:drawableLeft="@drawable/radio" android:drawablePadding="8.0dip" android:layout_centerVertical="true" />
+                <RadioButton android:textSize="@dimen/premium_textsize_per" android:textColor="@color/premium_color_yellow" android:id="@id/radioPermanentBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/savedialog_marginleft" android:button="@null" android:text="$11.99 Permanent" android:drawableLeft="@drawable/radio" android:drawablePadding="8.0dip" android:layout_centerVertical="true" />
+            </RadioGroup>
+            <View android:background="@drawable/bg_slidebar_normal" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <TextView android:textSize="@dimen/premium_textsize_confirm" android:textColor="@color/white" android:gravity="center" android:id="@id/premium_confirm" android:background="@drawable/btn_save" android:layout_width="fill_parent" android:layout_height="@dimen/premium_height_top" android:text="@string/premium_confirm" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/premium_textsize_tips" android:textColor="@color/white" android:gravity="center" android:id="@id/premium_tip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/savedialog_marginleft" android:layout_marginTop="@dimen/premium_margintop_tips" android:layout_marginRight="@dimen/savedialog_marginleft" android:text="@string/premium_tips" android:layout_below="@id/premium_content" />
+    </RelativeLayout>
+</ScrollView>

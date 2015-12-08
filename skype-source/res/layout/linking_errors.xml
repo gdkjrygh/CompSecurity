@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:background="@color/skype_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/linking_error_container" style="@style/LinkingErrorContainer">
+        <RelativeLayout android:id="@id/linking_error_message_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/linking_error_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/LinkingErrorTitle" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:id="@id/linking_error_hint_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/linking_error_hint" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/LinkingErrorSubTitle" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/linking_error_btn1_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/linking_error_emoticon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/linking_avatars_top" android:layout_marginBottom="@dimen/linking_avatars_bottom" android:src="@drawable/linking_emoticon_sad" />
+            <Button android:id="@id/linking_error_btn_first" android:layout_height="wrap_content" style="@style/LinkingErrorButton" />
+        </LinearLayout>
+        <RelativeLayout android:gravity="center" android:id="@id/linking_error_btn2_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/linking_error_btn_second" android:layout_height="wrap_content" style="@style/LinkingErrorButton" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/linking_error_action_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <Button android:gravity="center" android:id="@id/linking_error_action" android:background="@drawable/focus_highlight" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/LinkingBottomActionLink" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

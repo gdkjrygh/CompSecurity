@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/flu_height" style="@style/flu_module_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/flu_module_valid_data_container" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/title" android:text="@string/flu_report" style="@style/module_header" />
+        <RelativeLayout android:id="@id/states_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title" android:layout_alignParentRight="true">
+            <ImageView android:id="@id/conditions" android:background="@drawable/red" android:layout_width="246.0dip" android:layout_height="275.0dip" android:layout_alignParentRight="true" android:contentDescription="@string/conditions" />
+            <RelativeLayout android:id="@id/labels_container" android:layout_width="208.0dip" android:layout_height="275.0dip" android:layout_alignParentRight="true">
+                <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/flu_widespread" android:layout_marginTop="@dimen/flu_module_widespread_margin_top" android:text="@string/flu_module_widespread" weather:font="Roboto-Bold.ttf" style="@style/flu_module_condition_label" />
+                <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/flu_regional" android:layout_marginTop="@dimen/flu_module_regional_margin_top" android:text="@string/flu_module_regional" weather:font="Roboto-Bold.ttf" style="@style/flu_module_condition_label" />
+                <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/flu_sporadic" android:layout_marginTop="@dimen/flu_module_sporadic_margin_top" android:text="@string/flu_module_sporadic" weather:font="Roboto-Bold.ttf" style="@style/flu_module_condition_label" />
+                <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/flu_none" android:text="@string/flu_module_none" android:layout_centerVertical="true" weather:font="Roboto-Bold.ttf" style="@style/flu_module_condition_label" />
+            </RelativeLayout>
+            <ImageView android:id="@id/flu_module_state" android:background="@drawable/GA" android:layout_width="@dimen/flu_module_state_image_width" android:layout_height="@dimen/flu_module_state_image_width" android:contentDescription="@string/state" />
+        </RelativeLayout>
+        <ImageView android:id="@id/thermometer" android:background="@drawable/flu_image" android:layout_width="280.0dip" android:layout_height="168.0dip" android:layout_marginBottom="10.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:contentDescription="@string/probe" />
+        <LinearLayout android:orientation="vertical" android:id="@id/flu_module_text_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="14.0sp" android:textColor="@android:color/white" android:id="@id/flu_module_as_of" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/as_of" weather:font="Roboto-Medium.ttf" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="14.0sp" android:textColor="@android:color/white" android:id="@id/flu_module_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/empty_date" weather:font="Roboto-Medium.ttf" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="25.0sp" android:textColor="@color/flu_module_condition_summary" android:id="@id/flu_module_condition_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/flu_module_sporadic_summary" weather:font="Roboto-Light.ttf" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="13.0sp" android:textColor="@color/flu_module_cdc" android:id="@id/flu_module_cdc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/data_provided_by_the_cdc" weather:font="Roboto-Light.ttf" />
+        </LinearLayout>
+    </RelativeLayout>
+    <include layout="@layout/flu_module_invalid_data" />
+</RelativeLayout>

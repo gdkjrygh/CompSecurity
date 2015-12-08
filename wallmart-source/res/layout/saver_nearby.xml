@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.walmart.android.ui.SafeScrollView android:id="@id/saver_nearby_scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/saver_nearby_map_section" layout="@layout/saver_nearby_map_section" />
+            <TextView android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:text="@string/saver_nearby_competitors_search" style="@style/Text.SubHeader.40" />
+            <TextView android:textColor="@color/saver_dark_gray" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:text="@string/saver_nearby_competitors_paragraph_one" style="@style/Text.Body" />
+            <TextView android:textColor="@color/saver_dark_gray" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/saver_nearby_competitors_paragraph_two" style="@style/Text.Body" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/saver_dark_gray" android:gravity="center" android:layout_gravity="center" android:id="@id/saver_nearby_notify_results" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:text="@string/saver_nearby_competitors_notify_results" android:drawableRight="@drawable/icn_help" android:drawablePadding="10.0dip" />
+            <Button android:id="@id/saver_view_receipt_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:text="@string/saver_nearby_competitors_view" style="@style/PrimaryButton.Orange" />
+            <Button android:id="@id/saver_scan_another_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:text="@string/saver_nearby_competitors_scan" style="@style/PrimaryButton.Blue" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/saver_gray" android:gravity="center" android:layout_gravity="center" android:id="@id/saver_nearby_more_receipts" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:text="You can add # more receipts this week." />
+            <View android:background="@color/divider_grey" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <include layout="@layout/saver_merchandise" />
+        </LinearLayout>
+    </com.walmart.android.ui.SafeScrollView>
+    <include android:id="@id/ereceipt_loading_view" layout="@layout/loading_page" />
+</FrameLayout>

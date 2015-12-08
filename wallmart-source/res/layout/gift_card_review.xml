@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.walmart.android.ui.SafeScrollView android:id="@id/gift_card_review_scroll_view" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/gift_card_review_main_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/gift_card_review_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" style="@style/Text.Header.Multiline" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/gift_card_product_image" android:layout_width="200.0dip" android:layout_height="200.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:scaleType="fitXY" />
+        <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+            <TableRow android:id="@id/tableRowAmount" android:background="@color/table_row_grey" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/gift_card_customize_amount" style="@style/Theme.SmallTextBold" />
+                <TextView android:id="@id/gift_card_review_amount_val" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" style="@style/Theme.SmallText" />
+            </TableRow>
+            <TableRow android:id="@id/tableRowTo" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/gift_card_customize_to" style="@style/Theme.SmallTextBold" />
+                <TextView android:id="@id/gift_card_review_to_val" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" style="@style/Theme.SmallText" />
+            </TableRow>
+            <TableRow android:id="@id/tableRowEmail" android:background="@color/table_row_grey" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/gift_card_customize_email" style="@style/Theme.SmallTextBold" />
+                <TextView android:id="@id/gift_card_review_email_val" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" style="@style/Theme.SmallText" />
+            </TableRow>
+            <TableRow android:id="@id/tableRowFrom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/gift_card_customize_from" style="@style/Theme.SmallTextBold" />
+                <TextView android:id="@id/gift_card_review_from_val" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" style="@style/Theme.SmallText" />
+            </TableRow>
+            <TableRow android:id="@id/tableRowMessage" android:background="@color/table_row_grey" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/gift_card_customize_message" style="@style/Theme.SmallTextBold" />
+                <TextView android:id="@id/gift_card_review_message_val" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:singleLine="false" android:layout_weight="1.0" style="@style/Theme.SmallText" />
+            </TableRow>
+        </TableLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/gift_card_review_button_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+            <Button android:id="@id/gift_card_review_edit_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/edit_button" android:layout_weight="1.0" style="@style/PrimaryButton.Blue" />
+            <Button android:id="@id/gift_card_review_add_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/add_to_cart_button" android:layout_weight="1.0" style="@style/PrimaryButton.Orange" />
+        </LinearLayout>
+    </LinearLayout>
+</com.walmart.android.ui.SafeScrollView>

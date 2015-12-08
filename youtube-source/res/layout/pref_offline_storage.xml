@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/offline_storage_widget_layout" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/storage_bar" android:layout_width="fill_parent" android:layout_height="10.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:progressDrawable="@drawable/offline_storage_bar" style="@android:style/Widget.ProgressBar.Horizontal" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:id="@id/legend_used" android:background="#ff6ab9f8" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ffcccccc" android:ellipsize="marquee" android:id="@id/storage_used" android:paddingLeft="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pref_offline_storage_used" android:includeFontPadding="false" android:layout_toRightOf="@id/legend_used" android:layout_centerVertical="true" />
+        <View android:id="@id/legend_free" android:background="#ffcccccc" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ffcccccc" android:ellipsize="marquee" android:id="@id/storage_free" android:paddingRight="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pref_offline_storage_free" android:includeFontPadding="false" android:layout_toLeftOf="@id/legend_free" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

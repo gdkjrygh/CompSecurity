@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/appwidget_bg_squaredsides" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/widget_bg_rl" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="6.5dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/widget_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/layout_container" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0">
+                <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.2" />
+                <LinearLayout android:orientation="vertical" android:id="@id/current_ll" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="15.0dip" android:layout_weight="2.7">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/update_time_ll" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0dip" android:textColor="@android:color/white" android:id="@id/update_time_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/at" android:includeFontPadding="false" />
+                        <TextView android:textSize="14.0dip" android:textColor="@android:color/white" android:id="@id/timezone_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/current_temp_ll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-1.0dip">
+                        <TextView android:textSize="44.0dip" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/current_temp_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="35" android:includeFontPadding="false" />
+                        <TextView android:textSize="22.0dip" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/current_temp_units_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="F" android:includeFontPadding="false" />
+                    </LinearLayout>
+                    <TextView android:textSize="14.0dip" android:textColor="@android:color/white" android:id="@id/current_short_text_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:text="Cloudy with a chance of meatballs" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/layout_divider" android:background="@android:color/white" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="14.0dip" android:layout_marginBottom="14.0dip" android:layout_centerHorizontal="true" />
+                <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.2" />
+                <LinearLayout android:orientation="vertical" android:id="@id/extended_forecast_ll" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:weightSum="2.0" android:layout_weight="2.8" android:layout_toRightOf="@id/layout_divider">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/day_one_ll" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                        <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_gravity="center_vertical" android:id="@id/day_one_image" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/al_widget_icon_01" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-2.0dip">
+                            <TextView android:textSize="14.0dip" android:textColor="@android:color/white" android:id="@id/day_one_daytv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="WED" />
+                            <TextView android:textSize="14.0dip" android:textColor="@android:color/white" android:id="@id/day_one_hilo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:text="155 / 125" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/layout_divider" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="-2.0dip" android:layout_marginRight="10.0dip" />
+                    <LinearLayout android:orientation="horizontal" android:id="@id/day_two_ll" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                        <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_gravity="center_vertical" android:id="@id/day_two_image" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/al_widget_icon_02" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip">
+                            <TextView android:textSize="14.0dip" android:textColor="@android:color/white" android:id="@id/day_two_daytv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="WED" />
+                            <TextView android:textSize="14.0dip" android:textColor="@android:color/white" android:id="@id/day_two_hilo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:text="55 / 25" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/clickthrough_ll" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/full_app" android:layout_width="fill_parent" android:layout_height="28.0dip" android:layout_marginTop="-4.0dip">
+                <LinearLayout android:orientation="horizontal" android:id="@id/getfullapp_ll" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <ImageView android:id="@id/download" android:layout_width="23.0dip" android:layout_height="28.0dip" android:layout_marginLeft="6.0dip" android:src="@drawable/download" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/dk_blue" android:layout_gravity="center_vertical" android:id="@id/get_full_app" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="@string/GetFullApp" />
+                </LinearLayout>
+                <ImageView android:id="@id/adc_logo" android:layout_width="117.0dip" android:layout_height="12.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/adc_logo" android:scaleType="fitXY" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="AccuWeather Logo" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="right" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="-10.0dip" android:layout_marginRight="-10.0dip" android:weightSum="10.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/city_time_ll" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="4.0" android:layout_weight="4.1">
+            <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/city_rl" android:background="@drawable/appwidget_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.5">
+                <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/dk_blue" android:ellipsize="end" android:id="@id/city" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="MECHANICSBURG" android:maxLines="1" android:singleLine="true" />
+                <TextView android:textSize="14.0dip" android:textColor="@color/dk_blue" android:ellipsize="end" android:id="@id/current_location_tv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="[Current Location]" android:maxLines="1" android:singleLine="true" android:layout_below="@id/city" />
+                <ImageView android:id="@id/alert_icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="6.0dip" android:src="@drawable/alert_img" android:layout_toRightOf="@id/city" />
+                <TextView android:textSize="32.0dip" android:textStyle="bold" android:textColor="@color/dk_blue" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="11:00 PM" android:maxLines="1" android:includeFontPadding="false" android:layout_below="@id/current_location_tv" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="24.0dip" android:textColor="@color/dk_blue" android:id="@id/tap_to_launch_tv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tap to set a location" android:layout_centerInParent="true" />
+</RelativeLayout>

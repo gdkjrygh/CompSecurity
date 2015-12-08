@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="@dimen/image_selector_title2Lo_height" layout="@layout/cloud_dropbox_selector_top" />
+    <RelativeLayout android:id="@id/logo_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/logo_lo" android:layout_width="fill_parent" android:layout_height="@dimen/ad_layout_height" />
+        <ImageView android:id="@id/ad_remove" android:layout_width="@dimen/ad_remove_width" android:layout_height="@dimen/ad_remove_height" android:src="@drawable/icon_remove" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <include android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/memory_info" />
+    <fragment android:name="com.roidapp.cloudlib.dropbox.DropBoxPhotoFragment" android:id="@id/fragImgs" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/cloud_selector_footer" />
+</LinearLayout>

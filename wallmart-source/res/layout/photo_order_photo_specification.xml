@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.walmartlabs.android.photo.view.order.PhotoSpecificationView android:orientation="vertical" android:background="@color/photo_item_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/photo_main_padding_2x" android:paddingTop="@dimen/photo_main_padding" android:paddingRight="@dimen/photo_main_padding_2x" android:paddingBottom="@dimen/photo_main_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <RelativeLayout android:id="@id/image_holder" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginRight="@dimen/photo_main_padding_2x">
+            <com.walmartlabs.android.photo.view.RecyclingImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/products_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@id/empty_layout" android:paddingRight="@dimen/photo_main_padding_2x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/photo_link_button" android:id="@id/empty_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_tap_to_select_sizes" style="@style/PhotoTextStyle.Medium" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/photo_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</com.walmartlabs.android.photo.view.order.PhotoSpecificationView>

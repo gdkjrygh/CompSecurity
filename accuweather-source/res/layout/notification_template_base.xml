@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/status_bar_latest_event_content" android:background="@drawable/notification_bg_low" android:layout_width="fill_parent" android:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon" android:background="@drawable/notification_bg" android:layout_width="@dimen/notification_large_icon_width" android:layout_height="@dimen/notification_large_icon_height" />
+    <LinearLayout android:gravity="top" android:orientation="vertical" android:paddingTop="2.0dip" android:paddingRight="8.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/notification_large_icon_height">
+        <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/line1" android:paddingTop="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip">
+            <TextView android:textAppearance="@style/TextAppearance.StatusBar.Title" android:ellipsize="marquee" android:id="@id/title" android:fadingEdge="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+            <TextView android:textAppearance="@style/TextAppearance.StatusBar.EventContent" android:ellipsize="marquee" android:id="@id/time" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:gravity="top" android:orientation="horizontal" android:id="@id/line2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="-6.0dip">
+            <TextView android:textAppearance="@style/TextAppearance.StatusBar.EventContent" android:ellipsize="marquee" android:layout_gravity="center" android:id="@id/text2" android:fadingEdge="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_weight="1.0" />
+            <TextView android:textAppearance="@style/TextAppearance.StatusBar.EventContent.Large" android:gravity="center" android:layout_gravity="center" android:id="@id/info" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_weight="0.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

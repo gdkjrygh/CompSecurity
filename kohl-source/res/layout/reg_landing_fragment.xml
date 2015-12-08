@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:paddingTop="?android:actionBarSize" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/registry_at_kohls_text" />
+        <include layout="@layout/registry_buttons_layout" />
+        <include layout="@layout/reg_lnd_about_sections" />
+        <com.android.volley.toolbox.NetworkImageView android:id="@id/reg_lnd_cms0" android:visibility="gone" style="@style/reg_abt_image_view_style" />
+        <include layout="@layout/icon_box_section" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/cms_loader" android:background="#80454545" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.android.volley.toolbox.NetworkImageView android:id="@id/reg_lnd_cms1" android:visibility="gone" style="@style/reg_abt_image_view_style" />
+        <com.android.volley.toolbox.NetworkImageView android:id="@id/reg_lnd_cms2" android:visibility="gone" style="@style/reg_abt_image_view_style" />
+        <com.android.volley.toolbox.NetworkImageView android:id="@id/reg_lnd_cms3" android:visibility="gone" style="@style/reg_abt_image_view_style" />
+        <com.android.volley.toolbox.NetworkImageView android:id="@id/reg_lnd_cms4" android:visibility="gone" style="@style/reg_abt_image_view_style" />
+        <com.android.volley.toolbox.NetworkImageView android:id="@id/reg_lnd_cms5" android:visibility="gone" style="@style/reg_abt_image_view_style" />
+        <com.android.volley.toolbox.NetworkImageView android:id="@id/reg_lnd_cms6" android:visibility="gone" style="@style/reg_abt_image_view_style" />
+        <com.android.volley.toolbox.NetworkImageView android:id="@id/reg_lnd_cms7" android:visibility="gone" style="@style/reg_abt_image_view_style" />
+        <com.android.volley.toolbox.NetworkImageView android:id="@id/reg_lnd_cms8" android:visibility="gone" style="@style/reg_abt_image_view_style" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/reg_btn_create_layout_btm" android:background="@drawable/reg_lnd_btn_bg" android:visibility="gone" android:layout_width="280.0dip" android:layout_height="55.0dip" android:layout_marginTop="17.0dip">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/plus_icon" />
+            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldTextView android:textColor="@color/reg_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/create_your_reg_text" android:layout_centerHorizontal="true" style="@style/reg_landing_text_type1_bold" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/reg_btn_sign_in_layout_btm" android:background="@drawable/reg_lnd_btn_bg" android:visibility="gone" android:layout_width="280.0dip" android:layout_height="55.0dip" android:layout_marginTop="17.0dip" android:layout_marginBottom="10.0dip">
+            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldTextView android:textColor="@color/reg_black" android:id="@id/manage_sign_in_btn_tv_btm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sign_into_your_reg_text" android:layout_centerHorizontal="true" style="@style/reg_landing_text_type1_bold" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

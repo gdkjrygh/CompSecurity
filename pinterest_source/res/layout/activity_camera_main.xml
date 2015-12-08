@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/camera_preview" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include android:id="@id/settings" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/camera_preview" layout="@layout/camera_settings" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/settings_button" android:background="@drawable/button_rounded_gray_transparent" android:padding="@dimen/margin_half" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_half" android:layout_alignRight="@id/camera_preview" android:layout_alignBottom="@id/camera_preview">
+            <ImageView android:id="@id/flash_indicator" android:padding="@dimen/margin_quarter" android:visibility="gone" android:layout_width="@dimen/camera_settings_icon_width" android:layout_height="@dimen/camera_settings_icon_width" android:src="@drawable/ic_flash_off" android:scaleType="fitCenter" />
+            <ImageView android:id="@id/overflow" android:layout_width="@dimen/camera_settings_icon_width" android:layout_height="@dimen/camera_settings_icon_width" android:src="@drawable/ic_more_horiz" android:scaleType="centerInside" />
+        </LinearLayout>
+        <include android:id="@id/camera_preview_grid" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignTop="@id/camera_preview" android:layout_alignBottom="@id/camera_preview" layout="@layout/camera_grid" />
+    </RelativeLayout>
+    <include android:id="@id/capture_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/camera_capture" />
+    <include android:id="@id/photo_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/camera_taken" />
+</LinearLayout>

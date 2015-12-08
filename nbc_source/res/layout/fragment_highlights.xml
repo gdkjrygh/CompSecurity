@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/highlights_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/section_dropdown_layout" />
+            <include layout="@layout/top_adbanner_layout" />
+        </FrameLayout>
+        <include android:id="@id/highlights_listing" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="90.0" layout="@layout/highlight_list_view" />
+    </LinearLayout>
+    <com.nbcsports.liveextra.ui.views.ContentLoadingOverlay android:id="@id/content_progress_modal" android:visibility="gone" style="@style/ContentProgressDialog">
+        <ProgressBar android:id="@id/content_progress" style="@style/ContentProgressBar" />
+    </com.nbcsports.liveextra.ui.views.ContentLoadingOverlay>
+</FrameLayout>

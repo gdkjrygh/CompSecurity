@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <TextView android:gravity="center_vertical" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/photos_uploadtoalbum_title" style="@style/quantum_text_title_black" />
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="72.0dip">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/media_preview" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="centerInside" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:layout_gravity="center_vertical" android:id="@id/media_num_items" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/quantum_text_subhead_black" />
+                <TextView android:textColor="@color/quantum_grey600" android:layout_gravity="center_vertical" android:id="@id/media_size" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/quantum_text_body_1_black" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/quantum_grey300" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+        <TextView android:textColor="@color/quantum_grey600" android:gravity="center_vertical" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/photos_uploadtoalbum_account_label" style="@style/quantum_text_subhead_black" />
+        <Spinner android:id="@id/account_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+    </LinearLayout>
+    <View android:background="@color/quantum_grey300" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_above="@id/bottom_buttons" />
+    <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@id/bottom_buttons" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true">
+        <Button android:textColor="@color/quantum_googblue500" android:id="@id/cancel_button" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@android:string/cancel" style="@style/quantum_text_button_black" />
+        <Button android:textColor="@color/quantum_googblue500" android:id="@id/upload_button" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/photos_uploadtoalbum_upload" style="@style/quantum_text_button_black" />
+    </LinearLayout>
+</RelativeLayout>

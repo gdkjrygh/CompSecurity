@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/save_finish_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.roidapp.baselib.view.FixAutoScrollView android:id="@id/scrollview" android:background="@color/save_finish_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never">
+        <RelativeLayout android:id="@id/layout_root" android:background="@color/save_finish_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/title_lo" android:background="@drawable/roidapp_imagelib_bg_titlebar_gray" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/editer_textSize" android:textColor="@color/white" android:gravity="left|center" android:id="@id/backBtn" android:background="@drawable/btn_back" android:paddingLeft="0.0dip" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/image_merger_title_height" android:drawableLeft="@drawable/icon_back" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/share_content_layout" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title_lo">
+                <include android:id="@id/share_content" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/cloud_share" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/failedTopLayout" android:background="#ff4a5f66" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="35.0dip" android:layout_below="@id/title_lo" android:alpha="0.8">
+                <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/failedTopTip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Couldn't Load News" android:layout_centerInParent="true" />
+                <ImageView android:id="@id/refresh" android:background="@drawable/cloud_lib_loading_white" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/failedTopTip" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.roidapp.baselib.view.FixAutoScrollView>
+    <RelativeLayout android:layout_gravity="bottom" android:id="@id/tag_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <RelativeLayout android:id="@id/loading_layout" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/progressbar" />
+    </RelativeLayout>
+</RelativeLayout>

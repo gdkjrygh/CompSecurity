@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:id="@id/calling_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/IncomingCallButtonsWrap"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="3.0" style="@style/IncomingCallButtonGap" />
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageButton android:id="@id/accept_video_button" android:background="@drawable/call_answer_btn_selector" android:visibility="gone" android:layout_marginRight="@dimen/incoming_call_button_gap" android:src="@drawable/call_btn_video" android:contentDescription="@string/acc_accept_call_with_video" style="@style/IncomingCallButton" />
+        <ImageButton android:id="@id/accept_button" android:background="@drawable/call_answer_btn_selector" android:src="@drawable/call_btn_answer" android:contentDescription="@string/acc_accept_call" style="@style/IncomingCallButton" />
+        <ImageButton android:id="@id/decline_button" android:background="@drawable/call_end_btn_incoming_selector" android:layout_marginLeft="@dimen/incoming_call_button_gap" android:src="@drawable/call_btn_end" android:contentDescription="@string/acc_action_end_call" style="@style/IncomingCallButton" />
+    </LinearLayout>
+    <View android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="3.0" style="@style/IncomingCallButtonGap" />
+</LinearLayout>

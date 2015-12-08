@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/video_row" android:background="@drawable/video2_list_item_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/video_row_thumbnail_stack" android:layout_width="@dimen/video_row_thumbnail_width" android:layout_height="@dimen/video_row_thumbnail_height" android:layout_margin="@dimen/video_row_thumbnail_right_margin">
+        <ImageView android:id="@id/video_row_thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@color/video_list_item_selected" android:scaleType="centerCrop" android:layout_centerVertical="true" android:contentDescription="@string/video_row_thumbnail_contentDescription" />
+        <RelativeLayout android:id="@id/video_row_thumbnail_gradient" android:background="@drawable/concord_lower_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/video_row_duration_textSize" android:textColor="@android:color/white" android:id="@id/video_row_thumbnail_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/video_row_duration_marginLeft" android:layout_marginTop="@dimen/video_row_duration_marginTop" android:layout_marginBottom="@dimen/video_row_duration_marginTop" />
+        </RelativeLayout>
+        <ProgressBar android:id="@id/video_row_thumbnail_progress" android:layout_width="@dimen/video_row_thumbnail_progressbar_width" android:layout_height="@dimen/video_row_thumbnail_progressbar_width" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/video_row_share_icon_touch" android:layout_width="@dimen/video2_row_share_touch_size" android:layout_height="@dimen/video2_row_share_touch_size" android:layout_alignParentRight="true" android:layout_alignParentEnd="true">
+        <ImageView android:id="@id/video_row_share_icon" android:layout_width="@dimen/video2_row_share_icon_width" android:layout_height="@dimen/video2_row_share_icon_height" android:src="@drawable/ic_share_video2" android:layout_centerInParent="true" android:contentDescription="@string/video_row_share_icon_contentDescription" />
+    </RelativeLayout>
+    <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/video_row_title_textSize" android:ellipsize="end" android:id="@id/text_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="3" android:layout_toLeftOf="@id/video_row_share_icon_touch" android:layout_toRightOf="@id/video_row_thumbnail_stack" android:layout_centerVertical="true" android:layout_toStartOf="@id/video_row_share_icon_touch" android:layout_toEndOf="@id/video_row_thumbnail_stack" weather:font="Roboto-Regular.ttf" />
+    <View android:id="@id/video_row_divider" android:background="@color/video_list_item_separator" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/video_row_thumbnail_stack" />
+</RelativeLayout>

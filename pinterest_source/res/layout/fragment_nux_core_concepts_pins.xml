@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/gray_lightest" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.grantland.widget.AutofitLayout android:id="@id/core_concepts_pins_title_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pinterest.ui.text.PTextView android:id="@id/core_concepts_pins_title" style="@style/core_concepts_title" />
+    </me.grantland.widget.AutofitLayout>
+    <FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/core_concepts_pin_or_board_frame">
+        <com.pinterest.ui.imageview.WebImageView android:layout_gravity="center" android:id="@id/core_concepts_pins_pin" android:layout_width="@dimen/core_concepts_pin_width" android:layout_height="wrap_content" android:adjustViewBounds="true" android:alpha="0.0" />
+        <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.pinterest.ui.imageview.WebImageView android:id="@id/core_concepts_pin_tip" style="@style/core_concepts_tip" />
+            <com.pinterest.ui.imageview.WebImageView android:layout_gravity="center" android:id="@id/core_concepts_pin_it_btn" android:layout_width="@dimen/core_concepts_pin_it_btn_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/core_concepts_pin_it_btn_margin_left" android:adjustViewBounds="true" android:alpha="0.0" />
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

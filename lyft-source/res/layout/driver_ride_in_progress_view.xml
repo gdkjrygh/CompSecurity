@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.driver.DriverRideInProgressView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <me.lyft.android.ui.HeightObservableLayout android:orientation="vertical" android:id="@id/driver_ride_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <me.lyft.android.controls.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="100.0dip">
+                <LinearLayout android:gravity="center_vertical" android:id="@id/address_view" android:background="@drawable/selectable_item" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:id="@id/address_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/default_margin" android:src="@drawable/ic_driver_pin_dropoff" />
+                    <RelativeLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                        <TextView android:textSize="@dimen/big_text_2" android:ellipsize="end" android:id="@id/ride_in_progress_address_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" style="@style/PrimaryText" />
+                        <TextView android:id="@id/tap_to_edit_address" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tap_to_edit" android:layout_below="@id/ride_in_progress_address_text_view" style="@style/SecondaryText" />
+                        <TextView android:id="@id/hotspot_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/driver_ride_hotspot_indicator_title" android:drawableLeft="@drawable/ic_flame_small_dark" android:drawablePadding="@dimen/span4" android:layout_below="@id/tap_to_edit_address" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View android:background="@drawable/vertical_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/navigate_button" android:background="@drawable/selectable_item" android:layout_width="100.0dip" android:layout_height="fill_parent">
+                    <ImageView android:layout_gravity="center" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_navigation_large" android:scaleType="centerInside" />
+                    <TextView android:id="@id/eta_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/navigation_ride_eta_default" style="@style/PrimaryText" />
+                </LinearLayout>
+            </LinearLayout>
+        </me.lyft.android.ui.HeightObservableLayout>
+        <include android:id="@id/warning_fragment_placeholder" layout="@layout/warning" />
+        <RelativeLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:layout_above="@id/driver_ride_bottom">
+            <View android:background="@drawable/bg_top_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_alignParentTop="true" />
+            <View android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </RelativeLayout>
+        <me.lyft.android.ui.HeightObservableLayout android:orientation="vertical" android:id="@id/driver_ride_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/span4">
+                <me.lyft.android.ui.driver.RideOverviewMapButton android:gravity="center" android:orientation="horizontal" android:id="@id/ride_overview_map_button" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="@dimen/span56" android:layout_marginLeft="@dimen/span12" />
+                <me.lyft.android.ui.driver.DriverFollowLocationAndStopButton android:id="@id/follow_current_location_button" android:layout_marginRight="@dimen/span12" android:src="@drawable/ic_current_location" android:layout_alignParentRight="true" style="@style/DriverMapButton" />
+            </RelativeLayout>
+            <View android:background="@drawable/bg_footer_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/span8" android:layout_alignParentBottom="true" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/passenger_no_show_button" android:background="@drawable/btn_pink" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="100.0dip">
+                <ImageView android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/no_show_overlay" />
+                <TextView android:textSize="@dimen/big_text_4" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="center" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/driver_ride_passenger_no_show_button" android:singleLine="true" android:layout_alignParentBottom="true" style="@style/PrimaryText" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/bottom_button_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <me.lyft.android.ui.UserImageView android:id="@id/ride_in_progress_passenger_photo_image_view" android:layout_width="100.0dip" android:layout_height="100.0dip" />
+                <TextView android:textSize="@dimen/big_text_4" android:textColor="@color/color_button_text" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/driver_ride_button_text_view" android:background="@drawable/btn_charcoal" android:paddingLeft="@dimen/span16" android:layout_width="fill_parent" android:layout_height="100.0dip" android:text="@string/driver_ride_end_lyft_button" android:maxLines="2" android:includeFontPadding="false" android:layout_alignParentTop="true" />
+            </LinearLayout>
+        </me.lyft.android.ui.HeightObservableLayout>
+    </LinearLayout>
+    <me.lyft.android.ui.tooltips.TooltipContainerView android:id="@id/tooltip_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</me.lyft.android.ui.driver.DriverRideInProgressView>

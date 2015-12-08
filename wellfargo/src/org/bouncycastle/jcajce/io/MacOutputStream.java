@@ -1,0 +1,34 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package org.bouncycastle.jcajce.io;
+
+import java.io.OutputStream;
+import javax.crypto.Mac;
+
+public class MacOutputStream extends OutputStream
+{
+
+    protected Mac mac;
+
+    public MacOutputStream(Mac mac1)
+    {
+        mac = mac1;
+    }
+
+    public byte[] getMac()
+    {
+        return mac.doFinal();
+    }
+
+    public void write(int i)
+    {
+        mac.update((byte)i);
+    }
+
+    public void write(byte abyte0[], int i, int j)
+    {
+        mac.update(abyte0, i, j);
+    }
+}

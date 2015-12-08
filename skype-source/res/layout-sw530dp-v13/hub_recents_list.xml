@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="@dimen/hub_section_min_width"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/recents_list_header" />
+    <include android:id="@id/recent_empty_view" layout="@layout/recent_empty_view" />
+    <com.skype.android.widget.recycler.TwoWayRecyclerView android:id="@id/list" android:stretchMode="columnWidth" android:columnWidth="@dimen/list_item_width" android:numColumns="@integer/list_items_count_per_row" android:rowHeight="@dimen/list_item_height" android:maxRows="@integer/list_items_count_per_row" app:verticalPadding="@dimen/size_2x" app:autoSize="true" style="@style/HubRecentGrid" />
+</LinearLayout>

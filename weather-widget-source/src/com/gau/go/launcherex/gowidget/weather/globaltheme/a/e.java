@@ -1,0 +1,28 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.gau.go.launcherex.gowidget.weather.globaltheme.a;
+
+import android.content.Context;
+
+// Referenced classes of package com.gau.go.launcherex.gowidget.weather.globaltheme.a:
+//            d
+
+final class e
+    implements Runnable
+{
+
+    final Context a;
+
+    e(Context context)
+    {
+        a = context;
+        super();
+    }
+
+    public void run()
+    {
+        d.b(a.getApplicationContext());
+    }
+}

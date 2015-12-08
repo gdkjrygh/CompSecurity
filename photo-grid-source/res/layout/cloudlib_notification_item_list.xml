@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:id="@id/userPhotoLayout" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_alignParentLeft="true" android:layout_centerInParent="true">
+        <com.roidapp.baselib.view.RoundImageView android:id="@id/userPhoto" android:layout_width="40.0dip" android:layout_height="40.0dip" android:contentDescription="@null" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="left" android:id="@id/descriptionLayout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/followLayout" android:layout_toRightOf="@id/userPhotoLayout" android:layout_centerVertical="true">
+        <com.roidapp.cloudlib.sns.basepost.PostCommentsTextView android:textSize="15.0sp" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ashley started following you. 2min" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/followLayout" android:layout_width="100.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_centerInParent="true">
+        <RelativeLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@id/follow" android:background="@drawable/cloudlib_follow_bg" android:layout_width="86.0dip" android:layout_height="32.0dip" android:text="Follow" />
+            <ProgressBar android:id="@id/followProgress" android:layout_width="70.0dip" android:layout_height="30.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/followPics" android:visibility="gone" android:layout_width="49.0dip" android:layout_height="49.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/sns_split_color" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

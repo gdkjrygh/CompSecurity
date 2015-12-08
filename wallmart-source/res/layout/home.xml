@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.walmart.android.ui.SafeScrollView android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/home_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/AnimatedLayout">
+        <include android:id="@id/homescreen_enable_location_msg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" layout="@layout/homescreen_msg_box" />
+        <include android:id="@id/homescreen_fast_pickup" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" layout="@layout/home_module_fast_pickup" />
+        <include android:id="@id/in_store_module" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" layout="@layout/instore_module" />
+        <View android:id="@id/phone_top_container_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+        <include android:id="@id/banner" layout="@layout/home_banner" />
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/home_entries" />
+        <View android:layout_width="fill_parent" android:layout_height="10.0dip" />
+    </LinearLayout>
+</com.walmart.android.ui.SafeScrollView>

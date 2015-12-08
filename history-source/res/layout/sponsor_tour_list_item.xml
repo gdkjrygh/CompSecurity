@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:background="@color/sponsored_tour_list_item_background_color" android:padding="@dimen/padding_small" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/iconHolder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_small" android:layout_centerVertical="true">
+        <ImageView android:id="@id/default_icon" android:layout_width="@dimen/sponsor_tour_list_icon_size" android:layout_height="@dimen/sponsor_tour_list_icon_size" android:src="@drawable/ic_no_image_circular" android:scaleType="fitXY" />
+        <com.aetn.history.android.historyhere.widgets.CircularNetworkImageView android:id="@id/icon" android:layout_width="@dimen/sponsor_tour_list_icon_size" android:layout_height="@dimen/sponsor_tour_list_icon_size" android:src="@drawable/ic_no_image_circular" android:scaleType="fitXY" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip" android:layout_toRightOf="@id/iconHolder" android:layout_centerVertical="true">
+        <TextView android:typeface="sans" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="Title" android:maxLines="2" style="@style/SponsorTourListItemTitle" />
+        <TextView android:typeface="sans" android:id="@id/city" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="New York, NY" style="@style/SponsorTourListItemCity" />
+        <com.android.volley.toolbox.NetworkImageView android:layout_gravity="center" android:id="@id/sponsor_image" android:background="#ff666666" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="@dimen/margin_small" android:scaleType="fitXY" />
+    </LinearLayout>
+</RelativeLayout>

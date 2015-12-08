@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingTop="@dimen/toast_stack_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/toast_background_shape" android:layout_height="wrap_content" style="@style/pinterest_toast">
+        <TextView android:textSize="@dimen/text_body" android:id="@id/top_tv" android:paddingLeft="@dimen/margin" android:paddingTop="@dimen/list_cell_padding_topbottom" android:paddingRight="@dimen/margin" android:paddingBottom="@dimen/list_cell_padding_topbottom" android:visibility="gone" android:layout_width="fill_parent" style="@style/toast_title" />
+        <View android:id="@id/top_divider" android:visibility="invisible" style="@style/gray_divider_inverted" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/toast_lower_view" android:paddingLeft="@dimen/margin" android:paddingTop="@dimen/list_cell_padding_topbottom" android:paddingRight="@dimen/margin" android:paddingBottom="@dimen/list_cell_padding_topbottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.pinterest.ui.imageview.WebImageView android:id="@id/icon_wiv" android:layout_width="@dimen/thumbnail_size" android:layout_height="@dimen/thumbnail_size" android:layout_marginRight="@dimen/list_cell_text_image_gap" android:scaleType="centerCrop" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_marginRight="@dimen/margin" android:layout_weight="1.0">
+                <TextView android:id="@id/title_tv" style="@style/toast_title" />
+                <TextView android:id="@id/subtitle_tv" style="@style/toast_text" />
+            </LinearLayout>
+            <Button android:id="@id/action_bt" style="@style/button_inverted" />
+            <ImageView android:id="@id/arrow" android:src="@drawable/chevron_inverted" style="@style/wrap_view" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/toast_extended_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

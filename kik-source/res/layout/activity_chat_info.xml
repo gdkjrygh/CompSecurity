@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/chat_info_root" android:background="@color/chat_info_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:kik="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/chat_info_header" android:fadingEdgeLength="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/profile_box" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.kik.cache.RectContactImageView android:id="@id/profile_pic_big" android:layout_width="fill_parent" android:layout_height="224.0dip" android:scaleType="centerCrop" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="224.0dip" />
+            <com.kik.cache.SoftwareContactImageView android:id="@id/profile_pic" android:focusable="true" android:layout_width="84.0dip" android:layout_height="84.0dip" android:layout_marginTop="72.0dip" android:scaleType="fitCenter" android:layout_centerHorizontal="true" kik:nullBackground="@drawable/prof_pic_placeholder" />
+            <ImageView android:id="@id/verified_star" android:visibility="gone" android:layout_width="21.0dip" android:layout_height="21.0dip" android:src="@drawable/contact_verified_iconbadge_big" android:layout_alignRight="@id/profile_pic" android:layout_alignBottom="@id/profile_pic" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+                <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="18.0sp" android:ellipsize="end" android:id="@id/profile_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="15.0sp" android:textStyle="italic" android:textColor="@color/contacts_username_text" android:ellipsize="end" android:gravity="center" android:id="@id/profile_username" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/profile_button_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <FrameLayout android:background="@drawable/cell_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View android:id="@id/padding" android:layout_width="fill_parent" android:layout_height="16.0dip" />
+    <ListView android:id="@id/group_member_grid" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@null" />
+    <RelativeLayout android:id="@id/profile_info_header" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="@dimen/native_topbar_height" android:layout_alignParentTop="true">
+        <include layout="@layout/kik_back_button_with_group_count" />
+        <ImageView android:id="@id/button_settings" android:background="@xml/topbar_button_selector" android:visibility="gone" android:layout_width="@dimen/material_navbar_button_width" android:layout_height="fill_parent" android:src="@drawable/morevert_grey" android:scaleType="centerInside" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/chat_top_shadow" android:background="@drawable/cell_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/profile_info_header" android:layout_alignParentLeft="true" />
+    <kik.android.widget.RobotoTextView android:id="@id/not_in_group_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/not_member_group_error" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+</RelativeLayout>

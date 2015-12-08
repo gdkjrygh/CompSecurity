@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/white" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.roidapp.baselib.view.RoundImageView android:id="@id/feed_comments_user_avatar" android:background="@drawable/cloudlib_round_bg40" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:contentDescription="@null" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/feed_comments_right_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/sns_username_textsize" android:textStyle="bold" android:textColor="@color/sns_username_textcolor" android:ellipsize="end" android:gravity="left|center" android:id="@id/feed_comments_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="username" android:maxLines="1" />
+            </FrameLayout>
+            <TextView android:textSize="@dimen/sns_comment_textsize" android:textColor="@color/sns_time_textcolor" android:id="@id/feed_comments_up_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:text="time" />
+            <ProgressBar android:id="@id/feed_comments_up_progressbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" style="?android:attr/progressBarStyleSmall" />
+        </LinearLayout>
+        <com.roidapp.cloudlib.sns.basepost.PostCommentsTextView android:textSize="@dimen/sns_comment_textsize" android:textColor="@color/sns_comment_textcolor" android:gravity="left|center" android:id="@id/feed_comments_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="content" />
+    </LinearLayout>
+</LinearLayout>

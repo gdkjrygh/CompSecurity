@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/relativeLayoutHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <RelativeLayout android:gravity="center_vertical" android:background="@drawable/cloudlib_bg_titlebar_gray" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_head_top_height">
+            <TextView android:textSize="@dimen/cloudlib_title_size" android:textColor="@color/white" android:ellipsize="middle" android:gravity="left|center" android:id="@id/textName_back" android:background="@drawable/cloudlib_btn_back" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/title_text_marginRight" android:singleLine="true" android:drawableLeft="@drawable/icon_back" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <RelativeLayout android:id="@id/linearLogin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/btnAccountMgr" android:layout_centerVertical="true">
+                <ProgressBar android:id="@id/progress_bar_thumb" android:visibility="invisible" android:layout_width="@dimen/cloudlib_head_progress_width" android:layout_height="@dimen/cloudlib_head_progress_width" android:layout_centerInParent="true" />
+                <ImageButton android:id="@id/refreshBtn" android:background="@drawable/cloudlib_btn_back" android:layout_width="@dimen/cloudlib_head_top_height" android:layout_height="fill_parent" android:src="@drawable/cloudlib_btn_refresh" />
+            </RelativeLayout>
+            <ImageButton android:id="@id/btnAccountMgr" android:background="@drawable/cloudlib_btn_back" android:layout_width="@dimen/cloudlib_head_top_height" android:layout_height="fill_parent" android:src="@drawable/cloudlib_icon_keys" android:layout_alignParentRight="true" />
+            <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBottom="@id/linearLogin" android:layout_centerHorizontal="true" layout="@layout/cloudlib_memory_info" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout_ad" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/relativeLayoutHeader">
+        <ListView android:id="@id/list_fb_album" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/cloudlib_gradient_bg" android:cacheColorHint="#00000000" android:divider="@color/cloudlist_listview_divider_color" android:dividerHeight="1.0dip" />
+        <include android:visibility="gone" layout="@layout/cloudlib_progressbar" />
+    </RelativeLayout>
+</RelativeLayout>

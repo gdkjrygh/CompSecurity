@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.roidapp.imagelib.freecrop.FreeCropView android:layout_gravity="center" android:id="@id/roidapp_imagelib_imageFreeCropPhoto" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/freecrop_view_margin" android:layout_marginRight="@dimen/freecrop_view_margin" android:layout_above="@id/roidapp_imagelib_freeCroplayout_basebar" />
+    <FrameLayout android:orientation="vertical" android:id="@id/roidapp_imagelib_freeCropframe_layout" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/roidapp_imagelib_freeCroplayout_basebar" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/roidapp_imagelib_freeCroplayout_basebar" android:background="@drawable/roidapp_imagelib_bg_popup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <RelativeLayout android:id="@id/roidapp_imagelib_btndraw_clip_layout" android:layout_width="fill_parent" android:layout_height="@dimen/freecrop_bottomBtn_height" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/banner_text_size" android:typeface="sans" android:textColor="@color/text_white" android:gravity="center" android:layout_gravity="center" android:id="@id/roidapp_imagelib_btndrawclip" android:background="@drawable/roidapp_imagelib_btn_selector_bottom" android:paddingTop="@dimen/banner_text_paddingTop" android:layout_width="fill_parent" android:layout_height="@dimen/freecrop_bottomBtn_height" android:text="@string/roidapp_imagelib_drawclip_text" android:drawableTop="@drawable/roidapp_imagelib_icon_drawclip" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/roidapp_imagelib_btnsimple_clip_layout" android:layout_width="fill_parent" android:layout_height="@dimen/freecrop_bottomBtn_height" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/banner_text_size" android:typeface="sans" android:textColor="@color/text_white" android:gravity="center" android:layout_gravity="center" android:id="@id/roidapp_imagelib_btnsimpleclip" android:background="@drawable/roidapp_imagelib_btn_selector_bottom" android:paddingTop="@dimen/banner_text_paddingTop" android:layout_width="fill_parent" android:layout_height="@dimen/freecrop_bottomBtn_height" android:text="@string/roidapp_imagelib_simpleclip_text" android:drawableTop="@drawable/roidapp_imagelib_icon_simpleclip" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/roidapp_imagelib_btnfunny_clip_layout" android:layout_width="fill_parent" android:layout_height="@dimen/freecrop_bottomBtn_height" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/banner_text_size" android:typeface="sans" android:textColor="@color/text_white" android:gravity="center" android:layout_gravity="center" android:id="@id/roidapp_imagelib_btnfunnyclip" android:background="@drawable/roidapp_imagelib_btn_selector_bottom" android:paddingTop="@dimen/banner_text_paddingTop" android:layout_width="fill_parent" android:layout_height="@dimen/freecrop_bottomBtn_height" android:text="@string/roidapp_imagelib_funnyclip_text" android:drawableTop="@drawable/roidapp_imagelib_icon_funnyclip" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/roidapp_imagelib_magnifierlayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <com.roidapp.imagelib.freecrop.Magnifier android:id="@id/roidapp_imagelib_magnifierview" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

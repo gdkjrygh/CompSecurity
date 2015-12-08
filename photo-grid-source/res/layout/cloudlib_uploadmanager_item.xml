@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="1.0dip" android:layout_marginBottom="1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/imageview_file" android:background="#ffd9d9d9" android:layout_width="@dimen/imageview_cover_width" android:layout_height="@dimen/imageview_cover_height" android:layout_marginRight="@dimen/golden_space" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/layout_files" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/layout_status" android:layout_toRightOf="@id/imageview_file" android:layout_alignTop="@id/imageview_file" android:layout_alignBottom="@id/imageview_file">
+        <TextView android:textSize="@dimen/list_item_font_size" android:textColor="#ff464646" android:ellipsize="middle" android:id="@id/textview_filename" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="60.0dip" android:singleLine="true" />
+        <TextView android:textSize="@dimen/list_item_font_size" android:textColor="#ff5282c4" android:id="@id/textview_social_name" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_alignTop="@id/imageview_file" android:layout_alignBottom="@id/imageview_file" android:layout_alignParentRight="true">
+        <ImageView android:id="@id/imageview_cancel" android:padding="5.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_cancel" android:scaleType="centerCrop" />
+        <ImageView android:id="@id/imageview_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.walmart.android.ui.SafeScrollView android:background="@color/list_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:background="@drawable/card_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:layout_alignBottom="@id/saver_redeem_header" android:layout_alignParentTop="true" />
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/saver_redeem_header" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+                    <ImageView android:id="@id/saver_receipt_detail_header_image" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/badge_your_reward_dollar" android:scaleType="centerInside" />
+                    <com.walmart.android.wmui.MediumTextView android:textSize="20.0sp" android:textColor="@color/saver_text_green" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/saver_redeem_available" />
+                    <TextView android:textSize="36.0sp" android:textColor="@color/saver_text_green" android:id="@id/saver_redeem_available_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="$0.00" style="@style/Text.EReceipt.Light" />
+                    <TextView android:textColor="@color/saver_gray" android:gravity="center_horizontal" android:paddingTop="5.0dip" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/saver_redeem_available_info" style="@style/Text.Bodycopy" />
+                    <TextView android:textColor="@color/saver_gray" android:gravity="center_horizontal" android:paddingTop="5.0dip" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/saver_redeem_use_info" style="@style/Text.Subhead.Regular" />
+                    <View android:id="@id/saver_redeem_card_divider" android:background="@color/divider_grey" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" />
+                    <include layout="@layout/saver_redeem_card_giftcard_preferred" />
+                    <include layout="@layout/saver_redeem_card_bluebird_preferred" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/saver_redeem_card_giftcard_secondary" />
+            <include layout="@layout/saver_redeem_card_bluebird_secondary" />
+        </LinearLayout>
+    </com.walmart.android.ui.SafeScrollView>
+    <include android:id="@id/ereceipt_loading_view" layout="@layout/loading_page" />
+</FrameLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/my_story_overlay_container" android:background="@color/ttv_my_story_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/viewer_info_container" android:paddingLeft="@dimen/default_gap_3x" android:paddingRight="@dimen/default_gap_3x" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/my_story_swipe_info_height">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/view_count_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <ImageView android:id="@id/views_icon" android:layout_width="@dimen/my_story_info_icon_width" android:layout_height="wrap_content" android:src="@drawable/stories_mystoryoverlayview_icon" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="@dimen/my_story_info_text" android:textColor="@color/ttv_my_story_viewer_name" android:id="@id/views_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-8.0dip" android:text="0" android:layout_below="@id/views_icon" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/screenshot_count_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap_4x" android:layout_toRightOf="@id/view_count_container" android:layout_centerVertical="true">
+            <ImageView android:id="@id/screenshots_icon" android:layout_width="@dimen/my_story_info_icon_width" android:layout_height="wrap_content" android:src="@drawable/my_story_overlay_screenshot" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="@dimen/my_story_info_text" android:textColor="@color/ttv_my_story_viewer_name" android:id="@id/screenshots_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-8.0dip" android:text="0" android:layout_below="@id/screenshots_icon" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/down_arrow" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="fill_parent" android:src="@drawable/stories_my_story_overlay_down_arrow_icon" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:alpha="0.3" />
+        <RelativeLayout android:id="@id/progress_save_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:id="@id/save_button" android:layout_width="@dimen/my_story_info_icon_width" android:layout_height="wrap_content" android:src="@drawable/stories_mystoryoverlaysave_icon" android:adjustViewBounds="false" android:layout_centerVertical="true" />
+            <ViewStub android:id="@id/my_story_download_progress_bar_stub" android:layout="@layout/my_story_download_progress_bar" android:layout_width="@dimen/my_story_info_icon_width" android:layout_height="wrap_content" android:indeterminate="true" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/delete_button" android:layout_width="@dimen/my_story_info_icon_width" android:layout_height="wrap_content" android:layout_marginRight="@dimen/default_gap_4x" android:src="@drawable/stories_mystoryoverlayx_icon" android:adjustViewBounds="false" android:layout_toLeftOf="@id/progress_save_container" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/ttv_my_story_viewer_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <ListView android:id="@id/viewers_list_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

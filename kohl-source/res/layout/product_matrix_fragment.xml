@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.kohls.mcommerce.opal.common.ui.components.PMPGridView android:id="@id/id_productMatrix_gridView" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollingCache="true" android:verticalSpacing="0.0dip" android:stretchMode="columnWidth" android:numColumns="2" android:fastScrollEnabled="true" android:isScrollContainer="false" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/id_productMatrix_endlessScrollLoader" android:background="#80454545" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/id_productMatrix_gridView">
+            <ProgressBar android:layout_width="fill_parent" android:layout_height="fill_parent" android:indeterminate="true" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/id_productMatirx_headerLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:minHeight="?android:actionBarSize" />
+        <include layout="@layout/search_header" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@id/id_productMatirx_header_linearLayout" android:background="@color/pmp_header" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                <RelativeLayout android:id="@id/id_productMatirx_header_titleCountLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldTextView android:textStyle="bold" android:textColor="@color/pmp_count" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/id_productMatirx_header_category" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxEms="5" android:minEms="1" android:singleLine="true" />
+                    <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textStyle="bold" android:textColor="@color/pmp_count" android:gravity="left|center" android:id="@id/id_productMatirx_header_count" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:layout_toRightOf="@id/id_productMatirx_header_category" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <LinearLayout android:gravity="right|center" android:orientation="horizontal" android:id="@id/id_productMatirx_headerLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="0.7">
+                    <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldTextView android:textColor="@android:color/white" android:ellipsize="none" android:gravity="right|center" android:id="@id/id_productMatirx_header_views" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/view" android:singleLine="true" />
+                    <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldTextView android:textColor="@android:color/white" android:ellipsize="end" android:gravity="right|center" android:id="@id/id_productMatirx_header_filters" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/filtersAndSort" android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/id_productMatirx_viewToggleLayout" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/id_productMatirx_header_linearLayout">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/pmp_view_popup" android:paddingTop="8.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                    <ImageView android:id="@id/id_productMatirx_viewToggleList" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/disable_listview_icon" android:layout_weight="1.0" />
+                    <View android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" style="@style/divider_vertical_dark" />
+                    <ImageView android:id="@id/id_productMatirx_viewToggleGrid" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/gridview_icon" android:layout_weight="1.0" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/id_productMatrix_loaderLayout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/id_productMatrix_errorLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:gravity="center" android:id="@id/id_productMatrix_errorText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pmp_no_products_error" />
+    </LinearLayout>
+</FrameLayout>

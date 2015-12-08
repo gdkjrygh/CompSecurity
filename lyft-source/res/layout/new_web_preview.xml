@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.WebBrowserView android:id="@id/web_browser_view" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView android:id="@id/web_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/load_progress_indicator" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/LoadingProgressBar" />
+    </FrameLayout>
+    <View android:gravity="bottom|right|center" android:orientation="vertical" android:id="@id/bottom_shadow" android:background="@drawable/bg_footer_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_alignParentBottom="true" />
+    <include android:id="@id/retry_button" layout="@layout/retry" />
+</me.lyft.android.ui.WebBrowserView>

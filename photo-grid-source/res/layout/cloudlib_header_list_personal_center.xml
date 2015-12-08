@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/failLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:id="@id/fail_split" android:background="@color/sns_split_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <RelativeLayout android:paddingTop="@dimen/cloudlib_dp16" android:paddingBottom="@dimen/cloudlib_dp16" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp115">
+        <com.roidapp.baselib.view.RoundImageView android:id="@id/my_photo" android:paddingTop="@dimen/cloudlib_dp9" android:paddingBottom="@dimen/cloudlib_dp9" android:layout_width="@dimen/cloudlib_dp65" android:layout_height="@dimen/cloudlib_dp83" android:layout_marginLeft="@dimen/cloudlib_dp16" android:layout_alignParentLeft="true" />
+        <RelativeLayout android:id="@id/oper_layout" android:layout_width="wrap_content" android:layout_height="@dimen/cloudlib_dp32" android:layout_marginRight="@dimen/cloudlib_dp6" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+            <RelativeLayout android:id="@id/btn_followed_layout" android:visibility="gone" android:layout_width="@dimen/cloudlib_dp86" android:layout_height="@dimen/cloudlib_dp32">
+                <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/btn_follow" android:background="#ff00f087" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <ProgressBar android:id="@id/followProgress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </RelativeLayout>
+            <ImageView android:id="@id/settings" android:background="@drawable/person_btn_bg" android:padding="@dimen/cloudlib_dp4" android:visibility="gone" android:layout_width="@dimen/cloudlib_dp32" android:layout_height="@dimen/cloudlib_dp32" android:src="@drawable/cloudlib_icon_social_logout" android:scaleType="fitCenter" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/cloudlib_dp16" android:textStyle="bold" android:textColor="#ff253034" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/my_name" android:layout_width="wrap_content" android:layout_height="@dimen/cloudlib_dp32" android:layout_marginLeft="@dimen/cloudlib_dp16" android:layout_marginRight="@dimen/cloudlib_dp6" android:maxLines="1" android:layout_toLeftOf="@id/oper_layout" android:layout_toRightOf="@id/my_photo" android:layout_alignParentTop="true" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp48" android:layout_marginRight="@dimen/cloudlib_dp80" android:layout_toRightOf="@id/my_photo" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="vertical" android:id="@id/post_layout" android:background="@drawable/person_btn_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/cloudlib_dp14" android:textStyle="bold" android:textColor="#ff253034" android:gravity="center" android:id="@id/posts" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp16" android:singleLine="true" />
+                <TextView android:textSize="@dimen/cloudlib_dp11" android:textColor="#ff384248" android:gravity="center_horizontal" android:paddingLeft="@dimen/cloudlib_dp1" android:paddingRight="@dimen/cloudlib_dp1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/cloudlib_dp1" android:text="@string/cloud_posts" android:maxLines="2" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/following_layout" android:background="@drawable/person_btn_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/cloudlib_dp14" android:textStyle="bold" android:textColor="#ff253034" android:gravity="center" android:id="@id/following" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp16" android:singleLine="true" />
+                <TextView android:textSize="@dimen/cloudlib_dp11" android:textColor="#ff384248" android:gravity="center_horizontal" android:paddingLeft="@dimen/cloudlib_dp1" android:paddingRight="@dimen/cloudlib_dp1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/cloudlib_dp1" android:text="@string/cloud_user_center_following" android:maxLines="2" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/followed_layout" android:background="@drawable/person_btn_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/cloudlib_dp14" android:textStyle="bold" android:textColor="#ff253034" android:gravity="center" android:id="@id/followers" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp16" android:singleLine="true" />
+                <TextView android:textSize="@dimen/cloudlib_dp11" android:textColor="#ff384248" android:gravity="center_horizontal" android:paddingLeft="@dimen/cloudlib_dp1" android:paddingRight="@dimen/cloudlib_dp1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/cloudlib_dp1" android:text="@string/cloud_followers" android:maxLines="2" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="@color/sns_split_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <RelativeLayout android:id="@id/header_bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp57">
+        <TextView android:textSize="22.0sp" android:gravity="center" android:id="@id/post_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" />
+        <View android:background="@color/sns_split_color" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp1" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

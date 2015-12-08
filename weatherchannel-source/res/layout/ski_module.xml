@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/module_layout_pager"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/ski_title" android:layout_marginBottom="0.0dip" android:text="@string/ski_module_label" style="@style/module_header" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ski_module_valid_data_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ski_title">
+        <com.weather.Weather.ui.UninterceptableViewPager android:id="@id/ski_view_pager" android:layout_width="fill_parent" android:layout_height="@dimen/ski_viewpager_height" weather:wrap_height="true" />
+        <com.weather.Weather.ui.LinePageIndicator android:id="@id/ski_viewpager_indicator" android:layout_width="fill_parent" android:layout_height="@dimen/line_indicator_height" android:layout_marginTop="@dimen/ski_viewpager_indicator_top_margin" />
+    </LinearLayout>
+    <include layout="@layout/ski_module_invalid_data" />
+</RelativeLayout>

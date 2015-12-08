@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:id="@id/match_thumb_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="@dimen/avatar_matches_frame_length" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin_xsmall" android:layout_marginRight="@dimen/margin_xsmall" android:layout_centerVertical="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/matches_avatar_container">
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="horizontal" android:paddingLeft="1.0dip" android:paddingRight="1.0dip" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.tinder.views.CustomTextView android:textColor="@color/title_gray" android:ellipsize="end" android:gravity="center" android:id="@id/match_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" app:font="bold" />
+            <com.tinder.views.BadgeView android:id="@id/match_verified_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_small" />
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:id="@id/matches_avatar_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="88.0dip">
+        <com.tinder.views.RoundImageView android:layout_gravity="center" android:id="@id/match_thumb" android:layout_width="@dimen/avatar_length_matches" android:layout_height="@dimen/avatar_length_matches" android:scaleType="centerCrop" app:defaultStyle="circle" />
+        <ImageView android:layout_gravity="right|center" android:id="@id/imageView_unviewed_indicator" android:paddingRight="-8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/matches_newmatch_icon" android:scaleType="center" />
+        <ImageView android:layout_gravity="bottom|center" android:id="@id/imageView_superlike_indicator" android:paddingTop="@dimen/avatar_unread_icon_negative_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/avatar_length_matches" android:src="@drawable/ic_matchlist_superlike" android:scaleType="center" />
+    </FrameLayout>
+</RelativeLayout>

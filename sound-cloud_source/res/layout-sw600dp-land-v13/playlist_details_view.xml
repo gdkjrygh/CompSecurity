@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.soundcloud.android.view.OptimisedImageView android:id="@id/artwork" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <include layout="@layout/player_gradient" />
+    <com.soundcloud.android.view.CustomFontTextView android:enabled="false" android:id="@id/username" android:visibility="invisible" android:layout_marginLeft="@dimen/playlist_header_padding" android:layout_marginTop="32.0dip" android:singleLine="true" style="@style/BlackOverlayText.RegularSubtext.Clickable" />
+    <com.soundcloud.android.view.JaggedTextView android:id="@id/title" android:visibility="invisible" android:layout_marginLeft="@dimen/playlist_header_padding" android:layout_marginTop="4.0dip" android:layout_marginRight="@dimen/playlist_header_padding" android:layout_below="@id/username" style="@style/BlackOverlayText.Regular" />
+    <com.soundcloud.android.view.CustomFontTextView android:id="@id/title_private" android:visibility="gone" android:layout_marginLeft="@dimen/playlist_header_padding" android:layout_marginTop="4.0dip" android:layout_marginRight="@dimen/playlist_header_padding" android:drawableLeft="@drawable/ic_private_playlist_lock" android:drawablePadding="4.0dip" android:layout_below="@id/username" style="@style/BlackOverlayText.Regular" />
+    <ToggleButton android:id="@id/toggle_play_pause" style="@style/PlaylistPlayToggle" />
+    <FrameLayout android:id="@id/playlist_action_bar_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_below="@id/artwork_divider" android:layout_alignParentBottom="true" />
+</RelativeLayout>

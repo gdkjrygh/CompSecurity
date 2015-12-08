@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/bundle_summary_included_items_container" android:background="@drawable/item_details_section_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="96.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/image_container" android:padding="10.0dip" android:layout_width="96.0dip" android:layout_height="96.0dip" android:layout_marginRight="10.0dip" android:layout_centerVertical="true">
+        <com.walmart.android.ui.ImageViewExtended android:id="@id/bundle_summary_entry_picture" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/soldout" android:background="@drawable/selector_transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/soldout" />
+        </FrameLayout>
+        <ImageView android:id="@id/bundle_summary_entry_hint" android:paddingRight="5.0dip" android:paddingBottom="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/orange_exclamation" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <TextView android:ellipsize="end" android:id="@id/bundle_summary_entry_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="Product title can be a very long line that should wrap to max 2, the rest should be cut." android:maxLines="3" android:layout_toLeftOf="@id/price_container" android:layout_toRightOf="@id/image_container" style="@style/Text.SubHeader.Multiline" />
+    <com.walmartlabs.ui.StarsView android:id="@id/bundle_summary_starsview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_below="@id/bundle_summary_entry_title" android:layout_alignLeft="@id/bundle_summary_entry_title" custom:starsEmptyIcon="@drawable/star_empty" custom:starsFullIcon="@drawable/star_full" />
+    <TextView android:id="@id/variants" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/image_container" android:layout_below="@id/bundle_summary_starsview" style="@style/Text.SubHeader.Multiline" />
+    <LinearLayout android:orientation="vertical" android:id="@id/price_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip" android:layout_alignTop="@id/bundle_summary_entry_title" android:layout_alignParentRight="true">
+        <TextView android:layout_gravity="center_horizontal" android:id="@id/bundle_summary_added_text" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Added" android:singleLine="true" style="@style/Text.SubHeader" />
+        <com.walmartlabs.ui.PriceView android:layout_gravity="right" android:id="@id/bundle_summary_added_price" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:price="$0.00" style="@style/Price.Small" />
+    </LinearLayout>
+</RelativeLayout>

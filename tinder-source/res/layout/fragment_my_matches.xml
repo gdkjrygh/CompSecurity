@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:id="@id/my_matches_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetRight="@dimen/suggested_screen_margins" app:layout_scrollFlags="enterAlways|scroll">
+            <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageButton android:id="@id/btn_back" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_arrow_l" android:layout_centerVertical="true" />
+                <com.tinder.views.CustomTextView android:id="@id/title_text" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_matches" android:layout_toRightOf="@id/btn_back" android:layout_centerVertical="true" app:font="medium" style="@style/ab_text" />
+                <ImageButton android:id="@id/btn_search" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/selector_search_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <ImageButton android:id="@id/btn_search_close" android:background="@color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/rounded_x" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <com.tinder.views.CustomEditText android:textColor="@color/text_dark" android:textColorHint="@color/text_light" android:id="@id/edit_search_input" android:background="@null" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin_med" android:hint="@string/search" android:cursorVisible="true" android:singleLine="true" android:layout_toLeftOf="@id/btn_search" android:layout_alignLeft="@id/title_text" android:layout_centerVertical="true" android:inputType="textNoSuggestions" android:imeOptions="actionSearch" android:textCursorDrawable="@null" app:font="semi_bold" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+        <android.support.design.widget.TabLayout android:id="@id/all_match_tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tabIndicatorColor="@color/tinder_red" app:tabTextColor="@color/paywall_text_light" app:tabSelectedTextColor="@color/tinder_red" />
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager android:id="@id/all_match_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/all_match_tabs" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/skype_blue" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:paddingTop="0.0dip" android:paddingBottom="@dimen/sign_in_header_top_padding" android:layout_height="wrap_content" style="@style/SigninContent">
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/header_terms_of_use" style="@style/SignInStandardTitle" />
+        <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.5">
+            <com.skype.android.widget.SymbolView android:textSize="@dimen/sign_up_tou_image_size" android:textColor="@color/skype_blue" android:id="@id/tou_no_calls_image" android:layout_width="@dimen/sign_up_tou_image_size" android:layout_height="@dimen/sign_up_tou_image_size" android:layout_marginTop="@dimen/size_1_5x" android:layout_marginBottom="@dimen/sign_up_tou_image_padding" android:layout_centerHorizontal="true" app:symbol_code="CallDisabled" app:symbolBackground="@color/white" app:symbolCircleBackground="true" />
+            <TextView android:gravity="center" android:id="@id/text_no_emergency_calls_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/size_1x" android:text="@string/text_no_emergency_calls_desc" android:layout_below="@id/tou_no_calls_image" style="@style/TermsOfUseStandardText" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.5">
+            <Button android:id="@id/terms_and_conds_agree_btn" android:layout_width="@dimen/sign_in_button_max_width" android:layout_height="@dimen/rounded_button_height" android:layout_marginTop="@dimen/size_1x" android:layout_marginBottom="@dimen/landing_button_margin" android:text="@string/label_continue" android:layout_centerHorizontal="true" style="@style/SigninButton" />
+            <TextView android:gravity="center" android:id="@id/text_terms_of_use_privacy_policy" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/size_1x" android:text="@string/link_text_terms_of_use_privacy_policy" android:layout_below="@id/terms_and_conds_agree_btn" style="@style/Theme.TextView.TermsAndConditions" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/tou_checkbox_container" android:paddingTop="@dimen/size_0_5x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <CheckBox android:gravity="top" android:id="@id/terms_and_cond_marketing_opt" android:paddingLeft="@dimen/sign_up_tou_checkbox_tick_padding" android:paddingBottom="@dimen/size_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:button="@drawable/checkbox_on_darkgray_selector" android:text="@string/text_skype_offers" android:layout_centerInParent="true" style="@style/Theme.TextView.TermsAndConditions" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.driver.DriverActivitiesView android:gravity="center" android:orientation="vertical" android:paddingTop="@dimen/span16" android:paddingBottom="@dimen/span16" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/activity_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/DriverStatsLabel" />
+    <TextView android:enabled="false" android:textSize="@dimen/driver_ride_rating_and_earning_price_text" android:textColor="@color/stats_text" android:gravity="center" android:id="@id/amount_earned" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span8" android:text="@string/stats_empty_amount_earned" android:includeFontPadding="false" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span16" android:weightSum="2.0">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:text="@string/stats_rides_label" android:includeFontPadding="false" style="@style/DriverStatsLabel" />
+            <TextView android:enabled="false" android:id="@id/rides_count" android:layout_marginTop="@dimen/span8" android:text="@string/stats_empty_rides_count" android:includeFontPadding="false" style="@style/DriverStatsText" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:text="@string/stats_hours_labels" android:includeFontPadding="false" style="@style/DriverStatsLabel" />
+            <TextView android:enabled="false" android:id="@id/hours_count" android:layout_marginTop="@dimen/span8" android:includeFontPadding="false" style="@style/DriverStatsText" />
+        </LinearLayout>
+    </LinearLayout>
+</me.lyft.android.ui.driver.DriverActivitiesView>

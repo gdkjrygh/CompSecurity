@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/story_cell_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/story_dot_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap" android:layout_marginRight="@dimen/default_gap">
+        <ImageView android:id="@id/story_dot" android:layout_width="@dimen/story_thumbnail_height" android:layout_height="@dimen/story_thumbnail_height" android:src="@drawable/story_circle_placeholder" />
+        <ProgressBar android:id="@id/progress_bar" android:visibility="gone" android:layout_width="@dimen/story_progress_bar_height" android:layout_height="@dimen/story_progress_bar_height" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textColor="@color/primary_black" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap" android:maxLines="1" android:includeFontPadding="false" style="@android:style/TextAppearance.Medium" />
+</LinearLayout>

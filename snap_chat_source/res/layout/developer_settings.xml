@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/TopPanel">
+        <RelativeLayout android:id="@id/settings_back_button_area" android:background="@drawable/action_bar_touch_selector" android:paddingRight="@dimen/default_gap" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/up_arrow" android:background="@drawable/aa_action_bar_up_arrow_green" android:layout_width="9.0dip" android:layout_height="26.0dip" android:layout_marginLeft="4.0dip" android:layout_centerVertical="true" />
+            <ImageView android:background="@drawable/aa_action_bar_ghost_icon_green" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="12.0dip" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/text_size_default" android:textStyle="normal" android:textColor="@color/green" android:id="@id/settings_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="52.0dip" android:text="Developer Settings" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:background="@color/divider_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <ScrollView android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap_2x" android:layout_marginRight="@dimen/default_gap_2x">
+            <TextView android:text="CURRENT ENDPOINT" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <TextView android:gravity="center_vertical" android:id="@id/current_endpoint_textview" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="current endpoint" style="@style/settings_item_name" />
+            <RelativeLayout android:id="@id/square_sandbox_cell" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:text="Use Square Cash Sandbox" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <include layout="@layout/list_separator" />
+                <CheckBox android:id="@id/square_sandbox_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <TextView android:id="@id/feature_flags_header" android:background="@color/developer_settings_background_green_solid" android:text="FEATURE FLAGS" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <LinearLayout android:orientation="vertical" android:id="@id/feature_flags" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:text="SECURITY" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <RelativeLayout android:id="@id/device_token_cell" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:text="Show Device Token Toasts" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <include layout="@layout/list_separator" />
+                <CheckBox android:id="@id/device_token_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/disable_pinning_cell" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:text="Disable Pinning" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <include layout="@layout/list_separator" />
+                <CheckBox android:id="@id/disable_pinning_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <TextView android:text="DISCOVER" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <RelativeLayout android:id="@id/discover_endpoint_button" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <LinearLayout style="@style/settings_item_outer">
+                    <TextView android:text="Discover Channel List Region" style="@style/settings_item_name" />
+                    <Spinner android:id="@id/discover_endpoint_region" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/discover_endpoint_country" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:text="Change Discover Channel List Country" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <TextView android:text="STORIES" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <RelativeLayout android:id="@id/story_thumbnails_button" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <LinearLayout style="@style/settings_item_outer">
+                    <TextView android:text="Thumbnail Story Count" style="@style/settings_item_name" />
+                    <TextView android:id="@id/story_thumbnails_textview" android:text="" style="@style/settings_item_text" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/reset_tutorial_button" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <LinearLayout style="@style/settings_item_outer">
+                    <TextView android:text="Reset tutorials" style="@style/settings_item_name" />
+                    <TextView android:text="Resets user settings for story tutorials" style="@style/settings_item_text" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <TextView android:text="IDENTITY" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <RelativeLayout android:id="@id/identity_enable_upgrade_prompt" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:text="Enable upgrade prompt" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <CheckBox android:id="@id/identity_enable_upgrade_prompt_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/identity_enable_fake_friendmoji" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:text="Enable fake friendmoji" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <CheckBox android:id="@id/identity_enable_fake_friendmoji_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/identity_enable_add_friends_from_screenshot" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:text="Enable Add Friends from Screenshot" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <CheckBox android:id="@id/identity_enable_add_friends_from_screenshot_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/identity_enable_terms_of_use" android:background="@color/bright_yellow" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <CheckBox android:id="@id/identity_enable_terms_of_use_checkbox" style="@style/settings_checkbox" />
+                <TextView android:layout_width="fill_parent" android:text="Enable the new terms of use" android:layout_toLeftOf="@id/identity_enable_terms_of_use_checkbox" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/identity_show_terms_of_use" android:background="@color/dark_yellow" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <CheckBox android:id="@id/identity_show_terms_of_use_checkbox" style="@style/settings_checkbox" />
+                <TextView android:layout_width="fill_parent" android:text="Always show terms of use" android:layout_toLeftOf="@id/identity_show_terms_of_use_checkbox" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/identity_enable_mini_profile" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:text="Enable mini profile" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <CheckBox android:id="@id/identity_enable_mini_profile_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/identity_enable_add_contacts_footer" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:text="Enable Add Contacts Footer" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <CheckBox android:id="@id/identity_enable_add_contacts_footer_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/identity_fake_displayname_on_search_friend" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:text="Show a fake displayname on search friend" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <CheckBox android:id="@id/identity_fake_displayname_on_search_friend_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/identity_phone_verification_experiment" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <Spinner android:id="@id/identity_phone_verification_experiment_option" android:layout_width="wrap_content" android:layout_height="?android:listPreferredItemHeight" android:layout_marginLeft="@dimen/default_gap" android:layout_alignParentRight="true" android:spinnerMode="dropdown" style="@style/white_spinner" />
+                <TextView android:id="@id/identity_phone_verification_experiment_text" android:layout_width="wrap_content" android:text="Phone Verification Experiment" android:layout_toLeftOf="@id/identity_phone_verification_experiment_option" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <TextView android:text="CHAT" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <RelativeLayout android:id="@id/release_delay_timer_cell" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:text="Delay Time for Release" android:layout_alignParentTop="true" style="@style/settings_item_name" />
+                <TextView android:id="@id/release_delay_timer_value_textview" android:layout_width="wrap_content" android:text="0ms" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/settings_item_name" />
+                <SeekBar android:id="@id/release_delay_timer_seekbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="20" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/fake_cellular_connection_cell" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <LinearLayout android:layout_centerVertical="true" style="@style/settings_item_outer">
+                    <TextView android:text="Fake cellular connection" style="@style/settings_item_name" />
+                    <TextView android:text="Useful for testing travel mode." style="@style/settings_item_text" />
+                </LinearLayout>
+                <include layout="@layout/list_separator" />
+                <CheckBox android:id="@id/fake_cellular_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <TextView android:text="CASH" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <LinearLayout android:id="@id/cash_reset_button" android:layout_width="fill_parent" style="@style/settings_item_outer">
+                <TextView android:text="Reset account" style="@style/settings_item_name" />
+            </LinearLayout>
+            <TextView android:text="TRANSCODING" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <RelativeLayout android:id="@id/overwrite_transcoding_state" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Overwrite transcoding state" android:layout_toLeftOf="@id/overwrite_transcoding_state_option" style="@style/settings_item_name" />
+                <Spinner android:id="@id/overwrite_transcoding_state_option" android:layout_width="wrap_content" android:layout_height="?android:listPreferredItemHeight" android:layout_marginLeft="@dimen/default_gap" android:layout_alignParentRight="true" android:spinnerMode="dropdown" style="@style/white_spinner" />
+            </RelativeLayout>
+            <TextView android:id="@id/default_transcoding_state" android:text="Default transcoding state:" style="@style/settings_item_text" />
+            <TextView android:text="LOOKSERY" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <RelativeLayout android:id="@id/ignore_looksery_whitelist_cell" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <LinearLayout android:layout_centerVertical="true" style="@style/settings_item_outer">
+                    <TextView android:text="Ignore Looksery device whitelist." style="@style/settings_item_name" />
+                    <TextView android:text="App restart is required for applying." style="@style/settings_item_text" />
+                </LinearLayout>
+                <include layout="@layout/list_separator" />
+                <CheckBox android:id="@id/ignore_looksery_whitelist_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/show_fps_overlay_cell" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <LinearLayout android:layout_centerVertical="true" style="@style/settings_item_outer">
+                    <TextView android:text="Show overlay with camera FPS." style="@style/settings_item_name" />
+                </LinearLayout>
+                <include layout="@layout/list_separator" />
+                <CheckBox android:id="@id/show_camera_fps_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <TextView android:text="BAD BEHAVIOR" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <RelativeLayout android:id="@id/java_crash_button" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <LinearLayout style="@style/settings_item_outer">
+                    <TextView android:text="Java Crash" style="@style/settings_item_name" />
+                    <TextView android:text="Throw a RuntimeException" style="@style/settings_item_text" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/java_chained_exception_button" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <LinearLayout style="@style/settings_item_outer">
+                    <TextView android:text="Chained Exception" style="@style/settings_item_name" />
+                    <TextView android:text="Throws a Chained Exception" style="@style/settings_item_text" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/java_stack_overflow_button" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <LinearLayout style="@style/settings_item_outer">
+                    <TextView android:text="StackOverflow Error" style="@style/settings_item_name" />
+                    <TextView android:text="Throws a StackOverflowError" style="@style/settings_item_text" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/native_crash_button" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <LinearLayout style="@style/settings_item_outer">
+                    <TextView android:text="Native Crash" style="@style/settings_item_name" />
+                    <TextView android:text="Cause a segmentation fault" style="@style/settings_item_text" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/anr_button" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <LinearLayout style="@style/settings_item_outer">
+                    <TextView android:text="ANR" style="@style/settings_item_name" />
+                    <TextView android:text="while(true) on the main thread" style="@style/settings_item_text" />
+                </LinearLayout>
+            </RelativeLayout>
+            <TextView android:text="MONITOR" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <RelativeLayout android:id="@id/http_metrics_enabled_cell" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:text="Enable Http Metrics" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <CheckBox android:id="@id/http_metrics_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/http_metrics_button" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <LinearLayout style="@style/settings_item_outer">
+                    <TextView android:text="Http Metrics Browser" style="@style/settings_item_name" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/db_browser_button" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <LinearLayout style="@style/settings_item_outer">
+                    <TextView android:text="DB Browser" style="@style/settings_item_name" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/diagnostic_overlay_cell" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:text="Show Diagnostic Overlay Option" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <CheckBox android:id="@id/diagnostic_overlay_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

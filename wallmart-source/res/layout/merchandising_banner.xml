@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.walmartlabs.ui.ListSafeViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/loading" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignLeft="@id/view_pager" android:layout_alignTop="@id/view_pager" android:layout_alignRight="@id/view_pager" android:layout_alignBottom="@id/view_pager" layout="@layout/loading_page" />
+    <RelativeLayout android:id="@id/banner_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignLeft="@id/view_pager" android:layout_alignTop="@id/view_pager" android:layout_alignRight="@id/view_pager" android:layout_alignBottom="@id/view_pager">
+        <com.walmart.android.wmui.PagerView android:id="@id/dot_view" android:background="@color/halftransparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_alignParentBottom="true" app:selectedDrawable="@drawable/pagerdot_selected" app:spacing="0.0dip" />
+    </RelativeLayout>
+</merge>

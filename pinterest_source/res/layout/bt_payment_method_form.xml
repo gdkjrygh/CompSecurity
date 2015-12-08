@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/card_form_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.braintreepayments.api.dropin.view.LoadingHeader android:id="@id/bt_header_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/bt_header_container_height" android:layout_alignParentTop="true" />
+    <ScrollView android:id="@id/bt_form_scroll_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_above="@id/bt_card_form_submit_button" android:layout_below="@id/bt_header_container" android:layout_alignWithParentIfMissing="true" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/bt_payment_description" />
+            <com.braintreepayments.api.dropin.view.PaymentButton android:id="@id/bt_payment_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bt_form_padding" />
+            <TextView android:textColor="@color/bt_black" android:id="@id/bt_card_form_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/bt_form_padding" android:layout_marginTop="@dimen/bt_form_padding" android:layout_marginRight="@dimen/bt_form_padding" android:layout_marginBottom="4.0dip" android:text="@string/bt_form_pay_with_card_header" style="@style/bt_base_textview_bold" />
+            <View android:id="@id/bt_card_form_header_bar" android:background="@color/bt_black" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/bt_form_padding" android:layout_marginRight="@dimen/bt_form_padding" android:layout_marginBottom="8.0dip" />
+            <com.braintreepayments.cardform.view.CardForm android:id="@id/bt_card_form" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:layout_width="wrap_content" android:layout_height="14.0dip" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/bt_form_submit_button" />
+</RelativeLayout>

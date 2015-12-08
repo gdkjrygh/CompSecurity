@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:background="#ff313131" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/back" android:clickable="true" android:layout_width="@dimen/title_height" android:layout_height="fill_parent" android:src="@drawable/title_back_selector" android:scaleType="centerInside" android:contentDescription="@null" />
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:gravity="left|center" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/user_photo_title" android:layout_weight="1.0" style="@style/title_style" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/award" android:visibility="invisible" android:clickable="true" android:layout_width="@dimen/title_height" android:layout_height="fill_parent" android:layout_marginRight="5.0dip" android:src="@drawable/photo_share_award_selector" android:scaleType="centerInside" android:contentDescription="@null" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ListView android:scrollbarThumbVertical="@drawable/forecast_article_drag_vertical" android:id="@id/lv_photos" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/no_photo_view" android:paddingTop="20.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textSize="14.0sp" android:textColor="#ff707070" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/user_photo_empty_tip" android:drawableTop="@drawable/photo_city_no_photo" android:drawablePadding="20.0dip" android:contentDescription="@null" />
+        <Button android:textSize="14.0sp" android:textColor="#ffffffff" android:layout_gravity="center" android:id="@id/take_pictures" android:background="@drawable/xh_button_blue_selector" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginTop="40.0dip" android:minWidth="165.0dip" android:text="@string/photo_take_pictures" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include android:id="@id/footer_bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/photo_footer_progressbar" />
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="@dimen/agreement_enterance_text_size" android:textColor="#ff959595" android:layout_gravity="center" android:id="@id/agreement" android:background="#00000000" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:text="@string/agreement_enterance" />
+    </LinearLayout>
+</RelativeLayout>

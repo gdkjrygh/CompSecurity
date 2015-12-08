@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/sliding_list_selector" android:layout_width="fill_parent" android:layout_height="@dimen/music_list_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/slidingmenu_icon" android:layout_width="@dimen/music_list_image_height" android:layout_height="@dimen/music_list_image_height" android:layout_marginLeft="@dimen/music_list_image_margin" android:layout_marginRight="@dimen/music_list_image_margin" android:scaleType="centerCrop" android:layout_centerVertical="true" />
+    <RelativeLayout android:id="@id/slidingmenu_music_state_layout" android:layout_width="@dimen/music_btn_width" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/music_list_image_margin" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:id="@id/slidingmenu_music_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_music_play" android:layout_centerInParent="true" />
+        <ProgressBar android:id="@id/slidingmenu_music_state_loading" android:layout_width="24.0dip" android:layout_height="24.0dip" android:indeterminateDrawable="@drawable/custom_progress_bar" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/slidingmenu_music_state_layout" android:layout_toRightOf="@id/slidingmenu_icon" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/music_list_music_name_size" android:textColor="@color/white" android:ellipsize="end" android:gravity="left|center" android:id="@id/slidingmenu_music_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="@dimen/slidingmenu_margin_icon" android:singleLine="true" android:layout_toRightOf="@id/slidingmenu_icon" android:layout_alignTop="@id/slidingmenu_icon" android:layout_alignParentTop="true" />
+        <TextView android:textSize="@dimen/music_list_author_size" android:textColor="@color/white" android:ellipsize="end" android:gravity="left|center" android:id="@id/slidingmenu_music_auther" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="auther" android:singleLine="true" android:layout_below="@id/slidingmenu_music_name" android:layout_alignLeft="@id/slidingmenu_music_name" />
+    </LinearLayout>
+</RelativeLayout>

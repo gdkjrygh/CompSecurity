@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/froyo_widget_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ViewFlipper android:id="@id/video_flipper" android:layout_width="fill_parent" android:layout_height="fill_parent" android:inAnimation="@anim/video_teaser_in" android:outAnimation="@anim/video_teaser_out" android:flipInterval="8000" android:autoStart="true" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/video_flipper_alt" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:id="@id/widget_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ProgressBar android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_margin="5.0dip" />
+                </FrameLayout>
+                <ImageView android:gravity="center" android:id="@id/widget_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:src="@drawable/froyo_alert_error" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/widget_messages" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/medium_font_size" android:textColor="@color/grey_text" android:gravity="center" android:id="@id/widget_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" />
+                    <TextView android:textSize="@dimen/small_font_size" android:textColor="@color/white_text" android:gravity="center" android:id="@id/widget_submessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/buttons" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/camera_divider" android:background="@drawable/froyo_widget_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <ImageView android:id="@id/camera_icon" android:focusable="true" android:clickable="true" android:layout_width="40.0dip" android:layout_height="fill_parent" android:src="@drawable/froyo_widget_capture_drawable" />
+            <ImageView android:background="@drawable/froyo_widget_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <ImageView android:id="@id/search_icon" android:focusable="true" android:clickable="true" android:layout_width="40.0dip" android:layout_height="fill_parent" android:src="@drawable/froyo_widget_search_drawable" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/widget_logo" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/froyo_widget_logo" />
+</RelativeLayout>

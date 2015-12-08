@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/map_interactive_controls_background_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/map_interactive_controls_height_plus_adheight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/controls_bar" android:paddingTop="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="2.0">
+        <ToggleButton android:id="@id/settings_map_traffic" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:textOn="@string/maps_traffic_off" android:textOff="@string/maps_traffic_on" android:layout_weight="1.0" android:onClick="onTrafficToggleClicked" />
+        <ToggleButton android:id="@id/settings_map_baseMap" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:textOn="@string/maps_roads" android:textOff="@string/maps_satellite" android:layout_weight="1.0" android:onClick="onBaseMapToggleClicked" />
+    </LinearLayout>
+    <ListView android:id="@id/settings_map_layer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="@android:color/black" android:choiceMode="singleChoice" />
+</LinearLayout>

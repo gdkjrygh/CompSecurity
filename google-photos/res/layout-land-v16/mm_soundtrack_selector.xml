@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/mm_window_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:moviemaker="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/mm_soundtrack_scrim" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:gravity="bottom" android:layout_gravity="left|center" android:id="@id/mm_music_section" android:paddingBottom="@dimen/mm_unit" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mm_unit">
+        <LinearLayout android:orientation="vertical" android:id="@id/mm_tab_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.moviemaker.ui.ScrollingTabLayout android:id="@id/mm_scrolling_tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" moviemaker:indicatorColor="@color/mm_accent" moviemaker:indicatorHeight="@dimen/mm_indicator_thickness" moviemaker:dividerColor="@color/mm_horizontal_divider" moviemaker:dividerHeight="@dimen/mm_divider_thickness" />
+            <android.support.v4.view.ViewPager android:id="@id/mm_soundtrack_pager" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <include android:id="@id/mm_original_audio" layout="@layout/mm_original_audio_section" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/mm_main_text_size" android:layout_gravity="center" android:id="@id/mm_loading_music_library_message" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mm_unit" android:text="@string/mm_soundtrack_list_loading" android:textIsSelectable="false" android:fontFamily="sans-serif-light" />
+        <LinearLayout android:orientation="vertical" android:id="@id/mm_soundtrack_list_failed" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mm_unit_2" android:src="@drawable/ic_frown_cloud" android:contentDescription="@null" />
+            <TextView android:textSize="@dimen/mm_secondary_small_text_size" android:textColor="@color/mm_main_text" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mm_unit" android:text="@string/mm_soundtrack_list_failed" android:textIsSelectable="false" android:fontFamily="sans-serif-light" />
+            <TextView android:textSize="@dimen/mm_small_text_size" android:textStyle="italic" android:textColor="@color/mm_secondary_text" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mm_small_unit_3" android:text="@string/mm_soundtrack_check_network_connection" android:textIsSelectable="false" android:fontFamily="sans-serif" />
+            <ImageView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/mm_music_load_retry" android:padding="@dimen/mm_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mm_unit" android:src="@drawable/ic_music_retry" android:contentDescription="@string/mm_soundtrack_list_retry" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

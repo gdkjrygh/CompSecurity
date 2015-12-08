@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.walmart.android.ui.SafeScrollView android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:padding="@dimen/payment_margin" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/payment_margin_small" android:text="@string/pm_add_gift_card_instruction_egift_card" android:drawableLeft="@drawable/ic_egift_card" android:drawablePadding="@dimen/payment_margin" style="@style/Payment.Text.Body" />
+            <TextView android:gravity="center_vertical" android:id="@id/pm_add_gc_instruction_physical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pm_add_gift_card_instruction_physical_card" android:drawableLeft="@drawable/ic_plastic_card" android:drawablePadding="@dimen/payment_margin" style="@style/Payment.Text.Body" />
+            <ImageView android:id="@id/pm_add_gc_diagram" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/payment_margin" android:src="@drawable/gift_card_instructional" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/payment_margin">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <EditText android:id="@id/pm_add_gc_number" android:nextFocusDown="@id/pm_add_gc_pin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/pm_add_gift_card_number_hint" android:maxLength="19" style="@style/Payment.EditText" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+                    <EditText android:id="@id/pm_add_gc_pin" android:nextFocusDown="@id/pm_add_gc_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/pm_add_gift_card_pin_hint" android:minEms="4" android:maxLength="4" android:inputType="numberPassword" style="@style/Payment.EditText" />
+                </LinearLayout>
+            </LinearLayout>
+            <EditText android:id="@id/pm_add_gc_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/payment_margin" android:hint="@string/pm_add_gift_card_label_hint" android:maxLength="25" android:imeOptions="actionDone" style="@style/Payment.EditText" />
+        </LinearLayout>
+        <Button android:id="@id/pm_add_gc_save_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/payment_margin" android:text="@string/save_button" android:layout_alignParentBottom="true" style="@style/Payment.PrimaryButton" />
+    </RelativeLayout>
+</com.walmart.android.ui.SafeScrollView>

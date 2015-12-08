@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:background="@color/skype_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:id="@id/main_content" android:layout_width="@dimen/linking_panel_width" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/linking_top_message" android:layout_centerInParent="true">
+        <ImageView android:id="@id/circle" android:layout_width="@dimen/linking_clouds_circle_size" android:layout_height="@dimen/linking_clouds_circle_size" android:src="@drawable/linking_clouds_circle" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <TextView android:id="@id/circle_text" android:layout_width="@dimen/linking_clouds_circle_size" android:layout_height="wrap_content" android:layout_alignLeft="@id/circle" android:layout_alignRight="@id/circle" android:layout_centerVertical="true" style="@style/LinkingCloudsMessageText" />
+    </RelativeLayout>
+    <com.skype.android.widget.YesNoButtons android:id="@id/yes_no_buttons" android:paddingLeft="@dimen/padding3" android:paddingRight="@dimen/padding3" android:layout_height="wrap_content" android:layout_below="@id/main_content" style="@style/SideBySideButtons" />
+</RelativeLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph>
+    <!-- Packages -->
+    <import package="androidx.media.filterpacks.base"/>
+    <import package="androidx.media.filterpacks.decoder"/>
+    <import package="androidx.media.filterpacks.face"/>
+    <import package="androidx.media.filterpacks.image"/>
+    <import package="androidx.media.filterpacks.text"/>
+    <import package="androidx.media.filterpacks.transform"/>
+    <import package="com.google.android.apps.moviemaker.filterpacks.base"/>
+    <import package="com.google.android.apps.moviemaker.filterpacks.face"/>
+    <import package="com.google.android.apps.moviemaker.filterpacks.image"/>
+    <import package="com.google.android.apps.moviemaker.filterpacks.miscellaneous"/>
+    <import package="com.google.android.apps.moviemaker.filterpacks.numeric"/>
+
+    <!--  Variables -->
+    <!--  The default quad over which the sharpness will be calculated;
+          should be set to the whole image from the app. -->
+    <var name="defaultImageQuad"/>
+    <!--  The input bitmap image. -->
+    <var name="bitmapImage"/>
+
+    <!-- Filters -->
+    <filter class="BitmapSource" name="imageDecoder"/>
+    <filter class="FrameCountFilter" name="frameCounter"/>
+    <filter class="CountLimitFilter" name="countLimiter"/>
+
+    <filter class="ToggleableBranchFilter" name="rawBranch"/>
+    <filter class="ToggleableBranchFilter" name="resizedBranch"/>
+
+    <filter class="ScaleToAreaFilter" name="resizerToArea">
+        <!-- scale to CIF size (320x240) -->
+        <input name="targetArea" intValue="76800"/>
+        <input name="useMipmaps" booleanValue="false"/>
+    </filter>
+
+    <filter class="SaliencyFilter" name="saliency"/>
+
+    <filter class="MapProjectionFilter" name="saliencyMapProjectionFilter">
+        <input name="batchSize" intValue="8"/>
+    </filter>
+
+    <filter class="StatisticEmitterFilter" name="frameNumberEmitter"/>
+    <filter class="StatisticEmitterFilter" name="sharpnessEmitter"/>
+    <filter class="StatisticEmitterFilter" name="faceScoreEmitter"/>
+    <filter class="StatisticEmitterFilter" name="saliencyEmitter"/>
+    <filter class="StatisticEmitterFilter" name="saliencyMapCumulativeVerticalProjectionEmitter"/>
+    <filter class="StatisticEmitterFilter"
+            name="saliencyMapCumulativeHorizontalProjectionEmitter"/>
+    <filter class="FloatMatrixEmitterFilter" name="newChromaHistogramEmitter"/>
+    <filter class="StatisticEmitterFilter" name="newColorfulnessEmitter"/>
+
+    <!-- SobelFilter and ToGrayValuesFilter for gradient calculation and packing it to a
+         buffer respectively. -->
+    <filter class="SobelFilter" name="gradientCalc"/>
+    <filter class="ToGrayValuesFilter" name="toGrayValuesGrad"/>
+
+    <!-- Gradients are needed by both sharpness scorer and face sharpness scorer. -->
+    <filter class="ToggleableBranchFilter" name="gradientBufferBranch"/>
+
+    <!-- MetaFilter for calculating image sharpness. -->
+    <filter class="MetaFilter" name="sharpnessScorer">
+        <!--  The default quad will be used for this case. -->
+        <input name="elem" varValue="defaultImageQuad"/>
+    </filter>
+
+    <!-- IterateFilter for calculating face-sharpness. Will iterate over all
+         the faces in the image and call underlying subgraph for each. -->
+    <filter class="IterateFilter" name="faceSharpnessScorer"/>
+
+    <!-- IterateFilter for calculating face-illumination. Will iterate over all
+         the faces in the image and call underlying subgraph for each. -->
+    <filter class="IterateFilter" name="faceIlluminationScorer"/>
+
+    <!-- MetaFilter for calculating new chroma histogram. -->
+    <filter class="MetaFilter" name="newChromaHistogram"/>
+
+    <!-- Face to Quad is needed for the face sharpness. Sharpness over only
+         the facial region will be calculated. -->
+    <filter class="FaceToRectFilter" name="faceToRectQuad">
+        <input name="scale" floatValue="3"/>
+    </filter>
+
+    <!-- Faces are needed by face expression, face sharpness, and face illumination scorers. -->
+    <filter class="ToggleableBranchFilter" name="facesBranch"/>
+    <!-- Face quads are needed by face sharpness and face illumination scorers. -->
+    <filter class="ToggleableBranchFilter" name="facequadBranch"/>
+    <!-- Resized GrayScale frame is needed by face tracking / expression and saliency. -->
+    <filter class="ToggleableBranchFilter" name="cifResizedGrayBranch"/>
+
+    <filter class="FaceDetectorFilter" name="faceTracker">
+    </filter>
+    <filter class="ToGrayValuesFilter" name="grayResized"/>
+    <filter class="FacialExpressionFilter" name="expression"/>
+
+    <!--  Filter for assembling all the face score components -->
+    <filter class="AssembleFaceScoreFilter" name="faceScoreAssembler"/>
+
+    <!--                        CONNECTIONS                                  -->
+
+    <!-- Decoder connections -->
+    <connect sourceFilter="bitmapImage" sourcePort="value"
+             targetFilter="imageDecoder" targetPort="bitmap"/>
+
+    <!-- Limit the graph to one iteration -->
+    <connect sourceFilter="imageDecoder" sourcePort="image"
+             targetFilter="countLimiter" targetPort="frame"/>
+
+    <connect sourceFilter="countLimiter" sourcePort="frame"
+             targetFilter="rawBranch" targetPort="input"/>
+
+    <!-- Generate and export frame numbers -->
+    <connect sourceFilter="rawBranch" sourcePort="frameCounter"
+             targetFilter="frameCounter" targetPort="input"/>
+
+    <connect sourceFilter="frameCounter" sourcePort="frameNumber"
+             targetFilter="frameNumberEmitter" targetPort="input"/>
+
+    <!-- Resize -->
+    <connect sourceFilter="rawBranch" sourcePort="resizerToArea"
+             targetFilter="resizerToArea" targetPort="image"/>
+    <connect sourceFilter="resizerToArea" sourcePort="image"
+             targetFilter="resizedBranch" targetPort="input"/>
+
+    <!-- GrayScale conversion of the resized image. -->
+    <connect sourceFilter="resizedBranch" sourcePort="grayScale"
+             targetFilter="grayResized" targetPort="image"/>
+    <connect sourceFilter="grayResized" sourcePort="image"
+             targetFilter="cifResizedGrayBranch" targetPort="input"/>
+
+    <!-- Calculate gradient buffer and connect gradientBufferBranch.
+          Used for sharpness and face sharpness. -->
+    <connect sourceFilter="resizedBranch" sourcePort="gradient"
+             targetFilter="gradientCalc" targetPort="image"/>
+
+    <connect sourceFilter="gradientCalc" sourcePort="magnitude"
+             targetFilter="toGrayValuesGrad" targetPort="image"/>
+
+    <connect sourceFilter="toGrayValuesGrad" sourcePort="image"
+             targetFilter="gradientBufferBranch" targetPort="input"/>
+
+    <!-- Calculate sharpness. -->
+    <connect sourceFilter="gradientBufferBranch" sourcePort="sharpness"
+             targetFilter="sharpnessScorer" targetPort="gradientBuffer"/>
+
+    <connect sourceFilter="sharpnessScorer" sourcePort="score"
+             targetFilter="sharpnessEmitter" targetPort="input"/>
+
+    <!-- Connect the face branch. -->
+    <connect sourceFilter="faceTracker" sourcePort="faces"
+             targetFilter="facesBranch" targetPort="input"/>
+
+    <!-- Calculate sharpness over faces. -->
+     <connect sourceFilter="gradientBufferBranch" sourcePort="faceSharpness"
+             targetFilter="faceSharpnessScorer" targetPort="gradientBuffer"/>
+
+    <connect sourceFilter="facesBranch" sourcePort="faceSharpness"
+             targetFilter="faceToRectQuad" targetPort="faces"/>
+
+    <connect sourceFilter="faceToRectQuad" sourcePort="quads"
+             targetFilter="facequadBranch" targetPort="input"/>
+
+    <connect sourceFilter="facequadBranch" sourcePort="toFaceSharpness"
+             targetFilter="faceSharpnessScorer" targetPort="array"/>
+
+    <!-- Run face tracking and expression -->
+    <connect sourceFilter="cifResizedGrayBranch" sourcePort="toFaceTracker"
+             targetFilter="faceTracker" targetPort="image"/>
+
+    <connect sourceFilter="cifResizedGrayBranch" sourcePort="toExpression"
+             targetFilter="expression" targetPort="image"/>
+
+    <connect sourceFilter="facesBranch" sourcePort="faceExpressions"
+             targetFilter="expression" targetPort="faces"/>
+
+    <!--  Connect all face score component filters' outputs to the face score assembler. -->
+    <connect sourceFilter="facesBranch" sourcePort="faceScores"
+             targetFilter="faceScoreAssembler" targetPort="faces"/>
+
+    <connect sourceFilter="faceIlluminationScorer" sourcePort="score"
+             targetFilter="faceScoreAssembler" targetPort="histogramDistances"/>
+
+    <connect sourceFilter="expression" sourcePort="smileScores"
+             targetFilter="faceScoreAssembler" targetPort="smileScores"/>
+
+    <connect sourceFilter="expression" sourcePort="eyesOpenScores"
+             targetFilter="faceScoreAssembler" targetPort="eyesOpenScores"/>
+
+    <connect sourceFilter="faceSharpnessScorer" sourcePort="score"
+             targetFilter="faceScoreAssembler" targetPort="sharpnessScores"/>
+
+    <!--  Pass the assembled FaceScore to the faceScoreEmitter. -->
+    <connect sourceFilter="faceScoreAssembler" sourcePort="faceScores"
+             targetFilter="faceScoreEmitter" targetPort="input"/>
+
+    <!--  Calculate face illumination -->
+    <connect sourceFilter="resizedBranch" sourcePort="faceIllumination"
+             targetFilter="faceIlluminationScorer" targetPort="image"/>
+
+    <connect sourceFilter="facequadBranch" sourcePort="toFaceIllumination"
+             targetFilter="faceIlluminationScorer" targetPort="array"/>
+
+    <!--  Calculate new chroma histogram -->
+    <connect sourceFilter="resizedBranch" sourcePort="toNewChromaHistogram"
+             targetFilter="newChromaHistogram" targetPort="image"/>
+
+    <connect sourceFilter="newChromaHistogram" sourcePort="newChromaHistogramOut"
+             targetFilter="newChromaHistogramEmitter" targetPort="input"/>
+
+    <connect sourceFilter="newChromaHistogram" sourcePort="newColorfulnessOut"
+             targetFilter="newColorfulnessEmitter" targetPort="input"/>
+
+    <!-- Calculate saliency -->
+    <connect sourceFilter="cifResizedGrayBranch" sourcePort="toSaliency"
+             targetFilter="saliency" targetPort="input"/>
+
+    <connect sourceFilter="saliency" sourcePort="saliency"
+             targetFilter="saliencyEmitter" targetPort="input"/>
+
+    <connect sourceFilter="saliency" sourcePort="saliencyMap"
+             targetFilter="saliencyMapProjectionFilter" targetPort="map"/>
+
+    <connect sourceFilter="saliencyMapProjectionFilter" sourcePort="verticalProjection"
+             targetFilter="saliencyMapCumulativeVerticalProjectionEmitter" targetPort="input"/>
+
+    <connect sourceFilter="saliencyMapProjectionFilter" sourcePort="horizontalProjection"
+             targetFilter="saliencyMapCumulativeHorizontalProjectionEmitter" targetPort="input"/>
+
+</graph>

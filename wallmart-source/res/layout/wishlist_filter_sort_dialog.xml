@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/black" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="27.0dip" android:text="@string/wishlist_filter_sort_dialog_filter_by" style="@style/WishListTextStyle.ExtraLarge" />
+        <LinearLayout android:id="@id/wishlist_filter_all_items_row" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/WishListFilterDialogRow">
+            <TextView android:text="@string/wishlist_filter_sort_dialog_all_items" style="@style/WishListFilterDialogRowDescription" />
+            <RadioButton android:id="@id/wishlist_filter_all_items" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/wishlist_filter_unpurchased_row" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/WishListFilterDialogRow">
+            <TextView android:text="@string/wishlist_filter_sort_dialog_unpurchased" style="@style/WishListFilterDialogRowDescription" />
+            <RadioButton android:id="@id/wishlist_filter_unpurchased" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/wishlist_filter_purchased_row" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/WishListFilterDialogRow">
+            <TextView android:text="@string/wishlist_filter_sort_dialog_purchased" style="@style/WishListFilterDialogRowDescription" />
+            <RadioButton android:id="@id/wishlist_filter_purchased" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View android:background="@color/walmart_bright_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="10.0dip" />
+        <TextView android:textColor="@color/black" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="@string/wishlist_filter_sort_dialog_sort_by" style="@style/WishListTextStyle.ExtraLarge" />
+        <LinearLayout android:id="@id/wishlist_sort_time_order_recent_row" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/WishListFilterDialogRow">
+            <TextView android:text="@string/wishlist_filter_sort_dialog_recently_added" style="@style/WishListFilterDialogRowDescription" />
+            <RadioButton android:id="@id/wishlist_sort_time_order_recent" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/wishlist_sort_price_order_lohi_row" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/WishListFilterDialogRow">
+            <TextView android:text="@string/wishlist_filter_sort_dialog_price_lohi" style="@style/WishListFilterDialogRowDescription" />
+            <RadioButton android:id="@id/wishlist_sort_price_order_lohi" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/wishlist_sort_price_order_hilo_row" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/WishListFilterDialogRow">
+            <TextView android:text="@string/wishlist_filter_sort_dialog_price_hilo" style="@style/WishListFilterDialogRowDescription" />
+            <RadioButton android:id="@id/wishlist_sort_price_order_hilo" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

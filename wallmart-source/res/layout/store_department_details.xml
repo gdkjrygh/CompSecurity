@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/default_list_selector" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow android:paddingLeft="20.0dip" android:paddingTop="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/store_details_department_info_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textColor="@color/store_detail_title" android:id="@id/store_details_department_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pharmacy" style="@style/Text.Body" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/store_detail_text" android:id="@id/store_details_department_phone_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Phone number" style="@style/Text.Body.Regular" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/store_details_department_button_call" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/telephone" />
+    </TableRow>
+    <include android:id="@id/store_details_hours_group_department" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" layout="@layout/store_hours_group" />
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:src="@drawable/store_detail_divider" />
+</LinearLayout>

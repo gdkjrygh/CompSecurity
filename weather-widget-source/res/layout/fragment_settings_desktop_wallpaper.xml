@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/common_bg_color" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_layout" layout="@layout/common_title_layout" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/common_margin_left" android:paddingRight="@dimen/common_margin_right" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="fill_parent" android:layout_height="@dimen/setting_classify_title_height" android:layout_marginTop="0.0dip" android:text="@string/setting_city" style="@style/setting_classify_title_style" />
+        <include layout="@layout/common_classify_divider_layout" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/choose_city_layout" android:background="@drawable/settings_item_selector" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/setting_item_height">
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:id="@id/choose_city_tip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/setting_select_city" style="@style/setting_item_title_style" />
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:id="@id/city_name" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/no_city_add" android:singleLine="false" android:drawableRight="@drawable/settings_more_icon" android:drawablePadding="@dimen/setting_item_value_drawable_padding" android:layout_weight="1.0" style="@style/setting_item_value_style" />
+        </LinearLayout>
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/setting_classify_title_height" android:text="@string/setting_wallpaper" style="@style/setting_classify_title_style" />
+        <include layout="@layout/common_classify_divider_layout" />
+        <FrameLayout android:id="@id/theme_list_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <FrameLayout android:paddingTop="@dimen/theme_config_theme_grid_vertical_space" android:paddingBottom="@dimen/theme_config_theme_grids_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/setting_classify_title_text" android:textColor="#ffffffff" android:gravity="center" android:id="@id/setting_ok_button" android:background="@drawable/xh_button_blue_selector" android:layout_width="fill_parent" android:layout_height="38.5dip" android:text="@string/sure" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

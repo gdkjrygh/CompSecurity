@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/view01" android:background="@color/newbie_bg" android:layout_width="wrap_content" android:layout_height="@dimen/image_selector_title2Lo_height" />
+    <FrameLayout android:id="@id/newbie_single_image_layout" android:layout_width="wrap_content" android:layout_height="@dimen/image_selector_title2Lo_height" android:layout_toRightOf="@id/view01" android:layout_alignParentTop="true">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/newbie_single_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/newbie_image_selector_icon" android:scaleType="centerInside" />
+    </FrameLayout>
+    <View android:id="@id/view02" android:background="@color/newbie_bg" android:layout_width="fill_parent" android:layout_height="@dimen/image_selector_title2Lo_height" android:layout_toRightOf="@id/newbie_single_image_layout" />
+    <FrameLayout android:id="@id/up_arrow_layout" android:background="@color/newbie_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/newbie_single_image_layout">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/up_arrow" />
+            <View android:layout_height="78.0dip" style="@style/newbie_up_arrow_line_style" />
+        </LinearLayout>
+    </FrameLayout>
+    <TextView android:textSize="@dimen/folder_add_tip_textSize" android:textColor="@color/white" android:id="@id/newbie_single_text" android:background="@color/newbie_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tap_to_open_folder" android:lines="3" android:layout_below="@id/up_arrow_layout" />
+    <View android:background="@color/newbie_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/newbie_single_text" />
+</RelativeLayout>

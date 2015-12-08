@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/library_margin_column" android:layout_marginTop="@dimen/library_margin_large" android:layout_marginRight="@dimen/library_margin_column"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="@dimen/library_margin_small" android:paddingBottom="@dimen/library_margin_column_double" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/library_user_name_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/text_caption" android:textStyle="bold" android:textColor="@color/gray_medium" android:id="@id/library_header_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/library_margin_med" />
+            <com.pinterest.ui.text.IconView android:layout_gravity="center_vertical" android:id="@id/verified_iv" android:paddingLeft="@dimen/library_margin_small" android:src="@drawable/ic_verified_domain" style="@style/wrap_view" />
+        </LinearLayout>
+        <TextView android:id="@id/library_header_full_name" android:paddingBottom="@dimen/library_margin_med" android:layout_toLeftOf="@id/library_header_profile_photo" android:layout_below="@id/library_user_name_wrapper" style="@style/library_display_name" />
+        <com.pinterest.activity.library.view.LibraryHeaderMetaDataBar android:id="@id/library_header_metadata_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:layout_below="@id/library_header_full_name" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/library_user_about_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/library_header_metadata_bar">
+            <TextView android:textSize="@dimen/text_caption" android:textColor="@color/gray_medium" android:id="@id/library_header_user_location" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/text_base" />
+            <TextView android:textSize="@dimen/text_caption" android:textStyle="bold" android:textColor="@color/gray_medium" android:id="@id/library_header_user_website" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/text_base" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/text_caption" android:textColor="@color/gray_medium" android:id="@id/library_header_user_about" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/library_user_about_wrapper" style="@style/text_multiline" />
+        <com.pinterest.activity.commerce.view.ShopPinsFromButton android:id="@id/shop_more_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/library_margin_large" android:layout_below="@id/library_header_user_about" style="@style/button_shop_pins" />
+        <com.pinterest.ui.imageview.SquareImageView android:id="@id/library_header_profile_photo" android:layout_width="@dimen/library_user_thumbnail" android:layout_height="wrap_content" android:layout_marginTop="@dimen/library_margin_med" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View style="@style/list_cell_divider" />
+</LinearLayout>

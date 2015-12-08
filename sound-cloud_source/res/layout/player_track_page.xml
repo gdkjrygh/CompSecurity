@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.soundcloud.android.playback.ui.view.PlayerTrackArtworkView android:id="@id/track_page_artwork" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/player_gradient" />
+    <include layout="@layout/player_expanded_close_control" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_above="@id/player_bottom_close" android:layout_alignParentTop="true">
+        <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/waveform_ratio_top" />
+        <FrameLayout android:paddingTop="@dimen/timestamp_height" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/waveform_ratio_bottom">
+            <com.soundcloud.android.playback.ui.view.WaveformView android:id="@id/track_page_waveform" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/player_waveform_height" style="@style/Waveform" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.soundcloud.android.playback.ui.view.TimestampView android:id="@id/timestamp" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_above="@id/player_bottom_close" android:layout_alignParentTop="true" />
+    <LinearLayout android:gravity="right|center" android:id="@id/player_bottom_close" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/player_engagement" android:layout_alignParentBottom="true">
+        <android.support.v7.app.MediaRouteButton android:id="@id/media_route_button" style="@style/PlayerMediaRouteButton" />
+        <TextView android:id="@id/cast_device_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="-5.0dip" android:layout_marginRight="5.0dip" android:layout_weight="1.0" style="@style/PlayerCastDeviceName" />
+        <ImageButton android:id="@id/track_page_share" android:visibility="gone" style="@style/PlayerShareBase.PlayerShare" />
+        <ToggleButton android:id="@id/track_page_like" style="@style/PlayerLikeBase.PlayerLike" />
+        <Button android:id="@id/track_page_more" style="@style/PlayerMoreBase.PlayerMore" />
+    </LinearLayout>
+    <include layout="@layout/player_play_controls" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/player_title_top" android:layout_marginRight="16.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/profile_link" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.soundcloud.android.view.JaggedTextView android:id="@id/track_page_user" style="@style/PlayerUser" />
+            <com.soundcloud.android.view.JaggedTextView android:id="@id/track_page_title" android:layout_marginTop="4.0dip" style="@style/PlayerTitle" />
+        </LinearLayout>
+        <com.soundcloud.android.view.JaggedTextView android:id="@id/track_page_context" android:drawableLeft="@drawable/ic_stations_player_context" style="@style/PlayerContext" />
+    </LinearLayout>
+    <include layout="@layout/player_footer_controls" />
+    <ViewStub android:id="@id/leave_behind_stub" android:layout="@layout/ad_leave_behind" android:inflatedId="@id/leave_behind" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/player_bottom_close" android:layout_below="@id/player_close" />
+    <FrameLayout android:id="@id/interstitial_holder" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewStub android:id="@id/interstitial_stub" android:layout="@layout/ad_interstitial" android:inflatedId="@id/interstitial" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <ViewStub android:id="@id/track_page_error_stub" android:layout="@layout/track_page_error" android:inflatedId="@id/track_page_error" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

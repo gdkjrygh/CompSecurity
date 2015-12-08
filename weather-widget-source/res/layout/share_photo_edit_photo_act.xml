@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="top" android:background="@drawable/share_weather_top_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/back" android:layout_width="@dimen/title_height" android:layout_height="fill_parent" android:src="@drawable/title_back_selector" android:scaleType="centerInside" android:contentDescription="@null" />
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:gravity="left|center" android:layout_gravity="left|center" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/edit_photo_title" android:layout_weight="1.0" style="@style/title_style" />
+        <ImageView android:layout_gravity="right|center" android:id="@id/icon_edit_done" android:layout_width="@dimen/title_height" android:layout_height="fill_parent" android:src="@drawable/share_photo_eidt_photo_done_selector" android:scaleType="centerInside" android:contentDescription="@null" />
+    </LinearLayout>
+    <com.gtp.go.weather.sharephoto.takephoto.PreviewLayout android:id="@id/preview_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_margin="8.0dip" android:layout_weight="1.0">
+        <com.gtp.go.weather.sharephoto.takephoto.PhotoPreview android:layout_gravity="center" android:id="@id/photo_preview" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null" />
+        <com.gtp.go.weather.sharephoto.takephoto.WatermarkPreview android:id="@id/watermark_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.gtp.go.weather.sharephoto.takephoto.PreviewLayout>
+    <FrameLayout android:id="@id/panel_layout" android:layout_width="fill_parent" android:layout_height="92.0dip">
+        <include android:id="@id/filer_panel" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/share_photo_edit_photo_filter_panel" />
+        <ViewStub android:id="@id/watermark_panel_stub" android:layout="@layout/share_photo_edit_photo_watermark_panel" android:inflatedId="@id/watermark_panel" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/share_photo_eidt_photo_bottom_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <FrameLayout android:id="@id/icon_filter_photo" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="15.0dip" android:textColor="@color/share_photo_edit_photo_icon_text_selector" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/edit_photo_filter" android:drawableLeft="@drawable/share_photo_eidt_photo_filter_selector" android:drawablePadding="15.0dip" android:contentDescription="@null" />
+        </FrameLayout>
+        <View android:background="@drawable/share_photo_eidt_photo_vertical_divider" android:layout_width="2.0dip" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/icon_watermark" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="15.0dip" android:textColor="@color/share_photo_edit_photo_icon_text_selector" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/edit_photo_watermark" android:drawableLeft="@drawable/share_photo_eidt_photo_watermark_selector" android:drawablePadding="15.0dip" android:contentDescription="@null" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

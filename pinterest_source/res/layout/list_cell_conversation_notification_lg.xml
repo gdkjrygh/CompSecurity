@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.pinterest.activity.conversation.view.ConversationNotificationCell android:orientation="vertical" style="@style/fullline_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/unseen_mark" android:visibility="gone" android:layout_alignParentTop="true" style="@style/red_vertical" />
+    <LinearLayout android:orientation="horizontal" style="@style/fullline_view">
+        <com.pinterest.activity.conversation.view.GroupUserImageView android:id="@id/user_left_image" style="@style/list_cell_image_left_large" />
+        <LinearLayout android:orientation="vertical" android:layout_weight="1.0" style="@style/list_cell_padding_row_base">
+            <TextView android:textStyle="bold" android:ellipsize="end" android:id="@id/users_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+            <TextView android:ellipsize="end" android:id="@id/message" android:maxLines="@integer/conversation_message_max_lines" style="@style/notif_primary_text" />
+            <TextView android:id="@id/timestamp" style="@style/notif_comment_text" />
+        </LinearLayout>
+        <com.pinterest.ui.imageview.GrayWebImageView android:id="@id/sent_item_image" android:visibility="gone" style="@style/list_cell_image_right" />
+    </LinearLayout>
+    <View android:id="@id/bottom_divider" style="@style/list_cell_divider" />
+</com.pinterest.activity.conversation.view.ConversationNotificationCell>

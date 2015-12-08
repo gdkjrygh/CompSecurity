@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/add_friends_activity_layout" android:background="@android:color/white" android:clickable="true" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/top_panel" style="@style/TopPanel">
+        <com.snapchat.android.ui.BackButton android:textSize="@dimen/text_size_default" android:textStyle="normal" android:textColor="@color/purple" android:gravity="center_vertical" android:id="@id/friends_contacts_toggle_back_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/default_gap" android:layout_marginRight="@dimen/default_gap_half" android:text="@string/my_friends_title" />
+        <ImageView android:layout_gravity="right|center" android:id="@id/search_button" android:background="@drawable/action_bar_search_button_selector_purple" android:layout_width="@dimen/action_bar_button_size" android:layout_height="@dimen/action_bar_button_size" android:layout_marginRight="8.0dip" android:layout_marginEnd="8.0dip" />
+    </FrameLayout>
+    <RelativeLayout android:layout_gravity="center" android:id="@id/toggle_tabs" android:background="@android:color/white" android:clickable="true" style="@style/TopPanel">
+        <View android:id="@id/fake_view_for_half_width_tabs" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_centerInParent="true" />
+        <TextView android:textSize="@dimen/text_size_small" android:textStyle="bold" android:textColor="@color/purple" android:gravity="center" android:id="@id/friends_tab" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/friends" android:layout_toLeftOf="@id/fake_view_for_half_width_tabs" android:layout_alignParentLeft="true" android:textAllCaps="true" />
+        <View android:background="@color/divider_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+        <View android:id="@id/friends_tab_indicator" android:background="@color/purple" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_toLeftOf="@id/fake_view_for_half_width_tabs" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="@dimen/text_size_small" android:textStyle="bold" android:textColor="@color/purple" android:gravity="center" android:id="@id/contacts_tab" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/contacts" android:layout_toRightOf="@id/fake_view_for_half_width_tabs" android:layout_alignParentRight="true" android:textAllCaps="true" />
+        <View android:id="@id/contacts_tab_indicator" android:background="@color/purple" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_toRightOf="@id/fake_view_for_half_width_tabs" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager android:id="@id/friend_toggle_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:id="@id/native_map" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ViewStub android:id="@id/map_fullscreen_wv" android:layout="@layout/maps_loader_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:textSize="10.0dip" android:id="@id/canada_branding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="52.0dip" android:layout_marginBottom="16.0dip" android:text="@string/CanadaRadarDataByEC_UC" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <com.amobee.adsdk.AmobeeAdPlaceholder android:gravity="center_horizontal" android:id="@id/adView_AMOBEE" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <include android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/map_key" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/load_progressbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

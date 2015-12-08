@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:paddingTop="@dimen/size_1x" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/favorites_empty_avatar" android:background="@drawable/light_fog_oval" android:layout_width="@dimen/skype_avatar_large" android:layout_height="@dimen/skype_avatar_large" android:layout_centerHorizontal="true">
+        <com.skype.android.widget.SymbolView android:textSize="@dimen/skype_avatar_large" android:textColor="@color/white" android:layout_gravity="center" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/link_favorites_add" app:symbol_code="Favourite" />
+    </FrameLayout>
+    <TextView android:textColor="@color/skype_blue" android:gravity="center" android:id="@id/favorite_full_name_text" android:paddingLeft="@dimen/padding1b" android:paddingRight="@dimen/padding1b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/header_add_favorites" android:singleLine="true" android:layout_below="@id/favorites_empty_avatar" android:layout_alignLeft="@id/favorites_empty_avatar" android:layout_alignRight="@id/favorites_empty_avatar" style="@style/PeopleAvatarFullName" />
+</RelativeLayout>

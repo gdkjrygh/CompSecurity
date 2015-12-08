@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/header" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Spinner android:id="@id/search_type" android:paddingLeft="@dimen/list_item_padding" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_alignParentLeft="true" style="@style/DropdownSpinner" />
+        <Spinner android:id="@id/time_filter" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_toRightOf="@id/search_type" android:layout_alignBaseline="@id/search_type" style="@style/DropdownSpinner" />
+    </RelativeLayout>
+    <com.google.android.apps.youtube.app.ui.LoadingFrameLayout android:id="@id/loading_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/header">
+        <include android:id="@id/results" layout="@layout/section_list" />
+    </com.google.android.apps.youtube.app.ui.LoadingFrameLayout>
+    <View android:background="@drawable/channel_header_shadow_repeat" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_below="@id/header" />
+</RelativeLayout>

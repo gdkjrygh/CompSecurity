@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.walmart.android.ui.SafeScrollView android:scrollbarStyle="outsideOverlay" android:id="@id/scroll_view" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/settings_notifications_title" style="@style/Text.Header" />
+        <View android:background="@drawable/grey_divider" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="5.0dip" android:layout_marginBottom="10.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/promotions" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notification_settings_promotions_title" style="@style/Text.SubHeader" />
+                <TextView android:textColor="@color/subheader_gray" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notification_settings_promotions_subtitle" style="@style/Text.Caption" />
+            </LinearLayout>
+            <CheckBox android:layout_gravity="center_vertical" android:id="@id/checkbox" android:duplicateParentState="true" android:layout_marginLeft="10.0dip" style="@style/CheckboxNoText" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/store_features" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notification_settings_store_features_title" style="@style/Text.SubHeader" />
+                <TextView android:textColor="@color/subheader_gray" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notification_settings_store_features_subtitle" style="@style/Text.Caption" />
+            </LinearLayout>
+            <CheckBox android:layout_gravity="center_vertical" android:id="@id/checkbox" android:duplicateParentState="true" android:layout_marginLeft="10.0dip" style="@style/CheckboxNoText" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/ereceipts" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notification_settings_ereceipts_title" style="@style/Text.SubHeader" />
+                <TextView android:textColor="@color/subheader_gray" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notification_settings_ereceipts_subtitle" style="@style/Text.Caption" />
+            </LinearLayout>
+            <CheckBox android:layout_gravity="center_vertical" android:id="@id/checkbox" android:duplicateParentState="true" android:layout_marginLeft="10.0dip" style="@style/CheckboxNoText" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/saver" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textColor="@color/subheader_gray" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notification_settings_saver_subtitle" style="@style/Text.Caption" />
+            </LinearLayout>
+            <CheckBox android:layout_gravity="center_vertical" android:id="@id/checkbox" android:duplicateParentState="true" android:layout_marginLeft="10.0dip" style="@style/CheckboxNoText" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/vudu" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notification_settings_vudu_title" style="@style/Text.SubHeader" />
+                <TextView android:textColor="@color/subheader_gray" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notification_settings_vudu_subtitle" style="@style/Text.Caption" />
+            </LinearLayout>
+            <CheckBox android:layout_gravity="center_vertical" android:id="@id/checkbox" android:duplicateParentState="true" android:layout_marginLeft="10.0dip" style="@style/CheckboxNoText" />
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/settings_search_title" style="@style/Text.Header" />
+        <View android:background="@drawable/grey_divider" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="5.0dip" android:layout_marginBottom="20.0dip" />
+        <Button android:layout_gravity="center_horizontal" android:id="@id/clear_search_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/settings_search_subtitle" style="@style/HollowButton" />
+    </LinearLayout>
+</com.walmart.android.ui.SafeScrollView>

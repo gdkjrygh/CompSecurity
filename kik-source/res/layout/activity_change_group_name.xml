@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/talk_to_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/back_button_container" layout="@layout/kik_back_button" />
+    <ImageView android:id="@id/confirm_name_button" android:background="@xml/topbar_button_selector" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="56.0dip" android:layout_height="@dimen/native_topbar_height" android:src="@drawable/done_grey" android:layout_alignParentRight="true" />
+    <FrameLayout android:id="@id/topbar" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/native_topbar_height" android:layout_toLeftOf="@id/confirm_name_button" android:layout_toRightOf="@id/back_button_container" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/topbar">
+        <kik.android.widget.RobotoEditText android:textSize="16.0dip" android:id="@id/new_groupname_field" android:background="@drawable/textbox_full" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/username_textview_height" android:layout_marginLeft="-4.0dip" android:layout_marginTop="48.0dip" android:layout_marginRight="-4.0dip" android:hint="@string/group_name_hint" android:singleLine="true" android:maxLength="100" android:inputType="textCapSentences" android:imeOptions="actionGo" />
+    </LinearLayout>
+    <FrameLayout android:background="@drawable/nav_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/back_button_container" />
+</RelativeLayout>

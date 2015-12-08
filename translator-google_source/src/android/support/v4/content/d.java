@@ -1,0 +1,16 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package android.support.v4.content;
+
+import android.content.ContentResolver;
+import android.database.Cursor;
+import android.net.Uri;
+import android.support.v4.os.a;
+
+interface d
+{
+
+    public abstract Cursor a(ContentResolver contentresolver, Uri uri, String as[], String s, String as1[], String s1, a a1);
+}

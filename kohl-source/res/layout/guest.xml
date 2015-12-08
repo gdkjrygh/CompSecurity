@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="13.0sp" android:textColor="@color/account_text_color" android:id="@id/id_guest_generalInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:text="@string/guest_info" android:lineSpacingExtra="1.5dip" />
+        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textColor="@color/red" android:id="@id/id_guest_errorText" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="12.0sp" android:textColor="@color/edit_text_title_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="1.0dip" android:text="@string/order_numer" />
+        <EditText android:id="@id/id_guest_orderNumber" android:layout_height="43.0dip" android:hint="@string/order_numer" android:maxLength="40" android:inputType="text" style="@style/account_edit_text_style" />
+        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:id="@id/id_guest_orderNumberTextError" android:visibility="gone" style="@style/error_text_view_style" />
+        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="12.0sp" android:textColor="@color/edit_text_title_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="1.0dip" android:text="@string/billing_zip_code" />
+        <EditText android:id="@id/id_guest_billingZipCodeEditText" android:layout_height="43.0dip" android:hint="@string/billing_zip_code" android:ems="10" android:maxLength="5" android:inputType="number" style="@style/account_edit_text_style" />
+        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:id="@id/id_guest_billingZipCodeTextError" android:visibility="gone" style="@style/error_text_view_style" />
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="21.0dip">
+            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldButton android:textSize="12.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/id_guest_continueButton" android:background="@drawable/btn_default_green_selector" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/continu" android:textAllCaps="true" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

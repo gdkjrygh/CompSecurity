@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/library_create_board_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/library_margin_column">
+        <com.pinterest.ui.text.IconView android:id="@id/board_add_iv" android:visibility="visible" android:layout_height="fill_parent" android:layout_marginRight="@dimen/library_margin_small" android:src="@drawable/ic_library_board_add" style="@style/library_board_title_icon" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/library_margin_small" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/text_count_large" android:textStyle="bold" android:textColor="@color/gray" android:id="@id/create_board_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/library_create_board" />
+            <TextView android:textSize="@dimen/text_caption" android:textStyle="bold" android:textColor="@color/gray" android:id="@id/create_board_subtext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/library_create_board_subtext" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/text_caption" android:textStyle="bold" android:textColor="@color/gray" android:id="@id/library_empty_state_pins" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/library_margin_column" android:text="@string/library_empty_pins_message" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pinterest.activity.library.view.LibrarySectionGridView android:id="@id/section_grid_vw" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/library_board_gradient" android:scaleType="fitXY" android:layout_alignBottom="@id/section_grid_vw" />
+    </RelativeLayout>
+</LinearLayout>

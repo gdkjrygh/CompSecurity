@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/person_cell" android:paddingLeft="@dimen/margin" android:paddingTop="@dimen/search_typeahead_cell_padding" android:paddingRight="@dimen/margin" android:paddingBottom="@dimen/search_typeahead_cell_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pinterest.ui.text.IconView android:layout_gravity="center_vertical" android:id="@id/icon_image" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginTop="2.0dip" android:src="@drawable/ic_search" />
+    <RelativeLayout android:id="@id/image_wrapper_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/list_cell_text_image_gap">
+        <com.pinterest.ui.imageview.GrayWebImageView android:id="@id/cell_image" style="@style/thumbnail_image" />
+        <ImageView android:id="@id/overlay_image" android:src="@drawable/board_rep_divide" style="@style/thumbnail_image" />
+    </RelativeLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.pinterest.ui.text.PTextView android:textSize="@dimen/search_typeahead_text_size" android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:id="@id/cell_title" android:includeFontPadding="false" android:drawablePadding="5.0dip" style="@style/list_cell_text" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/layout_desc" style="@style/wrap_view">
+            <TextView android:textSize="@dimen/text_caption" android:textColor="@color/gray_dark" android:layout_gravity="center_vertical" android:id="@id/cell_desc" android:layout_marginRight="@dimen/search_token_spacing_view_width" style="@style/text_subtitle" />
+            <TextView android:textSize="@dimen/text_caption" android:textColor="@color/gray_dark" android:layout_gravity="center_vertical" android:id="@id/cell_desc_2" android:drawableLeft="@drawable/ic_bullet_divider" android:drawablePadding="@dimen/search_token_spacing_view_width" style="@style/text_subtitle" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

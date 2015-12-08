@@ -1,0 +1,18 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package org.apache.commons.collections4;
+
+import java.util.Iterator;
+
+public interface MapIterator
+    extends Iterator
+{
+
+    public abstract Object getValue();
+
+    public abstract boolean hasNext();
+
+    public abstract Object next();
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MetaFilter for calculating sharpness score of an image.
+     Takes in a colored image and outputs a score. -->
+<graph>
+    <!-- Packages -->
+    <import package="androidx.media.filterpacks.base"/>
+    <import package="androidx.media.filterpacks.histogram"/>
+    <import package="androidx.media.filterpacks.transform"/>
+
+    <!-- Filters -->
+    <filter class="GraphInputSource" name="image"/>
+    <!--  Get the Quad over which the sharpness needs to be calculated. -->
+    <filter class="GraphInputSource" name="elem"/>
+
+    <filter class="CropFilter" name="faceCrop">
+        <input name="outputWidth" intValue="64"/>
+        <input name="outputHeight" intValue="64"/>
+        <input name="useMipmaps" booleanValue="false"/>
+    </filter>
+
+    <filter class="GrayHistogramFilter" name="extractHist"/>
+    <filter class="UniformHistogramSource" name="targetHist"/>
+    <filter class="CompareHistogramFilter" name="compareHists"/>
+
+    <filter class="GraphOutputTarget" name="score"/>
+
+    <!-- Connections -->
+    <connect sourceFilter="image" sourcePort="frame"
+             targetFilter="faceCrop" targetPort="image"/>
+
+    <connect sourceFilter="elem" sourcePort="frame"
+             targetFilter="faceCrop" targetPort="cropRect"/>
+
+    <connect sourceFilter="faceCrop" sourcePort="image"
+             targetFilter="extractHist" targetPort="image"/>
+
+    <connect sourceFilter="extractHist" sourcePort="histogram"
+             targetFilter="compareHists" targetPort="histogram2"/>
+
+    <connect sourceFilter="targetHist" sourcePort="histogram"
+             targetFilter="compareHists" targetPort="histogram1"/>
+
+    <connect sourceFilter="compareHists" sourcePort="value"
+             targetFilter="score" targetPort="frame"/>
+
+</graph>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="225.0dip">
+            <ImageView android:id="@id/photo_image_view" android:layout_width="fill_parent" android:layout_height="215.0dip" android:src="@color/grey_2" android:scaleType="fitStart" android:adjustViewBounds="true" />
+            <View android:id="@id/photo_shadow" android:background="@drawable/ic_gradient" android:layout_width="fill_parent" android:layout_height="215.0dip" />
+            <View android:id="@id/profile_false_bottom" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="11.0dip" android:layout_alignParentBottom="true" />
+            <TextView android:id="@id/car_make_model" android:paddingLeft="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/license_plate" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" style="@style/ProfileCarInfo" />
+            <TextView android:id="@id/license_plate" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/ProfileCarLicense" />
+        </RelativeLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span12">
+            <com.makeramen.roundedimageview.RoundedImageView android:layout_gravity="center" android:background="@color/white_alpha_0" android:layout_width="130.0dip" android:layout_height="130.0dip" android:src="@color/white" app:riv_border_width="1.0dip" app:riv_border_color="@color/grey_3" app:riv_oval="true" />
+            <com.makeramen.roundedimageview.RoundedImageView android:layout_gravity="center" android:id="@id/driver_photo" android:background="@color/white_alpha_0" android:layout_width="122.0dip" android:layout_height="122.0dip" android:src="@drawable/ic_silhouette_square" app:riv_oval="true" />
+        </FrameLayout>
+        <TextView android:gravity="center" android:layout_gravity="bottom" android:id="@id/name_text_view" android:layout_width="fill_parent" android:layout_height="@dimen/span36" android:layout_marginTop="@dimen/span8" style="@style/ProfilePrimaryText" />
+    </LinearLayout>
+</merge>

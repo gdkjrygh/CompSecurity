@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/transparent" android:paddingLeft="@dimen/dialog_modal_info_padding_left" android:paddingTop="@dimen/dialog_modal_info_padding_top" android:paddingRight="@dimen/dialog_modal_info_padding_right" android:paddingBottom="@dimen/dialog_modal_info_padding_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/modal_dialog_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="12.0dip">
+        <TextView android:id="@id/info_title" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/info" style="@style/WFHeadline" />
+        <ScrollView android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_below="@id/info_title">
+            <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+                <LinearLayout android:orientation="horizontal" android:id="@id/row_app_version" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="15.0sp" android:id="@id/version_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/app_version_tablet" style="@style/WFText" />
+                    <TextView android:textSize="15.0sp" android:id="@id/version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" style="@style/WFText" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/row_build_date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/row_app_version">
+                    <TextView android:textSize="15.0sp" android:id="@id/build_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/build_date_tablet" style="@style/WFText" />
+                    <TextView android:textSize="15.0sp" android:id="@id/build" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" style="@style/WFText" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/row_publish_date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_below="@id/row_build_date">
+                    <TextView android:textSize="15.0sp" android:id="@id/release_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/release_date_tablet" style="@style/WFText" />
+                    <TextView android:textSize="15.0sp" android:id="@id/release" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" style="@style/WFText" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/row_company" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/row_publish_date">
+                    <TextView android:textSize="15.0sp" android:id="@id/copyright" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" style="@style/WFText" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/row_rights" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_below="@id/row_company">
+                    <TextView android:textSize="15.0sp" android:id="@id/rights" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rights" style="@style/WFText" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/row_rights">
+                    <TextView android:textSize="15.0sp" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/legal_notices" android:onClick="showLegalNotices" style="@style/TabletInfoLink" />
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close_button" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:onClick="closeViewAsDialog" />
+</RelativeLayout>

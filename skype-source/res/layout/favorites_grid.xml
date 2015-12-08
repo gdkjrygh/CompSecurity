@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:paddingLeft="@dimen/size_1_5x" android:paddingRight="@dimen/size_1_5x" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.skype.android.widget.recycler.TwoWayRecyclerView android:id="@id/list" android:paddingTop="@dimen/size_1_5x" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@color/main_light_color" android:stretchMode="spacingWidth" android:numColumns="3" android:maxRows="3" app:scrollDirPortrait="vertical" app:scrollDirLandscape="vertical" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/favorites_empty_avatar" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" android:contentDescription="@string/link_favorites_add">
+        <com.skype.android.widget.SymbolView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-30.0dip" app:symbol_code="Favourite" style="@style/FavoriteEmptyViewSymbol" />
+        <TextView android:textSize="@dimen/font_small_medium" android:textColor="@color/skype_hint_color" android:id="@id/favorites_empty_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_favorites_empty" />
+        <TextView android:textSize="@dimen/font_small_medium" android:textColor="@color/skype_color_blue_link" android:id="@id/favorites_add2" android:paddingTop="@dimen/size_1_5x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/link_favorites_add" />
+    </LinearLayout>
+</RelativeLayout>

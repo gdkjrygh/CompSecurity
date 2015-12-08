@@ -1,0 +1,154 @@
+<div class="panel" id="item_{{ comic.comic_id }}">
+
+	{{#ifIAmAuthor comic}}
+		<a ng-click="toggleDeleteModal()" class="trash">
+			<i class="icon-trash icon-large"></i>
+		</a>
+	{{/ifIAmAuthor}}
+
+	<div class="author">
+
+		{{#isLinkable comic.author}}
+			<a>
+		{{/isLinkable}}
+
+			<div class="profile"
+				ng-click="view_user(comic.author.fb_id)"
+				id="author_{{comic.comic_id}}"
+				queued="{{ comic.author.thumb }}"
+				q-fail="profile-fail.png">
+			</div>
+
+		{{#isLinkable comic.author}}
+			</a>
+		{{/isLinkable}}
+
+		<p> <span>
+
+			{{#isLinkable comic.author}}
+				{{ displayName comic.author }}
+			{{/isLinkable}}
+
+			bitstripped
+
+			{{#each comic.costars}}
+				{{#isLinkable this}}
+					{{ displayName2 this ../../comic.author}}
+				{{/isLinkable}}
+				{{#unless @last}} and {{/unless}}
+			{{/each}}
+
+			</span>
+
+			<span class="time"><i class="icon-clock icon-large"></i>
+			{{ timestamp comic.timestamp }} ago</span>
+		</p>
+	</div>
+
+	<div class="magic-feed-img" id="comic_{{comic.comic_id}}"
+		 ng-click="view_comic(comic.comic_id)"
+		 queued="{{ comic.comic_url }}"
+		 q-fail="comic-fail.png">
+	</div>
+
+	<div id="comic_actions">
+		{{#if comic.comic_caption }}
+			<p class="feed-title caption">{{ comic.comic_caption }}</p>
+		{{/if}}
+
+		<ul class="action-bar">
+			<li class="like">
+				{{#if comic.did_you_like}}
+					<span class="liked" ng-click="toggleLike(comic)"><i class="icon-heart"></i> Liked</span>
+				{{ else }}
+					 <span ng-click="toggleLike(comic)"><i class="icon-heart"></i> Like</span>
+				{{/if}}
+			</li>
+			<li class="comment">
+				<span ng-click="comment(comic.comic_id)"><i class="icon-comment"></i> Comment</span>
+			</li>
+			<!--<li class="reply">
+				<i class="icon-reply"></i> Reply
+			</li>-->
+			<li class="share" ng-click="native_share(comic.comic_url, comic.comic_caption, $event)">
+				<i class="icon-share"></i>
+			</li>
+		</ul>
+
+
+		<div class="action-items">
+			<div>
+				<div class="action-icon">
+					<i class="icon-heart"></i>
+				</div>
+				<div class="comment-text">
+					{{#if manyLikers ~}}
+						<a ng-click="viewAllLikers()">
+							{{ numberOfLikers }} people liked this comic
+						</a>
+					{{else ~}}
+						{{#each likers ~}}
+							{{#isLinkable this ~}}
+								{{ displayName this ~}}
+							{{/isLinkable ~}}
+							{{#unless @last ~}}, {{/unless~}}
+						{{/each}}
+
+						{{#if noLikers}}
+							<a class="first-to" ng-click="toggleLike(comic)">Be the first to like this</a>
+						{{/if}}
+					{{/if}}
+				</div>
+			</div>
+
+			{{#if noComments}}
+				<div>
+					<i class="icon-comment icon-fixed-width"></i>
+					<a class="first-to" ng-click="comment()">Be the first to comment</a>
+				</div>
+
+			{{else}}
+				<div>
+					{{#if manyComments}}
+						<i class="icon-comment icon-fixed-width"></i>
+						<a class="all" ng-click="showAllComments()">View all {{ numberOfComments }} comments</a>
+					{{/if}}
+
+					{{#each lastComments}}
+					<div>
+						<div class="action-icon">
+							{{#if @first }}
+								<i class="{{#unless ../../manyComments}}icon-comment{{/unless}} icon-fixed-width"></i>
+							{{else}}
+								<i class="icon-fixed-width icon-blank"></i>
+							{{/if}}
+						</div>
+
+						<div class="comment-text">
+
+							{{#isLinkable this.user}}
+								{{~ displayName this.user ~}}
+							{{/isLinkable}}
+
+							<span>{{ this.text }}</span>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			{{/if}}
+		</div>
+	</div>
+
+	{{#if showDeleteModal}}
+		<div>
+			<div class="overlay"></div>
+			<div class="modal">
+				<a ng-click="deleteComic(comic)">Delete comic</a>
+				<a ng-click="toggleDeleteModal()">Cancel</a>
+			</div>
+		</div>
+	{{/if}}
+</div>
+
+
+

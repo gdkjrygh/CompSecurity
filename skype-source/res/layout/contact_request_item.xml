@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingBottom="@dimen/chat_item_top_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.skype.android.widget.PathClippedImageView android:id="@id/contact_request_icon" android:layout_width="@dimen/avatar_size_small" android:layout_height="@dimen/avatar_size_small" android:scaleType="centerCrop" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/contact_request_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/chat_contact_request" android:layout_alignRight="@id/contact_request_icon" android:layout_alignBottom="@id/contact_request_icon" />
+    <TextView android:gravity="center" android:id="@id/contact_request_title" android:paddingTop="@dimen/contact_request_title_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/contact_request_icon" android:layout_centerHorizontal="true" style="@style/ChatMessage" />
+    <TextView android:gravity="center" android:id="@id/contact_request_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/contact_request_title" android:layout_centerHorizontal="true" style="@style/ChatMessage" />
+    <include android:id="@id/contact_request_button_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/chat_margins" android:layout_marginTop="@dimen/chat_item_top_padding" android:layout_marginRight="@dimen/chat_margins" android:layout_below="@id/contact_request_message" android:layout_centerHorizontal="true" layout="@layout/contact_request_button_container" />
+</RelativeLayout>

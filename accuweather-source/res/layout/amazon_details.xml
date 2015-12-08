@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/line_separator" android:background="@android:color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="@color/darker_blue" android:id="@id/amazon_weather_statement" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/be_prepared_for_your_weather" />
+    <TextView android:textSize="14.0dip" android:textColor="#ff595959" android:id="@id/tap_to_view_product_details" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginBottom="16.0dip" android:text="@string/tap_to_view_product_details" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v4.view.ViewPager android:id="@id/amazon_view_pager" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="160.0dip" />
+        <com.viewpagerindicator.CirclePageIndicator android:layout_gravity="bottom" android:id="@id/indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginBottom="10.0dip" />
+    </LinearLayout>
+</LinearLayout>

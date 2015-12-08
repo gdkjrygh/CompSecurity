@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.go.weatherex.home.view.DashedLinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/tab_days_border" android:paddingRight="@dimen/tab_days_border" android:layout_width="fill_parent" android:layout_height="@dimen/forecast_day_list_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0">
+        <TextView android:textSize="12.0sp" android:textColor="#ff535353" android:id="@id/date" android:background="#80ffffff" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentTop="true" />
+        <TextView android:textSize="@dimen/tab_hourly_list_hour" android:textColor="#ffffffff" android:id="@id/hour" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0">
+        <ImageView android:id="@id/icon" android:layout_width="@dimen/tab_hourly_list_icon" android:layout_height="@dimen/tab_hourly_list_icon" android:src="@drawable/gw_weather_forecast_item_unknown" android:contentDescription="@null" />
+        <TextView android:textSize="@dimen/tab_hourly_list_desp" android:textColor="#ffffffff" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:maxLines="2" android:layout_marginStart="8.0dip" android:layout_marginEnd="0.0dip" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/tab_hourly_list_temp" android:textColor="#ffffffff" android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/temp" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+</com.go.weatherex.home.view.DashedLinearLayout>

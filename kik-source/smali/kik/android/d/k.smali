@@ -1,0 +1,155 @@
+.class public final Lkik/android/d/k;
+.super Lkik/android/d/b;
+.source "SourceFile"
+
+
+# instance fields
+.field a:Z
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Long;[Ljava/lang/Long;Ljava/lang/Runnable;Lkik/android/util/ar;)V
+    .locals 1
+
+    .prologue
+    .line 15
+    invoke-direct/range {p0 .. p6}, Lkik/android/d/b;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;[Ljava/lang/Object;Ljava/lang/Runnable;Lkik/android/util/ar;)V
+
+    .line 16
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lkik/android/d/k;->a:Z
+
+    .line 17
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()I
+    .locals 1
+
+    .prologue
+    .line 22
+    sget v0, Lkik/android/d/b$a;->c:I
+
+    return v0
+.end method
+
+.method public final a(Lkik/android/util/ar;)V
+    .locals 6
+
+    .prologue
+    .line 37
+    iget-boolean v0, p0, Lkik/android/d/k;->a:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lkik/android/d/k;->c()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkik/android/util/DeviceUtils;->d(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 43
+    :goto_0
+    return-void
+
+    .line 40
+    :cond_0
+    const-string v0, "KikConfigurations"
+
+    invoke-interface {p1, v0}, Lkik/android/util/ar;->a(Ljava/lang/String;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    .line 41
+    invoke-virtual {p0}, Lkik/android/d/k;->d()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lkik/android/d/k;->b()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    invoke-interface {v1, v2, v4, v5}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    .line 42
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    goto :goto_0
+.end method
+
+.method protected final synthetic b(Lkik/android/util/ar;)Ljava/lang/Object;
+    .locals 6
+
+    .prologue
+    .line 9
+    iget-boolean v0, p0, Lkik/android/d/k;->a:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lkik/android/d/k;->c()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkik/android/util/DeviceUtils;->d(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lkik/android/d/k;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Long;
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const-string v0, "KikConfigurations"
+
+    invoke-interface {p1, v0}, Lkik/android/util/ar;->a(Ljava/lang/String;)Landroid/content/SharedPreferences;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lkik/android/d/k;->d()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lkik/android/d/k;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    invoke-interface {v1, v2, v4, v5}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method

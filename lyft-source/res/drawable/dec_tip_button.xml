@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:drawable="@drawable/ic_tip_button_minus_normal" />
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/grey_1" />
+                </shape>
+            </item>
+            <item>
+                <bitmap android:src="@drawable/ic_tip_button_minus_normal" />
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_focused="true" android:drawable="@drawable/ic_tip_button_minus_normal" />
+    <item android:drawable="@drawable/ic_tip_button_minus_normal" />
+</selector>

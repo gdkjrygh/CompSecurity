@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/splashscreen" android:background="@color/skype_blue" android:paddingTop="@dimen/sign_in_header_logo_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/sign_in_header" layout="@layout/sign_in_header" />
+    <ImageView android:id="@id/logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/splash_logo_animator" android:scaleType="center" android:layout_centerInParent="true" android:contentDescription="@string/acc_splash_screen_animation" />
+    <ProgressBar android:id="@id/splash_progressbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding3" android:layout_below="@id/logo" android:layout_centerHorizontal="true" style="@style/SplashIndeterminateProgress" />
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/roidapp_imagelib_camera_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.opengl.GLSurfaceView android:id="@id/roidapp_imagelib_camera_layout_surfaceView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <TextView android:textSize="50.0sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/textFilter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/focusHint" android:background="@drawable/roidapp_imagelib_camera_autofocus" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <RelativeLayout android:id="@id/roidapp_imagelib_camera_layout_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <FrameLayout android:id="@id/roidapp_imagelib_camera_layout_flash" android:layout_width="57.0dip" android:layout_height="57.0dip" android:layout_alignParentLeft="true">
+            <ImageView android:layout_gravity="center" android:id="@id/roidapp_imagelib_camera_button_flash" android:background="@drawable/roidapp_imagelib_icon_flashoff" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/roidapp_imagelib_camera_layout_switch" android:layout_width="57.0dip" android:layout_height="57.0dip" android:layout_alignParentRight="true">
+            <ImageView android:layout_gravity="center" android:id="@id/button_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/roidapp_imagelib_camera_switch" />
+        </FrameLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/roidapp_imagelib_camera_layout_zoom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:layout_below="@id/roidapp_imagelib_camera_layout_top">
+        <SeekBar android:id="@id/roidapp_imagelib_camera_zoom_bar" android:layout_width="@dimen/camera_seekbar_width" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:max="100" android:progressDrawable="@drawable/roidapp_imagelib_camera_border_seek_bar" android:thumb="@drawable/roidapp_imagelib_camera_seekbar" android:layout_centerInParent="true" style="@style/roidapp_imagelib_seekbar_style" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/roidapp_imagelib_camera_reduce" android:layout_toLeftOf="@id/roidapp_imagelib_camera_zoom_bar" android:layout_centerInParent="true" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/roidapp_imagelib_camera_enlarge" android:layout_toRightOf="@id/roidapp_imagelib_camera_zoom_bar" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/roidapp_imagelib_camera_layout_bottom" android:background="@color/camera_bottom_bg" android:layout_width="fill_parent" android:layout_height="@dimen/camera_filter_list_height" android:layout_alignParentBottom="true">
+        <FrameLayout android:id="@id/roidapp_imagelib_layout_camera_press" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="80.0dip" android:minHeight="80.0dip" android:layout_centerInParent="true">
+            <ImageView android:layout_gravity="center" android:id="@id/roidapp_imagelib_button_snap" android:background="@drawable/roidapp_imagelib_btn_camera_press" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/roidapp_imagelib_camera_layout_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/camera_margin_18" android:minWidth="48.0dip" android:minHeight="48.0dip" android:layout_alignParentLeft="true" android:layout_centerInParent="true">
+            <ImageView android:layout_gravity="center" android:id="@id/roidapp_imagelib_button_back" android:background="@drawable/icon_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/roidapp_imagelib_camera_layout_darkcorner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/camera_margin_10" android:minWidth="48.0dip" android:minHeight="48.0dip" android:layout_toRightOf="@id/roidapp_imagelib_camera_layout_back" android:layout_centerInParent="true">
+            <ImageView android:layout_gravity="center" android:id="@id/button_drakcorner" android:background="@drawable/roidapp_imagelib_camera_darkcorner" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/roidapp_imagelib_camera_layout_filter" android:background="@drawable/roidapp_imagelib_camera_btn_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/camera_margin_18" android:minWidth="48.0dip" android:minHeight="48.0dip" android:layout_alignParentRight="true" android:layout_centerInParent="true">
+            <CheckedTextView android:layout_gravity="center" android:id="@id/button_filter" android:background="@drawable/roidapp_imagelib_camera_filter" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/random_btn_layout" android:background="@drawable/roidapp_imagelib_camera_btn_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/camera_margin_10" android:minWidth="48.0dip" android:minHeight="48.0dip" android:layout_toLeftOf="@id/roidapp_imagelib_camera_layout_filter" android:layout_centerVertical="true">
+            <ImageView android:layout_gravity="center" android:id="@id/random_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/roidapp_imagelib_shuffle" />
+        </FrameLayout>
+    </RelativeLayout>
+    <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/roidapp_imagelib_camera_text_tip" android:background="@color/gray_black_color" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginBottom="10.0dip" android:layout_above="@id/roidapp_imagelib_camera_alpha_bar" android:layout_centerHorizontal="true" />
+    <SeekBar android:id="@id/roidapp_imagelib_camera_alpha_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:max="100" android:progressDrawable="@drawable/roidapp_imagelib_border_seek_bar" android:thumb="@drawable/roidapp_imagelib_btn_seekbar" android:layout_above="@id/roidapp_imagelib_camera_layout_filter_list" android:layout_centerHorizontal="true" style="@style/roidapp_imagelib_seekbar_style" />
+    <FrameLayout android:layout_gravity="center" android:id="@id/roidapp_imagelib_camera_layout_filter_list" android:background="@color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/roidapp_imagelib_cb_left_panel" />
+    <RelativeLayout android:id="@id/roidapp_imagelib_cb_left_panel" android:background="@drawable/roidapp_imagelib_btn_adjust_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/roidapp_imagelib_btn_up" android:layout_width="wrap_content" android:layout_height="@dimen/filter_bottom_height" android:src="@drawable/folder_back_selector" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,74 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.skype.android.gen;
+
+import com.skype.Account;
+import com.skype.ObjectInterface;
+import com.skype.PROPKEY;
+import com.skype.android.event.EventBus;
+import com.skype.android.event.EventBusInstance;
+
+public class AccountListener
+    implements com.skype.Account.AccountIListener, com.skype.ObjectInterface.ObjectInterfaceIListener
+{
+    public static class OnEndpointsChanged
+    {
+
+        private Account _sender;
+
+        public Account getSender()
+        {
+            return _sender;
+        }
+
+        public OnEndpointsChanged(Account account)
+        {
+            _sender = account;
+        }
+    }
+
+    public static class OnPropertyChange
+    {
+
+        private PROPKEY _propKey;
+        private ObjectInterface _sender;
+
+        public PROPKEY getPropKey()
+        {
+            return _propKey;
+        }
+
+        public ObjectInterface getSender()
+        {
+            return _sender;
+        }
+
+        public OnPropertyChange(ObjectInterface objectinterface, PROPKEY propkey)
+        {
+            _sender = objectinterface;
+            _propKey = propkey;
+        }
+    }
+
+
+    EventBus eventBus;
+
+    public AccountListener()
+    {
+        eventBus = EventBusInstance.a();
+    }
+
+    public void onEndpointsChanged(Account account)
+    {
+        account = new OnEndpointsChanged(account);
+        eventBus.a(account);
+    }
+
+    public void onPropertyChange(ObjectInterface objectinterface, PROPKEY propkey)
+    {
+        objectinterface = new OnPropertyChange(objectinterface, propkey);
+        eventBus.a(objectinterface);
+    }
+}

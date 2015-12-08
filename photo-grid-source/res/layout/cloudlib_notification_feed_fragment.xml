@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scroll_view" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@id/feed_tittle_view" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="64.0dip">
+                    <com.roidapp.baselib.view.RoundImageView android:id="@id/feed_user_avatar" android:background="@drawable/cloudlib_round_bg40" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="16.0dip" android:layout_centerVertical="true" android:contentDescription="@null" />
+                    <TextView android:textSize="@dimen/sns_comment_textsize" android:textColor="@color/sns_time_textcolor" android:id="@id/feed_up_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/sns_username_textsize" android:textStyle="bold" android:textColor="@color/sns_username_textcolor" android:ellipsize="end" android:id="@id/feed_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:singleLine="true" android:layout_toLeftOf="@id/feed_up_time" android:layout_toRightOf="@id/feed_user_avatar" android:layout_centerVertical="true" />
+                    <View android:background="#ffc7c5b3" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/feed_image_thumbnail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:contentDescription="@null" />
+                    <ImageView android:id="@id/feed_image_play" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:contentDescription="@null" />
+                    <ProgressBar android:id="@id/feed_image_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:contentDescription="@null" />
+                </RelativeLayout>
+                <TextView android:textSize="16.0sp" android:textColor="#ff336699" android:id="@id/feed_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="16.0dip" />
+            </LinearLayout>
+            <View android:background="#ffc7c5b3" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                <RelativeLayout android:gravity="center" android:id="@id/feed_like_layout" android:background="@drawable/cloudlib_white_btn" android:clickable="true" android:layout_width="0.0dip" android:layout_height="36.0dip" android:layout_marginLeft="5.0dip" android:layout_weight="1.0">
+                    <TextView android:textSize="14.0sp" android:textColor="#ff4d4d4d" android:gravity="center" android:id="@id/feed_like_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="6.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    <ImageView android:id="@id/feed_like_image" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/cloudlib_icon_social_unlike" android:layout_toLeftOf="@id/feed_like_text" android:layout_centerVertical="true" android:contentDescription="@null" />
+                    <ProgressBar android:id="@id/feed_like_progress" android:padding="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/feed_like_text" android:layout_centerVertical="true" style="?android:attr/progressBarStyleSmall" />
+                </RelativeLayout>
+                <LinearLayout android:gravity="center" android:id="@id/feed_comment_layout" android:background="@drawable/cloudlib_white_btn" android:clickable="true" android:layout_width="0.0dip" android:layout_height="36.0dip" android:layout_weight="1.0">
+                    <TextView android:textSize="14.0sp" android:textColor="#ff4d4d4d" android:gravity="center" android:id="@id/feed_comment_num" android:layout_width="wrap_content" android:layout_height="fill_parent" android:drawableLeft="@drawable/cloudlib_icon_comment" android:drawablePadding="8.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:id="@id/feed_more_layout" android:background="@drawable/cloudlib_white_btn" android:clickable="true" android:layout_width="0.0dip" android:layout_height="36.0dip" android:layout_marginRight="5.0dip" android:layout_weight="1.0">
+                    <TextView android:textSize="14.0sp" android:textColor="#ff4d4d4d" android:gravity="center" android:id="@id/feed_more" android:layout_width="wrap_content" android:layout_height="fill_parent" android:drawableLeft="@drawable/cloudlib_icon_more" android:drawablePadding="8.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.roidapp.cloudlib.sns.basepost.PostCommentsTextView android:textSize="@dimen/sns_content_textsize" android:textColor="@color/sns_content_textcolor" android:id="@id/feed_comments_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+            <View android:background="#ffc7c5b3" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

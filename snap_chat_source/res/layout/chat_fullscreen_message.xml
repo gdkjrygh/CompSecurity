@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/chat_fullscreen_message_layout" android:clipChildren="false" android:clipToPadding="false" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/full_screen_view_background" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:id="@id/chat_message_scalable_media_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.snapchat.android.ui.ImageResourceView android:id="@id/chat_message_image_view" android:background="@color/chat_sending_failed_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerHorizontal="true" />
+        <com.snapchat.android.ui.ChatMediaFullScreenTextureVideoView android:id="@id/chat_message_video_view" android:background="@color/chat_sending_failed_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/chat_message_video_view_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" android:layout_centerHorizontal="true" />
+        <ProgressBar android:id="@id/chat_message_progress_bar" android:visibility="gone" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/chat_message_reload_view" android:visibility="gone" android:layout_width="@dimen/chat_media_retry_icon_size" android:layout_height="@dimen/chat_media_retry_icon_size" android:src="@drawable/retry_white" android:layout_centerInParent="true" />
+        <FrameLayout android:id="@id/chat_message_video_reload_view" android:background="@color/black_fifty_opacity" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/chat_media_retry_icon_size" android:layout_height="@dimen/chat_media_retry_icon_size" android:src="@drawable/retry_white" />
+        </FrameLayout>
+        <RelativeLayout android:id="@id/chat_discover_bar_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:stretchColumns="*" android:layout_alignParentTop="true" android:hardwareAccelerated="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/emoji_header" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_with_status_bar_height" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <android.support.v4.view.ViewPager android:id="@id/emoji_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" />
+        <View android:background="@drawable/emoji_bottom_gradient" android:layout_width="fill_parent" android:layout_height="96.0dip" android:layout_alignParentBottom="true" />
+        <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/emoji_picker_categories" android:paddingBottom="@dimen/default_gap" android:layout_width="fill_parent" android:layout_height="@dimen/ui_element_unit" android:stretchColumns="*" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

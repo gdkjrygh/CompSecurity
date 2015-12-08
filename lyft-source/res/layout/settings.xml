@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.settings.SettingsView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.controls.MenuButtonToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                <TextView android:textSize="18.0sp" android:gravity="center_vertical" android:id="@id/email_txt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:singleLine="true" android:includeFontPadding="false" android:drawableLeft="@drawable/ic_email" android:drawablePadding="16.0dip" style="@style/PrimaryText" />
+                <TextView android:textSize="18.0sp" android:gravity="center_vertical" android:id="@id/phone_txt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:singleLine="true" android:includeFontPadding="false" android:drawableLeft="@drawable/ic_phone_charcoal" android:drawablePadding="16.0dip" style="@style/PrimaryText" />
+            </LinearLayout>
+            <Button android:textSize="18.0sp" android:gravity="center_vertical" android:id="@id/edit_profile_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:text="@string/settings_edit_profile_label" android:singleLine="true" android:includeFontPadding="false" android:drawableLeft="@drawable/ic_profile" android:drawablePadding="16.0dip" style="@style/CellButton" />
+            <View android:id="@id/become_driver_splitter" android:layout_marginBottom="8.0dip" style="@style/SplitterMaterial" />
+            <Button android:id="@id/become_driver_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/settings_become_driver_label" android:drawableLeft="@drawable/ic_car" android:drawablePadding="16.0dip" style="@style/CellButton" />
+            <FrameLayout android:id="@id/navigation_settings_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:layout_gravity="left|center" android:id="@id/navigation_settings_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/settings_navigation_label" android:drawableLeft="@drawable/ic_navigation" android:drawablePadding="16.0dip" style="@style/CellButton" />
+                <TextView android:textSize="@dimen/normal_text" android:textStyle="italic" android:textColor="@color/charcoal_2" android:layout_gravity="right|center" android:id="@id/selected_navigation_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/car_settings_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/car_settings_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/settings_car_label" android:drawableLeft="@drawable/ic_car" android:drawablePadding="16.0dip" style="@style/CellButton" />
+                <TextView android:textSize="@dimen/normal_text" android:textColor="@color/red_1" android:layout_gravity="right|center" android:id="@id/car_status_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" />
+            </FrameLayout>
+            <Button android:id="@id/driver_license_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/settings_driver_license_label" android:drawableLeft="@drawable/ic_license" android:drawablePadding="16.0dip" style="@style/CellButton" />
+            <Button android:id="@id/driver_stats_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/settings_driver_stats_label" android:drawableLeft="@drawable/ic_stats" android:drawablePadding="16.0dip" style="@style/CellButton" />
+            <FrameLayout android:id="@id/driver_training_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/driver_training_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/settings_training_ride_label" android:drawableLeft="@drawable/ic_phone" android:drawablePadding="@dimen/span16" style="@style/CellButton" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="right|center" android:id="@id/new_item_hint" android:background="@drawable/btn_pink_rounded" android:paddingLeft="@dimen/span8" android:paddingTop="@dimen/span4" android:paddingRight="@dimen/span8" android:paddingBottom="@dimen/span4" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/span16" android:text="@string/overflow_menu_item_new_label" />
+            </FrameLayout>
+            <Button android:id="@id/driver_dashboard_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/settings_driver_dashboard_label" android:drawableLeft="@drawable/ic_odometer" android:drawablePadding="16.0dip" style="@style/CellButton" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/driver_shortcut_switcher_view" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="48.0dip">
+                <TextView android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/profile_driver_shortcut_label" android:drawableLeft="@drawable/ic_shortcut" android:drawablePadding="16.0dip" style="@style/CellButton" />
+                <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <me.lyft.android.controls.Toggle android:id="@id/driver_shortcut_switch" android:layout_width="50.0dip" android:layout_height="36.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+            </LinearLayout>
+            <View android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" style="@style/SplitterMaterial" />
+            <Button android:id="@id/work_perks_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/settings_work_label" android:drawableLeft="@drawable/ic_work" android:drawablePadding="16.0dip" style="@style/CellButton" />
+            <FrameLayout android:id="@id/services_settings_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:layout_gravity="left|center" android:id="@id/services_settings_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/settings_services_label" android:drawableLeft="@drawable/ic_services" android:drawablePadding="16.0dip" style="@style/CellButton" />
+                <TextView android:textSize="@dimen/normal_text" android:textStyle="italic" android:textColor="@color/charcoal_2" android:layout_gravity="right|center" android:id="@id/services_indicator_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" />
+            </FrameLayout>
+            <View android:id="@id/logout_splitter" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" style="@style/SplitterMaterial" />
+            <Button android:id="@id/logout_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/settings_logout_label" android:drawableLeft="@drawable/ic_logout" android:drawablePadding="16.0dip" style="@style/CellButton" />
+        </LinearLayout>
+    </ScrollView>
+</me.lyft.android.ui.settings.SettingsView>

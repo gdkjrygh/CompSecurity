@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.infrastructure.appboy.CustomAppboyInAppDialog style="@style/DialogContainerView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_height="fill_parent" style="@style/DialogWithCloseButtonView">
+        <RelativeLayout android:layout_gravity="center" android:id="@id/inapp_background" android:background="@color/blue_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/big_text_3" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/inapp_title" android:padding="@dimen/span24" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ImageView android:id="@id/inapp_image" android:layout_width="fill_parent" android:layout_height="110.0dip" android:layout_marginTop="@dimen/span12" android:layout_marginBottom="@dimen/span24" android:src="@drawable/img_balloon_large" android:layout_below="@id/inapp_title" />
+            <TextView android:textSize="@dimen/bt_default_text_size" android:textColor="@color/charcoal_2" android:id="@id/inapp_message" android:background="@color/white" android:padding="@dimen/span24" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/inapp_image" />
+            <LinearLayout android:orientation="vertical" android:id="@id/button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/horizontal_divider" android:layout_below="@id/inapp_message" android:showDividers="middle|beginning" style="@style/DialogButtonPrimary" />
+        </RelativeLayout>
+    </FrameLayout>
+    <ImageView android:id="@id/cancel_button" style="@style/CloseDialogButton" />
+</me.lyft.android.infrastructure.appboy.CustomAppboyInAppDialog>

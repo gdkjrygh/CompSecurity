@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/match_parent" android:layout_centerInParent="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pinterest.ui.layout.MaxHeightLinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/signup_ll" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_marginBottom="@dimen/margin" android:src="@drawable/ic_logo_white_large" style="@style/wrap_view" />
+        <me.grantland.widget.AutofitLayout android:layout_width="@dimen/inspired_title_width" android:layout_height="wrap_content">
+            <com.pinterest.ui.text.PTextView android:id="@id/title_tv" android:paddingTop="24.0dip" android:layout_marginBottom="20.0dip" android:layout_weight="1.0" style="@style/inspired_title" />
+        </me.grantland.widget.AutofitLayout>
+        <Button android:textColor="@color/button_material_dark" android:id="@id/continue_bt" android:background="@drawable/button_borderless" android:visibility="gone" android:layout_marginBottom="40.0dip" android:text="@string/nux_continue" style="@style/button_social_full_inspired" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/normal_signup_wrapper" style="@style/fullline_view">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/normal_signup_buttons_wrapper" style="@style/fullline_view">
+                <Button android:id="@id/facebook" android:layout_marginBottom="@dimen/margin" android:text="@string/continue_facebook" style="@style/button_social_full_inspired" />
+                <include layout="@layout/dialog_signup_secondary_networks" />
+                <Button android:textColor="@color/text_dark" android:id="@id/signup_using_email" android:background="@drawable/button_borderless" android:layout_marginBottom="@dimen/margin" android:text="@string/signup_email" style="@style/button_social_full_inspired" />
+            </LinearLayout>
+            <TextView android:gravity="center" android:id="@id/terms_tv" android:layout_width="@dimen/signup_button_width" android:layout_marginLeft="@dimen/margin_double" android:layout_marginRight="@dimen/margin_double" android:layout_marginBottom="@dimen/margin_half" android:text="@string/terms_and_privacy" android:maxLines="3" android:singleLine="false" style="@style/text_subtitle" />
+            <LinearLayout android:id="@id/normal_login_button_wrapper" style="@style/wrap_view">
+                <TextView android:textSize="14.0dip" android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:layout_marginRight="-10.0dip" android:text="@string/have_an_account" style="@style/text_subtitle" />
+                <Button android:textSize="14.0dip" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/login_bt" android:text="@string/login" style="@style/button_embeded" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.pinterest.ui.layout.MaxHeightLinearLayout>
+</FrameLayout>

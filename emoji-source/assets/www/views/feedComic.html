@@ -1,0 +1,65 @@
+<div id="{{feedId}}" class="panel">
+    <a ng-if="comic.author.user_id == user.bs_id" ng-click="confirmDelete(comic, feedId)" class="trash"><i class="icon-trash icon-large"></i></a>
+    <div class="author">
+    	<user-linkable user="comic.author">
+    		<div class="profile" queued="{{user.thumb}}" q-fail="profile-fail.png" q-retry="true"></div>
+        </user-linkable>
+        <p> <comic-tags comic="comic"></comic-tags>
+            <span class="time"><i class="icon-clock icon-large"></i> <span ng-bind="comic.timestamp | timestamp_format"></span> ago</span>
+        </p>
+    </div>
+
+    <div class="recipients" ng-show="isDirect">
+        <span>To:</span>
+        <span ng-repeat="recipient in comic.recipients">
+            <user-linkable user="recipient" context="{'last': $last, 'recipient': recipient}">
+                {{ recipient|displayName }}{{ last ? '' : ', ' }}
+            </user-linkable>
+        </span>
+    </div>
+
+    <a ng-click="view_comic(comic.comic_id)">
+        <div class="magic-feed-img" queued="{{comic.comic_url}}" q-fail="comic-fail.png" q-retry="true"></div>
+    </a>
+
+    <div id="comic_actions">
+        <p class="feed-title caption" ng-if="comic.comic_caption" ng-bind="comic.comic_caption"></p>
+
+        <ul class="action-bar">
+            <li class="like">
+                <span ng-if="comic.did_you_like == false"  ng-click="like_toggle(comic)"><i class="icon-heart"></i> Like</span>
+                <span class="liked" ng-if="comic.did_you_like == true" ng-click="like_toggle(comic)"><i class="icon-heart"></i> Liked</span>
+            </li>
+            <li class="comment">
+                <span ng-click="comment_on_comic(comic.comic_id)"><i class="icon-comment"></i> Comment</span>
+            </li>
+            <!--<li class="reply">
+                <i class="icon-reply"></i> Reply
+            </li>-->
+            <li class="share" ng-hide="isDirect" ng-click="native_share(comic.comic_url, comic.comic_caption, $event)">
+                <i class="icon-share"></i>
+            </li>
+        </ul>
+
+
+        <div class="action-items">
+            <comic-likes comic="comic"></comic-likes>
+            <comic-comments on-summary-view="onSummaryView" comic="comic"></comic-comments>
+        </div>
+
+        <div class="new-comment">
+            <textarea maxlength="350" rows="1" ng-model="newComment.text" placeholder="{{placeholder()}}" focus-on="focusCommentBox" prevent-enter on-focus-unfix-header visible-on-focus>
+            </textarea>
+            <a class="post-comment" ng-click="postComment()" ng-class="{'disabled': !newComment.text}" value="Post">Post</a>
+        </div>
+
+    </div>
+</div>
+
+<div ng-show="showDeleteModal">
+	<div class="overlay"></div>
+	<div class="modal">
+		<a ng-click="deleteComic(comic)">Delete comic</a>
+		<a ng-click="showDeleteModal=false">Cancel</a>
+	</div>
+</div>

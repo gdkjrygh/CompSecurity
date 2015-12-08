@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_grid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/listview" android:descendantFocusability="afterDescendants" style="@style/listview_white" />
+    <ScrollView android:id="@id/empty_wrapper_sv" android:visibility="gone" style="@style/listview">
+        <com.pinterest.ui.grid.AdapterEmptyView android:id="@id/empty_vw" style="@style/fullline_view" />
+    </ScrollView>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/unconnected_view_container" android:layout_margin="@dimen/margin" style="@style/fullline_view">
+        <me.grantland.widget.AutofitTextView android:textSize="@dimen/text_headline" android:id="@id/connect_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin" android:layout_marginBottom="@dimen/margin_half" style="@style/text_title_large" />
+        <me.grantland.widget.AutofitTextView android:textSize="@dimen/text_subhead" android:gravity="center" android:id="@id/connect_subtitle_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_double" android:layout_marginRight="@dimen/margin_double" android:layout_marginBottom="@dimen/margin" android:lines="2" android:singleLine="false" style="@style/text_base" />
+        <com.pinterest.ui.text.PButton android:id="@id/connect_btn" android:layout_width="fill_parent" android:layout_height="@dimen/button_height_large" android:layout_marginTop="@dimen/margin_half" style="@style/button_red" />
+    </LinearLayout>
+</LinearLayout>

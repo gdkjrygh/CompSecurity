@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/id_productDetails_facebook" android:padding="4.0dip" android:layout_width="0.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_facebook" android:layout_weight="1.0" />
+        <ImageView android:id="@id/id_productDetails_twitter" android:padding="4.0dip" android:layout_width="0.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_twitter" android:layout_weight="1.0" />
+        <ImageView android:id="@id/id_productDetails_pinterest" android:padding="4.0dip" android:layout_width="0.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_pinterest" android:layout_weight="1.0" />
+        <ImageView android:id="@id/id_productDetails_mail" android:padding="4.0dip" android:layout_width="0.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_mail" android:layout_weight="1.0" />
+        <ImageView android:id="@id/id_productDetails_message" android:padding="4.0dip" android:layout_width="0.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_message" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:background="@drawable/product_detail_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/id_productDetails_ratingLayout" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip">
+        <RatingBar android:gravity="center_vertical" android:id="@id/id_productDetails_ratingBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:isIndicator="true" style="@style/KohlsRatingBar" />
+        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="12.0sp" android:textColor="@color/pdp_grey_original_price" android:gravity="center_vertical" android:id="@id/id_productDetails_ratingBarTxt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_toRightOf="@id/id_productDetails_ratingBar" />
+    </LinearLayout>
+    <View android:id="@id/id_productDetails_ratingBarDivider" android:background="@drawable/product_detail_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+</LinearLayout>

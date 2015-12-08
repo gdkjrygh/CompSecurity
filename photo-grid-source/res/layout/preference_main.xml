@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/preference_category_title" android:background="@color/light_black" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/setting_category_textSize" android:textColor="@color/blue" android:gravity="left|center" android:id="@id/preference_category_title_text" android:paddingLeft="@dimen/setting_category_paddingLeft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setting_category_marginTop" android:layout_marginBottom="@dimen/setting_category_marginBottom" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/preference_main_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:background="@drawable/listview_listselector" android:paddingLeft="?android:scrollbarSize" android:paddingRight="@dimen/setting_main_paddingRight" android:layout_width="fill_parent" android:layout_height="@dimen/setting_main_height" android:minHeight="?android:listPreferredItemHeight">
+            <RelativeLayout android:id="@id/preference_main" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="9.0">
+                <TextView android:textSize="@dimen/setting_main_tittle_textSize" android:textColor="@color/setting_tittle" android:id="@id/preference_main_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/setting_main_summary_textSize" android:textColor="@color/setting_summary" android:ellipsize="middle" android:id="@id/preference_main_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/preference_main_title" android:layout_alignLeft="@id/preference_main_title" />
+            </RelativeLayout>
+            <CheckBox android:id="@id/preference_main_checkbox" android:focusable="false" android:clickable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="@drawable/checkbox_preference" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:background="@color/setting_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+</LinearLayout>

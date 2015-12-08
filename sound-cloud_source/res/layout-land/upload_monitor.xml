@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/MetadataContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/top_container" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="13.0dip">
+            <FrameLayout android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ImageButton android:id="@id/btn_action" android:layout_width="@dimen/rec_upload_button_dimension" android:layout_height="@dimen/rec_upload_button_dimension" style="@style/UploadButton" />
+            </FrameLayout>
+            <com.soundcloud.android.creators.upload.CircularProgressBar android:id="@id/upload_progress" android:layout_width="@dimen/rec_upload_progress_dimension" android:layout_height="@dimen/rec_upload_progress_dimension" android:layout_centerInParent="true" style="@style/RecordUploadProgressBar" />
+        </RelativeLayout>
+        <include layout="@layout/upload_metadata" />
+    </LinearLayout>
+    <TextView android:id="@id/upload_status_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/uploader_event_processing_your_sound" android:layout_below="@id/top_container" android:layout_centerInParent="true" style="?android:textAppearanceMedium" />
+    <LinearLayout android:gravity="right" android:id="@id/bottom_bar" android:layout_width="fill_parent" android:layout_height="@dimen/btn_min_height" android:layout_alignParentBottom="true">
+        <Button android:textColor="@color/gray_text" android:id="@id/btn_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/btn_cancel" style="?android:attr/borderlessButtonStyle" />
+    </LinearLayout>
+</RelativeLayout>

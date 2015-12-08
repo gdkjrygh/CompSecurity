@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.walmartlabs.android.photo.view.album.CheckablePhotoView android:background="@color/photo_photo_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_centerInParent="true" />
+    <com.walmartlabs.android.photo.view.RecyclingImageView android:gravity="center" android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <ImageView android:id="@id/unavailable_overlay" android:background="@drawable/photo_unavailable_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center" android:id="@id/selected" android:background="@drawable/photo_selected_overlay" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/photo_checkmark" />
+    </LinearLayout>
+    <ImageView android:gravity="center" android:id="@id/enlarge" android:background="@drawable/photo_zoom" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:alpha="0.5" />
+    <ImageView android:gravity="center" android:id="@id/unavailable_icon" android:background="@drawable/photo_warning_transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</com.walmartlabs.android.photo.view.album.CheckablePhotoView>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppViewLazyImage">
+        <item name="android:background">@color/app_bg</item>
+        <item name="nullBackground">@drawable/app_drawer_browser</item>
+    </style>
+    <style name="DialogText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">#ff00ff00</item>
+    </style>
+    <style name="EulaTextViewStyle" parent="@style/KikTheme.Light.NoTitleBar">
+        <item name="android:textColorLink">@color/android_blue</item>
+    </style>
+    <style name="FastRenderPopup">
+        <item name="android:windowBackground">@color/popup_background</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="FastRenderPopupAnims">
+        <item name="android:windowEnterAnimation">@anim/popup_show</item>
+        <item name="android:windowExitAnimation">@anim/popup_hide</item>
+    </style>
+    <style name="FullScreenDialog" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@color/screen_dim_color</item>
+    </style>
+    <style name="GrayLabel">
+        <item name="android:textColor">#ff666666</item>
+    </style>
+    <style name="GrowAnimation">
+        <item name="android:windowEnterAnimation">@anim/tray_grow_in</item>
+        <item name="android:windowExitAnimation">@anim/tray_grow_out</item>
+    </style>
+    <style name="GrowDialog" parent="@style/PopupDialog">
+        <item name="android:windowAnimationStyle">@style/GrowAnimation</item>
+    </style>
+    <style name="HackForHardwareAcceleratedWithoutAnimationTheme" parent="@style/KikTheme.Light.NoTitleBar">
+        <item name="android:windowBackground">@null</item>
+    </style>
+    <style name="HoloCompatDialogs" parent="@style/KikWindowBackgrounds">
+        <item name="android:autoCompleteTextViewStyle">@style/KikAutoCompleteEditText</item>
+        <item name="android:editTextStyle">@style/KikEditText</item>
+    </style>
+    <style name="KikAutoCompleteEditText" parent="@android:style/Widget.AutoCompleteTextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/kik_edit_text</item>
+        <item name="android:popupBackground">@drawable/kik_email_dropdown</item>
+    </style>
+    <style name="KikEditText" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/kik_edit_text</item>
+    </style>
+    <style name="KikTheme.Light" parent="@android:style/Theme.Light" />
+    <style name="KikTheme.Light.NoTitleBar" parent="@android:style/Theme.Light.NoTitleBar" />
+    <style name="KikTitleBarStyle">
+        <item name="android:background">@color/top_bar_green</item>
+    </style>
+    <style name="KikWindowBackgrounds" parent="@style/KikTheme.Light.NoTitleBar">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleSize">@dimen/native_topbar_height</item>
+        <item name="android:windowTitleStyle">@style/invisible</item>
+        <item name="android:windowTitleBackgroundStyle">@style/KikTitleBarStyle</item>
+    </style>
+    <style name="LargeText" parent="@android:style/TextAppearance.Large" />
+    <style name="MessageBody">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="PopupDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+    <style name="PrefWindowTitle">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/top_bar_text_color</item>
+    </style>
+    <style name="Preferences" parent="@style/KikTheme.Light">
+        <item name="android:windowBackground">@color/conversations_background</item>
+        <item name="android:windowTitleSize">@dimen/native_topbar_height</item>
+        <item name="android:windowTitleStyle">@style/PrefWindowTitle</item>
+        <item name="android:windowTitleBackgroundStyle">@style/PrefsWindowTitleBackground</item>
+    </style>
+    <style name="PrefsWindowTitleBackground">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_height">@dimen/native_topbar_height</item>
+    </style>
+    <style name="RedBackground" parent="@style/KikTheme.Light.NoTitleBar">
+        <item name="android:windowBackground">@color/registration_divider_color</item>
+    </style>
+    <style name="SlideInDialog" parent="@style/PopupDialog">
+        <item name="android:windowAnimationStyle">@style/TrayAnimation</item>
+    </style>
+    <style name="Theme.Black.NoTitleBar.NullWindow" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@null</item>
+    </style>
+    <style name="Theme.Black.Window" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+    <style name="Theme.Camera" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@xml/loading_bg_tile</item>
+    </style>
+    <style name="Theme.Transparent.NullWindow" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@null</item>
+    </style>
+    <style name="TrayAnimation">
+        <item name="android:windowEnterAnimation">@anim/tray_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/tray_slide_out</item>
+    </style>
+    <style name="White.Progress.Spinner" parent="@android:style/Widget.ProgressBar" />
+    <style name="WhiteLabel">
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="com_mixpanel_android_SurveyActivityAnimation">
+        <item name="android:windowEnterAnimation">@anim/com_mixpanel_android_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/com_mixpanel_android_fade_out</item>
+    </style>
+    <style name="com_mixpanel_android_SurveyActivityTheme" parent="@android:style/Theme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/com_mixpanel_android_SurveyActivityAnimation</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="invisible">
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="isTypingStyle">
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/chats_is_typing</item>
+    </style>
+</resources>

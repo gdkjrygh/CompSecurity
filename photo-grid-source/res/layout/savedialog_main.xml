@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/bg_maindialog" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/savedialog_tittle_heiht">
+        <TextView android:textSize="@dimen/savedialog_main_textsize" android:textColor="@color/white" android:id="@id/savedialog_maintittle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/savedialog_marginleft" android:text="@string/p_saveoption" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/savedialog_cancel" android:background="@drawable/btn_save" android:layout_width="@dimen/savedialog_tittle_heiht" android:layout_height="@dimen/savedialog_tittle_heiht" android:src="@drawable/icon_cancel" android:scaleType="center" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/savedialog_main_resolution" android:background="@drawable/list_selector_save" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/savedialog_content_height">
+        <RelativeLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/savedialog_marginleft" android:layout_toLeftOf="@id/resolution_layout" android:layout_alignParentLeft="true">
+            <TextView android:textSize="@dimen/savedialog_main_textsize" android:textColor="@color/savedialog_main" android:ellipsize="end" android:id="@id/savedialog_resolution" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save_resolution" android:singleLine="true" />
+            <TextView android:textSize="@dimen/savedialog_summary_textsize" android:textColor="@color/savedialog_summary" android:ellipsize="end" android:id="@id/savedialog_resolution_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/savedialog_resolutiontip" android:layout_below="@id/savedialog_resolution" android:layout_alignLeft="@id/savedialog_resolution" />
+        </RelativeLayout>
+        <LinearLayout android:id="@id/resolution_layout" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <LinearLayout android:gravity="center" android:id="@id/resolution_popup" android:background="@drawable/moremenu_background" android:layout_width="@dimen/savedialog_popup_width" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/savedialog_main_textsize" android:textColor="@color/black" android:id="@id/savedialog_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1024P" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:id="@id/savedialog_resolution_divider" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="1.0dip">
+        <View android:background="@color/list_divider_color" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/savedialog_main_format" android:background="@drawable/list_selector_save" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/savedialog_content_height">
+        <RelativeLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/savedialog_marginleft">
+            <TextView android:textSize="@dimen/savedialog_main_textsize" android:textColor="@color/savedialog_main" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/savedialog_saveformat" />
+        </RelativeLayout>
+        <LinearLayout android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <LinearLayout android:gravity="center" android:id="@id/resolution_format" android:background="@drawable/moremenu_background" android:layout_width="@dimen/savedialog_popup_width" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/savedialog_main_textsize" android:textColor="@color/black" android:id="@id/savedialog_jpg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=".JPG" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:id="@id/savedialog_format_divider" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="1.0dip">
+        <View android:background="@color/list_divider_color" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/savedialog_main_watermark" android:background="@drawable/list_selector_save" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/savedialog_content_height">
+        <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/savedialog_marginleft" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/savedialog_main_textsize" android:textColor="@color/savedialog_main" android:ellipsize="end" android:id="@id/savedialog_main_watermark_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/p_displaywatermark_image" android:maxLines="2" />
+        </RelativeLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="5.0">
+            <LinearLayout android:gravity="right|center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <CheckBox android:id="@id/savedialog_main_watermark_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkbox_preference" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/savedialog_watermark_divider" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="1.0dip">
+        <View android:background="@color/list_divider_color" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/savedialog_content_height">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/savedialog_pathlayout" android:background="@drawable/list_selector" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="4.5">
+            <TextView android:textSize="@dimen/savedialog_main_textsize" android:textColor="@color/savedialog_main" android:ellipsize="end" android:id="@id/savedialog_path" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/savedialog_marginleft" android:text="@string/p_savePath" android:singleLine="true" />
+            <TextView android:textSize="@dimen/savedialog_summary_textsize" android:textColor="@color/savedialog_summary" android:ellipsize="end" android:id="@id/savedialog_savepath" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/storage/emulated/0/Photo Grid" android:maxLines="2" android:layout_below="@id/savedialog_path" android:layout_alignLeft="@id/savedialog_path" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/savedialog_divider" android:background="@drawable/btn_splite_righthalf" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/savedialog_cmlayout" android:background="@drawable/list_selector" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="4.5">
+            <TextView android:textSize="@dimen/savedialog_main_textsize" android:textColor="@color/savedialog_main" android:id="@id/savedialog_clean" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/savedialog_marginleft" android:text="@string/savedialog_cleanstorage" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/savedialog_circle" android:layout_width="25.0dip" android:layout_height="20.0dip" android:layout_below="@id/savedialog_clean" android:layout_alignLeft="@id/savedialog_clean" />
+            <TextView android:textSize="@dimen/savedialog_summary_textsize" android:textColor="@color/savedialog_summary" android:id="@id/savedialog_storage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4.1/5.1GB" android:layout_toRightOf="@id/savedialog_circle" android:layout_alignTop="@id/savedialog_circle" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/savedialog_mainsave" android:background="@drawable/save_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="64.0dip">
+        <ImageView android:id="@id/savedialog_mainsave_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_save_white" />
+        <TextView android:textSize="22.0sp" android:textColor="@color/white" android:id="@id/savedialog_mainsave_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/save" />
+    </LinearLayout>
+</LinearLayout>

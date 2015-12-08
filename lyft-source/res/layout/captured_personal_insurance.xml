@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.settings.CapturedPersonalInsuranceView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <me.lyft.android.controls.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:id="@id/container_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <me.lyft.android.controls.FixedRatioFrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" app:aspectRatio="0.6">
+                <ImageView android:id="@id/insurance_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+                <View android:background="@drawable/selectable_item_translucent" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <ProgressBar android:id="@id/insurance_photo_upload_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/LoadingProgressBar" />
+            </me.lyft.android.controls.FixedRatioFrameLayout>
+            <me.lyft.android.controls.AdvancedTextView android:textSize="@dimen/text_16" android:id="@id/insurance_expiration_text_view" android:layout_width="fill_parent" android:layout_height="@dimen/dropdown_edit_height" android:layout_marginLeft="@dimen/span16" android:layout_marginTop="@dimen/span8" android:layout_marginRight="@dimen/span16" android:hint="@string/personal_insurance_expiration_date_hint" style="@style/Dropdown" />
+            <me.lyft.android.controls.AdvancedTextView android:textSize="@dimen/text_16" android:id="@id/insurance_state_text_view" android:layout_width="fill_parent" android:layout_height="@dimen/dropdown_edit_height" android:layout_marginLeft="@dimen/span16" android:layout_marginTop="@dimen/span8" android:layout_marginRight="@dimen/span16" android:hint="@string/personal_insurance_state_hint" style="@style/Dropdown" />
+            <CheckBox android:textSize="@dimen/text_16" android:id="@id/match_car_checkbox" android:layout_width="fill_parent" android:layout_height="@dimen/checkbox_edit_height" android:layout_marginLeft="@dimen/span16" android:layout_marginTop="@dimen/span8" android:layout_marginRight="@dimen/span16" android:button="@drawable/checkbox_drawable" android:text="@string/personal_insurance_match_car_info_text" />
+            <CheckBox android:textSize="@dimen/text_16" android:id="@id/match_name_checkbox" android:layout_width="fill_parent" android:layout_height="@dimen/checkbox_edit_height" android:layout_marginLeft="@dimen/span16" android:layout_marginRight="@dimen/span16" android:layout_marginBottom="@dimen/span8" android:button="@drawable/checkbox_drawable" android:text="@string/personal_insurance_match_name_info_text" />
+            <TextView android:textSize="@dimen/small_text" android:textColor="@color/red_1" android:gravity="center" android:id="@id/input_validation_error_text_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span48" android:layout_marginRight="@dimen/span48" android:layout_marginBottom="@dimen/span8" android:text="@string/personal_insurance_match_car_and_name_warning" />
+            <View android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <Button android:enabled="true" android:layout_gravity="bottom" android:id="@id/submit_button" android:background="@drawable/btn_charcoal" android:layout_marginTop="10.0dip" android:text="@string/submit_button" android:layout_alignParentBottom="true" style="@style/FullBleedButton" />
+        </LinearLayout>
+    </ScrollView>
+</me.lyft.android.ui.settings.CapturedPersonalInsuranceView>

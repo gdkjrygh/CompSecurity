@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.passenger.PassengerPayView android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <me.lyft.android.controls.MenuButtonToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="196.0dip">
+        <FrameLayout android:layout_gravity="center" android:layout_width="115.0dip" android:layout_height="115.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:foreground="@drawable/split_fare_profile_image_frame">
+            <com.makeramen.roundedimageview.RoundedImageView android:id="@id/driver_photo_image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:riv_oval="true" />
+        </FrameLayout>
+        <me.lyft.android.controls.BalloonView android:layout_gravity="center" android:id="@id/balloon_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/span20" android:layout_marginRight="@dimen/span20" />
+    </FrameLayout>
+    <me.lyft.android.ui.passenger.TipSelectorWidget android:id="@id/tip_selector_widget" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/span48" android:layout_marginLeft="@dimen/span12" android:layout_marginRight="@dimen/span12" android:layout_marginBottom="@dimen/span12" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/payment_method_selection_view" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/span48" android:layout_marginLeft="@dimen/span12" android:layout_marginRight="@dimen/span12" style="@style/TransparentGreyButton">
+        <TextView android:textSize="@dimen/normal_text" android:id="@id/payment_label_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span4" android:text="@string/rate_and_pay_payment_method_label" android:drawableLeft="@drawable/ic_payment" android:drawablePadding="@dimen/span8" style="@style/PrimaryText" />
+        <Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/normal_text" android:ellipsize="end" android:gravity="right" android:id="@id/selected_payment_method_label_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/span4" android:maxWidth="@dimen/span156" android:singleLine="true" style="@style/TertiaryText" />
+        <ImageView android:gravity="right" android:id="@id/concur_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span4" android:layout_marginRight="@dimen/span4" android:src="@drawable/ic_concur_logo_small" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/payment_info_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <TextView android:layout_gravity="center" android:id="@id/lyft_credit_applied_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TertiaryText" />
+        <TextView android:textSize="@dimen/rating_screen_price_text" android:id="@id/total_amount_charged_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableRight="@drawable/ic_info_black" android:drawablePadding="12.0dip" style="@style/PrimaryText" />
+        <TextView android:layout_gravity="center" android:id="@id/split_info" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PrimaryText" />
+    </LinearLayout>
+    <Button android:layout_gravity="bottom" android:id="@id/next_button" android:background="@drawable/btn_charcoal" android:layout_width="fill_parent" android:text="@string/next_button" style="@style/FullBleedButton" />
+</me.lyft.android.ui.passenger.PassengerPayView>

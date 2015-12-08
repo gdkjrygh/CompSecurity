@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/text_body" android:id="@id/deactivate_account_text_title" style="@style/profile_about_section_title" />
+        <TextView android:textStyle="bold" android:id="@id/settings_option_deactivate_account" android:text="@string/deactivate_tell_why_leaving_title" style="@style/profile_about_section_title" />
+        <LinearLayout android:orientation="vertical" android:background="@drawable/card_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioGroup android:id="@id/setting_deactivate_radiogroup" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RadioButton android:id="@id/setting_deactivate_too_many_emails" android:text="@string/deactivate_emails_message" style="@style/section_radio_button" />
+                <View style="@style/section_item_divider" />
+                <RadioButton android:id="@id/setting_deactivate_account_hacked" android:text="@string/deactivate_hacked_message" style="@style/section_radio_button" />
+                <View style="@style/section_item_divider" />
+                <RadioButton android:id="@id/setting_deactivate_interesting_pins" android:text="@string/deactivate_pins_message" style="@style/section_radio_button" />
+                <View style="@style/section_item_divider" />
+                <RadioButton android:id="@id/setting_deactivate_taking_break" android:text="@string/deactivate_break_message" style="@style/section_radio_button" />
+                <View style="@style/section_item_divider" />
+                <RadioButton android:id="@id/setting_deactivate_another_account" android:text="@string/deactivate_account_message" style="@style/section_radio_button" />
+                <View style="@style/section_item_divider" />
+                <RadioButton android:id="@id/setting_deactivate_business_account" android:text="@string/deactivate_business_message" style="@style/section_radio_button" />
+                <View style="@style/section_item_divider" />
+                <RadioButton android:id="@id/setting_deactivate_use_pinterest" android:text="@string/deactivate_use_message" style="@style/section_radio_button" />
+                <View style="@style/section_item_divider" />
+                <RadioButton android:id="@id/setting_deactivate_understand_pinterest" android:text="@string/deactivate_understand_message" style="@style/section_radio_button" />
+                <View style="@style/section_item_divider" />
+                <RadioButton android:id="@id/setting_deactivate_privacy_concern" android:text="@string/deactivate_privacy_message" style="@style/section_radio_button" />
+                <View style="@style/section_item_divider" />
+                <RadioButton android:id="@id/setting_deactivate_other" android:text="@string/deactivate_other_message" style="@style/section_radio_button" />
+            </RadioGroup>
+            <View style="@style/section_item_divider" />
+        </LinearLayout>
+        <View style="@style/profile_about_section_title" />
+        <com.pinterest.ui.text.PButton android:enabled="false" android:textColor="@color/text_dark" android:id="@id/setting_deactivate_account_btn" android:background="@color/bright_foreground_disabled_material_dark" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height" android:text="@string/deactivate_my_account" style="@style/button_plain" />
+        <TextView android:text="@string/permanently_close_my_account" style="@style/profile_about_section_title" />
+        <LinearLayout android:orientation="vertical" android:background="@drawable/card_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/settings_option_permanent_close_account" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height" android:text="@string/permanently_close_my_account" style="@style/section_item_label" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

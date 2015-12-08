@@ -1,0 +1,86 @@
+<div class="overlay" ng-if="showBitmojiCard">
+    <div class="bitmoji-card">
+        <i class="icon-close-circle" ng-click="closeBitmojiCard()"></i>
+        <i class="icon-circle"></i>
+        <div class="ribbon-container">
+            <div class="ribbon"></div>
+            <div class="top"><img src="images/bitmoji-logo-2.png"></div>
+        </div>
+        <ul class="bitmoji-grid small-block-grid-3">
+            <li ng-repeat="bitmoji in bitmojis"><img ng-src="{{bitmoji}}"></li>
+        </ul>
+        <div class="bottom">
+            <h2>Your Personal Emoji</h2>
+            <a ng-click="getBitmoji()" class="CTA-btn">Get Started</a>
+        </div>
+    </div>
+</div>
+<!-- Header and Nav -->
+<nav class="top-bar fixed-header">
+    <div class="logo"></div>
+    <refresh-button promise-function="loadLatest"></refresh-button>
+</nav>
+
+<div class="tab-switch" ng-show="tabSwitching"></div>
+
+<div class="toast" ng-if="templatesFailedToLoad">
+    Oops, something went wrong! <br/>
+    Please quit and restart the Bitstrips app.
+</div>
+
+<!-- Privacy policy update: Show this if user_id < X and they haven't seen it yet -->
+<div class="toast" ng-if="showPrivacyPolicyUpdate">
+    Review our new Terms of Use and Privacy Policy in <span class="nobreak"><i class="icon-cog icon-large"></i> Settings</span>.
+</div>
+<app-update></app-update>
+
+<feed-tabs selected="activity"></feed-tabs>
+
+<div class="spacer"></div>
+
+<div class="welcome row" ng-if="feedIsEmpty">
+    <div class="large-10 large-centered columns">
+        <p class="welcome-msg add-to-top">The home feed is where you'll see comics created by you and your friends.</p>
+        <div class="large-6 large-centered columns panel">
+            <div class="author">
+                <div class="profile" queued="{{user.thumb}}" q-fail="profile-fail.png" q-retry="true" ng-click="go_avatar()"></div>
+                <p> <span>Welcome to Bitstrips!</span>
+                    <a class="edit btn" ng-click="go_templates()">Create Comic &nbsp;<i class="icon-edit icon-large"></i></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Feed Section -->
+<loading-spinner visible="loading && !feedFailedToLoad"></loading-spinner>
+
+<!-- feed fails to load -->
+<div class="reload-feed" ng-show="feedFailedToLoad">
+    <a ng-click="getFeed()"><i class="icon-refresh"></i> Tap to retry</a>
+</div>
+
+<div class="ios-hide" bs-ios-wait ng-show="!loading_costars" infinite-scroll="add()" can-load="canLoad" threshold="500" id="feed_comics">
+
+    <loading-spinner visible="days.length == 0" title="Loading today's comics"></loading-spinner>
+
+    <quad-panel ng-if="latest" comics="latest" title="Latest Scenes" tag="#Latest" description="Here's what's new today"></quad-panel>
+
+    <quad-panel ng-if="home_ad" comics="home_ad.comics" title="{{home_ad.header}}" tag="{{home_ad.tag}}" description="{{home_ad.byline}}" count="{{home_ad.count}}"></quad-panel>
+
+    <div class="spacer"></div>
+
+    <a id="firstComicAnchor"></a>
+
+    <loading-spinner visible="fetchingNewComics"></loading-spinner>
+
+    <div class="row update-feed" ng-repeat="feed_item in feed.feed_items | limitTo:feed.limit">
+        <div ng-if="feed_item.item_type == 1" class="large-10 large-centered columns">
+            <fast-feed-comic comic="feed_item.item_data">
+            </fast-feed-comic>
+        </div>
+    </div>
+
+</div>
+
+<loading-spinner visible="fetching_more_comics == true"></loading-spinner>

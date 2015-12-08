@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gtp.nextlauncher.widget.weatherwidget.WeatherTrendView android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/trendBgLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/titleLayout" android:background="@drawable/next_title_bg" android:paddingRight="5.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:id="@id/buttonLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                <ImageView android:id="@id/refreshButton" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/next_update_selector" />
+                <ImageView android:background="@drawable/next_button_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                <ImageView android:id="@id/weatherButton" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/next_day_selector" />
+            </LinearLayout>
+            <LinearLayout android:gravity="left|center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_toLeftOf="@id/buttonLayout" android:layout_centerVertical="true">
+                <com.gtp.nextlauncher.widget.weatherwidget.CustomTextViewWrapper android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/cityText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:singleLine="true" />
+                <ImageView android:id="@id/nextCityButton" android:background="@drawable/next_next_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+            </LinearLayout>
+        </RelativeLayout>
+        <FrameLayout android:id="@id/trendLineLayout" android:background="@drawable/next_trend_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:background="@drawable/next_button_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                </FrameLayout>
+                <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:background="@drawable/next_button_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                </FrameLayout>
+                <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:background="@drawable/next_button_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                </FrameLayout>
+                <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:background="@drawable/next_button_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                </FrameLayout>
+                <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:background="@drawable/next_button_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                </FrameLayout>
+                <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:background="@drawable/next_button_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                    <ImageView android:layout_gravity="right" android:background="@drawable/next_button_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="6.0dip" android:paddingTop="5.0dip" android:paddingRight="6.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <ImageView android:background="@drawable/next_h_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                </FrameLayout>
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <ImageView android:background="@drawable/next_h_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                </FrameLayout>
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <ImageView android:background="@drawable/next_h_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                </FrameLayout>
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <ImageView android:background="@drawable/next_h_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                </FrameLayout>
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <ImageView android:background="@drawable/next_h_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                </FrameLayout>
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <ImageView android:background="@drawable/next_h_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                    <ImageView android:layout_gravity="bottom" android:background="@drawable/next_h_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/hideTitleLayout" android:background="@drawable/next_title_bg" android:paddingRight="5.0dip" android:paddingBottom="3.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/next_update_selector" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/baseLayout" android:background="@drawable/next_trend_base_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextViewWrapper android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/firstDayText" android:background="@drawable/next_trend_today_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/weather_today" android:singleLine="true" android:layout_weight="1.0" />
+            <ImageView android:background="@drawable/next_button_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <TextViewWrapper android:textSize="14.0sp" android:textColor="#ff636363" android:gravity="center" android:id="@id/secondDayText" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+            <ImageView android:background="@drawable/next_button_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <TextViewWrapper android:textSize="14.0sp" android:textColor="#ff636363" android:gravity="center" android:id="@id/thirdDayText" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+            <ImageView android:background="@drawable/next_button_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <TextViewWrapper android:textSize="14.0sp" android:textColor="#ff636363" android:gravity="center" android:id="@id/fourthDayText" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+            <ImageView android:background="@drawable/next_button_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <TextViewWrapper android:textSize="14.0sp" android:textColor="#ff636363" android:gravity="center" android:id="@id/fifthDayText" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+            <ImageView android:background="@drawable/next_button_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <TextViewWrapper android:textSize="14.0sp" android:textColor="#ff636363" android:gravity="center" android:id="@id/sixthDayText" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:id="@id/cubeLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" android:layout_above="@id/baseLayout" android:layout_below="@id/hideTitleLayout">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.gtp.nextlauncher.widget.weatherwidget.TemperatureCubeView android:id="@id/firstDayCube" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.gtp.nextlauncher.widget.weatherwidget.TemperatureCubeView android:id="@id/secondDayCube" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.gtp.nextlauncher.widget.weatherwidget.TemperatureCubeView android:id="@id/thirdDayCube" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.gtp.nextlauncher.widget.weatherwidget.TemperatureCubeView android:id="@id/fourthDayCube" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.gtp.nextlauncher.widget.weatherwidget.TemperatureCubeView android:id="@id/fifthDayCube" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.gtp.nextlauncher.widget.weatherwidget.TemperatureCubeView android:id="@id/sixthDayCube" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+</com.gtp.nextlauncher.widget.weatherwidget.WeatherTrendView>

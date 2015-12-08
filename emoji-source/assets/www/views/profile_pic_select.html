@@ -1,0 +1,45 @@
+ <nav class="top-bar fixed-header">
+    <a id="back_button" class="back" ng-click="back()"><i class="icon-chevron-left"></i></a>
+    	<h1>Change Profile Picture</h1>
+</nav>
+
+<!-- End Header and Nav -->
+
+<div class="row add-to-top" ng-show="picked_profile == 0" infinite-scroll="add()" can-load="canLoad" threshold="100">
+	<div class="large-10 large-centered columns">
+		 <ul class="friend-grid small-block-grid-3 alt">
+			<li ng-repeat="pic in profile_pics | limitTo:pic_count" >
+				<div class="av-friend" queued="{{ImageBaseURL}}{{pic}}-{{user.id}}-v1.png" q-fail="profile-fail.png" q-retry="true" q-click="pick_profile_thumb({{pic}})"></div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="row add-to-top add-to-bottom" ng-if="picked_profile != 0">
+	<div class="large-6 large-centered columns">
+		<!--<h4 class="blue-title pad15">Share your new profile picture</h4>-->
+		<img class="feed-img" ng-src="{{ImageBaseURL}}{{picked_profile}}-{{user.id}}-v1.png"/>
+		<div class="add-to-top confirm" ng-hide="saving">
+			 <a ng-click="back()" class="edit btn" id='cancel'>Cancel</a>
+			 <a ng-click="save_profile()" class="edit btn" id='save'>Save</a>
+		</div>
+		<div ng-show="saving">
+			Saving...
+		</div>
+		<!--
+		<form>
+			<textarea on-focus-unfix-header>Check out my new avatar!</textarea>
+			<ul class="small-block-grid-3 columns">
+				 <li class="l"><a href="#">Cancel</a></li>
+				 <li><a href="#" class="edit btn">Share</a></li>
+				 <li class="r"><a href="#">Skip</a></li>
+			</ul>
+			<ul class="social-select">
+				<li class="facebook">Share on Facebook</li>
+				<li class="twitter">Share on Twitter</li>
+				<li class="tumblr">Share on Tumblr</li>
+			</ul>
+		</form>
+		-->
+	</div>
+</div>

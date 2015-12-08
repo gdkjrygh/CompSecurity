@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <ViewFlipper android:id="@id/top_bar" android:background="@drawable/bg_top_bar" android:layout_width="fill_parent" android:layout_height="@dimen/activity_title_height">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/primary_text" android:gravity="center_vertical" android:paddingLeft="@dimen/phrase_nav_panel_left_padding" android:paddingRight="@dimen/phrase_nav_panel_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/label_phrasebook" android:singleLine="true" android:layout_weight="1.0" />
+            <ImageView android:id="@id/menu_overflow" android:background="@drawable/bg_clickable_blue" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_more_vert_grey600_24" android:contentDescription="@string/label_more_options" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/bg_search_box" android:addStatesFromChildren="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/start_card_padding">
+            <com.google.android.apps.translate.widget.SearchTextBox android:id="@id/edit_input" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:hint="@string/hint_phrase_search" android:singleLine="true" android:layout_weight="1.0" android:imeOptions="actionSearch|flagNoExtractUi" style="@style/EditorTextStyle" />
+            <com.google.android.apps.translate.widget.TintImageView android:layout_gravity="center_vertical" android:id="@id/btn_clear_input" android:layout_width="48.0dip" android:layout_height="48.0dip" ns:mask="@drawable/ic_clear_black" ns:tint="@color/icon_dark_clickable" ns:iconSize="24.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/bg_topbar_selected" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.apps.translate.widget.TintImageView android:id="@id/btn_close_select" android:background="@drawable/bg_clickable_blue" android:layout_width="@dimen/default_touch_target" android:layout_height="fill_parent" ns:mask="@drawable/ic_done_black" ns:tint="@color/icon_dark_normal" ns:iconSize="24.0dip" />
+            <View android:background="@drawable/bg_lp_divider" android:layout_width="2.0dip" android:layout_height="fill_parent" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/primary_text" android:gravity="center_vertical" android:id="@id/txt_selection_count" android:padding="@dimen/phrase_nav_panel_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <com.google.android.apps.translate.widget.TintImageView android:id="@id/btn_delete_select" android:background="@drawable/bg_clickable_blue" android:layout_width="@dimen/default_touch_target" android:layout_height="fill_parent" android:contentDescription="@string/label_delete" ns:mask="@drawable/ic_delete_black" ns:tint="@color/icon_dark_normal" ns:iconSize="24.0dip" />
+        </LinearLayout>
+    </ViewFlipper>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/panel_signin" android:background="@color/info_panel_background" android:paddingLeft="@dimen/activity_vertical_margin" android:paddingTop="@dimen/phrase_nav_panel_padding" android:paddingRight="@dimen/activity_vertical_margin" android:paddingBottom="@dimen/phrase_nav_panel_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/primary_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/msg_signin_info" android:layout_weight="1.0" />
+        <Button android:textAppearance="?android:textAppearanceSmall" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/btn_signin" android:background="@drawable/kennedy_blue_button" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/phrase_nav_panel_padding" android:layout_marginRight="0.0dip" android:minHeight="0.0dip" android:text="@string/msg_sync" android:textAllCaps="true" android:layout_marginStart="@dimen/phrase_nav_panel_padding" android:layout_marginEnd="0.0dip" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ListView android:id="@android:id/list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/msg_empty" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.apps.translate.widget.Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <TextView android:textColor="@color/secondary_text" android:gravity="center_horizontal" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/msg_phrasebook_empty_hint" android:drawableTop="@drawable/img_star" />
+            <com.google.android.apps.translate.widget.Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" />
+        </LinearLayout>
+        <include layout="@layout/buttery_progress" />
+    </FrameLayout>
+</merge>

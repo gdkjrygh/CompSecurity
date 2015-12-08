@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/padding3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="@dimen/hub_section_min_width"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/hub_favorites_header_container" android:background="@drawable/focus_highlight" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/hub_favorites_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_favorites" android:drawableRight="@drawable/add_favorites_selector" android:drawablePadding="@dimen/padding3" style="@style/HubSectionHeader" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/favorites_empty_avatar" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/EmptyViewLayout">
+        <com.skype.android.widget.SymbolView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/size_1x" android:contentDescription="@string/link_favorites_add" app:symbol_code="Favourite" style="@style/FavoriteEmptyViewSymbol" />
+        <TextView android:paddingTop="@dimen/size_2x" android:paddingBottom="@dimen/size_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_favorites_empty" style="@style/EmptyViewText" />
+    </LinearLayout>
+    <com.skype.android.widget.recycler.TwoWayRecyclerView android:id="@id/list" android:cacheColorHint="@color/main_light_color" android:numColumns="3" android:maxRows="2" app:autoSize="true" style="@style/HubTiledGrid"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+</LinearLayout>

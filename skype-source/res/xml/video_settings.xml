@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/header_voice_video_calls" android:key="@string/key_category_video">
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="@string/label_answer_calls_automatically" android:key="@string/key_user_wants_auto_answer" android:defaultValue="false" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="@string/label_video_monitor" android:key="@string/key_video_monitor" android:defaultValue="true" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="@string/label_show_tech_info_menu" android:key="@string/key_show_technical_info" android:summary="@string/label_show_tech_info_menu_desc" android:defaultValue="false" />
+        <ListPreference android:entries="@array/settings_video_quality" android:title="@string/label_video_quality" android:key="@string/key_high_quality_video" android:defaultValue="0" android:negativeButtonText="@null" android:entryValues="@array/settings_mode_values" />
+    </PreferenceCategory>
+</PreferenceScreen>

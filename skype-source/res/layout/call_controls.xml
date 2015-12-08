@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/control_buttons_container" android:paddingBottom="@dimen/padding4" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="bottom|center" android:id="@id/control_options_buttons_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/call_control_video" android:src="@drawable/video_control_enabled_selector" android:contentDescription="@string/acc_video_call_options" style="@style/CallControlButton" />
+        <ImageButton android:id="@id/call_control_mute" android:src="@drawable/mute_control_selector" android:contentDescription="@string/action_mute" style="@style/CallControlButton" />
+        <ImageButton android:id="@id/call_control_add" android:src="@drawable/call_add_control_selector" android:contentDescription="@string/action_add_people" style="@style/CallControlButton" />
+        <com.skype.android.widget.MenuImageButton android:id="@id/call_control_headset" android:src="@drawable/headset_control_selector" android:contentDescription="@string/action_headset" style="@style/CallControlButton" />
+        <com.skype.android.widget.MenuImageButton android:id="@id/call_control_dialpad" android:visibility="gone" android:src="@drawable/dialpad_control_selector" android:contentDescription="@string/action_show_dialpad" style="@style/CallControlButton" />
+        <ImageButton android:id="@id/call_end_button" android:src="@drawable/call_btn_end" android:contentDescription="@string/acc_action_end_call" style="@style/CallControlButton" />
+    </LinearLayout>
+    <com.skype.android.widget.SymbolView android:id="@id/filter_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/camera_controls_side_margin" android:layout_marginTop="@dimen/padding4" android:layout_below="@id/control_options_buttons_layout" android:layout_alignParentLeft="true" android:soundEffectsEnabled="false" app:symbol_code="MagicWand" style="@style/ControlButtonOnViewfinder" />
+</RelativeLayout>

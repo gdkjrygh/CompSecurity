@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/base" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/carrier_info" style="@style/text_message" />
+    <LinearLayout android:visibility="gone" style="@style/fullline_view">
+        <com.google.android.gms.common.SignInButton android:id="@id/signup_bt" android:layout_marginRight="@dimen/margin" style="@style/wrap_view" />
+        <Button android:id="@id/signout_bt" android:layout_marginRight="@dimen/margin" android:text="Sign Out" style="@style/button_plain" />
+        <Button android:id="@id/exp_bt" android:text="Load Exp" style="@style/button_plain" />
+    </LinearLayout>
+    <LinearLayout style="@style/fullline_view">
+        <Button android:id="@id/update_bt" android:text="Update App" style="@style/button_plain" />
+        <Button android:id="@id/pinpicks_bt" android:text="Pin Picks" style="@style/button_plain" />
+    </LinearLayout>
+    <LinearLayout style="@style/fullline_view">
+        <EditText android:layout_gravity="center_vertical" android:id="@id/notif_count_tv" android:padding="0.0dip" android:layout_width="50.0dip" android:layout_height="@dimen/button_height" android:layout_marginRight="@dimen/margin" android:text="5" android:hint="Unseen notification" />
+        <Button android:id="@id/nux_bt" android:layout_marginRight="@dimen/margin" android:text="Show NUX" style="@style/button_plain" />
+        <Button android:id="@id/widget_check_bt" android:text="Check" style="@style/button_plain" />
+    </LinearLayout>
+    <LinearLayout style="@style/fullline_view">
+        <Button android:id="@id/show_notif_bt" android:layout_marginRight="@dimen/margin" android:text="Pull Notif" style="@style/button_plain" />
+        <Button android:id="@id/show_nag_bt" android:text="Contacts Dialog" style="@style/button_plain" />
+    </LinearLayout>
+    <LinearLayout style="@style/fullline_view">
+        <TextView android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin" android:text="Base API Url" android:layout_weight="1.0" />
+        <Button android:id="@id/dev_bt" android:layout_marginRight="@dimen/margin" android:text="Dev" style="@style/button_plain" />
+        <Button android:id="@id/reset_bt" android:text="@string/reset" style="@style/button_plain" />
+    </LinearLayout>
+    <EditText android:id="@id/api_et" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout style="@style/fullline_view">
+        <TextView android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin" android:text="Base Tracking API Url" android:layout_weight="1.0" />
+        <Button android:id="@id/dev_logging_api_bt" android:layout_marginRight="@dimen/margin" android:text="Dev" style="@style/button_plain" />
+        <Button android:id="@id/reset_logging_api_bt" android:text="@string/reset" style="@style/button_plain" />
+    </LinearLayout>
+    <EditText android:id="@id/logging_api_et" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout style="@style/fullline_view">
+        <TextView android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin" android:text="Base Tracking API Url V4" android:layout_weight="1.0" />
+        <Button android:id="@id/dev_logging_api_bt_v4" android:layout_marginRight="@dimen/margin" android:text="Dev" style="@style/button_plain" />
+        <Button android:id="@id/reset_logging_api_bt_v4" android:text="@string/reset" style="@style/button_plain" />
+    </LinearLayout>
+    <EditText android:id="@id/logging_api_et_v4" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <CheckBox android:id="@id/toastmode_cb" android:layout_marginTop="@dimen/margin_half" android:text="Display debugging output" style="@style/wrap_view" />
+    <CheckBox android:id="@id/vx_cb" android:layout_marginTop="@dimen/margin_half" android:text="Use VX endpoint on Home" style="@style/wrap_view" />
+    <CheckBox android:id="@id/pfy_cb" android:layout_marginTop="@dimen/margin_half" android:text="Test PFY on Home" style="@style/wrap_view" />
+    <CheckBox android:id="@id/csr_cb" android:layout_marginTop="@dimen/margin_half" android:text="Include CSRs in search" style="@style/wrap_view" />
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height" android:layout_marginTop="@dimen/margin_half">
+        <TextView android:text="@string/locale" style="@style/section_item_label" />
+        <Spinner android:id="@id/locale_spinner" style="@style/section_item_meta" />
+    </LinearLayout>
+</LinearLayout>

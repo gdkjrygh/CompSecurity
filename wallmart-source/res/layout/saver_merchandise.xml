@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/saver_recommendation_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@color/saver_redeem_text_gray" android:id="@id/saver_recommendation_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="8.0dip" android:text="@string/saver_merchandise_recommended" style="@style/Text.Light" />
+            <com.walmartlabs.ui.recycler.HorizontalListRecyclerView android:id="@id/saver_recommendation_items" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/saver_banner_rollback" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/saver_banner_rollback" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+        <include android:id="@id/saver_merchandise_loading" layout="@layout/loading_page" />
+    </FrameLayout>
+</merge>

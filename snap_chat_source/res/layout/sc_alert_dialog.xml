@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/base_alert_dialog_background" android:padding="@dimen/default_gap_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minWidth="@dimen/alert_dialog_min_width"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/title_section" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/text_size_default" android:textStyle="bold" android:gravity="center" android:id="@id/title_text" android:padding="@dimen/default_gap" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <View android:id="@id/title_underline" android:background="@color/alert_dialog_gray_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_below="@id/title_text" android:layout_alignLeft="@id/title_text" android:layout_alignRight="@id/title_text" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/text_size_default" android:gravity="center" android:id="@id/description_text" android:padding="@dimen/default_gap" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <EditText android:textSize="@dimen/text_size_default" android:id="@id/edit_text" android:background="@drawable/alert_dialog_edit_text_background" android:paddingLeft="@dimen/default_gap_2x" android:paddingTop="@dimen/default_gap" android:paddingRight="@dimen/default_gap_2x" android:paddingBottom="@dimen/default_gap" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+    <com.snapchat.android.ui.DynamicHeightListView android:id="@id/edit_text_selection" android:background="@color/purple_five_opacity" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/default_gap" android:listSelector="@drawable/sc_alert_dialog_list_selector" android:divider="@color/purple" android:dividerHeight="1.0dip" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/additional_button_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <Button android:id="@id/yes_button" android:visibility="gone" android:text="@string/yes" style="@style/sc_alert_dialog_yes_button" />
+    <Button android:id="@id/no_button" android:visibility="gone" android:text="@string/no" style="@style/sc_alert_dialog_no_button" />
+</LinearLayout>

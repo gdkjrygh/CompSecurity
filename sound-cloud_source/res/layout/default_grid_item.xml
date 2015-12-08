@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/gridview_padding_left_right" android:paddingTop="@dimen/gridview_padding_top_bottom" android:paddingRight="@dimen/gridview_padding_left_right" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sc="http://schemas.android.com/apk/res-auto">
+    <com.soundcloud.android.view.ParallaxImageView android:id="@id/image" sc:focalPoint="0.45" style="@style/GridItemImageView" />
+    <com.soundcloud.android.view.JaggedTextView android:id="@id/username" android:layout_marginLeft="@dimen/grid_item_padding" android:layout_above="@id/title" style="@style/BlackOverlayText.RegularSubtext" />
+    <com.soundcloud.android.view.JaggedTextView android:id="@id/title" android:layout_marginLeft="@dimen/grid_item_padding" android:layout_marginTop="4.0dip" android:layout_marginRight="@dimen/grid_item_padding" android:layout_marginBottom="@dimen/grid_item_padding" android:layout_alignBottom="@id/image" style="@style/BlackOverlayText.Regular" />
+    <RelativeLayout android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/image">
+        <TextView android:id="@id/tag" android:layout_toLeftOf="@id/extra_info" style="@style/GridItemTag" />
+        <TextView android:id="@id/extra_info" style="@style/GridItemExtra" />
+    </RelativeLayout>
+</RelativeLayout>

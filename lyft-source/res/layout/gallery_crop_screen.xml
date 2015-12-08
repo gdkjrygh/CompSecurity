@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.gallery.CropView android:orientation="horizontal" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.ui.gallery.Cropper android:id="@id/cropper_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <me.lyft.android.controls.CameraToolbar android:id="@id/camera_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:background="@color/camera_capture_panel_background" android:padding="@dimen/span8" android:layout_width="fill_parent" android:layout_height="@dimen/photo_capture_buttons_panel_vertical_width">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center" android:id="@id/retake_button" android:padding="@dimen/span20" android:layout_width="60.0dip" android:layout_height="58.0dip" android:src="@drawable/camera_redo_button" />
+        </FrameLayout>
+        <ImageView android:layout_gravity="center" android:id="@id/save_button" android:padding="33.0dip" android:layout_width="@dimen/span100" android:layout_height="92.0dip" android:src="@drawable/camera_use_photo_button" />
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+</me.lyft.android.ui.gallery.CropView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="13.0sp" android:textColor="@color/text_tip" android:gravity="center" android:id="@id/no_freecrop_text" android:paddingLeft="25.0dip" android:paddingRight="25.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/no_freecrop_deco" />
+    <GridView android:id="@id/panel_decos" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="@dimen/image_selector_gridview_verticalSpacing" android:verticalSpacing="@dimen/image_selector_gridview_verticalSpacing" android:numColumns="4" android:layout_above="@id/freecrop_create_new_root_layout" />
+    <RelativeLayout android:gravity="center" android:id="@id/freecrop_create_new_root_layout" android:background="#ccededed" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_alignParentBottom="true">
+        <RelativeLayout android:id="@id/freecrop_create_new_layout" android:background="@drawable/cloudlib_green_btn" android:layout_width="250.0dip" android:layout_height="43.0dip">
+            <ImageView android:id="@id/freecrop_plus" android:background="@drawable/icon_plus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/freecrop_create_new" android:layout_centerVertical="true" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/freecrop_create_new" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/freecrop_create_new" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

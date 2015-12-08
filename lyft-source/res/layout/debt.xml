@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.payment.DebtView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageButton android:layout_gravity="top|left|center" android:id="@id/close_button" android:src="@drawable/actionbar_close_button" style="@style/RegistrationActionbarButton" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/big_text_3" android:textStyle="bold" android:layout_gravity="center" android:layout_marginTop="80.0dip" android:text="@string/debt_card_list_title" style="@style/TertiaryText" />
+            <TextView android:textSize="44.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/debt_amount_txt" android:layout_marginTop="16.0dip" android:text="" style="@style/TertiaryText" />
+            <TextView android:textSize="@dimen/small_text" android:textStyle="bold" android:gravity="center" android:layout_gravity="center" android:id="@id/debt_card_list_subtitle_txt" android:layout_marginLeft="32.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="32.0dip" android:text="@string/debt_card_list_subtitle" style="@style/TertiaryText" />
+            <View android:layout_marginTop="32.0dip" style="@style/Splitter" />
+            <LinearLayout android:orientation="vertical" android:id="@id/card_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+</me.lyft.android.ui.payment.DebtView>

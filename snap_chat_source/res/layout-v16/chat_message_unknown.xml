@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/chat_in_message_header" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/chat_in_message_header" />
+    <FrameLayout android:layout_gravity="center_vertical" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/in_screen_message_view" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:layout_gravity="center_vertical" android:id="@id/chat_message_color_bar" android:background="@color/blue" android:layout_width="@dimen/chat_unsaved_bar_width" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/default_gap" android:layout_marginRight="@dimen/chat_unsaved_bar_right_margin" android:layout_alignBottom="@id/chat_message_content_holder" android:layout_alignParentTop="true" />
+            <TextView android:textSize="@dimen/chat_message_text_size" android:textStyle="normal" android:textColor="@color/chat_feed_snap_status_text_color" android:layout_gravity="center_vertical" android:id="@id/chat_message_status_text" android:paddingRight="@dimen/default_gap_half" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap_1_5x" android:layout_marginTop="@dimen/default_gap" android:layout_marginRight="@dimen/default_gap" android:layout_marginBottom="@dimen/default_gap_half" android:layout_toRightOf="@id/chat_message_color_bar" android:fontFamily="sans-serif-light" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/chat_time_text_size" android:textStyle="normal" android:textColor="@color/list_view_secondary_text" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/chat_message_time" android:layout_width="@dimen/chat_time_width" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/chat_time_margin_left" android:fontFamily="sans-serif-light" style="@style/chat_text" />
+    </FrameLayout>
+</LinearLayout>

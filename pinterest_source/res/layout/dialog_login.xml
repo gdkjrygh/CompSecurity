@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" style="@style/wrap_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0px" android:layout_height="0.0px" />
+    <LinearLayout android:orientation="vertical" android:id="@id/social_container" style="@style/fullline_view">
+        <include layout="@layout/dialog_login_primary_networks" />
+        <include layout="@layout/dialog_login_secondary_networks" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/message_container" android:padding="@dimen/margin" android:visibility="gone" style="@style/fullline_view">
+        <TextView android:id="@id/title_tv" android:text="@string/already_have_an_account" style="@style/dialog_title" />
+        <TextView android:id="@id/message_tv" android:text="@string/login_to_link" style="@style/dialog_subtitle" />
+    </LinearLayout>
+    <View style="@style/list_cell_divider" />
+    <com.pinterest.ui.text.PEditText android:id="@id/email" android:layout_width="@dimen/signup_button_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginTop="@dimen/margin" android:layout_marginRight="@dimen/margin" android:hint="@string/email" android:inputType="textEmailAddress" android:imeOptions="actionNext|flagNoExtractUi" style="@style/EditTextPinterest" />
+    <com.pinterest.ui.text.PEditText android:id="@id/password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginTop="@dimen/margin_half" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin" android:hint="@string/password" android:inputType="textPassword" android:imeOptions="actionGo|flagNoExtractUi" style="@style/EditTextPinterest" />
+    <View style="@style/list_cell_divider" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin">
+        <TextView android:id="@id/forgot" android:paddingRight="@dimen/margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin" android:text="@string/forgot_your_password" android:maxLines="3" android:singleLine="false" android:layout_toLeftOf="@id/login_bt" android:layout_centerVertical="true" style="@style/text_subtitle" />
+        <Button android:id="@id/login_bt" android:layout_marginLeft="@dimen/margin" android:text="@string/login" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/button_red" />
+    </RelativeLayout>
+</LinearLayout>

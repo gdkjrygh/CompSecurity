@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/card_margin_top" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/small_font_size" android:textColor="#ff666666" android:ellipsize="end" android:id="@id/related_tracks_heading" android:background="@drawable/card_frame_top" android:paddingLeft="12.0dip" android:paddingTop="16.0dip" android:paddingRight="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/related_tracks" android:includeFontPadding="false" yt:robotoFont="regular" yt:allCaps="true" />
+    <ImageView android:background="@drawable/card_frame_middle" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/card_separator_height" android:src="#ffe1e1e1" />
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/card_frame_middle" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.youtube.app.ui.SelectorOnTopFrameLayout android:id="@id/suggested_item_1" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" yt:selectorIgnoresPadding="true" yt:selectorMarginLeft="@dimen/card_in_line_selector_margin_left" yt:selectorMarginTop="1.0dip" yt:selectorMarginRight="@dimen/card_in_line_selector_margin_right">
+            <include layout="@layout/inline_video_item_body" />
+        </com.google.android.apps.youtube.app.ui.SelectorOnTopFrameLayout>
+        <View android:id="@id/separator_1" android:background="#ffe1e1e1" android:layout_width="@dimen/card_separator_height" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+        <com.google.android.apps.youtube.app.ui.SelectorOnTopFrameLayout android:id="@id/suggested_item_2" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" yt:selectorIgnoresPadding="true" yt:selectorMarginLeft="@dimen/card_in_line_selector_margin_left" yt:selectorMarginRight="@dimen/card_in_line_selector_margin_right">
+            <include layout="@layout/inline_video_item_body" />
+        </com.google.android.apps.youtube.app.ui.SelectorOnTopFrameLayout>
+        <View android:id="@id/separator_2" android:background="#ffe1e1e1" android:layout_width="@dimen/card_separator_height" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+        <com.google.android.apps.youtube.app.ui.SelectorOnTopFrameLayout android:id="@id/suggested_item_3" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" yt:selectorIgnoresPadding="true" yt:selectorMarginLeft="@dimen/card_in_line_selector_margin_left" yt:selectorMarginRight="@dimen/card_in_line_selector_margin_right">
+            <include layout="@layout/inline_video_item_body" />
+        </com.google.android.apps.youtube.app.ui.SelectorOnTopFrameLayout>
+    </LinearLayout>
+    <ImageView android:background="@drawable/card_frame_middle" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/card_separator_height" android:src="#ffe1e1e1" />
+    <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/small_font_size" android:textColor="#ff1b7fcc" android:gravity="center_vertical" android:id="@id/more" android:background="@drawable/card_frame_bottom_selector" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" android:text="@string/more_suggestions" android:maxLines="1" yt:robotoFont="regular" yt:allCaps="true" />
+</LinearLayout>

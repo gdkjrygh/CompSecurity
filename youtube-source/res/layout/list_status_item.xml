@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/list_status_item_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:tag="progressbar" android:visibility="gone" android:layout_width="@dimen/status_spinner_width" android:layout_height="@dimen/status_spinner_height" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:tag="error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/list_item_padding" android:src="@drawable/alert_error" />
+        <TextView android:textSize="@dimen/medium_font_size" android:textColor="@color/grey_text" android:gravity="center" android:tag="error_message" android:paddingLeft="@dimen/list_item_padding" android:paddingRight="@dimen/list_item_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <Button android:tag="retry_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/list_item_padding" android:text="@string/retry" />
+    </LinearLayout>
+</FrameLayout>

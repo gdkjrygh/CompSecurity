@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.translate.widget.LanguagePicker android:gravity="center_vertical" android:id="@id/language_picker" android:background="@drawable/bg_top_bar_blue" android:layout_width="fill_parent" android:layout_height="@dimen/activity_title_height" />
+    <LinearLayout android:orientation="vertical" android:id="@id/input_bar_contents" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:background="@android:color/white" android:paddingLeft="@dimen/card_spacing" android:paddingRight="@dimen/card_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/lyt_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:id="@id/speaker_view_wrapper" android:layout_width="fill_parent" android:layout_height="@dimen/default_touch_target">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/speaker_lang_touch_wrapper" android:background="@drawable/bg_clickable_blue" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/start_card_padding">
+                        <com.google.android.apps.translate.widget.SpeakerView android:id="@id/speaker_view" android:paddingRight="@dimen/result_speaker_spacing" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/primary_text" android:gravity="center_vertical" android:id="@id/txt_lang" android:paddingRight="@dimen/result_speaker_spacing" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0" android:textAllCaps="true" />
+                    </LinearLayout>
+                    <com.google.android.apps.translate.widget.TintImageView android:id="@id/btn_clear_input" android:layout_width="@dimen/default_touch_target" android:layout_height="@dimen/default_touch_target" android:contentDescription="@string/label_cancel_input" ns:mask="@drawable/ic_clear_black" ns:tint="@color/icon_dark_clickable" ns:iconSize="24.0dip" ns:mutate="true" />
+                </LinearLayout>
+                <com.google.android.apps.translate.widget.InputTextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/primary_text" android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/card_padding" android:layout_marginRight="@dimen/card_padding" />
+                <TextView android:textAppearance="?android:textAppearance" android:textColor="@color/secondary_text" android:ellipsize="end" android:id="@id/txt_transliteration" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/card_padding" android:layout_marginRight="@dimen/card_padding" android:singleLine="true" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/lyt_home" android:paddingLeft="@dimen/card_padding" android:paddingTop="@dimen/card_padding_with_shadow" android:paddingRight="@dimen/card_padding" android:layout_width="fill_parent" android:layout_height="10.0dip" android:paddingEnd="@dimen/card_padding">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/img_cursor" android:layout_width="0.5dip" android:layout_height="24.0sp" android:src="@drawable/ani_blink_cursor" android:scaleType="fitXY" />
+                    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/input_hint_text" android:id="@id/touch_to_type_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/input_card_hint_touch_to_type" android:singleLine="true" />
+                </LinearLayout>
+            </FrameLayout>
+        </FrameLayout>
+        <LinearLayout android:background="@android:color/white" android:paddingLeft="@dimen/input_button_side_spacing" android:paddingRight="@dimen/input_button_side_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.translate.widget.PartialStateButton android:id="@id/btn_camera" android:layout_width="0.0dip" android:layout_height="@dimen/default_touch_target" android:layout_weight="1.0" android:contentDescription="@string/label_camera">
+                <com.google.android.apps.translate.widget.TintImageView android:layout_gravity="center_horizontal" android:background="@drawable/bg_input_button_blue" android:duplicateParentState="true" android:layout_width="@dimen/default_touch_target" android:layout_height="@dimen/default_touch_target" ns:mask="@drawable/ic_camera_selector" ns:tint="@color/input_method_button_tint" />
+            </com.google.android.apps.translate.widget.PartialStateButton>
+            <com.google.android.apps.translate.widget.PartialStateButton android:id="@id/btn_speech" android:layout_width="0.0dip" android:layout_height="@dimen/default_touch_target" android:layout_weight="1.0" android:contentDescription="@string/label_speech">
+                <com.google.android.apps.translate.widget.TintImageView android:layout_gravity="center_horizontal" android:background="@drawable/bg_input_button_red" android:duplicateParentState="true" android:layout_width="@dimen/default_touch_target" android:layout_height="@dimen/default_touch_target" ns:mask="@drawable/ic_voice_black" ns:tint="@color/input_method_button_tint" />
+            </com.google.android.apps.translate.widget.PartialStateButton>
+            <com.google.android.apps.translate.widget.PartialStateButton android:id="@id/btn_handwriting" android:layout_width="0.0dip" android:layout_height="@dimen/default_touch_target" android:layout_weight="1.0" android:contentDescription="@string/label_handwriting">
+                <com.google.android.apps.translate.widget.TintImageView android:layout_gravity="center_horizontal" android:background="@drawable/bg_input_button_blue" android:duplicateParentState="true" android:layout_width="@dimen/default_touch_target" android:layout_height="@dimen/default_touch_target" ns:mask="@drawable/ic_handwriting_black" ns:tint="@color/input_method_button_tint" />
+            </com.google.android.apps.translate.widget.PartialStateButton>
+        </LinearLayout>
+        <ImageView android:id="@id/bottom_shadow" android:layout_width="fill_parent" android:layout_height="4.0dip" android:src="@drawable/shadow_bottom" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/white_alpha30" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/white" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <TextView android:textSize="14.0sp" android:gravity="center_vertical" android:id="@id/footer" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ereceipt_scan_help_text" android:layout_weight="1.0" style="@style/Text.Fine.Light" />
+            <ImageView android:gravity="center" android:id="@id/info_button" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icn_help" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@color/white_alpha30" android:layout_width="15.0dip" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <View android:background="@color/white_alpha30" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <ImageView android:id="@id/scan_area_indicator" android:background="@drawable/scan_area_indicator_white" android:layout_width="@dimen/ereceipt_qr_scanner_scan_indicator_width" android:layout_height="@dimen/ereceipt_qr_scanner_scan_indicator_height" android:adjustViewBounds="true" />
+            <View android:background="@color/white_alpha30" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:background="@color/white_alpha30" android:layout_width="15.0dip" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <RelativeLayout android:background="@color/white_alpha30" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <Button android:id="@id/type_info_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ereceipt_scan_manual_text" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/PrimaryButton.Blue" />
+    </RelativeLayout>
+</LinearLayout>

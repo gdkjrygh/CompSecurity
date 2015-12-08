@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/wizard_title" />
+            <TextView android:id="@android:id/title" android:layout_width="fill_parent" android:layout_height="@dimen/wizard_title" android:text="@string/wizard_done" style="@style/WizardTitle" />
+            <TextView android:id="@id/done_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@android:id/title" style="@style/WizardMessage" />
+        </RelativeLayout>
+    </ScrollView>
+    <View style="@style/DefaultDividerH" />
+    <include layout="@layout/wizard_button_bar" />
+</LinearLayout>

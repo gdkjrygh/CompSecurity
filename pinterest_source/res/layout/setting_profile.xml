@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:text="@string/profile" style="@style/profile_about_section_title" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/card_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/partner_name_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/business_name_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+                <TextView android:id="@id/business_name_label" android:text="@string/business_name" style="@style/section_item_label" />
+                <TextView android:ellipsize="end" android:gravity="right" android:id="@id/business_name" android:maxLines="1" android:singleLine="true" android:layout_toRightOf="@id/business_name_label" style="@style/section_item_meta" />
+            </RelativeLayout>
+            <View style="@style/section_item_divider" />
+            <RelativeLayout android:id="@id/contact_name_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+                <TextView android:id="@id/contact_name_label" android:text="@string/contact_name" style="@style/section_item_label" />
+                <TextView android:ellipsize="end" android:gravity="right" android:id="@id/contact_name" android:maxLines="1" android:singleLine="true" android:layout_toRightOf="@id/contact_name_label" style="@style/section_item_meta" />
+            </RelativeLayout>
+            <View style="@style/section_item_divider" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/pinner_name_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/name_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+                <TextView android:id="@id/name_label" android:text="@string/signup_name_title" style="@style/section_item_label" />
+                <TextView android:ellipsize="end" android:gravity="right" android:id="@id/name" android:maxLines="1" android:singleLine="true" android:layout_toRightOf="@id/name_label" style="@style/section_item_meta" />
+            </RelativeLayout>
+            <View style="@style/section_item_divider" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/username_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+            <TextView android:id="@id/username_label" android:text="@string/signup_username_title" style="@style/section_item_label" />
+            <TextView android:ellipsize="end" android:gravity="right" android:id="@id/username" android:maxLines="1" android:singleLine="true" android:layout_toRightOf="@id/username_label" style="@style/section_item_meta" />
+        </RelativeLayout>
+        <View style="@style/section_item_divider" />
+        <RelativeLayout android:id="@id/email_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+            <TextView android:id="@id/email_label" android:text="@string/signup_email_title" style="@style/section_item_label" />
+            <TextView android:ellipsize="end" android:gravity="right" android:id="@id/email" android:maxLines="1" android:singleLine="true" android:layout_toRightOf="@id/email_label" style="@style/section_item_meta" />
+        </RelativeLayout>
+        <View style="@style/section_item_divider" />
+        <RelativeLayout android:id="@id/country_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+            <TextView android:id="@id/country_label" android:text="@string/country" style="@style/section_item_label" />
+            <TextView android:ellipsize="end" android:gravity="right" android:id="@id/country" android:maxLines="1" android:singleLine="true" android:layout_toRightOf="@id/country_label" style="@style/section_item_meta" />
+        </RelativeLayout>
+        <View style="@style/section_item_divider" />
+        <LinearLayout android:orientation="vertical" android:id="@id/gender_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/gender_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+                <TextView android:id="@id/gender_label" android:text="@string/signup_gender_title" style="@style/section_item_label" />
+                <TextView android:ellipsize="end" android:gravity="right" android:id="@id/gender" android:maxLines="1" android:singleLine="true" android:layout_toRightOf="@id/gender_label" style="@style/section_item_meta" />
+            </RelativeLayout>
+            <View style="@style/section_item_divider" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/language_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/list_cell_compact_height">
+            <TextView android:id="@id/language_tv" android:text="@string/language" style="@style/section_item_label" />
+            <TextView android:textSize="12.0dip" android:gravity="right" android:id="@id/language" android:text="@string/use_device_language" android:layout_toRightOf="@id/language_tv" style="@style/section_item_meta" />
+        </RelativeLayout>
+        <View style="@style/section_item_divider" />
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@id/change_pwd_bt" android:background="@drawable/touch_clear_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height" android:text="@string/change_your_password" android:maxLines="1" android:singleLine="true" style="@style/section_item_label" />
+    </LinearLayout>
+</merge>

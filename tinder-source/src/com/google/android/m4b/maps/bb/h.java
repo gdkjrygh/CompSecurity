@@ -1,0 +1,15 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.m4b.maps.bb;
+
+import com.google.android.m4b.maps.bo.f;
+
+public interface h
+{
+
+    public abstract boolean a(f f);
+
+    public abstract void b(f f);
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:paddingLeft="@dimen/settings_main_margin" android:paddingRight="@dimen/settings_main_margin" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/alert_no_data_layout" />
+        <LinearLayout android:orientation="vertical" android:id="@id/settings_layout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textColor="@color/settings_heading_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_default_marginleft" android:layout_marginTop="@dimen/settings_default_margin" android:text="@string/settings_alerts_your_locations_text" weather:font="Roboto-Bold.ttf" />
+            <View android:background="@color/thick_grey_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/thick_grey_line_height" android:layout_marginTop="@dimen/line_margintop" />
+            <com.weather.commons.ui.widgets.ExpandableHeightListView android:id="@id/significant_alert_locations" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/location_manager_list_selector" />
+            <TextView android:textColor="@android:color/darker_gray" android:id="@id/noLocationsTextView" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_default_margin" android:layout_marginBottom="@dimen/settings_default_margin" android:text="@string/no_significant_weather_location_default_phrase" />
+            <LinearLayout android:orientation="vertical" android:id="@id/significant_parent" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

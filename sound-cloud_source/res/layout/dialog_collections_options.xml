@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/collections_playlists_options_dialog" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textStyle="normal" android:textColor="@color/collections_options_dialog_header" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/collections_options_header_filters" style="?android:attr/listSeparatorTextViewStyle" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="12.0dip" android:layout_marginBottom="8.0dip" android:divider="@drawable/horizontal_spacer" android:showDividers="middle">
+        <ToggleButton android:id="@id/show_posts" android:textOn="@string/collections_options_toggle_created" android:textOff="@string/collections_options_toggle_created" style="@style/Collections.OptionsToggle" />
+        <ToggleButton android:id="@id/show_likes" android:textOn="@string/collections_options_toggle_likes" android:textOff="@string/collections_options_toggle_likes" style="@style/Collections.OptionsToggle" />
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textStyle="normal" android:textColor="@color/collections_options_dialog_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/collections_options_header_sorting" style="?android:attr/listSeparatorTextViewStyle" />
+    <RadioGroup android:id="@id/sort_options" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checkedButton="@id/sort_by_creation_date">
+        <RadioButton android:id="@id/sort_by_creation_date" android:text="@string/collections_options_dialog_sort_by_creation" style="@style/Collections.RadioButton" />
+        <RadioButton android:id="@id/sort_by_title" android:text="@string/collections_options_dialog_sort_by_title" style="@style/Collections.RadioButton" />
+    </RadioGroup>
+</LinearLayout>

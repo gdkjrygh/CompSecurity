@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.settings.CarView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <me.lyft.android.controls.BackButtonToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.makeramen.roundedimageview.RoundedImageView android:id="@id/photo" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/placeholder_car_view_photo" app:riv_oval="true" />
+            <TextView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/car_info_photo_label" style="@style/PrimaryText" />
+        </LinearLayout>
+        <View style="@style/SplitterMaterial" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip">
+                <TextView android:textSize="@dimen/normal_text" android:gravity="left|center" android:paddingRight="16.0dip" android:text="@string/car_info_vehicle_title" android:singleLine="true" style="@style/PrimaryText" />
+                <TextView android:textSize="@dimen/normal_text" android:textStyle="italic" android:gravity="right|center" android:id="@id/vehicle_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="" android:singleLine="false" android:layout_weight="1.0" style="@style/PrimaryText" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip">
+                <TextView android:textSize="@dimen/normal_text" android:gravity="left|center" android:paddingRight="16.0dip" android:text="@string/car_info_license_plate_title" android:singleLine="true" style="@style/PrimaryText" />
+                <TextView android:textSize="@dimen/normal_text" android:textStyle="italic" android:gravity="right|center" android:id="@id/license_plate_text" android:layout_width="0.0dip" android:singleLine="true" android:layout_weight="1.0" style="@style/PrimaryText" />
+            </LinearLayout>
+            <View android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" style="@style/SplitterMaterial" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/personal_insurance_layout" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" style="@style/CellButton">
+                <TextView android:textSize="@dimen/normal_text" android:gravity="left|center" android:paddingRight="16.0dip" android:duplicateParentState="true" android:text="@string/car_info_personal_insurance" android:singleLine="true" style="@style/PrimaryText" />
+                <TextView android:textSize="@dimen/normal_text" android:textColor="@color/red_1" android:gravity="right|center" android:id="@id/personal_insurance_status_text" android:duplicateParentState="true" android:layout_width="0.0dip" android:singleLine="true" android:layout_weight="1.0" style="@style/PrimaryText" />
+            </LinearLayout>
+            <Button android:id="@id/lyft_insurance_button" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/car_info_lyft_insurance" style="@style/CellButton" />
+            <Button android:id="@id/vehicle_inspection_button" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/car_info_vehicle_inspection" style="@style/CellButton" />
+            <Button android:id="@id/vehicle_registration_button" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/car_info_vehicle_registration" style="@style/CellButton" />
+        </LinearLayout>
+    </LinearLayout>
+</me.lyft.android.ui.settings.CarView>

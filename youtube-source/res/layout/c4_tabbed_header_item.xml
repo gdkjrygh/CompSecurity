@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/channel_header" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <com.google.android.apps.youtube.core.ui.FixedAspectRatioFrameLayout android:id="@id/channel_banner_container" android:background="@color/channel_layer_banner_background" android:layout_width="fill_parent" android:layout_height="fill_parent" yt:aspectRatio="@fraction/channel_layer_banner_aspect_ratio">
+        <ImageView android:id="@id/channel_banner" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    </com.google.android.apps.youtube.core.ui.FixedAspectRatioFrameLayout>
+    <View android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/channel_header_content" android:background="@color/white" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <ImageView android:id="@id/channel_avatar" android:background="@drawable/bg_avatar" android:layout_width="@dimen/channel_header_avatar_width" android:layout_height="@dimen/channel_header_avatar_height" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:scaleType="centerCrop" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/medium_font_size" android:textColor="#ff222222" android:ellipsize="end" android:gravity="left|center" android:id="@id/channel_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" yt:robotoFont="light" />
+            <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/extra_small_font_size" android:textColor="#ff999999" android:ellipsize="end" android:id="@id/channel_subscribers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:singleLine="true" yt:robotoFont="light" />
+        </LinearLayout>
+        <include layout="@layout/subscribe_button" />
+    </LinearLayout>
+</LinearLayout>

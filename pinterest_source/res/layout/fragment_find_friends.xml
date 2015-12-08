@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_grid" style="@style/fullline_view"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pinterest="http://schemas.android.com/apk/res-auto">
+    <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+    <com.pinterest.ui.tab.TabBar android:id="@id/tabbar" android:paddingLeft="@dimen/margin" android:paddingRight="@dimen/margin" style="@style/ImageTabBar">
+        <com.pinterest.ui.tab.Tab pinterest:srcOn="@drawable/ic_invite_contact_tab_logo" pinterest:srcOff="@drawable/ic_invite_contact_tab_logo" pinterest:text="@string/contacts" pinterest:iconOnColor="@color/red" pinterest:iconOffColor="@color/inactive_tab_logo" style="@style/ImageTabEqual" />
+        <com.pinterest.ui.tab.Tab pinterest:srcOn="@drawable/ic_invite_facebook_tab_logo" pinterest:srcOff="@drawable/ic_invite_facebook_tab_logo" pinterest:text="@string/facebook" pinterest:iconOnColor="@color/facebook" pinterest:iconOffColor="@color/inactive_tab_logo" style="@style/ImageTabEqual" />
+        <com.pinterest.ui.tab.Tab pinterest:srcOn="@drawable/ic_invite_twitter_tab_logo" pinterest:srcOff="@drawable/ic_invite_twitter_tab_logo" pinterest:text="@string/twitter" pinterest:iconOnColor="@color/twitter" pinterest:iconOffColor="@color/inactive_tab_logo" style="@style/ImageTabEqual" />
+        <com.pinterest.ui.tab.Tab pinterest:srcOn="@drawable/ic_invite_more_tab_logo" pinterest:srcOff="@drawable/ic_invite_more_tab_logo" pinterest:text="@string/more_no_dot" pinterest:iconOnColor="@color/red" pinterest:iconOffColor="@color/inactive_tab_logo" style="@style/ImageTabEqual" />
+    </com.pinterest.ui.tab.TabBar>
+    <View style="@style/dropshadow_down" />
+    <com.pinterest.activity.task.view.ChildViewPager android:id="@id/content_pager_vw" style="@style/full_view" />
+</LinearLayout>

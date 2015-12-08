@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/onboarding_screen_container" android:background="@drawable/onboarding_blue_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/onboarding_text_container" android:background="@color/white" android:paddingBottom="60.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:layout_gravity="center_horizontal" android:id="@id/onboarding_text_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" style="@style/Text.OnboardingTitle" />
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@id/onboarding_text_details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="30.0dip" android:maxLines="3" android:lines="3" style="@style/Text.OnboardingMessage" />
+    </LinearLayout>
+    <ImageView android:id="@id/onboarding_image_main" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/onboarding_image_top_margin" android:src="@drawable/phone_green_onboarding" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_above="@id/onboarding_text_container" android:layout_centerHorizontal="true" />
+</RelativeLayout>

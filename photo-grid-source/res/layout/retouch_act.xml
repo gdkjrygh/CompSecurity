@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ff272727" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_bar" layout="@layout/fragment_doodle_top" />
+    <RelativeLayout android:id="@id/logo_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ad_margin_top" android:layout_below="@id/title_bar">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/logo_lo" android:layout_width="fill_parent" android:layout_height="@dimen/ad_layout_height" />
+        <ImageView android:id="@id/ad_remove" android:layout_width="@dimen/ad_remove_width" android:layout_height="@dimen/ad_remove_height" android:src="@drawable/icon_remove" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <FrameLayout android:orientation="vertical" android:id="@id/fragment_frame_layout" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/logo_layout" />
+    <include android:visibility="gone" layout="@layout/progressbar" />
+</RelativeLayout>

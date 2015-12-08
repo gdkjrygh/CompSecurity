@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nbcsports.liveextra.ui.player.premierleague.player.PlayerItemView android:tag="layout/pl_player_item_view_0" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true" style="@style/Blade"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="2.0dip">
+        <ImageView android:id="@id/pl_backdrop" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/pl_player_backdrop_height" android:layout_alignParentTop="true" />
+        <ImageView android:id="@id/player_pic" android:tag="binding_2" android:layout_width="@dimen/pl_player_pic_width" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_alignTop="@id/pl_backdrop" android:layout_alignParentLeft="true" />
+        <View android:background="@drawable/gradient_bottom_dark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/player_pic" android:layout_alignTop="@id/player_pic" android:layout_alignRight="@id/player_pic" android:layout_alignBottom="@id/player_pic" />
+        <LinearLayout android:orientation="vertical" android:id="@id/pl_player_bio" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/player_pic" android:layout_below="@id/field" android:layout_alignTop="@id/player_pic">
+            <LinearLayout android:orientation="vertical" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="12.0sp" android:textColor="?android:textColorTertiary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="Height" android:textAllCaps="true" />
+                <TextView android:textSize="14.0sp" android:textColor="?android:textColorPrimary" android:id="@id/pl_player_height" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/gradient_left" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="12.0sp" android:textColor="?android:textColorTertiary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="Weight" android:textAllCaps="true" />
+                <TextView android:textSize="14.0sp" android:textColor="?android:textColorPrimary" android:id="@id/pl_player_weight" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="12.0sp" android:textColor="?android:textColorTertiary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="Date of Birth" android:textAllCaps="true" />
+                <TextView android:textSize="14.0sp" android:textColor="?android:textColorPrimary" android:id="@id/pl_player_birth" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/gradient_left" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="12.0sp" android:textColor="?android:textColorTertiary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="Country" android:textAllCaps="true" />
+                <TextView android:textSize="14.0sp" android:textColor="?android:textColorPrimary" android:id="@id/pl_player_country" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:gravity="bottom" android:id="@id/player_info" android:background="@drawable/pl_mesh_transparent" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="68.0dip" android:layout_below="@id/pl_player_bio" android:backgroundTint="#aa000000">
+            <TextView android:textSize="48.0sp" android:textStyle="bold" android:id="@id/pl_player_number" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@id/pl_yellow_card" android:tag="binding_8" android:layout_width="24.0dip" android:layout_height="36.0dip" android:layout_margin="8.0dip" android:src="@drawable/ic_pl_yellow_card" android:layout_alignBottom="@id/pl_player_number" android:layout_alignParentRight="true" />
+            <ImageView android:id="@id/pl_red_card" android:tag="binding_9" android:layout_width="24.0dip" android:layout_height="36.0dip" android:layout_margin="8.0dip" android:src="@drawable/ic_pl_red_card" android:layout_alignBottom="@id/pl_player_number" android:layout_alignParentRight="true" />
+            <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:layout_toLeftOf="@id/pl_red_card" android:layout_toRightOf="@id/pl_player_number" android:layout_alignTop="@id/pl_player_number" android:layout_alignBottom="@id/pl_player_number">
+                <TextView android:textSize="12.0sp" android:textColor="?android:textColorPrimary" android:id="@id/pl_player_first_name" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" />
+                <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="?android:textColorPrimary" android:id="@id/pl_player_last_name" android:tag="binding_11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" />
+                <TextView android:textSize="8.0dip" android:textColor="?android:textColorSecondary" android:id="@id/pl_player_position" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" />
+            </LinearLayout>
+        </RelativeLayout>
+        <android.support.design.widget.TabLayout android:id="@id/pl_stats_tabs" android:tag="binding_13" android:background="@color/windowBackground" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_below="@id/player_info" app:tabMode="fixed" app:tabGravity="fill" />
+        <FrameLayout android:id="@id/pl_player_in_game" android:tag="binding_14" android:background="@color/windowBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/pl_stats_tabs">
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/pl_player_item_in_game" />
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/pl_player_item_in_game_gk" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/pl_player_season" android:tag="binding_15" android:background="@color/windowBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/pl_stats_tabs">
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/pl_player_item_season" />
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/pl_player_item_season_gk" />
+        </FrameLayout>
+    </RelativeLayout>
+</com.nbcsports.liveextra.ui.player.premierleague.player.PlayerItemView>

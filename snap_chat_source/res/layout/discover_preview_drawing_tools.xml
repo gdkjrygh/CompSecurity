@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/discover_preview_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/discover_preview_circle" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/discover_preview_drawing_tools" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageButton android:id="@id/picture_x" android:background="@drawable/aa_snap_preview_x" android:layout_width="66.66dip" android:layout_height="66.66dip" android:layout_marginLeft="2.0dip" android:layout_marginTop="2.0dip" />
+        <ImageButton android:id="@id/drawing_btn" android:background="@drawable/aa_snap_preview_color_picker_button" android:layout_width="48.659973dip" android:layout_height="66.66dip" android:layout_marginTop="6.659973dip" android:layout_marginRight="11.329987dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <Button android:id="@id/toggle_caption_btn" android:background="@drawable/text_button" android:layout_width="48.659973dip" android:layout_height="66.66dip" android:layout_marginTop="6.659973dip" android:layout_marginRight="1.0dip" android:layout_toLeftOf="@id/drawing_btn" android:layout_alignWithParentIfMissing="true" />
+        <RelativeLayout android:id="@id/picture_view_menu" android:paddingLeft="4.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <CheckBox android:id="@id/mute_button" android:background="@drawable/mute_button_selector" android:visibility="gone" android:layout_width="61.659973dip" android:layout_height="66.66dip" android:button="@null" />
+            <ImageButton android:id="@id/picture_save_pic" android:background="@drawable/aa_snap_preview_save" android:visibility="gone" android:layout_width="61.659973dip" android:layout_height="66.66dip" android:layout_toRightOf="@id/mute_button" />
+            <ImageButton android:id="@id/picture_send_pic" android:background="@drawable/send_snappreview" android:layout_width="61.659973dip" android:layout_height="66.66dip" android:layout_marginRight="10.665985dip" android:layout_marginBottom="2.3329773dip" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

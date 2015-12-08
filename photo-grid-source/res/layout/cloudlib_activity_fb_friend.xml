@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/relativeLayoutHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <RelativeLayout android:gravity="center_vertical" android:background="@drawable/cloudlib_bg_titlebar_gray" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_head_top_height">
+            <TextView android:textSize="@dimen/cloudlib_title_size" android:textColor="@color/white" android:ellipsize="middle" android:gravity="left|center" android:id="@id/textName_back" android:background="@drawable/cloudlib_btn_back" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/cloud_friends_albums" android:singleLine="true" android:drawableLeft="@drawable/icon_back" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <RelativeLayout android:gravity="center" android:id="@id/layout_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                <ProgressBar android:id="@id/progress_bar_thumb" android:visibility="invisible" android:layout_width="@dimen/cloudlib_head_progress_width" android:layout_height="@dimen/cloudlib_head_progress_width" android:layout_centerInParent="true" />
+                <ImageButton android:id="@id/refreshBtn" android:background="@drawable/cloudlib_btn_back" android:layout_width="@dimen/cloudlib_head_top_height" android:layout_height="fill_parent" android:src="@drawable/cloudlib_btn_refresh" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBottom="@id/layout_right" android:layout_centerHorizontal="true" layout="@layout/cloudlib_memory_info" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout_ad" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/relativeLayoutHeader">
+        <RelativeLayout android:id="@id/search_btn_layout" android:layout_width="fill_parent" android:layout_height="44.0dip">
+            <RelativeLayout android:background="@drawable/cloudlib_textfield_default" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_margin="2.0dip">
+                <ImageView android:id="@id/searchButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cloudlib_icon_search_gray" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/resetButton" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cloudlib_btn_reset" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <EditText android:textSize="16.0sp" android:textColor="#ff000000" android:textColorHint="#ffc7c7c7" android:id="@id/keyWordsText" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/cloud_fb_friendssearch" android:singleLine="true" android:layout_toLeftOf="@id/resetButton" android:layout_toRightOf="@id/searchButton" android:layout_centerVertical="true" android:imeOptions="actionSearch" android:textCursorDrawable="@null" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <ListView android:id="@id/list_fb_friends" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/cloudlib_gradient_bg" android:cacheColorHint="#00000000" android:divider="@color/cloudlist_listview_divider_color" android:dividerHeight="1.0dip" android:layout_below="@id/search_btn_layout" />
+        <include android:visibility="gone" layout="@layout/cloudlib_progressbar" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/modal_dialog_root_layout" android:paddingLeft="@dimen/dialog_modal_webview_padding_left" android:paddingTop="@dimen/dialog_modal_webview_padding_top" android:paddingRight="@dimen/dialog_modal_webview_padding_right" android:paddingBottom="@dimen/dialog_modal_webview_padding_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/webviewParent" android:background="@drawable/modal_dialog_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="12.0dip">
+        <RelativeLayout android:id="@id/webviewloading" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:id="@id/webviewProgressDialog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateBehavior="repeat" android:layout_centerInParent="true" style="?android:attr/progressBarStyleLargeInverse" />
+        </RelativeLayout>
+        <include android:id="@id/webviewCurtain" layout="@layout/include_curtain" />
+    </FrameLayout>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close_button" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:onClick="closeWebViewAsDialog" android:contentDescription="@string/close_dialog" />
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/chat_remove_text_view" />
+    <com.skype.android.widget.bubbles.BubbleRelativeLayout android:id="@id/async_media_content_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/async_media_content_thumbnail" android:layout_width="@dimen/media_message_thumbnail_4x3_width" android:layout_height="@dimen/media_message_thumbnail_4x3_height" android:scaleType="centerCrop" android:adjustViewBounds="false" />
+        <com.skype.android.widget.SymbolView android:textColor="@color/chat_picture_placeholder_color" android:id="@id/async_media_center_symbol" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/ChatXmmSymbol" />
+        <com.skype.android.widget.SymbolView android:textSize="@dimen/media_message_button_size" android:textColor="@color/white" android:id="@id/async_media_action" android:background="@drawable/chat_video_message_play_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/media_message_button_margin" android:layout_marginBottom="@dimen/media_message_button_margin" android:layout_alignRight="@id/async_media_content_thumbnail" android:layout_alignBottom="@id/async_media_content_thumbnail" />
+        <com.skype.android.widget.CircularProgressBar android:id="@id/async_media_progressbar" android:visibility="invisible" android:layout_width="@dimen/video_message_progress_size" android:layout_height="@dimen/video_message_progress_size" android:layout_marginRight="@dimen/video_message_progress_margin" android:layout_marginBottom="@dimen/video_message_progress_margin" android:indeterminateOnly="false" android:layout_alignRight="@id/async_media_content_thumbnail" android:layout_alignBottom="@id/async_media_content_thumbnail" />
+    </com.skype.android.widget.bubbles.BubbleRelativeLayout>
+    <RelativeLayout android:id="@id/failure_retry_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/font_small" android:textColor="@color/skype_light_grey" android:id="@id/video_message_failure_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/font_small" android:textColor="@color/skype_blue" android:id="@id/retry_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/video_message_failure_text" />
+    </RelativeLayout>
+</RelativeLayout>

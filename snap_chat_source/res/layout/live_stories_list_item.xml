@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/thumbnail_frame" android:layout_width="@dimen/horizontal_section_thumbnail_diameter" android:layout_height="@dimen/horizontal_section_thumbnail_diameter" android:layout_marginLeft="@dimen/default_gap" android:layout_marginRight="@dimen/default_gap" android:layout_centerHorizontal="true">
+        <ImageView android:id="@id/live_story_thumbnail" android:layout_width="@dimen/horizontal_section_thumbnail_diameter" android:layout_height="@dimen/horizontal_section_thumbnail_diameter" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/live_story_progress_bar" android:visibility="gone" android:layout_width="@dimen/horizontal_section_progress_bar_size" android:layout_height="@dimen/horizontal_section_progress_bar_size" />
+    </FrameLayout>
+    <TextView android:textSize="@dimen/horizontal_section_secondary_text_font" android:gravity="center" android:id="@id/live_story_display_name" android:layout_width="@dimen/horizontal_section_text_width" android:layout_height="@dimen/horizontal_section_secondary_text_height" android:layout_below="@id/thumbnail_frame" android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg_white_full_opacity" style="@style/full_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/bg_white_full_opacity" style="@style/full_view">
+        <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+        <TextView android:text="@string/what_is_phone_number" style="@style/signup_field_description" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/margin_half" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Spinner android:id="@id/country_spinner" android:background="@drawable/spinner_light_gray" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin" android:layout_weight="4.0" />
+            <com.pinterest.ui.text.PEditText android:id="@id/phone_number" android:layout_marginTop="0.0dip" android:layout_weight="1.0" android:inputType="phone" style="@style/GraySignupEditText" />
+        </LinearLayout>
+        <include layout="@layout/multistep_next" />
+        <TextView android:textColor="@color/text_brio_light" android:id="@id/phone_terms_tv" android:layout_margin="@dimen/margin" android:text="@string/phone_number_first_screen_whitelabel" android:maxLines="3" android:singleLine="false" style="@style/text_subtitle" />
+    </LinearLayout>
+    <TextView android:id="@id/use_email" android:text="@string/use_email" style="@style/alternative_signup_text" />
+</RelativeLayout>

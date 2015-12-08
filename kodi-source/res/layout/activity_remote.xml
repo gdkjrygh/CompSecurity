@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/toolbar_default" />
+        <FrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/background_image" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="centerCrop" android:contentDescription="@string/fanart" android:alpha="0.2" />
+            <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <org.xbmc.kore.ui.views.CirclePageIndicator android:id="@id/pager_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/small_padding" android:layout_marginBottom="2.0dip" style="@style/ViewPagerIndicator" />
+        </FrameLayout>
+    </LinearLayout>
+    <fragment android:name="org.xbmc.kore.ui.NavigationDrawerFragment" android:layout_gravity="left" android:id="@id/navigation_drawer" android:layout_width="@dimen/navigation_drawer_width" android:layout_height="fill_parent" />
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/focusGrabber" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0px" android:layout_height="0.0px" />
+    <HorizontalScrollView android:id="@id/token_scrollable" android:background="@drawable/ic_search_background" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="never">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/facet_search_et" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.pinterest.ui.text.PEditText android:textSize="@dimen/text_body" android:textColor="@color/text_dark" android:textColorHint="@color/gray" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/query_input" android:background="@color/transparent" android:paddingLeft="@dimen/margin_half" android:paddingRight="@dimen/margin_half" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minWidth="@dimen/search_topbar_text_min_width" android:maxLines="1" android:lines="1" android:scrollHorizontally="true" android:singleLine="true" android:inputType="textFilter|textAutoComplete" android:imeOptions="actionSearch|flagNoExtractUi" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <com.pinterest.ui.imageview.GrayWebImageView android:id="@id/user_icon" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="@dimen/margin_half" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/thumbnail_image_round" />
+    <com.pinterest.ui.text.IconView android:id="@id/search_right_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin_half" android:scaleType="centerInside" android:minWidth="@dimen/button_height" android:minHeight="@dimen/button_height" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</merge>

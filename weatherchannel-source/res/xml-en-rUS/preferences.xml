@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:key="preference_screen" android:defaultValue="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/settings_account_title" android:key="settings_account">
+        <Preference android:title="@string/account_settings_title" android:key="account_settings" android:summary="@string/___" />
+        <Preference android:title="@string/settings_login" android:key="settings_login" />
+        <Preference android:title="@string/settings_signup" android:key="settings_signup" />
+        <Preference android:title="@string/settings_weather_alerts" android:key="alert_settings" android:summary="@string/settings_customize_alerts" android:fragment="com.weather.Weather.settings.alerts.WeatherAlertsSettingsFragment" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_general_title" android:key="settings_title">
+        <Preference android:title="@string/on_going_alert_title" android:key="settings_temperature_notifications" android:summary="@string/No_ongoing_temperature_notifications" />
+        <ListPreference android:entries="@array/settings_units_list" android:title="@string/settings_units_title" android:key="settings_units" android:defaultValue="@string/settings_units_default" android:dialogTitle="@string/settings_units_title" android:positiveButtonText="@android:string/ok" android:entryValues="@array/settings_units_list" />
+        <SwitchPreference android:title="@string/settings_lbs_title" android:key="settings_lbs" android:summary="@string/settings_lbs_summary" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_weather_rewards_title" android:key="settings_weather_rewards">
+        <SwitchPreference android:title="@string/settings_sessionm_switch_title" android:key="settings_sessionm_switch" android:defaultValue="false" />
+        <Preference android:title="@string/settings_sessionm_title" android:key="settings_sessionm" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_support_title" android:key="settings_support">
+        <Preference android:title="@string/settings_about_title" android:key="settings_about" android:fragment="com.weather.Weather.settings.AboutFragment" />
+        <PreferenceScreen android:title="@string/settings_feedback_title" android:key="settings_feedback">
+            <intent android:action="android.intent.action.VIEW" android:data="@string/settings_feedback_data" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/settings_terms_and_conditions_title" android:key="settings_terms">
+            <intent android:action="android.intent.action.VIEW" android:data="@string/settings_terms_and_conditions_data" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/settings_privacy_title" android:key="settings_privacy_policy">
+            <intent android:action="android.intent.action.VIEW" android:data="@string/settings_privacy_data" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/settings_ad_choice_title" android:key="settings_ad_choices">
+            <intent android:action="android.intent.action.VIEW" android:data="@string/settings_ad_choices_data" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

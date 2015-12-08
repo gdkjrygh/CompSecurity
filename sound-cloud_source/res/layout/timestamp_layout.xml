@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/waveform_ratio_top" />
+    <FrameLayout android:id="@id/timestamp_holder" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="@integer/waveform_ratio_bottom">
+        <RelativeLayout android:layout_gravity="top" android:id="@id/timestamp_layout" android:layout_width="fill_parent" android:layout_height="@dimen/timestamp_height" android:layout_marginTop="@dimen/waveform_baseline">
+            <View android:id="@id/timestamp_background" android:background="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/timestamp_progress" android:layout_alignRight="@id/timestamp_duration" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" />
+            <View android:id="@id/timestamp_divider" android:layout_centerInParent="true" style="@style/TimestampDivider" />
+            <com.soundcloud.android.view.CustomFontTextView android:id="@id/timestamp_duration" android:layout_toRightOf="@id/timestamp_divider" style="@style/TimestampText.Duration" />
+            <com.soundcloud.android.view.CustomFontTextView android:id="@id/timestamp_progress" android:layout_toLeftOf="@id/timestamp_divider" style="@style/TimestampText" />
+        </RelativeLayout>
+    </FrameLayout>
+</merge>

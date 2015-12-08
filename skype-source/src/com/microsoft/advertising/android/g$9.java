@@ -1,0 +1,55 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.microsoft.advertising.android;
+
+
+// Referenced classes of package com.microsoft.advertising.android:
+//            g
+
+final class a
+    implements Runnable
+{
+
+    final g a;
+
+    public final void run()
+    {
+        if (a.a(new a[] {
+    a
+}))
+        {
+            a.j();
+        } else
+        {
+            if (a.a(new a[] {
+    b
+}))
+            {
+                a.o();
+                return;
+            }
+            if (a.a(new a[] {
+    c
+}))
+            {
+                g.b(a);
+                return;
+            }
+            if (a.a(new a[] {
+    f
+}))
+            {
+                g.c(a);
+                return;
+            }
+        }
+    }
+
+    (g g1)
+    {
+        a = g1;
+        super();
+    }
+}

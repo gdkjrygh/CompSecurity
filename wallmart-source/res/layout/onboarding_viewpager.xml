@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/onboarding_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.walmart.android.app.main.OnboardingViewPager android:id="@id/onboarding_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="60.0dip" android:animateLayoutChanges="true">
+        <TextView android:id="@id/onboarding_text_skip" android:background="@drawable/default_clickable_selector" android:paddingLeft="20.0dip" android:paddingTop="20.0dip" android:paddingRight="40.0dip" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/onboarding_skip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/Text.OnboardingSkip" />
+        <ImageView android:id="@id/onboarding_image_dots" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dots_1" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <FrameLayout android:id="@id/onboarding_next_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:animateLayoutChanges="true">
+            <ImageView android:layout_gravity="right|center" android:id="@id/onboarding_image_next" android:background="@drawable/default_clickable_selector" android:paddingLeft="40.0dip" android:paddingTop="20.0dip" android:paddingRight="20.0dip" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icn_navigate_next_blue" />
+            <TextView android:id="@id/onboarding_text_done" android:background="@drawable/default_clickable_selector" android:paddingLeft="40.0dip" android:paddingTop="20.0dip" android:paddingRight="20.0dip" android:paddingBottom="20.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/onboarding_done" style="@style/Text.OnboardingSkip" />
+        </FrameLayout>
+    </RelativeLayout>
+</FrameLayout>

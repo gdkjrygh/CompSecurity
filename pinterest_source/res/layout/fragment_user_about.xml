@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/fragment_user_about" android:background="@color/bg_grid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pinterest.ui.scrollview.ObservableScrollView android:id="@id/user_about_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/view_user_header_shim" />
+            <com.pinterest.activity.user.view.UserAboutSetPictureView android:id="@id/user_picture_container" style="@style/user_set_picture" />
+            <LinearLayout android:id="@id/user_about_bio_sites_wrapper" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin" style="@style/profile_about_section">
+                <com.pinterest.activity.user.view.UserAboutBioView android:id="@id/user_bio" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <View android:id="@id/divider_social" style="@style/list_cell_divider" />
+                <com.pinterest.activity.user.view.UserAboutSitesView android:orientation="vertical" android:id="@id/user_sites" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <com.pinterest.activity.user.view.UserAboutFlagView android:layout_gravity="center_horizontal" android:id="@id/footer_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.pinterest.ui.scrollview.ObservableScrollView>
+</FrameLayout>

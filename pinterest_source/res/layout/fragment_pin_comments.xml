@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg_grid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pinterest.ui.scrollview.ObservableScrollView android:paddingTop="@dimen/actionbar_height" android:clipToPadding="false" style="@style/listview">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.pinterest.activity.pin.view.comments.PinCommentsStandaloneCell android:orientation="vertical" android:id="@id/comments_cell" android:background="@android:color/white" android:paddingTop="@dimen/margin" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.pinterest.ui.grid.AdapterFooterView android:id="@id/footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.pinterest.ui.scrollview.ObservableScrollView>
+    <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+</RelativeLayout>

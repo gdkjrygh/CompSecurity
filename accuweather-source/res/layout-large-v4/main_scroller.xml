@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accuweather.android.views.SnapHorizontalScrollView android:id="@id/scroller" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/container" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="28.0dip" android:layout_marginRight="14.0dip" android:layout_marginBottom="28.0dip">
+            <TextView android:textSize="18.0dip" android:textColor="@color/primary_text" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/Locations" />
+            <fragment android:id="@id/location_fragment" android:layout_width="320.0dip" android:layout_height="fill_parent" class="com.accuweather.android.fragments.LocationFragment" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="14.0dip" android:layout_marginRight="14.0dip" android:layout_marginBottom="28.0dip">
+            <TextView android:textSize="18.0dip" android:textColor="@color/primary_text" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/Now" />
+            <fragment android:id="@id/now_fragment" android:layout_width="320.0dip" android:layout_height="fill_parent" class="com.accuweather.android.fragments.NowFragment" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="14.0dip" android:layout_marginRight="14.0dip" android:layout_marginBottom="28.0dip">
+            <TextView android:textSize="18.0dip" android:textColor="@color/primary_text" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/Hourly" />
+            <fragment android:id="@id/hourly_fragment" android:layout_width="320.0dip" android:layout_height="fill_parent" class="com.accuweather.android.fragments.HourlyFragment" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="14.0dip" android:layout_marginRight="14.0dip" android:layout_marginBottom="28.0dip">
+            <TextView android:textSize="18.0dip" android:textColor="@color/primary_text" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/Daily" />
+            <fragment android:id="@id/forecast_fragment" android:layout_width="320.0dip" android:layout_height="fill_parent" class="com.accuweather.android.fragments.DailyFragment" />
+        </LinearLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="14.0dip" android:layout_marginRight="14.0dip" android:layout_marginBottom="28.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <TextView android:textSize="18.0dip" android:textColor="@color/primary_text" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/Maps" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <TextView android:textSize="18.0dip" android:textColor="@color/primary_text" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/Maps" />
+                <fragment android:id="@id/maps_fragment" android:layout_width="320.0dip" android:layout_height="fill_parent" class="com.accuweather.android.fragments.MapsImageFragment" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="14.0dip" android:layout_marginRight="14.0dip" android:layout_marginBottom="28.0dip">
+            <TextView android:textSize="18.0dip" android:textColor="@color/primary_text" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/Videos" />
+            <fragment android:id="@id/video_fragment" android:layout_width="320.0dip" android:layout_height="fill_parent" class="com.accuweather.android.fragments.VideoListFragment" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="14.0dip" android:layout_marginRight="14.0dip" android:layout_marginBottom="28.0dip">
+            <TextView android:textSize="18.0dip" android:textColor="@color/primary_text" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/News" />
+            <fragment android:id="@id/news_fragment" android:layout_width="320.0dip" android:layout_height="fill_parent" class="com.accuweather.android.fragments.NewsListFragment" />
+        </LinearLayout>
+    </LinearLayout>
+</com.accuweather.android.views.SnapHorizontalScrollView>

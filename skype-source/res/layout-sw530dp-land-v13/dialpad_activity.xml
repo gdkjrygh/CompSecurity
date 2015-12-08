@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/size_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/dialpad_number" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="100.0">
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="6.7" />
+        <RelativeLayout android:id="@id/dialpad_view" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/dialpad_vertical_margin" android:layout_marginBottom="@dimen/dialpad_vertical_margin" android:layout_weight="40.0" android:layout_below="@id/dialpad_top_layout">
+            <ImageButton android:id="@id/dialpad_call_button" android:background="@drawable/button_positive_selector" android:layout_width="@dimen/dialpad_call_button_width" android:layout_height="@dimen/dialpad_call_button_height" android:layout_marginTop="@dimen/dialpad_vertical_margin" android:src="@drawable/call_btn_answer" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:contentDescription="@string/action_call" />
+            <com.skype.android.app.dialer.DialpadView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/dialpad_call_button" />
+        </RelativeLayout>
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="6.6" />
+        <RelativeLayout android:id="@id/recent_calls" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/dialpad_vertical_margin" android:layout_marginBottom="@dimen/dialpad_vertical_margin" android:layout_weight="40.0" android:layout_below="@id/dialpad_top_layout" android:layout_alignParentRight="true">
+            <TextView android:textSize="@dimen/font_medium" android:textColor="@color/skype_light_grey" android:id="@id/recent_calls_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_recent_calls" />
+            <fragment android:name="com.skype.android.app.dialer.CallHistoryFragment" android:id="@id/categories" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/recent_calls_header" />
+        </RelativeLayout>
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="6.7" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/track_list_item" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View style="@style/Divider.Section" />
+    <View style="@style/Divider.Background" />
+    <View style="@style/Divider.Section" />
+    <include layout="@layout/stream_item_header" />
+    <RelativeLayout style="@style/Stream.Card">
+        <com.soundcloud.android.view.ParallaxImageView android:id="@id/image" style="@style/Stream.Image.Track" />
+        <com.soundcloud.android.view.JaggedTextView android:id="@id/creator" android:layout_above="@id/title" style="@style/Stream.ArtistText" />
+        <com.soundcloud.android.view.JaggedTextView android:id="@id/title" android:layout_alignBottom="@id/image" style="@style/Stream.TitleText" />
+    </RelativeLayout>
+    <include layout="@layout/stream_item_footer" />
+</LinearLayout>

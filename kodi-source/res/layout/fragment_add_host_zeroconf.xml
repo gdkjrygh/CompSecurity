@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <include layout="@layout/wizard_title" />
+        <TextView android:id="@id/search_host_title" android:layout_width="fill_parent" android:layout_height="@dimen/wizard_title" android:text="@string/searching" style="@style/WizardTitle" />
+        <TextView android:id="@id/search_host_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/search_host_title" style="@style/WizardMessage" />
+        <GridView android:id="@id/list" android:paddingLeft="@dimen/small_padding" android:paddingTop="@dimen/small_padding" android:paddingRight="@dimen/small_padding" android:paddingBottom="@dimen/default_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="?selectableItemBackground" android:drawSelectorOnTop="true" android:choiceMode="none" android:layout_below="@id/search_host_message" style="@style/Widget.GridView" />
+        <ProgressBar android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:indeterminate="true" android:layout_below="@id/search_host_message" style="@style/Widget.AppCompat.ProgressBar" />
+    </RelativeLayout>
+    <View style="@style/DefaultDividerH" />
+    <include layout="@layout/wizard_button_bar" />
+</LinearLayout>

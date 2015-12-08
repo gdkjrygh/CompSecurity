@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg_card_shadow_bottom" />
+    <item>
+        <selector>
+            <item android:state_pressed="true">
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/card_radius" />
+                    <solid android:color="@color/card_pressed_background" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/card_radius" />
+                    <solid android:color="@android:color/white" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</layer-list>

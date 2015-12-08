@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pinterest="http://schemas.android.com/apk/res-auto">
+    <com.pinterest.ui.listview.SolidTitleDivider android:id="@id/supertitle" android:background="@android:color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" pinterest:showDividerBottom="false" />
+    <View android:id="@id/divider" style="@style/list_cell_divider" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/touch_container" android:paddingLeft="@dimen/margin" android:paddingTop="@dimen/list_cell_padding_topbottom" android:paddingRight="@dimen/margin" android:paddingBottom="@dimen/list_cell_padding_topbottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pinterest.ui.imageview.GrayWebImageView android:id="@id/icon_wiv" android:layout_width="@dimen/thumbnail_size" android:layout_height="@dimen/thumbnail_size" android:scaleType="centerCrop" />
+        <LinearLayout android:orientation="vertical" android:layout_marginLeft="@dimen/list_cell_text_image_gap" android:layout_weight="1.0" style="@style/fullline_view">
+            <TextView android:id="@id/title_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/list_cell_text" />
+            <TextView android:textStyle="normal" android:id="@id/subtitle_tv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-1.0dip" style="@style/text_subtitle" />
+        </LinearLayout>
+        <include layout="@layout/list_cell_board_title_icons" />
+    </LinearLayout>
+</merge>

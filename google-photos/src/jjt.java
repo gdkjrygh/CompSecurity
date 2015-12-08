@@ -1,0 +1,22 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+import android.media.AudioTrack;
+
+public final class jjt extends Thread
+{
+
+    private AudioTrack a;
+
+    public jjt(jjr jjr, AudioTrack audiotrack)
+    {
+        a = audiotrack;
+        super();
+    }
+
+    public final void run()
+    {
+        a.release();
+    }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.walmart.android.app.shop.BarcodeShelfHeaderView android:orientation="vertical" android:id="@id/barcode_header" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:gravity="center_vertical" android:background="@drawable/list_default_selector_divider" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="36.0dip" android:text="@string/barcode_scan_result_subtitle" android:singleLine="true" style="@style/Text.SubHeader" />
+    <TextView android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/info_view" android:background="@drawable/list_default_selector_divider" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include android:id="@id/availability_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="98.0dip" layout="@layout/shelf_item_view_barcode" />
+    <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/results_header" android:background="@drawable/list_default_selector_divider" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="36.0dip" android:singleLine="true" style="@style/Text.SubHeader" />
+    <TextView android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/no_results_item" android:background="@drawable/list_default_selector_divider" android:padding="20.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/barcode_no_products_found" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="0.0dip" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</com.walmart.android.app.shop.BarcodeShelfHeaderView>

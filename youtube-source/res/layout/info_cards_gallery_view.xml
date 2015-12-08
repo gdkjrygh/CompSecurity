@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#88000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/click_interceptor" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="top" android:background="@drawable/info_card_gradient_background" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="top|right|center" android:id="@id/close" android:padding="10.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/info_card_close_button" android:scaleType="fitCenter" />
+        <com.google.android.apps.youtube.core.player.ui.PageIndicator android:layout_gravity="top|center" android:id="@id/pageIndicator" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" app:normalDot="@drawable/page_indicator_normal" app:activeDot="@drawable/page_indicator_selected" />
+    </FrameLayout>
+    <android.support.v4.view.ViewPager android:gravity="center" android:layout_gravity="center" android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="@dimen/info_card_gallery_image_size" />
+</FrameLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/RelativeLayout1" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.Title.Highlight" android:id="@id/dialogTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/favorite_event_added" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <TextView android:textAppearance="@style/TextAppearance.Small" android:id="@id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/favorite_event_added_detail" android:layout_below="@id/dialogTitle" android:layout_alignParentLeft="true" />
+    <LinearLayout android:id="@id/eventInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/summary" android:layout_alignLeft="@id/summary" android:layout_alignRight="@id/summary">
+        <com.phunware.nbc.sochi.views.RoundedImageView android:layout_gravity="center" android:id="@id/image" android:layout_width="120.0dip" android:layout_height="120.0dip" android:src="@mipmap/ic_launcher" android:scaleType="centerCrop" android:contentDescription="@null" app:corner_radius="25.0dip" app:mutate_background="true" app:oval="true" xmlns:app="http://schemas.android.com/apk/res-auto" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/f" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip">
+            <TextView android:textAppearance="@style/TextAppearance.Primary" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

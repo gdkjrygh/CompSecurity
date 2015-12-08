@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/size_2x" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:paddingLeft="@dimen/size_2x" android:paddingRight="@dimen/size_1x" android:layout_width="fill_parent" android:layout_height="@dimen/size_7x" android:minHeight="@dimen/size_7x">
+        <TextView android:textSize="@dimen/font_medium" android:textColor="@color/skype_dark_grey" android:id="@id/translator_setting_preview_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_translator_language_preview" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <Switch android:id="@id/translator_setting_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:id="@id/standard_divider" android:background="@color/black_with_85_percent_transparency" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:paddingLeft="@dimen/size_2x" android:paddingRight="@dimen/size_2x" android:layout_width="fill_parent" android:layout_height="@dimen/size_11x">
+        <com.skype.android.widget.SkypeAvatarView android:id="@id/translator_setting_me_avatar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" app:addPresenceIcon="false" style="@style/SkypeAvatarSmall" />
+        <TextView android:textSize="@dimen/font_medium" android:textColor="@color/skype_dark_grey" android:id="@id/translator_setting_me_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/size_2x" android:layout_marginTop="@dimen/size_2_5x" android:text="@string/label_translator_language_Me" android:layout_toRightOf="@id/translator_setting_me_avatar" />
+        <Spinner android:id="@id/translator_setting_me_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/size_0_5x" android:popupBackground="@drawable/overflow_background" android:layout_toRightOf="@id/translator_setting_me_avatar" android:layout_below="@id/translator_setting_me_text" />
+    </RelativeLayout>
+    <LinearLayout android:paddingLeft="@dimen/size_2x" android:paddingRight="@dimen/size_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:layout_gravity="center_vertical" android:background="@color/black_with_85_percent_transparency" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <com.skype.android.widget.SymbolView android:textSize="@dimen/size_4x" android:textColor="@color/skype_light_grey" android:id="@id/translator_setting_video_imageview" android:layout_width="wrap_content" android:layout_height="wrap_content" app:symbol_code="Video" />
+        <com.skype.android.widget.SymbolView android:textSize="@dimen/size_4x" android:textColor="@color/skype_light_grey" android:id="@id/translator_setting_chat_imageview" android:layout_width="wrap_content" android:layout_height="wrap_content" app:symbol_code="Message" />
+        <com.skype.android.widget.SymbolView android:textSize="@dimen/size_4x" android:textColor="@color/skype_light_grey" android:id="@id/translator_setting_call_imageview" android:layout_width="wrap_content" android:layout_height="wrap_content" app:symbol_code="CallStart" />
+        <View android:layout_gravity="center_vertical" android:background="@color/black_with_85_percent_transparency" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <RelativeLayout android:paddingLeft="@dimen/size_2x" android:paddingRight="@dimen/size_2x" android:layout_width="fill_parent" android:layout_height="@dimen/size_11x">
+        <com.skype.android.widget.SkypeAvatarView android:id="@id/translator_setting_you_avatar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" app:addPresenceIcon="false" style="@style/SkypeAvatarSmall" />
+        <TextView android:textSize="@dimen/font_medium" android:textColor="@color/skype_dark_grey" android:id="@id/translator_setting_you_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/size_2x" android:layout_marginTop="@dimen/size_2_5x" android:layout_toRightOf="@id/translator_setting_you_avatar" />
+        <Spinner android:id="@id/translator_setting_you_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/size_0_5x" android:layout_toRightOf="@id/translator_setting_you_avatar" android:layout_below="@id/translator_setting_you_text" />
+    </RelativeLayout>
+</LinearLayout>

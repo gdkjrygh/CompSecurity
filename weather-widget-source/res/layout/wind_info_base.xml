@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.go.weatherex.home.windforecast.WindInfoBase android:layout_gravity="center_horizontal" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/wind_info_base_compass" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:layout_gravity="center" android:background="@drawable/compass_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+        <ImageView android:layout_gravity="center" android:id="@id/wind_info_base_pointer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="matrix" android:contentDescription="@null" />
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/compass" android:contentDescription="@null" />
+    </FrameLayout>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <LinearLayout android:orientation="horizontal" android:id="@id/wind_info_base_middle_layout" android:paddingLeft="@dimen/tab_wind_bar_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="@dimen/tab_wind_bar_city_wind_lv" android:textColor="#ffffffff" android:gravity="bottom" android:layout_gravity="bottom" android:id="@id/wind_info_base_wind_level_symbol" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="3.0dip" android:layout_marginBottom="@dimen/tab_wind_bar_city_wind_lv_bottom" />
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="@dimen/tab_wind_bar_windsymbol" android:textColor="#ffffffff" android:gravity="bottom" android:layout_gravity="bottom" android:id="@id/wind_info_base_wind_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginBottom="2.0dip" />
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="@dimen/tab_wind_bar_city_windvalue" android:textColor="#ffffffff" android:gravity="bottom" android:layout_gravity="bottom" android:id="@id/wind_info_base_wind_symbol" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginBottom="13.0dip" />
+        </LinearLayout>
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="@dimen/tab_wind_bar_common_textsize" android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/wind_info_base_wind_direction_desc" android:paddingLeft="@dimen/tab_wind_bar_bottom_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-10.0dip" android:drawablePadding="10.0dip" android:layout_below="@id/wind_info_base_middle_layout" />
+    </RelativeLayout>
+    <View android:id="@id/wind_info_base_bottom_line" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+</com.go.weatherex.home.windforecast.WindInfoBase>

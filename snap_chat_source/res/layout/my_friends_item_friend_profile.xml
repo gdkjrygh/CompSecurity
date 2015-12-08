@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/friend_profile_inner_container" android:background="#fff0f0f0" android:padding="@dimen/default_gap" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ProgressBar android:id="@id/friend_profile_loading_bar" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:id="@id/friend_profile_loading_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loading" android:layout_toRightOf="@id/friend_profile_loading_bar" android:layout_centerVertical="true" style="@android:style/TextAppearance.Small" />
+        <TextView android:id="@id/friend_profile_score" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" style="@android:style/TextAppearance.Small" />
+        <LinearLayout android:orientation="vertical" android:id="@id/friend_profile_best_friends_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/friend_profile_score" />
+    </RelativeLayout>
+</RelativeLayout>

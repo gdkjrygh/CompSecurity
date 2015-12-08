@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/mm_storyboard_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:support="http://schemas.android.com/apk/res-auto">
+    <com.google.android.libraries.video.preview.VideoWithPreviewView android:layout_gravity="center" android:id="@id/mm_video_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:layout_gravity="center" android:id="@id/mm_play_pause_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_mm_play" android:contentDescription="@string/mm_content_play_video" />
+    <com.google.android.apps.moviemaker.ui.VideoTrimView android:layout_gravity="bottom" android:id="@id/mm_video_trim" android:background="@color/mm_storyboard_background" android:paddingLeft="@dimen/mm_trim_horizontal_padding" android:paddingRight="@dimen/mm_trim_horizontal_padding" android:paddingBottom="@dimen/mm_trim_vertical_padding" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/mm_video_trim_view_height" support:mm_alignBoundsToThumbnails="true" support:mm_handleDrawable="@drawable/mm_video_trim_handle" support:mm_borderColor="@color/mm_video_trim_fg_color" support:mm_animateTrimHandles="true" support:mm_snapTrimHandles="false" support:mm_snapToFrames="key" />
+</FrameLayout>

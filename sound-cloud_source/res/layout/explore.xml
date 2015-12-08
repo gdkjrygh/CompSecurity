@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout android:gravity="bottom" android:id="@id/sliding_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:panelHeight="@dimen/player_footer" app:dragView="@id/player_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.design.widget.AppBarLayout android:id="@id/appbar" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="com.soundcloud.android.view.FlingBehavior">
+            <include layout="@layout/toolbar" />
+            <android.support.design.widget.TabLayout android:id="@id/tab_indicator" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/TabsTheme.Fixed" />
+        </android.support.design.widget.AppBarLayout>
+        <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/appbar" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <View android:layout_below="@id/appbar" style="@style/ToolbarShadow" />
+    </RelativeLayout>
+    <fragment android:name="com.soundcloud.android.playback.ui.PlayerFragment" android:id="@id/player_root" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

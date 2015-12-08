@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/fragment_app_list_listview" android:animationCache="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@color/wish_transparent" android:scrollingCache="false" android:cacheColorHint="@color/wish_transparent" android:divider="@color/wish_light_section_header" android:dividerHeight="1.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/fragment_app_list_loading_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ProgressBar android:layout_gravity="center" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginBottom="10.0dip" android:indeterminateOnly="true" style="@style/WishAppThemeProgressIndicator" />
+        <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="@color/wish_light_text" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/loading" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/fragment_app_list_no_items_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="@color/wish_light_text" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/fragment_app_list_no_items" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/fragment_app_list_error_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="@color/wish_light_text" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/fragment_app_list_error" />
+    </LinearLayout>
+</RelativeLayout>

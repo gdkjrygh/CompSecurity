@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:paddingTop="3.0dip" android:layout_width="wrap_content" android:layout_height="64.0dip">
+        <RelativeLayout android:paddingLeft="3.0dip" android:paddingBottom="3.0dip" android:layout_width="@dimen/go_widget_41_2_left_content_width" android:layout_height="fill_parent" android:layout_marginRight="5.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/go_widget_41_2_time_text_size" android:textColor="@color/go_widget_41_style2_text_selector" android:ellipsize="end" android:id="@id/text_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-2.5dip" android:layout_marginTop="-6.0dip" android:singleLine="true" android:includeFontPadding="false" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+                    <TextView android:textSize="@dimen/go_widget_41_2_normal_text_size" android:textColor="@color/go_widget_41_style2_text_selector" android:ellipsize="end" android:id="@id/text_am_pm" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginBottom="10.0dip" android:singleLine="true" android:layout_toRightOf="@id/text_time" android:layout_alignParentTop="true" />
+                </RelativeLayout>
+                <TextView android:textSize="@dimen/go_widget_41_2_normal_text_size" android:textColor="@color/go_widget_41_style2_text_selector" android:ellipsize="end" android:id="@id/text_week_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-4.0dip" android:singleLine="true" />
+            </LinearLayout>
+        </RelativeLayout>
+        <View android:id="@id/divider" android:background="#ccffffff" android:layout_width="0.6600001dip" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="horizontal" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="45.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+                    <TextView android:textSize="@dimen/go_widget_41_2_normal_text_size" android:textColor="@color/go_widget_41_style2_text_selector" android:ellipsize="end" android:id="@id/text_city" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/go_widget_41_2_right_text_max_length" android:singleLine="true" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/go_widget_41_2_normal_text_size" android:textColor="@color/go_widget_41_style2_text_selector" android:ellipsize="end" android:id="@id/text_temp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/go_widget_41_2_right_text_max_length" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/go_widget_41_2_normal_text_size" android:textColor="@color/go_widget_41_style2_text_selector" android:ellipsize="end" android:id="@id/text_weather_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/go_widget_41_2_right_text_max_length" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <com.gau.go.launcherex.gowidget.weather.widget.dynamicicon.GoWidgetDynamicIconView android:layout_gravity="center_vertical" android:id="@id/image_weather_type" android:layout_width="@dimen/go_widget_41_2_weather_icon_size" android:layout_height="@dimen/go_widget_41_2_weather_icon_size" android:src="@drawable/go_widget_41_style2_sunny_day" android:contentDescription="@null" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip">
+                <FrameLayout android:id="@id/refresh_layout" android:layout_width="18.0dip" android:layout_height="18.0dip">
+                    <ImageView android:layout_gravity="center" android:id="@id/refresh_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/go_widget_41_style2_refresh_selector" android:contentDescription="@null" />
+                    <ProgressBar android:layout_gravity="top|right|center" android:id="@id/refresh_progress" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/go_widget_41_style2_refresh_normal" />
+                </FrameLayout>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/theme_store" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/go_widget_41_style2_themestore_selector" android:contentDescription="@null" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/gray_lightest" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <me.grantland.widget.AutofitLayout android:id="@id/core_concepts_save_title_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.pinterest.ui.text.PTextView android:id="@id/core_concepts_save_title" style="@style/core_concepts_title" />
+        </me.grantland.widget.AutofitLayout>
+        <FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.pinterest.ui.imageview.WebImageView android:layout_gravity="center_horizontal" android:id="@id/core_concepts_save_phone" android:layout_width="@dimen/core_concepts_phone_width" android:layout_height="@dimen/core_concepts_phone_height" android:alpha="0.0" />
+            <RelativeLayout android:layout_gravity="center_horizontal" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="@dimen/core_concepts_phone_content_margin_top">
+                <com.pinterest.ui.imageview.WebImageView android:id="@id/core_concepts_main_pin" android:layout_width="@dimen/core_concepts_main_pin_side" android:layout_height="@dimen/core_concepts_main_pin_side" android:layout_marginTop="@dimen/core_concepts_main_pin_margin_top" android:layout_alignLeft="@id/core_concepts_small_pins" android:alpha="0.0" />
+                <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/core_concepts_small_pins" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.pinterest.ui.imageview.WebImageView android:id="@id/core_concepts_small_pin1" style="@style/core_concepts_save_small_pin" />
+                    <com.pinterest.ui.imageview.WebImageView android:id="@id/core_concepts_small_pin2" style="@style/core_concepts_save_small_pin" />
+                    <com.pinterest.ui.imageview.WebImageView android:id="@id/core_concepts_small_pin3" style="@style/core_concepts_save_small_pin" />
+                </LinearLayout>
+                <com.pinterest.ui.imageview.WebImageView android:layout_gravity="center_horizontal" android:id="@id/core_concepts_save_phone_bg" android:layout_width="@dimen/core_concepts_phone_bg_width" android:layout_height="@dimen/core_concepts_phone_bg_height" android:layout_marginTop="@dimen/core_concepts_phone_bg_margin_top" android:layout_alignLeft="@id/core_concepts_small_pins" android:layout_alignRight="@id/core_concepts_small_pins" android:alpha="0.0" />
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <com.pinterest.ui.imageview.WebImageView android:layout_gravity="bottom" android:id="@id/core_concepts_bottom_fade" android:layout_width="fill_parent" android:layout_height="@dimen/core_concepts_save_bottom_fade" />
+</FrameLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_panel" style="@style/TopPanel">
+        <RelativeLayout android:id="@id/cash_square_tos_back_button_area" android:background="@drawable/action_bar_touch_selector" android:paddingRight="@dimen/default_gap" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/up_arrow" android:background="@drawable/cash_back_arrow" android:layout_width="9.0dip" android:layout_height="26.0dip" android:layout_marginLeft="@dimen/default_gap" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/text_size_default" android:textStyle="normal" android:textColor="@color/snapcash_green" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap" android:text="@string/cash_square_tos_title" android:layout_toRightOf="@id/up_arrow" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:id="@id/divider" android:background="@color/divider_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/top_panel" />
+    <TextView android:gravity="center" android:id="@id/cash_square_tos_msg_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap_2x" android:layout_marginTop="@dimen/default_gap_4x" android:layout_marginRight="@dimen/default_gap_2x" android:layout_marginBottom="@dimen/default_gap_4x" android:text="@string/cash_square_tos_top_msg" android:layout_below="@id/divider" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/cash_square_guarded_ghost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/square_ghost" android:adjustViewBounds="true" android:layout_above="@id/cash_square_tos_msg_bottom" android:layout_below="@id/cash_square_tos_msg_top" android:layout_centerHorizontal="true" />
+    <com.snapchat.android.ui.LinkFriendlyTextView android:gravity="center" android:id="@id/cash_square_tos_msg_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap_4x" android:layout_marginTop="@dimen/default_gap_4x" android:layout_marginRight="@dimen/default_gap_4x" android:layout_marginBottom="@dimen/default_gap_4x" android:text="@string/cash_square_tos_bottom_msg" android:layout_above="@id/button_container" android:layout_centerHorizontal="true" />
+    <FrameLayout android:id="@id/button_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@id/cash_square_tos_agree_button" android:text="@string/cash_square_tos_agree" style="@style/CashContinueButton" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/cash_square_agree_progressbar" android:visibility="gone" android:layout_width="@dimen/ui_element_unit" android:layout_height="@dimen/ui_element_unit" android:layout_marginBottom="@dimen/default_gap" />
+    </FrameLayout>
+</RelativeLayout>

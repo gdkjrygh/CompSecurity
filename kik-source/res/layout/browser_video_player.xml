@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/web_video_view_container" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <LinearLayout android:gravity="center" android:id="@id/web_loading_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_width="50.0dip" android:layout_height="50.0dip" android:indeterminate="true" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/video_error" android:background="#64000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <kik.android.widget.RobotoTextView android:textSize="23.0dip" android:textColor="#ffffffff" android:id="@id/video_error_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="27.0dip" android:text="@string/video_playback_error" android:singleLine="true" android:layout_centerHorizontal="true" />
+        <Button android:textSize="21.0dip" android:textColor="#ffd8d8d8" android:id="@id/retry_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_retry" android:drawableLeft="@drawable/video_error_retry" android:drawablePadding="10.0dip" />
+    </LinearLayout>
+</RelativeLayout>

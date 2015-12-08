@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span16" android:layout_marginRight="@dimen/span16">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/span16" android:layout_weight="1.0">
+                <me.lyft.android.controls.AdvancedEditText android:id="@id/first_name" android:nextFocusDown="@id/last_name" android:layout_marginTop="@dimen/span8" android:layout_marginBottom="0.0dip" android:hint="@string/landing_first_name_hint" android:maxLength="25" android:inputType="textPersonName|textCapSentences" style="@style/EditText" />
+                <TextView android:id="@id/inline_first_name_error_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" style="@style/InlineErrorTextV2" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <me.lyft.android.controls.AdvancedEditText android:id="@id/last_name" android:nextFocusDown="@id/email" android:layout_marginTop="@dimen/span8" android:hint="@string/landing_last_name_hint" android:maxLength="25" android:inputType="textPersonName|textCapSentences" style="@style/EditText" />
+                <TextView android:id="@id/inline_last_name_error_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_marginBottom="0.0dip" style="@style/InlineErrorTextV2" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span16" android:layout_marginRight="@dimen/span16">
+            <me.lyft.android.controls.EmailAutoFillEditText android:id="@id/email" android:layout_marginTop="@dimen/span8" android:hint="@string/landing_email_hint" android:inputType="textEmailAddress" style="@style/EditText" />
+            <TextView android:id="@id/inline_email_error_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_marginBottom="0.0dip" style="@style/InlineErrorTextV2" />
+        </LinearLayout>
+        <me.lyft.android.ui.landing.TermsOfServiceView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tos_checkbox" android:paddingLeft="@dimen/tos_checkbox_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span24" android:layout_marginTop="@dimen/span24" android:layout_marginRight="@dimen/span24" android:checked="false" android:button="@drawable/custom_checkbox" android:hint="@string/landing_signup_terms_of_service" />
+        <Space android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginTop="@dimen/span16" android:layout_weight="1.0" />
+        <Button android:id="@id/next_button" android:text="@string/next_button" style="@style/PinkFullBleedButton" />
+    </LinearLayout>
+</merge>

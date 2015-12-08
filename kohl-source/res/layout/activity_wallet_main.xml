@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/wallet_fragment_container" android:background="@color/wallet_tab_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/wallet_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/list_padding">
+        <TextView android:textStyle="bold" android:textColor="@color/black" android:id="@id/text_to_set" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="YOUR KOHL'S OFFERS" android:drawableLeft="@drawable/save" android:drawablePadding="@dimen/wallet_padding" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/seekbar_left_margin" android:textStyle="bold" android:textColor="@color/loyalty_green" android:id="@id/value_to_set" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/content_parent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/wallet_header">
+        <android.support.v4.view.ViewPager android:id="@id/list" android:background="@color/white" android:paddingRight="@dimen/indicator_right_padding" android:visibility="visible" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="230.0dip" />
+        <RelativeLayout android:gravity="center" android:id="@id/empty_wallet" android:padding="@dimen/indicator_right_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/page_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/top_button_margin_low" android:layout_below="@id/content_parent">
+        <ImageView android:id="@id/pg_1" android:visibility="invisible" android:layout_width="@dimen/indicator_corner_radius" android:layout_height="@dimen/indicator_corner_radius" android:layout_marginRight="@dimen/wallet_padding_small" android:src="@drawable/page_indicator_selected" />
+        <ImageView android:id="@id/pg_2" android:visibility="invisible" android:layout_width="@dimen/indicator_corner_radius" android:layout_height="@dimen/indicator_corner_radius" android:layout_marginRight="@dimen/wallet_padding_small" android:src="@drawable/page_indicator_unselected" />
+        <ImageView android:id="@id/pg_3" android:visibility="invisible" android:layout_width="@dimen/indicator_corner_radius" android:layout_height="@dimen/indicator_corner_radius" android:src="@drawable/page_indicator_unselected" />
+    </LinearLayout>
+    <ProgressBar android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</RelativeLayout>

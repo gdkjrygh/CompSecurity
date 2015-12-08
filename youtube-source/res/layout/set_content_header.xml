@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/set_content_header" android:background="#ff444444" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginBottom="1.0dip">
+        <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/small_font_size" android:textColor="#ffcccccc" android:id="@id/set_content_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" yt:robotoFont="light" />
+        <com.google.android.apps.youtube.core.ui.TouchImageView android:id="@id/set_shuffle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_set_shuffle" android:contentDescription="@string/accessibility_shuffle" />
+        <com.google.android.apps.youtube.core.ui.TouchImageView android:id="@id/set_repeat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_set_repeat" android:contentDescription="@string/accessibility_repeat" />
+    </LinearLayout>
+    <View android:layout_gravity="bottom" android:id="@id/separator" android:background="@color/set_row_selected_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</FrameLayout>

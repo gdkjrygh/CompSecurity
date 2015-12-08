@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/dialog_padding" android:paddingTop="50.0dip" android:paddingRight="@dimen/dialog_padding" android:paddingBottom="50.0dip" android:addStatesFromChildren="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/dialog_layout" android:background="@drawable/dialog_bg" android:addStatesFromChildren="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="400.0dip" android:layout_centerInParent="true">
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="@dimen/dialog_title_text_size" android:textColor="@color/dialog_title" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/dialog_title" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_title_height" android:layout_marginLeft="@dimen/dialog_message_padding" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" />
+        <ImageView android:background="@drawable/setting_line" android:layout_width="fill_parent" android:layout_height="0.6dip" android:contentDescription="@null" />
+        <include android:id="@id/webviewlayout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/message_content_webview" />
+    </LinearLayout>
+</RelativeLayout>

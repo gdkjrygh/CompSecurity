@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.pinterest.activity.search.ui.GuidedSearchTokenView android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/search_token_view_width"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pinterest="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/token_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/token_name_wrapper" android:paddingLeft="@dimen/search_token_text_margin_left" android:paddingRight="@dimen/search_token_text_margin_left" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/token_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin_quarter" />
+            <TextView android:textSize="@dimen/text_body" android:textColor="@android:color/white" android:id="@id/token_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View android:background="@color/bg_transparent_line" android:layout_width="@dimen/hairline" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/remove_token" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="@dimen/search_token_remove_token_spacing" android:layout_marginTop="1.0dip" android:layout_marginRight="@dimen/search_token_remove_token_spacing" android:src="@drawable/ic_search_token_remove" />
+    </LinearLayout>
+    <View android:layout_width="@dimen/search_token_spacing_view_width" android:layout_height="fill_parent" />
+</com.pinterest.activity.search.ui.GuidedSearchTokenView>

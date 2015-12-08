@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nbcsports.liveextra.ui.player.premierleague.gameinfo.GameInformationView android:orientation="vertical" android:background="@drawable/pl_mesh_tb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewFlipper android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:flipInterval="5000" android:autoStart="true">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:ellipsize="end" android:id="@id/stadium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/GameInfo" />
+            <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:layout_gravity="right|center" android:id="@id/pl_capacity_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pl_capacity_label" style="@style/GameInfo" />
+                <TextView android:textSize="12.0sp" android:textColor="?android:textColorPrimary" android:layout_gravity="right|center" android:id="@id/attendance" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/GameInfo" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="2.0">
+            <TextView android:id="@id/date" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/GameInfo" />
+            <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:gravity="right|center" android:layout_gravity="right|center" android:id="@id/pl_referee_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pl_referee_label" style="@style/GameInfo" />
+                <TextView android:gravity="right|center" android:layout_gravity="right|center" android:id="@id/referee" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/GameInfo" />
+            </LinearLayout>
+        </LinearLayout>
+    </ViewFlipper>
+</com.nbcsports.liveextra.ui.player.premierleague.gameinfo.GameInformationView>

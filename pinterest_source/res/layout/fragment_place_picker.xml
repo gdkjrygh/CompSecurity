@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+    <LinearLayout android:orientation="vertical" android:id="@id/location_search" android:background="@color/bg_grid" android:paddingLeft="@dimen/margin" android:paddingTop="8.0dip" android:paddingRight="@dimen/margin" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pinterest.ui.text.SearchEditText android:id="@id/searchEt" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/placepin_search_hint" android:drawableRight="@drawable/ic_search" android:inputType="textFilter|textCapSentences" android:imeOptions="actionSearch|flagNoExtractUi" style="@style/search_bar" />
+        <com.pinterest.ui.text.SearchEditText android:textColorHint="#ff1a6acc" android:id="@id/location_searchEt" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:drawableRight="@drawable/ic_location_search" android:inputType="textFilter|textCapSentences" android:imeOptions="actionSearch|flagNoExtractUi" style="@style/search_bar" />
+    </LinearLayout>
+    <include layout="@layout/sendpin_empty_search_cell" />
+    <ListView android:id="@id/listView" android:layout_height="fill_parent" style="@style/listview_white" />
+</LinearLayout>

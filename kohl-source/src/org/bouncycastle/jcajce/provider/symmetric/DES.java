@@ -1,0 +1,274 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package org.bouncycastle.jcajce.provider.symmetric;
+
+import java.security.AlgorithmParameters;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.SecureRandom;
+import java.security.spec.AlgorithmParameterSpec;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.KeySpec;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.DESKeySpec;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+import org.bouncycastle.asn1.ASN1ObjectIdentifier;
+import org.bouncycastle.asn1.oiw.OIWObjectIdentifiers;
+import org.bouncycastle.crypto.CipherKeyGenerator;
+import org.bouncycastle.crypto.KeyGenerationParameters;
+import org.bouncycastle.crypto.engines.DESEngine;
+import org.bouncycastle.crypto.engines.RFC3211WrapEngine;
+import org.bouncycastle.crypto.generators.DESKeyGenerator;
+import org.bouncycastle.crypto.macs.CBCBlockCipherMac;
+import org.bouncycastle.crypto.macs.CFBBlockCipherMac;
+import org.bouncycastle.crypto.macs.CMac;
+import org.bouncycastle.crypto.modes.CBCBlockCipher;
+import org.bouncycastle.crypto.paddings.ISO7816d4Padding;
+import org.bouncycastle.jcajce.provider.config.ConfigurableProvider;
+import org.bouncycastle.jcajce.provider.symmetric.util.BaseAlgorithmParameterGenerator;
+import org.bouncycastle.jcajce.provider.symmetric.util.BaseBlockCipher;
+import org.bouncycastle.jcajce.provider.symmetric.util.BaseKeyGenerator;
+import org.bouncycastle.jcajce.provider.symmetric.util.BaseMac;
+import org.bouncycastle.jcajce.provider.symmetric.util.BaseSecretKeyFactory;
+import org.bouncycastle.jcajce.provider.symmetric.util.BaseWrapCipher;
+import org.bouncycastle.jcajce.provider.util.AlgorithmProvider;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+
+public final class DES
+{
+    public static class AlgParamGen extends BaseAlgorithmParameterGenerator
+    {
+
+        protected AlgorithmParameters engineGenerateParameters()
+        {
+            byte abyte0[] = new byte[8];
+            if (random == null)
+            {
+                random = new SecureRandom();
+            }
+            random.nextBytes(abyte0);
+            AlgorithmParameters algorithmparameters;
+            try
+            {
+                algorithmparameters = AlgorithmParameters.getInstance("DES", BouncyCastleProvider.PROVIDER_NAME);
+                algorithmparameters.init(new IvParameterSpec(abyte0));
+            }
+            catch (Exception exception)
+            {
+                throw new RuntimeException(exception.getMessage());
+            }
+            return algorithmparameters;
+        }
+
+        protected void engineInit(AlgorithmParameterSpec algorithmparameterspec, SecureRandom securerandom)
+            throws InvalidAlgorithmParameterException
+        {
+            throw new InvalidAlgorithmParameterException("No supported AlgorithmParameterSpec for DES parameter generation.");
+        }
+
+        public AlgParamGen()
+        {
+        }
+    }
+
+    public static class CBC extends BaseBlockCipher
+    {
+
+        public CBC()
+        {
+            super(new CBCBlockCipher(new DESEngine()), 64);
+        }
+    }
+
+    public static class CBCMAC extends BaseMac
+    {
+
+        public CBCMAC()
+        {
+            super(new CBCBlockCipherMac(new DESEngine()));
+        }
+    }
+
+    public static class CMAC extends BaseMac
+    {
+
+        public CMAC()
+        {
+            super(new CMac(new DESEngine()));
+        }
+    }
+
+    public static class DES64 extends BaseMac
+    {
+
+        public DES64()
+        {
+            super(new CBCBlockCipherMac(new DESEngine(), 64));
+        }
+    }
+
+    public static class DES64with7816d4 extends BaseMac
+    {
+
+        public DES64with7816d4()
+        {
+            super(new CBCBlockCipherMac(new DESEngine(), 64, new ISO7816d4Padding()));
+        }
+    }
+
+    public static class DESCFB8 extends BaseMac
+    {
+
+        public DESCFB8()
+        {
+            super(new CFBBlockCipherMac(new DESEngine()));
+        }
+    }
+
+    public static class ECB extends BaseBlockCipher
+    {
+
+        public ECB()
+        {
+            super(new DESEngine());
+        }
+    }
+
+    public static class KeyFactory extends BaseSecretKeyFactory
+    {
+
+        protected SecretKey engineGenerateSecret(KeySpec keyspec)
+            throws InvalidKeySpecException
+        {
+            if (keyspec instanceof DESKeySpec)
+            {
+                return new SecretKeySpec(((DESKeySpec)keyspec).getKey(), "DES");
+            } else
+            {
+                return super.engineGenerateSecret(keyspec);
+            }
+        }
+
+        protected KeySpec engineGetKeySpec(SecretKey secretkey, Class class1)
+            throws InvalidKeySpecException
+        {
+            if (class1 == null)
+            {
+                throw new InvalidKeySpecException("keySpec parameter is null");
+            }
+            if (secretkey == null)
+            {
+                throw new InvalidKeySpecException("key parameter is null");
+            }
+            if (javax/crypto/spec/SecretKeySpec.isAssignableFrom(class1))
+            {
+                return new SecretKeySpec(secretkey.getEncoded(), algName);
+            }
+            if (javax/crypto/spec/DESKeySpec.isAssignableFrom(class1))
+            {
+                secretkey = secretkey.getEncoded();
+                try
+                {
+                    secretkey = new DESKeySpec(secretkey);
+                }
+                // Misplaced declaration of an exception variable
+                catch (SecretKey secretkey)
+                {
+                    throw new InvalidKeySpecException(secretkey.toString());
+                }
+                return secretkey;
+            } else
+            {
+                throw new InvalidKeySpecException("Invalid KeySpec");
+            }
+        }
+
+        public KeyFactory()
+        {
+            super("DES", null);
+        }
+    }
+
+    public static class KeyGenerator extends BaseKeyGenerator
+    {
+
+        protected SecretKey engineGenerateKey()
+        {
+            if (uninitialised)
+            {
+                engine.init(new KeyGenerationParameters(new SecureRandom(), defaultKeySize));
+                uninitialised = false;
+            }
+            return new SecretKeySpec(engine.generateKey(), algName);
+        }
+
+        protected void engineInit(int i, SecureRandom securerandom)
+        {
+            super.engineInit(i, securerandom);
+        }
+
+        public KeyGenerator()
+        {
+            super("DES", 64, new DESKeyGenerator());
+        }
+    }
+
+    public static class Mappings extends AlgorithmProvider
+    {
+
+        private static final String PACKAGE = "org.bouncycastle.jcajce.provider.symmetric";
+        private static final String PREFIX = org/bouncycastle/jcajce/provider/symmetric/DES.getName();
+
+        private void addAlias(ConfigurableProvider configurableprovider, ASN1ObjectIdentifier asn1objectidentifier, String s)
+        {
+            configurableprovider.addAlgorithm((new StringBuilder()).append("Alg.Alias.KeyGenerator.").append(asn1objectidentifier.getId()).toString(), s);
+            configurableprovider.addAlgorithm((new StringBuilder()).append("Alg.Alias.KeyFactory.").append(asn1objectidentifier.getId()).toString(), s);
+        }
+
+        public void configure(ConfigurableProvider configurableprovider)
+        {
+            configurableprovider.addAlgorithm("Cipher.DES", (new StringBuilder()).append(PREFIX).append("$ECB").toString());
+            configurableprovider.addAlgorithm((new StringBuilder()).append("Cipher.").append(OIWObjectIdentifiers.desCBC).toString(), (new StringBuilder()).append(PREFIX).append("$CBC").toString());
+            addAlias(configurableprovider, OIWObjectIdentifiers.desCBC, "DES");
+            configurableprovider.addAlgorithm("Cipher.DESRFC3211WRAP", (new StringBuilder()).append(PREFIX).append("$RFC3211").toString());
+            configurableprovider.addAlgorithm("KeyGenerator.DES", (new StringBuilder()).append(PREFIX).append("$KeyGenerator").toString());
+            configurableprovider.addAlgorithm("SecretKeyFactory.DES", (new StringBuilder()).append(PREFIX).append("$KeyFactory").toString());
+            configurableprovider.addAlgorithm("Mac.DESCMAC", (new StringBuilder()).append(PREFIX).append("$CMAC").toString());
+            configurableprovider.addAlgorithm("Mac.DESMAC", (new StringBuilder()).append(PREFIX).append("$CBCMAC").toString());
+            configurableprovider.addAlgorithm("Alg.Alias.Mac.DES", "DESMAC");
+            configurableprovider.addAlgorithm("Mac.DESMAC/CFB8", (new StringBuilder()).append(PREFIX).append("$DESCFB8").toString());
+            configurableprovider.addAlgorithm("Alg.Alias.Mac.DES/CFB8", "DESMAC/CFB8");
+            configurableprovider.addAlgorithm("Mac.DESMAC64", (new StringBuilder()).append(PREFIX).append("$DES64").toString());
+            configurableprovider.addAlgorithm("Alg.Alias.Mac.DES64", "DESMAC64");
+            configurableprovider.addAlgorithm("Mac.DESMAC64WITHISO7816-4PADDING", (new StringBuilder()).append(PREFIX).append("$DES64with7816d4").toString());
+            configurableprovider.addAlgorithm("Alg.Alias.Mac.DES64WITHISO7816-4PADDING", "DESMAC64WITHISO7816-4PADDING");
+            configurableprovider.addAlgorithm("Alg.Alias.Mac.DESISO9797ALG1MACWITHISO7816-4PADDING", "DESMAC64WITHISO7816-4PADDING");
+            configurableprovider.addAlgorithm("Alg.Alias.Mac.DESISO9797ALG1WITHISO7816-4PADDING", "DESMAC64WITHISO7816-4PADDING");
+            configurableprovider.addAlgorithm("AlgorithmParameters.DES", "org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters");
+            configurableprovider.addAlgorithm((new StringBuilder()).append("Alg.Alias.AlgorithmParameters.").append(OIWObjectIdentifiers.desCBC).toString(), "DES");
+            configurableprovider.addAlgorithm("AlgorithmParameterGenerator.DES", (new StringBuilder()).append(PREFIX).append("$AlgParamGen").toString());
+            configurableprovider.addAlgorithm((new StringBuilder()).append("Alg.Alias.AlgorithmParameterGenerator.").append(OIWObjectIdentifiers.desCBC).toString(), "DES");
+        }
+
+
+        public Mappings()
+        {
+        }
+    }
+
+    public static class RFC3211 extends BaseWrapCipher
+    {
+
+        public RFC3211()
+        {
+            super(new RFC3211WrapEngine(new DESEngine()), 8);
+        }
+    }
+
+
+    private DES()
+    {
+    }
+}

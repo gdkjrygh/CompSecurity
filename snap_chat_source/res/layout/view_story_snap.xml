@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/snap_container" android:background="@android:color/black" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:layout_gravity="top" android:id="@id/story_username_gradient" android:background="@drawable/story_snap_username_background" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/story_gradient_view_height">
+            <TextView android:textSize="20.0sp" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/story_username_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <EditText android:textSize="@dimen/snap_preview_text_size" android:textColor="@android:color/white" android:textColorHint="@color/white" android:gravity="bottom" android:id="@id/prefilled_caption" android:background="@drawable/story_snap_caption_background" android:paddingLeft="6.0dip" android:paddingTop="4.0dip" android:paddingRight="6.0dip" android:paddingBottom="5.0dip" android:visibility="invisible" android:longClickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/story_gradient_view_height" android:hint="@string/chat_message_input_box_hint" android:maxLength="500" android:imeOptions="actionSend" android:textCursorDrawable="@color/red" />
+        <com.snapchat.android.ui.SponsoredSlugView android:id="@id/sponsored_slug_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.snapchat.android.ui.VerticalSwipeLayout android:id="@id/my_story_swipe_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/snap_view_loading_screen_stub" android:layout="@layout/snap_view_loading_screen" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</merge>

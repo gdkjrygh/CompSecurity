@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.design.widget.AppBarLayout android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:id="@id/toolBar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ActionBarMaterialStyleWhite">
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:layout_gravity="center_horizontal" android:paddingTop="@dimen/padding3b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/header_say_hello_to" style="@style/ActionBarTitle" />
+                <include android:layout_gravity="center_horizontal" android:id="@id/profile_layout" android:paddingTop="@dimen/padding4b" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/profile_layout" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <Button android:id="@id/button_invite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding4b" android:text="@string/action_off_network_invite_to_skype" android:layout_below="@id/appbar" android:layout_centerHorizontal="true" android:onClick="onClick" style="@style/SigninButton" />
+</RelativeLayout>

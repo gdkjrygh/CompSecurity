@@ -1,0 +1,15 @@
+.class public Lorg/bouncycastle/i18n/filter/SQLFilter;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lorg/bouncycastle/i18n/filter/Filter;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

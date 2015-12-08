@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/header_debug_settings" android:key="@string/key_category_debug">
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="Enable Mojis" android:key="@string/key_enable_moji" android:defaultValue="true" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="Show Call Quality Feedback" android:key="@string/key_show_call_quality_feedback" android:defaultValue="false" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="Force preferred DSN" android:key="force_dsn" android:defaultValue="false" />
+        <EditTextPreference android:title="Set DSN host" android:key="dsn_host" android:defaultValue="0" />
+        <ListPreference android:title="Activities to test" android:key="activities_to_test" />
+        <Preference android:title="Mobile Number Verification" android:key="mobile_number_verification" />
+        <Preference android:title="MNV debug info" android:key="mnv_debug_info" />
+        <Preference android:title="Reset MNV timestamps" android:key="mnv_enable" />
+        <Preference android:title="Skylib debug info" android:key="skylib_debug" />
+        <Preference android:title="App debug info" android:key="app_debug" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="Save logs" android:key="@string/key_save_logs" android:summary="Requires force stop for corelib restart" android:defaultValue="false" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="Shake for debug information" android:key="@string/key_shake_debug" android:summary="Gather debug data and save it locally or submit it to Jira." android:defaultValue="false" />
+        <EditTextPreference android:title="Advertising Unit Id" android:key="@string/key_ad_unit" android:defaultValue="0" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="Simulate Mobile Number Verification Completion" android:key="@string/key_phone_verification_completed" android:summary="Signals the completion of the mobile number verification flow." android:defaultValue="false" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="Debug address book ingest" android:key="contact_mining" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.pinterest.ui.scrollview.ObservableScrollView android:id="@id/commerce_checkout_detail_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/margin" android:paddingBottom="@dimen/margin_half" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.pinterest.activity.commerce.view.TwoColumnTextView android:id="@id/commerce_checkout_quantity_input" app:description="@string/commerce_checkout_quantity" style="@style/checkout_two_column_cart_input" />
+            <com.pinterest.activity.commerce.view.TwoColumnTextView android:id="@id/commerce_checkout_ship_address_input" app:description="@string/commerce_checkout_ship_address" style="@style/checkout_two_column_cart_input" />
+            <com.pinterest.activity.commerce.view.TwoColumnTextView android:id="@id/commerce_checkout_ship_method_input" app:description="@string/commerce_checkout_ship_method" style="@style/checkout_two_column_cart_input" />
+            <com.pinterest.activity.commerce.view.TwoColumnTextView android:id="@id/commerce_checkout_payment_method_input" app:description="@string/commerce_checkout_payment_method" app:descriptionDrawableRight="@drawable/commerce_secure_lock" app:descriptionDrawablePadding="@dimen/commerce_checkout_input_drawable_padding" style="@style/checkout_two_column_cart_input" />
+            <com.pinterest.activity.commerce.view.TwoColumnTextView android:id="@id/commerce_checkout_amount_sub_total" app:description="@string/commerce_checkout_amount_sub_total" style="@style/checkout_two_column_cart_amount" />
+            <com.pinterest.activity.commerce.view.TwoColumnTextView android:id="@id/commerce_checkout_amount_tax" app:description="@string/commerce_checkout_amount_tax" style="@style/checkout_two_column_cart_amount" />
+            <com.pinterest.activity.commerce.view.TwoColumnTextView android:id="@id/commerce_checkout_amount_shipping" app:description="@string/commerce_checkout_amount_shipping" style="@style/checkout_two_column_cart_amount" />
+        </LinearLayout>
+    </com.pinterest.ui.scrollview.ObservableScrollView>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/commerce_checkout_bottom_container_height">
+        <LinearLayout android:orientation="vertical" android:id="@id/commerce_checkout_pay_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/gray_light" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <com.pinterest.activity.commerce.view.TwoColumnTextView android:id="@id/commerce_checkout_amount_total" android:layout_marginTop="@dimen/margin_half" android:layout_marginBottom="@dimen/margin" app:description="@string/commerce_checkout_amount_total" app:descriptionColor="@color/commerce_checkout_text_dark_grey" app:descriptionSize="@dimen/commerce_checkout_text_medium" app:descriptionLayoutGravity="bottom" app:valueColor="@color/blue_commerce" app:valueSize="@dimen/commerce_checkout_text_large" app:valueTypeface="bold" style="@style/checkout_two_column_cart_amount" />
+            <com.pinterest.ui.text.PButton android:id="@id/commerce_checkout_action_button" android:layout_width="fill_parent" android:layout_height="@dimen/commerce_button_height" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" android:text="@string/commerce_checkout_place_order" android:textAllCaps="true" style="@style/button_blue" />
+            <com.pinterest.ui.text.PTextView android:textSize="@dimen/commerce_checkout_text_small" android:textColor="@color/gray_darkest_pressed" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/commerce_checkout_merchant_learn_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_half" android:layout_marginBottom="@dimen/margin_half" />
+        </LinearLayout>
+        <ProgressBar android:layout_gravity="center" android:id="@id/commerce_checkout_progress_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    </FrameLayout>
+</merge>

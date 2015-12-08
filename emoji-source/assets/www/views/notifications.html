@@ -1,0 +1,42 @@
+<!-- Header and Nav -->
+<nav class="top-bar fixed-header">
+    <div class="logo"></div>
+    <refresh-button promise-function="refresh"></refresh-button>
+</nav>
+
+<feed-tabs selected="notifications"></feed-tabs>
+
+<div class="empty-feed columns" ng-if="feedIsEmpty">
+    <p>You don't have any notifications yet.</p>
+</div>
+
+<loading-spinner visible="notificationsLoading"></loading-spinner>
+
+<div ng-if="!feedIsEmpty" class="noti-feed-container">
+
+	<div class="ios-hide" bs-ios-wait infinite-scroll="add()" can-load="canLoad" threshold="500" id="feed_notifications">
+
+		<div ng-repeat="notification in feed.feed_items | limitTo:feed.limit">
+			<div ng-if="is_like(notification) || is_comment(notification)" class="noti liked clearfix"
+				 ng-class="{liked: is_like(notification), commented: is_comment(notification)}">
+				<div class="profile" queued="{{subject(notification).thumb}}" q-retry="true" q-fail="profile-fail.png" q-click="view_user(subject(notification).fb_id)"></div>
+				<div class="details">
+					<p>
+						<a ng-click="view_user(subject(notification).fb_id)">{{subject(notification) | displayName}}</a>
+						{{get_verb(notification)}}
+						<a ng-if="!is_me(notification.item_data.author)"
+						   ng-click="view_user(notification.item_data.author.fb_id)">{{notification.item_data.author |
+							displayName}}'s</a>
+						<span ng-if="is_me(notification.item_data.author)">your</span>
+						comic.
+						<span class="time"><i class="icon-clock"></i> {{notification.item_data.timestamp | timestamp_format}} ago</span>
+					</p>
+				</div>
+				<div class="comic-thumb" q-click="view_comic(notification.item_data.comic_id)" q-retry="true" q-fail="comic-fail.png" queued="{{notification.item_data.comic_url}}"></div>
+			</div>
+		</div>
+
+		<loading-spinner visible="fetching_more_notifications == true"></loading-spinner>
+	</div>
+
+</div>

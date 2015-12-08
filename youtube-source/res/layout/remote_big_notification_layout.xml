@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/notification_item" />
+    <LinearLayout android:background="#ff282828" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <ImageView android:gravity="center" android:id="@id/playpause" android:background="@drawable/compat_item_selector" android:padding="16.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_notifications_menu_pause" android:layout_centerInParent="true" />
+        <ImageView android:gravity="center" android:id="@id/prev" android:background="@drawable/compat_item_selector" android:padding="16.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/remote_extended_notification_previous_drawable" android:layout_toLeftOf="@id/playpause" android:layout_centerVertical="true" />
+        <ImageView android:gravity="center" android:id="@id/next" android:background="@drawable/compat_item_selector" android:padding="16.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/remote_extended_notification_next_drawable" android:layout_toRightOf="@id/playpause" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,29 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package kik.android.widget.preferences;
+
+import android.content.DialogInterface;
+import kik.a.ab;
+
+// Referenced classes of package kik.android.widget.preferences:
+//            ResetKikPreference
+
+final class bi
+    implements android.content.DialogInterface.OnClickListener
+{
+
+    final ResetKikPreference a;
+
+    bi(ResetKikPreference resetkikpreference)
+    {
+        a = resetkikpreference;
+        super();
+    }
+
+    public final void onClick(DialogInterface dialoginterface, int i)
+    {
+        a.b.f();
+    }
+}

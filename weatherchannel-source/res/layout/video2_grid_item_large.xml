@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/video2_grid_item_large" android:padding="@dimen/video_grid_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.weather.commons.ui.FixedAspectRatioImageView android:id="@id/video2_grid_item_imageholder" android:background="@color/video_module_image_default" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/video_row_thumbnail_contentDescription" weather:farivAspectWidth="@integer/video_aspect_width" weather:farivAspectHeight="@integer/video_aspect_height" />
+        <ImageView android:id="@id/video2_grid_item_play_icon" android:layout_width="@dimen/video2_grid_item_play_icon_large" android:layout_height="@dimen/video2_grid_item_play_icon_large" android:src="@drawable/btn_video_play" android:layout_centerInParent="true" android:contentDescription="@string/video2_grid_item_play_icon_content_description" />
+    </RelativeLayout>
+    <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/video2_grid_item_title_textsize" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/video2_grid_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" weather:font="Roboto-Regular.ttf" />
+</LinearLayout>

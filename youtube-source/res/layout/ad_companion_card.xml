@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/card_frame_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/card_margin_left" android:layout_marginTop="@dimen/card_margin_top" android:layout_marginRight="@dimen/card_margin_right" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <ImageView android:id="@id/channel_avatar" android:background="@drawable/bg_avatar" android:layout_width="@dimen/guide_small_avatar_width" android:layout_height="@dimen/guide_small_avatar_height" android:layout_margin="12.0dip" android:scaleType="centerCrop" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/ad_badge" />
+            <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/medium_font_size" android:textColor="#ff333333" android:ellipsize="end" android:layout_gravity="center" android:id="@id/by_channel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/widget_from_user" android:singleLine="true" yt:robotoFont="light" />
+        </LinearLayout>
+        <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/small_font_size" android:textColor="#ff666666" android:ellipsize="end" android:id="@id/video_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/views" android:singleLine="true" yt:robotoFont="light" />
+    </LinearLayout>
+</LinearLayout>

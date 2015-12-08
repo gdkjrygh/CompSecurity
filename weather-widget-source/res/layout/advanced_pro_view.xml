@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.gau.go.launcherex.gowidget.weather.scroller.AnimViewScrollGroup android:id="@id/scroll_group" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageButton android:layout_gravity="top|right|center" android:id="@id/vip_paid" android:background="@drawable/vip_script_vip_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/advanced_recommend_divider" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.gau.go.launcherex.gowidget.weather.view.Indicator android:gravity="center" android:layout_gravity="center" android:id="@id/indicator" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="20.0dip" android:baselineAligned="false">
+            <FrameLayout android:id="@id/buynow_layout" android:addStatesFromChildren="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="2.0dip" android:layout_weight="1.0">
+                <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/button_googleplay_layout" android:background="@drawable/vip_button_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip">
+                    <ImageView android:layout_gravity="left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="@drawable/pay_icon_google_play" android:contentDescription="@null" />
+                    <TextView android:textSize="@dimen/billing_buy_get_btn_text_size" android:textColor="#ffa0a0a0" android:gravity="center" android:id="@id/buynow" android:paddingRight="@dimen/billing_buy_get_btn_margin_right" android:layout_width="0.0dip" android:layout_height="43.0dip" android:text="@string/billing_buy_now" android:singleLine="true" android:layout_weight="1.0" android:textIsSelectable="false" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="top|right|center" android:id="@id/buynow_prom" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:src="@drawable/vip_button_icon" android:contentDescription="@null" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/getjar_layout" android:visibility="gone" android:addStatesFromChildren="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/button_getjar_layout" android:background="@drawable/vip_button_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="8.0dip">
+                    <ImageView android:layout_gravity="left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/pay_icon_getjar" android:contentDescription="@null" />
+                    <TextView android:textSize="@dimen/billing_buy_get_btn_text_size" android:textColor="#ffa0a0a0" android:gravity="center" android:layout_gravity="center" android:id="@id/getjar" android:paddingRight="@dimen/billing_buy_get_btn_margin_right" android:layout_width="0.0dip" android:layout_height="43.0dip" android:text="@string/billing_get_now" android:singleLine="true" android:layout_weight="1.0" android:textIsSelectable="false" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/agreement_enterance_text_size" android:textColor="#ffffffff" android:gravity="center" android:id="@id/agreement" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/agreement_enterance" />
+    </LinearLayout>
+</LinearLayout>

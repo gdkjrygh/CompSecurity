@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="top" android:orientation="vertical" android:background="@color/bg_white_full_opacity" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.pinterest.ui.text.PTextView android:id="@id/title_tv" android:layout_width="@dimen/match_parent" app:pTypeface="bold" style="@style/text_modal_title_brio" />
+    <RelativeLayout android:id="@id/sendable_object_container" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/brio_margin" android:layout_marginTop="@dimen/brio_margin" android:layout_marginRight="@dimen/brio_margin">
+        <com.pinterest.ui.imageview.WebImageView android:id="@id/preview_iv" android:layout_width="@dimen/send_share_search_image_size" android:layout_height="@dimen/send_share_search_image_size" android:layout_marginRight="@dimen/margin" android:scaleType="centerCrop" android:layout_alignParentTop="true" />
+        <EditText android:textSize="@dimen/text_caption" android:id="@id/message_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin" android:hint="@string/msg_field_button" android:lines="3" android:minLines="2" android:layout_toRightOf="@id/preview_iv" android:layout_alignParentTop="true" android:inputType="textMultiLine" style="@style/EditTextPinterestBrio" />
+        <TextView android:id="@id/description_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:layout_toRightOf="@id/preview_iv" android:layout_below="@id/message_tv" />
+    </RelativeLayout>
+    <fragment android:name="com.pinterest.activity.sendshare.ContactsSearchFragment" android:id="@id/contacts_search_fragment" android:layout_marginLeft="@dimen/brio_margin" android:layout_marginTop="@dimen/brio_margin" android:layout_marginRight="@dimen/brio_margin" style="@style/full_view" />
+</LinearLayout>

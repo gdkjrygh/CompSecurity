@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/call_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/font_fixed_large" android:textColor="@color/white" android:ellipsize="end" android:id="@id/generic_button" android:background="@drawable/transparent_background_selector" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding7" android:singleLine="true" android:drawablePadding="3.0dip" />
+        <TextView android:textSize="@dimen/font_fixed_small_medium" android:textColor="@color/white" android:ellipsize="end" android:id="@id/generic_sub_button" android:background="@drawable/transparent_background_selector" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding6" android:singleLine="true" />
+    </LinearLayout>
+    <com.skype.android.widget.SymbolView android:id="@id/title_camera_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/title_chat_bubble_btn" android:layout_alignBottom="@id/call_header" app:symbol_code="SwitchCamera" style="@style/ControlButtonOnActionBar" />
+    <com.skype.android.widget.SymbolView android:id="@id/title_chat_bubble_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBottom="@id/call_header" android:layout_alignParentRight="true" app:symbol_code="Message" style="@style/ControlButtonOnActionBar" />
+</RelativeLayout>

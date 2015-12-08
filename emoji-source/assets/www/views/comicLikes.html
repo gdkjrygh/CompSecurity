@@ -1,0 +1,21 @@
+<div class="action-icon">
+	<i class="icon-heart"></i>
+</div>
+
+<div class="comment-text">
+	<span ng-if="likers.length >= max">
+		<a ng-click="viewAllLikers()">
+			{{ likers.length }} people liked this comic
+		</a>
+	</span>
+
+	<span ng-if="likers.length < max">
+		<span ng-repeat="liker in likers">
+			<user-linkable user="liker" context="{'last': $last}">
+				{{ user | displayName }}{{ last ? '' : ', ' }}
+			</user-linkable>
+
+		</span>
+		<a ng-if="likers.length === 0" class="first-to" ng-click="toggleLike(comic)">Be the first to like this</a>
+	</span>
+</div>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" style="@style/fullline_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+            <com.pinterest.ui.text.PEditText android:id="@id/board_name_et" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginTop="@dimen/margin" android:layout_marginRight="@dimen/margin" android:hint="@string/board_name" android:inputType="textAutoCorrect" android:imeOptions="actionDone" style="@style/EditTextPinterest" />
+            <ViewStub android:id="@id/more_options_form_container" android:layout="@layout/dialog_create_board_more_options" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_half" />
+            <View android:layout_marginTop="@dimen/margin" style="@style/list_cell_divider" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin">
+                <TextView android:id="@id/learn_more" android:paddingRight="@dimen/margin" android:visibility="gone" android:layout_width="120.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin" android:text="@string/learn_more_secret_boards" android:maxLines="3" android:singleLine="false" android:layout_centerVertical="true" android:lineSpacingMultiplier="1.2" style="@style/text_subtitle" />
+                <Button android:id="@id/more_options" android:text="@string/create_new_board_more_options" android:layout_centerVertical="true" style="@style/button_plain" />
+                <Button android:id="@id/create" android:text="@string/create_new_board_dialog_create" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/button_red" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

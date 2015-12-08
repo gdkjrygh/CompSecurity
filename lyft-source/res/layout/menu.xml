@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.MenuView android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/profile_navigation_item" android:background="@drawable/btn_charcoal" android:clickable="true" android:layout_width="fill_parent" android:layout_height="120.0dip">
+        <com.makeramen.roundedimageview.RoundedImageView android:layout_gravity="center" android:id="@id/profile_user_photo_image_view" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_silhouette_square" app:riv_oval="true" />
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip">
+            <TextView android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/full_name_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="14.0sp" android:textColor="#99ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/view_profile" />
+        </LinearLayout>
+    </LinearLayout>
+    <RadioGroup android:id="@id/menu_selector_radio_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+        <RadioButton android:id="@id/home_navigation_item" android:layout_width="fill_parent" android:checked="true" android:button="@null" android:text="@string/home_menu_item" android:drawableLeft="@drawable/ic_balloon" android:drawablePadding="16.0dip" style="@style/MenuDrawer.Widget.Title" />
+        <me.lyft.android.ui.InviteMenuItem android:id="@id/invites_navigation_item" android:layout_width="fill_parent" android:button="@null" android:text="@string/invites_menu_item" android:drawableLeft="@drawable/ic_giftbox_pink" android:drawablePadding="16.0dip" style="@style/MenuDrawer.Widget.Title" />
+        <RadioButton android:id="@id/ride_history_navigation_item" android:layout_width="fill_parent" android:button="@null" android:text="@string/ride_history_menu_item" android:drawableLeft="@drawable/ic_history_black" android:drawablePadding="16.0dip" style="@style/MenuDrawer.Widget.Title" />
+        <RadioButton android:id="@id/payment_navigation_item" android:layout_width="fill_parent" android:button="@null" android:text="@string/payment_menu_item" android:drawableLeft="@drawable/ic_payment" android:drawablePadding="16.0dip" style="@style/MenuDrawer.Widget.Title" />
+        <RadioButton android:id="@id/help_navigation_item" android:layout_width="fill_parent" android:button="@null" android:text="@string/help_menu_item" android:drawableLeft="@drawable/ic_help" android:drawablePadding="16.0dip" style="@style/MenuDrawer.Widget.Title" />
+        <RadioButton android:id="@id/settings_navigation_item" android:layout_width="fill_parent" android:button="@null" android:text="@string/settings_menu_item" android:drawableLeft="@drawable/ic_settings" android:drawablePadding="16.0dip" style="@style/MenuDrawer.Widget.Title" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/driver_mode_switcher_view" android:background="@drawable/selectable_item" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:background="@color/white_alpha_0" android:layout_width="wrap_content" android:text="@string/driver_mode_menu_item" android:drawableLeft="@drawable/ic_drive" android:drawablePadding="16.0dip" style="@style/MenuDrawer.Widget.Title" />
+            <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <me.lyft.android.controls.Toggle android:id="@id/driver_mode_switch" android:layout_width="50.0dip" android:layout_height="36.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+        </LinearLayout>
+        <RadioButton android:id="@id/development_navigation_item" android:layout_width="fill_parent" android:button="@null" android:text="@string/dev_menu_item" android:drawableLeft="@drawable/ic_development" android:drawablePadding="16.0dip" style="@style/MenuDrawer.Widget.Title" />
+    </RadioGroup>
+    <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</me.lyft.android.ui.MenuView>

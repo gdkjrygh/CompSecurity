@@ -1,0 +1,17 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.skype.android.app.mnv;
+
+import com.skype.android.SkypeActivity;
+
+public class MnvActivity extends SkypeActivity
+{
+
+    static final int START_PIN_RESULT_CODE = 0;
+
+    public MnvActivity()
+    {
+    }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffeeeeee" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="#fffffffe" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="3.0dip" android:layout_marginBottom="6.0dip" android:foreground="@drawable/photo_pra_bg">
+        <LinearLayout android:orientation="vertical" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/card_list" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:layout_gravity="bottom" android:background="#43434343" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_alignParentBottom="true" />
+                <LinearLayout android:orientation="vertical" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <View android:id="@id/preview_bg" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="center" android:id="@id/pra_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/photo_loading" android:scaleType="fitCenter" android:layout_centerInParent="true" android:contentDescription="@null" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <View android:layout_gravity="center" android:id="@id/pra_thumbnail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@null" />
+                </LinearLayout>
+                <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="13.5dip" android:textStyle="bold" android:textColor="#ff313131" android:gravity="left|center" android:id="@id/pra_cityname" android:background="#a3ffffff" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="25.0dip" android:singleLine="true" android:drawableLeft="@drawable/photo_location_flg" android:drawablePadding="5.0dip" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="right|center" android:orientation="horizontal" android:id="@id/pra_back_favour_layout" android:layout_width="fill_parent" android:layout_height="30.0dip">
+                <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="11.0dip" android:textColor="#ff434343" android:gravity="center_vertical" android:layout_gravity="right|center" android:id="@id/pra_backcount" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:minWidth="45.0dip" android:singleLine="true" android:drawableLeft="@drawable/photo_set_background" android:drawablePadding="2.0dip" />
+                <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="11.0dip" android:textColor="#ff434343" android:gravity="center_vertical" android:layout_gravity="right|center" android:id="@id/pra_favour" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:layout_marginRight="3.0dip" android:minWidth="45.0dip" android:singleLine="true" android:drawableLeft="@drawable/photo_set_praise" android:drawablePadding="5.0dip" />
+            </LinearLayout>
+            <View android:id="@id/pra_line" android:background="#43434343" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="13.5dip" android:textColor="@color/photo_desc_default" android:gravity="left" android:id="@id/pra_desc" android:paddingLeft="6.0dip" android:paddingTop="10.0dip" android:paddingRight="6.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="5" />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

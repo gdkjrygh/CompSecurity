@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/shop_filter_list_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/shop_filter_loading_view" layout="@layout/loading_page" />
+    <com.walmart.android.ui.SafeListView android:id="@id/shop_filter_list_view" android:visibility="gone" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/default_list_selector" android:cacheColorHint="@color/transparent" android:divider="@color/divider_grey" android:dividerHeight="1.0dip" android:layout_above="@id/shop_filter_footer_view"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <include android:id="@id/shop_filter_footer_view" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true" layout="@layout/options_footer" />
+</RelativeLayout>

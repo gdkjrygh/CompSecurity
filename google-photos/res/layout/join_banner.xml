@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/join_banner_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/photos_envelope_joinbanner_join_banner_shadow_height" android:src="@drawable/join_banner_shadow" android:scaleType="fitXY" android:contentDescription="@null" />
+    <LinearLayout android:orientation="vertical" android:id="@id/join_banner_layout" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/profile_image_view" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_margin="16.0dip" android:contentDescription="@null" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <TextView android:id="@id/join_banner_prompt_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="5.0dip" android:text="@string/photos_envelope_joinbanner_get_update_prompt_text" style="@style/quantum_text_subhead_black" />
+                <TextView android:textColor="@color/quantum_grey600" android:id="@id/user_email_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="true" style="@style/quantum_text_body_1_black" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:id="@id/join_album_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="12.0dip" android:minHeight="48.0dip" android:text="@string/photos_envelope_joinbanner_join_button" style="@style/Theme.Photos.Button.Dark" />
+    </LinearLayout>
+</LinearLayout>

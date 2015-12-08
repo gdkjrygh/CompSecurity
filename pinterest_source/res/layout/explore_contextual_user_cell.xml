@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/user_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_marginTop="@dimen/margin_half" android:layout_marginBottom="@dimen/margin_half" style="@style/fullline_view">
+        <com.pinterest.ui.imageview.GrayWebImageView android:id="@id/user_iv" android:layout_width="@dimen/explore_user_cell_profile_size" android:layout_height="@dimen/explore_user_cell_profile_size" android:layout_marginRight="6.0dip" android:scaleType="centerCrop" />
+        <LinearLayout android:gravity="top" android:orientation="vertical" android:id="@id/text_container" style="@style/full_view">
+            <TextView android:textSize="22.0dip" android:id="@id/title_tv" android:includeFontPadding="false" style="@style/pin_title" />
+            <TextView android:textSize="12.0dip" android:textStyle="normal" android:textColor="@color/text_medium" android:id="@id/subtitle_tv" style="@style/pin_lbl" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.pinterest.activity.explore.view.ExploreUserPinGridView android:id="@id/user_pins_grid_vw" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

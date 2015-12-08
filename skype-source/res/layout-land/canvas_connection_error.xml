@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:textColor="@color/main_light_color" android:orientation="vertical" android:id="@id/canvas_error_container" android:background="@color/skype_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/canvas_error_middle_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/canvas_error_image_top_padding_landscape" style="@style/CanvasErrorMiddleViews">
+        <ImageView android:id="@id/canvas_error_emoticon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/linking_emoticon_sad" />
+        <LinearLayout android:orientation="vertical" android:id="@id/canvas_error_message_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/canvas_error_title_landscape_margin_top">
+            <TextView android:id="@id/canvas_error_title" android:layout_height="wrap_content" style="@style/CanvasErrorTitle" />
+            <TextView android:id="@id/canvas_error_subtitle" android:layout_height="wrap_content" style="@style/CanvasErrorSubTitleLandscape" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/canvas_error_action_container" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CanvasErrorTopContainer">
+            <Button android:id="@id/canvas_error_action" android:background="@drawable/focus_highlight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableRight="@drawable/big_arrow_right_white" style="@style/CanvasErrorTopActionLink" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/CanvasErrorBottomContainer">
+        <Button android:id="@id/canvas_error_btn_first" android:layout_width="@dimen/canvas_error_button_landscape_width" android:layout_height="wrap_content" style="@style/ButtonOnBluePositive" />
+        <Button android:id="@id/canvas_error_network_link" android:background="@drawable/focus_highlight" android:layout_width="fill_parent" android:layout_height="@dimen/canvas_check_network_height" style="@style/CanvasErrorNetworkLinkLandscape" />
+    </LinearLayout>
+</RelativeLayout>

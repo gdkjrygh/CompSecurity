@@ -1,0 +1,11 @@
+<div class="action-icon">
+	<i class="icon-fixed-width" ng-class="{'icon-comment': showIcon, 'icon-blank': !showIcon}"></i>
+</div>
+<div class="comment-text">
+	<user-linkable user="comment.user">
+		<span>{{ user | displayName }}</span>
+	</user-linkable>
+
+	<span ng-bind="comment.text"></span>
+	<span class="timestamp" ng-bind="comment.timestamp | timestamp_format"></span>
+</div>

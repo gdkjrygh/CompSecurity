@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip">
+        <RelativeLayout android:id="@id/add_current_location_layout" android:background="@drawable/location_manager_list_selector" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="64.0dip">
+            <ImageView android:id="@id/location_icon" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginLeft="5.0dip" android:src="@drawable/findme" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/location_manager_location_icon_content_description" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="20.0sp" android:id="@id/tvAddCurrentLocation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/location_manager_add_current_location_description" android:layout_toRightOf="@id/location_icon" android:layout_centerVertical="true" weather:font="Roboto-Bold.ttf" />
+        </RelativeLayout>
+        <View android:background="#ffd9d9d9" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/saved_location_header_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textColor="#ff585858" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="@string/location_manager_saved_locations" weather:font="Roboto-Bold.ttf" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="10.0sp" android:textColor="#ff8d8d8d" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="@string/location_manager_saved_locations_hint" weather:font="Roboto-Regular.ttf" />
+        </LinearLayout>
+        <View android:background="#ff7f7f7f" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="3.0dip" />
+        <LinearLayout android:orientation="vertical" android:id="@id/no_saved_locations" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="@string/location_manager_no_saved_locations" />
+        </LinearLayout>
+        <com.weather.Weather.ui.TwcDynamicListView android:id="@id/location_list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:listSelector="@drawable/location_manager_list_selector" android:layout_weight="1.0" />
+        <View android:background="#ffd9d9d9" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+</ScrollView>

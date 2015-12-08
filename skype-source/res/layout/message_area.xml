@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/message_area_sms_bar" android:background="@color/white" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="@dimen/chat_sms_bar_height" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/font_small_medium" android:textColor="@color/text_secondary" android:id="@id/message_area_sms_rate" android:paddingRight="@dimen/chat_margins" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <com.skype.android.app.chat.SmsTargetsSpinner android:id="@id/message_area_sms_spinner" android:background="@color/transparent" android:paddingLeft="@dimen/chat_margins" android:paddingRight="@dimen/size_1x" android:layout_toLeftOf="@id/message_area_sms_rate" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/SpinnerView" />
+        <View android:id="@id/message_area_divider" android:background="@color/skype_grey_cool40" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <LinearLayout android:id="@id/message_area_edit_text_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/chat_message_area_edit_text_height">
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.skype.android.widget.ChatEditText android:id="@id/message_area_edit_text" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/text_type_message_here" android:maxLines="4" android:layout_weight="1.0" android:inputType="textCapSentences|textMultiLine" android:imeOptions="actionSend|flagNoExtractUi" style="@style/ChatMessageEdit" />
+            <com.skype.android.widget.BadgeDecoratorView android:layout_gravity="center" android:id="@id/message_area_emoticon_button_last_opened_tab" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" app:badgeDistanceFromEdgeToCenter="@dimen/message_area_picker_badge_last_opened_tab_padding" app:badgeSize="@dimen/message_area_picker_badge_size">
+                <com.skype.android.app.chat.picker.GlyphImageView android:paddingRight="@dimen/padding3" android:layout_width="@dimen/message_area_picker_last_opened_tab_size" android:layout_height="@dimen/message_area_picker_last_opened_tab_size" android:contentDescription="@string/acc_add_emoticon_or_moji" style="@style/ChatMessageEmoticonBtn" />
+            </com.skype.android.widget.BadgeDecoratorView>
+            <com.skype.android.widget.BadgeDecoratorView android:layout_gravity="center" android:id="@id/message_area_emoticon_button" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" app:badgeDistanceFromEdgeToCenter="@dimen/message_area_picker_badge_padding" app:badgeSize="@dimen/message_area_picker_badge_size">
+                <com.skype.android.widget.SymbolView android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" android:contentDescription="@string/acc_add_emoticon_or_moji" app:symbol_code="EmoticonStroke" style="@style/ChatMessageEmoticonBtn" />
+            </com.skype.android.widget.BadgeDecoratorView>
+            <com.skype.android.widget.SymbolView android:id="@id/message_area_keyboard_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" android:contentDescription="@string/acc_show_keyboard" app:symbol_code="Keyboard" style="@style/ChatMessageEmoticonBtn" />
+            <com.skype.android.widget.SymbolView android:layout_gravity="center" android:id="@id/message_area_send_button" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/acc_send_message_button" app:symbol_code="Send" style="@style/ChatMessageAreaSendBtn" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

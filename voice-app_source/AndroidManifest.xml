@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.nbcuni.nbc.thevoice" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727">
+    <supports-screens android:largeScreens="true" android:requiresSmallestWidthDp="320" android:xlargeScreens="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.nbcuni.nbc.thevoice.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.nbcuni.nbc.thevoice.permission.C2D_MESSAGE"/>
+    <application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="com.nbcuni.nbc.thevoice.UATakeOff" android:theme="@style/AppTheme">
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.nbcuni.nbc.thevoice.MainActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Wrapper" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/title_activity_popup" android:name="com.nbcuni.nbc.thevoice.PopupActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Popup" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.nbcuni.nbc.thevoice.VideoSplash" android:screenOrientation="portrait" android:theme="@style/Theme.Wrapper"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+        <activity android:name="com.urbanairship.actions.ActionActivity"/>
+        <activity android:exported="false" android:name="com.urbanairship.actions.LandingPageActivity" android:parentActivityName="com.nbcuni.nbc.thevoice.MainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+            <intent-filter>
+                <action android:name="com.urbanairship.actions.SHOW_LANDING_PAGE_INTENT_ACTION"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="true" android:name="com.nbcuni.nbc.thevoice.GPBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.kochava.android.tracker.ReferralCapture">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.gms.version" android:value="@integer/google_play_services_version"/>
+        <receiver android:name="com.nbcuni.nbc.thevoice.IntentReceiver"/>
+        <receiver android:name="com.urbanairship.CoreReceiver"/>
+        <receiver android:name="com.urbanairship.push.GCMPushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.nbcuni.nbc.thevoice"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <service android:label="Push Notification Service" android:name="com.urbanairship.push.PushService"/>
+        <service android:label="Event Service" android:name="com.urbanairship.analytics.EventService"/>
+        <service android:name="com.urbanairship.actions.ActionService"/>
+        <provider android:authorities="com.nbcuni.nbc.thevoice.urbanairship.provider" android:exported="false" android:multiprocess="true" android:name="com.urbanairship.UrbanAirshipProvider"/>
+        <meta-data android:name="io.fabric.ApiKey" android:value="4923177381fb0d2ab9e76d66af84723b89ee548e"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>

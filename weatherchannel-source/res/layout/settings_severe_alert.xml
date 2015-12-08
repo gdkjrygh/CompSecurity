@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:paddingLeft="@dimen/settings_main_margin" android:paddingRight="@dimen/settings_main_margin" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/alert_no_data_layout" />
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_layout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textColor="@color/settings_heading_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_default_marginleft" android:layout_marginTop="@dimen/settings_default_margin" android:text="@string/settings_alerts_your_locations_text" weather:font="Roboto-Bold.ttf" />
+        <View android:background="@color/thick_grey_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/thick_grey_line_height" android:layout_marginTop="@dimen/line_margintop" />
+        <ListView android:id="@id/lv_severe_alert_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/location_manager_list_selector" />
+    </LinearLayout>
+</LinearLayout>

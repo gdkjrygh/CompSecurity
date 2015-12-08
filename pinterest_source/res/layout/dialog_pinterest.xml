@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="100.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pinterest.ui.notify.DialogTitleView android:id="@id/dialog_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/dialog_content_container" android:padding="@dimen/margin" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <View android:id="@id/button_bar_divider" android:visibility="gone" style="@style/section_item_divider" />
+    <LinearLayout android:id="@id/button_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/negative_bt" style="@style/dialog_button" />
+        <View android:id="@id/button_divider" android:visibility="gone" style="@style/section_item_divider_vertical" />
+        <Button android:textStyle="bold" android:id="@id/positive_bt" style="@style/dialog_button" />
+    </LinearLayout>
+</LinearLayout>

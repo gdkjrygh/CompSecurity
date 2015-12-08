@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nbcsports.liveextra.ui.player.premierleague.standings.StandingsView android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true" style="@style/Blade"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/showStandingsView" android:background="@color/barBackground" android:padding="16.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Blade.TitleBase">
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/textPrimary" android:id="@id/standingsToggleHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/standings_header_toggle" />
+        <TextView android:textSize="16.0sp" android:id="@id/standingsToggleMessage" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/standings_toggle" />
+        <Button android:textStyle="bold" android:textColor="@color/goal" android:layout_gravity="right" android:id="@id/showStandingsButton" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/standings_tap_show" android:textAllCaps="true" />
+    </LinearLayout>
+    <ScrollView android:id="@id/blade_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TableLayout android:id="@id/standings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="*" style="@style/Blade" />
+    </ScrollView>
+</com.nbcsports.liveextra.ui.player.premierleague.standings.StandingsView>

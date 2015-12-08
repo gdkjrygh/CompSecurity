@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/quick_translate_root" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minWidth="@dimen/min_dialog_width"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.translate.widget.SpeakerView android:id="@id/speaker_view_src" android:background="@drawable/bg_clickable_blue" android:layout_width="@dimen/default_touch_target" android:layout_height="@dimen/default_touch_target" ns:greyOnDisable="true" />
+            <LinearLayout android:gravity="center_vertical" android:id="@id/spinner1_frame" android:background="@drawable/bg_clickable_blue" android:clipChildren="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <com.google.android.apps.translate.widget.LangSpinner android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/secondary_text" android:gravity="center" android:layout_gravity="center" android:id="@id/spinner1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:textAllCaps="true" ns:isForTarget="false" ns:disablePinButton="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_arrow_drop_down_grey600_24" />
+                <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+            <com.google.android.apps.translate.widget.TintImageView android:id="@id/btn_close" android:background="@drawable/bg_clickable_blue" android:layout_width="@dimen/default_touch_target" android:layout_height="@dimen/default_touch_target" android:contentDescription="@string/label_cancel_input" ns:mask="@drawable/ic_clear_black" ns:tint="@color/icon_dark_clickable" ns:iconSize="24.0dip" ns:mutate="true" />
+        </LinearLayout>
+        <ScrollView android:id="@id/txt_source_holder" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/primary_text" android:id="@id/txt_source" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/card_padding" android:layout_marginRight="@dimen/card_padding" android:textIsSelectable="true" />
+                <TextView android:textAppearance="?android:textAppearance" android:textColor="@color/secondary_text" android:ellipsize="end" android:id="@id/txt_transliteration_src" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/card_padding" android:layout_marginRight="@dimen/card_padding" android:textIsSelectable="true" />
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.translate.widget.SpeakerView android:id="@id/speaker_view_tgt" android:background="@drawable/bg_clickable_blue" android:layout_width="@dimen/default_touch_target" android:layout_height="@dimen/default_touch_target" ns:greyOnDisable="true" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/spinner2_frame" android:background="@drawable/bg_clickable_blue" android:clipChildren="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <com.google.android.apps.translate.widget.LangSpinner android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/secondary_text" android:gravity="center" android:layout_gravity="center" android:id="@id/spinner2" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:textAllCaps="true" ns:isForTarget="true" ns:disablePinButton="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_arrow_drop_down_grey600_24" />
+                <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <ScrollView android:id="@id/txt_target_holder" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/primary_text" android:id="@id/txt_target" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/card_padding" android:layout_marginRight="@dimen/card_padding" android:textIsSelectable="true" />
+                <TextView android:textAppearance="?android:textAppearance" android:textColor="@color/secondary_text" android:ellipsize="end" android:id="@id/txt_transliteration_tgt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/card_padding" android:layout_marginRight="@dimen/card_padding" android:textIsSelectable="true" />
+            </LinearLayout>
+        </ScrollView>
+        <FrameLayout android:id="@id/progress_container" android:padding="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ProgressBar android:layout_gravity="center" android:layout_width="32.0dip" android:layout_height="32.0dip" style="?android:attr/progressBarStyleLargeInverse" />
+        </FrameLayout>
+        <View android:id="@id/divider" android:background="@color/activity_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/source_target_divider_size" />
+        <ScrollView android:id="@id/dictionary_holder" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="3.0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/bottom_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/card_padding">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/more_wrapper" android:background="@drawable/bg_clickable_blue" android:layout_width="wrap_content" android:layout_height="@dimen/default_touch_target" android:layout_weight="1.0" style="@style/start_card_padding">
+            <ImageView android:id="@id/ic_caret_more_less" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_keyboard_arrow_down_grey600_24" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/secondary_text" android:gravity="center_vertical" android:id="@id/label_more_less" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/label_more" android:singleLine="true" android:layout_weight="1.0" android:textAllCaps="true" />
+        </LinearLayout>
+        <View android:id="@id/spacer" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="@dimen/default_touch_target" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/replace_wrapper" android:background="@drawable/bg_clickable_blue" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/start_card_padding">
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/replace_text_tint" android:gravity="center_vertical" android:id="@id/label_replace" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/label_replace" android:singleLine="true" android:textAllCaps="true" />
+            <com.google.android.apps.translate.widget.TintImageView android:id="@id/ic_replace" android:duplicateParentState="true" android:layout_width="@dimen/default_touch_target" android:layout_height="@dimen/default_touch_target" android:contentDescription="Replace Source Text" ns:mask="@drawable/ic_input_black_24dp" ns:tint="@color/replace_text_tint" ns:iconSize="24.0dip" ns:mutate="true" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

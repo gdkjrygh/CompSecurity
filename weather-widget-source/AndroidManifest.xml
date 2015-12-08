@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.gau.go.launcherex.gowidget.weatherwidget">
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <permission android:name="com.gau.go.launcherex.gowidget.weatherwidget.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.gau.go.launcherex.gowidget.weatherwidget.permission.C2D_MESSAGE"/>
+    <permission android:name="com.gau.go.launcherex.gowidget.weatherwidget.permission.SERVICE" android:protectionLevel="normal"/>
+    <uses-permission android:name="com.gau.go.launcherex.gowidget.weatherwidget.permission.SERVICE"/>
+    <application android:hardwareAccelerated="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.gau.go.launcherex.gowidget.framework.GoWidgetApplication" android:screenOrientation="portrait">
+        <meta-data android:name="MAPBAR_APIKEY" android:value="KnBkAlCdMhCiOnBaKnNcObGaEeKmLdFcPbEpCiAkBdDbFkJoHcCcCeJnNkDjAaGb"/>
+        <meta-data android:name="minGoWeatherExVersion" android:value="1"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyC6uFEY9BoKXD1vRbeEJzXkt5zwA5eYa04"/>
+        <activity android:name="com.gau.go.launcherex.gowidget.framework.GoWidgetActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.gau.go.launcherex.gowidget"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.INFO"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.jiubang.gau.ACTION_GOSTATICSDK"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.gau.go.launcherex.gowidget.weather.view.ThemeSettingActivity" android:process=":Activity" android:screenOrientation="portrait" android:theme="@style/Theme.Translucent.NoBackground.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.gau.go.launcherex.goweather.goplay.ThemeDetailActivity" android:process=":Activity" android:screenOrientation="portrait" android:theme="@style/Theme.Translucent.NoBackground.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.go.weatherex.themestore.WidgetApplyThemeGuideActivity" android:process=":Activity" android:screenOrientation="portrait" android:theme="@style/Theme.Translucent.NoBackground.NoTitleBar.Fullscreen"/>
+        <activity android:launchMode="singleTask" android:name="com.gau.go.launcherex.gowidget.weather.view.WeatherDetailActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Translucent.NoBackground.NoTitleBar.Fullscreen" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:name="com.gau.go.launcherex.gowidget.weather.view.AppInSDPromptActivity" android:screenOrientation="portrait" android:theme="@style/dialog"/>
+        <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.gau.go.launcherex.gowidget.weather.view.WeatherDayForecastActivity" android:noHistory="true" android:screenOrientation="portrait" android:taskAffinity="com.gau.go.launcherex.gowidget.weather.WeatherDayForecast" android:theme="@style/dialog"/>
+        <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.gau.go.launcherex.gowidget.weather.view.TempChangeDialog" android:noHistory="true" android:screenOrientation="portrait" android:taskAffinity="com.gau.go.launcherex.gowidget.weather.TempChangeDialog" android:theme="@style/dialog"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.gau.go.launcherex.gowidget.weather.view.Setting42Activity" android:noHistory="true" android:screenOrientation="portrait" android:taskAffinity="com.gau.go.launcherex.gowidget.weather.view.Setting42Activity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.gau.go.launcherex.gowidget.weather.view.Setting41Activity" android:noHistory="true" android:screenOrientation="portrait" android:taskAffinity="com.gau.go.launcherex.gowidget.weather.view.Setting41Activity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.gau.go.launcherex.gowidget.weather.view.Setting21Activity" android:noHistory="true" android:screenOrientation="portrait" android:taskAffinity="com.gau.go.launcherex.gowidget.weather.view.Setting21Activity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.gau.go.launcherex.gowidget.weather.view.LanguageSetting" android:screenOrientation="portrait" android:taskAffinity="com.gau.go.launcherex.gowidget.weather.view.LanguageSetting" android:theme="@style/WindowIsTranslucentTheme"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:finishOnTaskLaunch="true" android:launchMode="singleInstance" android:name="com.jiubang.core.util.CrashReportDialog" android:taskAffinity="com.jiubang.core.util.CrashReportDialog" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.gau.go.launcherex.gowidget.weather.view.AppListActivity" android:screenOrientation="portrait" android:taskAffinity="com.gau.go.launcherex.gowidget.weather.view.AppListActivity" android:theme="@style/WindowIsTranslucentTheme"/>
+        <receiver android:label="@string/appwidget42_name" android:name="com.gau.go.launcherex.gowidget.weather.systemwidget.AppWidget42Provider" android:process=":AppWidgetService">
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_42_provider"/>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_DATA_READY"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_REFRESH_STARTED"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_WIDGET_ADD_APPWIDGET42"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:label="@string/appwidget41_name" android:name="com.gau.go.launcherex.gowidget.weather.systemwidget.AppWidget41Provider" android:process=":AppWidgetService">
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_41_provider"/>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_DATA_READY"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_REFRESH_STARTED"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_WIDGET_ADD_APPWIDGET41"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:label="@string/appwidget21_name" android:name="com.gau.go.launcherex.gowidget.weather.systemwidget.AppWidget21Provider" android:process=":AppWidgetService">
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_21_provider"/>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_DATA_READY"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_REFRESH_STARTED"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_WIDGET_ADD_APPWIDGET21"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:label="@string/appwidget_days_41_name" android:name="com.gau.go.launcherex.gowidget.weather.systemwidget.AppWidgetDays41Provider" android:process=":AppWidgetService">
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_days_41_provider"/>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_DATA_READY"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_REFRESH_STARTED"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_WIDGET_ADD_APPWIDGETDAYS41"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:label="@string/appwidget_days_42_name" android:name="com.gau.go.launcherex.gowidget.weather.systemwidget.AppWidgetDays42Provider" android:process=":AppWidgetService">
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_days_42_provider"/>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_APPWIDGET_DAYS_42_DATA_READY"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_REFRESH_STARTED"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_WIDGET_ADD_APPWIDGETDAYS42"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:label="@string/appwidget_world_clock_42_name" android:name="com.gau.go.launcherex.gowidget.weather.systemwidget.AppWidgetWorldClock42Provider" android:process=":AppWidgetService">
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_world_clock_42_provider"/>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_DATA_READY"/>
+                <action android:name="com.gau.go.launcherex.gowidget.weatherwidget.ACTION_REFRESH_STARTED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.gau.go.launcherex.gowidget.weather.service.AppWidgetService" android:process=":AppWidgetService"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.go.weatherex.themeconfig.AppWidgetThemeConfigHomeActivity" android:noHistory="false" android:screenOrientation="portrait" android:taskAffinity="com.go.weatherex.themeconfig.ThemeConfigHomeActivity" android:theme="@style/ThemeConfigureActivityTheme"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.go.weatherex.themeconfig.GoWidget42ThemeConfigHomeActivity" android:noHistory="false" android:screenOrientation="portrait" android:taskAffinity="com.go.weatherex.themeconfig.GoWidget42ThemeConfigHomeActivity" android:theme="@style/ThemeConfigureActivityTheme"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.go.weatherex.themeconfig.GoWidget41ThemeConfigHomeActivity" android:noHistory="false" android:screenOrientation="portrait" android:taskAffinity="com.go.weatherex.themeconfig.GoWidget41ThemeConfigHomeActivity" android:theme="@style/ThemeConfigureActivityTheme"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.go.weatherex.themeconfig.GoWidget21ThemeConfigHomeActivity" android:noHistory="false" android:screenOrientation="portrait" android:taskAffinity="com.go.weatherex.themeconfig.GoWidget21ThemeConfigHomeActivity" android:theme="@style/ThemeConfigureActivityTheme"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.go.weatherex.themeconfig.GoWidgetDays41ThemeConfigHomeActivity" android:noHistory="false" android:screenOrientation="portrait" android:taskAffinity="com.go.weatherex.themeconfig.GoWidgetDays41ThemeConfigHomeActivity" android:theme="@style/ThemeConfigureActivityTheme"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.go.weatherex.themeconfig.GoWidgetDays42ThemeConfigHomeActivity" android:noHistory="false" android:screenOrientation="portrait" android:taskAffinity="com.go.weatherex.themeconfig.GoWidgetDays42ThemeConfigHomeActivity" android:theme="@style/ThemeConfigureActivityTheme"/>
+        <receiver android:name="com.gau.go.launcherex.gowidget.framework.ResetDataReceiver">
+            <intent-filter>
+                <action android:name="com.jiubang.intent.action.RESET_TO_DEFAULT_DATA"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.gau.go.launcherex.gowidget.download.DownloadService"/>
+        <receiver android:name="com.gau.go.launcherex.gowidget.download.DownloadBrocastReceiver">
+            <intent-filter>
+                <action android:name="com.gau.go.launcherex.gowidget.download.DownloadBrocastReceiver.GOWEATHER_DOWNLOAD_STOP"/>
+                <action android:name="com.gau.go.launcherex.gowidget.download.DownloadBrocastReceiver.GOWEATHER_DOWNLOAD_RESTART"/>
+                <action android:name="com.gau.go.launcherex.gowidget.download.DownloadBrocastReceiver.GOWEATHER_DOWNLOAD_DELETE"/>
+                <action android:name="com.gau.go.launcherex.gowidget.download.DownloadBrocastReceiver.GOWEATHER_DOWNLOAD_START"/>
+                <data android:scheme="download"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.gau.go.launcherex.gowidget.weather.provider.WeatherContentProvider" android:exported="true" android:grantUriPermissions="true" android:initOrder="1" android:multiprocess="false" android:name="com.gau.go.launcherex.gowidget.weather.provider.WeatherContentProvider"/>
+        <provider android:authorities="com.gau.go.launcherex.gowidget.weatherwidget.staticsdkprovider" android:grantUriPermissions="true" android:multiprocess="false" android:name="com.gau.go.launcherex.gowidget.weatherwidget.StaticDataContentProvider"/>
+        <service android:label="@string/weather_service" android:name="com.gau.go.launcherex.gowidget.weather.service.NotifyService">
+            <intent-filter>
+                <action android:name="com.gau.go.launcherex.gowidget.weather.service.NotifyService"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.gau.go.launcherex.gowidget.framework.SystemBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:launchMode="singleTop" android:name="com.gau.go.launcherex.gowidget.billing.BillingActivity" android:screenOrientation="portrait" android:theme="@style/WindowIsTranslucentTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.gau.go.launcherex.gowidget.weather.globaltheme.PackageChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.gau.go.launcherex.gowidget.gcm.WeatherGCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.gau.go.launcherex.gowidget.weatherwidget"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.gau.go.launcherex.gowidget.weather.util.AppUpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <data android:scheme="file"/>
+                <action android:name="android.intent.action.MEDIA_SCANNER_FINISHED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.gau.go.launcherex.gowidget.gcm.WeatherGCMService"/>
+        <activity android:name="com.gau.go.launcherex.gowidget.weather.view.WidgetUserGuideActivity" android:screenOrientation="portrait" android:theme="@style/WindowIsTranslucentTheme"/>
+        <service android:label="@string/wallpaper_app_name" android:name="com.gau.go.launcherex.goweather.livewallpaper.GOWeatherWallpaperService" android:permission="android.permission.BIND_WALLPAPER" android:process=":wallpaperService">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService"/>
+            </intent-filter>
+            <meta-data android:name="android.service.wallpaper" android:resource="@xml/livewallpaper"/>
+        </service>
+        <activity android:name="com.gau.go.launcherex.gowidget.weather.view.AppWidgetGuideActivity" android:process=":Activity" android:screenOrientation="portrait" android:theme="@style/Theme.Translucent.NoBackground.NoTitleBar.Fullscreen"/>
+        <activity android:name="com.gau.go.launcherex.gowidget.messagecenter.view.GCMMsgDetailActivity" android:screenOrientation="portrait" android:taskAffinity="com.gau.go.launcherex.gowidget.messagecenter" android:theme="@style/WindowIsTranslucentTheme"/>
+        <activity android:name="com.gau.go.launcherex.gowidget.messagecenter.view.HtmlMsgDetailActivity" android:screenOrientation="portrait" android:taskAffinity="com.gau.go.launcherex.gowidget.messagecenter" android:theme="@style/WindowIsTranslucentTheme"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleInstance" android:name="com.gau.go.launcherex.gowidget.messagecenter.view.HtmlMsgDialogActivity" android:noHistory="true" android:screenOrientation="portrait" android:taskAffinity="com.gau.go.launcherex.gowidget.messagecenter.view.HtmlMsgDialogActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="keyboardHidden|navigation" android:excludeFromRecents="true" android:name="com.go.weatherex.home.current.AirQualityIndex" android:screenOrientation="portrait" android:theme="@style/popupdialog"/>
+        <activity android:configChanges="keyboardHidden|navigation" android:excludeFromRecents="true" android:name="com.go.weatherex.home.current.PollenIndex" android:screenOrientation="portrait" android:theme="@style/popupdialog"/>
+        <activity android:configChanges="keyboardHidden|navigation" android:excludeFromRecents="true" android:name="com.go.weatherex.weatheralert.WeatherAlertActivity" android:screenOrientation="portrait" android:theme="@style/popupdialog"/>
+        <receiver android:exported="true" android:name="com.gau.go.launcherex.gowidget.statistics.TrackerReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.gau.go.launcherex.gowidget.framework.GLWidgetActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.gau.go.3dwidget"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.gau.go.launcherex.gowidget.weather.view.GoWidgetGuideActivity" android:screenOrientation="portrait" android:theme="@style/WindowIsTranslucentTheme"/>
+        <activity android:exported="true" android:name="com.gau.go.launcherex.gowidget.weather.globaltheme.view.MyCouponsActivity" android:screenOrientation="portrait" android:theme="@style/WindowIsTranslucentTheme"/>
+        <activity android:excludeFromRecents="true" android:name="com.gau.go.launcherex.gowidget.weather.view.AgreementActivity" android:taskAffinity="com.gau.go.launcherex.gowidget.billing.BillingActivity" android:theme="@style/WindowIsTranslucentTheme"/>
+        <activity android:launchMode="singleTop" android:name="com.gau.go.launcherex.gowidget.weather.view.MapDetailActivity" android:screenOrientation="portrait" android:theme="@style/WindowIsTranslucentTheme"/>
+        <activity android:name="com.gtp.nextlauncher.widget.nextpanel.MainActivity">
+            <intent-filter>
+                <action android:name="com.go.3dwidget.fullscreen"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.gau.go.launcherex.gowidget.framework.GLGoWidgetActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.go.3dwidget"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.jiubang.ggheart.uninstallcheck.UninstallService" android:process=":UninstallService">
+            <intent-filter>
+                <action android:name="com.jiubang.ggheart.uninstallcheck.UninstallService"/>
+            </intent-filter>
+        </service>
+        <activity android:name="com.gtp.go.weather.sharephoto.takephoto.EditPhotoActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name="com.gtp.go.weather.sharephoto.takephoto.PublishPhotoActivity" android:screenOrientation="portrait" android:theme="@style/WindowIsTranslucentTheme" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:launchMode="singleTop" android:name="com.gtp.go.weather.sharephoto.photo.PhotoActivity" android:screenOrientation="portrait" android:theme="@style/WindowIsTranslucentTheme"/>
+        <activity android:excludeFromRecents="true" android:launchMode="singleTop" android:name="com.gtp.go.weather.sharephoto.PhotoDetailActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+        <activity android:excludeFromRecents="true" android:name="com.gtp.go.weather.sharephoto.PhotoReportActivity" android:screenOrientation="portrait" android:theme="@style/WindowIsTranslucentTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.gtp.go.weather.sharephoto.UserPhotosActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.gtp.go.weather.sharephoto.award.MyAwardsActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:excludeFromRecents="true" android:name="com.gtp.go.weather.sharephoto.TermsAndPrivacyActivity" android:theme="@style/WindowIsTranslucentTheme"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.gtp.go.weather.coupon.view.CouponCollectActivity" android:screenOrientation="portrait" android:theme="@style/WindowIsTranslucentTheme"/>
+        <service android:exported="true" android:name="com.gau.go.launcherex.gowidget.weather.service.WeatherService" android:process=":WeatherServiceAidl">
+            <intent-filter>
+                <action android:name="com.gtp.go.weather.ACTION_WEATHER_SERVICE"/>
+                <category android:name="android.intent.category.default"/>
+            </intent-filter>
+        </service>
+        <activity android:exported="true" android:name="com.gtp.go.weather.billing.view.PayActivity" android:screenOrientation="portrait" android:theme="@style/pay_dialog"/>
+        <activity android:exported="true" android:name="com.go.weatherex.managegood.view.ManageGoodPaymentActivity" android:screenOrientation="portrait" android:theme="@style/pay_dialog"/>
+        <activity android:exported="true" android:name="com.gtp.go.weather.coupon.view.CouponsActivity" android:screenOrientation="portrait" android:theme="@style/WindowIsTranslucentTheme"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:multiprocess="true" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="com.go.weatherex.setting.LiveWallpaperSettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Translucent.NoBackground.NoTitleBar.Fullscreen"/>
+        <activity android:excludeFromRecents="true" android:name="com.go.weatherex.setting.AnimationAndWallpaperSettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Translucent.NoBackground.NoTitleBar.Fullscreen"/>
+        <activity android:excludeFromRecents="true" android:name="com.go.weatherex.setting.PersonalizeSettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Translucent.NoBackground.NoTitleBar.Fullscreen"/>
+        <activity android:excludeFromRecents="true" android:name="com.go.weatherex.map.RadarMapActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Translucent.NoBackground.NoTitleBar.Fullscreen"/>
+        <activity android:launchMode="singleTask" android:multiprocess="true" android:name="com.go.weatherex.sidebar.shuffle.ShuffleLoadingActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="io.wecloud.message.frontia.richmedia.MediaViewActivity" android:theme="@style/flowDialog"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.go.weatherex.recommendvip.RecommendVipActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.jiubang.golauncher.purchase.sevendaypurchase.SevenDayPurchaseGoogleActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <service android:exported="true" android:label="ClientService" android:name="com.go.weatherex.messagecenter.MessageCenterService" android:permission="com.gau.go.launcherex.gowidget.weatherwidget.permission.SERVICE" android:process=":pushservice">
+            <intent-filter>
+                <action android:name="io.wecloud.message.action.PUSH_SERVICE"/>
+                <action android:name="io.wecloud.message.service.AIDL"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="io.wecloud.message.PushServiceReceiver" android:process=":pushservice">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="io.wecloud.message.action.METHOD"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="APPKEY" android:value="OEDQR0J87UN71UAXHEP96HQA"/>
+        <meta-data android:name="com.google.android.wearable.beta.app" android:resource="@xml/wearable_app_desc"/>
+        <activity android:name="com.go.weatherex.wear.WearTestActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <service android:name="com.go.weatherex.wear.WearService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.facebook.ads.InterstitialAdActivity"/>
+        <activity android:name="com.jiubang.commerce.ad.url.AdUrlPreParseLoadingActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.jiubang.commerce.ad.h5.H5AdActivity" android:screenOrientation="portrait"/>
+        <service android:label="Ad Service" android:name="com.jiubang.commerce.service.AdService"/>
+        <service android:label="Intelligent Preload Service" android:name="com.jiubang.commerce.service.IntelligentPreloadService" android:process=":com.jiubang.commerce.service.IntelligentPreloadService"/>
+        <receiver android:name="com.jiubang.commerce.receiver.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.jiubang.commerce.receiver.AppBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.gau.go.launcherex.gowidget.weather.theme.MyThemeReceiver">
+            <intent-filter>
+                <action android:name="com.gau.go.launcherex.gowidget.weather.mythemeaction"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.jiubang.ggheart.analytic.ReferrerInfoReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

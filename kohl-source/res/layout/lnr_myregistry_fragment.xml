@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="?android:actionBarSize" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/id_my_registry_progress_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="top|center" android:layout_width="80.0dip" android:layout_height="80.0dip" android:indeterminate="true" android:layout_weight="3.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/id_my_registry_no_records_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="13.5sp" android:textColor="@color/lnr_myregistry_list_item_days_to_go_text" android:gravity="center_horizontal" android:id="@id/id_my_registry_no_records_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="202.0dip" android:text="@string/lnr_manage_registry_no_records_mesage" />
+        <Button android:textSize="13.5sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/id_my_registry_create_registry_btn" android:background="@color/button_enable" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginLeft="22.5dip" android:layout_marginTop="13.5sp" android:layout_marginRight="22.5dip" android:text="@string/lnr_manage_registry_create_registry_text" />
+    </LinearLayout>
+    <ListView android:id="@id/id_my_registry_listView" android:background="@android:color/white" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:dividerHeight="0.0dip" />
+</LinearLayout>

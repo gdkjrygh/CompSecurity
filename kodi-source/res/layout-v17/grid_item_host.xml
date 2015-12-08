@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" card_view:cardBackgroundColor="?appCardBackgroundColor" card_view:cardElevation="@dimen/default_card_elevation"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:padding="@dimen/default_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/status_indicator" android:padding="@dimen/default_icon_padding" android:layout_width="@dimen/default_icon_size" android:layout_height="@dimen/default_icon_size" android:src="?iconHosts" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" />
+        <ImageView android:id="@id/list_context_menu" android:padding="@dimen/default_icon_padding" android:layout_width="@dimen/default_icon_size" android:layout_height="@dimen/default_icon_size" android:src="?iconOverflow" android:layout_alignTop="@id/status_indicator" android:layout_alignParentRight="true" android:contentDescription="@string/action_options" style="@style/Widget.Button.Borderless" />
+        <TextView android:id="@id/host_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/list_context_menu" android:layout_toRightOf="@id/status_indicator" android:layout_alignTop="@id/status_indicator" android:layout_alignWithParentIfMissing="true" style="@style/TextAppearance.HostName" />
+        <TextView android:id="@id/host_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/host_name" android:layout_alignLeft="@id/host_name" android:layout_alignRight="@id/host_name" style="@style/TextAppearance.HostDetails" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

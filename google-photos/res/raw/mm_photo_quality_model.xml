@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quality_model>
+  <features>
+    <feature name="face_score" shift="0.0" div="2.0" component="illumination_score"/>
+    <feature name="face_score" shift="0.0" div="100.0" component="sharpness_score"/>
+    <feature name="face_score" shift="0.0" div="2.0" component="eyes_open_score"/>
+    <feature name="face_score" shift="0.0" div="2.0" component="smile_score"/>
+    <feature name="face_score" shift="0.0" div="2.0" component="framing_score"/>
+    <feature name="sharpness" shift="0.0" div="100.0"/>
+    <feature name="saliency" shift="0.0" div="2.0" index="0"/>
+    <feature name="saliency" shift="0.0" div="2.0" index="4">
+      <function a="10" name="sigmoid" b="0.4"/>
+    </feature>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="0"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="1"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="2"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="3"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="4"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="5"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="6"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="7"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="8"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="9"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="10"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="11"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="12"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="13"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="14"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="15"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="16"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="17"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="18"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="19"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="20"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="21"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="22"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0" index="23"/>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0">
+      <function name="saturationHSV"/>
+    </feature>
+    <feature name="new_chroma_hist" shift="0.0" div="2.0">
+      <function name="entropyHSV"/>
+    </feature>
+    <feature name="new_colorfulness" shift="0.0" div="2.0"/>
+    <feature name="face_score" shift="0.0" div="2.0">
+      <function name="has_face"/>
+    </feature>
+  </features>
+  <model type="LinearModel">
+    <weights values="0.449760168791,-0.0535057969391,0.266183882952,0.211251690984,0.00309242098592,0.797139823437,1.48197984695,-1.34377002716,0.454161435366,-0.121822170913,-0.349662989378,0.418804585934,0.37825986743,-0.678630709648,0.909368932247,0.481436431408,0.306529074907,0.673232972622,0.160421490669,-0.399529159069,0.265157729387,0.0922464057803,-0.64901393652,-0.128531545401,-0.157825544477,-0.579627215862,-0.844978988171,0.434953480959,0.0431757122278,-0.920156300068,0.684089481831,-0.471269458532,0.356547802687,1.03048861027,-0.502799332142,-0.136713027954,-0.00111665995792"/>
+  </model>
+</quality_model>

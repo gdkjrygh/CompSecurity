@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/tab_city_bar_high"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/forecast_icon" android:layout_width="@dimen/tab_city_bar_high" android:layout_height="@dimen/tab_city_bar_high" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@null" />
+    <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="@dimen/tab_city_bar_cityname" android:textColor="#ffffffff" android:id="@id/forecast_city" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="@dimen/tab_city_bar_high" android:singleLine="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/middle_layout" android:paddingLeft="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/forecast_city">
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="@dimen/tab_city_bar_temp" android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/forecast_temp" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="@dimen/tab_city_bar_tempsymbol" android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/forecast_temp_symbol" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </LinearLayout>
+</RelativeLayout>

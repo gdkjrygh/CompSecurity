@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="@drawable/share_weather_top_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/back" android:layout_width="@dimen/title_height" android:layout_height="fill_parent" android:src="@drawable/title_back_selector" android:scaleType="centerInside" android:contentDescription="@null" />
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:gravity="left|center" android:layout_gravity="left|center" android:id="@id/app_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_name" style="@style/title_style" />
+    </LinearLayout>
+    <ListView android:scrollbarThumbVertical="@drawable/forecast_article_drag_vertical" android:id="@id/app_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/gw_weather_setting_selector" android:drawSelectorOnTop="false" android:cacheColorHint="#ffeeeeee" android:divider="@drawable/setting_line" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/load_status" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_width="24.0dip" android:layout_height="24.0dip" android:indeterminateDrawable="@drawable/common_loading_progress_gray_sun" style="?android:attr/progressBarStyleSmall" />
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="@dimen/setting_item" android:textColor="@color/setting_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/cityname_loading" />
+    </LinearLayout>
+</LinearLayout>

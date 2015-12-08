@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MetaFilter for extracting 2-D (saturation and hue) chroma histogram from a image.
+     It takes in a color image and outputs histogram in 2d float buffer-->
+<graph>
+    <!-- Packages -->
+    <import package="androidx.media.filterpacks.base"/>
+    <import package="androidx.media.filterpacks.colorspace"/>
+    <import package="androidx.media.filterpacks.histogram"/>
+    <import package="com.google.android.apps.moviemaker.filterpacks.base"/>
+
+    <!-- Filters -->
+    <filter class="GraphInputSource" name="image"/>
+
+    <filter class="RgbToHsvFilter" name="rgbToHSV"/>
+
+    <filter class="ToggleableBranchFilter" name="histogramBranch"/>
+
+    <filter class="NewChromaHistogramFilter" name="newChromaHistogram">
+    <!-- 26 (0.1 * 255), 51 (0.2 * 255) are thresholds on saturataion and value.
+        such that if a color pixel doesn't have enough color or is too dark
+        it will not be counted in the hue-satuataion histogram but in a separate
+        value histogram -->
+        <input name="saturationthreshold" intValue="26"/>
+        <input name="valuethreshold" intValue="51"/>
+    </filter>
+
+    <filter class="ColorfulnessFilter" name="colorfulness"/>
+
+    <filter class="GraphOutputTarget" name="newChromaHistogramOut"/>
+    <filter class="GraphOutputTarget" name="newColorfulnessOut"/>
+
+    <!-- Connections -->
+    <connect sourceFilter="image" sourcePort="frame"
+             targetFilter="rgbToHSV" targetPort="image"/>
+
+    <connect sourceFilter="rgbToHSV" sourcePort="image"
+             targetFilter="newChromaHistogram" targetPort="image"/>
+
+    <connect sourceFilter="newChromaHistogram"  sourcePort="histogram"
+             targetFilter="histogramBranch" targetPort="input"/>
+
+    <connect sourceFilter="histogramBranch"  sourcePort="toOutput"
+             targetFilter="newChromaHistogramOut" targetPort="frame"/>
+
+    <connect sourceFilter="histogramBranch"  sourcePort="toColorfulness"
+             targetFilter="colorfulness" targetPort="histogram"/>
+
+    <connect sourceFilter="colorfulness"  sourcePort="score"
+             targetFilter="newColorfulnessOut" targetPort="frame"/>
+
+</graph>

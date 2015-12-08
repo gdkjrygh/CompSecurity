@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/payment_drawer_closed_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/mpay_scan_gc_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/payment_margin_small" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <TextView android:layout_gravity="center_horizontal" android:id="@id/mpay_scan_gc_order_closed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mpay_scan_gc_first" style="@style/Payment.Text.Body.White.Translucent" />
+        <TextView android:layout_gravity="center_horizontal" android:id="@id/mpay_scan_gc_balance_closed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/payment_margin" style="@style/Payment.Text.Subhead.White" />
+    </LinearLayout>
+    <com.walmartlabs.payment.view.DrawerIndicatorView android:id="@id/mpay_scan_drawer_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/mpay_scan_cc_container_collapsed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/payment_margin_small" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/mpay_scan_cc_order_closed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mpay_scan_cc_off" style="@style/Payment.Text.Body.White.Translucent" />
+        <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/mpay_scan_cc_info_closed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/payment_margin" android:text="@string/mpay_scan_cc_info" style="@style/Payment.Text.Subhead.White" />
+    </LinearLayout>
+</RelativeLayout>

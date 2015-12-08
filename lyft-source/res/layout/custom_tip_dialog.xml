@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.passenger.TipDialogView android:gravity="center_horizontal" android:paddingTop="25.0dip" style="@style/DialogContainerView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" style="@style/DialogView">
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/charcoal_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip" android:text="Other tip amount" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/decrement_donation_button" android:background="@drawable/dec_tip_button" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_margin="15.0dip" />
+            <TextView android:textSize="@dimen/tip_dialog_tip_text_size" android:textColor="@color/charcoal_2" android:gravity="center" android:id="@id/tip_amount_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1.0" />
+            <Button android:id="@id/increment_donation_button" android:background="@drawable/inc_tip_button" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_margin="15.0dip" />
+        </LinearLayout>
+        <TextView android:textColor="@color/charcoal_2" android:id="@id/total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+        <TextView android:textStyle="italic" android:textColor="@color/primary_text_disabled" android:id="@id/tips_label" android:paddingBottom="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/tip_dialog_donation_label_credit" android:minLines="2" />
+        <View android:background="@color/grey_2" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <Button android:id="@id/dialog_positive_button" android:text="@string/ok_button" style="@style/DialogButton" />
+    </LinearLayout>
+</me.lyft.android.ui.passenger.TipDialogView>

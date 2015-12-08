@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/mpay_settings_btn_done" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip" android:text="@string/mpay_settings_button_done" android:layout_alignParentBottom="true" style="@style/Payment.PrimaryButton" />
+    <com.walmart.android.ui.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/mpay_settings_btn_done">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="40.0dip" android:layout_marginRight="20.0dip">
+                <TextView android:textColor="@color/mpay_text_setup_dark" android:id="@id/mpay_settings__credit_card_list_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mpay_settings_credit_card_list_header" style="@style/Payment.Text.Subhead.Medium" />
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ProgressBar android:layout_gravity="center" android:id="@id/mpay_settings_credit_card_progress" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/Spinner" />
+                    <TextView android:id="@id/mpay_settings_credit_card_no_cards" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mpay_settings_credit_card_no_cards" />
+                    <RelativeLayout android:id="@id/mpay_settings_credit_cards_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.walmartlabs.payment.view.OneLineCreditCardView android:id="@id/mpay_settings_credit_cards_view" android:background="@drawable/list_default_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_toLeftOf="@id/mpay_settings_credit_cards_indicator" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+                        <ImageView android:id="@id/mpay_settings_credit_cards_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/spinner_default_holo_light" android:layout_alignBottom="@id/mpay_settings_credit_cards_view" android:layout_alignParentRight="true" />
+                        <TextView android:textColor="@color/text_confirm_light" android:id="@id/mpay_settings_credit_cards_default" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/mpay_settings_credit_card_is_default" android:layout_below="@id/mpay_settings_credit_cards_view" android:layout_alignParentLeft="true" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <View android:background="@color/payment_divider_light" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip">
+                <TextView android:textColor="@color/mpay_text_setup_dark" android:id="@id/mpay_settings_gift_card_list_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/mpay_settings_gift_card_list_header" style="@style/Payment.Text.Subhead.Medium" />
+                <ProgressBar android:layout_gravity="center" android:id="@id/mpay_settings_gift_card_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Spinner" />
+                <TextView android:textColor="@color/text_confirm_light" android:id="@id/mpay_settings_gift_card_message" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip" android:text="@string/mpay_settings_gift_card_message" />
+                <com.walmartlabs.ui.recycler.ListRecyclerView android:orientation="vertical" android:id="@id/mpay_settings_gift_cards_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <include android:id="@id/mpay_gift_card_total" layout="@layout/mpay_gift_card_total" />
+            </LinearLayout>
+            <View android:background="@color/payment_divider_light" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="20.0dip">
+                <TextView android:textColor="@color/mpay_text_setup_dark" android:id="@id/mpay_settings_security_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mpay_settings_security_header" style="@style/Payment.Text.Subhead.Medium" />
+                <TextView android:textColor="@color/text_blue" android:id="@id/mpay_settings_btn_security" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/mpay_settings_security_action" style="@style/Payment.Text.Subhead" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.walmart.android.ui.SafeScrollView>
+</RelativeLayout>

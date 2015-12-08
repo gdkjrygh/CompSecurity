@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.soundcloud.android.view.CustomFontTextView android:text="@string/search_tags_title" style="@style/TagTitleText" />
+    <LinearLayout android:orientation="vertical" android:id="@id/recent_tags_container" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/discovery_tags_separation">
+        <View style="@style/Divider.Section" />
+        <com.soundcloud.android.view.CustomFontTextView android:text="@string/search_tags_recent_subtitle" style="@style/TagSubtitleText" />
+        <com.soundcloud.android.view.FlowLayout android:id="@id/recent_tags" android:paddingLeft="@dimen/discovery_tags_padding_left_right" android:paddingBottom="@dimen/discovery_tags_padding_top_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/discovery_tags_margin_top_bottom" />
+        <View style="@style/Divider.Section" />
+    </LinearLayout>
+    <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/tagsDivider" style="@style/Divider.Section" />
+        <com.soundcloud.android.view.CustomFontTextView android:id="@id/tags_subtitle" android:text="@string/search_tags_popular_subtitle" android:layout_below="@id/tagsDivider" style="@style/TagSubtitleText" />
+        <com.soundcloud.android.view.EmptyView android:id="@android:id/empty" android:paddingTop="50.0dip" android:paddingBottom="50.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.soundcloud.android.view.FlowLayout android:id="@id/all_tags" android:paddingLeft="@dimen/discovery_tags_padding_left_right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tags_subtitle" android:animateLayoutChanges="true" />
+    </RelativeLayout>
+</LinearLayout>

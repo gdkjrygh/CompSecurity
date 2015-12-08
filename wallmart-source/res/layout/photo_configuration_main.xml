@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.walmartlabs.android.photo.view.configuration.OrderConfigurationView android:orientation="vertical" android:id="@id/base_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.walmartlabs.android.photo.view.configuration.OverlaidGalleryView android:gravity="center" android:id="@id/overlaid_gallery" android:layout_width="fill_parent" android:layout_height="@dimen/photo_overlaid_gallery_height" android:layout_alignParentTop="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/gallery" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" />
+        <View android:background="@color/photo_blue_semi_transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <TextView android:textColor="@color/photo_white" android:id="@id/description_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/PhotoTextStyle.Bold.ExtraLarge" />
+            <TextView android:textColor="@color/photo_white" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/PhotoTextStyle.ExtraLarge" />
+        </LinearLayout>
+    </com.walmartlabs.android.photo.view.configuration.OverlaidGalleryView>
+    <View android:id="@id/divider" android:background="@color/photo_divider" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/overlaid_gallery" />
+    <TextView android:textColor="@color/photo_grey_text" android:gravity="center" android:id="@id/hint" android:padding="@dimen/photo_main_padding_half" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:layout_below="@id/divider" style="@style/PhotoTextStyle.Regular" />
+    <View android:id="@id/divider2" android:background="@color/photo_divider" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/hint" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_below="@id/divider2" android:layout_alignParentBottom="true">
+        <com.walmartlabs.android.photo.view.configuration.OrderConfigurationProductsView android:orientation="vertical" android:id="@id/products_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true" />
+    </ScrollView>
+</com.walmartlabs.android.photo.view.configuration.OrderConfigurationView>

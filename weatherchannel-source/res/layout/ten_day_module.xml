@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" style="@style/module_layout_pager"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/tenday_title" android:paddingLeft="@dimen/tenday_rowpadding_default" android:text="@string/tenday_title" style="@style/module_header" />
+    <LinearLayout android:orientation="vertical" android:id="@id/tenday_module_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.weather.Weather.ui.UninterceptableViewPager android:id="@id/view_pager" android:paddingLeft="@dimen/tenday_rowpadding_default" android:layout_width="fill_parent" android:layout_height="@dimen/tenday_uninterceptable_viewpager_height" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/narrative_dayofweek_text_container" android:padding="@dimen/tenday_rowpadding_default" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextSwitcher android:textStyle="bold" android:id="@id/day_of_week_fulltext" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextSwitcher android:id="@id/narrative_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/more" android:text="@string/tenday_forecast_details" style="@style/module_more" />
+            </LinearLayout>
+            <TextView android:id="@id/tenday_details_clicky" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+    <include layout="@layout/tenday_module_no_data" />
+</LinearLayout>

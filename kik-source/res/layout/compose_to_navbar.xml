@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/back_button" android:background="@xml/topbar_button_selector" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="@dimen/native_topbar_height">
+        <ImageView android:layout_gravity="center_vertical" android:duplicateParentState="true" android:layout_width="@dimen/material_navbar_button_width" android:layout_height="@dimen/material_navbar_button_height" android:src="@drawable/back_grey" android:scaleType="center" />
+    </FrameLayout>
+    <ImageView android:id="@id/clear_button" android:background="@xml/topbar_button_selector" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:visibility="gone" android:layout_width="56.0dip" android:layout_height="@dimen/native_topbar_height" android:src="@drawable/delete_gray" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <kik.android.widget.RobotoEditText android:textSize="18.0sp" android:ellipsize="end" android:id="@id/contacts_compose_to" android:background="@drawable/talk_to_username_name_bar" android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/username_textview_height" android:hint="@string/find_people_search_placeholder" android:singleLine="true" android:layout_toLeftOf="@id/clear_button" android:layout_toRightOf="@id/back_button" android:inputType="textVisiblePassword" />
+</RelativeLayout>

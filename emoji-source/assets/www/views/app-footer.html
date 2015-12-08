@@ -1,0 +1,24 @@
+<footer class="mfbfooter" ng-hide="footer.hidden">
+    <div class="fixed-bottom" id="footer">
+        <ul class="footer small-block-grid-4">
+            <li ng-class="{active:footer.category == 'home'}" id="noti_Container">
+                <span id='home'>
+                <a ng-click="go_home()"><i class="icon-home"></i></a>
+                </span>
+            </li>
+            <li class="compose-photo" ng-class="{active:footer.category == 'photo'}" id='compose'>
+              <div class="highlight"></div>
+              <a ng-click="go_photo()"><i class="icon-camera"></i></a>
+            </li>
+            <li class="compose-comic" ng-class="{active:footer.category == 'comic'}" id='comic'>
+              <div class="highlight"></div>
+              <a ng-click="go_templates()"><i class="icon-edit"></i></a>
+            </li>
+            <li ng-class="{active:footer.category == 'avatar'}" id='avatar'>
+                <a ng-click="go_avatar()"><i class="icon-avatar"></i></a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<div id="saving" ng-show="footer.saving"></div>

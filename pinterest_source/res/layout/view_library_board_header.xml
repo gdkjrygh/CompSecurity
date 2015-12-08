@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/library_header_container" android:background="@color/white" android:padding="@dimen/margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/library_header_container_layout" android:paddingLeft="@dimen/margin_quarter" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/library_collab_bar">
+        <TextView android:id="@id/library_board_title" style="@style/library_display_name" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingBottom="@dimen/library_margin_column" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/library_board_stats" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/library_section_count" />
+            <com.pinterest.ui.text.IconView android:id="@id/place_iv" android:src="@drawable/ic_library_board_place" style="@style/library_board_title_icon" />
+            <com.pinterest.ui.text.IconView android:id="@id/collab_iv" android:src="@drawable/ic_library_board_group" style="@style/library_board_title_icon" />
+            <com.pinterest.ui.text.IconView android:id="@id/secret_iv" android:src="@drawable/ic_library_board_secret" style="@style/library_board_title_icon" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/text_caption" android:textColor="@color/gray_medium" android:id="@id/library_board_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" style="@style/text_multiline" />
+    </LinearLayout>
+    <com.pinterest.activity.library.view.LibraryBoardCollabBar android:id="@id/library_collab_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+    <org.lucasr.twowayview.TwoWayView android:orientation="horizontal" android:id="@id/topic_list" android:layout_width="fill_parent" android:layout_height="32.0dip" android:layout_marginTop="@dimen/library_margin_column" android:drawSelectorOnTop="false" android:layout_below="@id/library_header_container_layout" />
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/info_contest_paddingtop" android:layout_width="@dimen/info_popwindow_width" android:layout_height="wrap_content">
+        <RelativeLayout android:orientation="vertical" android:id="@id/contest_text" android:paddingLeft="@dimen/info_gap" android:paddingRight="@dimen/info_gap" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/info_head_text_size" android:textColor="@color/green" android:id="@id/contest_heading" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/info_content_text_size" android:textColor="@color/black" android:id="@id/contest_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/info_gap" android:layout_below="@id/contest_heading" android:layout_alignLeft="@id/contest_heading" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:id="@id/contest_button" android:paddingLeft="@dimen/info_gap" android:paddingRight="@dimen/info_gap" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/info_gap" android:layout_marginBottom="@dimen/info_gap">
+            <Button android:textSize="@dimen/info_content_text_size" android:id="@id/btnContestEnter" android:background="@drawable/info_popwindow_btn_enter" android:paddingLeft="@dimen/info_gap" android:paddingRight="@dimen/info_gap" android:layout_width="wrap_content" android:layout_height="@dimen/info_btn_enter_height" android:text="@string/info_btnenter_text" />
+            <Button android:textSize="@dimen/info_content_text_size" android:id="@id/btnContestCancel" android:background="@drawable/info_popwindow_btn_cancel" android:layout_width="wrap_content" android:layout_height="@dimen/info_btn_enter_height" android:layout_marginLeft="5.0dip" android:text="@string/info_btncancel_text" android:layout_toRightOf="@id/btnContestEnter" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

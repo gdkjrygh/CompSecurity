@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="@dimen/card_margin_left" android:paddingTop="12.0dip" android:paddingRight="@dimen/card_margin_right" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <RelativeLayout android:background="@drawable/card_frame_top" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight">
+        <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/medium_font_size" android:textColor="#ff666666" android:gravity="center_vertical" android:id="@id/comments_label" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:text="@string/comments" android:maxLines="1" android:includeFontPadding="false" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" yt:robotoFont="regular" yt:allCaps="true" />
+        <ImageView android:id="@id/separator" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/card_separator_height" android:src="#ffe1e1e1" android:layout_below="@id/comments_label" />
+        <ImageView android:id="@id/author_avatar" android:padding="2.0dip" android:layout_width="@dimen/top_level_comment_avatar_size" android:layout_height="@dimen/top_level_comment_avatar_size" android:layout_marginLeft="12.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="8.0dip" android:layout_below="@id/separator" android:layout_alignParentLeft="true" />
+        <EditText android:textSize="@dimen/small_font_size" android:textColor="#ff999999" android:id="@id/add_comment_button" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_toRightOf="@id/author_avatar" android:layout_alignTop="@id/author_avatar" android:inputType="none" />
+    </RelativeLayout>
+</FrameLayout>

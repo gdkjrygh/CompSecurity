@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/image_content_linear_view" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/image" android:background="@color/white" android:layout_width="@dimen/info_card_gallery_image_size" android:layout_height="@dimen/info_card_gallery_image_size" android:scaleType="centerCrop" />
+        <LinearLayout android:orientation="vertical" android:id="@id/content" android:background="@color/white" android:padding="10.0dip" android:layout_width="@dimen/info_card_gallery_image_size" android:layout_height="@dimen/info_card_gallery_image_size">
+            <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/info_card_gallery_title_font_size" android:textColor="#ff666666" android:id="@id/title" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" yt:robotoFont="regular" />
+            <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/info_card_gallery_description_font_size" android:textColor="#ff999999" android:id="@id/description" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" yt:robotoFont="regular" />
+            <View android:id="@id/separator" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/info_card_gallery_description_font_size" android:textColor="#ff1188ee" android:layout_gravity="center" android:id="@id/action_button" android:padding="12.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

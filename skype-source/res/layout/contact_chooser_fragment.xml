@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:id="@id/app_bar" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ActionBarStyleMaterial">
+            <ScrollView android:id="@id/scrollView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ScrollView android:id="@id/participants_list_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_toLeftOf="@id/contact_picker_filter_button">
+                        <com.skype.android.widget.ParticipantsDisplayText android:textSize="@dimen/font_small_medium" android:textColor="@color/skype_dark_grey" android:textColorHint="@color/skype_hint_color" android:id="@id/add_participants_edit" android:paddingTop="@dimen/size_1x" android:paddingBottom="@dimen/size_1x" android:focusable="true" android:nextFocusRight="@id/fab" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    </ScrollView>
+                    <EditText android:textSize="@dimen/font_small_medium" android:textColor="@color/skype_dark_grey" android:textColorHint="@color/skype_hint_color" android:id="@id/contact_picker_filter" android:background="@null" android:layout_width="fill_parent" android:layout_height="@dimen/size_6x" android:hint="@string/text_hint_add_people" android:layout_toLeftOf="@id/contact_picker_filter_button" android:layout_below="@id/participants_list_container" />
+                    <com.skype.android.widget.SymbolView android:textSize="@dimen/font_symbol_view" android:textColor="@color/skype_blue" android:id="@id/contact_picker_filter_button" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" app:symbol_code="Cancel" />
+                </RelativeLayout>
+            </ScrollView>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <com.skype.android.widget.recycler.OneWayRecyclerView android:scrollbarThumbVertical="@drawable/default_scroll_view_thumb" android:scrollbarTrackVertical="@drawable/default_scroll_view_track" android:id="@id/list" android:paddingTop="@dimen/padding2" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/app_bar" app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <ProgressBar android:id="@id/dataLoadingProgressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/padding4" android:indeterminate="true" android:layout_centerInParent="true" />
+    <android.support.design.widget.FloatingActionButton android:id="@id/fab" android:layout_width="@dimen/size_7x" android:layout_height="@dimen/size_7x" android:layout_marginRight="@dimen/fab_standard_margin" android:scaleType="center" android:layout_below="@id/app_bar" android:layout_alignParentRight="true" android:scaleX="0.0" android:scaleY="0.0" app:overlayColor="@color/fab_overlay" app:backgroundTint="@color/skype_blue" />
+</RelativeLayout>

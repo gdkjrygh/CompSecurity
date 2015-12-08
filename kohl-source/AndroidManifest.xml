@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.kohls.mcommerce.opal" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448">
+    <supports-screens android:anyDensity="true" android:largeScreens="false" android:normalScreens="true" android:smallScreens="false" android:xlargeScreens="false"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <permission android:name="com.kohls.mcommerce.opal.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.kohls.mcommerce.opal.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <permission android:name="android.permission.STATUS_BAR_SERVICE" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.landscape"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen"/>
+    <android:uses-permission android:maxSdkVersion="18" android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="true" android:debuggable="false" android:icon="@drawable/icon" android:label="@string/app_name" android:largeHeap="true" android:logo="@drawable/launcher_icon" android:name="com.kohls.mcommerce.opal.common.app.KohlsPhoneApplication" android:theme="@style/Kohsl.AppTheme">
+        <compatible-screens>
+            <screen android:screenDensity="ldpi" android:screenSize="small"/>
+            <screen android:screenDensity="mdpi" android:screenSize="small"/>
+            <screen android:screenDensity="hdpi" android:screenSize="small"/>
+            <screen android:screenDensity="xhdpi" android:screenSize="small"/>
+            <screen android:screenDensity="480" android:screenSize="small"/>
+            <screen android:screenDensity="ldpi" android:screenSize="normal"/>
+            <screen android:screenDensity="mdpi" android:screenSize="normal"/>
+            <screen android:screenDensity="hdpi" android:screenSize="normal"/>
+            <screen android:screenDensity="xhdpi" android:screenSize="normal"/>
+            <screen android:screenDensity="480" android:screenSize="normal"/>
+            <screen android:screenDensity="ldpi" android:screenSize="large"/>
+            <screen android:screenDensity="mdpi" android:screenSize="large"/>
+            <screen android:screenDensity="hdpi" android:screenSize="large"/>
+            <screen android:screenDensity="xhdpi" android:screenSize="large"/>
+            <screen android:screenDensity="480" android:screenSize="large"/>
+        </compatible-screens>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/app_name" android:name="com.kohls.mcommerce.opal.framework.view.activity.KohlsSplashScreen" android:screenOrientation="sensorPortait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/app_name" android:name="com.kohls.mcommerce.opal.framework.view.activity.HomeActivity" android:screenOrientation="sensorPortait" android:theme="@style/OverlayActionBar" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="com.kohls.mcommerce.opal.kohlsphone.NOTIFICATION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.kohls.mcommerce.opal.wl.WLActivity" android:screenOrientation="sensorPortait"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="io.card.payment.CardIOActivity"/>
+        <activity android:name="io.card.payment.DataEntryActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="com.kohls.mcommerce.opal.loyalty.LoyaltyEnrollmentActivity" android:screenOrientation="sensorPortait" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:launchMode="singleTop" android:name="com.kohls.mcommerce.opal.loyalty.LoyaltyGuestFragment" android:screenOrientation="sensorPortait" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:launchMode="singleTop" android:name="com.kohls.mcommerce.opal.framework.view.activity.StoreDetailActivity" android:screenOrientation="sensorPortait" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:alwaysRetainTaskState="true" android:launchMode="singleTask" android:name="com.kohls.mcommerce.opal.framework.view.activity.ProductDetailsActivity" android:screenOrientation="sensorPortait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="kohls.com" android:scheme="kohlsphone"/>
+                <data android:host="kohls.com" android:scheme="kohlsphone"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.kohls.mcommerce.opal.framework.view.activity.EULAActivity" android:screenOrientation="sensorPortait"/>
+        <activity android:name="com.kohls.mcommerce.opal.framework.view.activity.RewardIdHelpActivity" android:screenOrientation="sensorPortait"/>
+        <activity android:name="com.kohls.mcommerce.opal.framework.view.activity.EditItemActivity" android:screenOrientation="sensorPortait"/>
+        <activity android:launchMode="singleTask" android:name="com.kohls.mcommerce.opal.framework.view.activity.ProductDetailsPWPActivity" android:screenOrientation="sensorPortait"/>
+        <activity android:launchMode="singleTask" android:name="com.kohls.mcommerce.opal.framework.view.activity.CollectionsActivity" android:screenOrientation="sensorPortait"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.kohls.mcommerce.opal.framework.view.activity.ShareProductActivity" android:screenOrientation="sensorPortait" android:theme="@android:style/Theme.Holo.Light.Dialog"/>
+        <activity android:label="@string/facebook_title" android:name="com.kohls.mcommerce.opal.framework.view.activity.FacebookActivity" android:theme="@android:style/Theme.Holo.Light.Dialog"/>
+        <activity android:label="@string/app_name" android:name="com.facebook.LoginActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.kohls.mcommerce.opal.loyalty.FacebookShareActivity" android:screenOrientation="portrait" android:theme="@android:style/WindowTitle" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.kohls.mcommerce.opal.framework.view.activity.FacebookWebShareActivity" android:screenOrientation="portrait" android:theme="@android:style/WindowTitle" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name="com.kohls.mcommerce.opal.framework.view.activity.FindinStoreActivity" android:screenOrientation="sensorPortait" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:name="com.kohls.mcommerce.opal.framework.view.activity.UpdateStoreActivity" android:screenOrientation="sensorPortait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:launchMode="singleTop" android:name="com.kohls.mcommerce.opal.framework.view.activity.AccountActivity" android:screenOrientation="sensorPortait" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:name="com.kohls.mcommerce.opal.framework.view.activity.ForgotPasswordActivity" android:screenOrientation="sensorPortait"/>
+        <activity android:label="@string/scan_help_label" android:launchMode="singleTop" android:name="com.kohls.mcommerce.opal.framework.view.activity.ScanHelpActivity" android:screenOrientation="sensorPortait" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:launchMode="singleTop" android:name="com.kohls.mcommerce.opal.framework.view.activity.ScanActivity" android:screenOrientation="sensorPortait" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:hardwareAccelerated="false" android:name="com.kohls.mcommerce.opal.framework.view.activity.WebViewActivity" android:screenOrientation="sensorPortait"/>
+        <activity android:name="com.kohls.mcommerce.opal.framework.view.activity.RatingAndReviewActivity" android:screenOrientation="sensorPortait"/>
+        <activity android:name="com.kohls.mcommerce.opal.framework.view.activity.ErrorScreenActivity" android:screenOrientation="sensorPortait"/>
+        <activity android:name="com.kohls.mcommerce.opal.framework.view.activity.GWPConfigurationActivity" android:screenOrientation="sensorPortait"/>
+        <activity android:name="com.kohls.mcommerce.opal.framework.view.activity.UpdateAccountActivity" android:screenOrientation="sensorPortait"/>
+        <activity android:name="com.kohls.mcommerce.opal.framework.view.activity.OrderTrackingStatusActivity" android:screenOrientation="sensorPortait"/>
+        <activity android:launchMode="singleTop" android:name="com.kohls.mcommerce.opal.framework.view.activity.KohlsChargeActivity" android:screenOrientation="sensorPortait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/app_name" android:name="com.fsr.tracker.app.SurveyInviteActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/app_name" android:name="com.fsr.tracker.app.SurveyActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/app_name" android:name="com.fsr.tracker.app.OnExitSurveyInviteActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:icon="@drawable/transparent" android:label="@string/wallet" android:launchMode="singleTask" android:name="com.kohls.mcommerce.opal.wallet.fragment.MainActivity" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle"/>
+        <activity android:icon="@drawable/transparent" android:label="@string/title_activity_display" android:name="com.kohls.mcommerce.opal.wallet.fragment.DisplayActivityList" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle"/>
+        <activity android:icon="@drawable/transparent" android:label="@string/title_activity_detail" android:launchMode="singleTask" android:name="com.kohls.mcommerce.opal.wallet.fragment.TransactionDetailActivity" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle"/>
+        <activity android:icon="@drawable/transparent" android:label="@string/title_activity_detail" android:name="com.kohls.mcommerce.opal.wallet.fragment.RewardDetailActivity" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle"/>
+        <activity android:icon="@drawable/transparent" android:label="@string/title_activity_loyalty_enrollment_page" android:name="com.kohls.mcommerce.opal.wallet.fragment.LoyaltyEnrollmentPage" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle"/>
+        <activity android:name="com.kohls.mcommerce.opal.wallet.fragment.ProgramDetailLinkActivity" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle"/>
+        <activity android:label="@string/title_activity_link" android:name="com.kohls.mcommerce.opal.wallet.fragment.LinkActivity" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle"/>
+        <activity android:label="@string/title_activity_zxing_scanner" android:name="com.kohls.mcommerce.opal.wallet.fragment.ZxingScannerActivity" android:screenOrientation="portrait" android:stateNotNeeded="true" android:theme="@style/OverlayActionBarTheme" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:label="@string/app_name" android:launchMode="singleInstance" android:name="com.kohls.mcommerce.opal.wallet.util.QRMessageDialog" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.Dialog"/>
+        <activity android:name="com.kohls.mcommerce.opal.opal.SocialFeedActivity" android:screenOrientation="portrait" android:theme="@style/TabStyle"/>
+        <activity android:icon="@drawable/transparent" android:label="@string/title_activity_edit_rewards_address" android:name="com.kohls.mcommerce.opal.loyalty.EditRewardsAddressActivity" android:parentActivityName="com.kohls.mcommerce.opal.loyalty.RewardsAddressActivity" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".loyalty.RewardsAddressActivity"/>
+        </activity>
+        <activity android:icon="@drawable/transparent" android:label="@string/title_activity_rewards_address" android:logo="@drawable/transparent" android:name="com.kohls.mcommerce.opal.loyalty.RewardsAddressActivity" android:parentActivityName="com.kohls.mcommerce.opal.framework.view.activity.HomeActivity" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.kohls.mcommerce.opal.framework.view.activity.HomeActivity"/>
+        </activity>
+        <activity android:icon="@drawable/transparent" android:label="@string/title_activity_share_points" android:name="com.kohls.mcommerce.opal.loyalty.SharePointsActivity" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:icon="@drawable/transparent" android:label="@string/title_activity_share_complete" android:name="com.kohls.mcommerce.opal.loyalty.SharePointsCompleteActivity" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle"/>
+        <activity android:name="com.kohls.mcommerce.opal.wallet.util.NetworkFailureActivity" android:screenOrientation="sensorPortait" android:theme="@android:style/Theme.Holo.Light.Dialog"/>
+        <activity android:label="" android:name="com.kohls.mcommerce.opal.loyalty.ConfirmationDialogActivity" android:screenOrientation="sensorPortait" android:theme="@android:style/Theme.Holo.Light.Dialog"/>
+        <activity android:icon="@drawable/transparent" android:label="@string/title_activity_filter" android:name="com.kohls.mcommerce.opal.loyalty.FilterActivity" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle"/>
+        <activity android:icon="@drawable/transparent" android:label="@string/title_activity_rewards_phone" android:name="com.kohls.mcommerce.opal.loyalty.EditRewardsPhoneActivity" android:parentActivityName="com.kohls.mcommerce.opal.loyalty.RewardsAddressActivity" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".loyalty.RewardsAddressActivity"/>
+        </activity>
+        <activity android:icon="@drawable/transparent" android:label="@string/title_activity_add_birthday" android:name="com.kohls.mcommerce.opal.loyalty.AddBirthdayActivity" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle"/>
+        <activity android:icon="@drawable/transparent" android:label="@string/title_activity_wallet_usage_info" android:name="com.kohls.mcommerce.opal.wallet.fragment.WalletUsageInfoActivity" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle"/>
+        <activity android:icon="@drawable/transparent" android:label="@string/reminder" android:name="com.kohls.mcommerce.opal.wallet.fragment.ReminderActivity" android:screenOrientation="sensorPortait" android:theme="@style/TabStyle"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:icon="@drawable/transparent" android:label="@string/wallet" android:launchMode="singleTask" android:name="com.kohls.mcommerce.opal.wallet.fragment.ManualScanActivity" android:screenOrientation="sensorPortait" android:theme="@style/MyRewardsStyle"/>
+        <activity android:name="com.kohls.mcommerce.opal.framework.view.activity.SocialFeedActivity" android:screenOrientation="sensorPortait"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:icon="@drawable/transparent" android:label="@string/wallet" android:launchMode="singleTask" android:name="com.kohls.mcommerce.opal.wallet.activity.WalletActivity" android:screenOrientation="sensorPortait" android:theme="@style/WalletActivityTheame"/>
+        <activity android:label="@string/app_name" android:launchMode="singleInstance" android:name="com.kohls.mcommerce.opal.wallet.util.DisplayErrorDialog" android:screenOrientation="sensorPortait" android:theme="@android:style/Theme.Holo.Light.Dialog" android:windowSoftInputMode="stateAlwaysVisible|adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.kohls.mcommerce.opal.modules.lnr.framework.view.activity.MyListActivity" android:screenOrientation="sensorPortait" android:theme="@style/OverlayActionBar" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.kohls.mcommerce.opal.modules.lnr.framework.view.activity.AboutRegistryActivity" android:screenOrientation="sensorPortait" android:theme="@style/OverlayActionBar" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.kohls.mcommerce.opal.modules.lnr.framework.view.activity.AddAddressActivity" android:screenOrientation="sensorPortait" android:theme="@style/OverlayActionBar" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.kohls.mcommerce.opal.modules.lnr.framework.view.activity.ShippingAddressActivity" android:screenOrientation="sensorPortait" android:theme="@style/OverlayActionBar" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.kohls.mcommerce.opal.modules.lnr.framework.view.activity.RegistrySettingActivity" android:screenOrientation="sensorPortait" android:theme="@style/OverlayActionBar" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.kohls.mcommerce.opal.modules.lnr.framework.view.activity.MyRegistryActivity" android:screenOrientation="sensorPortait" android:theme="@style/OverlayActionBar" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.kohls.mcommerce.opal.modules.lnr.framework.view.activity.RegistryCategoryDetailActivity" android:screenOrientation="sensorPortait" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:label="@string/visual_search_help_label" android:launchMode="singleTop" android:name="com.kohls.mcommerce.opal.framework.view.activity.visualSearch.ActivityVisualSearchHelp" android:screenOrientation="sensorPortait" android:windowSoftInputMode="adjustNothing"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@string/API_KEY"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/share_facebook_app_id"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="8ad3f0896adc9215dd7cb23218289168ca83fdd7"/>
+        <service android:exported="false" android:name="com.kohls.mcommerce.opal.wallet.notification.ReminderService"/>
+        <service android:label="@string/app_name" android:name="com.digby.mm.android.library.services.impl.GeofenceTransitionsService"/>
+        <service android:label="@string/app_name" android:name="com.digby.mm.android.library.services.impl.BootCompleteService"/>
+        <service android:label="@string/app_name" android:name="com.digby.mm.android.library.services.impl.EventSenderService"/>
+        <service android:name="com.digby.mm.android.library.services.impl.GCMIntentService"/>
+        <receiver android:name="com.digby.mm.android.library.receivers.impl.DigbyGCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.kohls.mcommerce.opal"/>
+            </intent-filter>
+        </receiver> Required so that the app will set itself up properly when the device is restarted
+<receiver android:name="com.digby.mm.android.library.receivers.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver> Required to properly handle location provider changes, only for v2.6.0 and plus
+<receiver android:name="com.digby.mm.android.library.receivers.LocationProviderChangedReceiver">
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED"/>
+                <action android:name="providerEnabled"/>
+                <category android:name="com.kohls.mcommerce.opal"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.kohls.mcommerce.opal.framework.service.LPLocationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.digby.localpoint.LocationEntry"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.digby.localpoint.LocationExit"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.digby.localpoint.CheckInSuccess"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.digby.localpoint.CheckInFailure"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.digby.localpoint.LocationAdded"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.digby.localpoint.LocationModified"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.digby.localpoint.LocationRemoved"/>
+            </intent-filter>
+        </receiver> --&gt;
+<activity android:label="@string/app_name" android:name="com.kohls.mcommerce.opal.wallet.digby.LPMessageDetailActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.digby.mm.android.library.Notifications.kohls"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="campaign"/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="false" android:name="com.digby.mm.android.library.receivers.ProximityAlertReceiver">
+            <intent-filter>
+                <action android:name="com.digby.mm.android.library.proximityalert"/>
+                <data android:host="com.digby.lmm.api.kohls" android:scheme="alert"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.analytics.helper.GPBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:label="@string/app_name" android:name="com.digby.mm.android.library.services.impl.ProximityAlertService"/>
+        <meta-data android:name="digby_appId" android:value="@string/digby_prod_app_id"/>
+        <meta-data android:name="digby_brandCode" android:value="@string/digby_prod_brandcode"/>
+        <meta-data android:name="digby_server" android:value="@string/digby_server_prod"/>
+        <meta-data android:name="digby_searchRadius_meters" android:value="@string/digby_searchRadius"/>
+        <meta-data android:name="apptentive_api_key" android:value="b1b847cfabef3c543ec9f22ef208756b2dd58441eac36e1337ec9216deca8afa"/>
+        <activity android:name="com.apptentive.android.sdk.ViewActivity" android:screenOrientation="sensorPortait" android:theme="@style/Apptentive.Theme.Transparent"/>
+        <activity android:icon="@drawable/transparent" android:name="com.kohls.mcommerce.opal.framework.view.activity.Yes2YouInviteFriendActivity" android:screenOrientation="sensorPortait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:icon="@drawable/transparent" android:label="@string/activity_social_follow_label" android:name="com.kohls.mcommerce.opal.framework.view.activity.ActivitySocialFollow" android:screenOrientation="sensorPortait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation" android:name="com.google.zxing.client.android.CaptureActivity" android:screenOrientation="landscape" android:stateNotNeeded="true" android:theme="@style/CaptureTheme" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SCAN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="zxing.appspot.com" android:path="/scan" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.google.com" android:path="/m/products/scan" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.google.co.uk" android:path="/m/products/scan" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="scan" android:path="/" android:scheme="zxing"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/preferences_name" android:name="com.google.zxing.client.android.PreferencesActivity" android:stateNotNeeded="true"/>
+        <activity android:name="com.google.zxing.client.android.encode.EncodeActivity" android:stateNotNeeded="true">
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.ENCODE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/x-vcard"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/sbc_name" android:name="com.google.zxing.client.android.book.SearchBookContentsActivity" android:screenOrientation="landscape" android:stateNotNeeded="true">
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SEARCH_BOOK_CONTENTS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.zxing.client.android.share.ShareActivity" android:screenOrientation="user" android:stateNotNeeded="true">
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SHARE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/history_title" android:name="com.google.zxing.client.android.history.HistoryActivity" android:stateNotNeeded="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/bookmark_picker_name" android:name="com.google.zxing.client.android.share.BookmarkPickerActivity" android:stateNotNeeded="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation" android:label="@string/app_picker_name" android:name="com.google.zxing.client.android.share.AppPickerActivity" android:stateNotNeeded="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.zxing.client.android.HelpActivity" android:screenOrientation="user">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

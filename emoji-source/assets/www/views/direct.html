@@ -1,0 +1,52 @@
+<!-- Header and Nav -->
+<nav class="top-bar fixed-header">
+    <div class="logo"></div>
+    <refresh-button promise-function="loadLatest"></refresh-button>
+</nav>
+
+<feed-tabs selected="direct"></feed-tabs>
+
+<loading-spinner visible="!initialized && !feedFailedToLoad" title="Loading direct comics"></loading-spinner>
+<div class="empty-feed columns" ng-if="!feedHasItems && initialized">
+    <i class="icon-direct"></i>
+    <p>Send comics directly to your friends!</p>
+    <p>To get started, create a comic and then share it using the <em>Direct</em> option.</p>
+    <a class="edit btn" ng-click="putMeInTemplate()">Create Comic &nbsp;<i class="icon-edit icon-large"></i></a>
+</div>
+
+<div class="reload-feed" ng-show="feedFailedToLoad">
+	<a ng-click="retry()"><i class="icon-refresh"></i> Tap to retry</a>
+</div>
+
+<div class="spacer"></div>
+
+<div class="noti-feed-container">
+	<div ng-if="feedHasItems" ng-repeat="comic in feedItems | onlyDirectComics">
+		<div class="noti direct clearfix" ng-class="{unread: isUnread(comic)}">
+			<div class="profile" queued="{{comic.author.thumb}}" q-retry="true" q-fail="profile-fail.png"
+			     q-click="viewUser(comic.author)">
+			</div>
+			<div class="details">
+				<p>
+					<span>{{comic.author|displayName}}</span>
+					<span ng-if="fromMe(comic)">sent a comic to <span ng-bind="recipientData(comic)"></span></span>
+					<span ng-if="!fromMe(comic)">sent you a comic</span>
+					<span class="time"><i class="icon-clock"></i> {{comic.timestamp | timestamp_format}} ago</span>
+				</p>
+			</div>
+			<div class="comic-thumb" q-click="viewComic(comic.comic_id)" q-retry="true" q-fail="comic-fail.png"
+				 queued="{{comic.comic_url}}">
+			</div>
+		</div>
+	</div>
+
+	<div class="ios-hide" bs-ios-wait ng-show="!loading_direct_messages"
+		infinite-scroll="loadMore()"
+		can-load="canLoad"
+		threshold="0"
+		id="feed_direct_comics">
+	</div>
+
+	<loading-spinner visible="!canLoad"></loading-spinner>
+</div>
+

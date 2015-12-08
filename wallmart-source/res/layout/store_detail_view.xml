@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <TableLayout android:id="@id/store_details_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:paddingLeft="20.0dip" android:paddingTop="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="top" android:id="@id/store_details_store_type" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Walmart" android:includeFontPadding="false" android:layout_weight="1.0" android:lineSpacingExtra="-3.0dip" style="@style/Text.Header" />
+                <ImageView android:id="@id/store_details_s2s_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="6.0dip" android:src="@drawable/asset_sitetostore" />
+            </LinearLayout>
+            <TextView android:textColor="@color/store_detail_text" android:id="@id/store_details_store_id" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Store #1234" style="@style/Text.Body.Regular" />
+            <include layout="@layout/store_detail_map_section" />
+            <TableRow android:gravity="center_vertical" android:id="@id/store_details_direction_container" android:background="@drawable/default_list_selector" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="80.0dip">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textColor="@color/store_detail_title" android:id="@id/store_details_direction_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Directions" style="@style/Text.Body" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/store_detail_text" android:id="@id/store_details_direction_address_line_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-4.0dip" android:text="Address line 1" style="@style/Text.Body.Regular" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/store_detail_text" android:id="@id/store_details_direction_address_line_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Address line 2" style="@style/Text.Body.Regular" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="right|center" android:id="@id/store_details_direction_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/direction" />
+            </TableRow>
+            <ImageView android:id="@id/store_details_direction_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/store_detail_divider" />
+            <TableRow android:gravity="center_vertical" android:id="@id/store_details_call_container" android:background="@drawable/default_list_selector" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="80.0dip">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textColor="@color/store_detail_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Call Walmart" style="@style/Text.Body" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/store_detail_text" android:id="@id/store_details_store_phone_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Phone number" style="@style/Text.Body.Regular" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="right|center" android:id="@id/store_details_store_phone_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/telephone" />
+            </TableRow>
+            <ImageView android:id="@id/store_details_call_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/store_detail_divider" />
+            <TableRow android:gravity="center_vertical" android:id="@id/store_details_local_ad_container" android:background="@drawable/default_list_selector" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="80.0dip">
+                <TextView android:textColor="@color/store_detail_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/store_details_view_local_ad" android:layout_weight="1.0" style="@style/Text.Body" />
+                <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/savings" />
+            </TableRow>
+            <ImageView android:id="@id/store_details_local_ad_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/store_detail_divider" />
+            <TableRow android:gravity="center_vertical" android:id="@id/store_details_my_store_checkbox_container" android:background="@drawable/default_list_selector" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/store_detail_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Make this my store" android:layout_weight="1.0" style="@style/Text.Body" />
+                <CheckBox android:layout_gravity="right" android:id="@id/checkbox" android:saveEnabled="false" android:duplicateParentState="true" style="@style/CheckboxNoText" />
+            </TableRow>
+            <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/store_detail_divider" />
+            <TableRow android:gravity="center_vertical" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/store_detail_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hours" style="@style/Text.Body" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/store_detail_text" android:id="@id/store_details_24_hours" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Open 24 hours, varies by department" style="@style/Text.Body.Regular" />
+                    <include android:id="@id/store_details_hours_group" layout="@layout/store_hours_group" />
+                </LinearLayout>
+            </TableRow>
+            <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/store_detail_divider" />
+        </TableLayout>
+    </ScrollView>
+</FrameLayout>

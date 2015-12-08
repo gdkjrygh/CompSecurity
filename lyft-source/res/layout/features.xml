@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.development.FeaturesView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.controls.BackButtonToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_above="@id/reset_features_button" android:layout_below="@id/toolbar">
+        <LinearLayout android:orientation="vertical" android:id="@id/features_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <Button android:layout_gravity="bottom" android:id="@id/reset_features_button" android:background="@drawable/btn_charcoal" android:layout_width="fill_parent" android:text="@string/reset_feature_flags_button" android:layout_alignParentBottom="true" style="@style/FullBleedButton" />
+</me.lyft.android.ui.development.FeaturesView>

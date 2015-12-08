@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/id_rdp_topBar_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_weight="1.0">
+            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldTextView android:textSize="17.0sp" android:ellipsize="end" android:id="@id/id_rdp_regname_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldTextView android:textSize="10.0sp" android:id="@id/id_rdp_regid_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="14.0sp" android:id="@id/id_rdp_regdate_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="14.0sp" android:ellipsize="end" android:id="@id/id_rdp_reglocation_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:singleLine="true" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/id_rdp_outofstock_layout" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/rdp_info_icon" />
+                <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="10.0sp" android:id="@id/id_rdp_regstock_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip">
+            <ImageView android:layout_gravity="top|right|center" android:id="@id/id_rdp_edit_reg_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/edit_icon" />
+            <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/id_rdp_calendar_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <ImageView android:id="@id/id_rdp_calender_icon" android:layout_width="53.0dip" android:layout_height="49.0dip" />
+                <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldTextView android:textSize="20.0sp" android:gravity="center" android:id="@id/id_rdp_calendar_date_textview" android:layout_width="53.0dip" android:layout_height="49.0dip" android:layout_marginTop="3.0dip" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/search_header" />
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/actionbar" android:background="@drawable/widget_actionbar" android:layout_width="fill_parent" android:layout_height="@dimen/actionbar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/search" style="@style/widget_ab_tab">
+        <ImageView android:layout_gravity="center" android:src="@drawable/ic_search" android:scaleType="center" style="@style/app_widget_button" />
+    </FrameLayout>
+    <ImageView android:layout_gravity="center" android:id="@id/logo" android:src="@drawable/app_logo" android:layout_weight="1.0" style="@style/wrap_view" />
+    <FrameLayout android:id="@id/user" style="@style/widget_ab_tab">
+        <ImageView android:layout_gravity="center" android:src="@drawable/ic_profile" style="@style/app_widget_button" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/notif_container" android:visibility="gone" style="@style/widget_ab_tab">
+        <ImageView android:layout_gravity="center" android:src="@drawable/ic_notifications" style="@style/wrap_view" />
+        <TextView android:layout_gravity="center" android:id="@id/notif" android:layout_marginLeft="3.0dip" android:layout_marginBottom="1.0dip" android:text="5" style="@style/widget_notif_red" />
+    </FrameLayout>
+</LinearLayout>

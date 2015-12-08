@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_whatsnew" android:layout_width="wrap_content" android:layout_height="@dimen/ad_webview_layout_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView android:id="@id/event_webview" android:layout_width="fill_parent" android:layout_height="@dimen/ad_webview_height" />
+    <LinearLayout android:id="@id/divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip">
+        <View android:background="@color/list_divider_color" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/newbie_free_ok" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/newbie_height">
+        <RelativeLayout android:id="@id/btn_enter" android:background="@drawable/list_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/newbie_textsize" android:textStyle="bold" android:textColor="@color/blue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/enter" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <View android:background="@color/list_divider_color" android:layout_width="1.0dip" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+        <RelativeLayout android:id="@id/btn_cancel" android:background="@drawable/list_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/newbie_textsize" android:textStyle="bold" android:textColor="@color/blue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/close" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

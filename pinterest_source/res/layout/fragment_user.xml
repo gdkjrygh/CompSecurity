@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/fragment_user" android:background="@color/bg_grid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pinterest="http://schemas.android.com/apk/res-auto">
+    <com.pinterest.activity.task.view.ChildViewPager android:id="@id/content_pager_vw" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/actionbar" />
+    <LinearLayout android:orientation="vertical" android:id="@id/user_header" android:layout_width="fill_parent" android:layout_height="@dimen/userbar_height" android:layout_below="@id/actionbar">
+        <com.pinterest.activity.user.view.UserHeaderView android:id="@id/user_header_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <FrameLayout android:background="@color/bg_actionbar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <HorizontalScrollView android:layout_gravity="center_horizontal" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.pinterest.ui.tab.TabBar android:id="@id/tabbar" android:paddingLeft="@dimen/margin" android:paddingRight="@dimen/margin" android:clipToPadding="false" style="@style/TabBar">
+                    <com.pinterest.ui.tab.Tab pinterest:text="@string/pins" style="@style/UserTab" />
+                    <com.pinterest.ui.tab.Tab pinterest:text="@string/boards" style="@style/UserTab" />
+                    <com.pinterest.ui.tab.Tab pinterest:text="@string/likes" style="@style/UserTab" />
+                    <com.pinterest.ui.tab.Tab pinterest:text="@string/about_me" style="@style/UserTab" />
+                    <com.pinterest.ui.tab.Tab pinterest:text="@string/following" style="@style/UserTab" />
+                    <com.pinterest.ui.tab.Tab pinterest:text="@string/followers" style="@style/UserTab" />
+                </com.pinterest.ui.tab.TabBar>
+            </HorizontalScrollView>
+        </FrameLayout>
+        <View style="@style/dropshadow_down" />
+    </LinearLayout>
+    <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/id_rdp_main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView android:id="@id/id_rdp_gridView" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollingCache="true" android:verticalSpacing="0.0dip" android:stretchMode="columnWidth" android:numColumns="2" android:fastScrollEnabled="true" android:isScrollContainer="false" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/id_rdp_headerLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" />
+        <LinearLayout android:id="@id/id_rdp_bartobehidden" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:layout_alignParentTop="true" layout="@layout/fragment_rdp_top_bar" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/id_rdp_header_linearLayout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="80.0dip">
+            <RelativeLayout android:id="@id/id_rdp_gray_headerLayout" android:background="@color/actionbar_background" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                <ImageView android:id="@id/id_rdp_toggle_dashboard_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:src="@drawable/r_dashboard_selected" android:layout_alignBottom="@id/id_rdp_viewToggleList" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/id_rdp_viewToggleList" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/list_view_icon_unselected" android:layout_toRightOf="@id/id_rdp_toggle_dashboard_view" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/id_rdp_viewToggleGrid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:src="@drawable/grid_view_icon_unselected" android:layout_toRightOf="@id/id_rdp_viewToggleList" android:layout_centerVertical="true" />
+                <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldTextView android:textColor="@android:color/white" android:id="@id/id_rdp_sortbyTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/lnr_ldp_sortby" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldTextView android:textColor="@android:color/white" android:id="@id/id_rdp_header_share_views" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/lnr_ldp_share" android:singleLine="true" android:layout_toLeftOf="@id/id_rdp_sortbyTxt" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="14.0sp" android:layout_gravity="center_vertical" android:id="@id/id_rdp_items_purchased" android:paddingLeft="20.0dip" android:paddingTop="5.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="30.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/id_rdp_loaderLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="300.0dip">
+        <ProgressBar android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/id_rdp_nolistLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="16.0sp" android:layout_gravity="center" android:id="@id/id_rdp_noitems_TxtView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="350.0dip" />
+            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldButton android:textSize="12.0sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/id_rdp_goshoppingBtn" android:background="@color/loyalty_green" android:padding="5.0dip" android:layout_width="280.0dip" android:layout_height="40.0dip" android:layout_marginTop="15.0dip" android:text="@string/lnr_goshopping_button_text" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/id_reg_cfrm_progress_layout" android:background="@android:color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="80.0dip" android:layout_height="80.0dip" android:indeterminate="true" android:layout_weight="3.0" />
+    </LinearLayout>
+</FrameLayout>

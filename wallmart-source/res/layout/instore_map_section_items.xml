@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/store_map_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/text_blue" android:gravity="center_vertical" android:id="@id/in_store_map_items_on_map" android:background="@drawable/list_default_selector_with_divider" android:paddingLeft="20.0dip" android:paddingTop="5.0dip" android:paddingRight="20.0dip" android:paddingBottom="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/in_store_map_items_on_map" android:drawableLeft="@drawable/in_store_map_results" android:drawablePadding="5.0dip" android:layout_below="@id/store_map" style="@style/Text.Bodycopy" />
+    <FrameLayout android:id="@id/instore_map_section_progress" android:background="@color/walmart_blue" android:layout_width="fill_parent" android:layout_height="@dimen/instore_map_section_height" android:layout_alignTop="@id/store_map" android:layout_alignBottom="@id/store_map">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Spinner.Dark" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/map_error" android:background="@color/walmart_colorPrimary75" android:paddingLeft="60.0dip" android:paddingTop="5.0dip" android:paddingRight="60.0dip" android:paddingBottom="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/instore_map_section_height" android:layout_alignTop="@id/store_map" android:layout_alignBottom="@id/store_map">
+        <TextView android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/map_error_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/in_store_map_error_no_mapping" android:drawableTop="@drawable/in_store_map_no_results" android:drawablePadding="5.0dip" style="@style/Text.Subhead.Light" />
+    </FrameLayout>
+</RelativeLayout>

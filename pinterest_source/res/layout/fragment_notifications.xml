@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/fragment_notifications" android:background="@color/bg_actionbar" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pinterest="http://schemas.android.com/apk/res-auto">
+    <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+    <com.pinterest.ui.tab.TabBar android:id="@id/tabbar" android:layout_below="@id/actionbar" android:layout_centerHorizontal="true" style="@style/TabBar">
+        <com.pinterest.ui.tab.Tab android:id="@id/news_button" pinterest:text="@string/news" style="@style/TabEqual" />
+        <com.pinterest.ui.tab.Tab android:id="@id/your_story_button" pinterest:text="@string/you" style="@style/TabEqual" />
+        <com.pinterest.ui.tab.Tab android:id="@id/messages_button" pinterest:text="@string/messages" style="@style/TabEqual" />
+    </com.pinterest.ui.tab.TabBar>
+    <View android:layout_below="@id/actionbar" android:layout_alignParentBottom="false" style="@style/dialog_divider" />
+    <com.pinterest.activity.task.view.ChildViewPager android:id="@id/content_pager_vw" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tabbar" />
+    <View android:layout_below="@id/tabbar" style="@style/dropshadow_down" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/grid_content_vw" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pinterest="http://schemas.android.com/apk/res-auto">
+    <com.pinterest.ui.grid.AdapterEmptyView android:id="@id/empty_vw" android:paddingTop="@dimen/empty_padding" android:paddingBottom="@dimen/empty_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.pinterest.ui.grid.PinterestAdapterView android:id="@id/adapter_vw" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin" pinterest:brickPadding="@dimen/pin_grid_cell_margin" pinterest:additionalOuterBrickPadding="@dimen/pin_grid_cell_outer_margin" pinterest:numColumns="@integer/pin_grid_cols" style="@style/pin_grid_view" />
+    <com.pinterest.ui.grid.AdapterFooterView android:id="@id/footer_vw" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

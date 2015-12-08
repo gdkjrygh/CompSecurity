@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/title_help_about_us"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:kik="http://schemas.android.com/apk/res/kik.android">
+    <kik.android.widget.preferences.PrivacyPolicyPreference android:enabled="true" android:title="@string/title_privacy_policy" android:key="kik.privacy.policy" kik:divider="none" />
+    <kik.android.widget.preferences.HelpPreference android:enabled="true" android:title="@string/title_help" android:key="kik.help" kik:divider="top">
+        <intent android:action="android.intent.action.VIEW" android:data="@string/web_kik_support" />
+    </kik.android.widget.preferences.HelpPreference>
+    <kik.android.widget.preferences.LicensePreference android:enabled="true" android:title="@string/title_licenses" android:key="kik.licenses" kik:divider="top" />
+    <kik.android.widget.preferences.DevelopersPreference android:title="@string/title_developers" kik:divider="top" kik:preference_screen="@xml/preferences_developers" />
+    <kik.android.widget.preferences.CopyrightPreference android:enabled="true" android:title="@string/title_copyright" android:key="kik.copyright" kik:divider="full_bottom|top" />
+</PreferenceScreen>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/ratio_tittle" android:layout_width="fill_parent" android:layout_height="@dimen/savedialog_tittle_heiht">
+        <TextView android:textSize="@dimen/savedialog_main_textsize" android:textColor="@color/white" android:id="@id/savedialog_maintittle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/savedialog_marginleft" android:text="@string/custom_ratio" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/ratioCancel" android:background="@drawable/btn_save" android:layout_width="@dimen/savedialog_tittle_heiht" android:layout_height="@dimen/savedialog_tittle_heiht" android:src="@drawable/icon_cancel" android:scaleType="center" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:id="@id/ratio_edit" android:paddingTop="@dimen/custom_ratio_padding_top" android:paddingBottom="@dimen/custom_ratio_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/ratio_tittle" android:layout_centerHorizontal="true">
+        <EditText android:gravity="center" android:id="@id/ratioEditWidth" android:layout_width="@dimen/custom_ratio_edit_width" android:layout_height="wrap_content" android:text="1.00" android:ems="5" android:inputType="numberDecimal">
+            <requestFocus />
+        </EditText>
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/ratioTextView" android:layout_width="@dimen/custom_ratio_spilt_width" android:layout_height="wrap_content" android:text=":" />
+        <EditText android:gravity="center" android:id="@id/ratioEditHeight" android:layout_width="@dimen/custom_ratio_edit_width" android:layout_height="wrap_content" android:text="1.00" android:ems="5" android:inputType="numberDecimal" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/ratio_seek" android:paddingBottom="@dimen/custom_ratio_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ratio_edit" android:layout_alignLeft="@id/ratio_edit">
+        <SeekBar android:id="@id/ratioSeekBar" android:layout_width="@dimen/custom_ratio_seekbar_width" android:layout_height="wrap_content" android:max="100" android:progressDrawable="@drawable/border_seek_bar_lightblue" android:thumb="@drawable/btn_seekbar" style="@style/seekbar_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ratio_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/ratio_seek">
+        <View android:background="@drawable/bg_slidebar_normal" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/ratioConfim" android:background="@drawable/btn_save" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_below="@id/ratio_divider">
+        <TextView android:textSize="22.0sp" android:textColor="@color/white" android:id="@id/ratioConfim_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/folder_delete_ok" />
+    </LinearLayout>
+</RelativeLayout>

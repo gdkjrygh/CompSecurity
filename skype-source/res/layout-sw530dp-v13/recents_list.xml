@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:paddingTop="@dimen/size_3x" android:paddingBottom="@dimen/size_3x" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="@dimen/hub_section_min_width"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/recent_filters" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/recent_all_filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_filter_all" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/ListFilter" />
+        <RelativeLayout android:orientation="horizontal" android:id="@id/recent_unread_combo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/recent_all_filter">
+            <Button android:enabled="false" android:id="@id/recent_unread_filter" android:paddingRight="@dimen/padding4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_filter_unread" android:layout_centerVertical="true" style="@style/ListFilter" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/recent_count_badge" android:focusable="false" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/badge_size" android:layout_toRightOf="@id/recent_unread_filter" android:layout_centerVertical="true" android:contentDescription="@string/acc_unread_conversations" style="@style/Badge" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.skype.android.widget.recycler.TwoWayRecyclerView android:id="@id/list" android:background="@color/main_light_color" android:paddingBottom="@dimen/padding5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@color/main_light_color" android:horizontalSpacing="@dimen/padding4" android:verticalSpacing="@dimen/padding2" android:stretchMode="columnWidth" android:columnWidth="@dimen/list_item_width" android:numColumns="@integer/list_items_count_per_row" android:rowHeight="@dimen/list_item_height" android:maxRows="@integer/list_items_count_per_row" android:layout_below="@id/recent_filters" />
+    <include android:id="@id/recent_empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding6" android:layout_below="@id/recent_filters" layout="@layout/recent_empty_view" />
+</RelativeLayout>

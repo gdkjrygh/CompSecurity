@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.development.DeepLinksView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.controls.BackButtonToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:layout_gravity="center" android:id="@id/deep_link_edit_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="@dimen/span16" android:text="lyft://" android:hint="@string/deep_link_edit_text_hint" android:singleLine="true" android:layout_weight="1.0" android:imeOptions="actionGo" style="@style/EditText" />
+        <Button android:id="@id/deep_link_go_button" android:layout_width="@dimen/span48" android:layout_height="@dimen/span48" android:layout_marginRight="@dimen/span16" android:text="@string/go" style="@style/PinkButton" />
+    </LinearLayout>
+    <ListView android:orientation="vertical" android:id="@id/deep_link_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="middle" />
+</me.lyft.android.ui.development.DeepLinksView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/dialog_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@color/very_translucent_black" />
+    <com.tinder.views.RoundedLinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/dialog_popup_card_content" android:background="@drawable/rounded_rectangle_white" android:clipChildren="true" android:layout_width="@dimen/passport_dashboard_width" android:layout_height="wrap_content" android:layout_centerInParent="true" app:corners="@dimen/rounded_card_radius">
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/dialog_superlike_content" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/dialog_superlike_bottom" />
+    </com.tinder.views.RoundedLinearLayout>
+    <include android:id="@id/include_gamepad" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/profile_rec_gamepad_buttons" />
+</RelativeLayout>

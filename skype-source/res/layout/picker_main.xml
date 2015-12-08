@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/picker_root" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <android.support.v4.view.ViewPager android:id="@id/picker_view_pager" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <RelativeLayout android:id="@id/picker_bottom_bar" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/picker_tabs_bar_height" android:layout_alignParentBottom="true">
+            <com.skype.android.widget.SymbolView android:textSize="@dimen/picker_tabs_delete_symbol_size" android:textColor="@color/picker_delete_button_selector" android:id="@id/picker_delete_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/picker_tabs_bar_side_margin" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/action_delete" app:symbol_code="Backspace" />
+            <com.skype.android.widget.SymbolView android:textSize="@dimen/picker_tabs_search_symbol_size" android:textColor="@color/white_button" android:id="@id/picker_search_button" android:background="@drawable/picker_search_button_selector" android:paddingLeft="@dimen/padding2b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/picker_tabs_bar_side_margin" android:layout_toLeftOf="@id/picker_delete_button" android:layout_centerVertical="true" android:contentDescription="@string/action_search_picker" app:symbol_code="Search" />
+            <HorizontalScrollView android:scrollbarSize="@dimen/scrollbars_size" android:id="@id/picker_bottom_bar_tabs_scroller" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/picker_tabs_bar_side_margin" android:layout_toLeftOf="@id/picker_search_button">
+                <LinearLayout android:gravity="left|center" android:orientation="horizontal" android:id="@id/picker_bottom_bar_tabs_container" android:paddingLeft="@dimen/size_0_5x" android:paddingRight="@dimen/size_0_5x" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </HorizontalScrollView>
+            <View android:background="@color/skype_light_fog" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+        <View android:background="@color/skype_light_fog" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</RelativeLayout>

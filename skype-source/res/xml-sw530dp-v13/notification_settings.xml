@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/label_notifications" android:key="@string/label_notifications" android:summary="@string/label_get_alerts_for_calls_messages"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/header_notification_settings" android:key="@string/key_category_notifications">
+        <SwitchPreference android:title="@string/label_notifications_switch" android:key="@string/key_notifications_enabled" android:defaultValue="true" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="@string/label_new_im" android:key="@string/key_new_message_notification" android:dependency="@string/key_notifications_enabled" android:defaultValue="true" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="@string/label_sync_groups_in_background" android:key="@string/key_sync_groups_in_background" android:summary="@string/label_sync_groups_in_background_summary" android:dependency="@string/key_notifications_enabled" android:defaultValue="false" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="@string/label_show_skype_status" android:key="@string/key_skype_status_enabled" android:summary="@string/label_show_skype_status_summary" android:dependency="@string/key_notifications_enabled" android:defaultValue="false" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="@string/label_notification_sound" android:key="@string/key_notification_sound" android:dependency="@string/key_notifications_enabled" android:defaultValue="true" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="@string/label_notification_light" android:key="@string/key_notification_light" android:summary="@string/label_notification_light_pulse" android:dependency="@string/key_notifications_enabled" android:defaultValue="true" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="@string/label_notification_vibrate" android:key="@string/key_notification_vibrate" android:dependency="@string/key_notifications_enabled" android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

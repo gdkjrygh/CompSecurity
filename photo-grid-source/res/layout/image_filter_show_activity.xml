@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/filter_show_bottom" android:background="@color/camera_bottom_bg" android:layout_width="fill_parent" android:layout_height="@dimen/image_merger_title_height" android:layout_alignParentTop="true">
+        <TextView android:textSize="@dimen/editer_textSize" android:textColor="@color/white" android:gravity="left|center" android:id="@id/filter_show_retake" android:background="@drawable/btn_back" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:drawableLeft="@drawable/icon_back" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/banner_text_size" android:textColor="@color/btn_green" android:gravity="center" android:id="@id/filter_show_save" android:background="@drawable/btn_save" android:paddingTop="@dimen/banner_text_paddingTop" android:layout_width="@dimen/image_merger_title_btnWidth" android:layout_height="fill_parent" android:scaleType="center" android:text="@string/save" android:drawableTop="@drawable/icon_save" android:drawablePadding="-2.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/banner_text_size" android:textColor="@color/text_white" android:gravity="center" android:id="@id/filter_show_share" android:background="@drawable/btn_share" android:paddingTop="@dimen/banner_text_paddingTop" android:layout_width="@dimen/image_merger_title_btnWidth" android:layout_height="fill_parent" android:scaleType="center" android:text="@string/popupmenu_share" android:drawableTop="@drawable/icon_share" android:drawablePadding="-2.0dip" android:layout_toLeftOf="@id/filter_show_save" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/filter_edit_layout" android:background="@drawable/bg_camera_show_edit" android:layout_width="fill_parent" android:layout_height="@dimen/camera_show_edit_height" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/camera_edit_text_size" android:textColor="@color/white" android:id="@id/filter_edit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/edit" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/filtershow" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/filter_edit_layout" android:layout_below="@id/filter_show_bottom" />
+    <include android:visibility="gone" layout="@layout/progressbar" />
+</RelativeLayout>

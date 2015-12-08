@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.walmart.android.ui.SafeScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/top_container" android:background="@color/saver_dashboard_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/white" android:id="@id/saver_home_more_button" android:padding="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="See how it works" android:drawableBottom="@drawable/saver_dashboard_down_arrow" android:drawablePadding="15.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/Text.Bodycopy" />
+            <LinearLayout android:orientation="vertical" android:id="@id/saver_home_top_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/saver_home_more_button" android:layout_alignParentTop="true">
+                <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:src="@drawable/saver_dashboard" />
+                <TextView android:textColor="@color/white" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="@string/saver_dashboard_title" style="@style/Text.Header" />
+                <TextView android:textSize="17.0sp" android:textColor="@color/white" android:gravity="center_horizontal" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/saver_dashboard_text" style="@style/Text.SubHeader" />
+                <Button android:id="@id/saver_home_scan_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="@string/saver_dashboard_scan_btn" style="@style/PrimaryButton.Orange" />
+            </LinearLayout>
+        </RelativeLayout>
+        <include android:id="@id/saver_home_content" android:visibility="gone" layout="@layout/saver_home_content" />
+    </LinearLayout>
+</com.walmart.android.ui.SafeScrollView>

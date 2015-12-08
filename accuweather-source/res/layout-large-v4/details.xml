@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background_lines" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/background_lines_10_tiled" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.accuweather.android.views.NavigationDrawer android:id="@id/navigation_drawer" android:layout_width="224.0dip" android:layout_height="fill_parent" />
+            <com.accuweather.android.views.SnapHorizontalScrollView android:id="@id/scroller" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:id="@id/container" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            </com.accuweather.android.views.SnapHorizontalScrollView>
+        </LinearLayout>
+        <View android:id="@id/ad" android:background="#ff222222" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+        <include android:layout_width="fill_parent" android:layout_height="32.0dip" layout="@layout/branding_bar_light" />
+    </LinearLayout>
+    <ImageView android:layout_width="fill_parent" android:layout_height="8.0dip" android:src="@drawable/action_bar_shadow" android:scaleType="fitXY" />
+</RelativeLayout>

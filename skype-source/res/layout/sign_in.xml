@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/skype_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/sign_in_content" android:paddingTop="@dimen/sign_in_header_logo_padding" android:layout_height="wrap_content" style="@style/SigninContent">
+        <include android:id="@id/sign_in_header" layout="@layout/sign_in_header" style="@style/SignInHeaderVisibility" />
+        <TextView android:textSize="@dimen/landing_sign_in_font" android:textColor="@color/main_light_color" android:layout_gravity="center_horizontal" android:id="@id/sign_in_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/landing_sign_in_spacing2" android:text="@string/action_sign_in" android:textIsSelectable="false" />
+        <TextView android:gravity="center" android:id="@id/error_message" android:focusable="true" android:focusableInTouchMode="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/sign_in_error_container_height" android:text="@string/message_check_your_details" style="@style/SignInErrorText" />
+        <RelativeLayout android:id="@id/signin_skypename_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/landing_sign_in_spacing2">
+            <com.skype.android.widget.AccessibleAutoCompleteTextView android:ellipsize="end" android:id="@id/signin_skypename" android:nextFocusDown="@id/signin_password" android:layout_height="wrap_content" android:hint="@string/header_skypename" android:singleLine="true" android:inputType="textVisiblePassword|textNoSuggestions" android:contentDescription="@string/message_signing_in_enter_skypename" style="@style/SigninInputField" />
+        </RelativeLayout>
+        <View android:layout_gravity="center_horizontal" android:id="@id/sign_in_divider" android:background="@color/white" android:layout_width="@dimen/sign_in_button_max_width" android:layout_height="1.0dip" />
+        <RelativeLayout android:id="@id/signin_password_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.skype.android.widget.FocusableEditText android:ellipsize="end" android:id="@id/signin_password" android:nextFocusDown="@id/sign_in_btn" android:layout_height="wrap_content" android:hint="@string/text_hint_password" android:singleLine="true" android:layout_centerInParent="true" android:inputType="textPassword" android:contentDescription="@string/message_signing_in_enter_password" android:nextFocusForward="@id/sign_in_btn" style="@style/SigninInputField" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/signin_button_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.skype.android.widget.SymbolView android:id="@id/sign_in_btn" android:nextFocusDown="@id/sign_in_problems" android:layout_centerHorizontal="true" android:contentDescription="@string/label_next" app:symbol_code="Right" app:symbolBackground="@color/button_bg_on_blue_positive_idle" app:symbolCircleBackground="true" style="@style/SignInPageNextButton" />
+        </RelativeLayout>
+        <Button android:gravity="center" android:id="@id/sign_in_problems" android:background="@drawable/focus_highlight" android:layout_width="fill_parent" android:layout_height="@dimen/rounded_button_height" android:layout_marginTop="@dimen/padding4b" android:text="@string/label_problems_signing_in" style="@style/SignInStandardText" />
+    </LinearLayout>
+</ScrollView>

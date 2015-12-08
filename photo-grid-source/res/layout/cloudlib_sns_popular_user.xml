@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.roidapp.cloudlib.sns.modifiedrefresh.SwipeRefreshLayout2 android:id="@id/swipe_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ListView android:id="@id/user_listview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" />
+    </com.roidapp.cloudlib.sns.modifiedrefresh.SwipeRefreshLayout2>
+    <FrameLayout android:id="@id/error_view" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="16.0sp" android:textColor="@color/gray_text" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cloud_common_load_failed" android:drawableBottom="@drawable/cloud_lib_loading_gray" android:drawablePadding="10.0dip" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/video2_grid_item_small" android:padding="@dimen/video_grid_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <com.weather.commons.ui.FixedAspectRatioImageView android:id="@id/video2_grid_item_imageholder" android:background="@color/video_module_image_default" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/video_row_thumbnail_contentDescription" weather:farivAspectWidth="@integer/video_aspect_width" weather:farivAspectHeight="@integer/video_aspect_height" />
+    <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/video2_grid_item_title_textsize" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/video2_grid_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_below="@id/video2_grid_item_imageholder" weather:font="Roboto-Regular.ttf" />
+    <ImageView android:id="@id/video2_grid_item_play_icon" android:layout_width="@dimen/video2_grid_item_play_icon_small" android:layout_height="@dimen/video2_grid_item_play_icon_small" android:layout_margin="8.0dip" android:src="@drawable/btn_video_play" android:layout_alignBottom="@id/video2_grid_item_imageholder" android:contentDescription="@string/video2_grid_item_play_icon_content_description" />
+</RelativeLayout>

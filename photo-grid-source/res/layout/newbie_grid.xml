@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/bottom_bar" android:layout_width="fill_parent" android:layout_height="@dimen/grid_bottomBtn_height" android:layout_alignParentBottom="true">
+        <View android:id="@id/padding_left_view" android:background="@color/newbie_bg" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <View android:layout_width="@dimen/grid_bottomBtn_width" android:layout_height="fill_parent" />
+        <View android:background="@color/newbie_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <RelativeLayout android:background="@color/newbie_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom_bar">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/linearLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tap_icon" />
+                <TextView android:textSize="@dimen/folder_add_tip_textSize" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/tap_and_drag" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                <TextView android:textSize="@dimen/folder_add_tip_textSize" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/newbie_grid_tips1" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:src="@drawable/pinch_icon" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/up_arrow_layout" android:layout_width="@dimen/grid_bottomBtn_width" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/up_arrow" />
+            <View android:layout_height="@dimen/newbie_grid_arrow_height" style="@style/newbie_up_arrow_line_style" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/folder_add_tip_textSize" android:textColor="@color/white" android:id="@id/tap_swap_photos" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="5.0dip" android:text="@string/tap_the_btn_to_swap_photos" android:layout_above="@id/up_arrow_layout" android:layout_centerVertical="true" />
+        <TextView android:id="@id/confirmBtn" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/newbie_ok_btn_style" />
+    </RelativeLayout>
+</RelativeLayout>

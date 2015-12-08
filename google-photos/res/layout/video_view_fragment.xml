@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/photos_videoplayer_videolayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/photos_videoplayer_view_video_view_holder" />
+    <ImageView android:layout_gravity="center" android:id="@id/photos_videoplayer_video_still" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null" />
+    <FrameLayout android:layout_gravity="center" android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/video_progress_spinner" />
+        <TextView android:layout_gravity="center" android:id="@id/photos_videoplayer_list_empty_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textAppearance="@style/quantum_text_headline_white" android:textColor="@color/quantum_grey400" android:layout_gravity="center" android:id="@id/photos_videoplayer_videoplayer_processing" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/video_not_ready" android:drawableTop="@drawable/quantum_ic_loop_grey600_48" android:drawablePadding="24.0dip" />
+    </FrameLayout>
+</FrameLayout>

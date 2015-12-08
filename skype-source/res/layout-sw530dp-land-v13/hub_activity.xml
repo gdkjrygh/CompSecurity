@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/">
+    <include android:id="@id/hub_top" layout="@layout/hub_action_bar" />
+    <HorizontalScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/hub_top">
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/size_1x" android:paddingRight="@dimen/size_1x" android:paddingBottom="@dimen/size_1x" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <fragment android:id="@id/recents" android:layout="@layout/hub_recents_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/hub_section_margin" android:layout_marginRight="@dimen/hub_section_margin" android:max="@integer/max_recent_items_to_load" class="com.skype.android.app.recents.RecentListFragment" />
+            <fragment android:id="@id/favorites" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/hub_section_margin" android:layout_marginRight="@dimen/hub_section_margin" android:minLevel="@integer/max_contacts_to_hide_favorites" class="com.skype.android.app.favorites.FavoritesFragment" />
+            <fragment android:id="@id/contacts" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/hub_section_margin" android:layout_marginRight="@dimen/hub_section_margin" class="com.skype.android.app.contacts.ContactTopPicksFragment" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</RelativeLayout>

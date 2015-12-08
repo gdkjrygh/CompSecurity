@@ -1,0 +1,18 @@
+<div class="quad-container">
+    <div class="row quad">
+    	<div class="large-10 large-centered columns">
+            <div ng-click="comic_tag_click(comics[0], tag)" class="quad-info">
+                <h5>{{title}} <span ng-if="count">({{count}})</span></h5>
+                <p>{{description}}</p>
+
+            </div>
+            <div class="quarter-wrap clearfix">
+                <div class="pencil" ng-click="comic_tag_click(comics[0], tag)"><i class="icon-pencil"></i></div>
+        		<div class="quarter" queued="{{comics[0].thumb}}" q-fail="comic-fail.png" q-retry="true" q-click="comic_tag_click(comics[0], tag)"> </div>
+        		<div class="quarter" queued="{{comics[1].thumb}}" q-fail="comic-fail.png" q-retry="true" q-click="comic_tag_click(comics[1], tag)"> </div>
+        		<div class="quarter" queued="{{comics[2].thumb}}" q-fail="comic-fail.png" q-retry="true" q-click="comic_tag_click(comics[2], tag)"> </div>
+        		<div class="quarter" queued="{{comics[3].thumb}}" q-fail="comic-fail.png" q-retry="true" q-click="comic_tag_click(comics[3], tag)"> </div>
+            </div>
+    	</div>
+    </div>
+</div>

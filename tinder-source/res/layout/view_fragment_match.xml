@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/relative" android:layout_width="fill_parent" android:layout_height="@dimen/match_frag_header_height" android:layout_alignParentTop="true">
+        <View android:id="@id/ab_divider" android:visibility="visible" android:layout_alignParentBottom="true" style="@style/ab_divider" />
+        <View android:id="@id/underline" android:background="@drawable/ab_underline_line" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/tab_underline_thickness" android:layout_alignLeft="@id/txt_messages" android:layout_alignParentBottom="true" />
+        <ImageView android:id="@id/img_back" android:layout_width="wrap_content" android:layout_height="@dimen/ab_icon_length" android:layout_marginLeft="@dimen/margin_xsmall" android:layout_marginRight="@dimen/margin_xsmall" android:src="@drawable/selector_actionbar_back" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <com.tinder.views.RoundImageView android:id="@id/img_avatar" android:layout_width="@dimen/match_frag_avatar_length" android:layout_height="@dimen/match_frag_avatar_length" android:layout_toRightOf="@id/img_back" android:layout_centerVertical="true" app:defaultStyle="circle" />
+        <com.tinder.views.CustomTextView android:textSize="@dimen/match_frag_name_text_size" android:textColor="@color/ab_text_color" android:id="@id/txt_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_small" android:layout_marginTop="@dimen/margin_xxsmall" android:layout_toRightOf="@id/img_avatar" android:layout_alignParentTop="true" app:font="semi_bold" />
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/img_overflow" android:layout_toRightOf="@id/txt_name" android:layout_alignTop="@id/txt_name" android:layout_alignBottom="@id/txt_name">
+            <com.tinder.views.BadgeView android:id="@id/verified_badge" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_margin="@dimen/margin_xsmall" android:adjustViewBounds="true" />
+        </FrameLayout>
+        <com.tinder.views.CustomTextView android:id="@id/txt_messages" android:layout_marginLeft="@dimen/margin_small" android:layout_marginRight="@dimen/margin_small" android:text="@string/messages" android:layout_toRightOf="@id/img_avatar" android:layout_alignParentBottom="true" app:font="semi_bold" style="@style/match_message_header_text" />
+        <com.tinder.views.CustomTextView android:id="@id/txt_about" android:text="@string/about" android:layout_toRightOf="@id/txt_messages" android:layout_alignParentBottom="true" app:font="semi_bold" style="@style/match_message_header_text" />
+        <ImageButton android:id="@id/img_overflow" android:background="@color/transparent" android:paddingLeft="@dimen/padding_med" android:paddingRight="@dimen/actionbar_paddingSide" android:layout_width="@dimen/ab_icon_length" android:layout_height="@dimen/ab_icon_length" android:src="@drawable/selector_ab_overflow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ProgressBar android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <android.support.v4.view.ViewPager android:id="@id/pager_match" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/relative" />
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/setting_classify_title_height" android:text="@string/setting_response" style="@style/setting_classify_title_style" />
+    <include android:visibility="gone" layout="@layout/common_classify_divider_layout" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/clock_layout" android:background="@drawable/settings_item_selector" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/setting_item_height">
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/setting_tap_clock" style="@style/setting_item_title_style" />
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:id="@id/clock_text" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/widget_clock_calendaer_default" android:singleLine="true" android:drawableRight="@drawable/settings_more_icon" android:drawablePadding="@dimen/setting_item_value_drawable_padding" android:layout_weight="1.0" style="@style/setting_item_value_style" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/calendar_layout" android:background="@drawable/settings_item_selector" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/setting_item_height">
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/setting_tap_calendar" style="@style/setting_item_title_style" />
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:id="@id/calendar_text" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/widget_clock_calendaer_default" android:singleLine="true" android:drawableRight="@drawable/settings_more_icon" android:drawablePadding="@dimen/setting_item_value_drawable_padding" android:layout_weight="1.0" style="@style/setting_item_value_style" />
+    </LinearLayout>
+    <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/setting_classify_title_height" android:text="@string/setting_42" style="@style/setting_classify_title_style" />
+    <include layout="@layout/common_classify_divider_layout" />
+    <RelativeLayout android:id="@id/lunar_display_layout" android:background="@drawable/settings_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/setting_item_height" android:baselineAligned="false">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="60.0dip">
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/show_lunar" style="@style/setting_item_title_style" />
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/show_lunar_summary" style="@style/setting_item_tip_style" />
+        </LinearLayout>
+        <CheckBox android:id="@id/lunar_display_checkbox" android:background="@drawable/common_checkbox_selector" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:button="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/vacation_layout" android:background="@drawable/settings_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/setting_item_height">
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/show_vacation" style="@style/setting_item_title_style" />
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:id="@id/vacation_text" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:drawableRight="@drawable/settings_more_icon" android:drawablePadding="@dimen/setting_item_value_drawable_padding" android:layout_weight="1.0" style="@style/setting_item_value_style" />
+    </LinearLayout>
+    <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/setting_classify_title_height" android:text="@string/go_widget_setting" style="@style/setting_classify_title_style" />
+    <include android:visibility="gone" layout="@layout/common_classify_divider_layout" />
+    <RelativeLayout android:id="@id/cycle_mode_layout" android:background="@drawable/settings_item_selector" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/setting_item_height">
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="60.0dip" android:text="@string/setting_city_circularly" style="@style/setting_item_title_style" />
+        <CheckBox android:id="@id/cycle_mode_switchview" android:background="@drawable/common_checkbox_selector" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:button="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/dynamic_icon_layout" android:background="@drawable/settings_item_selector" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/setting_item_height" android:baselineAligned="false">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dynamic_icon" style="@style/setting_item_title_style" />
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dynamic_icon_summary" style="@style/setting_item_tip_style" />
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="right|center" android:id="@id/dynamic_icon_lock" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_lock_icon" android:contentDescription="@null" />
+            <CheckBox android:layout_gravity="right|center" android:id="@id/dynamic_icon_switchview" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:button="@drawable/common_checkbox_selector" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/prompting_system_widget" android:drawableLeft="@drawable/common_tip_point_icon" android:drawablePadding="10.0dip" style="@style/setting_item_tip_style" />
+</merge>

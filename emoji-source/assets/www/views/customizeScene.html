@@ -1,0 +1,69 @@
+<nav class="top-bar fixed-header" id="header">
+    <a id="back_button" class="back" ng-click="back()"><i class="icon-chevron-left"></i></a>
+    <h1>Customize Scene</h1>
+    <i class="icon-check right-btn btn-customize-ok" ng-show="canvasIsLoaded" ng-click="goToShare()"></i>
+</nav>
+
+<div data-top-section class="clearfix">
+    <div class="canvas-wrapper">
+        <div class="canvas-container">
+            <canvas class="canvas" id="canvas" width="896" height="656"></canvas>
+            <textarea
+                id="bubble-textarea"
+                maxlength="140"
+                ng-show="editMode"
+                dynamic-size
+                handle-textarea-clicks
+                canvas-width="896"
+                placeholder="Type here"
+                class="pretend-bubble"
+                ng-model="textBubbleValue"
+                ng-keypress="textKeypress($event)"
+                ng-blur="setEditMode(0)"
+                ng-change="applyTextFromUser(textBubbleValue)">
+            </textarea>
+        </div>
+    </div>
+
+    <div class="caption-textarea">
+        <caption-textarea-input></caption-textarea-input>
+    </div>
+</div>
+
+<div class="control-panel">
+    <div class="control-panel-tabs">
+        <div class="tab bubble" ng-class="{active: bubbleTab && activeCostar == 1}" ng-click="changeControlsTab('bubbleTab', 1)"><i class="icon-comment"></i></div>
+        <div class="tab emotion" ng-class="{active: emotionTab && activeCostar == 1}" ng-click="changeControlsTab('emotionTab', 1)"><i class="icon-mood"></i></div>
+        <div class="tab swap" ng-click="swapUsers()" ng-if="hasCostar">
+            <img ng-src="{{comic.user_a.thumb}}" width="50" class="swap-thumb">
+            <span class="swap-icon">
+                <i class="icon icon-swap"></i>
+            </span>
+            <img ng-src="{{comic.user_b.thumb}}" width="50" class="swap-thumb">
+        </div>
+        <div class="tab emotion" ng-if="hasCostar" ng-class="{active: emotionTab && activeCostar == 2}" ng-click="changeControlsTab('emotionTab', 2)"><i class="icon-mood"></i></div>
+        <div class="tab bubble" ng-if="hasCostar" ng-class="{active: bubbleTab && activeCostar == 2}" ng-click="changeControlsTab('bubbleTab', 2)"><i class="icon-comment"></i></div>
+    </div><!--// .control-panel-tabs -->
+
+    <div class="control-panel-inner">
+        <div class="bubble-controls" dynamic-emo-container ng-show="bubbleTab">
+            <div ng-show="!activeCostarHasTextBubble()">
+                <a ng-click="addText(activeCostar)"><i class="icon-bubble-add"></i> Add bubble</a>
+            </div>
+
+            <div class="clearfix" ng-show="activeCostarHasTextBubble()">
+                <a class="bubble-edit" ng-click="addText(activeCostar)"><i class="icon-bubble-edit"></i> Modify</a>
+                <a class="bubble-remove" ng-click="removeTextBubble(activeCostar)"><i class="icon-bubble-remove"></i> Remove</a>
+            </div>
+        </div>
+
+        <div class="emotion-controls clearfix" dynamic-emo-container ng-show="emotionTab">
+            <div class="emo-wrapper clearfix">
+                <div ng-repeat="emo in emosArray" class="emotion" ng-click="changeActiveEmo($index)">
+                    <img ng-src="{{emo}}">
+                    <img src="images/emos/active.png" ng-show="isActiveEmo($index)" class="active-element">
+                </div>
+            </div>
+        </div>
+    </div><!--// .control-panel-inner -->
+</div><!--// .control-panel -->

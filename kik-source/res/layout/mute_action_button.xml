@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/mute_cell" android:background="@xml/settings_item_selector" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/chat_info_button_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/chat_info_divider_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:orientation="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="@dimen/chat_info_button_height">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/chat_info_mute_icon" android:duplicateParentState="true" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@xml/chat_big_mute_icon_off_selector" android:scaleType="centerInside" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingBottom="1.0dip" android:clickable="true" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="32.0dip" android:layout_marginRight="27.0dip">
+            <kik.android.widget.RobotoTextView android:textSize="16.0sp" android:textColor="@xml/chat_info_black_text_selector" android:id="@id/mute_primary" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activity_conversations_mute_chat" />
+            <kik.android.widget.RobotoTextView android:textSize="14.0sp" android:textColor="@xml/chat_info_grey_text_selector" android:id="@id/mute_secondary" android:paddingBottom="3.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" />
+        </LinearLayout>
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <CheckBox android:layout_gravity="center_vertical" android:id="@id/mute_conversation_checkbox" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" />
+    </LinearLayout>
+</LinearLayout>

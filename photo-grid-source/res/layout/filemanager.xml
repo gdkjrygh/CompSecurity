@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/bg_titlebar_black" android:layout_width="fill_parent" android:layout_height="@dimen/savePath_title_height">
+        <ImageButton android:id="@id/filemanager_back" android:background="@drawable/filemanager_btn_back" android:layout_width="@dimen/savePath_title_height" android:layout_height="fill_parent" android:src="@drawable/icon_cancel" />
+        <ImageButton android:id="@id/filemanager_ok" android:background="@drawable/filemanager_btn_ok" android:layout_width="@dimen/savePath_title_height" android:layout_height="fill_parent" android:src="@drawable/icon_confirm" android:layout_alignParentRight="true" />
+        <ScrollView android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_toLeftOf="@id/filemanager_ok" android:layout_toRightOf="@id/filemanager_back">
+            <TextView android:textSize="@dimen/filemanager_textsize" android:ellipsize="middle" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/mPath" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </ScrollView>
+    </RelativeLayout>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/line_splite" />
+</LinearLayout>

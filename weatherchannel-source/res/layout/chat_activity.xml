@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.weather.beacons.view.RelativeLayoutWithEntryBeacon android:id="@id/chatActivityContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" beacon:entry_beacon="@string/beacon_photo_checkin_displayed"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:beacon="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/overlay" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.weather.commons.ui.SquarePhotoView android:id="@id/photo" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include layout="@layout/chat_overlay1" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/overlay">
+        <LinearLayout android:orientation="horizontal" android:id="@id/imageControls" android:background="@color/chat_image_tank_background_color" android:layout_width="fill_parent" android:layout_height="0.0dip" android:baselineAligned="false" android:divider="@drawable/vertical_white_alpha_line" android:layout_weight="1.0" android:showDividers="middle" android:dividerPadding="15.0dip">
+            <FrameLayout android:id="@id/retakeButton" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center" android:id="@id/retake" android:layout_width="@dimen/chat_retake_icon_width" android:layout_height="@dimen/chat_retake_icon_height" android:src="@drawable/concord_retake" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/textButton" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center" android:id="@id/text" android:layout_width="@dimen/chat_text_icon_size" android:layout_height="@dimen/chat_text_icon_size" android:src="@drawable/concord_text_on" />
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/shareControls" android:background="@color/chat_share_tank_background_color" android:layout_width="fill_parent" android:layout_height="0.0dip" android:baselineAligned="false" android:divider="@drawable/vertical_grey_line" android:layout_weight="2.0" android:showDividers="middle" android:dividerPadding="15.0dip">
+            <FrameLayout android:id="@id/messengerButton" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <FrameLayout android:layout_gravity="center" android:id="@id/messenger_send_button" android:background="@drawable/messenger_button_blue_bg_round" android:clickable="true" android:layout_width="@dimen/fbm_share_icon_width" android:layout_height="@dimen/fbm_share_icon_height" android:layout_marginTop="@dimen/fbm_share_icon_top_margin" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/facebookButton" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/facebook" android:src="@drawable/concord_facebook" style="@style/chatShareIconStyle" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/shareButton" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/share" android:src="@drawable/concord_share" style="@style/chatShareIconStyle" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.weather.beacons.view.RelativeLayoutWithEntryBeacon>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="@dimen/size_5_5x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+        <com.skype.android.widget.SymbolView android:id="@id/edit_mode_bar_left_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/size_1x" app:symbol_code="ChevronLeft" style="@style/EditModeBarSymbol" />
+        <TextView android:textSize="@dimen/font_small_medium" android:textColor="@color/text_secondary" android:gravity="center" android:id="@id/edit_mode_bar_selected_count" android:layout_width="@dimen/size_5x" android:layout_height="wrap_content" android:layout_marginRight="@dimen/size_0_5x" android:contentDescription="@string/acc_selected_items" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@id/edit_mode_bar_buttons_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <com.skype.android.widget.SymbolView android:id="@id/edit_mode_bar_saveSOnumber_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:symbol_code="LandlineAdd" style="@style/EditModeBarBtn" />
+        <com.skype.android.widget.SymbolView android:id="@id/edit_mode_bar_read_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:symbol_code="MessageRead" style="@style/EditModeBarBtn" />
+        <com.skype.android.widget.SymbolView android:id="@id/edit_mode_bar_delete_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:symbol_code="Delete" style="@style/EditModeBarBtn" />
+        <com.skype.android.widget.SymbolView android:id="@id/edit_mode_bar_mute_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" app:symbol_code="AlertOffStatus" style="@style/EditModeBarBtn" />
+        <com.skype.android.widget.SymbolView android:id="@id/edit_mode_bar_unmute_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:symbol_code="Alert" style="@style/EditModeBarBtn" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/news_article_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/news_viewpager_default_margin" />
+        <RelativeLayout android:id="@id/news_next_article_image_layout" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="@dimen/news_next_image_article_height">
+            <ImageView android:id="@id/news_next_article_main_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_centerHorizontal="true" android:contentDescription="@string/content_description" android:alpha="0.4" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/text_size_small" android:textColor="@android:color/white" android:id="@id/news_next_article_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/next_article" android:layout_centerVertical="true" android:alpha="0.4" weather:font="Roboto-Regular.ttf" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/news_viewpager_title_text_size" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/news_next_article_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/news_preview_text_margin" android:layout_marginTop="@dimen/news_preview_text_vertical_padding" android:layout_marginRight="@dimen/news_preview_text_margin" android:maxLines="3" android:layout_below="@id/news_next_article_text" weather:font="Roboto-Regular.ttf" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

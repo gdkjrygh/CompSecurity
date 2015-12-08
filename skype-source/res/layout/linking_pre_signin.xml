@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/skype_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/sign_in_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/linking_pre_signin_top" style="@style/SigninContent">
+        <include android:id="@id/sign_in_header" style="@style/SignInHeaderVisibility" layout="@layout/linking_sign_in_header" />
+        <com.skype.android.widget.AccessibleAutoCompleteTextView android:id="@id/signin_skypename" android:visibility="gone" android:nextFocusDown="@id/signin_password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/header_skypename" android:inputType="textVisiblePassword|textNoSuggestions" android:contentDescription="@string/message_signing_in_enter_skypename" style="@style/SigninInputField" />
+        <com.skype.android.widget.FocusableEditText android:id="@id/signin_password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/text_hint_password" android:inputType="textPassword" android:contentDescription="@string/message_signing_in_enter_password" style="@style/SigninInputField" />
+        <com.skype.android.widget.SymbolView android:id="@id/sign_in_btn" android:nextFocusDown="@id/create_acct_btn" android:layout_centerHorizontal="true" android:contentDescription="@string/label_next" app:symbol_code="Right" app:symbolBackground="@color/button_bg_on_blue_positive_idle" app:symbolCircleBackground="true" style="@style/SignInPageNextButton" />
+        <Button android:gravity="center" android:id="@id/sign_in_problems" android:background="@drawable/focus_highlight" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_problems_signing_in" style="@style/SignInStandardText" />
+    </LinearLayout>
+</ScrollView>

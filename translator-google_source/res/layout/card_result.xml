@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_result_card" android:addStatesFromChildren="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:minHeight="@dimen/result_card_height_min" style="@style/CardSpacing"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/speaker_view_wrapper" android:duplicateParentState="false" android:layout_width="fill_parent" android:layout_height="@dimen/default_touch_target">
+        <LinearLayout android:orientation="horizontal" android:id="@id/speaker_lang_touch_wrapper" android:background="@drawable/bg_clickable_blue" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/start_card_padding">
+            <com.google.android.apps.translate.widget.SpeakerView android:id="@id/speaker_view" android:paddingRight="@dimen/result_speaker_spacing" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" ns:whitetheme="true" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/result_text" android:gravity="center_vertical" android:id="@id/txt_lang" android:paddingRight="@dimen/result_speaker_spacing" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0" android:textAllCaps="true" />
+        </LinearLayout>
+        <com.google.android.apps.translate.widget.StarButton android:id="@id/btn_star" android:background="@android:color/transparent" android:layout_width="@dimen/default_touch_target" android:layout_height="@dimen/default_touch_target" android:src="@drawable/ic_star_white" />
+    </LinearLayout>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/result_text" android:id="@android:id/text1" android:paddingLeft="@dimen/card_padding" android:paddingRight="@dimen/card_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="true" />
+    <TextView android:textColor="@color/result_text" android:id="@id/txt_transliteration" android:paddingLeft="@dimen/card_padding" android:paddingRight="@dimen/card_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:textIsSelectable="true" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/indicator_text" android:layout_gravity="bottom" android:id="@id/ind_offline" android:paddingBottom="@dimen/card_padding" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_offline" android:layout_weight="1.0" android:textIsSelectable="false" style="@style/offline_indicator" />
+        <ImageView android:id="@id/copy_text" android:background="@drawable/bg_clickable_blue" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_content_copy_white_24dp" android:contentDescription="@string/label_copy" />
+        <ImageView android:id="@id/menu_overflow" android:background="@drawable/bg_clickable_blue" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_more_vert_white_24" android:contentDescription="@string/label_more_options" />
+    </LinearLayout>
+</LinearLayout>

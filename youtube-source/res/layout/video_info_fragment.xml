@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <include layout="@layout/set_bar" />
+    <com.google.android.apps.youtube.app.ui.SliderLayout android:orientation="vertical" android:id="@id/set_content_slider" android:layout_width="fill_parent" android:layout_height="fill_parent" yt:orientation="vertical" yt:collapseStrategy0="occlude" yt:collapseStrategy1="displace">
+        <LinearLayout android:orientation="vertical" android:id="@id/set_content" android:background="#ff222222" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.apps.youtube.app.ui.LoadingFrameLayout android:id="@id/video_info_loading_layout" android:background="@color/primary_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:id="@id/watch_list" android:background="@color/primary_background" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@color/primary_background" android:divider="@null" android:dividerHeight="0.0dip" android:smoothScrollbar="false" />
+        </com.google.android.apps.youtube.app.ui.LoadingFrameLayout>
+    </com.google.android.apps.youtube.app.ui.SliderLayout>
+</LinearLayout>

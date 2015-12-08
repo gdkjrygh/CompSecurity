@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/account_header" android:background="@drawable/account_header" android:paddingLeft="24.0dip" android:paddingTop="96.0dip" android:paddingRight="24.0dip" android:paddingBottom="12.0dip" android:layout_height="wrap_content" style="@style/AccountPickerWidth">
+            <TextView android:textColor="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="4.0dip" android:text="@string/photos_onboarding_sign_in_title" style="@style/quantum_text_display_1_white" />
+            <TextView android:textColor="@color/quantum_googblue100" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photos_onboarding_to_setup_your_device" style="@style/quantum_text_subhead_white" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_height="wrap_content" style="@style/AccountPickerWidth">
+            <TextView android:textColor="@color/quantum_black_secondary_text" android:paddingLeft="24.0dip" android:paddingTop="28.0dip" android:paddingRight="24.0dip" android:paddingBottom="36.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/photos_onboarding_sign_in_content" style="@style/quantum_text_body_1_black" />
+            <Button android:layout_gravity="center_horizontal" android:id="@id/sign_in_button" android:background="@drawable/blue_button" android:layout_width="250.0dip" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:text="@string/photos_onboarding_sign_in_button" style="@style/quantum_text_button_white" />
+            <Button android:layout_gravity="center_horizontal" android:id="@id/dont_sign_in_button" android:background="@drawable/white_button" android:layout_width="250.0dip" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:text="@string/photos_onboarding_no_thanks" style="@style/quantum_text_button_black" />
+        </LinearLayout>
+    </LinearLayout>
+    <include android:id="@id/onboarding_sign_in_processing" layout="@layout/onboarding_processing" />
+</FrameLayout>

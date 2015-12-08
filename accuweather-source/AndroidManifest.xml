@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.accuweather.android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <permission android:name="com.accuweather.android.permission.UA_DATA" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.accuweather.android.permission.UA_DATA"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.accuweather.android.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.accuweather.android.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-feature android:glEsVersion="0x20000" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="true"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <application android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:logo="@drawable/ic_actionbar_sun" android:name="com.accuweather.android.PushApplication" android:theme="@style/Theme.AccuWeather.Light.DarkActionBar">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:name="com.accuweather.android.services.WearablesServiceExtended">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.accuweather.android.services.WearablesBroadcastReceiver"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.LauncherActivity" android:theme="@style/Theme.AccuWeather.Dark.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:launchMode="singleTask" android:name="com.accuweather.android.TermsAndConditionsActivity" android:theme="@style/Theme.AccuWeather.Dark.NoActionBar"/>
+        <activity android:label="@string/app_name" android:launchMode="singleTask" android:name="com.accuweather.android.MainActivity" android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:hardwareAccelerated="false" android:label="@string/app_name" android:name="com.accuweather.android.DailyActivity"/>
+        <activity android:hardwareAccelerated="false" android:label="@string/app_name" android:name="com.accuweather.android.HourlyActivity"/>
+        <activity android:label="@string/app_name" android:launchMode="singleTask" android:name="com.accuweather.android.tablet.TabletActivity" android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.tablet.HourlyTabletActivity" android:theme="@style/Theme.AccuWeather.Light.DarkActionBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.tablet.DailyTabletActivity" android:theme="@style/Theme.AccuWeather.Light.DarkActionBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:hardwareAccelerated="false" android:label="@string/app_name" android:name="com.accuweather.android.tablet.NewsTabletActivity" android:theme="@style/Theme.AccuWeather.Light.DarkActionBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.ProxyActivity" android:theme="@style/Theme.AccuWeather.Dark.NoActionBar"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.DailyProxyActivity" android:theme="@style/Theme.AccuWeather.Dark.NoActionBar"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.WhatsNewActivity1"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.WhatsNewActivity2"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.QuickSetupActivity"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.LocationActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/app_name" android:name="com.accuweather.android.LoadingScreenActivity">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:host="accuweather.com" android:path="/homescreen" android:scheme="http"/>
+                <data android:host="accuweather.com" android:path="/dailyforecastscreen" android:scheme="http"/>
+                <data android:host="accuweather.com" android:path="/hourlyforecastscreen" android:scheme="http"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/app_name" android:name="com.accuweather.android.VideoDetailsActivity" android:screenOrientation="landscape"/>
+        <activity android:hardwareAccelerated="false" android:label="@string/app_name" android:name="com.accuweather.android.NewsDetailsActivity"/>
+        <activity android:configChanges="orientation" android:label="@string/app_name" android:name="com.accuweather.android.maps.NativeMapActivity" android:theme="@style/Theme.AccuWeather.Light.DarkActionBar"/>
+        <activity android:configChanges="orientation" android:label="@string/app_name" android:name="com.accuweather.android.maps.WebViewMapActivity" android:theme="@style/Theme.AccuWeather.Light.DarkActionBar"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.preferences.SettingsActivity" android:theme="@style/Theme.AccuWeather.Light.DarkActionBar"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.preferences.OtherLegalNoticesActivity" android:theme="@style/Theme.AccuWeather.Light.DarkActionBar"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.preferences.AdvancedSettingsActivity" android:theme="@style/Theme.AccuWeather.Light.DarkActionBar"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.preferences.NotificationsSettingsActivity" android:theme="@style/Theme.AccuWeather.Light.DarkActionBar"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.preferences.TermsOfUseActivity" android:theme="@style/Theme.AccuWeather.Light.DarkActionBar"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.WebViewActivity" android:theme="@style/Theme.AccuWeather.Light.DarkActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.accuweather.android.EmailAccuwx" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.AlertsViewActivity" android:theme="@style/Theme.AccuWeather.Light.DarkActionBar"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.widgets.WidgetTermsAndConditionsActivity"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.widgets.WidgetWhatsNewActivity"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.widgets.WidgetQuickSetupActivity"/>
+        <activity android:label="@string/app_name" android:name="com.accuweather.android.minutecast.MinuteCastActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AccuWeather.Light.DarkActionBar" android:windowSoftInputMode="adjustNothing|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.accuweather.android.widgets.AL_WidgetConfigurationActivityFollowMe" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="accuwx.intent.action.TOGGLE_VIEW"/>
+                <action android:name="accuwx.intent.action.UPDATE_METRIC"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.accuweather.android.widgets.HoloDark_WidgetConfigurationActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="accuwx.intent.action.TOGGLE_VIEW"/>
+                <action android:name="accuwx.intent.action.UPDATE_METRIC"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.accuweather.android.widgets.HoloLight_WidgetConfigurationActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="accuwx.intent.action.TOGGLE_VIEW"/>
+                <action android:name="accuwx.intent.action.UPDATE_METRIC"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.google.analytics.tracking.android.CampaignTrackingService"/>
+        <receiver android:exported="true" android:name="com.appattach.tracking.appAttachReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+            <meta-data android:name="forward" android:value="com.accuweather.android.services.ReferrerReceiver,com.google.analytics.tracking.android.CampaignTrackingReceiver"/>
+        </receiver>
+        <receiver android:label="@string/AccuWeatherHoloDark" android:name="com.accuweather.android.widgets.WidgetProviderHoloDark">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.accuweather.android.action.ADVANCE_LOCATION_DARK"/>
+                <action android:name="accuwx.intent.action.UPDATE_METRIC"/>
+                <action android:name="accuwx.intent.action.UPDATE_WIDGET_DATA"/>
+                <action android:name="accuwx.intent.action.DELETE_LOCATION"/>
+                <action android:name="com.accuweather.android.action.CURRENT_LOCATION_CHANGED"/>
+                <action android:name="accuwx.intent.action.ADD_WIDGET_LOCATION"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_resizable_holo_dark"/>
+        </receiver>
+        <service android:name="com.accuweather.android.widgets.WidgetProviderHoloDark$UpdateService"/>
+        <service android:name="com.accuweather.android.services.ImageFileDownloadService"/>
+        <receiver android:label="@string/AccuWeatherHoloLight" android:name="com.accuweather.android.widgets.WidgetProviderHoloLight">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.accuweather.android.action.ADVANCE_LOCATION_LIGHT"/>
+                <action android:name="accuwx.intent.action.UPDATE_METRIC"/>
+                <action android:name="accuwx.intent.action.UPDATE_WIDGET_DATA"/>
+                <action android:name="accuwx.intent.action.DELETE_LOCATION"/>
+                <action android:name="com.accuweather.android.action.CURRENT_LOCATION_CHANGED"/>
+                <action android:name="accuwx.intent.action.ADD_WIDGET_LOCATION"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_resizable_holo_light"/>
+        </receiver>
+        <service android:name="com.accuweather.android.widgets.WidgetProviderHoloLight$UpdateService"/>
+        <receiver android:label="@string/AccuWeatherClock" android:name="com.accuweather.android.widgets.AL_WidgetProviderFollowMe">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.accuweather.android.widget.CLOCK_WIDGET_UPDATE"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="accuwx.intent.action.UPDATE_METRIC"/>
+                <action android:name="accuwx.intent.action.DELETE_LOCATION"/>
+                <action android:name="com.accuweather.android.action.GET_FULL_APP"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="accuwx.intent.action.UPDATE_WIDGET_DATA"/>
+                <action android:name="android.location.PROVIDERS_CHANGED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/follow_me_widget_4x2"/>
+        </receiver>
+        <service android:name="com.accuweather.android.widgets.AL_WidgetUpdateService"/>
+        <service android:name="com.accuweather.android.notifications.NotificationService"/>
+        <receiver android:label="@string/app_name" android:name="com.accuweather.android.notifications.NotificationService$NotificationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="accuwx.intent.action.TOGGLE_VIEW"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="accuwx.intent.action.UPDATE_METRIC"/>
+                <action android:name="accuwx.intent.action.UPDATE_NOTIFICATION"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="accuwx.intent.action.REMOVE_NOTIFICATION"/>
+                <action android:name="accuwx.intent.action.DELETE_LOCATION"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.urbanairship.CoreActivity"/>
+        <activity android:name="com.urbanairship.actions.ActionActivity"/>
+        <receiver android:exported="false" android:name="com.urbanairship.CoreReceiver">
+            <intent-filter android:priority="-999">
+                <action android:name="com.urbanairship.push.OPENED"/>
+                <category android:name="com.accuweather.android"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.urbanairship.push.GCMPushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.accuweather.android"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <service android:label="Push Notification Service" android:name="com.urbanairship.push.PushService"/>
+        <service android:label="Event Service" android:name="com.urbanairship.analytics.EventService"/>
+        <provider android:authorities="com.accuweather.android.urbanairship.provider" android:exported="true" android:multiprocess="true" android:name="com.urbanairship.UrbanAirshipProvider" android:permission="com.accuweather.android.permission.UA_DATA"/>
+        <receiver android:name="com.accuweather.android.services.IntentReceiver">
+            <intent-filter>
+                <action android:name="com.accuweather.android.action.HOME_LOCATION_CHANGED"/>
+                <action android:name="com.urbanairship.push.CHANNEL_UPDATED"/>
+                <action android:name="com.urbanairship.push.OPENED"/>
+                <action android:name="com.urbanairship.push.RECEIVED"/>
+                <category android:name="com.accuweather.android"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.quantcast.measurement.service.QCReferrerReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.amobee.richmedia.view.Browser"/>
+        <activity android:name="com.amobee.richmedia.view.AmobeeActionHandler"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.millennialmedia.android.MMAdViewOverlayActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.millennialmedia.android.VideoPlayer"/>
+        <activity android:name="org.ormma.view.Browser"/>
+        <activity android:name="org.ormma.view.OrmmaActionHandler"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.google.android.gms.ads.AdActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:hardwareAccelerated="false" android:name="com.tremorvideo.sdk.android.videoad.Playvideo" android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="com.tremorvideo.sdk.android.videoad.Playvideo"/>
+                <category android:name="android.intent.category.EMBED"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDCuiquWbEAe6T5EoOgDFViIZ2WAs279hs"/>
+        <receiver android:label="@string/AccuWeatherNow" android:name="com.accuweather.android.widgets.minutecast.AL_WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.accuweather.android.widget.CLOCK_WIDGET_UPDATE"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="accuwx.intent.action.UPDATE_METRIC"/>
+                <action android:name="accuwx.intent.action.DELETE_LOCATION"/>
+                <action android:name="com.accuweather.android.action.GET_FULL_APP"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="accuwx.intent.action.UPDATE_WIDGET_DATA"/>
+                <action android:name="android.location.PROVIDERS_CHANGED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_4x2"/>
+        </receiver>
+        <service android:name="com.accuweather.android.widgets.minutecast.MCWidgetUpdateService"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.accuweather.android.widgets.minutecast.AL_WidgetConfigurationActivity" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="accuwx.intent.action.TOGGLE_VIEW"/>
+                <action android:name="accuwx.intent.action.UPDATE_METRIC"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.accuweather.android.services.GAWidgetReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="com.accuweather.android.widget.ga.reset"/>
+                <action android:name="com.accuweather.android.widget.ga.fire_beacon"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.accuweather.android.now.card.NowCardBroadcast">
+            <intent-filter>
+                <action android:name="com.accuweather.android.UPDATE_ACCUWEATHER_NOW_CARDS"/>
+                <action android:name="com.accuweather.android.CANCEL_UPDATE_ACCUWEATHER_NOW_CARDS"/>
+                <action android:name="com.accuweather.android.UPDATE_ACCUWEATHER_EVENING_NOW_CARDS"/>
+                <action android:name="com.accuweather.android.CANCEL_UPDATE_ACCUWEATHER_EVENING_NOW_CARDS"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.accuweather.android.now.card.NowCardOnBootUpReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="com.accuweather.android.RESTART_GOOGLE_NOW_ALARM"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.accuweather.android.now.card.NowCardService"/>
+        <meta-data android:name="com.google.android.wearable.beta.app" android:resource="@xml/android_wear_micro_apk"/>
+    </application>
+</manifest>

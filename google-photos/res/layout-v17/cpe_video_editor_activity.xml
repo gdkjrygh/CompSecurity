@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:support="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/cpe_content_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="top" android:id="@id/cpe_status_bar_space" android:background="@color/cpe_toolbar_background" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/cpe_video_toolbar_gradient" android:background="@drawable/cpe_video_trim_background" android:layout_width="fill_parent" android:layout_height="@dimen/cpe_video_editor_bottom_gradient_height" />
+            <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.google.android.apps.consumerphotoeditor.video.EditorVideoControllerView android:gravity="center" android:id="@id/cpe_player_controls" android:layout_width="fill_parent" android:layout_height="@dimen/cpe_video_controller_view_height" android:layout_marginStart="@dimen/cpe_editor_horizontal_padding" android:layout_marginEnd="@dimen/cpe_editor_horizontal_padding" />
+                <com.google.android.libraries.video.trim.VideoTrimView android:id="@id/cpe_video_trim" android:paddingLeft="@dimen/cpe_editor_horizontal_padding" android:paddingRight="@dimen/cpe_editor_horizontal_padding" android:layout_width="fill_parent" android:layout_height="@dimen/cpe_video_trim_view_height" support:alignBoundsToThumbnails="true" support:handleDrawable="@drawable/cpe_video_trim_handle" support:borderColor="@color/cpe_video_trim_fg_color" support:animateTrimHandles="true" support:snapTrimHandles="false" support:snapToFrames="key" />
+                <Space android:layout_width="fill_parent" android:layout_height="@dimen/cpe_video_editor_bottom_padding" />
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:id="@id/cpe_nav_bar_space" android:background="@color/cpe_toolbar_background" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+    </LinearLayout>
+</FrameLayout>

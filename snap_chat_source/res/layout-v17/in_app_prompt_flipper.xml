@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.snapchat.android.ui.InAppPromptFlipper android:id="@id/in_app_prompt_flipper" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_with_status_bar_height" android:layout_alignParentTop="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.snapchat.android.ui.InAppPromptView android:id="@id/notification_content" android:paddingTop="@dimen/system_status_bar_height" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/notification_icon" android:padding="6.0dip" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:layout_margin="@dimen/default_gap" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+            <TextView android:textColor="@color/white" android:id="@id/notification_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_toRightOf="@id/notification_icon" android:layout_centerVertical="true" android:layout_toEndOf="@id/notification_icon" style="@android:style/TextAppearance.Medium" />
+            <ImageView android:id="@id/back_button" android:layout_width="20.0dip" android:layout_height="18.0dip" android:src="@drawable/profile_back_button_selector" android:scaleType="centerInside" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:alpha="0.4" />
+        </RelativeLayout>
+    </com.snapchat.android.ui.InAppPromptView>
+    <View android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</com.snapchat.android.ui.InAppPromptFlipper>

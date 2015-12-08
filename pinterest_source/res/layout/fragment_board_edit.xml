@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/bg_grid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="@integer/width_weight_sum_base10">
+        <ScrollView android:layout_gravity="center_horizontal" android:id="@id/main_content" android:paddingTop="@dimen/actionbar_height" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="10.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:background="@drawable/card_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin">
+                    <RelativeLayout android:id="@id/name_bt" android:background="@drawable/touch_clear_bg" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+                        <TextView android:id="@id/name_title" android:text="@string/board_edit_name" style="@style/section_item_label" />
+                        <TextView android:ellipsize="end" android:gravity="right" android:id="@id/name_tv" android:maxLines="1" android:layout_toRightOf="@id/name_title" style="@style/section_item_meta" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/description_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+                        <TextView android:id="@id/description_title" android:text="@string/board_edit_description" style="@style/section_item_label" />
+                        <TextView android:ellipsize="end" android:gravity="right" android:id="@id/description_tv" android:maxLines="1" android:layout_toRightOf="@id/description_title" style="@style/section_item_meta" />
+                        <View style="@style/section_item_divider" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/cover_image_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+                        <TextView android:id="@id/cover_image_title" android:text="@string/board_edit_cover_image" style="@style/section_item_label" />
+                        <View style="@style/section_item_divider" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/category_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+                        <TextView android:id="@id/category_title" android:text="@string/board_change_category" style="@style/section_item_label" />
+                        <TextView android:ellipsize="end" android:gravity="right" android:id="@id/category_tv" android:maxLines="1" android:layout_toRightOf="@id/category_title" style="@style/section_item_meta" />
+                        <View style="@style/section_item_divider" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/change_privacy_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+                        <CheckedTextView android:id="@id/change_privacy_cb" android:background="@drawable/touch_clear_bg" android:text="@string/make_public" style="@style/section_item_checkbox" />
+                        <View style="@style/section_item_divider" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/show_map_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+                        <CheckedTextView android:id="@id/show_map_cb" android:background="@drawable/touch_clear_bg" android:text="@string/board_edit_map_option" style="@style/section_item_checkbox" />
+                        <View style="@style/section_item_divider" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/who_can_pin_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+                        <TextView android:text="@string/board_collaborators_short" style="@style/section_item_label" />
+                        <View android:id="@id/who_can_pin_line" style="@style/section_item_divider" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/allow_member_invite_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+                        <CheckedTextView android:id="@id/allow_member_invite_cb" android:background="@drawable/touch_clear_bg" android:checked="true" android:text="@string/allow_members_to_invite" style="@style/section_item_checkbox" />
+                        <View style="@style/section_item_divider" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/group_button_wrapper" android:background="@drawable/card_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin">
+                    <RelativeLayout android:id="@id/leave_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+                        <TextView android:text="@string/leave_board" style="@style/section_item_label" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/delete_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+                        <TextView android:text="@string/delete_board" style="@style/section_item_label" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <com.pinterest.ui.grid.AdapterFooterView android:id="@id/footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+</FrameLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root_view" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/bg" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.nirhart.parallaxscroll.views.ParallaxScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:parallax_factor="1.9" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout android:orientation="vertical" android:id="@id/detail_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/detail_image_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="0.0dip" android:layout_alignParentTop="true">
+                <ProgressBar android:id="@id/iconProgressBar" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_centerInParent="true" />
+                <ImageView android:id="@id/default_image" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/detail_image_default" android:scaleType="fitXY" android:adjustViewBounds="true" />
+                <com.android.volley.toolbox.NetworkImageView android:id="@id/detail_image" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="fitXY" android:adjustViewBounds="true" />
+                <ImageView android:id="@id/image_mask" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/tour_list_image_mask_white" />
+                <com.android.volley.toolbox.NetworkImageView android:id="@id/sponsor_image" android:paddingBottom="20.0dip" android:layout_width="90.0dip" android:layout_height="77.0dip" android:scaleType="centerInside" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/main_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-35.0dip">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <View android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="5.299988dip" android:layout_alignParentBottom="true" />
+                    <ImageView android:id="@id/btn_close" android:layout_width="60.0dip" android:layout_height="39.0dip" android:layout_marginLeft="20.0dip" android:src="@drawable/tour_detail_close" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:paddingLeft="@dimen/detail_text_padding_left" android:paddingRight="@dimen/detail_text_padding_right" android:paddingBottom="@dimen/detail_text_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-1.0dip">
+                    <TextView android:typeface="sans" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_small" android:text="title" style="@style/TourDetailTitle" />
+                    <TextView android:typeface="sans" android:layout_gravity="center" android:id="@id/address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="address" style="@style/TourDetailAddress" />
+                    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:layout_width="30.0dip" android:layout_height="30.0dip" />
+                        <TextView android:typeface="sans" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/TourDetailDescription" />
+                    </FrameLayout>
+                    <TextView android:typeface="sans" android:id="@id/stop_total" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_small" android:layout_marginBottom="@dimen/margin_small" style="@style/TourDetailDescription" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/tour_stops_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.nirhart.parallaxscroll.views.ParallaxScrollView>
+    <include android:id="@id/detail_nav_bar" layout="@layout/include_tour_detail_nav" />
+</RelativeLayout>

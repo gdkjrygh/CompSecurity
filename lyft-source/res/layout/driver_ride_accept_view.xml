@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.driver.DriverRideAcceptView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <me.lyft.android.ui.HeightObservableLayout android:orientation="vertical" android:id="@id/driver_ride_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <me.lyft.android.controls.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="100.0dip">
+                <LinearLayout android:gravity="center_vertical" android:background="@drawable/selectable_item" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:id="@id/dropoff_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/default_margin" android:src="@drawable/ic_driver_pin_pickup" />
+                    <RelativeLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                        <TextView android:textSize="@dimen/big_text_2" android:ellipsize="end" android:id="@id/incoming_request_address_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" style="@style/PrimaryText" />
+                        <TextView android:id="@id/incoming_request_eta_text_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/incoming_request_address_text_view" style="@style/PrimaryText" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View android:id="@id/top_vertical_divider" android:background="@drawable/vertical_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+                <TextView android:textSize="@dimen/big_text_headers" android:gravity="center" android:layout_gravity="center" android:id="@id/accept_countdown_txt" android:background="@drawable/selectable_item" android:layout_width="100.0dip" android:layout_height="fill_parent" style="@style/PrimaryText" />
+            </LinearLayout>
+        </me.lyft.android.ui.HeightObservableLayout>
+        <include android:id="@id/warning_fragment_placeholder" layout="@layout/warning" />
+        <RelativeLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <View android:background="@drawable/bg_top_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_alignParentTop="true" />
+            <View android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:background="@drawable/bg_footer_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <me.lyft.android.ui.HeightObservableLayout android:orientation="vertical" android:id="@id/driver_ride_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/prime_time_banner_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/span48">
+                <TextView android:textSize="@dimen/big_text_2" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/prime_time_banner_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_prime_time_light" android:drawablePadding="@dimen/span8" />
+            </FrameLayout>
+            <LinearLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <me.lyft.android.ui.UserImageView android:id="@id/incoming_request_passenger_photo_image_view" android:layout_width="112.0dip" android:layout_height="112.0dip" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/accept_ride_view" android:background="@drawable/btn_purple" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="112.0dip">
+                    <TextView android:id="@id/tap_to_accept_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/driver_ride_accept_ride_button_hint" style="@style/DriverAcceptRideButtonTextPrimary" />
+                    <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:id="@id/incoming_request_passenger_name_text_view" android:singleLine="true" style="@style/DriverAcceptRideButtonTextSecondary" />
+                        <ImageView android:layout_gravity="center_vertical" android:id="@id/star_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="4.0dip" android:src="@drawable/ic_inline_star" />
+                        <TextView android:id="@id/incoming_request_passenger_rating_text_view" android:singleLine="true" style="@style/DriverAcceptRideButtonTextSecondary" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </me.lyft.android.ui.HeightObservableLayout>
+    </LinearLayout>
+    <View android:id="@id/accept_view" android:background="@drawable/accept_ride_button" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <me.lyft.android.ui.tooltips.TooltipContainerView android:id="@id/tooltip_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</me.lyft.android.ui.driver.DriverRideAcceptView>

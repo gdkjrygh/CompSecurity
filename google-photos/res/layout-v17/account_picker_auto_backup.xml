@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/first_page" android:paddingBottom="16.0dip" android:layout_height="wrap_content" style="@style/AccountPickerWidth"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:paddingLeft="@dimen/account_picker_padding" android:paddingTop="28.0dip" android:paddingRight="@dimen/account_picker_padding" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/photos_onboarding_back_up_your_photos" style="@style/quantum_text_headline_black" />
+    <TextView android:textColor="@color/quantum_black_secondary_text" android:id="@id/back_up_your_photos_description" android:paddingLeft="@dimen/account_picker_padding" android:paddingRight="@dimen/account_picker_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/photos_onboarding_back_up_your_photos_description" style="@style/quantum_text_body_1_black" />
+    <TextView android:textColor="@color/quantum_black_secondary_text" android:id="@id/back_up_your_photos_help" android:paddingLeft="@dimen/account_picker_padding" android:paddingRight="@dimen/account_picker_padding" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/quantum_text_body_1_black" />
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/account_picker_padding_left" android:paddingRight="@dimen/account_picker_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingEnd="6.0dip">
+            <TextView android:paddingTop="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photos_onboarding_auto_backup" style="@style/quantum_text_subhead_black" />
+            <TextView android:textColor="@color/quantum_black_secondary_text" android:id="@id/use_google_account_text" android:paddingBottom="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/quantum_text_caption_black" />
+        </LinearLayout>
+        <Switch android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/auto_backup_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/use_cellular_data_option" android:paddingLeft="@dimen/account_picker_padding_left" android:paddingRight="@dimen/account_picker_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="12.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingEnd="6.0dip">
+            <TextView android:id="@id/use_cellular_data_label" android:paddingTop="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photos_onboarding_use_cellular_data_to_back_up" style="@style/quantum_text_subhead_black" />
+            <TextView android:textColor="@color/quantum_black_secondary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photos_onboarding_when_wifi_not_available" style="@style/quantum_text_caption_black" />
+        </LinearLayout>
+        <Switch android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/use_cellular_data_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" />
+    </LinearLayout>
+</LinearLayout>

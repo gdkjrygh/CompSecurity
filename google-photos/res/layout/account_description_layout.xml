@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="72.0dip">
+        <RelativeLayout android:id="@id/account_layout" android:background="@drawable/list_selector" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:id="@id/selected_account_bar" android:background="#ff4285f4" android:visibility="invisible" android:layout_width="3.0dip" android:layout_height="fill_parent" />
+            <com.google.android.libraries.social.avatars.ui.AvatarView android:id="@id/account_avatar" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="20.0dip" android:layout_centerVertical="true" shape="round" size="small" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_toRightOf="@id/account_avatar" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/text_size_16" android:textColor="@color/text_normal" android:ellipsize="end" android:id="@id/display_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+                <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/text_gray" android:ellipsize="end" android:id="@id/account_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</merge>

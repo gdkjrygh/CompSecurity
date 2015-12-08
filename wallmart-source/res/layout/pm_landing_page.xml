@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.walmart.android.ui.SafeScrollView android:background="@color/payment_background_default" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/pm_landing_no_cards" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/pm_landing_no_cards" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/pm_loaded_gift_card_list_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/payment_margin_small" android:layout_marginRight="@dimen/payment_margin_small">
+            <TextView android:layout_gravity="left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pm_loaded_gift_card_list_header" style="@style/Payment.ContentHeading" />
+            <TextView android:textColor="@color/text_light_grey" android:gravity="right" android:layout_gravity="right|center" android:id="@id/pm_loaded_gift_card_list_header_total" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Payment.ContentHeading" />
+        </LinearLayout>
+        <com.walmartlabs.ui.recycler.ListRecyclerView android:orientation="vertical" android:id="@id/pm_landing_gift_cards_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/payment_margin_small" android:layout_marginRight="@dimen/payment_margin_small" />
+        <TextView android:id="@id/pm_loaded_credit_card_list_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/payment_margin" android:layout_marginRight="@dimen/payment_margin" android:text="@string/pm_loaded_credit_card_list_header" style="@style/Payment.ContentHeading" />
+        <com.walmartlabs.ui.recycler.ListRecyclerView android:orientation="vertical" android:id="@id/pm_landing_credit_cards_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/payment_margin_small" android:layout_marginRight="@dimen/payment_margin_small" />
+        <include layout="@layout/pm_pay_settings_btn" />
+        <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <include layout="@layout/pm_apply_footer_mpay" />
+    </LinearLayout>
+</com.walmart.android.ui.SafeScrollView>

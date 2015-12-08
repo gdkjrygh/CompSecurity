@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/feed_tittle_view" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/feed_suggested_title_view" android:clickable="true" android:layout_width="fill_parent" android:layout_height="35.0dip">
+            <TextView android:gravity="left|center" android:id="@id/feed_follow_title_promoted" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:text="@string/cloud_follow_suggested" android:layout_weight="1.0" />
+            <ImageView android:id="@id/feed_follow_title_promoted_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:src="@drawable/cloudlib_icon_close_pressed" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/feed_follow_tittle_view" android:layout_width="fill_parent" android:layout_height="64.0dip">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="63.0dip">
+                <com.roidapp.baselib.view.RoundImageView android:id="@id/feed_follow_user_avatar" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="16.0dip" android:contentDescription="@null" />
+                <TextView android:textSize="@dimen/sns_username_textsize" android:textStyle="bold" android:textColor="@color/sns_username_textcolor" android:ellipsize="end" android:id="@id/feed_follow_user_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:maxLines="1" android:layout_weight="1.0" />
+                <RelativeLayout android:gravity="center" android:id="@id/feed_follow_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip">
+                    <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@id/feed_follow_text" android:background="@drawable/cloudlib_follow_bg" android:layout_width="86.0dip" android:layout_height="32.0dip" android:text="@string/cloud_follow" />
+                    <ProgressBar android:id="@id/feed_follow_progress" android:visibility="gone" android:layout_width="70.0dip" android:layout_height="30.0dip" android:layout_centerInParent="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <View android:background="@color/sns_split_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        </LinearLayout>
+        <View android:background="@color/sns_split_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/feed_image_thumbnail_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/feed_image_thumbnail_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:contentDescription="@null" />
+        <ImageView android:id="@id/feed_image_thumbnail_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:layout_toRightOf="@id/feed_image_thumbnail_1" android:contentDescription="@null" />
+        <ImageView android:id="@id/feed_image_thumbnail_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:layout_toRightOf="@id/feed_image_thumbnail_1" android:layout_below="@id/feed_image_thumbnail_2" android:contentDescription="@null" />
+    </RelativeLayout>
+    <View android:background="@color/sns_split_color" android:layout_width="fill_parent" android:layout_height="16.0dip" />
+</LinearLayout>

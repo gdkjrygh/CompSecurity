@@ -1,0 +1,11 @@
+<user-linkable user="comic.author">
+	{{user | displayName}}
+</user-linkable>
+bitstripped
+
+<span ng-repeat="costar in costars">
+	<user-linkable user="costar" context="{'author': comic.author}">
+		{{user | displayName:true:author}}
+	</user-linkable>
+	{{$last ? "" : "and"}}
+</span>

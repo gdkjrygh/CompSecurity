@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/active_speaker_call_tile" android:layout_width="wrap_content" android:layout_height="480.0px"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/call_tile" android:background="@color/black" android:layout_width="wrap_content" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/call_avatar_image" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/avatar_large_default_icon" android:scaleType="centerCrop" />
+        <com.skype.android.widget.SymbolView android:layout_gravity="right" android:id="@id/call_participant_symbol" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/InCallChatToastBig" />
+        <TextView android:textSize="@dimen/font_extra_small" android:layout_gravity="bottom" android:id="@id/call_participant_status_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:textIsSelectable="false" style="@style/InCallParticipantLabel" />
+    </FrameLayout>
+</RelativeLayout>

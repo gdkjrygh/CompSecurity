@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.roidapp.imagelib.retouch.BlemishImageView android:layout_gravity="center" android:id="@id/blemish_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/point_layout" />
+    <ImageView android:id="@id/btn_compare" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/roidapp_imagelib_compare_bg" android:layout_alignTop="@id/blemish_view" android:layout_alignParentRight="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/point_layout" android:background="@drawable/roidapp_imagelib_bg_popup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/line_weight1_layout" android:layout_width="fill_parent" android:layout_height="@dimen/grid_bottomBtn_height" android:layout_weight="1.0">
+                <CheckedTextView android:id="@id/line_weight_1" android:background="@drawable/roidapp_imagelib_ponit" android:layout_width="@dimen/blemish_point_size_1x" android:layout_height="@dimen/blemish_point_size_1x" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/line_weight2_layout" android:layout_width="fill_parent" android:layout_height="@dimen/grid_bottomBtn_height" android:layout_weight="1.0">
+                <CheckedTextView android:id="@id/line_weight_2" android:background="@drawable/roidapp_imagelib_ponit" android:layout_width="@dimen/blemish_point_size_2x" android:layout_height="@dimen/blemish_point_size_2x" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/line_weight3_layout" android:layout_width="fill_parent" android:layout_height="@dimen/grid_bottomBtn_height" android:layout_weight="1.0">
+                <CheckedTextView android:id="@id/line_weight_3" android:background="@drawable/roidapp_imagelib_ponit" android:layout_width="@dimen/blemish_point_size_3x" android:layout_height="@dimen/blemish_point_size_3x" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/line_weight4_layout" android:layout_width="fill_parent" android:layout_height="@dimen/grid_bottomBtn_height" android:layout_weight="1.0">
+                <CheckedTextView android:id="@id/line_weight_4" android:background="@drawable/roidapp_imagelib_ponit" android:layout_width="@dimen/blemish_point_size_4x" android:layout_height="@dimen/blemish_point_size_4x" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/line_weight5_layout" android:layout_width="fill_parent" android:layout_height="@dimen/grid_bottomBtn_height" android:layout_weight="1.0">
+                <CheckedTextView android:id="@id/line_weight_5" android:background="@drawable/roidapp_imagelib_ponit" android:layout_width="@dimen/blemish_point_size_5x" android:layout_height="@dimen/blemish_point_size_5x" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/roidapp_imagelib_retouch_magnifierlayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <com.roidapp.imagelib.retouch.Magnifier android:id="@id/roidapp_imagelib_retouch_magnifierview" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.driver.DriverRideIdleView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.ui.HeightObservableLayout android:orientation="vertical" android:id="@id/driver_ride_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <me.lyft.android.controls.MenuButtonToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include android:id="@id/heatmap_header" android:visibility="gone" layout="@layout/heatmap_header" />
+    </me.lyft.android.ui.HeightObservableLayout>
+    <include android:id="@id/warning_fragment_placeholder" layout="@layout/warning" />
+    <RelativeLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <View android:background="@drawable/bg_top_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_alignParentTop="true" />
+        <View android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <Button android:textSize="@dimen/text_16" android:textStyle="bold" android:layout_gravity="center" android:id="@id/driver_daily_total_button" android:paddingLeft="@dimen/span16" android:paddingRight="@dimen/span16" android:layout_width="wrap_content" android:layout_marginLeft="@dimen/span12" android:layout_marginBottom="@dimen/span12" android:includeFontPadding="false" android:drawableLeft="@drawable/ic_stats" android:drawablePadding="10.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" style="@style/DriverMapButton" />
+        <ImageButton android:id="@id/follow_current_location_button" android:layout_marginRight="@dimen/span12" android:layout_marginBottom="@dimen/span12" android:src="@drawable/btn_map_icon_selector" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/DriverMapButton" />
+        <View android:background="@drawable/bg_footer_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <me.lyft.android.ui.HeightObservableLayout android:orientation="vertical" android:id="@id/driver_ride_bottom" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</me.lyft.android.ui.driver.DriverRideIdleView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="top|right|center" android:id="@id/featured_channel_watermark" android:layout_width="@dimen/annotation_featured_channel_width" android:layout_height="@dimen/annotation_featured_channel_width" android:layout_margin="12.0dip" android:scaleType="centerInside" android:alpha="0.7" />
+    <FrameLayout android:layout_gravity="top|left|center" android:id="@id/info_card_teaser" android:padding="10.0dip" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <FrameLayout android:layout_gravity="top|left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="3.0dip">
+            <LinearLayout android:layout_gravity="top|left|center" android:orientation="horizontal" android:id="@id/info_card_teaser_content" android:background="@color/annotation_background" android:layout_width="wrap_content" android:layout_height="30.0dip">
+                <View android:layout_width="15.0dip" android:layout_height="fill_parent" />
+                <TextView android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/info_card_teaser_meassage" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                <ImageView android:id="@id/info_card_teaser_icon" android:layout_width="30.0dip" android:layout_height="30.0dip" android:scaleType="fitCenter" />
+            </LinearLayout>
+        </FrameLayout>
+        <ImageView android:layout_gravity="top|left|center" android:id="@id/info_cards_teaser_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.0dip" android:src="@drawable/info_card_icon" android:scaleType="center" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/featured_video" android:layout_width="fill_parent" android:layout_height="@dimen/annotation_banner_height" style="@style/AnnotationBanner">
+        <ImageView android:id="@id/featured_video_thumbnail" android:layout_width="86.0dip" android:layout_height="48.0dip" android:layout_marginLeft="4.0dip" style="@style/AnnotationBannerThumbnailImage" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/AnnotationBannerTextContent">
+            <TextView android:id="@id/featured_video_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/watch_next" style="@style/AnnotationBannerDescriptionText" />
+            <TextView android:id="@id/featured_video_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AnnotationBannerTitleText" />
+        </LinearLayout>
+        <ImageButton android:id="@id/featured_video_dismiss" android:layout_width="@dimen/annotation_banner_icon_width" android:layout_height="fill_parent" android:src="@drawable/ic_annotation_close" style="@style/AnnotationBannerIcon" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/call_to_action_expanded" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AnnotationBanner">
+        <ImageView android:id="@id/call_to_action_thumbnail" android:layout_width="@dimen/annotation_banner_cta_height" android:layout_height="@dimen/annotation_banner_cta_height" style="@style/AnnotationBannerThumbnailImage" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/AnnotationBannerTextContent">
+            <TextView android:id="@id/call_to_action_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AnnotationBannerTitleText" />
+            <TextView android:id="@id/call_to_action_description" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AnnotationBannerDescriptionText" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="center" android:layout_width="@dimen/annotation_banner_icon_width" android:layout_height="@dimen/annotation_banner_icon_width" android:src="@drawable/ic_annotation_external_link" style="@style/AnnotationBannerIcon" />
+        <ImageView android:id="@id/annotation_seprator" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/annotation_seperator_line" />
+        <ImageButton android:layout_gravity="center" android:id="@id/call_to_action_dismiss" android:layout_width="@dimen/annotation_banner_icon_width" android:layout_height="@dimen/annotation_banner_icon_width" android:src="@drawable/ic_annotation_close" style="@style/AnnotationBannerIcon" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/call_to_action_collapsed" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AnnotationBanner">
+        <ImageView android:id="@id/call_to_action_thumbnail" android:layout_width="@dimen/annotation_banner_cta_height" android:layout_height="@dimen/annotation_banner_cta_height" style="@style/AnnotationBannerThumbnailImage" />
+        <ImageView android:id="@id/call_to_action_expand_arrow" android:background="@null" android:layout_width="16.0dip" android:layout_height="@dimen/annotation_banner_cta_height" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_annotation_expand_right" android:scaleType="centerInside" />
+    </LinearLayout>
+</FrameLayout>

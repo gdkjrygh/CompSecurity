@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="?android:actionBarSize" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/id_buttonlayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="5.0">
+            <com.kohls.mcommerce.opal.framework.view.component.views.GothamButton android:textSize="17.0sp" android:ellipsize="end" android:id="@id/id_left" android:background="@android:color/transparent" android:paddingLeft="3.0dip" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:drawableLeft="@drawable/back_icon" android:layout_weight="1.5" />
+            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/id_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="2" android:minLines="1" android:layout_weight="2.0" />
+            <com.kohls.mcommerce.opal.framework.view.component.views.GothamButton android:textSize="17.0sp" android:id="@id/id_edit" android:background="@android:color/transparent" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.5" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/id_searchLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/id_buttonlayout">
+            <com.kohls.mcommerce.opal.common.util.listRegistry.KSearchBar android:id="@id/id_searchBox" android:layout_width="0.0dip" android:layout_height="wrap_content" android:ems="10" android:singleLine="true" android:layout_weight="1.0" android:imeOptions="actionSearch">
+                <requestFocus />
+            </com.kohls.mcommerce.opal.common.util.listRegistry.KSearchBar>
+            <com.kohls.mcommerce.opal.framework.view.component.views.GothamButton android:textSize="17.0sp" android:id="@id/id_cancel" android:background="@android:color/transparent" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="0.5" android:layout_toRightOf="@id/id_searchBox" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <WebView android:id="@id/id_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</LinearLayout>

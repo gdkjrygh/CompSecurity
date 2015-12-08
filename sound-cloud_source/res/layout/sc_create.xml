@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_above="@id/bottom_bar" android:layout_alignParentTop="true">
+        <com.soundcloud.android.creators.record.ChronometerView android:gravity="bottom|center" android:id="@id/chronometer" android:layout_width="fill_parent" android:layout_height="0.0dip" android:singleLine="true" android:layout_weight="2.0" style="@style/RecordTextChrono" />
+        <RelativeLayout android:id="@id/gauge_holder" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="3.0" />
+        <RelativeLayout android:gravity="center" android:id="@id/control_layout" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="3.0">
+            <LinearLayout android:gravity="center_vertical" android:id="@id/rec_controls" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+                <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageButton android:id="@id/btn_play" android:layout_centerInParent="true" style="@style/RecordPlayButton" />
+                </RelativeLayout>
+                <FrameLayout android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <ImageButton android:id="@id/btn_action" style="@style/RecordButton" />
+                </FrameLayout>
+                <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageButton android:id="@id/btn_edit" android:layout_centerInParent="true" style="@style/RecordEditButton" />
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView android:id="@id/action_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="@string/record_tap_to_record" android:layout_below="@id/rec_controls" android:layout_centerInParent="true" style="?android:textAppearanceMedium" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/edit_controls" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageButton android:id="@id/btn_play_edit" style="@style/RecordPlayButton" />
+                <android.support.v7.widget.SwitchCompat android:id="@id/toggle_fade" android:layout_marginTop="@dimen/rec_toggle_fade_margin_top" style="@style/RecordFadeSwitch" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <include layout="@layout/record_bottom_bar" />
+</RelativeLayout>

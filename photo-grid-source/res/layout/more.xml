@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/logo_layout" android:background="#ffdedede" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/logo_lo" android:layout_width="fill_parent" android:layout_height="@dimen/ad_layout_height" />
+        <ImageView android:id="@id/ad_remove" android:layout_width="@dimen/ad_remove_width" android:layout_height="@dimen/ad_remove_height" android:src="@drawable/icon_remove" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <android.webkit.WebView android:id="@id/More_webView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/logo_layout" />
+    <ProgressBar android:id="@id/More_pb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar" android:layout_centerInParent="true" />
+</RelativeLayout>

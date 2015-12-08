@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/hurricane_video_card_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/full_size_module_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/hurricane_video_preview_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/hurricane_video_preview_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/video_16x9_image_loading" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@string/hurricane_central_video_preview_image_description" />
+        <ImageView android:id="@id/hurricane_video_play_button" android:layout_width="@dimen/video2_grid_item_play_icon_large" android:layout_height="@dimen/video2_grid_item_play_icon_large" android:src="@drawable/btn_video_play" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:contentDescription="@string/hurricane_central_video_play_image_description" />
+    </RelativeLayout>
+    <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/single_article_module_title_text_size" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/hurricane_video_description_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/module_inset" android:layout_marginTop="@dimen/module_inset" android:layout_marginRight="@dimen/module_inset" android:layout_marginBottom="@dimen/module_inset" android:maxLines="2" weather:font="Roboto-Regular.ttf" />
+</LinearLayout>

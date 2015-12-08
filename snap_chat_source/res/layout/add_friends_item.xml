@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:focusable="false" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+        <FrameLayout android:id="@id/background_button_hiding_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:translationX="@dimen/background_button_outer_translation">
+            <LinearLayout android:id="@id/background_button_container" android:background="@color/new_friend_background_buttons_background" android:layout_width="wrap_content" android:layout_height="fill_parent" android:translationX="@dimen/background_button_inner_translation">
+                <include layout="@layout/horizontal_divider" />
+                <FrameLayout android:id="@id/block_button_container" android:layout_width="@dimen/added_me_background_button_width" android:layout_height="fill_parent">
+                    <Button android:gravity="center" android:id="@id/block_button" android:background="@drawable/add_friends_block_report_button_selector" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/block_friend_button" style="@android:style/TextAppearance.Medium" />
+                    <ProgressBar android:layout_gravity="center" android:id="@id/block_progress_bar" android:background="@color/transparent" android:visibility="gone" android:layout_width="@dimen/checkbox_size" android:layout_height="@dimen/checkbox_size" android:scaleType="centerInside" />
+                </FrameLayout>
+                <include layout="@layout/horizontal_divider" />
+                <FrameLayout android:id="@id/secondary_action_layout" android:layout_width="@dimen/added_me_background_button_width" android:layout_height="fill_parent">
+                    <Button android:gravity="center" android:id="@id/hide_button" android:background="@drawable/add_friends_block_report_button_selector" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/hide_friend_button" style="@android:style/TextAppearance.Medium" />
+                    <Button android:gravity="center" android:id="@id/ignore_button" android:background="@drawable/add_friends_block_report_button_selector" android:visibility="gone" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/ignore_friend_button" style="@android:style/TextAppearance.Medium" />
+                    <ProgressBar android:layout_gravity="center" android:id="@id/hide_or_ignore_progress_bar" android:background="@color/transparent" android:visibility="gone" android:layout_width="@dimen/checkbox_size" android:layout_height="@dimen/checkbox_size" android:scaleType="centerInside" />
+                </FrameLayout>
+                <include layout="@layout/horizontal_divider" />
+            </LinearLayout>
+        </FrameLayout>
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/swipeable_layout" android:background="@color/friend_item_background" android:paddingLeft="@dimen/default_gap_2x" android:paddingRight="@dimen/default_gap" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+            <FrameLayout android:id="@id/swipeable_layout_buttons" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+                <LinearLayout android:gravity="right|center" android:layout_gravity="right" android:id="@id/foreground_button_default_container" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <com.snapchat.android.ui.EmojiTextView android:gravity="center" android:id="@id/friendmoji" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@android:style/TextAppearance.Small" />
+                    <LinearLayout android:gravity="right|center" android:id="@id/checkbox_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="@dimen/friend_control_button_size">
+                        <Button android:id="@id/shared_story_button" android:background="@drawable/stories_list_item_shared_story_icon" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginRight="@dimen/default_gap" />
+                        <ImageButton android:id="@id/add_friend_checkbox" android:background="@color/transparent" android:padding="@dimen/default_gap_1_5x" android:layout_width="@dimen/friend_control_button_size" android:layout_height="@dimen/friend_control_button_size" android:layout_marginRight="-4.0dip" android:src="@drawable/add_friend_button_selector_opaque" android:scaleType="centerInside" />
+                        <CheckBox android:id="@id/invite_checkbox" android:background="@drawable/invite_checkbox_selector_opaque" android:visibility="gone" android:layout_width="@dimen/checkbox_size" android:layout_height="@dimen/checkbox_size" android:layout_marginRight="@dimen/default_gap" android:button="@null" android:scaleType="fitXY" />
+                        <ImageView android:id="@id/invite_arrow" android:visibility="gone" android:layout_width="@dimen/default_gap_1_5x" android:layout_height="@dimen/icon_size_extra_smaller" android:layout_marginRight="@dimen/default_gap" android:src="@drawable/sc_addfriends_chevron_icon" android:scaleType="fitXY" />
+                        <ProgressBar android:id="@id/checkbox_progress_bar" android:background="@color/transparent" android:visibility="gone" android:layout_width="@dimen/checkbox_size" android:layout_height="@dimen/checkbox_size" android:layout_marginRight="@dimen/default_gap" android:scaleType="fitXY" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/foreground_button_container_on_tap" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-4.0dip">
+                    <ImageView android:id="@id/friend_profile_settings_button" android:padding="@dimen/default_gap" android:layout_width="@dimen/friend_control_button_size" android:layout_height="@dimen/friend_control_button_size" android:layout_marginRight="@dimen/default_gap_quarter" android:src="@drawable/friend_profile_settings_button" />
+                    <ImageView android:id="@id/friend_snap_button" android:padding="@dimen/default_gap" android:layout_width="@dimen/friend_control_button_size" android:layout_height="@dimen/friend_control_button_size" android:layout_marginRight="@dimen/default_gap_half" android:src="@drawable/add_friend_reply_with_snap_selector" />
+                    <ImageView android:id="@id/friend_chat_button" android:padding="@dimen/default_gap" android:layout_width="@dimen/friend_control_button_size" android:layout_height="@dimen/friend_control_button_size" android:src="@drawable/add_friend_reply_with_chat_selector" />
+                </LinearLayout>
+            </FrameLayout>
+            <LinearLayout android:gravity="left|center" android:orientation="horizontal" android:id="@id/friend_profile_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/swipeable_layout_buttons" android:layout_alignParentLeft="true">
+                <FrameLayout android:id="@id/profile_picture_container" android:visibility="gone" android:clipChildren="false" android:layout_width="@dimen/added_me_profile_picture_container_size" android:layout_height="@dimen/added_me_profile_picture_container_size" android:layout_marginRight="@dimen/default_gap">
+                    <ImageView android:layout_gravity="center" android:id="@id/ghost_face" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    <ImageView android:layout_gravity="center" android:id="@id/profile_pictures" android:background="@color/transparent" android:layout_width="@dimen/added_me_profile_picture_size" android:layout_height="@dimen/added_me_profile_picture_size" android:contentDescription="@string/content_description_no_profile_picture" />
+                    <ImageView android:layout_gravity="center" android:id="@id/ghost_border" android:background="@drawable/profile_addedme_border" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </FrameLayout>
+                <com.snapchat.android.ui.FriendTextsView android:gravity="center_vertical" android:orientation="vertical" android:id="@id/friend_texts_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <ViewStub android:id="@id/friend_profile_stub" android:layout="@layout/my_friends_item_friend_profile" android:inflatedId="@id/friend_profile_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    <View style="@style/FriendListDivider" />
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/check_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:contentDescription="@string/cd_checkImage" />
+    </FrameLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_gravity="fill_horizontal|top|center" android:id="@id/capturePhotoHeader" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:onClick="openPhotoTips">
+                <ImageView android:layout_gravity="center_vertical" android:src="@drawable/andr_icn_question" android:contentDescription="@string/photo_tips" style="@style/Security" />
+                <TextView android:layout_gravity="center_vertical" android:layout_marginLeft="5.0dip" android:text="@string/photo_tips" style="@style/WFLink" />
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="right|center" android:orientation="horizontal" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                <Button android:nextFocusRight="@id/buttonUse" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/retake" android:onClick="onRetakePicture" android:filterTouchesWhenObscured="true" style="@style/WFButtonGrey" />
+                <Button android:id="@id/buttonUse" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/use" android:onClick="onUsePicture" android:filterTouchesWhenObscured="true" style="@style/WFButtonBlue" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/capturePhotoFooter" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:layout_gravity="left|center" android:id="@id/capturePhotoInstructionLabel" android:paddingLeft="5.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/review_photo_front" android:layout_centerInParent="true" android:layout_centerVertical="true" style="@style/CheckInstructions" />
+        </RelativeLayout>
+    </RelativeLayout>
+</merge>

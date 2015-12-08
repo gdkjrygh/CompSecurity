@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/fragment_theme_store_home" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/content_container" android:paddingTop="@dimen/theme_store_title_and_tab2_height" android:paddingBottom="@dimen/theme_store_home_tab_bar_height" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.view.ViewPager android:id="@id/theme_view_pager" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/theme_store_home_tab_2_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/title_layout" android:layout_width="fill_parent" android:layout_height="@dimen/theme_store_title_height" layout="@layout/theme_store_title_layout" />
+        <com.go.weatherex.viewex.SlidingTabStrip android:id="@id/tab_2_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/theme_store_home_tab2_bar_height" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/tab_layout" android:background="@drawable/theme_store_home_tab_bg" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/theme_store_home_tab_bar_height">
+        <TextView android:textSize="@dimen/theme_store_home_tab_text_size" android:textColor="@color/theme_store_home_tab_text_selector" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tab_online" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/theme_store_home_tab_online" android:drawableTop="@drawable/theme_store_home_tab_online_selector" android:drawablePadding="0.5dip" android:layout_weight="1.0" />
+        <View android:background="#ff838383" android:layout_width="0.5dip" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+        <TextView android:textSize="@dimen/theme_store_home_tab_text_size" android:textColor="@color/theme_store_home_tab_text_selector" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tab_local" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/theme_store_home_tab_local" android:drawableTop="@drawable/theme_store_home_tab_local_selector" android:drawablePadding="0.5dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</FrameLayout>

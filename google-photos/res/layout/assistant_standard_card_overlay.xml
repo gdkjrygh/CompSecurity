@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:focusable="true" card_view:cardBackgroundColor="@android:color/white" card_view:cardCornerRadius="@dimen/photos_assistant_cardui_corner_radius" style="@style/AssistantCardBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/envelope_activity_row_with_overflow" />
+        <include layout="@layout/assistant_card_text_layout_with_overflow" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/photos_assistant_cardui_overlay_photo_height">
+            <com.google.android.apps.photos.assistant.cardui.CardPhotoView android:id="@id/photo_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/accessibility_photo_button" />
+            <View android:id="@id/assistant_card_gradient" android:background="@drawable/assistant_card_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/photos_assistant_cardui_overaly_image_gradient_height" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@id/collection_type_icon" android:layout_width="@dimen/photos_assistant_cardui_overlay_icon_circle_diameter" android:layout_height="@dimen/photos_assistant_cardui_overlay_icon_circle_diameter" android:layout_marginLeft="@dimen/photos_assistant_cardui_overlary_icon_circle_padding" android:layout_marginBottom="@dimen/photos_assistant_cardui_overlary_icon_circle_padding" android:scaleType="center" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:contentDescription="@null" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/photos_assistant_cardui_overlay_text_padding" android:layout_toRightOf="@id/collection_type_icon" android:layout_alignParentBottom="true">
+                <TextView android:id="@id/overlay_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" style="@style/quantum_text_title_white" />
+                <TextView android:id="@id/overlay_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/quantum_text_body_1_white" />
+            </LinearLayout>
+        </RelativeLayout>
+        <include layout="@layout/assistant_card_buttons_bar" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

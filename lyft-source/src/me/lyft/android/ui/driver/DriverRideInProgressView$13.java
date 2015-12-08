@@ -1,0 +1,39 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package me.lyft.android.ui.driver;
+
+import me.lyft.android.domain.ride.Passenger;
+import me.lyft.android.ui.dialogs.DialogResult;
+import me.lyft.android.utils.Telephony;
+import rx.functions.Action1;
+
+// Referenced classes of package me.lyft.android.ui.driver:
+//            DriverRideInProgressView
+
+class this._cls0
+    implements Action1
+{
+
+    final DriverRideInProgressView this$0;
+
+    public volatile void call(Object obj)
+    {
+        call((DialogResult)obj);
+    }
+
+    public void call(DialogResult dialogresult)
+    {
+        if (dialogresult.getButtonId() == 0x7f0d000b)
+        {
+            telephony.callPhone(DriverRideInProgressView.access$000(DriverRideInProgressView.this).getPhoneNumber());
+        }
+    }
+
+    ()
+    {
+        this$0 = DriverRideInProgressView.this;
+        super();
+    }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChatNotificationLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/chat_timestamp_author_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/chat_item_timestamp_text" android:paddingLeft="@dimen/size_5_5x" android:paddingRight="@dimen/size_1_5x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/size_2x" android:layout_marginRight="@dimen/timestamp_margin_right" android:textIsSelectable="false" style="@style/ChatMessageTimestamp" />
+    </FrameLayout>
+    <RelativeLayout android:id="@id/chat_notification_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/chat_timestamp_author_container">
+        <com.skype.android.widget.SymbolView android:textSize="@dimen/call_notification_icon_symbolView_textSize" android:id="@id/chat_notification_icon" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/call_notification_icon_symbolView_right_margin" android:layout_centerVertical="true" />
+        <RelativeLayout android:id="@id/chat_notification_content_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/chat_notification_icon" android:layout_centerVertical="true">
+            <TextView android:id="@id/chat_notification_contents" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" style="@style/ChatNotificationText" />
+            <TextView android:id="@id/chat_notification_duration" android:paddingLeft="@dimen/size_1x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/chat_notification_contents" android:textIsSelectable="false" style="@style/ChatNotificationDuration" />
+            <TextView android:textSize="@dimen/font_small" android:textColor="@color/skype_link" android:id="@id/chat_notification_video_message_upsell" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/chat_notification_video_message_upsell_margin_top" android:text="@string/message_video_message_upsell" android:layout_below="@id/chat_notification_duration" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <include android:id="@id/chat_notification_rating_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/chat_notification_content" layout="@layout/chat_notification_rating" />
+</RelativeLayout>

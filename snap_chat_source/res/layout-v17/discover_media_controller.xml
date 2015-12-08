@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/media_controller_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/discover_video_player_top_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/discover_video_player_gradient_height">
+        <RelativeLayout android:orientation="horizontal" android:id="@id/seek_bar_container" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="@dimen/discover_video_player_height" android:layout_alignParentTop="true">
+            <ImageButton android:id="@id/close_video_player" android:layout_marginLeft="@dimen/discover_video_player_default_dimen" android:layout_marginRight="@dimen/discover_video_player_default_dimen" android:src="@drawable/discover_video_close_button" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/VideoPlayerButton" />
+            <com.snapchat.android.discover.ui.media.DiscoverVideoSeekBar android:id="@id/mediacontroller_progress" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/time" android:layout_toRightOf="@id/close_video_player" android:layout_centerVertical="true" style="?android:attr/progressBarStyleHorizontal" />
+            <TextView android:textSize="@dimen/text_size_default" android:textColor="@color/white" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/discover_video_player_default_dimen" android:layout_marginRight="@dimen/discover_video_player_default_dimen" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </FrameLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/player_controls_container" android:background="@drawable/discover_video_player_bottom_gradient" android:paddingTop="4.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/discover_video_player_gradient_height" android:layout_alignParentBottom="true">
+        <ImageButton android:id="@id/mute_button" android:layout_marginLeft="@dimen/discover_video_player_default_dimen" android:layout_marginBottom="@dimen/discover_video_player_default_dimen" android:src="@drawable/discover_audio" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" style="@style/VideoPlayerButton" />
+        <ImageButton android:id="@id/pause_button" android:layout_marginBottom="@dimen/discover_video_player_default_dimen" android:src="@drawable/discover_pause" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/VideoPlayerButton" />
+        <ImageButton android:id="@id/expand_button" android:layout_marginRight="@dimen/discover_video_player_default_dimen" android:layout_marginBottom="@dimen/discover_video_player_default_dimen" android:src="@drawable/discover_expand" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/VideoPlayerButton" />
+    </RelativeLayout>
+</RelativeLayout>

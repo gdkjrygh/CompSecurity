@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/list_item_selector" android:paddingLeft="@dimen/size_0_5x" android:paddingRight="@dimen/size_0_5x" android:focusable="true" android:layout_height="wrap_content" style="@style/ListItemLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/background_wrapper" android:background="@drawable/contact_picker_background_selected" android:padding="@dimen/size_1x" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <CheckBox android:id="@id/people_checkbox" android:focusable="false" android:focusableInTouchMode="false" android:visibility="gone" android:clickable="false" android:layout_width="@dimen/people_list_checkmark_size" android:layout_height="@dimen/people_list_checkmark_size" android:layout_margin="@dimen/size_0_5x" android:button="@drawable/checkbox_white_on_transparent_selector" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <com.skype.android.widget.SkypeAvatarView android:id="@id/people_item_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/size_1_5x" android:scaleType="centerCrop" android:layout_alignParentLeft="true" style="@style/SkypeAvatarSmall" />
+        <TextView android:textSize="@dimen/font_medium_large" android:ellipsize="end" android:id="@id/people_item_full_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@id/people_checkbox" android:layout_toRightOf="@id/people_item_icon" android:layout_alignParentTop="true" android:textIsSelectable="false" style="@style/ContactListTitle" />
+        <TextView android:id="@id/people_item_status_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/people_checkbox" android:layout_toRightOf="@id/people_item_icon" android:layout_below="@id/people_item_full_name" android:layout_alignParentBottom="true" style="@style/ContactListSubTitle" />
+    </RelativeLayout>
+</RelativeLayout>

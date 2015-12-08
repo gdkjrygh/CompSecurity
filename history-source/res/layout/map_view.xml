@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:map="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/map_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <fragment android:name="com.google.android.gms.maps.SupportMapFragment" android:id="@id/map" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/zoom_error" android:background="#66000000" android:padding="5.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/map_zoom_error" android:layout_alignParentTop="true" />
+        <ProgressBar android:id="@id/progress_bar" android:background="@color/map_progress_bar_bg" android:visibility="invisible" android:layout_width="@dimen/map_progress_bar_size" android:layout_height="@dimen/map_progress_bar_size" android:layout_margin="@dimen/map_progress_bar_margin" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/search_view" android:background="@drawable/round_rect_shape_white" android:padding="@dimen/padding_small" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_medium" android:layout_alignParentTop="true">
+            <ImageView android:layout_gravity="center" android:id="@id/btn_search" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_search" android:layout_weight="0.0" />
+            <EditText android:textColor="@android:color/black" android:layout_gravity="center_vertical" android:id="@id/edit_text_search" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin_small" android:hint="@string/text_input_hint_search" android:singleLine="true" android:layout_weight="1.0" android:imeOptions="actionDone" android:textCursorDrawable="@null" style="@android:style/TextAppearance.Small" />
+            <ImageView android:layout_gravity="center" android:id="@id/btn_cancel_search" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_detail_close" android:layout_weight="0.0" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

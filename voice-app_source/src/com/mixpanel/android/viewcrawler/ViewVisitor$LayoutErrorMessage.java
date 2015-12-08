@@ -1,0 +1,32 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.mixpanel.android.viewcrawler;
+
+
+// Referenced classes of package com.mixpanel.android.viewcrawler:
+//            ViewVisitor
+
+public static class mName
+{
+
+    private final String mErrorType;
+    private final String mName;
+
+    public String getErrorType()
+    {
+        return mErrorType;
+    }
+
+    public String getName()
+    {
+        return mName;
+    }
+
+    public (String s, String s1)
+    {
+        mErrorType = s;
+        mName = s1;
+    }
+}

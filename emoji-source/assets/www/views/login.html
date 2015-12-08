@@ -1,0 +1,59 @@
+<!-- <nav class="top-bar fixed-header">
+	 <h1 ng-hide="token_path" ng-if="overloaded != 1">Getting Started</h1>
+	 <h1 ng-hide="token_path" ng-if="overloaded == 1">Sorry!</h1>
+</nav> -->
+<div class="toast" style="background:#e74c3c;" ng-if="display_off_on_help"><a ng-click="showOnOffHelp()"><i class="icon-warning-sign"></i> <span>Facebook token expired! <u>Learn how to fix this</u></span></a></div>
+<div ng-if="overloaded == 1">
+
+	<div class="row add-to-top">
+        <div class="large-10 large-centered columns">
+            <div class="panel overloaded">
+                <div class="overloaded-image" ng-style="{backgroundImage: 'url(images/capacity{{capacity}}.png)'}"></div>
+                <p class="feed-title">Sorry! We are currently over capacity.<br/>Please try again soon.</p>
+                <a ng-click="overloaded_ok()" class="edit btn">OK</a>
+       		</div>
+    	</div>
+    </div>
+
+</div>
+
+<div class="row add-to-top login" ng-hide="overloaded == 1">
+
+	<div class="large-6 large-centered columns" ng-hide="token_path">
+            <div class="logo big"></div>
+			<a ng-click="login_click()" ng-hide="logging_in" class="fblogin">Continue with Facebook</a>
+
+            <div class="loading-white">
+			 <loading-spinner visible="logging_in"></loading-spinner>
+            </div>
+
+			<div class="coming-soon" ng-hide="logging_in">
+
+				<h4 class="blue-title">Sign up with email coming soon!
+					<span ng-hide="alt_login.show_thanks"></span>
+				</h4>
+
+				<a class="ready-button" ng-show="alt_login.show_ready_button" ng-click="alt_login.clicked_ready()">Tell me when it's ready
+				</a>
+
+				<div ng-show="alt_login.show_email_input">
+					<form class="readymail" ng-submit="alt_login.clicked_submit()">
+						<input on-focus-unfix-header class="emailbox" type="email" ng-model="email" placeholder="Enter email">
+						<i class="icon-envelope"></i>
+						<a class="ready-submit" ng-click="alt_login.clicked_submit()">SEND</a>
+					</form>
+				</div>
+
+				<div ng-show="alt_login.show_thanks">
+					<p class="callout">Thanks! We'll let you know when it's ready.</p>
+				</div>
+
+			</div>
+
+	</div>
+
+	<loading-spinner visible="token_path"></loading-spinner>
+
+</div>
+
+<input type="hidden" id="flash_ref"/>

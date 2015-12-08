@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/id_recentSearch_dividerImg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/divider_dim_gray" android:scaleType="fitXY" android:adjustViewBounds="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/id_recentSearch_dividerImg">
+        <ListView android:layout_gravity="left" android:id="@id/id_recentSearch_suggestListView" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="@null" android:divider="@color/gray_menu_background" android:dividerHeight="1.0dip" android:layout_weight="1.0" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/divider_dim_gray" android:scaleType="fitXY" android:adjustViewBounds="true" />
+        <Button android:textColor="@android:color/black" android:gravity="left|center" android:id="@id/clear_recent" android:background="@color/light_gray" android:paddingLeft="30.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/CLEAR_SEARCH" android:textAlignment="1" />
+    </LinearLayout>
+</RelativeLayout>

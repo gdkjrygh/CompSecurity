@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/explore_template_card" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/explore_template_margin_8dp">
+        <ImageView android:id="@id/explore_template_icon" android:layout_width="@dimen/explore_template_icon_width" android:layout_height="@dimen/explore_template_icon_height" />
+        <ImageView android:layout_gravity="right" android:id="@id/explore_template_lock_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cloudlib_template_lock" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/explore_template_title_size" android:textStyle="bold" android:textColor="#ff253034" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/explore_template_margin_20dp" android:text="@string/explore_template_title" />
+        <TextView android:textSize="@dimen/explore_template_description_size" android:textColor="#ff707070" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/explore_template_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/explore_template_margin_8dp" android:text="@string/cloud_watch_video" />
+        <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/explore_unlock_btn" android:background="@drawable/cloudlib_template_green_btn" android:layout_width="@dimen/explore_template_get_btn_widht" android:layout_height="@dimen/explore_template_get_btn_height" android:layout_marginTop="@dimen/explore_template_margin_12dp" android:layout_marginBottom="@dimen/explore_template_margin_20dp">
+            <TextView android:textSize="@dimen/explore_template_description_size" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/explore_unlock_btn_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cloud_get_now" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/explore_unlock_progressbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="@android:style/Widget.ProgressBar.Small" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

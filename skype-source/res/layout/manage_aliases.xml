@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="top" android:id="@id/manage_aliases_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_medium" android:textColor="@color/skype_dark_grey" android:id="@id/manage_aliases_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/padding3" android:text="@string/label_allow_finding_me_using_contact_details" />
+    <TextView android:textSize="@dimen/font_medium" android:textColor="@color/skype_dark_grey" android:ellipsize="end" android:id="@id/manage_aliases_primary_email_id" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/padding3" android:singleLine="true" android:layout_below="@id/manage_aliases_description" />
+    <ListView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/padding3" android:layout_above="@id/manage_aliases_profile_link" android:layout_below="@id/manage_aliases_primary_email_id" />
+    <RelativeLayout android:id="@id/alias_list_empty" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/progress_circle_blue" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/font_small_medium" android:textColor="@color/skype_dark_blue" android:gravity="center_horizontal" android:id="@id/manage_aliases_profile_link" android:background="@drawable/manage_aliases_link_selector" android:visibility="invisible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding3" android:layout_marginTop="@dimen/padding2" android:layout_marginRight="@dimen/padding3" android:layout_marginBottom="@dimen/padding5" android:text="@string/label_manage_msa_aliases_link" android:layout_alignParentBottom="true" />
+</RelativeLayout>

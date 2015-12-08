@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="64.0dip" android:paddingStart="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/card_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="16.0dip" android:layout_marginEnd="16.0dip">
+        <RelativeLayout android:background="@drawable/list_selector" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:id="@id/selected_account_bar" android:background="#ff4285f4" android:layout_width="3.0dip" android:layout_height="fill_parent" />
+            <com.google.android.libraries.social.avatars.ui.AvatarView android:id="@id/avatar" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="20.0dip" android:layout_centerVertical="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="20.0dip" shape="round" size="small" />
+            <TextView android:textStyle="bold" android:gravity="center" android:id="@id/deselect_button" android:background="@drawable/white_button_30" android:paddingLeft="16.0dip" android:paddingTop="10.0dip" android:paddingRight="16.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:text="@string/deselect_button" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+            <TextView android:textSize="@dimen/text_size_16" android:textColor="#ff444444" android:ellipsize="end" android:orientation="vertical" android:id="@id/display_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_toLeftOf="@id/deselect_button" android:layout_toRightOf="@id/avatar" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="true" android:layout_toStartOf="@id/deselect_button" android:layout_toEndOf="@id/avatar" />
+            <View android:id="@id/divider" android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</FrameLayout>

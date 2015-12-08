@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.pinterest.ui.megaphone.MegaphoneView android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bg_iv" android:scaleType="centerCrop" style="@style/fullline_view" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/megaphone_content_vw" android:background="@drawable/rounded_rect_white_5dp_stroke" style="@style/fullline_view">
+        <TextView android:id="@id/nag_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginTop="18.0dip" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="3.0dip" style="@style/text_title_large" />
+        <TextView android:id="@id/nag_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin" android:maxLines="4" android:singleLine="false" style="@style/text_subtitle_large" />
+        <View android:id="@id/nag_content_divider" style="@style/section_item_divider" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/button_container" android:layout_marginLeft="@dimen/margin" android:layout_marginTop="@dimen/list_cell_padding_topbottom" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/list_cell_padding_topbottom" android:weightSum="2.0" style="@style/fullline_view">
+            <Button android:id="@id/negative_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_marginRight="8.0dip" android:layout_weight="1.0" style="@style/button_plain" />
+            <Button android:id="@id/positive_btn" android:layout_width="wrap_content" android:layout_weight="1.0" style="@style/button_red" />
+        </LinearLayout>
+    </LinearLayout>
+</com.pinterest.ui.megaphone.MegaphoneView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/search_btn_layout" android:background="@color/search_bg_color" android:layout_width="fill_parent" android:layout_height="42.0dip">
+        <RelativeLayout android:gravity="center_vertical" android:background="@color/search_bg_color" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="2.0dip">
+            <EditText android:textSize="16.0sp" android:textColor="#ff373737" android:textColorHint="#ffc7c7c7" android:id="@id/keyWordsText" android:background="@color/white" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="1.0dip" android:hint="@string/cloud_google_searchtip" android:singleLine="true" android:layout_toLeftOf="@id/searchButton" android:imeOptions="actionSearch" android:textCursorDrawable="@null" />
+            <ImageButton android:gravity="center" android:id="@id/searchButton" android:background="@drawable/cloudlib_google_search" android:layout_width="50.0dip" android:layout_height="42.0dip" android:src="@drawable/cloudlib_icon_search" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/search_btn_layout">
+        <GridView android:id="@id/pic_grid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:horizontalSpacing="@dimen/image_thumbnail_spacing" android:verticalSpacing="@dimen/image_thumbnail_spacing" android:stretchMode="columnWidth" android:numColumns="4" style="@style/cloudlib_ImageGridLayout" />
+        <ImageView android:id="@id/download_imageTemp" android:visibility="gone" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_alignParentBottom="true" />
+        <include android:visibility="gone" layout="@layout/cloudlib_progressbar" />
+    </RelativeLayout>
+</RelativeLayout>

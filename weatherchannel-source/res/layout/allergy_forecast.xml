@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/container" android:background="@drawable/module_background_white" android:padding="@dimen/pollen_row_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/module_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/pollen_forecast_title_text_size" android:textColor="@color/allergy_forecast_title_text_color" android:id="@id/module_header" style="@style/module_header" />
+    <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/pollen_forecast_sub_title_text_size" android:textColor="@color/allergy_forecast_text_color" android:id="@id/module_statement" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" weather:font="Roboto-Regular.ttf" />
+    <GridView android:id="@id/allergy_forecast_grid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/pollen_margin_default" android:layout_marginBottom="@dimen/pollen_margin_default" android:numColumns="5" />
+    <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/pollen_more_info_text" android:textColor="@color/allergy_forecast_text_color" android:id="@id/module_footer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/pollen_margin_default" android:text="@string/pollen_more_info_text" weather:font="Roboto-Regular.ttf" />
+</LinearLayout>

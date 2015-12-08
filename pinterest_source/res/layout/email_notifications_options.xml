@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/card_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <CheckedTextView android:id="@id/email_settings_get_notifications" android:background="@drawable/touch_clear_bg" android:text="@string/get_email_notifications" style="@style/section_item_checkbox" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/email_settings_layout_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/email_settings_when_someone_tv" android:text="@string/get_email_when_someone" style="@style/profile_about_section_title" />
+        <LinearLayout android:orientation="vertical" android:id="@id/email_settings_when_someone_layout" android:background="@drawable/card_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <CheckedTextView android:id="@id/email_settings_pins_your_pin" android:background="@drawable/touch_clear_bg" android:layout_height="wrap_content" android:text="@string/repins_your_pin" style="@style/section_item_checkbox" />
+            <View style="@style/section_item_divider" />
+            <CheckedTextView android:id="@id/email_settings_likes_your_pin" android:background="@drawable/touch_clear_bg" android:layout_height="wrap_content" android:text="@string/likes_your_pin" style="@style/section_item_checkbox" />
+            <View style="@style/section_item_divider" />
+            <CheckedTextView android:id="@id/email_settings_follows_your_board" android:background="@drawable/touch_clear_bg" android:layout_height="wrap_content" android:text="@string/follows_your_boards" style="@style/section_item_checkbox" />
+            <View style="@style/section_item_divider" />
+            <RelativeLayout android:id="@id/email_settings_frequency_options" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+                <TextView android:id="@id/email_settings_frequency_label" android:text="@string/send_these_emails" style="@style/section_item_label" />
+                <TextView android:ellipsize="end" android:gravity="right" android:id="@id/email_settings_frequency_value" android:maxLines="1" android:singleLine="true" android:layout_toRightOf="@id/email_settings_frequency_label" style="@style/section_item_meta" />
+            </RelativeLayout>
+        </LinearLayout>
+        <TextView android:id="@id/email_settings_also_when_tv" android:text="@string/also_get_email_when" style="@style/profile_about_section_title" />
+        <LinearLayout android:orientation="vertical" android:id="@id/email_settings_also_when_layout" android:background="@drawable/card_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <CheckedTextView android:id="@id/email_settings_comments_on_pin" android:background="@drawable/touch_clear_bg" android:layout_height="wrap_content" android:text="@string/comments_your_pin" style="@style/section_item_checkbox" />
+            <View style="@style/section_item_divider" />
+            <CheckedTextView android:id="@id/email_settings_sends_you_pin" android:background="@drawable/touch_clear_bg" android:layout_height="wrap_content" android:text="@string/sends_you_pin" style="@style/section_item_checkbox" />
+            <View style="@style/section_item_divider" />
+            <CheckedTextView android:id="@id/email_settings_from_other_social_joins" android:background="@drawable/touch_clear_bg" android:layout_height="wrap_content" android:text="@string/joins_from_other_social_networks" style="@style/section_item_checkbox" />
+            <View style="@style/section_item_divider" />
+            <CheckedTextView android:id="@id/email_settings_invites_group_board" android:background="@drawable/touch_clear_bg" android:layout_height="wrap_content" android:text="@string/invites_you_to_group_board" style="@style/section_item_checkbox" />
+            <View style="@style/section_item_divider" />
+        </LinearLayout>
+        <TextView android:id="@id/email_settings_other_kinds_tv" android:text="@string/other_kinds_of_emails" style="@style/profile_about_section_title" />
+        <LinearLayout android:orientation="vertical" android:id="@id/email_settings_other_kinds_layout" android:background="@drawable/card_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <CheckedTextView android:id="@id/email_settings_price_changes" android:background="@drawable/touch_clear_bg" android:layout_height="wrap_content" android:text="@string/price_changes_for_pin" style="@style/section_item_checkbox" />
+            <View style="@style/section_item_divider" />
+            <CheckedTextView android:id="@id/email_settings_stuff_you_might_like" android:background="@drawable/touch_clear_bg" android:layout_height="wrap_content" android:text="@string/stuff_you_might_like" style="@style/section_item_checkbox" />
+            <View style="@style/section_item_divider" />
+            <CheckedTextView android:id="@id/email_settings_weekly_inspiration" android:background="@drawable/touch_clear_bg" android:layout_height="wrap_content" android:text="@string/weekly_inspiration" style="@style/section_item_checkbox" />
+            <View style="@style/section_item_divider" />
+            <CheckedTextView android:id="@id/email_settings_feature_announcement" android:background="@drawable/touch_clear_bg" android:layout_height="wrap_content" android:text="@string/feature_announcements_updates" style="@style/section_item_checkbox" />
+            <View style="@style/section_item_divider" />
+            <CheckedTextView android:id="@id/email_settings_feedback" android:background="@drawable/touch_clear_bg" android:layout_height="wrap_content" android:text="@string/invitation_feedback" style="@style/section_item_checkbox" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

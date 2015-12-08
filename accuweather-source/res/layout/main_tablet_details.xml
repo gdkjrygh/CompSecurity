@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/background_lines" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/background_lines_10_tiled" android:scaleType="fitXY" />
+            <com.accuweather.android.views.AccuViewPager android:id="@id/pager" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <RelativeLayout android:id="@id/progress_layout" android:background="#88808080" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ProgressBar android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:layout_gravity="center_horizontal" android:layout_width="320.0dip" android:layout_height="wrap_content">
+            <com.amobee.adsdk.AmobeeAdPlaceholder android:id="@id/adView_AMOBEE" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.accuweather.android.dma.DmaView android:id="@id/dma" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.accuweather.android.dma.CustomDmaView android:id="@id/custom_dma" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

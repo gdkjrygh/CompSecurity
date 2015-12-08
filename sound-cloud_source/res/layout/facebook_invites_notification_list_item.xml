@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/facebook_invites_list_item" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/ListItemNotificationLayout">
+        <LinearLayout android:id="@id/friends" style="@style/FacebookInvitesFriends">
+            <com.soundcloud.android.view.CircularBorderImageView android:id="@id/friend_1" style="@style/FacebookInvitesFriendImage" />
+            <com.soundcloud.android.view.CircularBorderImageView android:id="@id/friend_2" style="@style/FacebookInvitesFriendImageOverlap" />
+            <com.soundcloud.android.view.CircularBorderImageView android:id="@id/friend_3" style="@style/FacebookInvitesFriendImageOverlap" />
+        </LinearLayout>
+        <TextView android:id="@id/facebook_invite_text" android:text="@string/facebook_invites_title" style="@style/ListItemNotificationTitle" />
+        <TextView android:id="@id/facebook_invite_introduction_text" android:text="@string/facebook_invites_description" style="@style/ListItemNotificationDescription" />
+        <com.soundcloud.android.playback.ui.view.RoundedColorButton android:id="@id/invite_button" android:text="@string/facebook_invites_button" style="@style/ListItemNotificationButton" />
+    </LinearLayout>
+    <ImageButton android:id="@id/close_button" style="@style/ListItemNotificationCloseButton" />
+</FrameLayout>

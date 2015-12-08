@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="#ff17252b" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="400.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:nbc="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/include_opicker_header" />
+    <ImageView android:id="@id/opicker_image_provider" android:padding="4.0dip" android:layout_width="120.0dip" android:layout_height="wrap_content" android:src="@drawable/nbc000_olympics_xfinity_logo" android:scaleType="centerCrop" android:adjustViewBounds="true" android:contentDescription="@null" />
+    <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/opicker_full_access" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/opicker_dont_see_your_provider" android:maxLines="2" android:fontFamily="sans-serif-light" />
+    <Button android:textColor="#ffffffff" android:id="@id/opicker_provider_button" android:background="@drawable/rounded_background" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/opicker_select_provider" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/lbl_disclaimer" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NBC Olympics does not have access to your username, password or any other information related to your TV provider subscription. Please contact your TV service provider if you need assistance." android:layout_centerInParent="true" android:fontFamily="sans-serif-light" />
+            <LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_below="@id/lbl_disclaimer" android:layout_alignParentBottom="true">
+                <TextView android:textColor="#eeffffff" android:id="@id/opicker_faq" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FAQ" />
+                <TextView android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="|" />
+                <TextView android:textColor="#eeffffff" android:id="@id/opicker_help" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HELP" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

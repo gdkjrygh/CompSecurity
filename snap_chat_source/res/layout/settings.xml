@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/settings_activity_layout" android:background="@android:color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_panel" style="@style/TopPanel">
+        <RelativeLayout android:id="@id/settings_back_button_area" android:background="@drawable/action_bar_touch_selector" android:paddingRight="@dimen/default_gap" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/up_arrow" android:background="@drawable/aa_action_bar_up_arrow_green" android:layout_width="9.0dip" android:layout_height="26.0dip" android:layout_marginLeft="@dimen/default_gap" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/text_size_default" android:textStyle="normal" android:textColor="@color/green" android:id="@id/settings_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap" android:text="@string/settings_title" android:layout_toRightOf="@id/up_arrow" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:background="@color/divider_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <ScrollView android:id="@id/general_settings_scrollview" android:visibility="visible" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/default_gap_2x">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/default_gap_2x">
+            <TextView android:layout_marginTop="4.0dip" android:text="@string/settings_my_account_header" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <RelativeLayout android:id="@id/display_name" style="@style/settings_item_outer">
+                <LinearLayout android:orientation="vertical" android:id="@id/display_name_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/display_name_header" android:text="@string/settings_displayName" style="@style/settings_item_name" />
+                    <TextView android:id="@id/display_name_text" style="@style/settings_item_text" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignTop="@id/display_name_container" android:layout_alignBottom="@id/display_name_container" android:layout_alignParentRight="true">
+                    <ImageView android:id="@id/display_name_error_icon" android:visibility="gone" android:src="@drawable/exclamation_point_chat_error" style="@style/settings_item_error" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <LinearLayout style="@style/settings_item_outer">
+                <TextView android:text="@string/settings_username" style="@style/settings_item_name" />
+                <TextView android:id="@id/username_text" style="@style/settings_item_text" />
+            </LinearLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/mobile_number" style="@style/settings_item_outer">
+                <LinearLayout android:orientation="vertical" android:id="@id/mobile_number_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/mobile_number_header" android:text="@string/settings_mobile_number" style="@style/settings_item_name" />
+                    <TextView android:id="@id/mobile_number_text" style="@style/settings_item_text" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignTop="@id/mobile_number_container" android:layout_alignBottom="@id/mobile_number_container" android:layout_alignParentRight="true">
+                    <ImageView android:id="@id/mobile_error_icon" android:visibility="gone" android:src="@drawable/exclamation_point_chat_error" style="@style/settings_item_error" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/email" style="@style/settings_item_outer">
+                <LinearLayout android:orientation="vertical" android:id="@id/email_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@id/email_header" android:text="@string/settings_email" style="@style/settings_item_name" />
+                    <TextView android:id="@id/email_text" style="@style/settings_item_text" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignTop="@id/email_container" android:layout_alignBottom="@id/email_container" android:layout_alignParentRight="true">
+                    <ImageView android:id="@id/email_error_icon" android:visibility="gone" android:src="@drawable/exclamation_point_chat_error" style="@style/settings_item_error" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/password" style="@style/settings_item_outer">
+                <TextView android:id="@id/password_header" android:text="@string/settings_password" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/settings_two_fa" style="@style/settings_item_outer">
+                <TextView android:text="@string/two_fa_settings_title" style="@style/settings_item_name" />
+                <TextView android:id="@id/two_fa_settings_text" style="@style/settings_item_text" />
+            </RelativeLayout>
+            <include android:id="@id/settings_cash_separator" layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/settings_cash" style="@style/settings_item_name_only">
+                <TextView android:text="@string/settings_cash" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <TextView android:id="@id/settings_additional_services_header" android:text="@string/settings_services_header" style="@style/settings_section_header" />
+            <include android:id="@id/settings_additional_services_header_separator" layout="@layout/settings_header_separator" />
+            <RelativeLayout android:id="@id/settings_manage_additional_services" style="@style/settings_item_name_only">
+                <TextView android:text="@string/settings_services_manage" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <include android:id="@id/settings_official_stories_separater" layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/settings_official_stories_services" style="@style/settings_item_name_only">
+                <TextView android:text="@string/settings_services_official_story" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <TextView android:text="@string/settings_privacy_header" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <LinearLayout android:id="@id/snap_privacy" style="@style/settings_item_outer">
+                <TextView android:text="@string/settings_send_snaps" style="@style/settings_item_name" />
+                <TextView android:id="@id/snap_privacy_text" style="@style/settings_item_text" />
+            </LinearLayout>
+            <include layout="@layout/list_separator" />
+            <LinearLayout android:id="@id/story_privacy" style="@style/settings_item_outer">
+                <TextView android:text="@string/settings_share_stories" style="@style/settings_item_name" />
+                <TextView android:id="@id/story_privacy_text" style="@style/settings_item_text" />
+            </LinearLayout>
+            <TextView android:text="@string/settings_advanced" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <RelativeLayout android:id="@id/notification_settings_button" style="@style/settings_item_name_only">
+                <TextView android:text="@string/settings_notification_settings" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/snapchat_beta_button" style="@style/settings_item_name_only">
+                <TextView android:id="@id/snapchat_beta_button_text" android:text="@string/settings_snapchat_beta" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <include android:id="@id/rate_snapchat_separator" android:visibility="gone" layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/rate_snapchat_button" android:visibility="gone" style="@style/settings_item_name_only">
+                <TextView android:text="@string/settings_rate_snapchat" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <TextView android:text="@string/settings_boring_header" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <RelativeLayout android:id="@id/support" style="@style/settings_item_name_only">
+                <TextView android:text="@string/settings_support" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/privacy_policy" style="@style/settings_item_name_only">
+                <TextView android:text="@string/settings_privacy_policy" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/terms" style="@style/settings_item_name_only">
+                <TextView android:text="@string/settings_terms" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/licenses" style="@style/settings_item_name_only">
+                <TextView android:text="@string/settings_licenses" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <TextView android:text="@string/settings_account_actions_header" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <RelativeLayout android:id="@id/account_actions_clear_conversations" style="@style/settings_item_name_only">
+                <TextView android:text="@string/settings_account_actions_clear_conversations" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/account_actions_blocked" style="@style/settings_item_name_only">
+                <TextView android:text="@string/settings_account_actions_blocked" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/account_actions_logout" style="@style/settings_item_name_only">
+                <TextView android:text="@string/settings_account_actions_logout" android:layout_centerVertical="true" style="@style/settings_item_name" />
+            </RelativeLayout>
+            <TextView android:textSize="12.0sp" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/version_information" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" />
+            <TextView android:textSize="12.0sp" android:layout_gravity="center_horizontal" android:id="@id/nightly_info" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

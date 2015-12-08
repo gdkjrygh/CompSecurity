@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.youtube.app.ui.SelectorOnTopFrameLayout android:id="@id/watch_card_related_artist" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.youtube.core.ui.FixedAspectRatioFrameLayout android:id="@id/thumbnail_layout" android:tag="resizable_thumbnail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="6.0dip">
+            <ImageView android:id="@id/thumbnail" android:background="@drawable/bg_video_thumb" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        </com.google.android.apps.youtube.core.ui.FixedAspectRatioFrameLayout>
+        <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/small_font_size" android:textColor="#ff666666" android:ellipsize="end" android:id="@id/title" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" yt:robotoFont="light" />
+    </LinearLayout>
+</com.google.android.apps.youtube.app.ui.SelectorOnTopFrameLayout>

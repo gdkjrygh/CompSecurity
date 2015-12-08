@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/footer" android:background="@color/white" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@id/continueButton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pharmacy_place_order" style="@style/PrimaryButton.Orange" />
+        <Button android:id="@id/cancelButton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/cancel_button" style="@style/PrimaryButton.Gray" />
+    </LinearLayout>
+    <ScrollView android:id="@id/scrollview" android:background="@color/pharmacy_scrollview_fading_edge" android:fadingEdgeLength="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/footer" android:requiresFadingEdge="0x2000">
+        <TableLayout android:background="@color/pharmacy_light_gray_bg" android:paddingLeft="10.0dip" android:paddingTop="20.0dip" android:paddingRight="10.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/white" android:ellipsize="end" android:background="@drawable/title_bg" android:paddingLeft="10.0dip" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/pharmacy_transfer_your_pickup_location" android:singleLine="true" style="@style/Rx.Text.Medium" />
+            <include android:id="@id/order_details_store_content" android:layout_marginBottom="10.0dip" layout="@layout/pharmacy_store_picker" />
+            <LinearLayout android:gravity="left" android:orientation="vertical" android:id="@id/pickup_date_group" android:background="@drawable/card_bg" android:padding="20.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+                <TextView android:id="@id/window_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pharmacy_review_order_pickup_date_leading_text" style="@style/Rx.Text.Medium" />
+                <Spinner android:gravity="left" android:id="@id/spinner" android:paddingTop="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-4.0dip" android:prompt="@string/pharmacy_pickup_time_spinner_title" style="@style/FormDropDown" />
+            </LinearLayout>
+            <TableRow android:id="@id/patient_info" android:background="@drawable/card_bg" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:id="@id/patient_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mary Catlin" style="@style/Rx.Text.Medium" />
+                    <TextView android:id="@id/patient_phone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tel. (415) 555-1234" style="@style/Rx.Text.Medium" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="right|center" android:id="@id/edit_patient_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icn_edit_blue" />
+            </TableRow>
+            <include layout="@layout/pharmacy_rx_card" />
+        </TableLayout>
+    </ScrollView>
+    <include android:id="@id/loading_view" layout="@layout/loading_page" />
+</RelativeLayout>

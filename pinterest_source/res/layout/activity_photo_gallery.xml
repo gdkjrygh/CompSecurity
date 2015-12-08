@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg_actionbar" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+    <GridView android:gravity="center" android:id="@id/grid" android:paddingLeft="@dimen/margin" android:paddingRight="@dimen/margin" android:paddingBottom="@dimen/margin" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="@dimen/margin" android:verticalSpacing="@dimen/margin" android:stretchMode="columnWidth" android:columnWidth="@dimen/grid_column_width" android:numColumns="auto_fit" android:layout_below="@id/actionbar" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/header" android:layout_width="wrap_content" android:layout_height="?android:actionBarSize" android:layout_marginLeft="?android:actionBarSize">
+        <TextView android:textColor="@color/text_brio_dark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pin_from_folder" style="@style/ActionBar.Internal.Title" />
+        <TextView android:textStyle="bold" android:textColor="@color/text_brio_dark" android:id="@id/folder" android:paddingLeft="@dimen/margin_quarter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/margin_quarter" android:drawableEnd="@drawable/ic_arrow_down" style="@style/ActionBar.Internal.Title" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/fragment_wrapper" android:background="@drawable/black_corner_mask_5dp" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

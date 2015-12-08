@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="top" android:id="@id/card_bg_holder" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/card_spacing" android:layout_marginRight="@dimen/card_spacing">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/card_padding" android:paddingTop="@dimen/history_item_padding" android:paddingRight="@dimen/card_padding" android:paddingBottom="@dimen/history_item_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/primary_text" android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/history_interline_padding" android:singleLine="true" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/secondary_text" android:ellipsize="end" android:id="@android:id/text2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/history_interline_padding" android:singleLine="true" />
+        </LinearLayout>
+        <com.google.android.apps.translate.widget.StarButton android:id="@id/btn_star" android:background="@android:color/transparent" android:paddingLeft="@dimen/history_star_padding" android:paddingTop="@dimen/history_star_padding" android:paddingRight="@dimen/card_padding" android:paddingBottom="@dimen/history_star_padding" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_star" />
+    </LinearLayout>
+</FrameLayout>

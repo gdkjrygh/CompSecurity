@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.dialogs.PaymentDialogView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/DialogContainerView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/DialogView">
+        <ImageView android:id="@id/close_button" android:padding="@dimen/span8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_cancel_black" />
+        <TextView android:textSize="@dimen/big_text_1" android:textStyle="bold" android:id="@id/payment_dialog_title" android:paddingLeft="@dimen/span16" android:paddingTop="@dimen/span16" android:paddingRight="@dimen/span16" android:paddingBottom="@dimen/span8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payment_dialog_title" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/small_text" android:gravity="center" android:id="@id/payment_dialog_subtitle" android:paddingLeft="@dimen/span16" android:paddingRight="@dimen/span16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payment_dialog_sub_title" android:layout_below="@id/payment_dialog_title" android:layout_centerHorizontal="true" />
+        <me.lyft.android.ui.payment.cardinput.CreditCardInput android:id="@id/payment_dialog_creditcardinput" android:paddingLeft="@dimen/span16" android:paddingTop="@dimen/span16" android:paddingRight="@dimen/span16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/payment_dialog_subtitle" android:layout_centerHorizontal="true" />
+        <RelativeLayout android:id="@id/payment_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/payment_dialog_creditcardinput">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/other_payment_group" android:paddingLeft="@dimen/span16" android:paddingRight="@dimen/span16" android:paddingBottom="@dimen/span16" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="117.0dip">
+                <TextView android:textSize="@dimen/small_text" android:textStyle="italic" android:gravity="center" android:id="@id/payment_dialog_paywith" android:padding="@dimen/span16" android:layout_width="wrap_content" android:layout_height="60.0dip" android:text="@string/payment_dialog_or_pay_with" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/span48" android:layout_weight="1.0">
+                    <ImageButton android:id="@id/add_wallet_button" android:paddingTop="@dimen/span16" android:paddingBottom="@dimen/span16" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_button_wallet" android:scaleType="centerInside" android:layout_weight="0.5" style="@style/WhiteButton" />
+                    <Space android:layout_width="@dimen/span8" android:layout_height="fill_parent" />
+                    <ImageButton android:id="@id/add_paypal_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_button_paypal" android:layout_weight="0.5" style="@style/WhiteButton" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="@dimen/span16" android:paddingRight="@dimen/span16" android:paddingBottom="@dimen/span16" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/small_text" android:textStyle="italic" android:gravity="center" android:id="@id/ssl_encrypted_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="60.0dip" android:text="@string/payment_dialog_ssl_encrypted" android:drawableLeft="@drawable/ic_lock" android:drawablePadding="10.0dip" />
+                <TextView android:textSize="@dimen/big_text_3" android:gravity="center" android:id="@id/button_save_credit_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/span48" android:text="@string/save_button" style="@style/PinkButton" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</me.lyft.android.ui.dialogs.PaymentDialogView>

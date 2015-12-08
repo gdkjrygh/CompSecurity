@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/widget_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/primary_widget_background_holo_light" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:background="@color/dark_green" android:layout_width="fill_parent" android:layout_height="3.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/now_row_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:id="@id/now_row_ll" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <RelativeLayout android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textColor="@color/secondary_widget_text_light_holo" android:id="@id/now_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Now" style="@style/TextAppearance.Widget.Light.Description" />
+                    <RelativeLayout android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Widget.Icon">
+                        <ImageView android:id="@id/now_icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_06" android:layout_alignParentRight="true" />
+                        <ImageView android:id="@id/alert_icon" android:visibility="invisible" android:layout_width="@dimen/widget_alert_icon_size" android:layout_height="@dimen/widget_alert_icon_size" android:layout_marginTop="@dimen/widget_alert_icon_marginTop" android:src="@drawable/ic_alert" />
+                    </RelativeLayout>
+                    <TextView android:id="@id/now_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="68" android:layout_alignParentBottom="true" style="@style/TextAppearance.Widget.Light.Description.Large" />
+                </RelativeLayout>
+                <LinearLayout android:background="@color/widget_light_holo_divider_lines" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+                <RelativeLayout android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0">
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="top" android:layout_width="fill_parent" android:layout_height="40.0dip">
+                            <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                                <TextView android:ellipsize="end" android:id="@id/city_name" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="0.0dip" android:singleLine="true" android:includeFontPadding="false" android:layout_weight="1.0" style="@style/TextAppearance.Widget.Light.Description" />
+                                <TextView android:textSize="9.0dip" android:textColor="@color/holo_light_text_light_gray" android:id="@id/my_location_label" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/CurrentLocation_Abbr25" android:includeFontPadding="false" style="@style/TextAppearance.Widget.Light.Description.Small" />
+                            </LinearLayout>
+                            <LinearLayout android:background="@color/widget_light_holo_divider_lines" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" />
+                            <ImageButton android:id="@id/next_location" android:background="@drawable/abs__list_selector_holo_light" android:padding="6.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/widget_arrow_green" android:scaleType="centerInside" />
+                            <LinearLayout android:background="@color/widget_light_holo_divider_lines" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" />
+                            <LinearLayout android:gravity="right" android:layout_width="@dimen/widget_cell_width" android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+                        <TextView android:id="@id/primary_temperature" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.Widget.Light.Description.Large" />
+                        <TextView android:textColor="@color/secondary_widget_text_light_holo" android:id="@id/primary_realfeel" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.Widget.Light.Small" />
+                    </LinearLayout>
+                    <ImageView android:id="@id/logo" android:layout_width="wrap_content" android:layout_height="12.0dip" android:src="@drawable/accuweatherlogo_dark" android:scaleType="fitStart" android:layout_alignParentBottom="true" />
+                    <TextView android:id="@id/short_text" android:paddingRight="42.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginRight="@dimen/widget_cell_width" android:text="Today: There will be a freak storm passing" android:maxLines="2" style="@style/TextAppearance.Widget.Light.Small" />
+                    <RelativeLayout android:layout_width="@dimen/widget_icon_size" android:layout_height="@dimen/widget_icon_size" android:layout_marginTop="-4.0dip" android:layout_marginRight="-4.0dip" android:layout_alignParentRight="true">
+                        <ImageView android:id="@id/primary_icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_12" android:layout_alignParentRight="true" />
+                        <ImageView android:id="@id/alarm_icon" android:visibility="invisible" android:layout_width="@dimen/widget_alarm_icon_size" android:layout_height="@dimen/widget_alarm_icon_size" android:layout_marginTop="4.0dip" android:src="@drawable/ic_alarm" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout android:id="@id/location1_layout" android:background="@color/dark_green" android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textColor="@android:color/white" android:id="@id/location1_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.Widget.Light.Small" />
+                <ImageView android:id="@id/location1_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Widget.Icon" />
+                <TextView android:textColor="@android:color/white" android:id="@id/location1_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/TextAppearance.Widget.Light.Description" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@id/now_spacer" android:layout_width="fill_parent" android:layout_height="1.0dip">
+            <LinearLayout android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="4.0">
+                <LinearLayout android:background="@color/widget_light_holo_divider_lines" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/now_spacer_layout_0" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/hourly_ll" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <RelativeLayout android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:id="@id/hour1_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.Widget.Light.Title" />
+                <ImageView android:id="@id/hour1_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Widget.Icon" />
+                <TextView android:id="@id/hour1_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/TextAppearance.Widget.Light.Description.Large" />
+            </RelativeLayout>
+            <LinearLayout android:background="@color/widget_light_holo_divider_lines" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+            <RelativeLayout android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:id="@id/hour2_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.Widget.Light.Title" />
+                <ImageView android:id="@id/hour2_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Widget.Icon" />
+                <TextView android:id="@id/hour2_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/TextAppearance.Widget.Light.Description.Large" />
+            </RelativeLayout>
+            <LinearLayout android:background="@color/widget_light_holo_divider_lines" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+            <RelativeLayout android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:id="@id/hour3_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.Widget.Light.Title" />
+                <ImageView android:id="@id/hour3_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Widget.Icon" />
+                <TextView android:id="@id/hour3_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/TextAppearance.Widget.Light.Description.Large" />
+            </RelativeLayout>
+            <LinearLayout android:background="@color/widget_light_holo_divider_lines" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+            <RelativeLayout android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:id="@id/hour4_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.Widget.Light.Title" />
+                <ImageView android:id="@id/hour4_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Widget.Icon" />
+                <TextView android:id="@id/hour4_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/TextAppearance.Widget.Light.Description.Large" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/location2_layout" android:background="@color/dark_green" android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textColor="@android:color/white" android:id="@id/location2_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.Widget.Light.Small" />
+                <ImageView android:id="@id/location2_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Widget.Icon" />
+                <TextView android:textColor="@android:color/white" android:id="@id/location2_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/TextAppearance.Widget.Light.Description" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@id/hourly_spacer" android:layout_width="fill_parent" android:layout_height="1.0dip">
+            <LinearLayout android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="4.0">
+                <LinearLayout android:background="@color/widget_light_holo_divider_lines" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/hourly_spacer_layout_0" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/daily_ll" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <RelativeLayout android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:id="@id/daily1_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.Widget.Light.Title" />
+                <RelativeLayout android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Widget.Icon">
+                    <ImageView android:id="@id/daily1_icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_06" android:layout_alignParentRight="true" />
+                    <ImageView android:id="@id/alarm_icon_day1" android:visibility="invisible" android:layout_width="@dimen/widget_alarm_icon_size" android:layout_height="@dimen/widget_alarm_icon_size" android:src="@drawable/ic_alarm" />
+                </RelativeLayout>
+                <TextView android:id="@id/daily1_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/TextAppearance.Widget.Light.Description" />
+            </RelativeLayout>
+            <LinearLayout android:background="@color/widget_light_holo_divider_lines" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+            <RelativeLayout android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:id="@id/daily2_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.Widget.Light.Title" />
+                <RelativeLayout android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Widget.Icon">
+                    <ImageView android:id="@id/daily2_icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_06" android:layout_alignParentRight="true" />
+                    <ImageView android:id="@id/alarm_icon_day2" android:visibility="invisible" android:layout_width="@dimen/widget_alarm_icon_size" android:layout_height="@dimen/widget_alarm_icon_size" android:src="@drawable/ic_alarm" />
+                </RelativeLayout>
+                <TextView android:id="@id/daily2_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/TextAppearance.Widget.Light.Description" />
+            </RelativeLayout>
+            <LinearLayout android:background="@color/widget_light_holo_divider_lines" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+            <RelativeLayout android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:id="@id/daily3_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.Widget.Light.Title" />
+                <RelativeLayout android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Widget.Icon">
+                    <ImageView android:id="@id/daily3_icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_06" android:layout_alignParentRight="true" />
+                    <ImageView android:id="@id/alarm_icon_day3" android:visibility="invisible" android:layout_width="@dimen/widget_alarm_icon_size" android:layout_height="@dimen/widget_alarm_icon_size" android:src="@drawable/ic_alarm" />
+                </RelativeLayout>
+                <TextView android:id="@id/daily3_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/TextAppearance.Widget.Light.Description" />
+            </RelativeLayout>
+            <LinearLayout android:background="@color/widget_light_holo_divider_lines" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+            <RelativeLayout android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:id="@id/daily4_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.Widget.Light.Title" />
+                <RelativeLayout android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Widget.Icon">
+                    <ImageView android:id="@id/daily4_icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_06" android:layout_alignParentRight="true" />
+                    <ImageView android:id="@id/alarm_icon_day4" android:visibility="invisible" android:layout_width="@dimen/widget_alarm_icon_size" android:layout_height="@dimen/widget_alarm_icon_size" android:src="@drawable/ic_alarm" />
+                </RelativeLayout>
+                <TextView android:id="@id/daily4_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/TextAppearance.Widget.Light.Description" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/location3_layout" android:background="@color/dark_green" android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textColor="@android:color/white" android:id="@id/location3_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.Widget.Light.Small" />
+                <ImageView android:id="@id/location3_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Widget.Icon" />
+                <TextView android:textColor="@android:color/white" android:id="@id/location3_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/TextAppearance.Widget.Light.Description" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/background_lines" android:background="@drawable/background_lines_10_tiled" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="3.0dip" android:scaleType="fitXY" />
+</RelativeLayout>

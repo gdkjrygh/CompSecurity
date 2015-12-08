@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/id_lnr_list_edit_progress_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="top|center" android:layout_width="80.0dip" android:layout_height="80.0dip" android:indeterminate="true" android:layout_weight="3.0" />
+    </LinearLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:id="@id/id_lnr_list_edit_layout" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:minHeight="?android:actionBarSize" />
+            <LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+            <com.kohls.mcommerce.opal.modules.lnr.framework.view.component.views.LnREditText android:id="@id/id_lnr_list_edit_listnameEditTxt" android:background="@drawable/lnr_black_border" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:hint="@string/list_name" android:maxLines="1" android:singleLine="true" android:maxLength="40" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/red" android:id="@id/id_lnr_list_edit_errorTxt" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="28.0dip">
+                <Button android:textColor="@color/white" android:id="@id/id_lnr_list_edit_publicBtn" android:tag="clicked" android:background="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/list_public" android:layout_weight="1.0" />
+                <Button android:textColor="@color/black" android:id="@id/id_lnr_list_edit_privateBtn" android:tag="" android:background="@drawable/lnr_black_border" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/list_private" android:layout_weight="1.0" />
+            </LinearLayout>
+            <TextView android:textSize="14.0sp" android:id="@id/id_lnr_list_edit_listmessageTxt" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="10.0dip" android:text="@string/list_public_message" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                <TextView android:textSize="@dimen/lnr_confirmation_reminder_main_title_textsize" android:textColor="@color/lnr_createlist_cnfpage_textcolor" android:id="@id/id_lnr_list_edit_setreminder_main_titleview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/lnr_confirmation_reminder_main_title_margin_bottom" android:text="@string/lnr_createlist_cnfpage_setreminder__maintitle_text" />
+                <TextView android:textSize="@dimen/lnr_confirmation_reminder_title_textsize" android:textColor="@color/black" android:id="@id/id_lnr_list_edit_setreminder_title_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lnr_createlist_cnfpage_setreminder_title_text" />
+                <TextView android:textSize="@dimen/lnr_confirmation_reminder_desc_textsize" android:textColor="@color/lnr_list_reminder_emailmode_title_color" android:id="@id/id_lnr_list_edit_setreminder_desc_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lnr_confirmation_reminder_desc_margin_top" android:text="@string/lnr_createlist_cnfpage_setreminder_description_text" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/lnr_confirmation_budget_title_textsize" android:textColor="@color/black" android:id="@id/id_lnr_list_edit_setbudget_title_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lnr_confirmation_budget_title_margin_top" android:text="@string/lnr_createlist_cnfpage_setbudget_title_text" />
+                <TextView android:textSize="@dimen/lnr_confirmation_budget_desc_textsize" android:textColor="@color/lnr_list_reminder_emailmode_title_color" android:id="@id/id_lnr_list_edit_budget_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lnr_confirmation_budget_desc_margin_top" android:text="@string/lnr_createlist_cnfpage_setbudget_description_text" />
+            </LinearLayout>
+            <Button android:enabled="false" android:textColor="@color/white" android:id="@id/id_lnr_list_edit_saveBtn" android:background="@color/button_disable" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:text="@string/lnr_save_button_text" />
+            <Button android:textColor="@color/black" android:id="@id/id_lnr_list_edit_deleteBtn" android:background="@drawable/product_detail_button_disabled" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/lnr_delete_list_button_text" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.controls.CameraToolbar android:id="@id/camera_toolbar" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <include layout="@layout/camera_preview" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/capture_picture_panel" android:background="@color/camera_capture_panel_background" android:layout_width="@dimen/photo_capture_buttons_panel_vertical_width" android:layout_height="fill_parent">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <FrameLayout android:layout_gravity="center" android:id="@id/switch_camera_button" android:visibility="gone" android:layout_width="@dimen/span64" android:layout_height="@dimen/span64">
+                    <View android:layout_gravity="center" android:background="@drawable/ic_camera_switch_facing" android:layout_width="25.0dip" android:layout_height="20.0dip" android:layout_margin="@dimen/span8" />
+                </FrameLayout>
+            </FrameLayout>
+            <FrameLayout android:layout_gravity="center" android:id="@id/capture_button" android:layout_width="@dimen/span100" android:layout_height="@dimen/span100">
+                <View android:layout_gravity="center" android:background="@drawable/capture_button" android:layout_width="41.0dip" android:layout_height="36.0dip" android:layout_margin="@dimen/span8" />
+            </FrameLayout>
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <FrameLayout android:layout_gravity="center" android:id="@id/flash_button_frame" android:layout_width="@dimen/span64" android:layout_height="@dimen/span64">
+                    <me.lyft.android.controls.FlashButton android:layout_gravity="center" android:id="@id/flash_button" android:background="@drawable/flash_button" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

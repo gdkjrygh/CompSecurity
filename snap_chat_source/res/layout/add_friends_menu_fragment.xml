@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/add_friends_activity_layout" android:background="@android:color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_panel" style="@style/TopPanel">
+        <RelativeLayout android:id="@id/back_button_area" android:background="@drawable/action_bar_touch_selector" android:paddingRight="@dimen/default_gap_half" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/up_arrow" android:background="@drawable/aa_action_bar_up_arrow_purple" android:layout_width="9.0dip" android:layout_height="26.0dip" android:layout_marginLeft="@dimen/default_gap" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/text_size_default" android:textStyle="normal" android:textColor="@color/purple" android:id="@id/top_panel_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap" android:text="@string/add_friends_title" android:layout_toRightOf="@id/up_arrow" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:background="@color/divider_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <RelativeLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/add_friends_top_panel_bottom_border">
+        <com.emilsjolander.components.stickylistheaders.StickyListHeadersListView android:id="@id/list" android:background="@color/transparent" android:paddingLeft="@dimen/default_gap" android:clipToPadding="false" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/menuitem_background_paddedright" android:divider="@null" android:dividerHeight="0.0dip" android:layout_centerHorizontal="true" android:overScrollMode="never" />
+        <ImageView android:id="@id/image_find_friends_cover" android:padding="@dimen/default_gap_2x" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/find_friends_cover" android:scaleType="centerInside" android:layout_below="@id/list" />
+    </RelativeLayout>
+</LinearLayout>

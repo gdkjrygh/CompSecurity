@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/library_margin_column_double" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/library_title_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/library_margin_column">
+        <LinearLayout android:orientation="vertical" android:id="@id/library_info_header_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/board_follow_btn">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/section_title_iv" android:contentDescription="" style="@style/library_section_title_icon" />
+                <TextView android:textSize="@dimen/text_count_large" android:textStyle="bold" android:textColor="@color/gray_medium" android:id="@id/library_section_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/library_text_max_width" android:includeFontPadding="false" android:lineSpacingExtra="-2.0dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@id/library_section_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/library_section_count" />
+                <com.pinterest.ui.text.IconView android:id="@id/place_iv" android:layout_height="wrap_content" android:src="@drawable/ic_library_board_place" style="@style/library_board_title_icon" />
+                <com.pinterest.ui.text.IconView android:id="@id/collab_iv" android:layout_height="wrap_content" android:src="@drawable/ic_library_board_group" style="@style/library_board_title_icon" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.pinterest.activity.board.view.FollowBoardButton android:id="@id/board_follow_btn" android:visibility="gone" android:layout_marginLeft="@dimen/library_margin_column" android:minWidth="@dimen/button_text_min_width" android:layout_alignParentRight="true" style="@style/button_plain" />
+    </RelativeLayout>
+    <com.pinterest.activity.library.view.LibrarySectionGridView android:id="@id/section_grid_vw" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <org.lucasr.twowayview.TwoWayView android:id="@id/topic_list" android:paddingTop="@dimen/library_margin_med" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/search_typeahead_tail_height" android:drawSelectorOnTop="false" />
+</LinearLayout>

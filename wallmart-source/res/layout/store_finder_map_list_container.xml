@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:color="@color/white"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/store_finder_search_header" layout="@layout/store_finder_search_header" />
+    <View android:id="@id/search_header_divider" android:background="@color/divider_grey" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/store_finder_search_header" />
+    <RelativeLayout android:id="@id/map_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/search_header_divider">
+        <com.google.android.gms.maps.MapView android:id="@id/mapview" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.walmart.android.ui.SafeListView android:id="@id/store_list_view" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/default_list_selector" android:divider="@color/divider_grey" android:dividerHeight="1.0px" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/text_grey" android:id="@id/empty_list_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" />
+    </RelativeLayout>
+</RelativeLayout>

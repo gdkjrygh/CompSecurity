@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/drawer_layout" android:background="@color/dark_yellow" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ffffffff" android:gravity="center" android:id="@id/title" android:background="#ff1a237e" android:padding="@dimen/default_gap" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:id="@id/schema_view" android:padding="@dimen/default_gap" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title" />
+        <ListView android:id="@id/cursor_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="left" android:id="@id/left_drawer" android:layout_width="300.0dip" android:layout_height="fill_parent">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ffffffff" android:gravity="center" android:id="@id/left_drawer_title" android:background="#ff4a148c" android:padding="@dimen/default_gap" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Tables" />
+        <ListView android:id="@id/table_list" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:dividerHeight="0.0dip" android:choiceMode="singleChoice" android:layout_below="@id/left_drawer_title" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="right" android:id="@id/right_drawer" android:layout_width="300.0dip" android:layout_height="fill_parent">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ffffffff" android:gravity="center" android:id="@id/right_drawer_title" android:background="#ffad1457" android:padding="@dimen/default_gap" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Views" />
+        <ListView android:id="@id/virtual_table_list" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:dividerHeight="0.0dip" android:choiceMode="singleChoice" android:layout_below="@id/right_drawer_title" />
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

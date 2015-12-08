@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/code_image" android:background="@color/pharmacy_light_gray_bg" android:paddingLeft="@dimen/form_field_bigger_spacing" android:paddingTop="@dimen/form_field_bigger_spacing" android:paddingRight="@dimen/form_field_bigger_spacing" android:paddingBottom="@dimen/form_field_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/img_prescription_label" android:adjustViewBounds="true" />
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/form_field_bigger_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/code_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pharmacy_scan_to_refill_enter_numbers_description" style="@style/InstructionalText" />
+            <com.walmartlabs.ui.FloatLabel android:id="@id/prescription_number_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/form_field_spacing" android:text="@string/pharmacy_prescription_number" style="@style/FloatLabel" />
+            <EditText android:id="@id/prescription_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/pharmacy_prescription_number" android:maxLength="@integer/prescription_number_length" android:inputType="number" style="@style/FormTextField">
+                <requestFocus />
+            </EditText>
+            <com.walmartlabs.ui.FloatLabel android:id="@id/store_number_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/form_field_spacing" android:text="@string/pharmacy_store_number" style="@style/FloatLabel" />
+            <EditText android:id="@id/store_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/pharmacy_store_number" android:maxLength="@integer/store_number_max_length" android:inputType="number" android:imeOptions="actionDone" style="@style/FormTextField" />
+            <Button android:id="@id/button_continue" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/form_field_bigger_spacing" android:text="@string/continue_button" style="@style/PrimaryButton.Orange" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

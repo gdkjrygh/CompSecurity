@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/edu_card_highlight" android:layout_alignTop="@id/education_fg_card" android:layout_alignBottom="@id/education_fg_card" />
+    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/edu_card_shadow" android:layout_above="@id/education_fg_card" />
+    <RelativeLayout android:id="@id/education_fg_card" android:background="@drawable/education_background_gradient" android:clickable="true" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="bottom|center" android:orientation="vertical" android:id="@id/education_box" android:paddingLeft="@dimen/education_view_padding" android:paddingTop="@dimen/education_view_padding_top" android:paddingRight="@dimen/education_view_padding" android:paddingBottom="@dimen/education_view_padding" android:layout_width="@dimen/education_content_width" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <TextView android:gravity="center_horizontal" android:id="@id/text" android:fontFamily="sans-serif-light" style="@style/profx_text" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/button_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/education_button_side_margins" android:weightSum="2.0">
+                <Button android:textColor="@color/bt_education_back_color" android:id="@id/exit_button" android:background="@drawable/button_edu_secondary_states" style="@style/edu_card_button" />
+                <View android:id="@id/shim" android:layout_width="8.0dip" android:layout_height="8.0dip" />
+                <Button android:textColor="@color/cyan" android:id="@id/forward_button" android:background="@drawable/button_edu_primary_states" style="@style/edu_card_button" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@id/education_success_check" android:background="@drawable/success_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/education_view_padding_top" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

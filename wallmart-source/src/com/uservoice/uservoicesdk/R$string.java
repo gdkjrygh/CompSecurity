@@ -1,0 +1,185 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.uservoice.uservoicesdk;
+
+
+// Referenced classes of package com.uservoice.uservoicesdk:
+//            R
+
+public static final class 
+{
+
+    public static final int abc_action_bar_home_description = 0x7f090001;
+    public static final int abc_action_bar_home_description_format = 0x7f090054;
+    public static final int abc_action_bar_home_subtitle_description_format = 0x7f090055;
+    public static final int abc_action_bar_up_description = 0x7f090002;
+    public static final int abc_action_menu_overflow_description = 0x7f090003;
+    public static final int abc_action_mode_done = 0x7f090004;
+    public static final int abc_activity_chooser_view_see_all = 0x7f090005;
+    public static final int abc_activitychooserview_choose_application = 0x7f090006;
+    public static final int abc_search_hint = 0x7f090056;
+    public static final int abc_searchview_description_clear = 0x7f090007;
+    public static final int abc_searchview_description_query = 0x7f090008;
+    public static final int abc_searchview_description_search = 0x7f090009;
+    public static final int abc_searchview_description_submit = 0x7f09000a;
+    public static final int abc_searchview_description_voice = 0x7f09000b;
+    public static final int abc_shareactionprovider_share_with = 0x7f09000c;
+    public static final int abc_shareactionprovider_share_with_application = 0x7f09000d;
+    public static final int abc_toolbar_collapse_description = 0x7f090057;
+    public static final int app_name = 0x7f090079;
+    public static final int apply_button = 0x7f09007a;
+    public static final int auth_google_play_services_client_facebook_display_name = 0x7f090081;
+    public static final int auth_google_play_services_client_google_display_name = 0x7f090082;
+    public static final int cancel_button = 0x7f0900a0;
+    public static final int common_android_wear_notification_needs_update_text = 0x7f09000e;
+    public static final int common_android_wear_update_text = 0x7f09000f;
+    public static final int common_android_wear_update_title = 0x7f090010;
+    public static final int common_google_play_services_api_unavailable_text = 0x7f090011;
+    public static final int common_google_play_services_enable_button = 0x7f090012;
+    public static final int common_google_play_services_enable_text = 0x7f090013;
+    public static final int common_google_play_services_enable_title = 0x7f090014;
+    public static final int common_google_play_services_error_notification_requested_by_msg = 0x7f090015;
+    public static final int common_google_play_services_install_button = 0x7f090016;
+    public static final int common_google_play_services_install_text_phone = 0x7f090017;
+    public static final int common_google_play_services_install_text_tablet = 0x7f090018;
+    public static final int common_google_play_services_install_title = 0x7f090019;
+    public static final int common_google_play_services_invalid_account_text = 0x7f09001a;
+    public static final int common_google_play_services_invalid_account_title = 0x7f09001b;
+    public static final int common_google_play_services_needs_enabling_title = 0x7f09001c;
+    public static final int common_google_play_services_network_error_text = 0x7f09001d;
+    public static final int common_google_play_services_network_error_title = 0x7f09001e;
+    public static final int common_google_play_services_notification_needs_update_title = 0x7f09001f;
+    public static final int common_google_play_services_notification_ticker = 0x7f090020;
+    public static final int common_google_play_services_sign_in_failed_text = 0x7f090021;
+    public static final int common_google_play_services_sign_in_failed_title = 0x7f090022;
+    public static final int common_google_play_services_unknown_issue = 0x7f090023;
+    public static final int common_google_play_services_unsupported_text = 0x7f090024;
+    public static final int common_google_play_services_unsupported_title = 0x7f090025;
+    public static final int common_google_play_services_update_button = 0x7f090026;
+    public static final int common_google_play_services_update_text = 0x7f090027;
+    public static final int common_google_play_services_update_title = 0x7f090028;
+    public static final int common_google_play_services_updating_text = 0x7f090029;
+    public static final int common_google_play_services_updating_title = 0x7f09002a;
+    public static final int common_open_on_phone = 0x7f09002b;
+    public static final int common_signin_button_text = 0x7f09002c;
+    public static final int common_signin_button_text_long = 0x7f09002d;
+    public static final int continue_button = 0x7f0900ae;
+    public static final int empty = 0x7f0900ca;
+    public static final int loading_container_default_empty = 0x7f0901cf;
+    public static final int loading_container_default_error = 0x7f0901d0;
+    public static final int loading_container_default_error_button = 0x7f0901d1;
+    public static final int location_dialog_activate_source = 0x7f0901d2;
+    public static final int location_dialog_activate_wireless = 0x7f0901d3;
+    public static final int mock_list_entry_service_name = 0x7f0901d6;
+    public static final int network_error_message = 0x7f090282;
+    public static final int ok = 0x7f090292;
+    public static final int paging_adapter_loading = 0x7f0902b0;
+    public static final int search_hint_store = 0x7f09053f;
+    public static final int status_bar_notification_info_overflow = 0x7f090585;
+    public static final int store_finder_dialog_filter_not_applied = 0x7f090593;
+    public static final int store_finder_dialog_filter_title = 0x7f090594;
+    public static final int store_finder_dialog_find_location = 0x7f090595;
+    public static final int store_finder_dialog_invalid_location = 0x7f090596;
+    public static final int store_finder_dialog_location_fix_timeout = 0x7f090597;
+    public static final int store_finder_dialog_location_service_failed = 0x7f090598;
+    public static final int store_finder_dialog_no_stores = 0x7f090599;
+    public static final int store_finder_dialog_no_stores_with_shipping_options = 0x7f09059a;
+    public static final int store_finder_dialog_searching_location = 0x7f09059b;
+    public static final int store_finder_dialog_searching_stores = 0x7f09059c;
+    public static final int store_finder_picker_title = 0x7f09059e;
+    public static final int store_list_loading = 0x7f0905a1;
+    public static final int undo_text = 0x7f0905a7;
+    public static final int uv_admin_response_format = 0x7f0905ac;
+    public static final int uv_all_articles = 0x7f0905ad;
+    public static final int uv_all_results_filter = 0x7f0905ae;
+    public static final int uv_article = 0x7f0905af;
+    public static final int uv_article_browse_question = 0x7f0905b0;
+    public static final int uv_article_instant_answer_question = 0x7f0905b1;
+    public static final int uv_articles_filter = 0x7f0905b2;
+    public static final int uv_cancel = 0x7f0905b3;
+    public static final int uv_category = 0x7f0905b4;
+    public static final int uv_close = 0x7f0905b5;
+    public static final int uv_comment_hint = 0x7f0905b6;
+    public static final int uv_confirm = 0x7f0905b7;
+    public static final int uv_contact_continue_button = 0x7f0905b8;
+    public static final int uv_contact_hint = 0x7f0905b9;
+    public static final int uv_contact_us = 0x7f0905ba;
+    public static final int uv_display_name = 0x7f0905bb;
+    public static final int uv_email_address = 0x7f0905bc;
+    public static final int uv_email_address_hint = 0x7f0905bd;
+    public static final int uv_error = 0x7f0905be;
+    public static final int uv_failed_signin_error = 0x7f0905bf;
+    public static final int uv_feedback_forum = 0x7f0905c0;
+    public static final int uv_feedback_instructions = 0x7f0905c1;
+    public static final int uv_forgot_password = 0x7f0905c2;
+    public static final int uv_helpful_article_message_question = 0x7f0905c3;
+    public static final int uv_i_want_this = 0x7f0905c4;
+    public static final int uv_idea = 0x7f0905c5;
+    public static final int uv_idea_description_heading = 0x7f0905c6;
+    public static final int uv_idea_description_hint = 0x7f0905c7;
+    public static final int uv_idea_form_help = 0x7f0905c8;
+    public static final int uv_idea_form_title = 0x7f0905c9;
+    public static final int uv_idea_text_heading = 0x7f0905ca;
+    public static final int uv_idea_text_hint = 0x7f0905cb;
+    public static final int uv_ideas_filter = 0x7f0905cc;
+    public static final int uv_invalid_email_msg = 0x7f0905cd;
+    public static final int uv_knowledge_base = 0x7f0905ce;
+    public static final int uv_loading = 0x7f0905cf;
+    public static final int uv_matching_articles = 0x7f0905d0;
+    public static final int uv_matching_articles_and_ideas = 0x7f0905d1;
+    public static final int uv_matching_ideas = 0x7f0905d2;
+    public static final int uv_menu_search = 0x7f0905d3;
+    public static final int uv_msg_comment_posted = 0x7f0905d4;
+    public static final int uv_msg_confirm_discard_idea = 0x7f0905d5;
+    public static final int uv_msg_confirm_discard_message = 0x7f0905d6;
+    public static final int uv_msg_custom_fields_validation = 0x7f0905d7;
+    public static final int uv_msg_forgot_password = 0x7f0905d8;
+    public static final int uv_msg_idea_created = 0x7f0905d9;
+    public static final int uv_msg_subscribe = 0x7f0905da;
+    public static final int uv_msg_subscribe_success = 0x7f0905db;
+    public static final int uv_msg_ticket_created = 0x7f0905dc;
+    public static final int uv_msg_unsubscribe = 0x7f0905dd;
+    public static final int uv_msg_user_identity_validation = 0x7f0905de;
+    public static final int uv_name_hint = 0x7f0905df;
+    public static final int uv_network_error = 0x7f0905e0;
+    public static final int uv_nevermind = 0x7f0905e1;
+    public static final int uv_new_comment = 0x7f0905e2;
+    public static final int uv_next = 0x7f0905e3;
+    public static final int uv_no = 0x7f0905e4;
+    public static final int uv_none_of_these_help = 0x7f0905e5;
+    public static final int uv_password = 0x7f0905e6;
+    public static final int uv_password_dialog_title = 0x7f0905e7;
+    public static final int uv_portal_title = 0x7f0905e8;
+    public static final int uv_post_a_comment = 0x7f0905e9;
+    public static final int uv_post_an_idea = 0x7f0905ea;
+    public static final int uv_post_comment = 0x7f0905eb;
+    public static final int uv_post_idea_continue_button = 0x7f0905ec;
+    public static final int uv_posted_by_format = 0x7f0905ed;
+    public static final int uv_question_feedback_title = 0x7f0905ee;
+    public static final int uv_remove_votes = 0x7f0905ef;
+    public static final int uv_select_none = 0x7f0905f0;
+    public static final int uv_select_one = 0x7f0905f1;
+    public static final int uv_select_spinner_text = 0x7f0905f2;
+    public static final int uv_send_message = 0x7f0905f3;
+    public static final int uv_signin_dialog_ok = 0x7f0905f4;
+    public static final int uv_signin_dialog_title = 0x7f0905f5;
+    public static final int uv_status_format = 0x7f0905f6;
+    public static final int uv_submit_idea = 0x7f0905f7;
+    public static final int uv_subscribe = 0x7f0905f8;
+    public static final int uv_subscribe_dialog_title = 0x7f0905f9;
+    public static final int uv_suggestion_instant_answer_question = 0x7f0905fa;
+    public static final int uv_thanks = 0x7f0905fb;
+    public static final int uv_title_idea = 0x7f0905fc;
+    public static final int uv_unhelpful_article_message_question = 0x7f0905fd;
+    public static final int uv_value = 0x7f0905fe;
+    public static final int uv_very_yes = 0x7f0905ff;
+    public static final int uv_yes = 0x7f090600;
+    public static final int uv_your_email_address = 0x7f090601;
+    public static final int uv_your_name = 0x7f090602;
+
+    public ()
+    {
+    }
+}

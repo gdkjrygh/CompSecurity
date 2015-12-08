@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_overlay" style="@style/full_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/spacer_top" android:layout_width="fill_parent" android:layout_height="@dimen/search_topbar_height" />
+    <FrameLayout android:id="@id/spacer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.pinterest.activity.search.ui.GuidedSearchFilterTransparent android:layout_gravity="top" android:id="@id/guide" android:background="@color/transparent" android:layout_height="@dimen/search_filter_height" style="@style/wrap_view" />
+        <LinearLayout android:orientation="vertical" android:id="@id/content_view_outer" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/search_filter_content_margin_top">
+            <ImageView android:id="@id/anchor_top" android:layout_height="@dimen/search_filter_dialog_caret_height" android:src="@drawable/dialog_anchor_top" style="@style/wrap_view" />
+            <LinearLayout android:orientation="vertical" android:id="@id/content_view_wrapper" android:background="@drawable/rounded_rect_white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ListView android:id="@id/list_view" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/listview_with_divider" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

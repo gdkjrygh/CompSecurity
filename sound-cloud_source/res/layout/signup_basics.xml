@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.soundcloud.android.onboarding.auth.SignupBasicsLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/SignUp.Content">
+        <TextView android:textAppearance="?android:textAppearanceMediumInverse" android:layout_marginBottom="10.0dip" android:text="@string/onboarding_create_account" style="@style/SignUp.Info" />
+        <RelativeLayout style="@style/SignUp.LoginForm">
+            <com.soundcloud.android.view.CustomFontTextView android:id="@id/email_label" android:text="@string/email" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/SignUp.Label" />
+            <AutoCompleteTextView android:id="@id/auto_txt_email_address" android:padding="@dimen/signup_label_padding" android:hint="@string/authentication_your_email_address" android:drawablePadding="@dimen/signup_done_drawable_padding" android:layout_toRightOf="@id/email_label" android:layout_alignParentTop="true" android:inputType="textEmailAddress" android:requiresFadingEdge="0x1000" style="@style/SignUp.EmailEntry" />
+            <View android:id="@id/after_email_hr" android:layout_below="@id/email_label" android:layout_alignParentLeft="true" style="@style/SignUp.SeparatorView" />
+            <com.soundcloud.android.view.CustomFontTextView android:id="@id/password_label" android:text="@string/password" android:layout_below="@id/after_email_hr" android:layout_alignParentLeft="true" style="@style/SignUp.Label" />
+            <EditText android:id="@id/txt_choose_a_password" android:padding="@dimen/signup_label_padding" android:hint="@string/authentication_choose_a_password" android:drawablePadding="@dimen/signup_done_drawable_padding" android:layout_toRightOf="@id/password_label" android:layout_below="@id/after_email_hr" android:requiresFadingEdge="0x1000" style="@style/SignUp.TextEntry" />
+            <View android:id="@id/after_password_hr" android:layout_below="@id/password_label" android:layout_alignParentLeft="true" style="@style/SignUp.SeparatorView" />
+            <com.soundcloud.android.view.CustomFontTextView android:id="@id/age_label" android:text="@string/age" android:layout_below="@id/after_password_hr" android:layout_alignParentLeft="true" style="@style/SignUp.Label" />
+            <EditText android:id="@id/txt_enter_age" android:padding="@dimen/signup_label_padding" android:hint="@string/enter_age_hint" android:maxLength="3" android:drawablePadding="@dimen/signup_done_drawable_padding" android:layout_toRightOf="@id/age_label" android:layout_below="@id/after_password_hr" android:layout_alignParentRight="true" android:inputType="number" android:requiresFadingEdge="0x1000" style="@style/SignUp.TextEntry" />
+            <View android:id="@id/after_birthday_hr" android:layout_below="@id/age_label" android:layout_alignParentLeft="true" style="@style/SignUp.SeparatorView" />
+            <com.soundcloud.android.view.CustomFontTextView android:id="@id/gender_label" android:text="@string/gender" android:layout_below="@id/after_birthday_hr" android:layout_alignParentLeft="true" style="@style/SignUp.Label" />
+            <com.soundcloud.android.view.CustomFontTextView android:id="@id/txt_choose_gender" android:padding="@dimen/signup_label_padding" android:layout_width="wrap_content" android:hint="@string/onboarding_indicate_gender" android:layout_toRightOf="@id/gender_label" android:layout_below="@id/after_birthday_hr" android:requiresFadingEdge="0x1000" style="@style/SignUp.TextEntry" />
+            <View android:id="@id/after_enter_gender_vr" android:visibility="gone" android:layout_marginTop="@dimen/signup_label_padding" android:layout_marginBottom="@dimen/signup_label_padding" android:layout_toRightOf="@id/txt_choose_gender" android:layout_below="@id/after_birthday_hr" style="@style/SignUp.SeparatorView.Vertical" />
+            <EditText android:id="@id/txt_enter_custom_gender" android:padding="@dimen/signup_label_padding" android:visibility="gone" android:hint="@string/onboarding_custom_gender_hint" android:maxLength="16" android:layout_toRightOf="@id/after_enter_gender_vr" android:layout_below="@id/after_birthday_hr" android:requiresFadingEdge="0x1000" style="@style/SignUp.TextEntry" />
+        </RelativeLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="@dimen/tour_buttons_height" android:layout_marginTop="10.0dip">
+            <Button android:id="@id/btn_cancel" android:layout_height="@dimen/tour_buttons_height" android:layout_marginRight="10.0dip" android:text="@string/btn_cancel" style="@style/Tour.CancelButton" />
+            <Button android:id="@id/btn_signup" android:layout_height="@dimen/tour_buttons_height" android:text="@string/btn_done" style="@style/Tour.NextButton" />
+        </LinearLayout>
+        <TextView android:id="@id/txt_msg" android:layout_marginBottom="20.0dip" android:text="@string/onboarding_agreement_statement" style="@style/SignUp.Info" />
+    </LinearLayout>
+</com.soundcloud.android.onboarding.auth.SignupBasicsLayout>

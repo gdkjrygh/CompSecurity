@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.payment.ConcurSendRideReceiptsView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.controls.BackButtonToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/send_ride_receipts_group" android:background="@drawable/selectable_item" android:layout_width="fill_parent" android:layout_height="@dimen/span64">
+        <TextView android:id="@id/send_ride_receipts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span16" android:text="@string/send_ride_receipts" style="@style/PrimaryText" />
+        <Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <me.lyft.android.controls.Toggle android:id="@id/send_to_concur_toggle" android:layout_width="@dimen/span48" android:layout_height="@dimen/span36" android:layout_marginLeft="@dimen/span16" android:layout_marginRight="@dimen/span16" />
+    </LinearLayout>
+    <View style="@style/SplitterMaterial" />
+    <TextView android:textSize="@dimen/xsmall_text" android:textStyle="italic" android:gravity="center" android:id="@id/send_to_concur_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span24" android:layout_marginTop="@dimen/span16" android:layout_marginRight="@dimen/span24" android:text="@string/send_to_concur_description" style="@style/TertiaryText" />
+    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span32" android:layout_marginBottom="@dimen/span16" android:src="@drawable/ic_concur_logo_big" />
+    <Button android:id="@id/unlink_concur_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/span16" android:text="@string/unlink_concur" style="@style/WhiteButton" />
+</me.lyft.android.ui.payment.ConcurSendRideReceiptsView>

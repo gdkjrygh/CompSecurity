@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.passenger.PriceBreakdownDialogView style="@style/DialogContainerView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout style="@style/DialogWithCloseButtonView">
+        <LinearLayout android:orientation="vertical" android:padding="25.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/DialogView">
+            <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="@color/charcoal_2" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:text="Price info" />
+            <LinearLayout android:orientation="vertical" android:id="@id/items_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View android:background="@color/charcoal_2" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="7.0dip" />
+            <FrameLayout android:paddingBottom="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/charcoal_2" android:gravity="center" android:layout_gravity="left" android:id="@id/total_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total" />
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/charcoal_2" android:gravity="center" android:layout_gravity="right" android:id="@id/total_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </FrameLayout>
+            <TextView android:textSize="14.0sp" android:textStyle="italic" android:gravity="center" android:layout_gravity="center" android:id="@id/charged_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="Tips will be charged to credit card" style="@style/TertiaryText" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/blue_1" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/price_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="How price is calculated  " android:drawableRight="@drawable/caret_right_button" />
+        </LinearLayout>
+    </FrameLayout>
+    <ImageView android:id="@id/cancel_button" style="@style/CloseDialogButton" />
+</me.lyft.android.ui.passenger.PriceBreakdownDialogView>

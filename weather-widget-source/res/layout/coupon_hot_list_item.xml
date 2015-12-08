@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffeeeeee" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="@drawable/photo_pra_bg">
+        <LinearLayout android:orientation="vertical" android:background="#fffffffe" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/coupon_top_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="5.0dip">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/coupon_hot_item_logo" android:background="#ffeeeeee" android:layout_width="60.0dip" android:layout_height="60.0dip" android:scaleType="fitCenter" />
+                <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_weight="1.0">
+                    <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="15.0dip" android:textColor="#ff00a0e8" android:id="@id/coupon_hot_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <RelativeLayout android:id="@id/coupon_hot_item_code_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:layout_below="@id/coupon_hot_item_title">
+                        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="15.0dip" android:textStyle="bold|italic" android:textColor="#ff313131" android:id="@id/coupon_hot_item_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/coupon_code" android:singleLine="true" />
+                        <LinearLayout android:gravity="center" android:background="#ff00a0e8" android:padding="0.5dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginTop="1.0dip" android:layout_toRightOf="@id/coupon_hot_item_code">
+                            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="14.0dip" android:textColor="#ff313131" android:id="@id/coupon_hot_item_code_num" android:background="#ffcdedfa" android:paddingLeft="9.0dip" android:paddingRight="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/coupon_hot_item_mail_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/coupon_hot_item_title">
+                        <LinearLayout android:gravity="center" android:background="#ffea6200" android:padding="0.5dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip">
+                            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="14.0dip" android:textColor="#ff313131" android:id="@id/coupon_hot_item_mail" android:background="#fffdeacc" android:paddingLeft="9.0dip" android:paddingRight="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="print+mobile app" android:singleLine="true" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <com.go.weatherex.common.view.DashedDivider android:layout_width="fill_parent" android:layout_height="@dimen/common_classify_divider_height" android:layout_marginLeft="8.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="5.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_marginBottom="8.0dip">
+                <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="14.0dip" android:textColor="#ff707070" android:layout_gravity="center_vertical" android:id="@id/coupon_hot_item_desc" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_weight="1.0" />
+                <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXButton android:textSize="14.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/coupon_hot_save" android:background="@drawable/xh_button_blue_selector" android:layout_width="wrap_content" android:layout_height="31.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:maxWidth="98.0dip" android:minWidth="78.0dip" android:text="@string/coupon_save" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

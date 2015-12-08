@@ -1,0 +1,158 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package org.bouncycastle.asn1.pkcs;
+
+import org.bouncycastle.asn1.ASN1ObjectIdentifier;
+
+public interface PKCSObjectIdentifiers
+{
+
+    public static final ASN1ObjectIdentifier A = asn1objectidentifier;
+    public static final ASN1ObjectIdentifier B = asn1objectidentifier.b("7");
+    public static final ASN1ObjectIdentifier C = A.b("2");
+    public static final ASN1ObjectIdentifier D = asn1objectidentifier;
+    public static final ASN1ObjectIdentifier E = asn1objectidentifier.b("2");
+    public static final ASN1ObjectIdentifier F = D.b("4");
+    public static final ASN1ObjectIdentifier G = D.b("5");
+    public static final ASN1ObjectIdentifier H = D.b("7");
+    public static final ASN1ObjectIdentifier I = D.b("8");
+    public static final ASN1ObjectIdentifier J = D.b("9");
+    public static final ASN1ObjectIdentifier K = D.b("10");
+    public static final ASN1ObjectIdentifier L = D.b("11");
+    public static final ASN1ObjectIdentifier M = new ASN1ObjectIdentifier("1.2.840.113549.1.7.1");
+    public static final ASN1ObjectIdentifier N = new ASN1ObjectIdentifier("1.2.840.113549.1.7.2");
+    public static final ASN1ObjectIdentifier O = new ASN1ObjectIdentifier("1.2.840.113549.1.7.3");
+    public static final ASN1ObjectIdentifier P = new ASN1ObjectIdentifier("1.2.840.113549.1.7.4");
+    public static final ASN1ObjectIdentifier Q = new ASN1ObjectIdentifier("1.2.840.113549.1.7.5");
+    public static final ASN1ObjectIdentifier R = new ASN1ObjectIdentifier("1.2.840.113549.1.7.6");
+    public static final ASN1ObjectIdentifier S = asn1objectidentifier;
+    public static final ASN1ObjectIdentifier T = asn1objectidentifier.b("1");
+    public static final ASN1ObjectIdentifier U = S.b("2");
+    public static final ASN1ObjectIdentifier V = S.b("3");
+    public static final ASN1ObjectIdentifier W = S.b("4");
+    public static final ASN1ObjectIdentifier X = S.b("5");
+    public static final ASN1ObjectIdentifier Y = S.b("6");
+    public static final ASN1ObjectIdentifier Z = S.b("7");
+    public static final ASN1ObjectIdentifier aA = ax.b("3");
+    public static final ASN1ObjectIdentifier aB = ax.b("4");
+    public static final ASN1ObjectIdentifier aC = ax.b("5");
+    public static final ASN1ObjectIdentifier aD = ax.b("6");
+    public static final ASN1ObjectIdentifier aE = asn1objectidentifier;
+    public static final ASN1ObjectIdentifier aF = asn1objectidentifier.b("1");
+    public static final ASN1ObjectIdentifier aG = aE.b("4");
+    public static final ASN1ObjectIdentifier aH = aE.b("5");
+    public static final ASN1ObjectIdentifier aI = aE.b("10");
+    public static final ASN1ObjectIdentifier aJ = aE.b("11");
+    public static final ASN1ObjectIdentifier aK = aE.b("12");
+    public static final ASN1ObjectIdentifier aL = aE.b("47");
+    public static final ASN1ObjectIdentifier aM = aE.b("7");
+    public static final ASN1ObjectIdentifier aN = aE.b("14");
+    public static final ASN1ObjectIdentifier aO = aE.b("15");
+    public static final ASN1ObjectIdentifier aP = aE.b("16");
+    public static final ASN1ObjectIdentifier aQ = aE.b("17");
+    public static final ASN1ObjectIdentifier aR = aE.b("18");
+    public static final ASN1ObjectIdentifier aS = aE.b("19");
+    public static final ASN1ObjectIdentifier aT = aE.b("20");
+    public static final ASN1ObjectIdentifier aU = aE.b("21");
+    public static final ASN1ObjectIdentifier aV = aE.b("22");
+    public static final ASN1ObjectIdentifier aW = aE.b("23");
+    public static final ASN1ObjectIdentifier aX = aE.b("24");
+    public static final ASN1ObjectIdentifier aY = aE.b("25");
+    public static final ASN1ObjectIdentifier aZ = aE.b("26");
+    public static final ASN1ObjectIdentifier aa = S.b("8");
+    public static final ASN1ObjectIdentifier ab = S.b("9");
+    public static final ASN1ObjectIdentifier ac = S.b("13");
+    public static final ASN1ObjectIdentifier ad = S.b("14");
+    public static final ASN1ObjectIdentifier ae = S.b("15");
+    public static final ASN1ObjectIdentifier af = S.b("20");
+    public static final ASN1ObjectIdentifier ag = S.b("21");
+    public static final ASN1ObjectIdentifier ah = S.b("22.1");
+    public static final ASN1ObjectIdentifier ai = asn1objectidentifier;
+    public static final ASN1ObjectIdentifier aj = asn1objectidentifier.b("1");
+    public static final ASN1ObjectIdentifier ak = ai.b("2");
+    public static final ASN1ObjectIdentifier al = asn1objectidentifier;
+    public static final ASN1ObjectIdentifier am = asn1objectidentifier.b("1");
+    public static final ASN1ObjectIdentifier an = S.b("16.3.9");
+    public static final ASN1ObjectIdentifier ao = S.b("15.1");
+    public static final ASN1ObjectIdentifier ap = S.b("15.2");
+    public static final ASN1ObjectIdentifier aq = S.b("15.3");
+    public static final ASN1ObjectIdentifier ar = asn1objectidentifier;
+    public static final ASN1ObjectIdentifier as = asn1objectidentifier.b("2");
+    public static final ASN1ObjectIdentifier at = ar.b("4");
+    public static final ASN1ObjectIdentifier au = ar.b("9");
+    public static final ASN1ObjectIdentifier av = ar.b("23");
+    public static final ASN1ObjectIdentifier aw = ar.b("31");
+    public static final ASN1ObjectIdentifier ax = asn1objectidentifier;
+    public static final ASN1ObjectIdentifier ay = asn1objectidentifier.b("1");
+    public static final ASN1ObjectIdentifier az = ax.b("2");
+    public static final ASN1ObjectIdentifier ba = aE.b("27");
+    public static final ASN1ObjectIdentifier bb = aO;
+    public static final ASN1ObjectIdentifier bc = aP;
+    public static final ASN1ObjectIdentifier bd = aQ;
+    public static final ASN1ObjectIdentifier be = aS;
+    public static final ASN1ObjectIdentifier bf = new ASN1ObjectIdentifier("1.2.840.113549.1.9.16.5.1");
+    public static final ASN1ObjectIdentifier bg = new ASN1ObjectIdentifier("1.2.840.113549.1.9.16.5.2");
+    public static final ASN1ObjectIdentifier bh = asn1objectidentifier;
+    public static final ASN1ObjectIdentifier bi = asn1objectidentifier;
+    public static final ASN1ObjectIdentifier bj = asn1objectidentifier.b("1");
+    public static final ASN1ObjectIdentifier bk = bi.b("2");
+    public static final ASN1ObjectIdentifier bl = bi.b("3");
+    public static final ASN1ObjectIdentifier bm = bi.b("4");
+    public static final ASN1ObjectIdentifier bn = bi.b("5");
+    public static final ASN1ObjectIdentifier bo = bi.b("6");
+    public static final ASN1ObjectIdentifier bp = asn1objectidentifier;
+    public static final ASN1ObjectIdentifier bq = asn1objectidentifier.b("1");
+    public static final ASN1ObjectIdentifier br = bp.b("2");
+    public static final ASN1ObjectIdentifier bs = bp.b("3");
+    public static final ASN1ObjectIdentifier bt = bp.b("4");
+    public static final ASN1ObjectIdentifier bu = bp.b("5");
+    public static final ASN1ObjectIdentifier bv = bp.b("6");
+    public static final ASN1ObjectIdentifier bw = new ASN1ObjectIdentifier("1.2.840.113549.1.9.16.3.6");
+    public static final ASN1ObjectIdentifier bx = new ASN1ObjectIdentifier("1.2.840.113549.1.9.16.3.7");
+    public static final ASN1ObjectIdentifier d = g_.b("3");
+    public static final ASN1ObjectIdentifier e = g_.b("4");
+    public static final ASN1ObjectIdentifier g_ = asn1objectidentifier;
+    public static final ASN1ObjectIdentifier h = g_.b("7");
+    public static final ASN1ObjectIdentifier h_ = asn1objectidentifier.b("1");
+    public static final ASN1ObjectIdentifier i_ = g_.b("2");
+    public static final ASN1ObjectIdentifier j = g_.b("9");
+    public static final ASN1ObjectIdentifier j_ = g_.b("5");
+    public static final ASN1ObjectIdentifier k = g_.b("10");
+    public static final ASN1ObjectIdentifier k_ = g_.b("6");
+    public static final ASN1ObjectIdentifier l_ = g_.b("8");
+    public static final ASN1ObjectIdentifier m_ = g_.b("11");
+    public static final ASN1ObjectIdentifier n_ = g_.b("12");
+    public static final ASN1ObjectIdentifier o_ = g_.b("13");
+    public static final ASN1ObjectIdentifier p_ = g_.b("14");
+    public static final ASN1ObjectIdentifier q = asn1objectidentifier.b("1");
+    public static final ASN1ObjectIdentifier q_ = asn1objectidentifier;
+    public static final ASN1ObjectIdentifier r_ = asn1objectidentifier;
+    public static final ASN1ObjectIdentifier s_ = asn1objectidentifier.b("1");
+    public static final ASN1ObjectIdentifier t = r_.b("4");
+    public static final ASN1ObjectIdentifier u = r_.b("3");
+    public static final ASN1ObjectIdentifier v = r_.b("6");
+    public static final ASN1ObjectIdentifier w = r_.b("10");
+    public static final ASN1ObjectIdentifier x = r_.b("11");
+    public static final ASN1ObjectIdentifier y = r_.b("13");
+    public static final ASN1ObjectIdentifier z = r_.b("12");
+
+    
+    {
+        ASN1ObjectIdentifier asn1objectidentifier = new ASN1ObjectIdentifier("1.2.840.113549.1.1");
+        asn1objectidentifier = new ASN1ObjectIdentifier("1.2.840.113549.1.3");
+        asn1objectidentifier = new ASN1ObjectIdentifier("1.2.840.113549.1.5");
+        asn1objectidentifier = new ASN1ObjectIdentifier("1.2.840.113549.3");
+        asn1objectidentifier = new ASN1ObjectIdentifier("1.2.840.113549.2");
+        asn1objectidentifier = new ASN1ObjectIdentifier("1.2.840.113549.1.9");
+        asn1objectidentifier = S.b("22");
+        asn1objectidentifier = S.b("23");
+        asn1objectidentifier = new ASN1ObjectIdentifier("1.2.840.113549.1.9.16.1");
+        asn1objectidentifier = new ASN1ObjectIdentifier("1.2.840.113549.1.9.16.6");
+        asn1objectidentifier = new ASN1ObjectIdentifier("1.2.840.113549.1.9.16.2");
+        asn1objectidentifier = new ASN1ObjectIdentifier("1.2.840.113549.1.12");
+        asn1objectidentifier = asn1objectidentifier.b("10.1");
+        asn1objectidentifier = bh.b("1");
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/video_info_overlay" android:background="@drawable/remote_video_info_overlay_bg" android:paddingLeft="15.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/play_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/play_status" android:layout_centerVertical="true">
+            <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/video_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="21.0dip" android:textColor="@android:color/white" android:id="@id/author_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView android:textSize="21.0dip" android:textColor="@android:color/white" android:gravity="center" android:id="@id/error_view" android:background="#cc000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ProgressBar android:id="@id/spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</merge>

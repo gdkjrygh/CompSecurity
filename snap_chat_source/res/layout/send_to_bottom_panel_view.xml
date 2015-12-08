@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/send_to_bottom_panel_send_button" android:paddingLeft="@dimen/default_gap_half" android:paddingRight="@dimen/single_dp" android:layout_width="54.0dip" android:layout_height="wrap_content" android:src="@drawable/send_to_icon_enabled" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+    <HorizontalScrollView android:id="@id/send_to_bottom_panel_scroller" android:layout_toLeftOf="@id/send_to_bottom_panel_send_button" style="@style/BottomPanelScrollView">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/send_to_bottom_panel_text_container" android:paddingLeft="@dimen/default_gap_2x" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:textStyle="bold" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/send_to_bottom_panel_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" style="@android:style/TextAppearance.Medium" />
+            <TextView android:textSize="@dimen/send_message_help_text_size" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/send_to_bottom_panel_help_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tap_to_add_more" android:maxLines="1" android:includeFontPadding="false" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</merge>

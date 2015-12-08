@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/AccountsDialogContent">
+        <RelativeLayout android:id="@id/profile_section" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip">
+            <ProgressBar android:layout_gravity="center" android:id="@id/loading_profile_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@id/thumbnail" android:layout_width="@dimen/create_gplus_channel_dialog_thumbnail_width" android:layout_height="@dimen/create_gplus_channel_dialog_thumbnail_height" android:scaleType="centerCrop" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" />
+            <TextView android:textSize="@dimen/large_font_size" android:ellipsize="end" android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:maxLines="1" android:layout_toRightOf="@id/thumbnail" android:layout_alignParentTop="true" style="@style/AccountsDialogTextAppearanceInverse" />
+            <TextView android:textSize="@dimen/medium_font_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/gplus_profile_data" android:maxLines="1" android:layout_toRightOf="@id/thumbnail" android:layout_below="@id/name" android:layout_alignParentBottom="true" style="@style/AccountsDialogTextAppearanceInverse" />
+        </RelativeLayout>
+        <View android:layout_width="fill_parent" android:layout_height="1.0dip" style="@style/AccountsDialogSeparator" />
+        <TextView android:textSize="@dimen/small_font_size" android:autoLink="web" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="@string/gplus_channel_description" style="@style/AccountsDialogTextAppearanceInverse" />
+    </LinearLayout>
+</ScrollView>

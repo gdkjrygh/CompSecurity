@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.playsdk.views.TitleBar android:background="@drawable/goplay_action_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/goplay_actionbar_height" android:splitMotionEvents="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/action_bar_back_layout_outer" android:paddingRight="@dimen/goplay_actionbar_back_layout_padding_right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/menu_layout" android:layout_alignParentLeft="true">
+        <com.jiubang.playsdk.views.ActionBarBackLayout android:id="@id/action_bar_back_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/action_bar_back_effect_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <ImageView android:id="@id/action_bar_back_layout_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/goplay_action_bar_back" android:scaleType="fitXY" android:layout_centerVertical="true" android:contentDescription="@null" />
+                <ImageView android:id="@id/action_bar_back_layout_logo" android:layout_width="@dimen/goplay_actionbar_icon_width" android:layout_height="@dimen/goplay_actionbar_icon_width" android:layout_toRightOf="@id/action_bar_back_layout_back" android:layout_centerVertical="true" android:contentDescription="@null" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/goplay_actionbar_title_font_size" android:textColor="@color/goplay_action_bar_title" android:ellipsize="end" android:id="@id/action_bar_back_layout_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/goplay_actionbar_title_margin_left" android:singleLine="true" android:layout_toRightOf="@id/action_bar_back_effect_layout" android:layout_centerVertical="true" />
+        </com.jiubang.playsdk.views.ActionBarBackLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/menu_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <LinearLayout android:orientation="horizontal" android:id="@id/action_bar_mark_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <ImageButton android:id="@id/action_bar_menu" android:layout_width="@dimen/goplay_actionbar_btn_width" android:layout_height="fill_parent" android:src="@drawable/goplay_action_bar_menu" android:contentDescription="@null" />
+    </LinearLayout>
+</com.jiubang.playsdk.views.TitleBar>

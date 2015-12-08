@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/top_panel" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_height" android:layout_marginTop="@dimen/system_status_bar_height" android:layout_alignParentTop="true">
+        <com.snapchat.android.ui.BackButton android:textSize="@dimen/text_size_default" android:textStyle="normal" android:textColor="@color/purple" android:gravity="center_vertical" android:id="@id/stories_back_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/default_gap" android:layout_marginRight="@dimen/default_gap_half" android:text="@string/stories_title" />
+        <ViewStub android:id="@id/stories_search_stub" android:layout="@layout/stories_search" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/myfriends_action_bar_discover_button" android:layout_toRightOf="@id/stories_back_button" />
+        <ImageView android:id="@id/myfriends_action_bar_discover_button" android:background="@drawable/action_bar_discover_button" android:layout_width="@dimen/action_bar_button_size" android:layout_height="@dimen/action_bar_button_size" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/myfriends_action_bar_search_button" android:background="@drawable/action_bar_search_button_selector_purple" android:layout_width="@dimen/action_bar_button_size" android:layout_height="@dimen/action_bar_button_size" android:layout_marginRight="24.0dip" android:layout_toLeftOf="@id/myfriends_action_bar_discover_button" android:layout_centerInParent="true" android:contentDescription="@string/content_descriptor_my_friends_friends_button" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/top_panel">
+        <com.snapchat.android.ui.ptr.SnapchatPtrFrameLayout android:id="@id/stories_ptrframe" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/stories_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <android.support.v7.widget.RecyclerView android:id="@id/stories_list" android:clickable="true" android:longClickable="true" android:clipToPadding="false" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:layout_centerHorizontal="true" android:drawable="@drawable/menuitem_background" android:overScrollMode="never" />
+                <xyz.danoz.recyclerviewfastscroller.vertical.VerticalRecyclerViewFastScroller android:id="@id/stories_fast_scroller" android:paddingRight="@dimen/default_gap_half" android:layout_width="@dimen/vertical_recyclerview_fast_scroller_width" android:layout_height="fill_parent" android:layout_marginRight="@dimen/vertical_recyclerview_fast_scroller_right_margin" android:layout_alignParentRight="true" android:paddingEnd="@dimen/default_gap_half" android:layout_alignParentEnd="true" custom:rfs_barColor="@color/divider_grey" custom:rfs_handleColor="@color/purple" />
+                <com.snapchat.android.fragments.stories.StoriesScrollBar android:id="@id/stories_scroll_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                <ViewStub android:id="@id/no_stories_stub" android:layout="@layout/stories_no_stories" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </RelativeLayout>
+        </com.snapchat.android.ui.ptr.SnapchatPtrFrameLayout>
+        <ViewStub android:id="@id/no_friends_button_stub" android:layout="@layout/stories_no_friends_button" style="@style/RegistrationContinueButton" />
+        <include android:id="@id/loading_stories_from_db_progress_bar" layout="@layout/loading_progress_bar" />
+    </RelativeLayout>
+    <com.snapchat.android.stories.ui.animation.DismissAnimationView android:id="@id/story_dismiss_animation_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.snapchat.android.discover.ui.OpenChannelAnimationView android:id="@id/discover_opening_animation" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.snapchat.android.stories.ui.StorySnapViewGroup android:id="@id/story_snap_view_group" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

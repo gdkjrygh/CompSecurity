@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/color_picker" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/b_panel" android:background="@drawable/bg_popup_black" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/banner_text_size" android:textColor="@color/text_white" android:gravity="center" android:id="@id/btn_font_color_ch" android:background="@drawable/btn_select_selector" android:paddingTop="@dimen/banner_text_paddingTop" android:layout_width="wrap_content" android:layout_height="@dimen/addText_fontColor_title_height" android:scaleType="center" android:text="@string/color_color" android:drawableTop="@drawable/icon_textcolor" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/banner_text_size" android:textColor="@color/text_white" android:gravity="center" android:id="@id/btn_stroke_color_ch" android:background="@drawable/btn_select_selector" android:paddingTop="@dimen/banner_text_paddingTop" android:layout_width="wrap_content" android:layout_height="@dimen/addText_fontColor_title_height" android:scaleType="center" android:text="@string/color_border" android:drawableTop="@drawable/icon_textborder" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/banner_text_size" android:textColor="@color/text_white" android:gravity="center" android:id="@id/btn_shadow_color_ch" android:background="@drawable/btn_select_selector" android:paddingTop="@dimen/banner_text_paddingTop" android:layout_width="wrap_content" android:layout_height="@dimen/addText_fontColor_title_height" android:scaleType="center" android:text="@string/color_shadow" android:drawableTop="@drawable/icon_textshadow" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/bg_popup_black" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/seekbar_layout_alpha" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/grid_seekbar_image_height" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="10.0dip" />
+            <RelativeLayout android:id="@id/seekbar_layout_storke" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/grid_seekbar_image_height" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="10.0dip">
+                <ImageView android:id="@id/storke_icon" android:layout_width="@dimen/grid_seekbar_image_height" android:layout_height="@dimen/grid_seekbar_image_height" android:src="@drawable/icon_textborder" android:scaleType="centerCrop" android:layout_centerVertical="true" />
+                <SeekBar android:id="@id/storke_seek_bar" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:max="50" android:progressDrawable="@drawable/border_seek_bar" android:thumb="@drawable/btn_seekbar" android:layout_toRightOf="@id/storke_icon" android:layout_centerVertical="true" style="@style/seekbar_style" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/seekbar_layout_shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/grid_seekbar_image_height" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="10.0dip">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <ImageView android:id="@id/shadow_space_icon" android:layout_width="@dimen/grid_seekbar_image_height" android:layout_height="@dimen/grid_seekbar_image_height" android:src="@drawable/icon_textshadow" android:scaleType="centerCrop" android:layout_centerVertical="true" />
+                        <SeekBar android:id="@id/shadow_space_seek_bar" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:max="255" android:progressDrawable="@drawable/border_seek_bar" android:thumb="@drawable/btn_seekbar" android:layout_toRightOf="@id/shadow_space_icon" android:layout_centerVertical="true" style="@style/seekbar_style" />
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <ImageView android:id="@id/shadow_size_icon" android:layout_width="@dimen/grid_seekbar_image_height" android:layout_height="@dimen/grid_seekbar_image_height" android:src="@drawable/icon_textshadowblur" android:scaleType="centerCrop" android:layout_centerVertical="true" />
+                        <SeekBar android:id="@id/shadow_size_seek_bar" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:max="255" android:progressDrawable="@drawable/border_seek_bar" android:thumb="@drawable/btn_seekbar" android:layout_toRightOf="@id/shadow_size_icon" android:layout_centerVertical="true" style="@style/seekbar_style" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RelativeLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="2.0dip">
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+                        <ImageView android:id="@id/btn_no_stroke" android:visibility="gone" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="1.0dip" android:src="@drawable/colorpattern_transparent" />
+                        <ImageView android:id="@id/btn_no_shadow" android:visibility="gone" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="1.0dip" android:src="@drawable/colorpattern_transparent" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <HorizontalScrollView android:id="@id/cb_right_panel" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/textcolorthumb_panel" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

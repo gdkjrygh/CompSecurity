@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin_half">
+        <TextView android:textSize="@dimen/text_subhead" android:id="@id/title" android:paddingLeft="@dimen/margin" android:paddingRight="@dimen/margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" style="@style/list_cell_text" />
+        <TextView android:id="@id/see_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin_quarter" android:text="@string/explore_see_all" android:layout_toLeftOf="@id/chevron" android:layout_alignParentBottom="true" android:layout_centerVertical="true" style="@style/list_cell_subtext" />
+        <ImageView android:id="@id/chevron" android:layout_width="wrap_content" android:layout_height="@dimen/text_grid_body" android:layout_marginRight="@dimen/margin" android:src="@drawable/chevron_black" android:adjustViewBounds="true" android:layout_alignBottom="@id/see_all" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <org.lucasr.twowayview.TwoWayView android:id="@id/interest_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin" android:drawSelectorOnTop="false" />
+    <View android:id="@id/divider" style="@style/list_cell_divider" />
+</merge>

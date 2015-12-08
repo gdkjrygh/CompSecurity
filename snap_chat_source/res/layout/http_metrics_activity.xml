@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/dark_yellow" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <Button android:textSize="10.0sp" android:id="@id/order_by_timestamp_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Timestamp" android:layout_weight="1.0" />
+        <Button android:textSize="10.0sp" android:id="@id/order_by_duration_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Duration" android:layout_weight="1.0" />
+        <Button android:textSize="10.0sp" android:id="@id/order_by_sent_bytes_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Sent Bytes" android:layout_weight="1.0" />
+        <Button android:textSize="10.0sp" android:id="@id/order_by_received_bytes_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Recv Bytes" android:layout_weight="1.0" />
+        <Button android:textSize="10.0sp" android:id="@id/clear_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Clear" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ListView android:id="@id/metrics_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/button_layout" />
+</RelativeLayout>

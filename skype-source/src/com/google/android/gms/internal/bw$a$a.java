@@ -1,0 +1,57 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.gms.internal;
+
+import android.os.IBinder;
+import android.os.Parcel;
+import android.os.RemoteException;
+
+// Referenced classes of package com.google.android.gms.internal:
+//            bw, bs
+
+private static final class a
+    implements bw
+{
+
+    private IBinder a;
+
+    public final void a(bs bs1)
+        throws RemoteException
+    {
+        Parcel parcel;
+        Parcel parcel1;
+        parcel = Parcel.obtain();
+        parcel1 = Parcel.obtain();
+        parcel.writeInterfaceToken("com.google.android.gms.ads.internal.formats.client.IOnCustomTemplateAdLoadedListener");
+        if (bs1 == null)
+        {
+            break MISSING_BLOCK_LABEL_57;
+        }
+        bs1 = bs1.asBinder();
+_L1:
+        parcel.writeStrongBinder(bs1);
+        a.transact(1, parcel, parcel1, 0);
+        parcel1.readException();
+        parcel1.recycle();
+        parcel.recycle();
+        return;
+        bs1 = null;
+          goto _L1
+        bs1;
+        parcel1.recycle();
+        parcel.recycle();
+        throw bs1;
+    }
+
+    public final IBinder asBinder()
+    {
+        return a;
+    }
+
+    (IBinder ibinder)
+    {
+        a = ibinder;
+    }
+}

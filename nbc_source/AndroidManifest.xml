@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="air.com.nbcuni.com.nbcsports.liveextra" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="air.com.nbcuni.com.nbcsports.liveextra.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="air.com.nbcuni.com.nbcsports.liveextra.permission.C2D_MESSAGE"/>
+    <application android:configChanges="keyboardHidden|orientation" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.phunware.nbc.sochi.NBCSportsApplication" android:theme="@style/AppTheme">
+        <activity android:configChanges="keyboardHidden|orientation" android:icon="@mipmap/ic_launcher" android:name="air.com.nbcuni.com.nbcsports.liveextra.MainSupportWrapperActivity" android:noHistory="true" android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="watchnow" android:scheme="nbcliveapp"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="seeit" android:scheme="nbcliveapp"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="data"/>
+                <data android:scheme="sports"/>
+                <data android:scheme="nbcsportsliveextra"/>
+                <data android:scheme="air.com.nbcuni.com.nbcsports.liveextra"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="@string/cp_authority" android:exported="true" android:multiprocess="false" android:name="com.phunware.nbc.sochi.caption.provider.ClosedCaptioningStylesProvider">
+            <grant-uri-permission android:pathPattern=".*"/>
+        </provider>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="4c2eaf364cc0619b1203476f0334eae7479f5b38"/>
+        <receiver android:name="com.urbanairship.CoreReceiver"/>
+        <receiver android:name="com.urbanairship.push.GCMPushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="air.com.nbcuni.com.nbcsports.liveextra"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <service android:label="Push Notification Service" android:name="com.urbanairship.push.PushService"/>
+        <service android:label="Event Service" android:name="com.urbanairship.analytics.EventService"/>
+        <provider android:authorities="air.com.nbcuni.com.nbcsports.liveextra.urbanairship.provider" android:exported="true" android:multiprocess="true" android:name="com.urbanairship.UrbanAirshipProvider"/>
+        <meta-data android:name="DATABASE" android:value="live_extra.db"/>
+        <meta-data android:name="VERSION" android:value="1"/>
+        <meta-data android:name="QUERY_LOG" android:value="true"/>
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.nbcsports.liveextra"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.phunware.nbc.sochi.MainNavigationContentActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.nbcsports.liveextra.ui.player.PlayerActivity" android:parentActivityName="com.phunware.nbc.sochi.MainNavigationContentActivity" android:screenOrientation="landscape" android:theme="@style/Player">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.phunware.nbc.sochi.MainNavigationContentActivity"/>
+        </activity>
+        <activity android:name="com.phunware.nbc.sochi.accessenable.SelectProviderActivity"/>
+        <service android:name="com.adobe.adobepass.accessenabler.api.AccessEnablerService"/>
+        <service android:name="com.phunware.nbc.sochi.services.FavoriteReminderService"/>
+        <service android:name="com.phunware.nbc.sochi.services.GeoTrackingService"/>
+        <service android:enabled="true" android:name="com.phunware.nbc.sochi.services.TempPassService"/>
+        <activity android:name="com.phunware.nbc.sochi.CaptionStylingActivity"/>
+        <activity android:name="com.phunware.nbc.sochi.FullScreenCaptionPreviewActivity"/>
+        <receiver android:name="com.phunware.nbc.sochi.receiver.StartupReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.nbcsports.liveextra.urbanairship.IntentReceiver"/>
+        <activity android:name="com.phunware.nbc.sochi.FAQActivity"/>
+        <activity android:name="com.phunware.nbc.sochi.DisclosureActivity"/>
+        <activity android:name="com.phunware.nbc.sochi.EULAActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:name="com.phunware.nbc.sochi.accessenable.TempPassResetActivity"/>
+        <activity android:label="@string/title_activity_national_alerts_wizard" android:name="air.com.nbcuni.com.nbcsports.liveextra.NationalAlertsWizardActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.phunware.nbc.sochi.MainNavigationContentActivity"/>
+        </activity>
+        <receiver android:exported="true" android:name="com.phunware.nbc.sochi.receiver.ReferralBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@style/Theme.IAPTheme"/>
+    </application>
+</manifest>

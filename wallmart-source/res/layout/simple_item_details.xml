@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/simple_item_details_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/simple_item_details_main_container" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="Product title" style="@style/Text.Header.Multiline" />
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:layout_marginBottom="10.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+            <ImageView android:id="@id/simple_price_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:src="@drawable/store_detail_divider" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/simple_price_section" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/simple_item_details_price_title" style="@style/Text.Header" />
+                <LinearLayout android:gravity="right" android:layout_gravity="right" android:orientation="vertical" android:id="@id/priceLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/rollback" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+                    <TextView android:id="@id/price_prefix" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="From:" style="@style/Text.Caption" />
+                    <com.walmart.android.app.item.ItemPriceView android:id="@id/price" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="30.0sp" android:layout_marginTop="5.0dip" app:price="$1.23" app:decimalLeftMargin="2.0dip" app:textColor="@color/item_price" />
+                    <TextView android:id="@id/sub_price" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="See price in cart" style="@style/Text.Body" />
+                    <TextView android:id="@id/ppu" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:maxLines="2" android:lineSpacingExtra="-2.0dip" style="@style/Text.PricePerUnit" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/store_detail_divider" />
+                <TextView android:paddingLeft="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/shelf_item_description_title" style="@style/Text.Header" />
+                <TextView android:id="@id/description_text" android:paddingLeft="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" style="@style/Text.SubHeader" />
+            </LinearLayout>
+            <include layout="@layout/item_details_store_section" />
+        </LinearLayout>
+    </ScrollView>
+    <include android:id="@id/loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/loading_page" />
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/edit_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="#ff272727" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/text_edit_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/editer_text_height">
+        <FrameLayout android:id="@id/btn_cancel" android:background="@drawable/text_btn_bg" android:layout_width="@dimen/editer_btn_height" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:id="@id/btn_cancel_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_cancel" />
+        </FrameLayout>
+        <RelativeLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <EditText android:textSize="18.0sp" android:textColor="@color/black" android:gravity="top|left|center" android:id="@id/edit_text" android:background="@drawable/edit_text_bg" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:minHeight="@dimen/editer_edit_height" android:cursorVisible="true" android:drawableRight="@drawable/btn_reset" android:inputType="textMultiLine" android:textCursorDrawable="@drawable/text_cursor_holo_dark" />
+        </RelativeLayout>
+        <FrameLayout android:id="@id/btn_confirm" android:background="@drawable/text_btn_bg" android:layout_width="@dimen/editer_btn_height" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:id="@id/btn_confirm_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_confirm" />
+        </FrameLayout>
+    </LinearLayout>
+    <View android:background="#ff272727" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

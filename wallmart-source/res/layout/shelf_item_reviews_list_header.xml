@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/in_store_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:text="ProductName" style="@style/Text.Header" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/rating_review_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_below="@id/in_store_item_title" android:layout_alignLeft="@id/in_store_item_title">
+        <com.walmartlabs.ui.StarsView android:id="@id/review_header_product_stars" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" custom:starsEmptyIcon="@drawable/large_star_empty" custom:starsFullIcon="@drawable/large_star_full" />
+        <TextView android:textStyle="italic" android:textColor="@color/item_details_review_text_grey" android:id="@id/number_of_reviews" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="14 Reviews" style="@style/Text.Body" />
+    </LinearLayout>
+    <ImageView android:layout_width="fill_parent" android:layout_height="1.0px" android:src="@color/divider_grey" android:layout_below="@id/rating_review_container" />
+</RelativeLayout>

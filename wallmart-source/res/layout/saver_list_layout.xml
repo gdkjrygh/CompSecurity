@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/list_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" layout="@layout/saver_list_header_view" />
+    <com.walmart.android.ui.SafeListView android:scrollbarStyle="outsideOverlay" android:id="@id/saver_receipt_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@color/transparent" android:cacheColorHint="@color/transparent" android:divider="@null" android:layout_below="@id/header_view" android:layout_alignParentBottom="true" android:layout_alignWithParentIfMissing="true" />
+    <include android:id="@id/empty_list_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/header_view" android:layout_alignWithParentIfMissing="true" layout="@layout/saver_empty_list" />
+    <include android:id="@id/ereceipt_loading_view" layout="@layout/translucent_loading_page" />
+</RelativeLayout>

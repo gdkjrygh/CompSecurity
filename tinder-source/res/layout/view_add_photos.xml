@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <com.tinder.views.CustomTextView android:textSize="@dimen/text_xlarge" android:textColor="@color/text_dark" android:gravity="center" android:id="@id/txt_no_pics" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/no_pics_found" android:layout_centerInParent="true" app:font="semi_bold" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/grid_container" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <GridView android:layout_gravity="center" android:id="@id/grid_photos" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="@dimen/padding_xsmall" android:verticalSpacing="@dimen/padding_xsmall" android:numColumns="3" android:isScrollContainer="true" />
+    </LinearLayout>
+</RelativeLayout>

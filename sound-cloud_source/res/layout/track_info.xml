@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/artwork_overlay" android:paddingLeft="@dimen/track_info_margin_horizontal" android:paddingTop="@dimen/track_info_margin_vertical" android:paddingRight="@dimen/track_info_margin_horizontal" android:paddingBottom="@dimen/track_info_margin_vertical" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:background="@color/white" android:paddingTop="@dimen/track_info_interior_padding_top" android:paddingBottom="@dimen/track_info_interior_padding_bottom" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+            <TextView android:id="@id/creator" style="@style/TrackInfo.Text.Main.Creator" />
+            <TextView android:id="@id/title" style="@style/TrackInfo.Text.Main.Title" />
+            <com.soundcloud.android.view.CustomFontTextView android:id="@id/private_indicator" android:visibility="gone" android:layout_marginLeft="@dimen/track_info_interior_padding_horizontal" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" style="@style/ListPrivateIndicator" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/stats_holder" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/track_info_interior_padding_horizontal" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/track_info_interior_padding_horizontal" android:layout_marginBottom="18.0dip" android:animateLayoutChanges="true">
+                <TextView android:id="@id/plays" android:drawableLeft="@drawable/stats_play" style="@style/TrackInfo.Text.Stats" />
+                <View android:id="@id/divider1" style="@style/TrackInfoDivider" />
+                <TextView android:id="@id/likes" android:drawableLeft="@drawable/list_item_like" style="@style/TrackInfo.Text.Stats" />
+                <View android:id="@id/divider2" style="@style/TrackInfoDivider" />
+                <TextView android:id="@id/reposts" android:drawableLeft="@drawable/stats_repost" style="@style/TrackInfo.Text.Stats" />
+            </LinearLayout>
+            <View style="@style/Divider.Section" />
+            <FrameLayout android:id="@id/description_holder" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <include layout="@layout/track_info_comments_and_description" />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

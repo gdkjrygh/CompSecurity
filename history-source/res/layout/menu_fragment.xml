@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/home_main_layout" android:background="#ccffffff" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/menu" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <RelativeLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/top_row" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/menu_btn_margin">
+                    <Button android:id="@id/btn_places" android:background="@drawable/selector_ic_places" android:layout_width="@dimen/menu_btn_size" android:layout_height="@dimen/menu_btn_size" android:contentDescription="@string/menu_text_places" />
+                    <TextView android:textSize="15.0sp" android:typeface="sans" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/menu_text_margin_top" android:text="@string/menu_text_places" android:capitalize="characters" style="@style/MenuButtonText" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/menu_btn_margin">
+                    <Button android:id="@id/btn_tours" android:background="@drawable/selector_ic_tours" android:layout_width="@dimen/menu_btn_size" android:layout_height="@dimen/menu_btn_size" android:contentDescription="@string/menu_text_tours" />
+                    <TextView android:textSize="15.0sp" android:typeface="sans" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/menu_text_margin_top" android:text="@string/menu_text_tours" style="@style/MenuButtonText" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/bottom_row" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/top_row" android:layout_centerHorizontal="true">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/menu_btn_margin">
+                    <Button android:id="@id/btn_favorites" android:background="@drawable/selector_ic_favorites" android:layout_width="@dimen/menu_btn_size" android:layout_height="@dimen/menu_btn_size" android:contentDescription="@string/menu_text_favorites" />
+                    <TextView android:textSize="15.0sp" android:typeface="sans" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/menu_text_margin_top" android:text="@string/menu_text_favorites" style="@style/MenuButtonText" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/menu_btn_margin">
+                    <Button android:id="@id/btn_surprise_me" android:background="@drawable/selector_ic_surpriseme" android:layout_width="@dimen/menu_btn_size" android:layout_height="@dimen/menu_btn_size" android:contentDescription="@string/menu_text_surpriseme" />
+                    <TextView android:textSize="15.0sp" android:typeface="sans" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/menu_text_margin_top" android:text="@string/menu_text_surpriseme" style="@style/MenuButtonText" />
+                </LinearLayout>
+            </LinearLayout>
+            <Button android:id="@id/btn_more" android:background="@drawable/selector_ic_more" android:layout_width="@dimen/menu_btn_more_width" android:layout_height="@dimen/menu_btn_more_height" android:layout_marginTop="@dimen/margin_xx_large" android:layout_below="@id/bottom_row" android:layout_centerHorizontal="true" android:contentDescription="@string/menu_text_places" />
+            <TextView android:textSize="12.0sp" android:typeface="sans" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-6.0dip" android:text="@string/menu_text_more" android:layout_below="@id/btn_more" android:layout_centerHorizontal="true" style="@style/MenuButtonText" />
+            <include android:id="@id/tour_intro" android:visibility="invisible" android:layout_width="300.0dip" android:layout_height="wrap_content" android:layout_below="@id/top_row" layout="@layout/tour_intro" />
+        </RelativeLayout>
+    </FrameLayout>
+    <include android:id="@id/favorites_intro" android:visibility="invisible" android:layout_width="300.0dip" android:layout_height="wrap_content" android:layout_centerInParent="true" layout="@layout/favorites_intro" />
+    <FrameLayout android:id="@id/splash" android:background="#ffdddddd" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/launchscreen" android:scaleType="centerInside" />
+        <ProgressBar android:layout_gravity="center" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/sponsor" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.android.volley.toolbox.NetworkImageView android:layout_gravity="center" android:id="@id/sponsor_image" android:layout_width="250.0dip" android:layout_height="146.0dip" android:scaleType="center" />
+    </FrameLayout>
+s
+</RelativeLayout>

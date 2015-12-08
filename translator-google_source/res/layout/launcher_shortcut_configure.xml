@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/widget_config_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/widget_config_title" android:textColor="@color/primary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_create_widget" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/input_method_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/widget_config_margin">
+                <com.google.android.apps.translate.widget.ToggleImage ns:mask="@drawable/ic_keyboard_black" ns:tint="@color/icon_dark" style="@style/ToggleButtonBar" />
+                <com.google.android.apps.translate.widget.ToggleImage ns:mask="@drawable/quantum_ic_photo_camera_black_36" ns:tint="@color/icon_dark" style="@style/ToggleButtonBar" />
+                <com.google.android.apps.translate.widget.ToggleImage ns:mask="@drawable/ic_voice_black" ns:tint="@color/icon_dark" style="@style/ToggleButtonBar" />
+                <com.google.android.apps.translate.widget.ToggleImage ns:mask="@drawable/ic_handwriting_black" ns:tint="@color/icon_dark" style="@style/ToggleButtonBar" />
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/widget_config_margin" android:text="@string/label_translate_from" />
+            <Spinner android:id="@id/lang1" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/widget_config_margin" android:text="@string/label_translate_to" />
+            <Spinner android:id="@id/lang2" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/launcher_shortcut_bottom_bar" />
+</LinearLayout>

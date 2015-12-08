@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/status_bar_latest_event_content" android:background="@color/background_floating_material_dark" android:layout_width="fill_parent" android:layout_height="128.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/icon_square" android:visibility="gone" android:layout_width="@dimen/notification_expanded_art_default_height" android:layout_height="@dimen/notification_expanded_art_default_height" android:scaleType="centerCrop" android:contentDescription="@string/poster" />
+        <ImageView android:id="@id/icon_slim" android:visibility="gone" android:layout_width="@dimen/notification_expanded_art_slim_width" android:layout_height="@dimen/notification_expanded_art_default_height" android:scaleType="centerCrop" android:contentDescription="@string/poster" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_toRightOf="@id/icon">
+        <TextView android:textAppearance="@style/TextAppearance.Notification.Title" android:ellipsize="marquee" android:id="@id/title" android:paddingTop="@dimen/small_padding" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textAppearance="@style/TextAppearance.Notification.Details" android:ellipsize="marquee" android:id="@id/text2" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/media_actions" android:layout_width="fill_parent" android:layout_height="@dimen/default_icon_size" android:layout_toRightOf="@id/icon" android:layout_alignParentBottom="true">
+        <ImageButton android:gravity="center" android:id="@id/rewind" android:layout_width="@dimen/default_icon_size" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:layout_weight="1.0" style="@style/Widget.Button.Borderless" />
+        <ImageButton android:gravity="center" android:id="@id/play" android:layout_width="@dimen/default_icon_size" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:layout_weight="1.0" style="@style/Widget.Button.Borderless" />
+        <ImageButton android:gravity="center" android:id="@id/fast_forward" android:layout_width="@dimen/default_icon_size" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:layout_weight="1.0" style="@style/Widget.Button.Borderless" />
+    </LinearLayout>
+    <ImageView android:id="@id/action_divider" android:background="#29ffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_toRightOf="@id/icon" android:layout_above="@id/media_actions" />
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/first_launch_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background_lines" android:background="@drawable/background_lines_20_tiled" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <com.accuweather.android.views.TutorialProgressStrip android:id="@id/tutorialProgressIndicator" android:layout_width="fill_parent" android:layout_height="5.0dip" />
+    <ScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/button_layout" android:layout_below="@id/tutorialProgressIndicator">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/quick_setup_label_tv" android:textColor="@android:color/white" android:gravity="center" android:id="@id/quick_setup_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/QuickSetUp" />
+            <TextView android:textSize="@dimen/easy_tv" android:textColor="@android:color/white" android:gravity="center" android:id="@id/make_easy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/WellMakeItEasyForYou_exclamation" />
+            <TextView android:textSize="@dimen/you_change" android:textStyle="italic" android:textColor="@android:color/white" android:gravity="center" android:id="@id/you_can_change" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/YouCanChangeSettingsAnytimeWant_parenthesis" />
+            <TextView android:textSize="@dimen/features_tv" android:textColor="@android:color/white" android:gravity="center" android:id="@id/enable_notifications" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/EnableTemperatureNotifications" />
+            <TextView android:textSize="@dimen/descrip_tv" android:textColor="@android:color/white" android:gravity="center" android:id="@id/descrip_enable_temp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/TemperatureUpdatedNotificationBar" />
+            <TextView android:textSize="@dimen/features_tv" android:textColor="@android:color/white" android:gravity="center" android:id="@id/enable_push" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/EnableSevereWeatherAlerts" />
+            <TextView android:textSize="@dimen/descrip_tv" android:textColor="@android:color/white" android:gravity="center" android:id="@id/descrip_push" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/WeatherAlertsUpdatedNotificationBar" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="48.0dip">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <Button android:textColor="@android:color/white" android:id="@id/no_thanks_btn" android:background="@drawable/first_launch_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/NoThanks" android:layout_weight="1.0" />
+                <Button android:textColor="@android:color/white" android:id="@id/do_it_btn" android:background="@drawable/first_launch_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/DoIt_exclamation" android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:background="#ffffffff" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/branding_bar" android:layout_width="fill_parent" android:layout_height="32.0dip" layout="@layout/branding_bar_light" />
+            <com.accuweather.android.dma.CustomDmaView android:id="@id/custom_dma" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

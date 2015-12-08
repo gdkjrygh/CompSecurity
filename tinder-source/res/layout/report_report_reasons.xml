@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/line_one" style="@style/report_divider" />
+    <com.tinder.views.CustomTextView android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.tinder.views.CustomTextView android:id="@id/report_type_offensive" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/report_type_offensive_messages" android:drawableLeft="@drawable/report_dialog_messages" android:layout_toLeftOf="@id/progress_offensive" android:layout_below="@id/line_one" android:drawableStart="@drawable/report_dialog_messages" app:font="semi_bold" style="@style/report_reason" />
+    <ProgressBar android:id="@id/progress_offensive" android:layout_above="@id/line_two" android:layout_below="@id/line_one" android:layout_alignParentRight="true" style="@style/report_dialog_progress" />
+    <View android:id="@id/line_two" android:layout_below="@id/report_type_offensive" style="@style/report_divider" />
+    <com.tinder.views.CustomTextView android:id="@id/report_type_inappropiate_photos" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/report_type_inappropriate_photos" android:drawableLeft="@drawable/report_dialog_photos" android:layout_toLeftOf="@id/progress_inappropriate" android:layout_below="@id/line_two" android:drawableStart="@drawable/report_dialog_photos" app:font="semi_bold" style="@style/report_reason" />
+    <ProgressBar android:id="@id/progress_inappropriate" android:layout_above="@id/line_three" android:layout_below="@id/line_two" android:layout_alignParentRight="true" style="@style/report_dialog_progress" />
+    <View android:id="@id/line_three" android:layout_below="@id/report_type_inappropiate_photos" style="@style/report_divider" />
+    <com.tinder.views.CustomTextView android:id="@id/report_type_bad_offline_behavior" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/report_type_bad_offline_behavior" android:drawableLeft="@drawable/report_dialog_offlinebehavior" android:layout_toLeftOf="@id/progress_bad_offline_behavior" android:layout_below="@id/line_three" android:drawableStart="@drawable/report_dialog_offlinebehavior" app:font="semi_bold" style="@style/report_reason" />
+    <ProgressBar android:id="@id/progress_bad_offline_behavior" android:layout_above="@id/line_four" android:layout_below="@id/line_three" android:layout_alignParentRight="true" style="@style/report_dialog_progress" />
+    <View android:id="@id/line_four" android:layout_below="@id/report_type_bad_offline_behavior" style="@style/report_divider" />
+    <com.tinder.views.CustomTextView android:id="@id/report_type_spam" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/report_type_spam" android:drawableLeft="@drawable/report_dialog_spam" android:layout_toLeftOf="@id/progress_spam" android:layout_below="@id/line_four" android:drawableStart="@drawable/report_dialog_spam" app:font="semi_bold" style="@style/report_reason" />
+    <ProgressBar android:id="@id/progress_spam" android:layout_above="@id/line_five" android:layout_below="@id/line_four" android:layout_alignParentRight="true" style="@style/report_dialog_progress" />
+    <View android:id="@id/line_five" android:layout_below="@id/report_type_spam" style="@style/report_divider" />
+    <com.tinder.views.CustomTextView android:id="@id/report_type_other" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/report_type_other" android:drawableLeft="@drawable/report_dialog_other" android:layout_below="@id/line_five" android:drawableStart="@drawable/report_dialog_other" app:font="semi_bold" style="@style/report_reason" />
+    <View android:id="@id/line_six" android:layout_below="@id/report_type_other" style="@style/report_divider" />
+</RelativeLayout>

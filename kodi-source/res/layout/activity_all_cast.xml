@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/toolbar_default" />
+        <include layout="@layout/empty_view" />
+        <GridView android:id="@id/cast_list" android:padding="@dimen/small_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="?selectableItemBackground" android:drawSelectorOnTop="true" android:horizontalSpacing="@dimen/small_padding" android:verticalSpacing="@dimen/small_padding" android:stretchMode="columnWidth" android:numColumns="@integer/cast_grid_view_columns" android:choiceMode="none" android:fastScrollEnabled="false" />
+    </LinearLayout>
+    <fragment android:name="org.xbmc.kore.ui.NavigationDrawerFragment" android:layout_gravity="left" android:id="@id/navigation_drawer" android:layout_width="@dimen/navigation_drawer_width" android:layout_height="fill_parent" />
+</android.support.v4.widget.DrawerLayout>

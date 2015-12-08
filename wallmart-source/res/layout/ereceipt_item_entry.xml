@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/ereceipt_list_selector" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.walmart.android.ui.ImageViewExtended android:id="@id/ereceipt_item_entry_image" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_margin="10.0dip" android:src="@drawable/msco_basket_item_nophoto" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ereceipt_item_name_containter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="20.0dip" android:layout_toLeftOf="@id/ereceipt_item_entry_price_container" android:layout_toRightOf="@id/ereceipt_item_entry_image">
+        <TextView android:textSize="15.0dip" android:textColor="@color/black" android:ellipsize="end" android:id="@id/ereceipt_item_entry_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="name" android:maxLines="2" style="@style/Text.EReceipt.Light" />
+        <TextView android:textSize="12.0dip" android:textColor="@color/black" android:id="@id/ereceipt_item_entry_quantity" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Qty: 1" style="@style/Text.EReceipt.Regular" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/ereceipt_item_entry_price_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:layout_alignParentRight="true">
+        <include android:id="@id/ereceipt_item_entry_price" layout="@layout/ereceipt_price" />
+    </FrameLayout>
+</RelativeLayout>

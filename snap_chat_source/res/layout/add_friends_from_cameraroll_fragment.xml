@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/add_friends_from_cameraroll_layout" android:background="@android:color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.RecyclerView android:id="@id/thumbnail_grid" android:visibility="invisible" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/action_bar_height" />
+    <RelativeLayout android:id="@id/top_panel" style="@style/TopPanel">
+        <RelativeLayout android:id="@id/back_button_area" android:background="@drawable/action_bar_touch_selector" android:paddingRight="@dimen/default_gap_half" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/up_arrow" android:background="@drawable/aa_action_bar_up_arrow_purple" android:layout_width="9.0dip" android:layout_height="26.0dip" android:layout_marginLeft="@dimen/default_gap" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/text_size_default" android:textStyle="normal" android:textColor="@color/purple" android:id="@id/top_panel_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap" android:text="@string/add_friends_from_screenshot_title" android:layout_toRightOf="@id/up_arrow" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:background="@color/divider_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/top_panel" />
+    <RelativeLayout android:orientation="vertical" android:id="@id/loading_bar_area" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+        <TextView android:id="@id/loading_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_friends_loading_tips" />
+        <ProgressBar android:id="@id/loading_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/loading_text" style="android:attr/progressBarStyleMedium" />
+    </RelativeLayout>
+    <ViewStub android:id="@id/deeplink_notification_view" android:layout="@layout/scan_deeplink_notification" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.snapchat.android.discover.ui.OpenChannelAnimationView android:id="@id/discover_opening_animation" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

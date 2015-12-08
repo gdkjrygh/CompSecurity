@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.go.weatherex.home.current.WeatherDetailInfo android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="@dimen/brief_card_content_high_detail"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="@dimen/brief_card_content_left_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_info_left_area_margin_left" android:layout_centerVertical="true">
+        <ImageView android:id="@id/weather_detail_info_sun_moon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sun_moon" android:layout_centerHorizontal="true" android:contentDescription="@null" />
+        <TextView android:textSize="@dimen/detail_info_common_num_text_size" android:textColor="@android:color/white" android:id="@id/weather_detail_info_sun_rise" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_below="@id/weather_detail_info_sun_moon" />
+        <TextView android:textSize="@dimen/detail_info_common_num_text_size" android:textColor="@android:color/white" android:id="@id/weather_detail_info_sun_set" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_info_sun_set_margin_left" android:layout_below="@id/weather_detail_info_sun_moon" />
+    </RelativeLayout>
+    <View android:background="#ffffffff" android:layout_width="1.0px" android:layout_height="60.0dip" android:layout_marginLeft="@dimen/detail_info_middle_divider_margin_left" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/detail_info_right_area_margin_left" android:layout_marginRight="16.0dip" android:layout_centerVertical="true">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/detail_info_common_title_text_size" android:textColor="@android:color/white" android:gravity="left" android:id="@id/weather_detail_info_humidity_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/detail_humidity_ex_five" android:maxLines="2" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/detail_info_common_num_text_size" android:textColor="@android:color/white" android:id="@id/weather_detail_info_humidity_value" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/detail_info_common_title_text_size" android:textColor="@android:color/white" android:gravity="left" android:id="@id/weather_detail_info_visibility_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/detail_visibility_ex_five" android:maxLines="2" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/detail_info_common_num_text_size" android:textColor="@android:color/white" android:id="@id/weather_detail_info_visibility_value" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/detail_info_common_title_text_size" android:textColor="@android:color/white" android:gravity="left" android:id="@id/weather_detail_info_pressure_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/detail_pressure_ex_five" android:maxLines="2" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/detail_info_common_num_text_size" android:textColor="@android:color/white" android:id="@id/weather_detail_info_pressure_value" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/detail_info_common_title_text_size" android:textColor="@android:color/white" android:gravity="left" android:id="@id/weather_detail_info_dew_point_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/detail_dew_point_ex_five" android:maxLines="2" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/detail_info_common_num_text_size" android:textColor="@android:color/white" android:id="@id/weather_detail_info_dew_point_value" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/detail_info_common_title_text_size" android:textColor="@android:color/white" android:gravity="left" android:id="@id/weather_detail_info_uv_index_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/detail_uv_index_ex_five" android:maxLines="2" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/detail_info_common_num_text_size" android:textColor="@android:color/white" android:id="@id/weather_detail_info_uv_index_value" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/detail_info_common_title_text_size" android:textColor="@android:color/white" android:gravity="left" android:id="@id/weather_detail_info_rain_chance_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/detail_rain_chance_ex_five" android:maxLines="2" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/detail_info_common_num_text_size" android:textColor="@android:color/white" android:id="@id/weather_detail_info_rain_chance_value" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</com.go.weatherex.home.current.WeatherDetailInfo>

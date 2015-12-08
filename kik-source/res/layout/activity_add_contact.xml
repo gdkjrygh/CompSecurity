@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/talk_to_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/back_button_container" layout="@layout/kik_back_button" />
+    <FrameLayout android:id="@id/topbar" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/native_topbar_height" android:layout_toRightOf="@id/back_button_container" android:layout_alignParentTop="true" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="false" android:layout_below="@id/topbar">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <kik.android.widget.RobotoEditText android:textSize="16.0dip" android:id="@id/new_groupname_field" android:background="@drawable/textbox_full" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/username_textview_height" android:layout_marginLeft="16.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="16.0dip" android:hint="@string/title_kik_username" android:singleLine="true" android:inputType="textVisiblePassword" android:imeOptions="actionGo" />
+            <kik.android.widget.RobotoTextView android:textSize="16.0dip" android:textColor="@color/contacts_username_text" android:id="@id/error_occured" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="16.0dip" android:text="@string/couldnt_find_user" android:contentDescription="AUTOMATION_EXPLICIT_SEARCH_ERROR" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/native_topbar_height" android:layout_alignParentBottom="true">
+        <Button android:textSize="18.0dip" android:textColor="@xml/conversation_name_color_selector" android:gravity="center" android:id="@id/cancel_button" android:background="@xml/android_blue_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/title_cancel" android:layout_weight="0.5" />
+        <FrameLayout android:background="@drawable/content_bubble_separator_vert" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+        <Button android:textSize="18.0dip" android:textColor="@xml/add_people_done_button_selector" android:gravity="center" android:id="@id/done_button" android:background="@xml/android_blue_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/title_search" android:layout_weight="0.5" />
+    </LinearLayout>
+    <FrameLayout android:background="@drawable/nav_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/back_button_container" />
+    <FrameLayout android:background="@drawable/chatbar_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/native_topbar_height" android:layout_alignParentBottom="true" />
+</RelativeLayout>

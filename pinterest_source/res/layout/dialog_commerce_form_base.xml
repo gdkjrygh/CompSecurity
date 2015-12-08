@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_gravity="center_vertical" android:background="@drawable/commerce_activity_dialog_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pinterest.ui.notify.DialogTitleView android:id="@id/dialog_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <FrameLayout android:id="@id/dialog_content_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <View android:id="@id/button_bar_divider" android:visibility="gone" style="@style/section_item_divider" />
+        <RelativeLayout android:id="@id/button_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textStyle="normal" android:id="@id/negative_bt" android:text="@string/cancel" android:layout_alignParentLeft="true" style="@style/dialog_commerce_grey_border_button" />
+            <Button android:textStyle="bold" android:id="@id/positive_bt" android:text="@string/save" android:layout_alignParentRight="true" style="@style/dialog_commerce_blue_button" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

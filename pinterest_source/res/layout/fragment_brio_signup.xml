@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:weightSum="100.0" android:layout_centerInParent="true" style="@style/full_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="60.0">
+        <FrameLayout android:orientation="vertical" style="@style/full_view">
+            <ImageView android:layout_gravity="top|center" android:id="@id/pins_grid_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/brio_signup_wall" android:scaleType="centerCrop" />
+            <View android:layout_gravity="bottom" android:background="@drawable/white_to_transparent_gradient" android:layout_width="fill_parent" android:layout_height="100.0dip" />
+            <ImageView android:layout_gravity="bottom|center" android:id="@id/logo" android:layout_width="@dimen/brio_signup_wall_big_logo" android:layout_height="@dimen/brio_signup_wall_big_logo" android:layout_marginBottom="@dimen/brio_signup_big_logo_margin" android:src="@drawable/pinvitational_big_logo" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="100.0" android:layout_weight="40.0">
+        <Button android:textSize="14.0dip" android:textColor="@color/text_dark" android:id="@id/signup_using_email" android:layout_width="fill_parent" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin_half" android:text="@string/signup_email" style="@style/button_light_gray" />
+        <LinearLayout android:orientation="vertical" android:id="@id/prefilled_email_signup" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@id/signup_dialog" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/text_body" android:textStyle="bold" android:textColor="@color/text_dark" android:id="@id/firstlastname" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textColor="@color/text_dark" android:ellipsize="end" android:id="@id/email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/button_container" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <com.pinterest.ui.text.PButton android:layout_gravity="center" android:id="@id/user_edit" android:paddingLeft="@dimen/margin" android:paddingTop="@dimen/margin_half" android:paddingRight="@dimen/margin" android:paddingBottom="@dimen/margin_half" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/edit" style="@style/button_light_gray" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.pinterest.ui.text.PEditText android:id="@id/password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginTop="@dimen/margin_half" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin_half" android:hint="@string/password" android:inputType="textPassword" android:imeOptions="actionGo|flagNoExtractUi" style="@style/EditTextPinterest" />
+            <Button android:id="@id/signup_bt" android:layout_width="fill_parent" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/brio_signup_button_gap" android:text="@string/signup" style="@style/button_red" />
+        </LinearLayout>
+        <Button android:layout_gravity="top|center" android:id="@id/facebook" android:layout_width="fill_parent" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin_half" android:text="@string/continue_facebook" style="@style/button_social_full_inspired" />
+        <Button android:layout_gravity="top|center" android:id="@id/gplus" android:background="@drawable/button_gplus_states" android:visibility="gone" android:layout_width="fill_parent" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin_half" android:text="@string/continue_gplus" style="@style/button_social_full_inspired" />
+        <TextView android:gravity="center" android:id="@id/terms_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_double" android:layout_marginRight="@dimen/margin_double" android:layout_marginBottom="@dimen/margin_half" android:text="@string/terms_and_privacy" android:maxLines="3" android:singleLine="false" android:textAllCaps="true" style="@style/text_subtitle_large" />
+        <Button android:textSize="14.0dip" android:textColor="@color/text_dark" android:id="@id/login_bt" android:layout_width="fill_parent" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin_half" android:text="@string/login_alternative" android:textAllCaps="false" style="@style/button_light_gray" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:layout_width="@dimen/paywall_dialog_width" android:layout_height="wrap_content" indicator:cardBackgroundColor="@color/white" indicator:cardCornerRadius="@dimen/rounded_card_radius" indicator:cardPreventCornerOverlap="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:card_view="http://schemas.android.com/apk/res-auto" xmlns:design="http://schemas.android.com/apk/res-auto" xmlns:indicator="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.tinder.views.CustomTextView android:textSize="@dimen/text_dialog_title" android:textColor="@color/gray_dark" android:gravity="center" android:padding="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/whats_new" indicator:font="semi_bold" />
+        <com.tinder.views.CustomViewPager android:id="@id/whatsnew_view_pager" android:layout_width="fill_parent" android:layout_height="@dimen/whats_new_pager_size" android:overScrollMode="never" />
+        <com.viewpagerindicator.CirclePageIndicator android:id="@id/whatsnew_pager_indicator" android:padding="@dimen/padding_xxsmall" android:focusable="false" android:layout_width="fill_parent" android:layout_height="40.0dip" indicator:fillColor="@color/tinder_red" indicator:pageColor="@color/white" indicator:radius="@dimen/intro_indicator_radius" indicator:snap="false" />
+        <FrameLayout android:background="@color/tinder_red" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@id/button_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.tinder.views.CustomTextView android:textSize="@dimen/text_large" android:textColor="@color/gray" android:gravity="center" android:id="@id/skip" android:background="@drawable/selector_whats_new_skip" android:padding="@dimen/padding_large" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/skip" android:layout_weight="1.0" indicator:font="semi_bold" />
+                <com.tinder.views.CustomTextView android:textSize="@dimen/text_large" android:textColor="@color/white" android:gravity="center" android:id="@id/next" android:background="@drawable/selector_whats_new_next" android:padding="@dimen/padding_large" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/next" android:layout_weight="1.0" indicator:font="semi_bold" />
+            </LinearLayout>
+            <com.tinder.views.CustomTextView android:textSize="@dimen/text_large" android:textColor="@color/white" android:gravity="center" android:id="@id/okthanks" android:background="@drawable/selector_whats_new_next" android:padding="@dimen/padding_large" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ok_thanks" indicator:font="semi_bold" />
+        </FrameLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/profile_header" style="@style/You.Container">
+        <View style="@style/Divider.Background" />
+        <View style="@style/Divider.Section" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/header_layout" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/You.Header">
+            <com.soundcloud.android.view.CircularBorderImageView android:id="@id/image" style="@style/You.HeaderImage" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.soundcloud.android.view.CustomFontTextView android:id="@id/username" style="@style/You.HeaderText.Username" />
+                <com.soundcloud.android.view.CustomFontTextView android:id="@id/profile_link" android:text="@string/you_view_public_profile" style="@style/You.HeaderText.ProfileLink" />
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/Divider.Section" />
+        <View style="@style/Divider.Background" />
+        <View style="@style/Divider.Section" />
+        <com.soundcloud.android.view.CustomFontTextView android:id="@id/you_explore_link" android:text="@string/you_explore" style="@style/You.NavItem" />
+        <View style="@style/Divider.Item" />
+        <com.soundcloud.android.view.CustomFontTextView android:id="@id/you_activity_link" android:text="@string/you_activity" style="@style/You.NavItem" />
+        <View style="@style/Divider.Item" />
+        <com.soundcloud.android.view.CustomFontTextView android:id="@id/you_record_link" android:text="@string/you_record" style="@style/You.NavItem" />
+        <View style="@style/Divider.Section" />
+        <View style="@style/Divider.Background" />
+        <View style="@style/Divider.Section" />
+        <LinearLayout android:orientation="vertical" android:id="@id/you_offline_sync_settings_link" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.soundcloud.android.view.CustomFontTextView android:duplicateParentState="true" android:text="@string/you_offline_sync_settings" style="@style/You.NavItem" />
+            <View style="@style/Divider.Item" />
+        </LinearLayout>
+        <com.soundcloud.android.view.CustomFontTextView android:id="@id/you_notification_settings_link" android:text="@string/you_notification_settings" style="@style/You.NavItem" />
+        <View style="@style/Divider.Item" />
+        <com.soundcloud.android.view.CustomFontTextView android:id="@id/you_basic_settings_link" android:text="@string/you_basic_settings" style="@style/You.NavItem" />
+        <View style="@style/Divider.Section" />
+        <View style="@style/Divider.Background" />
+        <View style="@style/Divider.Section" />
+        <LinearLayout android:orientation="vertical" android:id="@id/you_report_bug" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.soundcloud.android.view.CustomFontTextView android:duplicateParentState="true" android:text="@string/you_report_bug" style="@style/You.NavItem" />
+            <View style="@style/Divider.Item" />
+        </LinearLayout>
+        <com.soundcloud.android.view.CustomFontTextView android:id="@id/you_help_center_link" android:text="@string/you_help_center" style="@style/You.NavItem" />
+        <View style="@style/Divider.Item" />
+        <com.soundcloud.android.view.CustomFontTextView android:id="@id/you_legal_link" android:text="@string/you_legal" style="@style/You.NavItem" />
+        <View style="@style/Divider.Section" />
+        <View style="@style/Divider.Background" />
+        <View style="@style/Divider.Section" />
+        <com.soundcloud.android.view.CustomFontTextView android:id="@id/you_sign_out_link" android:text="@string/you_sign_out" style="@style/You.NavItem" />
+        <View style="@style/Divider.Section" />
+        <TextView android:id="@id/you_version_text" style="@style/You.VersionText" />
+    </LinearLayout>
+</ScrollView>

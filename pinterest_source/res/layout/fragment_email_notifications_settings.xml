@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg_grid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/email_settings_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="@integer/width_weight_sum_base10">
+        <ScrollView android:layout_gravity="center_horizontal" android:id="@id/main_content" android:paddingTop="@dimen/actionbar_height" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="10.0">
+            <LinearLayout android:orientation="vertical" android:padding="@dimen/margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/email_notifications_options" />
+                <com.pinterest.ui.grid.AdapterFooterView android:id="@id/footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+</RelativeLayout>

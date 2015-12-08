@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/skype_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/signout_before_you_go_btn_container" style="@style/SignoutSideBySideButtons">
+        <include layout="@layout/signout_before_you_go_buttons" />
+    </LinearLayout>
+    <ScrollView android:id="@id/signout_before_you_go" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/signout_before_you_go_btn_container">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/sign_out_label_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SignoutLabelsContainer">
+            <include layout="@layout/signout_before_you_go_labels" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

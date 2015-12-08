@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:photos="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/controls" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="bottom|right|center" android:id="@id/next_button" android:paddingLeft="32.0dip" android:paddingTop="16.0dip" android:paddingRight="32.0dip" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/next_arrow_white_24" android:contentDescription="@string/photos_onboarding_next" />
+        <com.google.android.apps.photos.onboarding.PageDotsView android:layout_gravity="bottom|center" android:id="@id/page_dots" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="28.0dip" photos:dotSize="8.0dip" photos:dotColor="@color/quantum_black_secondary_text" photos:selectedDotColor="@color/quantum_white_text" />
+    </FrameLayout>
+</FrameLayout>

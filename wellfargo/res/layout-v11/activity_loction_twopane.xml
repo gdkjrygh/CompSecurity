@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:map="http://schemas.android.com/apk/res-auto">
+    <View android:background="@drawable/atm_title_background" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <RelativeLayout android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/wf_primary_green" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tablet_action_atm_and" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/WFHeadline" />
+        <ProgressBar android:id="@id/search_in_progress" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@android:style/Widget.ProgressBar.Small" />
+    </RelativeLayout>
+    <View android:background="@drawable/atm_title_dropshadow_line" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <View android:background="@drawable/atm_title_dropshadow" android:layout_width="fill_parent" android:layout_height="5.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip" android:baselineAligned="false" android:divider="?android:dividerHorizontal" android:showDividers="middle">
+        <RelativeLayout android:orientation="horizontal" android:id="@id/location_list_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/atms_tab_weight">
+            <fragment android:name="com.wf.wellsfargomobile.locations.LocationTabListFragment" android:id="@id/loction_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/location_map_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/atms_map_weight">
+            <fragment android:id="@id/resultMap" android:layout_width="fill_parent" android:layout_height="fill_parent" map:uiZoomControls="true" map:uiZoomGestures="true" class="com.google.android.gms.maps.SupportMapFragment" />
+            <ImageView android:id="@id/location_list_toggle_button" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/accts_pannel_tab_opened" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:onClick="toggleList" android:contentDescription="@string/loc_close_tab" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

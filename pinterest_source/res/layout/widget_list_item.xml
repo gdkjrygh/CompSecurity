@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="@dimen/pin_grid_side_padding" android:paddingRight="@dimen/pin_grid_side_padding" style="@style/fullline_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/widget_selectable_bg" android:foreground="@drawable/card_fg" style="@style/fullline_view">
+        <LinearLayout android:orientation="vertical" android:id="@id/item_container" style="@style/fullline_view">
+            <LinearLayout android:orientation="vertical" android:id="@id/pin_container" android:background="@drawable/touch_clear_bg" style="@style/fullline_view">
+                <ImageView android:layout_gravity="center" android:id="@id/pin_iv" android:scaleType="centerCrop" android:minHeight="@dimen/widget_stack_photo_height" style="@style/full_view" />
+                <TextView android:textSize="@dimen/text_grid_body" android:textColor="@color/text_dark" android:ellipsize="end" android:id="@id/desc_tv" android:visibility="gone" android:layout_margin="@dimen/margin" android:maxLines="3" android:lineSpacingMultiplier="1.12" style="@style/fullline_view" />
+                <include layout="@layout/widget_list_item_countbar" />
+                <TextView style="@style/list_cell_divider" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/user_board_container" android:background="@drawable/touch_clear_bg" android:padding="@dimen/margin" style="@style/fullline_view">
+                <FrameLayout android:background="@drawable/rounded_rect_gray" android:layout_marginRight="@dimen/margin" android:foreground="@drawable/card_fg" style="@style/wrap_view">
+                    <ImageView android:id="@id/user_iv" style="@style/thumbnail_image" />
+                </FrameLayout>
+                <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/text_container" style="@style/wrap_view">
+                    <TextView android:id="@id/name_tv" android:layout_marginBottom="0.0dip" style="@style/widget_user" />
+                    <TextView android:id="@id/board_tv" style="@style/widget_board" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

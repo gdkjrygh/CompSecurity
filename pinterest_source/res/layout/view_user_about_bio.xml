@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/info" android:paddingLeft="@dimen/margin" android:paddingTop="@dimen/list_cell_padding_topbottom" android:paddingRight="@dimen/margin" android:paddingBottom="@dimen/list_cell_padding_topbottom" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/list_cell_compact_height" android:layout_weight="1.0" android:layout_centerVertical="true">
+        <TextView android:id="@id/user_about" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/list_cell_padding_topbottom" android:lineSpacingMultiplier="1.2" />
+        <com.pinterest.ui.text.PTextView android:id="@id/user_location" style="@style/profile_about_location_lbl" />
+    </LinearLayout>
+    <include layout="@layout/view_user_edit" />
+    <TextView android:id="@id/add_profile" android:paddingLeft="@dimen/margin" android:paddingTop="@dimen/list_cell_padding_topbottom" android:paddingRight="@dimen/margin" android:paddingBottom="@dimen/list_cell_padding_topbottom" android:text="@string/write_yourself" style="@style/about_add_text" />
+</merge>

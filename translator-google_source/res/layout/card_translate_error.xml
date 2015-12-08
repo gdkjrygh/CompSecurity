@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="@dimen/card_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_error" />
+    <TextView android:textColor="@color/secondary_text" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/msg_translation_error" />
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/clickable_text" android:id="@id/btn_retry" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_retry" />
+    <TextView android:textColor="@color/secondary_text" android:id="@id/error_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:textIsSelectable="true" />
+    <TextView android:textColor="@color/secondary_text" android:id="@id/error_detail" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:textIsSelectable="true" />
+    <LinearLayout android:gravity="left" android:orientation="vertical" android:id="@id/lyt_action" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+        <Button android:textAppearance="?android:textAppearance" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/btn_action" android:background="@drawable/kennedy_blue_button" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="0.0dip" android:text="@string/label_download_lang" />
+        <TextView android:textColor="@color/primary_text" android:id="@id/msg_download_added" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/msg_download_added" />
+    </LinearLayout>
+</LinearLayout>

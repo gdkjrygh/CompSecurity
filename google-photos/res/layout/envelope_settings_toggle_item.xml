@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/text_container" android:padding="@dimen/photos_envelope_settings_components_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/toggle_container">
+            <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/quantum_text_subhead_black" />
+            <TextView android:textColor="@color/quantum_black_secondary_text" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/quantum_text_body_1_black" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@id/toggle_container" android:padding="@dimen/photos_envelope_settings_components_padding" android:paddingLeft="@dimen/photos_envelope_settings_components_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignTop="@id/text_container" android:layout_alignBottom="@id/text_container" android:layout_alignParentRight="true">
+            <Switch android:gravity="center_vertical" android:id="@id/toggle" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+    <include layout="@layout/recycler_view_settings_divider" />
+</LinearLayout>

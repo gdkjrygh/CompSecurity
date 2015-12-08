@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/TopPanel">
+        <RelativeLayout android:id="@id/settings_back_button_area" android:background="@drawable/action_bar_touch_selector" android:paddingRight="@dimen/default_gap" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/up_arrow" android:background="@drawable/aa_action_bar_up_arrow_green" android:layout_width="9.0dip" android:layout_height="26.0dip" android:layout_marginLeft="@dimen/default_gap" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/text_size_default" android:textStyle="normal" android:textColor="@color/green" android:id="@id/settings_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap" android:text="@string/settings_snapchat_beta" android:layout_toRightOf="@id/up_arrow" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:background="@color/divider_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <ScrollView android:id="@id/beta_features_scrollview" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap_2x" android:layout_marginRight="@dimen/default_gap_2x">
+            <LinearLayout android:id="@id/google_plus" android:layout_height="?android:listPreferredItemHeight" style="@style/settings_item_outer">
+                <TextView android:text="@string/settings_google_plus" style="@style/settings_item_name" />
+                <TextView android:text="@string/settings_google_plus_description" style="@style/settings_item_text" />
+            </LinearLayout>
+            <include layout="@layout/list_separator" />
+            <LinearLayout android:id="@id/opt_out" android:layout_height="?android:listPreferredItemHeight" style="@style/settings_item_outer">
+                <TextView android:text="@string/settings_beta_opt_out" style="@style/settings_item_name" />
+                <TextView android:text="@string/settings_beta_opt_out_description" style="@style/settings_item_text" />
+            </LinearLayout>
+            <TextView android:text="CURRENTLY BEING TESTED" style="@style/settings_section_header" />
+            <include layout="@layout/settings_header_separator" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout style="@style/settings_item_outer">
+                    <TextView android:text="Save Entire Story to Gallery.\nThis Beta allows you to save your entire story to your photo gallery.\n\nData Usage improvements\nImprovements to how much data Snapchat uses" style="@style/settings_item_name" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

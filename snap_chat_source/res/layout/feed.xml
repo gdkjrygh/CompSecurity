@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:background="@color/green" android:clickable="true" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/feed_background_stub" android:layout="@layout/feed_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <com.snapchat.android.ui.ptr.SnapchatPtrFrameLayout android:id="@id/feed_ptr_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/top_panel">
+        <android.support.v7.widget.RecyclerView android:id="@id/feed_recycler_view" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="@android:color/white" android:divider="@null" />
+    </com.snapchat.android.ui.ptr.SnapchatPtrFrameLayout>
+    <FrameLayout android:id="@id/feed_notification_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/top_panel" />
+    <RelativeLayout android:id="@id/top_panel" android:background="@color/green" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_height" android:layout_alignParentTop="true">
+        <RelativeLayout android:id="@id/feed_back_button_area" android:background="@drawable/action_bar_touch_selector" android:paddingRight="@dimen/default_gap" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/up_arrow" android:background="@drawable/aa_action_bar_up_arrow" android:layout_width="9.0dip" android:layout_height="26.0dip" android:layout_marginLeft="@dimen/default_gap" android:layout_centerVertical="true" />
+            <Button android:id="@id/feed_logo" android:background="@drawable/aa_snapchat_text_logo" android:layout_width="115.0dip" android:layout_height="30.5dip" android:layout_marginLeft="@dimen/default_gap" android:layout_toRightOf="@id/up_arrow" android:layout_centerVertical="true" style="@style/TopPanelTitle" />
+            <ViewStub android:id="@id/feed_number_of_snaps_stub" android:layout="@layout/feed_number_of_snaps" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/default_gap" android:layout_toRightOf="@id/up_arrow" />
+        </RelativeLayout>
+        <ViewStub android:id="@id/feed_search_stub" android:layout="@layout/feed_search" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toRightOf="@id/feed_back_button_area" />
+        <ImageButton android:id="@id/feed_search_button" android:background="@drawable/action_bar_search_button_selector_white" android:layout_width="@dimen/action_bar_button_size" android:layout_height="@dimen/action_bar_button_size" android:layout_marginLeft="@dimen/action_bar_button_margin" android:layout_marginRight="@dimen/action_bar_button_margin" android:layout_toLeftOf="@id/feed_chat_button" android:layout_centerVertical="true" />
+        <ImageButton android:id="@id/feed_chat_button" android:background="@drawable/chat_with_button_selector" android:layout_width="21.699982dip" android:layout_height="26.0dip" android:layout_marginLeft="@dimen/action_bar_button_margin" android:layout_marginRight="@dimen/action_bar_button_margin" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ViewStub android:id="@id/feed_no_snaps_stub" android:layout="@layout/feed_no_snaps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <ViewStub android:id="@id/feed_no_search_results_stub" android:layout="@layout/feed_no_search_results" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/top_panel" />
+    <ViewStub android:id="@id/upgrade_prompt_stub" android:layout="@layout/feed_upgrade_prompt" android:layout_width="fill_parent" android:layout_height="@dimen/upgrade_notification_height" android:layout_alignParentTop="true" />
+    <ViewStub android:id="@id/snap_dismiss_animation_stub" android:layout="@layout/dismiss_animation_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

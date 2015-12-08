@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#fff8f8f8" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <FrameLayout android:id="@id/feed_comments_namelist" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/image_merger_title_height" />
+        <ProgressBar android:id="@id/feed_comments_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <com.roidapp.cloudlib.sns.modifiedrefresh.SwipeRefreshLayout2 android:id="@id/feed_comments_refreshlayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:id="@id/feed_comments_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@color/sns_split_color" android:dividerHeight="1.0dip" android:headerDividersEnabled="false" android:footerDividersEnabled="false" />
+        </com.roidapp.cloudlib.sns.modifiedrefresh.SwipeRefreshLayout2>
+    </RelativeLayout>
+    <View android:background="@color/sns_split_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/feed_comments_submit_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:minHeight="40.0dip">
+        <EditText android:textColor="@color/black" android:id="@id/feed_comments_submit_content" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:maxHeight="150.0dip" android:hint="@string/cloud_comments_add_hint" android:singleLine="false" android:layout_weight="1.0" android:inputType="text" android:imeOptions="actionSend" android:textCursorDrawable="@null">
+            <requestFocus />
+        </EditText>
+        <ImageView android:id="@id/feed_comments_submit_icon" android:layout_width="40.0dip" android:layout_height="fill_parent" android:src="@drawable/cloudlib_icon_comment_send_null" />
+    </LinearLayout>
+</LinearLayout>

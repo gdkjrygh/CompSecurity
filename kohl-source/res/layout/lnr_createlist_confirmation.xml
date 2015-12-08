@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/layout1" android:background="@color/lnr_createlist_cnfpage_bgcolor" android:paddingLeft="@dimen/lnr_createlist_cnfpage_paddingleft" android:paddingRight="@dimen/lnr_createlist_cnfpage_paddingright" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:minHeight="?android:actionBarSize" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/black" android:id="@id/id_lnr_createlist_cnfpage_confirm_message_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/lnr_createlist_confirmation_message" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/lnr_createlist_cnfpage_textcolor" android:id="@id/id_lnr_createlist_cnfpage_list_type_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_toRightOf="@id/id_lnr_createlist_cnfpage_list_name_textview" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/black" android:ellipsize="end" android:id="@id/id_lnr_createlist_cnfpage_list_name_textview" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxLines="1" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="26.0dip">
+                <TextView android:textSize="@dimen/lnr_confirmation_reminder_main_title_textsize" android:textColor="@color/lnr_createlist_cnfpage_textcolor" android:id="@id/id_lnr_createlist_cnfpage_setreminder_main_titleview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/lnr_confirmation_reminder_main_title_margin_bottom" android:text="@string/lnr_createlist_cnfpage_setreminder__maintitle_text" />
+                <TextView android:textSize="@dimen/lnr_confirmation_reminder_title_textsize" android:textColor="@color/black" android:id="@id/id_lnr_createlist_cnfpage_setreminder_title_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lnr_createlist_cnfpage_setreminder_title_text" />
+                <TextView android:textSize="@dimen/lnr_confirmation_reminder_desc_textsize" android:textColor="@color/lnr_list_reminder_emailmode_title_color" android:id="@id/id_lnr_createlist_cnfpage_setreminder_desc_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lnr_confirmation_reminder_desc_margin_top" android:text="@string/lnr_createlist_cnfpage_setreminder_description_text" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/lnr_confirmation_budget_title_textsize" android:textColor="@color/black" android:id="@id/id_lnr_createlist_cnfpage_setbudget_title_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lnr_confirmation_budget_title_margin_top" android:text="@string/lnr_createlist_cnfpage_setbudget_title_text" />
+                <TextView android:textSize="@dimen/lnr_confirmation_budget_desc_textsize" android:textColor="@color/lnr_list_reminder_emailmode_title_color" android:id="@id/id_cnf_budget_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lnr_confirmation_budget_desc_margin_top" android:text="@string/lnr_createlist_cnfpage_setbudget_description_text" />
+            </LinearLayout>
+            <LinearLayout android:background="@color/lnr_createlist_cnfpage_hline_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="30.0dip" android:layout_marginBottom="15.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/layout2" android:background="@color/lnr_createlist_cnfpage_bgcolor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/layout1">
+            <LinearLayout android:orientation="horizontal" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textColor="@color/black" android:id="@id/id_lnr_createlist_cnfpage_additem_textView" android:paddingLeft="@dimen/lnr_createlist_cnfpage_paddingleft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:maxLines="1" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/black" android:ellipsize="end" android:id="@id/id_lnr_createlist_cnfpage_additem_textView_value" android:paddingRight="@dimen/lnr_createlist_cnfpage_paddingright" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="12.0dip" android:maxLines="1" />
+            </LinearLayout>
+            <LinearLayout android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/search_header" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout3" android:paddingLeft="@dimen/lnr_createlist_cnfpage_paddingleft" android:paddingRight="@dimen/lnr_createlist_cnfpage_paddingright" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_below="@id/layout2">
+            <Button android:textSize="16.0sp" android:textColor="@android:color/white" android:id="@id/id_lnr_createlist_cnfpage_goshopping_btn" android:background="@color/button_enable" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginBottom="21.0dip" android:text="@string/lnr_goshopping_button_text" />
+            <Button android:textSize="16.0sp" android:textColor="@android:color/white" android:id="@id/id_lnr_createlist_cnfpage_mylist_btn" android:background="@color/button_enable" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginBottom="20.0dip" android:text="@string/lnr_my_lists_button_text" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/address_loader" android:background="@android:color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignTop="@id/layout1" android:layout_alignBottom="@id/layout3">
+            <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:progressDrawable="@android:color/black" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

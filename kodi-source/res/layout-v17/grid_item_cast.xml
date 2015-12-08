@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/image_grid_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/picture" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/cast_name_group" android:background="?contentBackgroundColor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:layout_alignParentStart="true">
+        <TextView android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/TextAppearance.Media.Cast" />
+        <TextView android:textColor="?appTextColorSecondary" android:id="@id/role" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/TextAppearance.Media.Cast" />
+    </LinearLayout>
+    <RelativeLayout android:orientation="vertical" android:id="@id/all_cast_group" android:background="?contentBackgroundColor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@android:id/icon" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="?iconOpenInNew" android:layout_centerVertical="true" />
+        <TextView android:gravity="center_horizontal" android:id="@id/remaining_cast_count" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@android:id/icon" style="@style/TextAppearance.Media.Info" />
+    </RelativeLayout>
+</RelativeLayout>

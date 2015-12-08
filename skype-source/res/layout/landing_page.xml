@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/skype_blue" android:paddingTop="@dimen/sign_in_header_logo_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/sign_in_header" layout="@layout/sign_in_header" style="@style/SignInHeaderVisibility" />
+    <RelativeLayout android:id="@id/create_acct_btn" android:background="@drawable/square_blue_btn_focus_selector" android:focusable="true" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="@dimen/landing_create_height" android:layout_alignParentBottom="true" android:contentDescription="@string/header_create_account">
+        <TextView android:textSize="@dimen/landing_create_account_font" android:textStyle="bold" android:textColor="@color/main_light_color" android:id="@id/create_account_label" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/header_create_account" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/create_acct_btn" android:layout_below="@id/sign_in_header" android:layout_alignWithParentIfMissing="true">
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/sign_in_content" android:paddingTop="@dimen/landing_logo_spacing" android:layout_height="wrap_content" style="@style/SigninContent">
+            <TextView android:textSize="@dimen/landing_sign_in_font" android:textColor="@color/main_light_color" android:layout_gravity="center_horizontal" android:id="@id/sign_in_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/landing_button_margin" android:text="@string/action_sign_in" android:textIsSelectable="false" />
+            <Button android:id="@id/sign_in_skype_btn" android:layout_width="@dimen/sign_in_button_max_width" android:layout_height="@dimen/rounded_button_height" android:layout_marginTop="@dimen/landing_button_margin" android:layout_marginBottom="@dimen/landing_button_margin" android:text="@string/text_signin_with_skype_account" style="@style/ButtonOnBluePositive" />
+            <Button android:id="@id/sign_in_ms_btn" android:layout_width="@dimen/sign_in_button_max_width" android:layout_height="@dimen/rounded_button_height" android:layout_marginTop="@dimen/landing_button_margin" android:layout_marginBottom="@dimen/landing_button_margin" android:text="@string/text_signin_with_ms_account" style="@style/ButtonOnBluePositive" />
+            <include android:id="@id/landing_page_footer" layout="@layout/landing_page_footer" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

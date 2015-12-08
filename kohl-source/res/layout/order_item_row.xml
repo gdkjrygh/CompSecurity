@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/loyalty_page_left_margin" android:layout_marginTop="@dimen/loyalty_page_top_margin" android:layout_marginRight="@dimen/loyalty_page_right_margin" android:layout_marginBottom="@dimen/loyalty_page_botom_margin">
+        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldTextView android:id="@id/transaction_producttitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Product Title" style="@style/LoyaltyHeaderStyle" />
+        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:id="@id/transaction_sku" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SKU:" android:layout_below="@id/transaction_producttitle" style="@style/LoyaltyTextStyle" />
+        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:id="@id/transaction_qty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Qty" android:layout_below="@id/transaction_sku" android:layout_alignLeft="@id/transaction_sku" style="@style/LoyaltyTextStyle" />
+        <TextView android:id="@id/transaction_order_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Price:" android:layout_below="@id/transaction_qty" style="@style/LoyaltyTextStyle" />
+    </RelativeLayout>
+</LinearLayout>

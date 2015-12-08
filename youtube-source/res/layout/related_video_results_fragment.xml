@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/related_fragment_header" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <LinearLayout android:orientation="vertical" android:id="@id/header" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/small_font_size" android:textColor="#ff666666" android:ellipsize="end" android:id="@id/watched" android:paddingLeft="12.0dip" android:paddingTop="8.0dip" android:paddingRight="12.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/watched" android:maxLines="1" android:includeFontPadding="false" yt:robotoFont="regular" yt:allCaps="true" />
+        <View android:id="@id/separator" android:background="#ffe1e1e1" android:layout_width="fill_parent" android:layout_height="@dimen/card_separator_height" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <com.google.android.apps.youtube.app.ui.SelectorOnTopFrameLayout android:id="@id/watched_video" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="14.0dip" android:paddingTop="10.0dip" android:paddingRight="14.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+                <com.google.android.apps.youtube.core.ui.FixedAspectRatioFrameLayout android:id="@id/thumbnail_layout" android:background="@drawable/bg_video_thumb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="@integer/related_fragment_header_thumbnail_weight" yt:aspectRatio="@fraction/aspect_ratio_16_9">
+                    <ImageView android:id="@id/thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+                </com.google.android.apps.youtube.core.ui.FixedAspectRatioFrameLayout>
+                <LinearLayout android:gravity="top|left|center" android:orientation="vertical" android:id="@id/metadata_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_weight="@integer/related_fragment_header_metadata_weight">
+                    <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/detailed_video_title_font_size" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/title" android:paddingRight="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:includeFontPadding="false" yt:robotoFont="light" />
+                    <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/detailed_video_author_font_size" android:textColor="#ff999999" android:ellipsize="end" android:id="@id/author" android:paddingRight="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" yt:robotoFont="light" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.apps.youtube.app.ui.SelectorOnTopFrameLayout>
+    </LinearLayout>
+    <com.google.android.apps.youtube.core.ui.PagedListView android:id="@id/related_videos_results" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/header" yt:textWhenEmpty="@string/no_videos_found" yt:statusView="@layout/card_status_item" yt:hideHeadersOnEmpty="true" />
+    <View android:background="@drawable/channel_header_shadow_repeat" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_below="@id/header" />
+</RelativeLayout>

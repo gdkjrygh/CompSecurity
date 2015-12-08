@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.walmart.android.ui.SafeScrollView android:id="@id/gift_card_customize_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="20.0dip" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/gift_card_customize_main_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/gift_card_customize_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text.Header.Multiline" />
+        <TextView android:id="@id/gift_card_customize_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="" style="@style/Theme.AccountHeaderError" />
+        <TextView android:id="@id/gift_card_customize_amount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/gift_card_customize_amount" style="@style/Text.Caption" />
+        <com.walmart.android.wmui.PriceInputView android:id="@id/gift_card_customize_amount_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/FormTextField" />
+        <TextView android:id="@id/gift_card_customize_to" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/gift_card_customize_to" style="@style/Text.Caption" />
+        <EditText android:id="@id/gift_card_customize_to_name_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/gift_card_customize_to_hint_name" android:singleLine="true" android:inputType="textPersonName" style="@style/FormTextField" />
+        <TextView android:id="@id/gift_card_customize_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/gift_card_customize_email" style="@style/Text.Caption" />
+        <EditText android:id="@id/gift_card_customize_to_email_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/gift_card_customize_to_hint_email" android:singleLine="true" android:inputType="textEmailAddress" style="@style/FormTextField" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/gift_card_customize_email_usage" style="@style/Text.Caption" />
+        <TextView android:id="@id/gift_card_customize_from" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/gift_card_customize_from" style="@style/Text.Caption" />
+        <EditText android:id="@id/gift_card_customize_sender_name_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/gift_card_customize_from_hint_name" android:singleLine="true" android:inputType="textPersonName" style="@style/FormTextField" />
+        <TextView android:id="@id/gift_card_customize_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/gift_card_customize_message_and_hint" style="@style/Text.Caption" />
+        <EditText android:gravity="top|left|center" android:id="@id/gift_card_customize_sender_message_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="3" android:maxLength="200" android:inputType="textLongMessage|textMultiLine" style="@style/FormTextField" />
+        <Button android:id="@id/gift_card_review_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/review_button" style="@style/PrimaryButton.Orange" />
+    </LinearLayout>
+</com.walmart.android.ui.SafeScrollView>

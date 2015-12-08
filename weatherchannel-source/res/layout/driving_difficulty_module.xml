@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/ddi_module_padding_bottom" style="@style/module_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/driving_difficulty_module_title" android:text="@string/ddi_module_title" style="@style/module_header" />
+    <LinearLayout android:orientation="vertical" android:id="@id/driving_difficulty_module_radar_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ddi_module_margin">
+        <ImageView android:id="@id/map_module_thumbnail" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="centerCrop" android:contentDescription="@string/map_module_content_text" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ddi_module_text_margin" android:text="@string/ddi_live_radar" weather:font="Roboto-Regular.ttf" style="@style/ddi_text_info_header" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ddi_view_more_weather_maps" weather:font="Roboto-Light.ttf" style="@style/ddi_text_info_subheader" />
+    </LinearLayout>
+    <View android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="0.004999995dip" android:layout_marginTop="@dimen/ddi_module_divider_margin_bottom" android:layout_marginBottom="@dimen/ddi_module_divider_margin_top" />
+    <RelativeLayout android:orientation="vertical" android:id="@id/driving_difficulty_module_index_holder" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/driving_difficulty_module_road_conditions_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ddi_module_icon_margin_left" android:layout_marginRight="@dimen/ddi_module_icon_margin_right" android:src="@drawable/ddi_icon_foggy" android:layout_centerVertical="true" android:contentDescription="@string/ddi_road_conditions" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/driving_difficulty_module_road_conditions_icon" android:layout_centerVertical="true">
+            <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/driving_difficulty_module_road_conditions_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ddi_road_conditions" weather:font="Roboto-Regular.ttf" style="@style/ddi_text_info_header" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/driving_difficulty_module_road_conditions_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ddi_foggy" weather:font="Roboto-Light.ttf" style="@style/ddi_text_info_subheader" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

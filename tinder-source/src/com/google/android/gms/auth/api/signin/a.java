@@ -1,0 +1,81 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.gms.auth.api.signin;
+
+import android.net.Uri;
+import android.os.Parcel;
+import com.google.android.gms.common.internal.safeparcel.zza;
+
+// Referenced classes of package com.google.android.gms.auth.api.signin:
+//            EmailSignInConfig
+
+public final class a
+    implements android.os.Parcelable.Creator
+{
+
+    public a()
+    {
+    }
+
+    static void a(EmailSignInConfig emailsigninconfig, Parcel parcel, int i)
+    {
+        int j = com.google.android.gms.common.internal.safeparcel.a.a(parcel, 20293);
+        com.google.android.gms.common.internal.safeparcel.a.b(parcel, 1, emailsigninconfig.a);
+        com.google.android.gms.common.internal.safeparcel.a.a(parcel, 2, emailsigninconfig.b, i);
+        com.google.android.gms.common.internal.safeparcel.a.a(parcel, 3, emailsigninconfig.c);
+        com.google.android.gms.common.internal.safeparcel.a.a(parcel, 4, emailsigninconfig.d, i);
+        com.google.android.gms.common.internal.safeparcel.a.b(parcel, j);
+    }
+
+    public final Object createFromParcel(Parcel parcel)
+    {
+        int j = zza.a(parcel);
+        String s = null;
+        Uri uri = null;
+        int i = 0;
+        Uri uri1 = null;
+        do
+        {
+            if (parcel.dataPosition() < j)
+            {
+                int k = parcel.readInt();
+                switch (0xffff & k)
+                {
+                default:
+                    zza.b(parcel, k);
+                    break;
+
+                case 1: // '\001'
+                    i = zza.e(parcel, k);
+                    break;
+
+                case 2: // '\002'
+                    uri = (Uri)zza.a(parcel, k, Uri.CREATOR);
+                    break;
+
+                case 3: // '\003'
+                    s = zza.l(parcel, k);
+                    break;
+
+                case 4: // '\004'
+                    uri1 = (Uri)zza.a(parcel, k, Uri.CREATOR);
+                    break;
+                }
+            } else
+            if (parcel.dataPosition() != j)
+            {
+                throw new com.google.android.gms.common.internal.safeparcel.zza.zza((new StringBuilder("Overread allowed size end=")).append(j).toString(), parcel);
+            } else
+            {
+                return new EmailSignInConfig(i, uri, s, uri1);
+            }
+        } while (true);
+    }
+
+    public final Object[] newArray(int i)
+    {
+        return new EmailSignInConfig[i];
+    }
+}

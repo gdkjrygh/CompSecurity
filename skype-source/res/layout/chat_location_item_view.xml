@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/chat_remove_text_view" />
+    <com.skype.android.widget.bubbles.BubbleRelativeLayout android:id="@id/location_bubble_view" android:layout_width="@dimen/location_static_map_width" android:layout_height="@dimen/location_static_map_height">
+        <ImageView android:id="@id/static_map_view" android:background="@color/bubble_location" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <com.google.android.gms.maps.MapView android:name="com.google.android.gms.maps.SupportMapFragment" android:id="@id/mapview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" map:mapType="normal" map:cameraZoom="17.0" map:liteMode="true" xmlns:map="http://schemas.android.com/apk/res-auto" />
+        <View android:id="@id/static_map_overlay" android:background="@drawable/chat_location_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:id="@id/static_map_center" android:layout_width="1.0dip" android:layout_height="1.0dip" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/static_map_pin" android:visibility="gone" android:layout_width="@dimen/location_static_map_pin_size" android:layout_height="@dimen/location_static_map_pin_size" android:src="@drawable/pin_received" android:baselineAlignBottom="true" android:layout_alignBottom="@id/static_map_center" android:layout_centerHorizontal="true" />
+        <com.skype.android.widget.SymbolView android:textSize="@dimen/location_static_map_default_pin_size" android:textColor="@color/location_placeholder" android:id="@id/static_map_placeholder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" app:symbol_code="Location" />
+        <include layout="@layout/chat_location_details_view" />
+    </com.skype.android.widget.bubbles.BubbleRelativeLayout>
+</merge>

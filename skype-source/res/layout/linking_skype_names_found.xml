@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/skype_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/msa_container" android:background="@color/white" android:paddingTop="@dimen/linking_msa_info_padding" android:paddingBottom="@dimen/linking_msa_info_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <TextView android:textSize="@dimen/font_medium" android:textStyle="bold" android:textColor="@color/skype_blue" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/microsoft_account" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="@dimen/font_medium" android:textColor="@color/skype_blue" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/microsoft_fullname" android:paddingLeft="@dimen/padding2" android:paddingRight="@dimen/padding2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="@dimen/font_medium" android:textColor="@color/skype_blue" android:gravity="center_horizontal" android:id="@id/matches_skype_accounts" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/msa_bottom_container" android:layout_below="@id/msa_container" android:layout_centerHorizontal="true" style="@style/LinkingContainer">
+            <RelativeLayout android:id="@id/skype_avatars" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/linking_avatars_top" android:layout_marginBottom="@dimen/linking_avatars_bottom">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <com.skype.android.widget.CircleImageView android:id="@id/first_avatar" android:visibility="gone" style="@style/CircleImageViewSmall" />
+                    <com.skype.android.widget.CircleImageView android:id="@id/second_avatar" android:visibility="gone" android:layout_marginLeft="40.0dip" style="@style/CircleImageViewSmall" />
+                </LinearLayout>
+                <com.skype.android.widget.CircleImageView android:id="@id/third_avatar" android:visibility="gone" android:layout_centerInParent="true" style="@style/CircleImageViewMedium" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/skype_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/font_large" android:textColor="@color/main_light_color" android:gravity="center_horizontal" android:id="@id/fullname" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="@dimen/font_small_medium" android:textColor="@color/skype_light_blue" android:gravity="center_horizontal" android:id="@id/skype_names" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/font_small_medium" android:textColor="@color/skype_light_blue" android:gravity="center_horizontal" android:id="@id/more_skype_names" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView android:id="@id/linking_these_accounts" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_linking_these_accounts" style="@style/LinkingBottomMessage" />
+            <com.skype.android.widget.YesNoButtons android:id="@id/yes_no_buttons" android:layout_height="wrap_content" style="@style/SideBySideButtons" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/link_diff_skype_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/msa_bottom_container">
+            <Button android:id="@id/link_diff_skype" android:background="@drawable/focus_highlight" android:paddingTop="@dimen/padding1b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_linking_different_skype_account" android:layout_alignParentBottom="true" style="@style/LinkingBottomActionLink" />
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

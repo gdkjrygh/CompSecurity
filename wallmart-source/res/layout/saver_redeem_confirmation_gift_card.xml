@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.walmart.android.ui.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/list_bg" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/saver_redeem_confirmation_header" android:background="@drawable/saver_gift_card" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="20.0dip">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/half_spark" />
+                <TextView android:textSize="36.0sp" android:textColor="@color/white" android:id="@id/saver_redeem_confirmation_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/saver_redeem_confirmation_amount" style="@style/Text.Subhead.Light" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/saver_redeem_confirmation_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/saver_redeem_confirmation_card_created_title" style="@style/Text.Bodycopy" />
+            </LinearLayout>
+            <TextView android:textColor="@color/text_blue" android:gravity="center_horizontal" android:id="@id/saver_redeem_confirmation_gift_card_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/saver_redeem_confirmation_gift_card_link" style="@style/Text.Bodycopy" />
+            <TextView android:textColor="@color/walmart_dark_grey" android:gravity="center_horizontal" android:id="@id/saver_redeem_confirmation_notification" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:text="@string/saver_redeem_confirmation_text_notification" style="@style/Text.Caption" />
+            <TextView android:textColor="@color/text_blue" android:gravity="center_horizontal" android:id="@id/saver_redeem_confirmation_help_link" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/saver_redeem_correct_email" style="@style/Text.Caption" />
+        </LinearLayout>
+        <include layout="@layout/saver_merchandise_walmart_pay" />
+        <include layout="@layout/saver_merchandise" />
+    </LinearLayout>
+</com.walmart.android.ui.SafeScrollView>

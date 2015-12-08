@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="top|left|center" android:id="@id/upperLeft" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/skyIcon" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/sun" android:baselineAlignBottom="false" android:layout_centerVertical="true" />
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/currentTemp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/skyIcon" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="top|right|center" android:id="@id/upperRight" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/locationPin" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/com_facebook_place_default_icon" />
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/savedLocationName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/locationPin" />
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/phrase" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/savedLocationName" android:layout_alignLeft="@id/savedLocationName" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="bottom|left|center" android:id="@id/lowerLeft" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/twc_white_logo" android:alpha="0.5" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="bottom|right|center" android:id="@id/lowerRight" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/pictureTime" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/pictureDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/pictureTime" />
+    </RelativeLayout>
+</merge>

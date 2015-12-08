@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/skype_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center_horizontal" android:id="@id/link_which_account" android:layout_height="wrap_content" android:text="@string/text_linking_which_account" android:layout_centerHorizontal="true" style="@style/LinkingPreSelectionMessage" />
+    <RelativeLayout android:gravity="center" android:id="@id/account_table_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/link_diff_skype" android:layout_below="@id/link_which_account" android:layout_centerInParent="true">
+        <HorizontalScrollView android:layout_gravity="center_horizontal" android:id="@id/scroll_view" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/pick_suggested_accounts" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+    </RelativeLayout>
+    <Button android:id="@id/link_diff_skype" android:background="@drawable/focus_highlight" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_linking_different_skype_account" android:layout_alignParentBottom="true" style="@style/LinkingBottomActionLink" />
+</RelativeLayout>

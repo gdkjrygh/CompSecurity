@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tweetText" />
+    <EditText android:id="@id/editText1" android:background="@drawable/textl_lines" android:padding="10.0dip" android:drawingCacheQuality="high" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/tweetTextHint" android:maxLines="6" android:maxLength="140" android:drawableRight="@drawable/icon" android:overScrollMode="always" />
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:id="@id/barcode_img" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon" android:contentDescription="@string/tw_share" />
+        <TextView android:gravity="center" android:id="@id/charCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@dimen/twitter_size" android:maxLines="3" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <Button android:layout_gravity="center_vertical" android:id="@id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tweet_btn_text" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tweetResults" />
+    <TextView android:id="@id/resultsTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minLines="6" android:layout_weight="4.31" android:textIsSelectable="true" />
+</LinearLayout>

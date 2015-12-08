@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/gray_background_light" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/discover_prefs_actionbar_menu" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/actionbar_size" android:layout_alignParentTop="true" android:animateLayoutChanges="true">
+            <ImageButton android:id="@id/view_back_icon" android:background="@color/transparent" android:paddingLeft="@dimen/suggested_screen_margins" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/back_arrow_l" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="actionbar_left_button" />
+            <ImageButton android:id="@id/view_ab_icon" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/selector_ab_discover_prefs" android:layout_toRightOf="@id/view_back_icon" android:layout_centerVertical="true" />
+            <com.tinder.views.CustomTextView android:id="@id/discover_prefs_txt_title" android:text="@string/current_work" android:layout_toRightOf="@id/view_ab_icon" app:font="semi_bold" style="@style/ab_text" />
+            <View android:id="@id/ab_divider" android:visibility="visible" android:layout_alignParentBottom="true" style="@style/ab_divider" />
+        </RelativeLayout>
+        <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" />
+        <com.facebook.login.widget.LoginButton android:layout_gravity="center_horizontal" android:id="@id/button_facebook_login" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/button_height_med" android:layout_marginLeft="@dimen/margin_large" android:layout_marginTop="@dimen/margin_xsmall" android:layout_marginRight="@dimen/margin_large" />
+    </LinearLayout>
+    <include android:id="@id/permission_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/actionbar_size" layout="@layout/view_get_a_job" />
+</FrameLayout>

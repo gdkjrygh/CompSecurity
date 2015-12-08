@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/root_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.translate.widget.SizeListeningView android:id="@id/size_listener" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:id="@id/input_glass" android:background="@color/activity_background" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/activity_title_height">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.google.android.apps.translate.widget.SuggestionList android:id="@id/result_container" android:background="@color/activity_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="4" />
+            <Spinner android:id="@id/input_mode" android:background="@drawable/bg_input_spinner" android:layout_width="@dimen/default_touch_target" android:layout_height="@dimen/default_touch_target" android:layout_margin="4.0dip" android:contentDescription="@string/label_input_methods" style="@style/keyboard_input_mode_spinner" />
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/handwriting_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_marginTop="-4.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/cards_holder" android:background="@drawable/bg_input_card" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip">
+        <FrameLayout android:layout_gravity="top" android:id="@id/input_card" android:paddingLeft="@dimen/card_spacing" android:paddingRight="@dimen/card_spacing" android:layout_width="fill_parent" android:layout_height="@dimen/edit_input_height">
+            <com.google.android.apps.translate.inputtools.InputToolsInput android:textAppearance="?android:textAppearanceLarge" android:textColorHint="@color/input_hint_text" android:ellipsize="end" android:gravity="top" android:layout_gravity="top" android:id="@id/edit_input" android:background="@null" android:paddingTop="@dimen/card_padding" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:inputType="textMultiLine" android:privateImeOptions="nm" android:imeOptions="actionDone|flagNoExtractUi" style="@style/input_card_text_view">
+                <requestFocus />
+            </com.google.android.apps.translate.inputtools.InputToolsInput>
+            <com.google.android.apps.translate.widget.TintImageView android:id="@id/btn_clear_input" android:visibility="gone" android:layout_width="@dimen/default_touch_target" android:layout_height="@dimen/default_touch_target" android:contentDescription="@string/label_cancel_input" ns:mask="@drawable/ic_clear_black" ns:tint="@color/icon_dark_clickable" ns:iconSize="24.0dip" style="@style/keyboard_clear_button" />
+        </FrameLayout>
+        <View android:id="@id/divider" android:background="@color/activity_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/source_target_divider_size" />
+        <include layout="@layout/handwriting_result_layout" />
+        <View android:id="@id/spacer" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <include layout="@layout/widget_input_mode_buttons_dummy" />
+    </LinearLayout>
+    <View android:layout_gravity="top" android:id="@id/resizer" android:background="@drawable/bg_drag_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="32.0dip" />
+</FrameLayout>

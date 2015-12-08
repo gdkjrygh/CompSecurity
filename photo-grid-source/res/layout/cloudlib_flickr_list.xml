@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/relativeLayoutHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <RelativeLayout android:gravity="center_vertical" android:background="@drawable/cloudlib_bg_titlebar_gray" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_head_top_height">
+            <TextView android:textSize="@dimen/cloudlib_title_size" android:textColor="@color/white" android:ellipsize="middle" android:gravity="left|center" android:id="@id/textName_back" android:background="@drawable/cloudlib_btn_back" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/cloud_flickr" android:singleLine="true" android:drawableLeft="@drawable/icon_back" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <ImageButton android:id="@id/btnAccountMgr" android:background="@drawable/cloudlib_btn_back" android:layout_width="@dimen/cloudlib_head_top_height" android:layout_height="fill_parent" android:src="@drawable/cloudlib_icon_keys" android:layout_alignParentRight="true" />
+            <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBottom="@id/btnAccountMgr" android:layout_centerHorizontal="true" layout="@layout/cloudlib_memory_info" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout_ad" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+    </LinearLayout>
+    <ListView android:id="@id/flickr_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/cloudlib_gradient_bg" android:cacheColorHint="#00000000" android:divider="@color/cloudlist_listview_divider_color" android:dividerHeight="1.0dip" android:layout_below="@id/relativeLayoutHeader" />
+</RelativeLayout>

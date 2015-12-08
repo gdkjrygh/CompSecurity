@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/friend_locations_large_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/text_size_16" android:textStyle="bold" android:textColor="@color/friend_locations_dialog_text" android:id="@id/title" android:paddingLeft="@dimen/friend_locations_large_padding" android:paddingRight="@dimen/friend_locations_large_padding" android:paddingBottom="@dimen/friend_locations_normal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/friend_locations_large_padding" android:paddingEnd="@dimen/friend_locations_large_padding" />
+    <FrameLayout android:id="@id/scrollable_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ScrollView android:id="@id/scroll_view" android:paddingLeft="@dimen/friend_locations_large_padding" android:paddingRight="@dimen/friend_locations_large_padding" android:paddingBottom="@dimen/friend_locations_large_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:paddingStart="@dimen/friend_locations_large_padding" android:paddingEnd="@dimen/friend_locations_large_padding">
+            <FrameLayout android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </ScrollView>
+    </FrameLayout>
+    <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="@dimen/friend_locations_quantum_button_border" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/friend_locations_quantum_button_height">
+        <Button android:id="@id/negative_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/LocationSharingQuantumBlackButton" />
+        <View android:id="@id/button_divider" android:background="?android:listDivider" android:layout_width="@dimen/friend_locations_quantum_button_border" android:layout_height="fill_parent" />
+        <Button android:id="@id/positive_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/LocationSharingQuantumBlueButton" />
+    </LinearLayout>
+</LinearLayout>

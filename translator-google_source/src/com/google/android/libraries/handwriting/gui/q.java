@@ -1,0 +1,35 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.libraries.handwriting.gui;
+
+import com.google.android.libraries.handwriting.base.RecognitionResult;
+import com.google.android.libraries.handwriting.base.StrokeList;
+
+// Referenced classes of package com.google.android.libraries.handwriting.gui:
+//            n, o
+
+final class q
+    implements Runnable
+{
+
+    final n a;
+    private final n b;
+    private final StrokeList c;
+    private final RecognitionResult d;
+
+    q(n n1, n n2, StrokeList strokelist, RecognitionResult recognitionresult)
+    {
+        a = n1;
+        super();
+        b = n2;
+        c = strokelist;
+        d = recognitionresult;
+    }
+
+    public final void run()
+    {
+        a.a.a(b, c, d);
+    }
+}

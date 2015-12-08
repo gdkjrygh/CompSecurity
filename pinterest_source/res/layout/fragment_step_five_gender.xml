@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_white_full_opacity" style="@style/full_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+    <LinearLayout android:orientation="vertical" style="@style/fullline_view">
+        <RelativeLayout android:padding="@dimen/margin" style="@style/fullline_view">
+            <TextView android:id="@id/skip_tv" android:text="@string/skip" style="@style/skip_option" />
+            <TextView android:textSize="@dimen/text_subhead" android:textColor="@color/text_dark" android:paddingRight="@dimen/margin" android:text="@string/what_is_gender" style="@style/fullline_view" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/margin" android:paddingRight="@dimen/margin" style="@style/fullline_view">
+            <Button android:id="@id/female_bt" android:layout_width="0.0dip" android:text="@string/signup_radio_female" android:layout_weight="1.0" style="@style/button_gray_unrounded_left" />
+            <Button android:id="@id/male_bt" android:layout_width="0.0dip" android:layout_marginLeft="@dimen/margin_extra_small" android:layout_marginRight="@dimen/margin_extra_small" android:text="@string/signup_radio_male" android:layout_weight="1.0" style="@style/button_gray_unrounded" />
+            <Button android:id="@id/other_bt" android:layout_width="0.0dip" android:text="@string/signup_radio_other" android:layout_weight="1.0" style="@style/button_gray_unrounded_right" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/custom_gender" android:visibility="gone" style="@style/fullline_view">
+            <TextView android:textSize="@dimen/text_subhead" android:textColor="@color/text_dark" android:paddingLeft="@dimen/margin" android:paddingTop="@dimen/margin" android:paddingRight="@dimen/margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/custom_gender" />
+            <com.pinterest.ui.text.PEditText android:id="@id/custom_gender_et" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginTop="@dimen/margin" android:layout_marginRight="@dimen/margin" android:inputType="text" style="@style/GraySignupEditText" />
+        </LinearLayout>
+        <ProgressBar android:id="@id/signup_progress_bar" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" style="@style/signup_progress_bar" />
+        <TextView android:gravity="right" android:id="@id/step_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin_half" style="@style/text_subtitle_large" />
+        <Button android:id="@id/done_bt" android:text="@string/done" style="@style/button_red_full" />
+    </LinearLayout>
+</LinearLayout>

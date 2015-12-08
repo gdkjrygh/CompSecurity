@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/card_cvv_layout" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/card_frame_top_margin"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageButton android:id="@id/cancel_x_button" android:background="@drawable/aa_snap_preview_x" android:layout_width="52.0dip" android:layout_height="58.0dip" />
+        <TextView android:textSize="@dimen/card_link_instructions_text_size" android:textColor="@android:color/white" android:gravity="center" android:id="@id/card_link_instructions" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/card_back_cvv_instructions" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/card_placeholder" android:background="@drawable/card_placeholder_fadein" android:layout_width="fill_parent" android:layout_height="@dimen/card_frame_height" android:layout_marginLeft="@dimen/card_frame_side_margin" android:layout_marginTop="@dimen/card_frame_top_margin" android:layout_marginRight="@dimen/card_frame_side_margin" android:layout_centerHorizontal="true">
+        <include layout="@layout/card_cvv_layout" />
+    </RelativeLayout>
+</RelativeLayout>

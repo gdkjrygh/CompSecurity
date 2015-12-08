@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/menu_item_selector" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+        <RelativeLayout android:id="@id/collaborator_name_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/remove_collaborator_button" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+            <TextView android:ellipsize="end" android:id="@id/collaborator_name" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/settings_item_name_linear" />
+            <TextView android:textSize="@dimen/text_size_fine_print" android:textColor="#ff808080" android:ellipsize="end" android:id="@id/remove_collaborator_second_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap_1_5x" android:maxLines="1" android:layout_toRightOf="@id/collaborator_name" android:layout_centerVertical="true" android:fontFamily="sans-serif-light" />
+        </RelativeLayout>
+        <ImageView android:id="@id/remove_collaborator_button" android:visibility="gone" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:layout_marginRight="@dimen/default_gap" android:src="@drawable/settings_grey_x" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ProgressBar android:id="@id/remove_collaborator_progress_bar" android:visibility="gone" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:layout_marginRight="@dimen/default_gap" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <include android:id="@id/collaborator_name_separator" layout="@layout/list_separator" />
+</LinearLayout>

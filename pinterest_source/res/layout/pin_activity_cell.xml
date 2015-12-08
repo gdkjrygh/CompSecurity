@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/view_pin_user_attribution" />
+    <LinearLayout android:orientation="vertical" android:id="@id/board_container" android:paddingLeft="@dimen/pin_closeup_pinner_attribution" android:paddingBottom="@dimen/margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pinterest.kit.view.BoardView android:id="@id/board" android:paddingBottom="@dimen/margin" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.pinterest.activity.board.view.FollowBoardButton android:id="@id/follow_bt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/button_plain" />
+            <TextView android:textSize="@dimen/text_body" android:textStyle="bold" android:textColor="@color/black" android:ellipsize="end" android:id="@id/board_name" android:paddingRight="@dimen/margin_double" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_toLeftOf="@id/follow_bt" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+            <TextView android:textSize="@dimen/text_body" android:textColor="@color/text_dark" android:id="@id/board_stats" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/board_name" android:layout_alignParentLeft="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</merge>

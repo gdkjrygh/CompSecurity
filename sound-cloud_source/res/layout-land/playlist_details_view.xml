@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/playlist_background_clickable" android:addStatesFromChildren="true" android:layout_width="fill_parent" android:layout_height="@dimen/playlist_header_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/artwork_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip">
+        <com.soundcloud.android.view.OptimisedImageView android:id="@id/artwork" android:layout_width="@dimen/playlist_header_height" android:layout_height="@dimen/playlist_header_height" android:scaleType="centerCrop" />
+        <ToggleButton android:id="@id/toggle_play_pause" style="@style/PlaylistPlayToggle" />
+    </RelativeLayout>
+    <com.soundcloud.android.view.CustomFontTextView android:enabled="false" android:id="@id/username" android:layout_marginLeft="@dimen/playlist_header_padding" android:layout_marginTop="13.0dip" android:layout_toRightOf="@id/artwork_container" style="@style/PlaylistTitle.Username" />
+    <com.soundcloud.android.view.CustomFontTextView android:id="@id/title" android:visibility="invisible" android:layout_marginLeft="@dimen/playlist_header_padding" android:layout_marginRight="@dimen/playlist_header_padding" android:layout_toRightOf="@id/artwork_container" android:layout_below="@id/username" style="@style/PlaylistTitle" />
+    <com.soundcloud.android.view.CustomFontTextView android:id="@id/title_private" android:visibility="gone" android:layout_marginLeft="@dimen/playlist_header_padding" android:layout_marginRight="@dimen/playlist_header_padding" android:drawableLeft="@drawable/ic_private_playlist_lock" android:drawablePadding="4.0dip" android:layout_toRightOf="@id/artwork_container" android:layout_below="@id/username" style="@style/PlaylistTitle" />
+    <FrameLayout android:id="@id/playlist_action_bar_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/artwork_container" android:layout_alignParentBottom="true" />
+    <View android:layout_below="@id/artwork_container" style="@style/PlaylistDivider" />
+</RelativeLayout>

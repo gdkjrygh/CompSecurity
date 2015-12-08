@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.profile.DriverRideProfileView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.ui.profile.ProfileScrollview android:id="@id/profile_scrollview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <me.lyft.android.ui.profile.DriverProfilePhotoCarWidgetView android:id="@id/driver_profile_photo_car_widget" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <include layout="@layout/profile_driver_stats_widget" />
+            <me.lyft.android.ui.profile.ProfileBioWidgetView android:id="@id/passenger_profile_bio_widget" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <me.lyft.android.ui.profile.ProfileFacebookConnectRideWidgetView android:id="@id/profile_facebook_connect_widget" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </me.lyft.android.ui.profile.ProfileScrollview>
+    <me.lyft.android.ui.profile.ProfileToolBarView android:gravity="top" android:id="@id/profile_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</me.lyft.android.ui.profile.DriverRideProfileView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.view.ViewPager android:id="@id/chat_sticker_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:overScrollMode="never" />
+    <HorizontalScrollView android:orientation="horizontal" android:id="@id/chat_sticker_tabs_scrollview" android:background="#fbffffff" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="@dimen/chat_section_tab_height" android:stretchColumns="*" android:layout_alignParentBottom="true" android:overScrollMode="never">
+        <LinearLayout android:orientation="horizontal" android:id="@id/chat_sticker_tabs" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </HorizontalScrollView>
+    <View android:id="@id/chat_sticker_tabs_divider" android:background="@color/divider_grey" android:layout_width="fill_parent" android:layout_height="@dimen/chat_top_panel_divider_height" android:layout_above="@id/chat_sticker_tabs_scrollview" />
+</RelativeLayout>

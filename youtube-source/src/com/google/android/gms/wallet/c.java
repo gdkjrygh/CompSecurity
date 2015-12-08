@@ -1,0 +1,26 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.gms.wallet;
+
+
+// Referenced classes of package com.google.android.gms.wallet:
+//            ImmediateFullWalletRequest
+
+public final class c
+{
+
+    final ImmediateFullWalletRequest a;
+
+    private c(ImmediateFullWalletRequest immediatefullwalletrequest)
+    {
+        a = immediatefullwalletrequest;
+        super();
+    }
+
+    c(ImmediateFullWalletRequest immediatefullwalletrequest, byte byte0)
+    {
+        this(immediatefullwalletrequest);
+    }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.playsdk.detail.ThemePreviewLastItemView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/goplay_detail_last_laucher_recomend_bg" android:layout_width="@dimen/goplay_detail_preview_item_width" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/recomend_pic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/goplay_detail_last_laucher_recomend_pic" android:layout_weight="1.8" />
+        <LinearLayout android:orientation="vertical" android:id="@id/matched_themes_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <View android:layout_gravity="center_horizontal" android:id="@id/divider_line" android:background="#ffe0e0e0" android:layout_width="191.0dip" android:layout_height="@dimen/goplay_menu_listview_divider_height" android:layout_marginTop="10.0dip" android:layout_marginBottom="24.0dip" />
+            <TextView android:textSize="15.0dip" android:textColor="#ff434343" android:gravity="center" android:id="@id/matched_themes_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="21.0dip" android:scaleType="fitXY" android:text="@string/goplay_matched_themes" />
+            <com.jiubang.playsdk.views.HorizontalListView android:id="@id/matched_themes" android:layout_width="fill_parent" android:layout_height="42.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="18.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="0.0dip" mk:dividerWidth="@dimen/goplay_detail_item_pace" xmlns:mk="http://schemas.android.com/apk/res-auto" />
+        </LinearLayout>
+    </LinearLayout>
+</com.jiubang.playsdk.detail.ThemePreviewLastItemView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/saver_tc_submit_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="@string/ereceipt_manual_submit" android:layout_alignParentBottom="true" style="@style/PrimaryButton.Orange" />
+    <com.walmart.android.ui.SafeScrollView android:id="@id/saver_tc_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/saver_tc_submit_btn">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:background="@color/list_bg" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/img_ref_receipt" />
+            <TextView android:id="@id/saver_tc_manual_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/ereceipt_manual_tc_date_text" />
+            <com.walmartlabs.ui.FloatLabel android:id="@id/saver_tc_nbr_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="@dimen/form_field_spacing" android:layout_marginRight="20.0dip" android:text="@string/ereceipt_manual_tc_nbr_hint" style="@style/FloatLabel" />
+            <EditText android:id="@id/saver_tc_nbr" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:hint="@string/ereceipt_manual_tc_nbr_hint" android:maxLength="37" />
+            <com.walmartlabs.ui.FloatLabel android:id="@id/saver_tc_date_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="@dimen/form_field_spacing" android:layout_marginRight="20.0dip" android:text="@string/ereceipt_manual_date_hint" style="@style/FloatLabel" />
+            <EditText android:id="@id/saver_tc_date" android:focusableInTouchMode="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:hint="@string/ereceipt_manual_date_hint" android:editable="false" android:inputType="date" style="@style/FormDropDown.TextFieldAligned" />
+        </LinearLayout>
+    </com.walmart.android.ui.SafeScrollView>
+</RelativeLayout>

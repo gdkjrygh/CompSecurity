@@ -1,0 +1,18 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.tinder.e;
+
+
+public interface m
+{
+
+    public abstract void onTinderLoginFailure();
+
+    public abstract void onTinderLoginFailureAccessDenied();
+
+    public abstract void onTinderLoginSuccess();
+
+    public abstract void onVerificationNeeded(boolean flag, boolean flag1, boolean flag2);
+}

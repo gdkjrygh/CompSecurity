@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MetaFilter for calculating sharpness score of an image.
+     Takes in a colored image and outputs a score. -->
+<graph>
+    <!-- Packages -->
+    <import package="androidx.media.filterpacks.base"/>
+    <import package="androidx.media.filterpacks.numeric"/>
+
+    <!-- Filters -->
+    <!--  Gradient buffer of the image.  -->
+    <filter class="GraphInputSource" name="gradientBuffer"/>
+    <!--  Get the Quad over which the sharpness needs to be calculated. -->
+    <filter class="GraphInputSource" name="elem"/>
+
+    <filter class="StatsFilter" name="statsCalc"/>
+    <filter class="NormFilter" name="normCalc"/>
+
+    <filter class="GraphOutputTarget" name="score"/>
+
+    <!-- Connections -->
+    <connect sourceFilter="gradientBuffer" sourcePort="frame"
+             targetFilter="statsCalc" targetPort="buffer"/>
+
+    <connect sourceFilter="elem" sourcePort="frame"
+             targetFilter="statsCalc" targetPort="cropRect"/>
+
+    <connect sourceFilter="statsCalc" sourcePort="mean"
+             targetFilter="normCalc" targetPort="x"/>
+
+    <connect sourceFilter="statsCalc" sourcePort="stdev"
+             targetFilter="normCalc" targetPort="y"/>
+
+    <connect sourceFilter="normCalc"  sourcePort="norm"
+             targetFilter="score" targetPort="frame"/>
+</graph>

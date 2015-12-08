@@ -1,0 +1,610 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.flurry.sdk;
+
+import android.content.Context;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+
+// Referenced classes of package com.flurry.sdk:
+//            lp, jo, kc, jv, 
+//            ks, kq
+
+public class kr
+{
+
+    public static final Integer a = Integer.valueOf(50);
+    private static final String d = com/flurry/sdk/kr.getSimpleName();
+    String b;
+    LinkedHashMap c;
+
+    public kr(String s)
+    {
+        a(s);
+    }
+
+    private void a(String s, List list, String s1)
+    {
+        this;
+        JVM INSTR monitorenter ;
+        lp.b();
+        kc.a(5, d, (new StringBuilder("Saving Index File for ")).append(s).append(" file name:").append(jo.a().c().getFileStreamPath(g(s))).toString());
+        s = new jv(jo.a().c().getFileStreamPath(g(s)), s1, 1, new _cls7());
+        s1 = new ArrayList();
+        for (list = list.iterator(); list.hasNext(); s1.add(new ks((String)list.next()))) { }
+        break MISSING_BLOCK_LABEL_137;
+        s;
+        throw s;
+        s.a(s1);
+        this;
+        JVM INSTR monitorexit ;
+    }
+
+    private void a(String s, byte abyte0[])
+    {
+        this;
+        JVM INSTR monitorenter ;
+        lp.b();
+        kc.a(5, d, (new StringBuilder("Saving Block File for ")).append(s).append(" file name:").append(jo.a().c().getFileStreamPath(kq.a(s))).toString());
+        (new jv(jo.a().c().getFileStreamPath(kq.a(s)), ".yflurrydatasenderblock.", 1, new _cls6())).a(new kq(abyte0));
+        this;
+        JVM INSTR monitorexit ;
+        return;
+        s;
+        throw s;
+    }
+
+    private void c()
+    {
+        this;
+        JVM INSTR monitorenter ;
+        LinkedList linkedlist = new LinkedList(c.keySet());
+        b();
+        if (!linkedlist.isEmpty())
+        {
+            a(b, linkedlist, b);
+        }
+        this;
+        JVM INSTR monitorexit ;
+        return;
+        Exception exception;
+        exception;
+        throw exception;
+    }
+
+    private void e(String s)
+    {
+        Object obj;
+        c = new LinkedHashMap();
+        obj = new ArrayList();
+        if (!j(s)) goto _L2; else goto _L1
+_L1:
+        List list = k(s);
+        if (list != null && list.size() > 0)
+        {
+            ((List) (obj)).addAll(list);
+            for (Iterator iterator = ((List) (obj)).iterator(); iterator.hasNext(); f((String)iterator.next())) { }
+        }
+        i(s);
+_L7:
+        s = ((List) (obj)).iterator();
+        do
+        {
+            if (!s.hasNext())
+            {
+                break;
+            }
+            obj = (String)s.next();
+            List list1 = h(((String) (obj)));
+            if (list1 != null)
+            {
+                c.put(obj, list1);
+            }
+        } while (true);
+          goto _L3
+_L2:
+        s = (List)(new jv(jo.a().c().getFileStreamPath(g(b)), s, 1, new _cls1())).a();
+        if (s != null) goto _L5; else goto _L4
+_L4:
+        kc.c(d, "New main file also not found. returning..");
+_L3:
+        return;
+_L5:
+        s = s.iterator();
+        while (s.hasNext()) 
+        {
+            ((List) (obj)).add(((ks)s.next()).a());
+        }
+        if (true) goto _L7; else goto _L6
+_L6:
+    }
+
+    private void f(String s)
+    {
+        List list = k(s);
+        if (list == null)
+        {
+            kc.c(d, "No old file to replace");
+        } else
+        {
+            for (Iterator iterator = list.iterator(); iterator.hasNext();)
+            {
+                String s1 = (String)iterator.next();
+                byte abyte0[] = m(s1);
+                if (abyte0 == null)
+                {
+                    kc.a(6, d, "File does not exist");
+                } else
+                {
+                    a(s1, abyte0);
+                    l(s1);
+                }
+            }
+
+            if (list != null)
+            {
+                a(s, list, ".YFlurrySenderIndex.info.");
+                i(s);
+                return;
+            }
+        }
+    }
+
+    private String g(String s)
+    {
+        return (new StringBuilder(".YFlurrySenderIndex.info.")).append(s).toString();
+    }
+
+    private List h(String s)
+    {
+        this;
+        JVM INSTR monitorenter ;
+        lp.b();
+        kc.a(5, d, (new StringBuilder("Reading Index File for ")).append(s).append(" file name:").append(jo.a().c().getFileStreamPath(g(s))).toString());
+        Object obj = (List)(new jv(jo.a().c().getFileStreamPath(g(s)), ".YFlurrySenderIndex.info.", 1, new _cls5())).a();
+        s = new ArrayList();
+        for (obj = ((List) (obj)).iterator(); ((Iterator) (obj)).hasNext(); s.add(((ks)((Iterator) (obj)).next()).a())) { }
+        break MISSING_BLOCK_LABEL_140;
+        s;
+        throw s;
+        this;
+        JVM INSTR monitorexit ;
+        return s;
+    }
+
+    private void i(String s)
+    {
+        lp.b();
+        kc.a(5, d, (new StringBuilder("Deleting Index File for ")).append(s).append(" file name:").append(jo.a().c().getFileStreamPath((new StringBuilder(".FlurrySenderIndex.info.")).append(s).toString())).toString());
+        File file = jo.a().c().getFileStreamPath((new StringBuilder(".FlurrySenderIndex.info.")).append(s).toString());
+        if (file.exists())
+        {
+            boolean flag = file.delete();
+            kc.a(5, d, (new StringBuilder("Found file for ")).append(s).append(". Deleted - ").append(flag).toString());
+        }
+    }
+
+    private boolean j(String s)
+    {
+        this;
+        JVM INSTR monitorenter ;
+        boolean flag;
+        File file = jo.a().c().getFileStreamPath((new StringBuilder(".FlurrySenderIndex.info.")).append(s).toString());
+        kc.a(5, d, (new StringBuilder("isOldIndexFilePresent: for ")).append(s).append(file.exists()).toString());
+        flag = file.exists();
+        this;
+        JVM INSTR monitorexit ;
+        return flag;
+        s;
+        throw s;
+    }
+
+    private List k(String s)
+    {
+        byte abyte0[] = null;
+        this;
+        JVM INSTR monitorenter ;
+        Object obj;
+        lp.b();
+        kc.a(5, d, (new StringBuilder("Reading Index File for ")).append(s).append(" file name:").append(jo.a().c().getFileStreamPath((new StringBuilder(".FlurrySenderIndex.info.")).append(s).toString())).toString());
+        obj = jo.a().c().getFileStreamPath((new StringBuilder(".FlurrySenderIndex.info.")).append(s).toString());
+        if (!((File) (obj)).exists()) goto _L2; else goto _L1
+_L1:
+        kc.a(5, d, (new StringBuilder("Reading Index File for ")).append(s).append(" Found file.").toString());
+        DataInputStream datainputstream = new DataInputStream(new FileInputStream(((File) (obj))));
+        obj = datainputstream;
+        int j1 = datainputstream.readUnsignedShort();
+        if (j1 != 0) goto _L4; else goto _L3
+_L3:
+        lp.a(datainputstream);
+        s = abyte0;
+_L7:
+        this;
+        JVM INSTR monitorexit ;
+        return s;
+_L4:
+        obj = datainputstream;
+        s = new ArrayList(j1);
+        int i1 = 0;
+_L6:
+        if (i1 >= j1)
+        {
+            break; /* Loop/switch isn't completed */
+        }
+        obj = datainputstream;
+        int k1 = datainputstream.readUnsignedShort();
+        obj = datainputstream;
+        kc.a(4, d, (new StringBuilder("read iter ")).append(i1).append(" dataLength = ").append(k1).toString());
+        obj = datainputstream;
+        abyte0 = new byte[k1];
+        obj = datainputstream;
+        datainputstream.readFully(abyte0);
+        obj = datainputstream;
+        s.add(new String(abyte0));
+        i1++;
+        if (true) goto _L6; else goto _L5
+_L5:
+        obj = datainputstream;
+        datainputstream.readUnsignedShort();
+        lp.a(datainputstream);
+          goto _L7
+        Throwable throwable;
+        throwable;
+        datainputstream = null;
+        s = null;
+_L9:
+        obj = datainputstream;
+        kc.a(6, d, "Error when loading persistent file", throwable);
+        lp.a(datainputstream);
+          goto _L7
+        s;
+        throw s;
+        s;
+        obj = null;
+_L8:
+        lp.a(((java.io.Closeable) (obj)));
+        throw s;
+_L2:
+        kc.a(5, d, "Agent cache file doesn't exist.");
+        s = null;
+          goto _L7
+        s;
+          goto _L8
+        throwable;
+        s = null;
+          goto _L9
+        throwable;
+          goto _L9
+    }
+
+    private void l(String s)
+    {
+        lp.b();
+        kc.a(5, d, (new StringBuilder("Deleting  block File for ")).append(s).append(" file name:").append(jo.a().c().getFileStreamPath((new StringBuilder(".flurrydatasenderblock.")).append(s).toString())).toString());
+        File file = jo.a().c().getFileStreamPath((new StringBuilder(".flurrydatasenderblock.")).append(s).toString());
+        if (file.exists())
+        {
+            boolean flag = file.delete();
+            kc.a(5, d, (new StringBuilder("Found file for ")).append(s).append(". Deleted - ").append(flag).toString());
+        }
+    }
+
+    private byte[] m(String s)
+    {
+        Object obj;
+        byte abyte0[];
+        Object obj2;
+        obj2 = null;
+        abyte0 = null;
+        lp.b();
+        kc.a(5, d, (new StringBuilder("Reading block File for ")).append(s).append(" file name:").append(jo.a().c().getFileStreamPath((new StringBuilder(".flurrydatasenderblock.")).append(s).toString())).toString());
+        obj = jo.a().c().getFileStreamPath((new StringBuilder(".flurrydatasenderblock.")).append(s).toString());
+        if (!((File) (obj)).exists()) goto _L2; else goto _L1
+_L1:
+        kc.a(5, d, (new StringBuilder("Reading Index File for ")).append(s).append(" Found file.").toString());
+        Object obj1 = new DataInputStream(new FileInputStream(((File) (obj))));
+        s = ((String) (obj1));
+        obj = obj2;
+        int i1 = ((DataInputStream) (obj1)).readUnsignedShort();
+        if (i1 == 0)
+        {
+            lp.a(((java.io.Closeable) (obj1)));
+            return null;
+        }
+        s = ((String) (obj1));
+        obj = obj2;
+        abyte0 = new byte[i1];
+        s = ((String) (obj1));
+        obj = abyte0;
+        ((DataInputStream) (obj1)).readFully(abyte0);
+        s = ((String) (obj1));
+        obj = abyte0;
+        ((DataInputStream) (obj1)).readUnsignedShort();
+        lp.a(((java.io.Closeable) (obj1)));
+        return abyte0;
+        Throwable throwable;
+        throwable;
+        obj = null;
+_L6:
+        s = ((String) (obj));
+        kc.a(6, d, "Error when loading persistent file", throwable);
+        lp.a(((java.io.Closeable) (obj)));
+        return abyte0;
+        s;
+        obj1 = null;
+        obj = s;
+_L4:
+        lp.a(((java.io.Closeable) (obj1)));
+        throw obj;
+_L2:
+        kc.a(4, d, "Agent cache file doesn't exist.");
+        return null;
+        obj;
+        obj1 = s;
+        if (true) goto _L4; else goto _L3
+_L3:
+        throwable;
+        abyte0 = ((byte []) (obj));
+        obj = obj1;
+        if (true) goto _L6; else goto _L5
+_L5:
+    }
+
+    public List a()
+    {
+        return new ArrayList(c.keySet());
+    }
+
+    public void a(kq kq1, String s)
+    {
+        boolean flag = false;
+        this;
+        JVM INSTR monitorenter ;
+        String s1;
+        kc.a(4, d, (new StringBuilder("addBlockInfo")).append(s).toString());
+        s1 = kq1.a();
+        kq1 = (List)c.get(s);
+        if (kq1 != null)
+        {
+            break MISSING_BLOCK_LABEL_71;
+        }
+        kc.a(4, d, "New Data Key");
+        kq1 = new LinkedList();
+        flag = true;
+        kq1.add(s1);
+        if (kq1.size() > a.intValue())
+        {
+            b((String)kq1.get(0));
+            kq1.remove(0);
+        }
+        c.put(s, kq1);
+        a(s, ((List) (kq1)), ".YFlurrySenderIndex.info.");
+        if (!flag)
+        {
+            break MISSING_BLOCK_LABEL_144;
+        }
+        c();
+        this;
+        JVM INSTR monitorexit ;
+        return;
+        kq1;
+        throw kq1;
+    }
+
+    void a(String s)
+    {
+        b = (new StringBuilder()).append(s).append("Main").toString();
+        e(b);
+    }
+
+    public boolean a(String s, String s1)
+    {
+        List list = (List)c.get(s1);
+        boolean flag = false;
+        if (list != null)
+        {
+            b(s);
+            flag = list.remove(s);
+        }
+        if (list != null && !list.isEmpty())
+        {
+            c.put(s1, list);
+            a(s1, list, ".YFlurrySenderIndex.info.");
+            return flag;
+        } else
+        {
+            d(s1);
+            return flag;
+        }
+    }
+
+    void b()
+    {
+        (new jv(jo.a().c().getFileStreamPath(g(b)), ".YFlurrySenderIndex.info.", 1, new _cls4())).b();
+    }
+
+    boolean b(String s)
+    {
+        return (new jv(jo.a().c().getFileStreamPath(kq.a(s)), ".yflurrydatasenderblock.", 1, new _cls2())).b();
+    }
+
+    public List c(String s)
+    {
+        return (List)c.get(s);
+    }
+
+    public boolean d(String s)
+    {
+        this;
+        JVM INSTR monitorenter ;
+        jv jv1;
+        Object obj;
+        lp.b();
+        jv1 = new jv(jo.a().c().getFileStreamPath(g(s)), ".YFlurrySenderIndex.info.", 1, new _cls3());
+        obj = c(s);
+        if (obj == null)
+        {
+            break MISSING_BLOCK_LABEL_144;
+        }
+        kc.a(4, d, (new StringBuilder("discardOutdatedBlocksForDataKey: notSentBlocks = ")).append(((List) (obj)).size()).toString());
+        String s1;
+        for (obj = ((List) (obj)).iterator(); ((Iterator) (obj)).hasNext(); kc.a(4, d, (new StringBuilder("discardOutdatedBlocksForDataKey: removed block = ")).append(s1).toString()))
+        {
+            s1 = (String)((Iterator) (obj)).next();
+            b(s1);
+        }
+
+        break MISSING_BLOCK_LABEL_144;
+        s;
+        throw s;
+        boolean flag;
+        c.remove(s);
+        flag = jv1.b();
+        c();
+        this;
+        JVM INSTR monitorexit ;
+        return flag;
+    }
+
+
+    private class _cls7
+        implements la
+    {
+
+        final kr a;
+
+        public kx a(int i1)
+        {
+            return new kw(new ks.a());
+        }
+
+        _cls7()
+        {
+            a = kr.this;
+            super();
+        }
+    }
+
+
+    private class _cls6
+        implements la
+    {
+
+        final kr a;
+
+        public kx a(int i1)
+        {
+            return new kq.a();
+        }
+
+        _cls6()
+        {
+            a = kr.this;
+            super();
+        }
+    }
+
+
+    private class _cls1
+        implements la
+    {
+
+        final kr a;
+
+        public kx a(int i1)
+        {
+            return new kw(new ks.a());
+        }
+
+        _cls1()
+        {
+            a = kr.this;
+            super();
+        }
+    }
+
+
+    private class _cls5
+        implements la
+    {
+
+        final kr a;
+
+        public kx a(int i1)
+        {
+            return new kw(new ks.a());
+        }
+
+        _cls5()
+        {
+            a = kr.this;
+            super();
+        }
+    }
+
+
+    private class _cls4
+        implements la
+    {
+
+        final kr a;
+
+        public kx a(int i1)
+        {
+            return new kw(new ks.a());
+        }
+
+        _cls4()
+        {
+            a = kr.this;
+            super();
+        }
+    }
+
+
+    private class _cls2
+        implements la
+    {
+
+        final kr a;
+
+        public kx a(int i1)
+        {
+            return new kq.a();
+        }
+
+        _cls2()
+        {
+            a = kr.this;
+            super();
+        }
+    }
+
+
+    private class _cls3
+        implements la
+    {
+
+        final kr a;
+
+        public kx a(int i1)
+        {
+            return new kw(new ks.a());
+        }
+
+        _cls3()
+        {
+            a = kr.this;
+            super();
+        }
+    }
+
+}

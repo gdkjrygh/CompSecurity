@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg_grid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.pinterest.activity.notifications.view.MaxWidthListView android:id="@id/notifications_listview" android:layout_centerHorizontal="true" style="@style/listview_white" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <ScrollView android:id="@id/empty_wrapper_sv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/listview">
+        <com.pinterest.ui.grid.AdapterEmptyView android:id="@id/empty_vw" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/empty_feed_upsell" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/chat_file_transfer_container_completed" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.skype.android.widget.bubbles.BubbleRelativeLayout android:id="@id/chat_file_transfer_bubble_view" android:background="@drawable/chat_file_transfer_bubble_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/size_1x">
+        <RelativeLayout android:clipChildren="false" android:layout_width="@dimen/chat_file_transfer_bubble_size" android:layout_height="@dimen/chat_file_transfer_bubble_size">
+            <com.skype.android.widget.SymbolView android:textSize="@dimen/chat_file_transfer_icon_size" android:id="@id/chat_file_transfer_icon" android:background="@drawable/chat_file_transfer_icon_background" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <com.skype.android.widget.CircularProgressBar android:id="@id/chat_file_transfer_progressbar" android:visibility="gone" android:layout_width="@dimen/chat_file_transfer_progress_bar_size" android:layout_height="@dimen/chat_file_transfer_progress_bar_size" android:indeterminateOnly="false" android:layout_centerInParent="true" />
+            <com.skype.android.widget.ProgressCircleView android:id="@id/chat_file_transfer_progress_animation" android:visibility="gone" android:layout_width="@dimen/chat_file_transfer_circle_progress_size" android:layout_height="@dimen/chat_file_transfer_circle_progress_size" android:layout_centerInParent="true" app:circle_drawable="@drawable/animated_circle_white_small" app:progress_radius="@integer/chat_file_transfer_progress_radius" />
+        </RelativeLayout>
+    </com.skype.android.widget.bubbles.BubbleRelativeLayout>
+    <RelativeLayout android:id="@id/chat_file_transfer_info" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.skype.android.widget.EllipsizingTextView android:ellipsize="middle" android:id="@id/chat_file_transfer_filename" android:singleLine="true" style="@style/ChatFileTransferInfoDarkBold" />
+        <TextView android:id="@id/chat_file_transfer_filesize" android:layout_below="@id/chat_file_transfer_filename" style="@style/ChatFileTransferInfo" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/chat_file_transfer_info_failed" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.skype.android.widget.EllipsizingTextView android:ellipsize="middle" android:id="@id/chat_file_transfer_failed_filename" android:singleLine="true" style="@style/ChatFileTransferInfo" />
+        <TextView android:id="@id/chat_file_transfer_failed_status" android:layout_below="@id/chat_file_transfer_failed_filename" style="@style/ChatFileTransferInfoDarkBold" />
+    </RelativeLayout>
+</RelativeLayout>

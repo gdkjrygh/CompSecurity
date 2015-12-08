@@ -1,0 +1,112 @@
+<!-- Header -->
+<nav class="top-bar fixed-header">
+	<a id="back_button" class="back alt" ng-click="back()"><i class="icon-close icon-large"></i></a>
+	<h1>Select a Friend</h1>
+</nav>
+
+<div class="costar row add-to-bottom" infinite-scroll="add()" can-load="true" threshold="300">
+	<div class="large-10 large-centered columns search">
+        <form blur-on-submit>
+		    <input class="searchbox" on-focus-unfix-header type="text" placeholder="Search friends"
+                   ng-model="search" ng-change="search_change()"/>
+        </form>
+
+		<div ng-show="search.length == 0"><i class="icon-search icon-large"></i></div>
+		<div ng-show="search.length != 0" ng-click="search = ''"><i class="icon-close-circle icon-large"></i></div>
+	</div>
+
+	<div ng-if="search.length != 0">
+		<div class="large-10 large-centered columns add-to-top">
+			<div ng-if="friends_avatars.length != 0">
+				<ul class="friend-grid small-block-grid-3">
+					<li ng-repeat="friend in friends | filter:{name:search} | orderBy:ordering | limitTo:search_count">
+						<a>
+							<div class="av-friend" queued="{{friend.thumb}}" q-fail="profile-fail.png" q-retry="true"
+								 q-click="friend_click(friend.fb_id)">
+							</div>
+							<p class="mini" ng-bind="friend.name"></p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div ng-if="search.length == 0">
+		<div class="large-10 large-centered columns">
+
+			<div ng-if="friends_avatars.length != 0" id='friends_with_avatars'>
+				<h4 class="friends-title">Friends with Avatars <span>{{friends_avatars.length}}</span></h4>
+				<ul class="friend-grid small-block-grid-3">
+					<li ng-repeat="friend in friends_avatars | orderBy:'name' | limitTo:avatars_count">
+						<a>
+							<div class="av-friend" queued="{{friend.thumb}}" q-fail="profile-fail.png" q-retry="true"
+								 q-click="friend_click(friend.fb_id)">
+							</div>
+							<p class="mini" ng-bind="friend.name"></p>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+
+			<!-- Friends Without Avatars -->
+
+            <!-- BIT-692
+			<div class="settings-list fb-friends">
+				<a ng-click="select_friend_without_avatar()">Create an Avatar for...
+					<span class="chevron"><i class="icon-chevron-right"></i></span>
+				</a>
+			</div>
+            BIT-692 -->
+			<div class="spacer"></div>
+		</div>
+	</div>
+
+</div>
+
+<!-- TODO: BA-XXX if no friends on Bitstrips
+<div class="row empty-feed no-friends add-to-bottom">
+
+    <ul class="friend-grid small-block-grid-3 empty-feed no-friends">
+        <li>&nbsp;</li>
+        <li>
+            <a>
+                <div class="av-friend" queued="{{user.thumb}}" q-fail="profile-fail.png" q-retry="true" q-click="friend_click(friend.fb_id)">
+                </div>
+                <p class="mini" ng-bind="friend.name"></p>
+            </a>
+        </li>
+        <li>&nbsp;</li>
+    </ul>
+
+    <div class="large-10 large-centered columns">
+        <h6>You don't have any friends on Bitstrips. Create an avatar for a facebook friend to start making comics.</h6>
+        <a class="edit btn" ng-click="select_friend_without_avatar()">Create Avatar <i class="icon-user icon-large"></i></a>
+    </div>
+
+</div>
+ -->
+
+<!-- TODO: BA-XXX if no friends AT ALL!
+<div class="row empty-feed no-friends add-to-bottom">
+
+    <ul class="friend-grid small-block-grid-3 empty-feed no-friends">
+        <li>&nbsp;</li>
+        <li>
+            <a>
+                <div class="av-friend" queued="{{user.thumb}}" q-fail="profile-fail.png" q-retry="true" q-click="friend_click(friend.fb_id)">
+                </div>
+                <p class="mini" ng-bind="friend.name"></p>
+            </a>
+        </li>
+        <li>&nbsp;</li>
+    </ul>
+
+    <div class="large-10 large-centered columns">
+        <h6>Start making comics starring you and your friends! Invite someone to Bitstrips or connect with friends on Facebook.</h6>
+    </div>
+
+</div>
+ -->

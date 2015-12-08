@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.photos.stories.StoryLayout android:layout_gravity="center" android:id="@id/story_layout" android:background="@android:color/background_light" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/text_size_20" android:gravity="center" android:id="@id/list_empty_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/list_empty_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.Photos.ProgressBar.IndeterminateBlue" />
+    </FrameLayout>
+    <View android:layout_gravity="top" android:id="@id/story_top_gradient" android:background="@drawable/story_top_gradient_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/story_top_gradient_height" />
+    <View android:layout_gravity="bottom" android:id="@id/story_bottom_gradient" android:background="@drawable/story_bottom_gradient_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/story_bottom_gradient_height" />
+    <FrameLayout android:id="@id/inset_frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/story_edit_location_replacement_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include layout="@layout/share_container" />
+    </FrameLayout>
+    <include layout="@layout/end_card_story_promo_button" />
+    <FrameLayout android:id="@id/hosted_story_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

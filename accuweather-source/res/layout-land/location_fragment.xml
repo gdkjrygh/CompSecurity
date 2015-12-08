@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/primary_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.accuweather.android.views.SearchView android:id="@id/search_view" android:background="@color/secondary_widget_background_holo_light" android:layout_width="fill_parent" android:layout_height="56.0dip" custom:textColor="@color/black_75_opacity" custom:hintTextColor="@color/gray" />
+        <View android:background="@color/secondary_text" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <View android:background="@color/secondary_text" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <RelativeLayout android:id="@id/current_location_layout" android:background="@color/secondary_widget_background_holo_light" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/my_location" android:background="@drawable/abs__list_selector_holo_light" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/location_item" />
+        </RelativeLayout>
+        <View android:background="@color/secondary_text" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+    <View android:background="@color/primary_text" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+    <include android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/list_fragment" />
+</LinearLayout>

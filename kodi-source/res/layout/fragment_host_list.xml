@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@android:id/empty" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/no_xbmc_configured" android:layout_weight="1.0" style="@style/WizardTitle" />
+        <View style="@style/DefaultDividerH" />
+        <Button android:id="@id/action_add_host" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/add_xbmc" style="@style/Widget.Button.Borderless" />
+    </LinearLayout>
+    <GridView android:id="@id/list" android:paddingLeft="@dimen/small_padding" android:paddingTop="@dimen/small_padding" android:paddingRight="@dimen/small_padding" android:paddingBottom="@dimen/default_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="?selectableItemBackground" android:drawSelectorOnTop="true" android:choiceMode="singleChoice" style="@style/Widget.GridView" />
+</FrameLayout>

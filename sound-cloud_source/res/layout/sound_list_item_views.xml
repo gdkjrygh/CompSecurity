@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image" android:layout_marginTop="16.0dip" style="@style/ListItemImage" />
+    <com.soundcloud.android.offline.DownloadImageView android:id="@id/item_download_state" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/download_progress_indicator_margin" android:layout_marginRight="@dimen/download_progress_indicator_margin" android:layout_alignTop="@id/image" android:layout_alignRight="@id/image" style="@style/DownloadItem" />
+    <LinearLayout android:id="@id/list_item_header_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_toLeftOf="@id/list_item_right_info" android:layout_toRightOf="@id/image" android:layout_alignTop="@id/image">
+        <com.soundcloud.android.view.CustomFontTextView android:id="@id/list_item_header" style="@style/ListItemText.SecondaryText" />
+        <com.soundcloud.android.view.CustomFontTextView android:gravity="center_vertical" android:id="@id/reposter" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="3.0dip" android:drawableLeft="@drawable/stats_repost" android:drawablePadding="6.0dip" style="@style/ListItemText.SecondaryText" />
+    </LinearLayout>
+    <com.soundcloud.android.view.CustomFontTextView android:id="@id/list_item_subheader" android:layout_toRightOf="@id/image" android:layout_below="@id/list_item_header_container" style="@style/ListItemText.PrimaryText" />
+</merge>

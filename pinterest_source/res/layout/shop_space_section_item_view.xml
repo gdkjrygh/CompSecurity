@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/shop_space_section_item_logo_container" android:layout_width="@dimen/commerce_shop_space_section_item_image_width_height" android:layout_height="@dimen/commerce_shop_space_section_item_image_width_height" android:layout_marginLeft="@dimen/margin_three_quarter" android:layout_marginTop="@dimen/margin_half" android:layout_marginRight="@dimen/margin_three_quarter" android:layout_marginBottom="@dimen/margin_half">
+        <com.pinterest.ui.imageview.WebImageView android:id="@id/shop_space_section_item_logo" android:layout_width="@dimen/commerce_shop_space_section_item_image_width_height" android:layout_height="@dimen/commerce_shop_space_section_item_image_width_height" app:riv_corner_radius="@dimen/commerce_shop_space_section_item_image_radius" />
+        <View android:id="@id/shop_space_section_item_logo_border" android:background="@drawable/shop_space_border_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin_three_quarter" android:layout_toRightOf="@id/shop_space_section_item_logo_container" android:layout_centerVertical="true">
+        <com.pinterest.ui.text.PTextView android:textSize="@dimen/commerce_text_large" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/shop_space_section_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" app:pTypeface="bold" />
+        <com.pinterest.ui.text.PTextView android:textSize="@dimen/commerce_text_small" android:textColor="@color/gray" android:ellipsize="end" android:id="@id/shop_space_section_item_sub_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+</merge>

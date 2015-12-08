@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/wish_off_white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/fragment_wishlist_v2_menu_header" android:background="@color/wish_light_section_header" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/wish_main_text" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/your_wishlist" android:singleLine="false" android:layout_weight="1.0" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/fragment_wishlist_v2_menu_header">
+        <com.contextlogic.wish.ui.components.grid.StaggeredGridView android:layout_gravity="top" android:id="@id/fragment_wishlist_v2_menu_gridview" android:animationCache="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollingCache="false" android:cacheColorHint="@color/wish_transparent" />
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/fragment_wishlist_v2_loading_view" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ProgressBar android:layout_gravity="center" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginBottom="10.0dip" android:indeterminateOnly="true" style="@style/WishAppThemeProgressIndicator" />
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="@color/wish_light_text" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/loading" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/fragment_wishlist_v2_menu_empty_view" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="@color/wish_light_text" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/save_for_wishlistV2" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/fragment_wishlist_v2_feed_error_view" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="@color/wish_light_text" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/fragment_wishlist_feed_error" />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

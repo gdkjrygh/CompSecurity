@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="80.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/ui_component_loading_list_row_loading_row" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="left|center" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="25.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="25.0dip" android:indeterminateOnly="true" style="@style/WishAppThemeProgressIndicator" />
+        <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="12.0dip" android:textColor="@color/wish_light_text" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loading" android:singleLine="true" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/ui_component_loading_list_row_click_load_row" android:background="@drawable/ui_component_loading_list_row_bg_selector" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="12.0dip" android:textColor="@color/wish_light_text" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/load_more" android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/ui_component_loading_list_row_no_items_row" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="12.0dip" android:textColor="@color/wish_extra_light_text" android:layout_gravity="center" android:id="@id/ui_component_loading_list_row_no_items_row_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_more_items" android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/ui_component_loading_list_row_no_items_button_row" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/wish_main_text" android:gravity="bottom|center" android:layout_gravity="center" android:id="@id/ui_component_loading_list_row_no_items_button_row_message" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.contextlogic.wish.ui.components.button.UnifiedFontButton android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/wish_white" android:gravity="center" android:layout_gravity="center" android:id="@id/ui_component_loading_list_row_no_items_button_row_button" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_margin="8.0dip" android:text="@string/done" />
+    </LinearLayout>
+</FrameLayout>

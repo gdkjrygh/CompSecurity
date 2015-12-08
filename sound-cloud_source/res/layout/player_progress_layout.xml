@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.soundcloud.android.playback.ui.view.WaveformCanvas android:id="@id/waveform_left" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <ImageView android:id="@id/line_left" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.soundcloud.android.playback.ui.view.WaveformCanvas android:id="@id/waveform_right" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <ImageView android:id="@id/line_right" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.soundcloud.android.view.ListenableHorizontalScrollView android:id="@id/drag_view_holder" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <com.soundcloud.android.view.FixedWidthView android:id="@id/drag_view" android:layout_width="1800.0dip" android:layout_height="100.0dip" />
+    </com.soundcloud.android.view.ListenableHorizontalScrollView>
+</merge>

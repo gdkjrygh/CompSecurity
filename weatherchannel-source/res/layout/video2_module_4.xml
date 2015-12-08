@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_height="wrap_content" style="@style/module_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/video2_title" android:paddingLeft="@dimen/video_row_padding" android:text="@string/video_label" style="@style/module_header" />
+    <LinearLayout android:orientation="vertical" android:id="@id/video_module_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+            <include android:id="@id/video2_grid_item_1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/video2_grid_item_small" />
+            <include android:id="@id/video2_grid_item_2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/video2_grid_item_small" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+            <include android:id="@id/video2_grid_item_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/video2_grid_item_small" />
+            <include android:id="@id/video2_grid_item_4" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/video2_grid_item_small" />
+        </LinearLayout>
+        <com.weather.commons.ui.fonts.TextViewWithFont android:layout_gravity="center_horizontal" android:id="@id/video2_more_stories" android:text="@string/video2_more_videos" style="@style/module_more" />
+    </LinearLayout>
+    <include layout="@layout/video_module_invalid_data" />
+</LinearLayout>

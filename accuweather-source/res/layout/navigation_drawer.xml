@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/navigation_list_layout" android:background="@color/listview_gray" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/spinner_layout" android:background="@drawable/navigation_drawer_gradient" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <com.actionbarsherlock.internal.widget.IcsSpinner android:id="@id/spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14.0dip" android:layout_centerVertical="true" style="@style/Widget.AccuWeather.Spinner.DropDown.WithDivider" />
+            <View android:background="#ffbbbbbb" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <ListView android:id="@id/list" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@android:color/transparent" android:dividerHeight="0.0dip" />
+    </LinearLayout>
+    <ImageView android:id="@id/image" android:background="@drawable/navigation_drawer_shadow" android:paddingLeft="8.0dip" android:paddingTop="0.0dip" android:layout_width="8.0dip" android:layout_height="fill_parent" android:layout_marginLeft="216.0dip" android:scaleType="matrix" android:layout_alignParentRight="true" />
+</RelativeLayout>

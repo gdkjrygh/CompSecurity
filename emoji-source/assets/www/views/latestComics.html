@@ -1,0 +1,12 @@
+<div class="row" ng-repeat="day in days" id='feed'>
+	<div class="large-10 large-centered columns">
+		<hr ng-if="day.title && !$first"/>
+		<div class="panel" ng-repeat="comic in day.comics">
+			<div class="magic-feed-img" queued="{{comic.thumb}}" q-fail="comic-fail.png" q-retry="true">
+			</div>
+			<p class="feed-title" ng-if="comic.caption" ng-bind="comic.caption"></p>
+			<a ng-if="comic.needs_costar == undefined" class="edit btn" ng-click="customize(comic)" id='share'>Customize</a>
+			<a ng-if="comic.needs_costar" class="edit btn" href="#/add_costar">Add a Costar</a>
+		</div>
+	</div>
+</div>

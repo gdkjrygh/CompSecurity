@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/search_results_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.walmartlabs.ui.recycler.ListRecyclerView android:id="@id/instore_shelf_recyclerview" android:visibility="gone" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+    <include android:layout_gravity="bottom" android:id="@id/change_store_footer" android:layout_width="fill_parent" android:layout_height="50.0dip" layout="@layout/store_info_footer" />
+    <include android:id="@id/message_view" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/message_page" />
+    <include android:id="@id/loading_view" layout="@layout/loading_page" />
+    <include android:id="@id/set_store_screen" android:visibility="gone" layout="@layout/store_search_set_fav" />
+</FrameLayout>

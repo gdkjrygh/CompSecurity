@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/api_tv_controls_frame" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ApiTvControlsOverlay"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/progressbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:progressDrawable="@drawable/api_tv_scrubber" android:minHeight="0.0dip" style="@android:style/Widget.ProgressBar.Horizontal" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@id/back" android:background="@drawable/api_tv_controls_overlay_button_back" style="@style/ApiTvControlsOverlayButton" />
+        <Button android:id="@id/rewind" android:background="@drawable/api_tv_controls_overlay_button_rewind" style="@style/ApiTvControlsOverlayButton" />
+        <ToggleButton android:id="@id/play" android:background="@drawable/api_tv_controls_overlay_button_play" style="@style/ApiTvControlsOverlayButton" />
+        <Button android:id="@id/fastforward" android:background="@drawable/api_tv_controls_overlay_button_fastforward" style="@style/ApiTvControlsOverlayButton" />
+        <Button android:id="@id/forward" android:background="@drawable/api_tv_controls_overlay_button_forward" style="@style/ApiTvControlsOverlayButton" />
+        <View android:id="@id/divider" android:layout_width="8.0dip" android:layout_height="1.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/extra_buttons_frame" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Button android:id="@id/cc" android:background="@drawable/api_tv_controls_overlay_button_cc" style="@style/ApiTvControlsOverlayButton" />
+        <Button android:id="@id/home" android:background="@drawable/api_tv_controls_overlay_button_home" style="@style/ApiTvControlsOverlayButton" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/timebar" android:paddingTop="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="11.0dip" android:textColor="@color/text_tv_regular" android:gravity="left" android:id="@id/current_time" android:layout_width="fill_parent" android:layout_height="fill_parent" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_weight="1.0" />
+        <TextView android:textSize="11.0dip" android:textColor="@color/text_tv_less_grey" android:gravity="right" android:id="@id/total_time" android:layout_width="fill_parent" android:layout_height="fill_parent" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

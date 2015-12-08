@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="top|center" android:layout_gravity="top|center" android:orientation="vertical" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@color/wish_dark_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/wish_white" android:gravity="center" android:layout_gravity="center" android:paddingLeft="6.0dip" android:paddingTop="10.0dip" android:paddingRight="6.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tell_us_about_you" />
+                <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="13.0dip" android:textColor="@color/wish_white" android:gravity="center" android:layout_gravity="center" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/personalize_message" />
+            </LinearLayout>
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="@color/wish_main_text" android:textColorHint="@color/wish_text_hint" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/birthday" android:singleLine="false" />
+            <DatePicker android:id="@id/fragment_signup_update_profile_date_picker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:calendarViewShown="false" />
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="@color/wish_main_text" android:textColorHint="@color/wish_text_hint" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip" android:text="@string/gender" android:singleLine="false" />
+            <Spinner android:id="@id/fragment_signup_update_profile_gender_spinner" android:background="@drawable/dropdown_bg_selector" android:layout_width="150.0dip" android:layout_height="wrap_content" />
+            <com.contextlogic.wish.ui.components.button.UnifiedFontButton android:textSize="15.0dip" android:textStyle="bold" android:textColor="@color/wish_white" android:layout_gravity="right|center" android:id="@id/fragment_signup_update_profile_next_button" android:background="@drawable/blue_button_bg_selector_flat" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="10.0dip" android:text="@string/next" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

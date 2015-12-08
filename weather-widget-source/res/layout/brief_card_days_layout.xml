@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="@dimen/brief_card_title_high" layout="@layout/brief_card_title_layout" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/home_brief_card_bg_selector" android:layout_width="fill_parent" android:layout_height="@dimen/brief_card_content_high">
+        <include android:id="@id/days_column" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/forecast_days_column" />
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="14.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/no_weather_display" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:text="@string/weather_no_data_warn" android:drawableTop="@drawable/no_weather_display" android:drawablePadding="15.0dip" />
+    </LinearLayout>
+</LinearLayout>

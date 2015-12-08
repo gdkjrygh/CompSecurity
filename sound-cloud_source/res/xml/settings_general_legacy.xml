@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_basic_settings" android:key="@string/key_general">
+        <Preference android:title="@string/pref_notifications" android:key="@string/key_notifications" android:summary="@string/pref_notifications_description" android:order="2" />
+        <CheckBoxPreference android:title="@string/pref_autoplay_related" android:key="@string/key_autoplay_related_enabled" android:summary="@string/pref_autoplay_related_desc" android:order="3" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/pref_sync_wifi_only" android:key="@string/key_sync_wifi_only" android:summary="@string/pref_sync_wifi_only_description" android:order="4" android:defaultValue="false" />
+        <Preference android:title="@string/pref_revoke_access" android:key="@string/key_logout" android:summary="@string/pref_revoke_desc" android:order="5" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_privacy">
+        <CheckBoxPreference android:title="@string/pref_analytics" android:key="@string/key_analytics_enabled" android:summary="@string/pref_analytics_desc" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/pref_crashlogs" android:key="@string/key_report_crashes" android:summary="@string/pref_crashlogs_desc" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_connection_and_data">
+        <Preference android:title="@string/wifi_settings" android:key="@string/key_wireless" android:summary="@string/wifi_settings_summary" />
+        <Preference android:title="@string/pref_clear_cache" android:key="@string/key_clear_cache" android:summary="@string/pref_clear_cache_desc" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_app_details">
+        <Preference android:title="@string/pref_help" android:key="@string/key_help" android:summary="@string/pref_help_desc" />
+        <Preference android:title="@string/legal" android:key="@string/key_legal" android:summary="@string/legal_summary" />
+        <Preference android:title="@string/version" android:key="@string/key_version" />
+    </PreferenceCategory>
+</PreferenceScreen>

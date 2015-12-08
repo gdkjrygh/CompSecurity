@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.walmart.android.ui.SafeListView android:id="@id/listView1" android:background="@drawable/item_details_divider" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/default_list_selector" android:cacheColorHint="@color/transparent" android:divider="@color/divider_grey" android:dividerHeight="1.0px" android:layout_below="@id/header" android:layout_alignParentLeft="true" />
+    <RelativeLayout android:id="@id/list_fade" android:background="#88000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/header" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.walmart.android.wmui.MediumPriceView android:id="@id/bundle_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_alignParentRight="true" custom:price="$0.00" custom:textColor="@color/item_price" style="@style/Price.Large" />
+        <TextView android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/item_details_bundle_price_title" android:layout_alignParentLeft="true" style="@style/Text.Header" />
+        <Button android:id="@id/button1" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="20.0dip" android:text="@string/item_details_add_to_bundle" android:layout_below="@id/bundle_price" style="@style/PrimaryButton.Orange" />
+    </RelativeLayout>
+</RelativeLayout>

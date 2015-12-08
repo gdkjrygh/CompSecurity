@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="20.0dip">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.android.volley.toolbox.NetworkImageView android:layout_gravity="center" android:id="@id/id_product_itemImg" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <HorizontalScrollView android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="32.0dip" android:layout_marginTop="10.0dip">
+            <LinearLayout android:id="@id/id_pmp_product_thumbnail_layout" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </HorizontalScrollView>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:ellipsize="end" android:id="@id/id_product_itemTitleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Product title" android:maxLines="2" android:minLines="2" />
+            <TextView android:textStyle="bold" android:textColor="@android:color/bright_foreground_dark_inverse" android:id="@id/id_product_itemSalePriceText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textStyle="bold" android:textColor="@android:color/bright_foreground_dark_inverse" android:id="@id/id_product_itemClearancePriceText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:layout_gravity="left" android:id="@id/id_product_itemOriginalPriceTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/id_productList_ratingLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <RatingBar android:id="@id/id_product_itemRatingBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" style="?android:attr/ratingBarStyleSmall" />
+                <TextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/id_product_itemRatingCountTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/id_product_ValueAddedIcons" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="@dimen/value_added_icon_height_layout" />
+    </LinearLayout>
+</LinearLayout>

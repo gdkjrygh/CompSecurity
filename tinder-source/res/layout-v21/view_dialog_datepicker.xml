@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.tinder.views.RoundedLinearLayout android:background="@color/white" android:layout_width="@dimen/width_dialog" android:layout_height="wrap_content" app:corners="@dimen/rounded_card_radius"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <com.tinder.views.CustomTextView android:textSize="@dimen/verification_title_size" android:textColor="@color/text_dark" android:id="@id/txt_birthdate_header" android:paddingLeft="@dimen/padding_settings_show_me" android:paddingTop="@dimen/padding_large" android:paddingBottom="@dimen/padding_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/birthdate" app:font="semi_bold" />
+        <DatePicker android:layout_gravity="center_horizontal" android:id="@id/datepicker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/txt_birthdate_header" android:calendarViewShown="false" android:yearListSelectorColor="@color/transparent" android:calendarTextColor="@color/text_dark" android:datePickerMode="1" />
+        <com.tinder.views.CustomTextView android:id="@id/btn_set" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_med" android:layout_marginBottom="@dimen/margin_large" android:text="@string/set" android:layout_below="@id/datepicker" android:layout_alignLeft="@id/datepicker" android:layout_alignRight="@id/datepicker" app:font="semi_bold" style="@style/orange_rect_button" clickable="true" />
+    </com.tinder.views.RoundedLinearLayout>
+</ScrollView>

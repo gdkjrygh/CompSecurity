@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/discovery_search_cell_margin_left_right" android:layout_marginTop="@dimen/discovery_search_cell_margin_top_bottom" android:layout_marginRight="@dimen/discovery_search_cell_margin_left_right"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:auto="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView android:id="@id/search_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground" auto:cardElevation="@dimen/discovery_cell_elevation" auto:cardUseCompatPadding="true">
+        <LinearLayout android:orientation="horizontal" android:id="@id/search_holder" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/search_link_height">
+            <ImageView android:id="@id/search_icon" android:paddingLeft="@dimen/search_link_padding_horizontal" android:paddingTop="@dimen/search_link_padding_vertical" android:paddingRight="@dimen/search_link_padding_horizontal" android:paddingBottom="@dimen/search_link_padding_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/search_icon" />
+            <com.soundcloud.android.view.CustomFontTextView android:id="@id/search_text" android:hint="@string/discovery_search_hint" style="@style/Search.TextView.Link" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

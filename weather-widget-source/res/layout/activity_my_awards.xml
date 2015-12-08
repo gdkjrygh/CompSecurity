@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="#ff313131" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/back" android:clickable="true" android:layout_width="@dimen/title_height" android:layout_height="fill_parent" android:src="@drawable/title_back_selector" android:scaleType="centerInside" android:contentDescription="@null" />
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:gravity="left|center" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/my_award" android:layout_weight="1.0" style="@style/title_style" />
+    </LinearLayout>
+    <ListView android:scrollbarThumbVertical="@drawable/forecast_article_drag_vertical" android:id="@id/lv_awards" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/gw_weather_setting_selector" android:drawSelectorOnTop="false" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.skype.android.widget.AccessibleEditText android:textSize="@dimen/font_medium" android:id="@id/input_edit" android:background="@drawable/textbox_blue" android:padding="@dimen/padding2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding3" android:layout_marginTop="@dimen/padding3" android:layout_marginRight="@dimen/padding3" android:singleLine="false" android:maxLength="@integer/contact_request_message_maxlength" android:inputType="textMultiLine" android:imeOptions="actionDone" />
+    <View android:id="@id/spacer" android:layout_width="@dimen/padding5" android:layout_height="@dimen/padding5" android:layout_below="@id/input_edit" android:layout_centerHorizontal="true" />
+    <Button android:id="@id/send_button" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="@dimen/rounded_button_height" android:text="@string/action_send" android:layout_toRightOf="@id/spacer" android:layout_below="@id/spacer" android:layout_alignRight="@id/input_edit" style="@style/ButtonPositive" />
+    <Button android:id="@id/cancel_button" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="@dimen/rounded_button_height" android:text="@string/action_cancel" android:layout_toLeftOf="@id/spacer" android:layout_below="@id/spacer" android:layout_alignLeft="@id/input_edit" style="@style/ButtonNegative" />
+</RelativeLayout>

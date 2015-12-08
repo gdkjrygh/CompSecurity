@@ -1,0 +1,32 @@
+<div ng-if="expanded" ng-repeat="comment in comic.comments"
+	 emit-on-ng-repeat-finished="comic.comments.expandedLoaded">
+	<comic-comment comment="comment" show-icon="$first"></comic-comment>
+</div>
+
+<div ng-if="!expanded">
+	<div>
+		<i class="icon-comment icon-fixed-width"></i>
+		<a class="all" ng-click="show_all()">View all {{comic.comments.length}} comments</a>
+	</div>
+	<div ng-repeat="comment in comic.comments | last:3">
+		<comic-comment comment="comment"></comic-comment>
+	</div>
+</div>
+
+<div ng-if="noComments() && onSummaryView">
+    <div>
+        <i class="icon-comment icon-fixed-width"></i>
+        <a class="first-to" ng-click="comment()">Be the first to comment</a>
+    </div>
+</div>
+
+<!-- New expanded comments
+<div class="full-comment">
+        <a class="profile-pic" ng-click="view_user(comic.author.fb_id)"><img ng-src="{{comic.author.thumb}}"></a>
+        <div>
+        	<a ng-click="view_user(comment.user.fb_id)"><span ng-bind="comment.user | displayName"></span>Name</a>
+        	<p><span ng-bind="comment.text"></span>Donec nec diam justo.</p>
+        </div>
+        <a class="more">&hellip;</a>
+</div>
+-->

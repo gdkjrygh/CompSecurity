@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="@dimen/apptentive_activity_side_padding" android:paddingTop="@dimen/apptentive_activity_vertical_padding" android:paddingRight="@dimen/apptentive_activity_side_padding" android:paddingBottom="@dimen/apptentive_activity_vertical_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/apptentive_message_center_root" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:background="@color/apptentive_message_center_header_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/apptentive_text_medium_large" android:textStyle="bold" android:textColor="@color/apptentive_message_center_header_text" android:gravity="center" android:id="@id/apptentive_message_center_header_title" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apptentive_message_center_title" android:shadowColor="@color/apptentive_message_center_header_text_shadow" android:shadowDx="0.0" android:shadowDy="-1.0" android:shadowRadius="1.0" android:drawableLeft="@drawable/android_ic_menu_start_conversation" android:drawablePadding="5.0dip" />
+        </LinearLayout>
+        <ListView android:id="@id/apptentive_message_center_list" android:background="@color/apptentive_message_center_main_area_background" android:layout_width="fill_parent" android:layout_height="0.0px" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@null" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/apptentive_message_center_attach_button" android:clickable="true" android:layout_width="44.0dip" android:layout_height="44.0dip" android:src="@drawable/android_ic_action_photo" android:scaleType="fitCenter" />
+            <EditText android:textSize="14.0sp" android:textColor="@android:color/black" android:id="@id/apptentive_message_center_message" android:background="@drawable/android_textfield_default" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:hint="@string/apptentive_message_center_compose_hint" android:maxLines="3" android:singleLine="false" android:layout_weight="1.0" android:inputType="textCapSentences|textMultiLine" />
+            <ImageView android:id="@id/apptentive_message_center_send" android:clickable="true" android:layout_width="44.0dip" android:layout_height="44.0dip" android:src="@drawable/android_ic_action_send" android:scaleType="fitCenter" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/apptentive_branding_view" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="24.0dip">
+            <RelativeLayout android:gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="12.0sp" android:textColor="#ffcccccc" android:gravity="bottom" android:id="@id/apptentive_message_center_powered_by_text" android:paddingRight="4.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Powered by" />
+                <ImageView android:layout_width="100.0dip" android:layout_height="fill_parent" android:src="@drawable/apptentive_logo_reverse" android:layout_toRightOf="@id/apptentive_message_center_powered_by_text" />
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/common_bg_color" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_layout" layout="@layout/common_title_layout" />
+    <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/common_margin_left" android:paddingRight="@dimen/common_margin_right" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="fill_parent" android:layout_height="@dimen/setting_classify_title_height" android:layout_marginTop="0.0dip" android:text="@string/setting_location" style="@style/setting_classify_title_style" />
+            <include layout="@layout/common_classify_divider_layout" />
+            <RelativeLayout android:id="@id/auto_location_layout" android:background="@drawable/settings_item_selector" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/setting_item_height" android:baselineAligned="false">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="60.0dip">
+                    <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:id="@id/followMyLocation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/auto_location" style="@style/setting_item_title_style" />
+                    <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:id="@id/locatingTip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/openmylocation" style="@style/setting_item_tip_style" />
+                </LinearLayout>
+                <CheckBox android:id="@id/auto_location_checkbox" android:background="@drawable/common_checkbox_selector" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:button="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="fill_parent" android:layout_height="@dimen/setting_classify_title_height" android:text="@string/setting_refresh" style="@style/setting_classify_title_style" />
+            <include layout="@layout/common_classify_divider_layout" />
+            <RelativeLayout android:id="@id/launch_refresh_layout" android:background="@drawable/settings_item_selector" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:minHeight="@dimen/setting_item_height">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="60.0dip">
+                    <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/launch_refresh" style="@style/setting_item_title_style" />
+                    <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/launch_refresh_title" style="@style/setting_item_tip_style" />
+                </LinearLayout>
+                <CheckBox android:id="@id/launch_refresh_checkbox" android:background="@drawable/common_checkbox_selector" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:button="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/auto_refresh_layout" android:background="@drawable/settings_item_selector" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/setting_item_height" android:baselineAligned="false">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="60.0dip">
+                    <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/auto_refresh" style="@style/setting_item_title_style" />
+                    <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/auto_refresh_title" style="@style/setting_item_tip_style" />
+                </LinearLayout>
+                <CheckBox android:id="@id/auto_refresh_checkbox" android:background="@drawable/common_checkbox_selector" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:button="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <com.gau.go.launcherex.gowidget.weather.view.VerticalStretchLayout android:id="@id/auto_refresh_frequency_vertical_stretch_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:id="@id/auto_refresh_frequency_layout" android:background="@drawable/settings_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/setting_item_height">
+                    <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:id="@id/auto_refresh_frequency_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/auto_refresh_frequency" style="@style/setting_item_title_style" />
+                    <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:id="@id/auto_refresh_frequency_text" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:drawableRight="@drawable/settings_more_icon" android:drawablePadding="@dimen/setting_item_value_drawable_padding" android:layout_weight="1.0" style="@style/setting_item_value_style" />
+                </LinearLayout>
+            </com.gau.go.launcherex.gowidget.weather.view.VerticalStretchLayout>
+            <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/prompting_auto_refresh" android:drawableLeft="@drawable/common_tip_point_icon" android:drawablePadding="10.0dip" style="@style/setting_item_tip_style" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

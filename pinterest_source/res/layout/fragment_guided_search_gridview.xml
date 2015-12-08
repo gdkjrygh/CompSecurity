@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/bg_grid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/focusGrabber" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0px" android:layout_height="0.0px" />
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_container" style="@style/full_view">
+        <com.pinterest.ui.grid.PinterestGridView android:id="@id/grid_vw" style="@style/full_view" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/header_wrapper" android:background="@color/gray_darkest" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pinterest.ui.actionbar.MetadataBar android:layout_gravity="top" android:id="@id/metadata_bar_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <org.lucasr.twowayview.TwoWayView android:id="@id/category_list" android:background="@color/gray_darkest" android:layout_width="fill_parent" android:layout_height="@dimen/search_filter_height" android:drawSelectorOnTop="false" />
+    </LinearLayout>
+</FrameLayout>

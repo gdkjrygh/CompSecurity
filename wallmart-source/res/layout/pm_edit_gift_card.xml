@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/payment_background_default" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/gift_card_detail" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textStyle="bold" android:textColor="@color/white" android:id="@id/pm_edit_gc_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="30.0dip" android:text="@string/pm_edit_gift_card_header" android:drawableLeft="@drawable/ic_spark" android:drawablePadding="@dimen/payment_margin_small" style="@style/Payment.Text.Body" />
+            <TextView android:textColor="@color/white" android:gravity="right" android:id="@id/pm_edit_gc_balance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:layout_marginRight="25.0dip" android:text="$12.34" android:layout_weight="1.0" style="@style/Payment.Text.Headline.Light" />
+        </LinearLayout>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Gift Card Information" style="@style/Payment.ContentHeading" />
+        <TextView android:gravity="left|center" android:id="@id/pm_edit_gc_label" android:background="@color/white" android:padding="@dimen/payment_margin_small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="My eGift Card" style="@style/Payment.Text.CardInfo" />
+    </LinearLayout>
+    <Button android:id="@id/pm_edit_gc_delete_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/payment_margin" android:text="@string/pm_delete_title_gift_card" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/Payment.DeleteButton" />
+</RelativeLayout>

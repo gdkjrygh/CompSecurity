@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/dialpad_top_layout" android:background="@color/skype_grey_cool30" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.skype.android.widget.SymbolView android:id="@id/dialpad_erase_button" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:symbol_code="BackspaceStroke" style="@style/DialPadEraseSymbol" />
+            <com.skype.android.app.dialer.NoImeEditText android:id="@id/dialpad_edit_text" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/size_2x" android:layout_toLeftOf="@id/dialpad_erase_button" android:layout_centerVertical="true" style="@style/DialpadEditText" />
+        </RelativeLayout>
+        <TextView android:textColor="@color/text_link_blue" android:id="@id/dialpad_contact" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/size_2x" android:singleLine="true" android:textIsSelectable="false" style="@style/DialpadContact" />
+        <Button android:id="@id/dialpad_country_button" android:layout_marginLeft="@dimen/size_2x" android:drawablePadding="@dimen/padding2b" style="@style/DialPadCountryButton" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/dialpad_bottom_layout" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageButton android:id="@id/dialpad_call_button" android:background="@drawable/button_positive_selector" android:layout_width="@dimen/dialpad_call_button_width" android:layout_height="@dimen/dialpad_call_button_height" android:layout_marginTop="@dimen/padding3" android:layout_marginBottom="@dimen/padding3" android:src="@drawable/call_btn_answer" android:layout_centerHorizontal="true" android:contentDescription="@string/action_call" />
+        <com.skype.android.widget.SymbolView android:textSize="@dimen/generic_button_size" android:textColor="@color/default_blue_button_color_selector" android:id="@id/dialpad_add_number_button" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/size_1x" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:symbol_code="LandlineAdd" />
+    </RelativeLayout>
+    <com.skype.android.app.dialer.DialpadView android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/dialpad_bottom_layout" android:layout_below="@id/dialpad_top_layout" />
+</RelativeLayout>

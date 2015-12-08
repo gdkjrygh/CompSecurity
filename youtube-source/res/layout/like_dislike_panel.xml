@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="49.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <View android:id="@id/separator" android:background="#ffe1e1e1" android:layout_width="fill_parent" android:layout_height="@dimen/card_separator_height" />
+    <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/small_font_size" android:textColor="#ff999999" android:gravity="center" android:id="@id/likes" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginTop="8.0dip" android:drawableLeft="@drawable/like_drawable" android:layout_below="@id/separator" android:layout_alignParentLeft="true" yt:robotoFont="light" />
+    <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/small_font_size" android:textColor="#ff999999" android:gravity="center" android:id="@id/dislikes" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="8.0dip" android:drawableLeft="@drawable/dislike_drawable" android:layout_toRightOf="@id/likes" android:layout_below="@id/separator" yt:robotoFont="light" />
+    <FrameLayout android:id="@id/offline_button" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_below="@id/separator" android:layout_alignParentRight="true">
+        <com.google.android.apps.youtube.app.ui.OfflineArrowView android:layout_gravity="center" android:id="@id/offline_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/offline_wait_progress" android:visibility="gone" android:layout_width="@dimen/status_spinner_width" android:layout_height="@dimen/status_spinner_height" />
+    </FrameLayout>
+    <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="16.0dip" android:textColor="#ff999999" android:gravity="center" android:id="@id/offline_label" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/guide_offline_videos" android:layout_toLeftOf="@id/offline_button" android:layout_below="@id/separator" yt:robotoFont="light" />
+</RelativeLayout>

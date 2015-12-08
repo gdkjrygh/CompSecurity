@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/tray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/media_tray_bar_height" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/media_top_shadow" android:background="@drawable/chatbar_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <kik.android.widget.DarkLinearLayout android:orientation="vertical" android:id="@id/bottom_tray" android:background="@xml/dark_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:minHeight="@dimen/media_tray_bar_height">
+        <android.support.v7.widget.RecyclerView android:id="@id/suggested_response_recycler_view" android:background="@color/white" android:paddingTop="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+        <RelativeLayout android:orientation="vertical" android:id="@id/content_attach_section" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <RelativeLayout android:orientation="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:minHeight="@dimen/media_tray_bar_height">
+            <LinearLayout android:id="@id/media_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/media_tray_bar_height" android:layout_marginLeft="@dimen/media_tray_bar_height" android:layout_alignBottom="@id/text_layout">
+                <kik.android.widget.PagerIconTabs android:layout_gravity="bottom" android:id="@id/media_item_tabs" android:background="@xml/dark_selector" android:layout_width="wrap_content" android:layout_height="@dimen/media_tray_bar_height" />
+                <FrameLayout android:layout_gravity="bottom|right|center" android:id="@id/expand_button_container" android:clickable="true" android:layout_width="wrap_content" android:layout_height="@dimen/media_tray_bar_height" android:layout_weight="0.7">
+                    <kik.android.widget.TabIconImageView android:layout_gravity="right|center" android:id="@id/expand_button" android:background="@xml/android_blue_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@xml/expand_button_selector" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@id/text_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:id="@id/x_button_spacer" android:layout_width="32.0dip" android:layout_height="1.0dip" />
+                <LinearLayout android:orientation="vertical" android:id="@id/textview_wrapper" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <kik.android.widget.ImeAwareEditText android:gravity="top" android:id="@id/txt_new_message" android:background="@null" android:paddingLeft="1.0dip" android:paddingRight="1.0dip" android:paddingBottom="12.0dip" android:focusable="true" android:nextFocusLeft="@id/media_tray_open_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="@dimen/chat_field_top_margin" android:maxHeight="180.0dip" android:bufferType="spannable" android:hint="@string/activity_new_message_hint" android:maxLength="2000" android:inputType="textCapSentences|textAutoCorrect|textMultiLine" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="bottom" android:id="@id/real_smiley_button" android:background="@xml/android_blue_selector" android:layout_width="wrap_content" android:layout_height="@dimen/media_tray_bar_height" android:src="@xml/smiley_icon_selector" />
+                <ImageView android:textColor="#ff000000" android:layout_gravity="bottom" android:id="@id/button_send_message" android:background="@xml/android_blue_selector" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/media_tray_bar_height" android:src="@xml/send_button_selector" />
+            </LinearLayout>
+            <kik.android.widget.DarkFrameLayout android:id="@id/media_tray_open_button" android:background="@xml/android_blue_selector_white_background" android:focusable="true" android:layout_width="wrap_content" android:layout_height="@dimen/media_tray_bar_height" android:layout_alignBottom="@id/text_layout">
+                <kik.android.widget.TabIconImageView android:layout_gravity="center" android:id="@id/content_button_x" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@xml/plus_selector" />
+            </kik.android.widget.DarkFrameLayout>
+        </RelativeLayout>
+    </kik.android.widget.DarkLinearLayout>
+    <android.support.v4.view.ViewPager android:id="@id/media_item_area" android:background="@color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="false" />
+    <FrameLayout android:id="@id/empty_media_item_area" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+</LinearLayout>

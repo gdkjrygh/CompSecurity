@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/fragment_filtered_feed_product_view_refresher" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.contextlogic.wish.ui.components.grid.StaggeredGridView android:layout_gravity="top" android:id="@id/fragment_filtered_feed_product_view_gridview" android:animationCache="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollingCache="false" android:cacheColorHint="@color/wish_transparent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/fragment_filtered_feed_product_view_loading_view" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ProgressBar android:layout_gravity="center" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginBottom="10.0dip" android:indeterminateOnly="true" style="@style/WishAppThemeProgressIndicator" />
+        <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="@color/wish_light_text" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/loading" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/fragment_filtered_feed_product_view_no_items_view" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="@color/wish_light_text" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/fragment_product_feed_no_items" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/fragment_filtered_feed_product_view_error_view" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="@color/wish_light_text" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/fragment_product_feed_error" />
+    </LinearLayout>
+    <com.contextlogic.wish.ui.fragment.dealdash.DealDashView android:layout_gravity="center" android:orientation="vertical" android:id="@id/fragment_filtered_feed_deal_dash_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

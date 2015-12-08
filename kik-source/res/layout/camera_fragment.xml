@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/camera_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_gravity="center" android:id="@id/camera_clip_frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:id="@id/camera_preview_cover" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:id="@id/camera_shade_cover" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/video_instruction_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/desc_video_instruction" android:shadowColor="#80000000" android:shadowRadius="15.0" />
+            <FrameLayout android:id="@id/camera_touch_focus" android:background="@drawable/touchfocus" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </FrameLayout>
+    <FrameLayout android:id="@id/preview_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <kik.android.widget.AspectRatioImageView android:layout_gravity="center" android:id="@id/camera_preview_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" />
+        <VideoView android:layout_gravity="center" android:id="@id/video_preview_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/camera_icon_bar" android:paddingTop="11.0dip" android:layout_width="fill_parent" android:layout_height="80.0dip">
+        <ImageView android:layout_gravity="bottom|left|center" android:id="@id/retake_photo_button" android:background="@drawable/camera_retake_icon_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginBottom="16.0dip" />
+        <ImageView android:layout_gravity="bottom|center" android:id="@id/shutter_button" android:background="@drawable/shutter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="11.0dip" android:src="@xml/camera_shutter_circle_selector" />
+        <ImageView android:layout_gravity="bottom|right|center" android:id="@id/use_photo_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" android:src="@drawable/camera_use_icon_selector" />
+        <ImageView android:layout_gravity="bottom|left|center" android:id="@id/lighting_button" android:background="@xml/camera_touch_circle_selector" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="16.0dip" android:layout_marginBottom="16.0dip" />
+        <ImageView android:layout_gravity="bottom|right|center" android:id="@id/swap_camera_button" android:background="@xml/camera_touch_circle_selector" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" android:src="@drawable/camera_flip" android:scaleType="fitCenter" />
+        <TextView android:textColor="@color/white" android:gravity="center" android:layout_gravity="bottom|left|center" android:id="@id/video_timer" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="16.0dip" android:layout_marginBottom="16.0dip" />
+    </FrameLayout>
+    <include android:id="@id/camera_locked_error_cover" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/camera_locked_error_layout" />
+    <ProgressBar android:id="@id/video_progress_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="10.0dip" android:progressDrawable="@drawable/camera_progress_drawable" style="@android:style/Widget.ProgressBar.Horizontal" />
+</FrameLayout>

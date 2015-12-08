@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.ridehistory.PassengerRideHistoryListView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.controls.MenuButtonToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/empty_list_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/span32" android:layout_marginRight="@dimen/span32">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_history_large_grey" />
+        <TextView android:textSize="@dimen/big_text_3" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span24" android:text="@string/passenger_ride_history_empty_list_title" />
+        <TextView android:textSize="@dimen/normal_text" android:textColor="@color/black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span16" android:text="@string/passenger_ride_history_empty_list_subtitle" />
+    </LinearLayout>
+    <include layout="@layout/passenger_ride_history_retry_view" />
+    <android.support.v7.widget.RecyclerView android:id="@id/ride_history_list_view" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</me.lyft.android.ui.ridehistory.PassengerRideHistoryListView>

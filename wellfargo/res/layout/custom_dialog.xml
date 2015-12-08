@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/modal_dialog_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/dialog_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="19.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="19.0dip" android:drawablePadding="8.0dip" style="@style/DialogHeadline" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/dialog_body" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/WFText" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/positive_button" android:layout_alignParentRight="true" android:filterTouchesWhenObscured="true" style="@style/WFButtonPrimary" />
+                <Button android:id="@id/negative_button" android:layout_marginRight="16.0dip" android:layout_toLeftOf="@id/positive_button" android:filterTouchesWhenObscured="true" style="@style/WFButtonSecondary" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

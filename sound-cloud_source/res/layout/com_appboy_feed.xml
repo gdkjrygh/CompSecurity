@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout android:id="@id/appboy_feed_swipe_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/com_appboy_feed_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ProgressBar android:id="@id/com_appboy_feed_loading_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0sp" android:layout_centerInParent="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/com_appboy_feed_network_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0sp" android:layout_centerInParent="true">
+            <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Appboy.Feed.NetworkErrorTitle" />
+            <TextView android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Appboy.Feed.NetworkErrorBody" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/com_appboy_feed_empty_feed" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0sp" android:layout_centerInParent="true">
+            <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Appboy.Feed.Empty" />
+        </LinearLayout>
+        <ListView android:id="@android:id/list" android:visibility="gone" android:layout_width="@dimen/com_appboy_feed_max_width" android:layout_height="fill_parent" android:layout_centerHorizontal="true" style="@style/Appboy.Feed.List" />
+        <View android:id="@id/com_appboy_feed_transparent_full_bounds_container_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

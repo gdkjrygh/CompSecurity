@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/actionbar_menu" android:layout_width="fill_parent" android:layout_height="@dimen/actionbar_size"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/item_left" android:background="@color/transparent" android:paddingLeft="@dimen/actionbar_paddingSide" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="actionbar_left_button" />
+    <com.tinder.views.CustomTextView android:id="@id/item_text_centerLeft" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin_xsmall" android:layout_toRightOf="@id/item_left" android:layout_centerVertical="true" style="@style/ab_text" />
+    <com.tinder.views.CustomTextView android:textAppearance="@style/actionbar_text_title" android:id="@id/item_text_center" android:background="@drawable/actionbar_tinder_logo" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/linearLayout_menu_items" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageButton android:id="@id/item_right_left" android:background="@color/transparent" android:paddingRight="@dimen/padding_large" android:visibility="gone" android:layout_width="@dimen/ab_icon_length" android:layout_height="@dimen/ab_icon_length" android:src="@drawable/selector_actionbar_matches" />
+        <ImageButton android:id="@id/item_right_center" android:background="@color/transparent" android:paddingRight="@dimen/padding_med" android:visibility="gone" android:layout_width="@dimen/ab_icon_length" android:layout_height="@dimen/ab_icon_length" android:src="@drawable/selector_actionbar_matches" />
+        <ImageButton android:id="@id/item_right_right" android:background="@color/transparent" android:paddingLeft="@dimen/padding_med" android:paddingRight="@dimen/actionbar_paddingSide" android:visibility="gone" android:layout_width="@dimen/ab_icon_length" android:layout_height="@dimen/ab_icon_length" android:src="@drawable/selector_actionbar_matches" android:contentDescription="actionbar_right_button" />
+    </LinearLayout>
+    <View android:id="@id/ab_divider" android:layout_alignParentBottom="true" style="@style/ab_divider" />
+</RelativeLayout>

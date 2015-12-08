@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/cpe_content_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="top" android:id="@id/cpe_status_bar_space" android:background="@color/cpe_toolbar_background" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/cpe_content_overlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.0">
+        <android.widget.TextView android:textSize="@dimen/cpe_original_banner_text_size" android:textColor="@color/cpe_original_banner_text" android:layout_gravity="bottom|center" android:id="@id/cpe_original_label" android:background="@color/cpe_original_banner_background" android:paddingLeft="@dimen/cpe_original_banner_horizontal_padding" android:paddingTop="@dimen/cpe_original_banner_vertical_padding" android:paddingRight="@dimen/cpe_original_banner_horizontal_padding" android:paddingBottom="@dimen/cpe_original_banner_vertical_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cpe_comparison_banner" android:alpha="0.0" />
+        <FrameLayout android:id="@id/cpe_upper_toolbar" android:layout_width="fill_parent" android:layout_height="@dimen/cpe_upper_toolbar_height" />
+        <FrameLayout android:id="@id/cpe_lower_toolbar" android:layout_width="fill_parent" android:layout_height="@dimen/cpe_lower_toolbar_height" />
+        <FrameLayout android:id="@id/cpe_nav_bar_space" android:background="@color/cpe_toolbar_background" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+    </LinearLayout>
+</FrameLayout>

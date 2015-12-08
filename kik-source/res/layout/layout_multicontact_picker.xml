@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/contacts_compose_to_accessoryview" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="26.0dip" />
+        <kik.android.widget.RobotoEditText android:id="@id/contacts_compose_to" android:background="@drawable/send_to_username_name_bar" android:layout_width="fill_parent" android:layout_height="@dimen/username_textview_height" android:hint="@string/title_kik_username" android:singleLine="true" android:inputType="textVisiblePassword" android:imeOptions="actionDone" android:contentDescription="AUTOMATION_TITLE_KIK_USERNAME" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/user_search_bottom_shadow" android:background="@color/grey_shadow" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/contacts_compose_to">
+        <kik.android.widget.ResizeEventList android:id="@id/compose_list" android:background="@color/conversations_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/list_divider_color" android:dividerHeight="1.0px" android:smoothScrollbar="true" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/empty_view" android:paddingLeft="14.0dip" android:paddingTop="14.0dip" android:paddingRight="14.0dip" android:paddingBottom="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/default_nocontacts" />
+            <kik.android.widget.RobotoTextView android:textSize="16.0sp" android:textColor="@color/empty_view_text_color" android:id="@id/empty_view_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-10.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

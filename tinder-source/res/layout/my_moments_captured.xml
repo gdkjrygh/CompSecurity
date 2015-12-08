@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/discover_prefs_actionbar_menu" android:layout_width="fill_parent" android:layout_height="@dimen/actionbar_size">
+        <ImageButton android:id="@id/view_back_icon" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin_xsmall" android:layout_marginRight="@dimen/margin_xsmall" android:src="@drawable/selector_actionbar_back" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/discover_up" />
+        <com.tinder.views.CustomTextView android:id="@id/view_back_title" android:text="@string/my_moments" android:layout_toRightOf="@id/view_back_icon" app:font="regular" style="@style/ab_text" />
+        <View android:id="@id/ab_divider" android:visibility="visible" android:layout_alignParentBottom="true" style="@style/ab_divider" />
+    </RelativeLayout>
+    <GridView android:layout_gravity="center" android:id="@id/grid_moments" android:paddingLeft="@dimen/my_moments_grid_left_padding" android:paddingTop="@dimen/padding_med" android:paddingRight="@dimen/padding_med" android:paddingBottom="@dimen/padding_med" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="@dimen/margin_med" android:verticalSpacing="@dimen/margin_xsmall" android:numColumns="3" />
+</LinearLayout>

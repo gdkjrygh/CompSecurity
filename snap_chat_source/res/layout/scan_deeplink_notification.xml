@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/scan_deeplink_notification_view" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center" android:id="@id/scan_deeplink_notification_bar" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/deeplink_notification_bar_height"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/scan_deeplink_notification_content" android:paddingRight="@dimen/default_gap_2x" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <com.snapchat.android.discover.ui.ChannelView android:id="@id/channel_view" android:layout_width="@dimen/deeplink_notification_favicon_height" android:layout_height="@dimen/deeplink_notification_favicon_height" android:layout_marginLeft="@dimen/deeplink_notification_favicon_margin_left" android:layout_marginRight="@dimen/deeplink_notification_favicon_margin_right" android:layout_alignParentLeft="true" android:layout_centerVertical="true"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <FrameLayout android:id="@id/channel_icon_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true">
+                    <ImageView android:id="@id/channel_view_brand_icon" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    <ImageView android:id="@id/channel_view_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </FrameLayout>
+            </com.snapchat.android.discover.ui.ChannelView>
+            <LinearLayout android:orientation="vertical" android:id="@id/scan_deeplink_text_view" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/channel_view">
+                <TextView android:textSize="@dimen/scannable_notification_primary_text_size" android:layout_gravity="left" android:id="@id/scan_deeplink_primary_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:height="@dimen/scannable_notification_primary_text_bar_height" />
+                <TextView android:textSize="@dimen/scannable_notification_secondary_text_size" android:gravity="left" android:id="@id/scan_deeplink_secondary_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/scannable_notification_textview_gap" android:text="Tap to view" android:height="@dimen/scannable_notification_secondary_text_bar_height" />
+            </LinearLayout>
+        </RelativeLayout>
+        <ProgressBar android:layout_gravity="center" android:id="@id/scan_deeplink_progress_bar" android:visibility="gone" android:layout_width="@dimen/scannable_notification_progress_bar_size" android:layout_height="@dimen/scannable_notification_progress_bar_size" />
+    </FrameLayout>
+    <View android:background="@color/button_grey" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

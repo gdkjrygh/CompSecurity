@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@id/pm_list_item_cc_container" android:layout_width="fill_parent" android:layout_height="wrap_content" card_view:cardCornerRadius="4.0dip" card_view:cardElevation="2.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:background="@color/payment_background_list_item" android:padding="@dimen/payment_margin_small" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.walmartlabs.payment.view.CreditCardIconView android:layout_gravity="center" android:id="@id/pm_list_item_cc_icon" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/spinner_48" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="vertical" android:id="@id/pm_list_item_cc_text_container" android:paddingLeft="@dimen/payment_margin" android:paddingRight="@dimen/payment_margin_small" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/pm_list_item_cc_digits" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pm_add_credit_card_hint_card_number" style="@style/Payment.Text.CardNumber" />
+            <TextView android:id="@id/pm_list_item_cc_expiry" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pm_add_credit_card_details_title" style="@style/Payment.Text.CardInfo" />
+            <TextView android:id="@id/pm_list_item_cc_customer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pm_add_credit_card_hint_first_name" style="@style/Payment.Text.CardInfo" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

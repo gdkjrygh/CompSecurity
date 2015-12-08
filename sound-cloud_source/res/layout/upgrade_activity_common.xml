@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/upgrade_header" style="@style/UpgradeHeader">
+        <TextView android:id="@id/upgrade_title" android:layout_marginTop="20.0dip" android:text="@string/upgrade_title" android:layout_centerHorizontal="true" style="@style/UpgradeTitle" />
+        <TextView android:id="@id/upgrade_description" android:layout_marginTop="8.0dip" android:text="@string/upgrade_description" android:layout_below="@id/upgrade_title" android:layout_centerHorizontal="true" style="@style/UpgradeDescription" />
+        <Button android:id="@id/upgrade_buy" android:layout_marginLeft="@dimen/buy_button_margin" android:layout_marginRight="@dimen/buy_button_margin" android:layout_marginBottom="20.0dip" android:layout_alignParentBottom="true" style="@style/UpgradeBuy" />
+        <FrameLayout android:id="@id/upgrade_loading" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_below="@id/upgrade_description" android:layout_centerHorizontal="true">
+            <ProgressBar android:theme="@style/LightProgressTheme" android:layout_gravity="center" android:layout_width="40.0dip" android:layout_height="40.0dip" style="?android:attr/progressBarStyle" />
+        </FrameLayout>
+    </RelativeLayout>
+    <LinearLayout android:id="@id/success_header" android:visibility="gone" style="@style/UpgradeHeader">
+        <TextView android:id="@id/upgrade_success_title" android:layout_marginTop="20.0dip" android:text="@string/upgrade_success_title" style="@style/UpgradeTitle" />
+        <TextView android:id="@id/upgrade_success_description" android:layout_width="240.0dip" android:layout_marginTop="20.0dip" android:text="@string/upgrade_success_description" style="@style/UpgradeDescription" />
+    </LinearLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textColor="@color/gray_text" android:id="@id/features_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/upgrade_features_title" />
+            <ImageView android:id="@id/feature_1_image" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" android:layout_below="@id/features_title" style="@style/FeatureImage" />
+            <TextView android:id="@id/feature_1_title" android:layout_marginBottom="4.0dip" android:text="@string/upgrade_feature_1_title" android:layout_toRightOf="@id/feature_1_image" android:layout_alignTop="@id/feature_1_image" style="@style/FeatureTitle" />
+            <com.soundcloud.android.view.CustomFontTextView android:id="@id/feature_1_description" android:text="@string/upgrade_feature_1_description" android:layout_toRightOf="@id/feature_1_image" android:layout_below="@id/feature_1_title" style="@style/FeatureDescription" />
+            <ImageView android:id="@id/feature_2_image" android:background="@color/gray_background" android:layout_width="76.0dip" android:layout_height="76.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" android:layout_below="@id/feature_1_image" />
+            <TextView android:id="@id/feature_2_title" android:layout_marginBottom="4.0dip" android:text="@string/upgrade_feature_2_title" android:layout_toRightOf="@id/feature_2_image" android:layout_alignTop="@id/feature_2_image" style="@style/FeatureTitle" />
+            <com.soundcloud.android.view.CustomFontTextView android:id="@id/feature_2_description" android:text="@string/upgrade_feature_2_description" android:layout_toRightOf="@id/feature_2_image" android:layout_below="@id/feature_2_title" style="@style/FeatureDescription" />
+            <ImageView android:id="@id/feature_3_image" android:background="@color/gray_background" android:layout_width="76.0dip" android:layout_height="76.0dip" android:layout_marginRight="16.0dip" android:layout_below="@id/feature_2_image" />
+            <TextView android:id="@id/feature_3_title" android:layout_marginBottom="4.0dip" android:text="@string/upgrade_feature_3_title" android:layout_toRightOf="@id/feature_3_image" android:layout_alignTop="@id/feature_3_image" style="@style/FeatureTitle" />
+            <com.soundcloud.android.view.CustomFontTextView android:id="@id/feature_3_description" android:text="@string/upgrade_feature_3_description" android:layout_toRightOf="@id/feature_3_image" android:layout_below="@id/feature_3_title" style="@style/FeatureDescription" />
+        </RelativeLayout>
+    </ScrollView>
+</merge>

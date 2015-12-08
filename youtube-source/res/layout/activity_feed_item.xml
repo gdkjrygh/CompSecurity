@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/event_item" android:background="@drawable/card_frame" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <ImageView android:id="@id/channel_avatar" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/missing_avatar" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/small_font_size" android:textColor="#ff666666" android:ellipsize="end" android:id="@id/text" android:paddingLeft="8.0dip" android:paddingTop="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_toRightOf="@id/channel_avatar" android:layout_alignTop="@id/channel_avatar" android:layout_alignBottom="@id/channel_avatar" android:textIsSelectable="false" yt:robotoFont="light" />
+    <RelativeLayout android:id="@id/video_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/channel_avatar">
+        <include layout="@layout/video_item_body" />
+    </RelativeLayout>
+</RelativeLayout>

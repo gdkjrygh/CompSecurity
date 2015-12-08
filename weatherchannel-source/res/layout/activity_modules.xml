@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/module_main" android:background="@drawable/startup" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/blankView" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.weather.Weather.ui.PullToRefreshListView android:id="@id/module_list_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@null" android:dividerHeight="0.0dip" android:layout_alignWithParentIfMissing="true" android:overScrollMode="never" />
+    <include android:gravity="center" android:layout_gravity="center" android:id="@id/now_circle_severe_alert_include" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?android:actionBarSize" android:layout_alignParentTop="true" layout="@layout/now_circle_severe_alert_layout" />
+    <ImageView android:id="@id/back_to_top" android:paddingTop="?android:actionBarSize" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?android:actionBarSize" android:src="@drawable/ic_back_top" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/back_top_description" />
+</RelativeLayout>

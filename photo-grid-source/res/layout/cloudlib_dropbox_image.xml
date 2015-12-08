@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/layout_parent" android:background="@drawable/cloudlib_dropbox_back_folder" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageButton android:id="@id/btnParent" android:background="@null" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/cloudlib_icon_parentblue" />
+        <TextView android:textSize="15.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/textParent" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/cloud_parent_folder" />
+    </LinearLayout>
+    <GridView android:id="@id/pic_grid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:horizontalSpacing="@dimen/image_thumbnail_spacing" android:verticalSpacing="@dimen/image_thumbnail_spacing" android:stretchMode="columnWidth" android:numColumns="4" android:layout_below="@id/layout_parent" style="@style/cloudlib_ImageGridLayout" />
+    <ImageView android:id="@id/download_imageTemp" android:visibility="gone" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_alignParentBottom="true" />
+    <include android:visibility="gone" layout="@layout/cloudlib_progressbar" />
+</RelativeLayout>

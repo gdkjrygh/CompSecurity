@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/toolbar_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/toolbar_height">
+        <LinearLayout android:orientation="horizontal" android:id="@id/home_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:divider="@drawable/toolbar_item_divider" android:layout_alignParentLeft="true" android:layout_centerInParent="true" android:showDividers="middle">
+            <ImageView android:layout_gravity="left|center" android:id="@id/home_image_view" android:background="@drawable/selectable_item_borderless" android:padding="12.0dip" android:layout_width="48.0dip" android:layout_height="wrap_content" android:src="@drawable/ic_actionbar_back" android:scaleType="center" />
+            <ImageView android:layout_gravity="left|center" android:id="@id/logo_image_view" android:layout_width="wrap_content" android:layout_height="48.0dip" android:src="@drawable/ic_actionbar_logo" android:scaleType="center" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/charcoal_2" android:gravity="left|center" android:id="@id/title_text_view" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <me.lyft.android.ui.DriverModeToggleView android:textSize="@dimen/normal_text" android:textColor="@color/pink_1" android:gravity="center" android:id="@id/driver_mode_toggle" android:background="@drawable/drive_toggle_btn_pink" android:paddingLeft="@dimen/span8" android:paddingTop="@dimen/span4" android:paddingRight="@dimen/span8" android:paddingBottom="@dimen/span4" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:drawableLeft="@drawable/ic_drive_small_light" android:drawablePadding="6.0dip" android:layout_centerInParent="true" android:textAllCaps="true" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/items_container_view" android:layout_width="wrap_content" android:layout_height="fill_parent" android:divider="@drawable/toolbar_item_divider" android:layout_alignParentRight="true" android:showDividers="middle" />
+    </RelativeLayout>
+    <View android:id="@id/divider_view" android:background="@drawable/actionbar_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

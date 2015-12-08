@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:background="@color/list_item_bg_grey" android:paddingLeft="@dimen/padding_small" android:paddingTop="@dimen/padding_medium" android:paddingRight="@dimen/padding_small" android:paddingBottom="@dimen/padding_medium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/iconHolder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_small" android:layout_alignParentTop="true" android:layout_centerVertical="true">
+            <ImageView android:layout_gravity="center" android:id="@id/default_icon" android:layout_width="@dimen/list_icon_size" android:layout_height="@dimen/list_icon_size" android:src="@drawable/list_image_default" android:scaleType="fitXY" />
+            <com.android.volley.toolbox.NetworkImageView android:layout_gravity="center" android:id="@id/icon" android:layout_width="@dimen/list_icon_size" android:layout_height="@dimen/list_icon_size" android:scaleType="fitXY" />
+            <ImageView android:layout_gravity="center" android:id="@id/icon_mask" android:visibility="visible" android:layout_width="91.0dip" android:layout_height="91.0dip" android:src="@drawable/list_image_mask_3" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip" android:layout_toRightOf="@id/iconHolder" android:layout_centerVertical="true">
+            <TextView android:typeface="sans" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_small" android:layout_marginRight="5.0dip" android:text="Title" android:maxLines="2" android:singleLine="true" style="@style/ListItemTitle" />
+            <TextView android:typeface="sans" android:id="@id/short_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="Description" android:maxLines="3" style="@style/ListItemDescription" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

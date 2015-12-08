@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:theme="@style/Payment.ScannerToolbar" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/payment_qr_scanner_margin_top" android:src="@drawable/walmart_pay_logo" />
+    <View android:id="@id/scan_area_indicator" android:background="@drawable/barcode_scan_window" android:layout_width="@dimen/payment_qr_scanner_scan_indicator" android:layout_height="@dimen/payment_qr_scanner_scan_indicator" android:layout_marginTop="@dimen/payment_qr_scanner_scan_margin" />
+    <TextView android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/payment_qr_scanner_scan_margin" android:text="@string/mpay_scan_instructions" android:elevation="2.0dip" style="@style/Payment.Text.Body.White" />
+</LinearLayout>

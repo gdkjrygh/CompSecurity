@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/activity_root_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:id="@id/activity_root_action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" />
+        <com.contextlogic.wish.ui.components.text.RedBadgeTextView android:textSize="15.0dip" android:textColor="@color/wish_white" android:layout_gravity="top" android:id="@id/activity_root_menu_badge_text" android:paddingLeft="5.0dip" android:paddingTop="1.0dip" android:paddingRight="5.0dip" android:paddingBottom="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="5.0dip" android:text="5" />
+    </FrameLayout>
+    <com.contextlogic.wish.ui.components.drawer.TabletDrawerLayout android:layout_gravity="top" android:id="@id/activity_root" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <FrameLayout android:id="@id/activity_root_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.contextlogic.wish.ui.activity.root.RootActivityContainerLayout android:layout_gravity="top" android:id="@id/activity_root_content_container" android:background="@color/wish_black" android:layout_width="0.0dip" android:layout_height="fill_parent" />
+            <FrameLayout android:id="@id/activity_root_modal_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <FrameLayout android:layout_gravity="top" android:id="@id/activity_root_tablet_modal_group" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:layout_gravity="top" android:id="@id/activity_root_tablet_modal_mask" android:background="@color/wish_black_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <FrameLayout android:layout_gravity="center" android:id="@id/activity_root_tablet_modal_container" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+            </FrameLayout>
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="left" android:id="@id/activity_root_left_menu_container" android:background="@color/wish_blue" android:layout_width="260.0dip" android:layout_height="fill_parent">
+            <FrameLayout android:layout_gravity="left" android:id="@id/activity_root_left_menu_container_content" android:background="@color/wish_white" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:layout_gravity="right" android:id="@id/activity_root_content_container_left_shadow" android:background="@drawable/activity_root_content_pane_shadow" android:layout_width="10.0dip" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="right" android:id="@id/activity_root_right_menu_container" android:layout_width="140.0dip" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/activity_root_right_menu_container_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:layout_gravity="left" android:id="@id/activity_root_content_container_right_shadow" android:background="@drawable/activity_root_content_pane_inverse_shadow" android:layout_width="10.0dip" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </com.contextlogic.wish.ui.components.drawer.TabletDrawerLayout>
+    <FrameLayout android:id="@id/activity_root_cart_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="top" android:id="@id/activity_root_overlay_group" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_gravity="top" android:id="@id/activity_root_overlay_mask" android:background="@color/wish_black_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:layout_gravity="center" android:id="@id/activity_root_overlay_container" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    </FrameLayout>
+</FrameLayout>

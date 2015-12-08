@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:padding="@dimen/payment_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/text_grey" android:id="@id/mpay_setup_use_headline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mpay_setup_use_headline" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" style="@style/Payment.Text.Display.Light" />
+    <TextView android:textColor="@color/text_grey" android:id="@id/mpay_setup_use_subhead" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/mpay_setup_use_subhead" android:layout_below="@id/mpay_setup_use_headline" android:layout_centerHorizontal="true" style="@style/Payment.Text.Subhead" />
+    <android.support.v4.view.ViewPager android:id="@id/mpay_setup_use_viewpager" android:layout_width="fill_parent" android:layout_height="@dimen/payment_tutorial_page_height" android:layout_below="@id/mpay_setup_use_subhead" />
+    <com.walmartlabs.payment.view.PageIndicatorView android:id="@id/mpay_setup_use_indicators" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/payment_margin_small" android:layout_below="@id/mpay_setup_use_viewpager" />
+    <Button android:gravity="center" android:id="@id/mpay_setup_btn_start" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mpay_setup_try_it_out" android:layout_alignParentBottom="true" style="@style/Payment.PrimaryButton.Orange" />
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/news_article_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/news_viewpager_default_margin" />
+        <LinearLayout android:orientation="vertical" android:id="@id/news_article_more_layout" android:background="@color/news_article_more_background" android:paddingLeft="@dimen/news_default_padding" android:paddingTop="@dimen/news_article_more_top_padding" android:paddingRight="@dimen/news_default_padding" android:paddingBottom="@dimen/news_article_more_top_padding" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/text_size_large" android:textColor="@color/news_article_more_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/news_more_articles" weather:font="Roboto-Regular.ttf" />
+            <android.support.v7.widget.RecyclerView android:id="@id/news_article_more_list" android:layout_width="fill_parent" android:layout_height="230.0dip" android:layout_marginTop="@dimen/news_article_more_list_top_margin" android:divider="@android:color/transparent" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

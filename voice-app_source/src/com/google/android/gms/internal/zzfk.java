@@ -1,0 +1,26 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.gms.internal;
+
+import com.google.android.gms.ads.purchase.InAppPurchaseListener;
+
+// Referenced classes of package com.google.android.gms.internal:
+//            zzfn, zzfe
+
+public final class zzfk extends zzff.zza
+{
+
+    private final InAppPurchaseListener zzsW;
+
+    public zzfk(InAppPurchaseListener inapppurchaselistener)
+    {
+        zzsW = inapppurchaselistener;
+    }
+
+    public void zza(zzfe zzfe)
+    {
+        zzsW.onInAppPurchaseRequested(new zzfn(zzfe));
+    }
+}

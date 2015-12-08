@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/empty_search_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/padding4b" android:layout_marginRight="@dimen/padding4b">
+        <LinearLayout android:orientation="vertical" android:id="@id/search_agents_wrapper" android:paddingTop="@dimen/padding3" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_small_medium" android:textColor="@color/skype_blue" android:id="@id/search_agents_prompt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_add_agents" />
+            <com.skype.android.widget.recycler.OneWayRecyclerView android:id="@id/search_suggested_agents" android:layout_width="fill_parent" android:layout_height="144.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/search_facepile_wrapper" android:paddingTop="@dimen/padding3" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_small_medium" android:textColor="@color/skype_blue" android:id="@id/search_facepile_prompt" android:paddingBottom="@dimen/padding3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_add_these_people_on_skype" />
+            <com.skype.android.widget.FacepileTileView android:gravity="left" android:layout_gravity="center_horizontal" android:id="@id/search_facepile" android:paddingBottom="@dimen/padding2" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tileWidth="@dimen/tile_width" app:tileHeight="@dimen/tile_height" app:tileSpacing="@dimen/tile_spacing" app:tileLayout="rectangular" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/search_results" android:paddingTop="@dimen/size_0_5x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.skype.android.widget.recycler.OneWayRecyclerView android:id="@id/conversations_search_results" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</FrameLayout>

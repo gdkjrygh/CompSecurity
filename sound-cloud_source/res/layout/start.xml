@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.soundcloud.android.onboarding.ParallaxPager android:id="@id/tour_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/tour_logo" android:tag="foreground" android:layout_width="@dimen/tour_logo_dimension" android:layout_height="@dimen/tour_logo_dimension" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:src="@drawable/tour_logo" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/tour_bottom_bar" android:tag="foreground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/tour_bottom_bar_height" android:layout_margin="16.0dip" android:layout_alignParentBottom="true">
+        <include layout="@layout/tour_radio_group" />
+        <include layout="@layout/tour_buttons" />
+    </LinearLayout>
+    <View android:id="@id/overlay_bg" style="@style/SignUp.Overlay" />
+    <RelativeLayout android:gravity="center" android:layout_gravity="center" android:id="@id/overlay_holder" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ScrollView style="@style/SignUp.ScrollView">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ViewStub android:id="@id/login_stub" android:layout="@layout/login" style="@style/SignUp.Content.Stub" />
+                <ViewStub android:id="@id/sign_up_stub" android:layout="@layout/signup_method" style="@style/SignUp.Content.Stub" />
+                <ViewStub android:id="@id/sign_up_basic_stub" android:layout="@layout/signup_basics" style="@style/SignUp.Content.Stub" />
+                <ViewStub android:id="@id/user_details_stub" android:layout="@layout/signup_user_details" style="@style/SignUp.Content.Stub" />
+                <ViewStub android:id="@id/accept_terms_stub" android:layout="@layout/accept_terms" style="@style/SignUp.Content.Stub" />
+            </FrameLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <View android:id="@id/splash" android:background="@drawable/splash_screen" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

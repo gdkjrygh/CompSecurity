@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/carousel_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/title_container" android:layout_marginLeft="@dimen/margin_half" android:layout_marginTop="@dimen/margin" android:layout_marginRight="@dimen/margin_half" android:layout_marginBottom="@dimen/margin_half" style="@style/fullline_view">
+            <TextView android:textSize="@dimen/text_headline" android:layout_gravity="center_vertical" android:id="@id/title" android:background="@drawable/touch_clear_bg" style="@style/list_cell_text" />
+            <com.pinterest.activity.dynamicgrid.IconTwoLineView android:id="@id/icon_titles" android:visibility="gone" style="@style/wrap_view" />
+            <View style="@style/h_spacer" />
+            <com.pinterest.ui.text.PImageButton android:layout_gravity="center_vertical" android:id="@id/dismiss_story_button" android:background="@null" android:visibility="gone" android:layout_width="@dimen/button_height" android:layout_height="@dimen/button_height" android:layout_marginRight="@dimen/margin_half" android:src="@drawable/ic_dismiss" />
+            <com.pinterest.activity.interest.view.FollowInterestButton android:id="@id/follow_interest_button" android:visibility="gone" android:layout_width="@dimen/dynamic_story_button_width" android:layout_height="@dimen/button_height" style="@style/button_plain" />
+            <TextView android:textSize="@dimen/text_body" android:textColor="@color/text_medium" android:id="@id/action_tv" android:padding="@dimen/margin_quarter" android:visibility="gone" android:text="@string/see_more" android:drawableRight="@drawable/chevron" style="@style/button_embeded" />
+        </LinearLayout>
+        <TextView android:id="@id/subtitle" android:paddingLeft="@dimen/margin" android:paddingRight="@dimen/margin" android:visibility="gone" android:layout_marginBottom="@dimen/margin_half" style="@style/list_cell_subtext" />
+        <org.lucasr.twowayview.TwoWayView android:id="@id/horizontal_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin_half" android:drawSelectorOnTop="false" />
+        <TextView android:textSize="@dimen/text_body" android:textColor="@color/text_medium" android:layout_gravity="right|center" android:id="@id/footer" android:background="@drawable/touch_clear_bg" android:padding="@dimen/margin_quarter" android:visibility="gone" android:layout_marginRight="@dimen/margin_half" android:layout_marginBottom="@dimen/margin_half" android:drawableRight="@drawable/chevron" android:drawablePadding="@dimen/margin_half" style="@style/list_cell_text" />
+    </LinearLayout>
+    <com.pinterest.ui.progress.LoadingView android:layout_gravity="center" android:id="@id/new_story_loading_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</merge>

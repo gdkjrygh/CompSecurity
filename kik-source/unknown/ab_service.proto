@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+package mobile.abtesting.v1;
+
+option java_package = "com.kik.abtesting.rpc";
+
+import "common_model.proto";
+import "protobuf_validation.proto";
+
+//----------------------------------------------------------------------------
+// Terminology
+//----------------------------------------------------------------------------
+//
+// Experiment:  Defines information about a particular AB test
+
+//----------------------------------------------------------------------------
+// Service Interfaces
+//----------------------------------------------------------------------------
+service AbTesting {
+    // Returns the set of experiments a particular user is participating in.
+    rpc GetParticipatingExperiments(GetExperimentsRequest) returns (GetExperimentsResponse) {}
+}
+
+//----------------------------------------------------------------------------
+// Message Types
+//----------------------------------------------------------------------------
+
+message Experiment {
+    // The name of the of the AB test
+    string name = 1 [(kik.validation.field_validation) = {
+        mandatory: true
+        min_byte_length: 1
+        max_byte_length: 255
+    }];
+
+    // Variant of AB test the particular user is associated with
+    string variant = 2 [(kik.validation.field_validation) = {
+        mandatory: true
+        min_byte_length: 1
+        max_byte_length: 255
+    }];
+
+    // An id that may be used to distinguish multiple runs of the same experiment.
+    // Clients ** MUST NOT ** use this for any business-switching behaviour, this is ** ONLY ** meant to be
+    // transitively passed on in the client metric for data purposes. 
+    string experiment_id = 3 [(kik.validation.field_validation) = {
+        mandatory: false
+        min_byte_length: 0
+        max_byte_length: 255
+    }];
+}
+
+//----------------------------------------------------------------------------
+// Request/Response Types
+//----------------------------------------------------------------------------
+
+message GetExperimentsRequest {
+    // The jid for the user we are fetching experiments for
+    // NOTE: "This will not be part of the request long term - the server bridge will send the jid as a GRPC header to service." - Dan
+    common.XiBareUserJid jid = 1 [(.kik.validation.field_validation) = { mandatory: true }];
+}
+
+message GetExperimentsResponse {
+    // Set of Experiment's associated with the requested user
+    repeated Experiment participating_experiments = 1;
+
+    // Determines whether or not this response should direct clients to send the metrics update.
+    // This should be TRUE in the majority of scenarios except for when there is a need to handle
+    // client metrics load issues.
+    // Specifically, this should be only used in overload scenarios to prevent heartbeats for users not in any
+    // experiments. However it is technically possible to be used at any time.
+    bool should_send_metrics_event = 2;
+}
+

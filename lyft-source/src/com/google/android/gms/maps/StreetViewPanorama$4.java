@@ -1,0 +1,21 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.gms.maps;
+
+import com.google.android.gms.maps.model.StreetViewPanoramaOrientation;
+
+// Referenced classes of package com.google.android.gms.maps:
+//            StreetViewPanorama
+
+class amaOrientation extends com.google.android.gms.maps.internal.ation
+{
+
+    final StreetViewPanoramaLongClickListener a;
+
+    public void a(StreetViewPanoramaOrientation streetviewpanoramaorientation)
+    {
+        a.a(streetviewpanoramaorientation);
+    }
+}

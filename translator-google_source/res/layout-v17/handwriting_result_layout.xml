@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/result_layout" android:background="@drawable/bg_card_list_middle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/instant_result_visible_height" android:baselineAligned="false" android:paddingStart="@dimen/card_padding_and_spacing" android:paddingEnd="@dimen/card_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <HorizontalScrollView android:layout_gravity="top" android:id="@id/result_scroller" android:paddingTop="@dimen/card_padding" android:paddingBottom="@dimen/card_padding" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="@dimen/instant_result_visible_height" android:overScrollMode="never" android:paddingStart="0.0dip" android:paddingEnd="@dimen/card_padding" android:layout_toStartOf="@id/result_selector" android:layout_alignParentStart="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/link_text" android:textColorHint="@color/tertiary_text" android:ellipsize="none" android:id="@id/result_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/link_text" android:ellipsize="none" android:layout_gravity="top" android:id="@id/result_transliteration" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <ImageView android:id="@id/result_selector" android:paddingTop="@dimen/card_padding" android:paddingBottom="@dimen/instant_result_arrow_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_forward_link" android:layout_alignParentEnd="true" />
+</RelativeLayout>

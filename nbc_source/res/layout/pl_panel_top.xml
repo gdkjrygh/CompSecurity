@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nbcsports.liveextra.ui.player.premierleague.PanelTop android:background="@drawable/pl_mesh_tb" android:layout_width="fill_parent" android:layout_height="68.0dip" android:layout_margin="2.0dip" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/show_hide" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <ImageView android:id="@id/show_icon" android:padding="8.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_visibility_on" android:tint="?android:textColorSecondary" />
+        <ImageView android:id="@id/hide_icon" android:padding="8.0dip" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_visibility_off" android:tint="?android:textColorSecondary" />
+    </FrameLayout>
+    <TextView android:textColor="?android:textColorSecondary" android:id="@id/show_scores" android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pl_show_scores" android:layout_toRightOf="@id/show_hide" android:layout_centerVertical="true" style="@style/TextAppearance.AppCompat.Medium" />
+    <com.nbcsports.liveextra.ui.player.premierleague.schedule.ScheduleView android:id="@id/schedule" android:background="@android:color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_toRightOf="@id/show_hide" />
+    <ProgressBar android:id="@id/progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:indeterminate="true" android:layout_toRightOf="@id/show_hide" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+</com.nbcsports.liveextra.ui.player.premierleague.PanelTop>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/app_not_installed_content_text_side_padding" android:paddingRight="@dimen/app_not_installed_content_text_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/app_not_installed_title_margin_top">
+            <com.skype.android.widget.SymbolView android:id="@id/app_not_installed_title_symbol" android:layout_width="@dimen/app_not_installed_title_symbol_layout_width" android:layout_height="wrap_content" style="@style/AppNotInstalledTitleSymbol" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/app_not_installed_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/app_not_installed_title_text_margin_left" android:layout_marginTop="@dimen/app_not_installed_title_text_margin_top" style="@style/AppNotInstalledTitleText" />
+        </LinearLayout>
+        <TextView android:gravity="center_horizontal" android:id="@id/app_not_installed_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/app_not_installed_description_margin_top" style="@style/AppNotInstalledDescriptionText" />
+        <TextView android:gravity="center_horizontal" android:id="@id/app_not_installed_go_to_store" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/app_not_installed_go_to_store_margin_top" style="@style/AppNotInstalledGoToStoreText" />
+    </LinearLayout>
+    <TextView android:id="@id/app_not_installed_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/app_not_installed_cancel_margin_bottom" android:text="@string/label_cancel" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/AppNotInstalledCancelText" />
+</RelativeLayout>

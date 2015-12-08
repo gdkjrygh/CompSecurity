@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/contact_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/add_to_group_button" android:background="@xml/settings_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/contacts_list_item_height">
+        <ImageView android:duplicateParentState="true" android:layout_width="54.0dip" android:layout_height="54.0dip" android:layout_marginLeft="12.0dip" android:src="@xml/chatbar_icon_drawer_selector" android:scaleType="centerInside" />
+        <kik.android.widget.RobotoTextView android:textSize="18.0dip" android:textColor="@xml/conversation_name_color_selector" android:ellipsize="marquee" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="27.0dip" android:text="@string/title_add_people" android:singleLine="true" />
+    </LinearLayout>
+    <FrameLayout android:background="@drawable/cell_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:background="@color/list_divider_color" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="40.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/mute_cell" android:background="@xml/settings_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/contacts_list_item_height">
+        <ImageView android:id="@id/chat_info_mute_icon" android:duplicateParentState="true" android:layout_width="54.0dip" android:layout_height="54.0dip" android:layout_marginLeft="12.0dip" android:src="@xml/chat_big_mute_icon_off_selector" android:scaleType="centerInside" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="27.0dip">
+            <kik.android.widget.RobotoTextView android:textSize="18.0dip" android:textColor="@xml/conversation_name_color_selector" android:id="@id/mute_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mute" />
+            <kik.android.widget.RobotoTextView android:textSize="14.0dip" android:textColor="@xml/conversation_user_name_color_selector" android:id="@id/mute_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" />
+        </LinearLayout>
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <CheckBox android:id="@id/mute_conversation_checkbox" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" />
+    </LinearLayout>
+    <FrameLayout android:background="@color/list_divider_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/leave_group_cell" android:background="@xml/settings_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/contacts_list_item_height">
+        <ImageView android:id="@id/chat_info_leave_icon" android:duplicateParentState="true" android:layout_width="54.0dip" android:layout_height="54.0dip" android:layout_marginLeft="12.0dip" android:scaleType="centerInside" />
+        <kik.android.widget.RobotoTextView android:textSize="18.0dip" android:textColor="@xml/conversation_name_color_selector" android:gravity="center" android:id="@id/leave_cell_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="27.0dip" android:text="Leave" />
+    </LinearLayout>
+    <FrameLayout android:background="@drawable/cell_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

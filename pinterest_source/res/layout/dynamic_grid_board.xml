@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/interests_cell_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/board_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin_extra_small">
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/rounded_top_rect_white" android:paddingLeft="1.0dip" android:paddingTop="1.0dip" android:paddingRight="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.pinterest.ui.imageview.ProportionalImageView android:id="@id/image0" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="1.0dip" android:layout_weight="1.0" />
+            <com.pinterest.ui.imageview.ProportionalImageView android:id="@id/image1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="@color/white" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.pinterest.ui.imageview.ProportionalImageView android:id="@id/image2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="1.0dip" android:layout_weight="1.0" />
+            <com.pinterest.ui.imageview.ProportionalImageView android:id="@id/image3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <com.pinterest.ui.grid.board.BoardGridCellTitleUserView android:id="@id/user_line" style="@style/fullline_view" />
+    </LinearLayout>
+    <Button android:textSize="@dimen/text_caption" android:textColor="@color/red" android:layout_gravity="center" android:id="@id/follow_bt" android:layout_width="fill_parent" android:layout_height="@dimen/button_height_sm" android:text="@string/follow" style="@style/button_plain" />
+</LinearLayout>

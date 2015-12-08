@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/spinnerlayout" android:background="#ff575757" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:layout_gravity="right|center" android:id="@id/filter_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/loyalty_page_right_margin" android:text="@string/filter_tag" />
+    </FrameLayout>
+    <ListView android:scrollbarThumbVertical="@android:color/transparent" android:id="@id/activity_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:dividerHeight="0.0dip" android:layout_below="@id/spinnerlayout" android:footerDividersEnabled="false" />
+    <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:id="@id/empty_selection" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/no_results_were_found_str" android:layout_centerInParent="true" />
+    <include layout="@layout/processbar" />
+</RelativeLayout>

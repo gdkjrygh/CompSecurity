@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nbcsports.liveextra.ui.player.premierleague.stats.StatsView android:orientation="vertical" android:tag="layout-sw720dp/pl_blade_stats_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true" style="@style/Blade"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:id="@id/ball_location" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Ball Location" android:layout_centerHorizontal="true" android:textAllCaps="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/field" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/ball_location" android:layout_centerHorizontal="true">
+        <View android:tag="binding_1" android:layout_width="4.0dip" android:layout_height="130.0dip" />
+        <ImageView android:src="@drawable/pl_field_0" style="@style/BallLocation" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/home_field" android:src="@drawable/pl_field_1" style="@style/BallLocation" />
+            <TextView android:tag="binding_2" android:layout_below="@id/home_field" style="@style/BallLocation.Text" />
+            <LinearLayout android:layout_alignLeft="@id/home_field" android:layout_alignTop="@id/home_field" android:layout_alignRight="@id/home_field" android:layout_alignBottom="@id/home_field" style="@style/BallLocation.Layout">
+                <View android:tag="binding_3" style="@style/BallLocation.Distribution" />
+                <View android:tag="binding_4" style="@style/BallLocation.Distribution.Value" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/center_field" android:src="@drawable/pl_field_2" style="@style/BallLocation" />
+            <TextView android:tag="binding_5" android:layout_below="@id/center_field" style="@style/BallLocation.Text" />
+            <LinearLayout android:layout_alignLeft="@id/center_field" android:layout_alignTop="@id/center_field" android:layout_alignRight="@id/center_field" android:layout_alignBottom="@id/center_field" style="@style/BallLocation.Layout">
+                <View android:tag="binding_6" style="@style/BallLocation.Distribution" />
+                <View android:tag="binding_7" style="@style/BallLocation.Distribution.Value" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/away_field" android:src="@drawable/pl_field_3" style="@style/BallLocation" />
+            <TextView android:tag="binding_8" android:layout_below="@id/away_field" style="@style/BallLocation.Text" />
+            <LinearLayout android:layout_alignLeft="@id/away_field" android:layout_alignTop="@id/away_field" android:layout_alignRight="@id/away_field" android:layout_alignBottom="@id/away_field" style="@style/BallLocation.Layout">
+                <View android:tag="binding_9" style="@style/BallLocation.Distribution" />
+                <View android:tag="binding_10" style="@style/BallLocation.Distribution.Value" />
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView android:src="@drawable/pl_field_4" style="@style/BallLocation" />
+        <View android:tag="binding_11" android:layout_width="4.0dip" android:layout_height="130.0dip" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/stats_list" android:tag="binding_12" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/field" />
+</com.nbcsports.liveextra.ui.player.premierleague.stats.StatsView>

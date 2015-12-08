@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/first_launch_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background_lines" android:background="@drawable/background_lines_20_tiled" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="vertical" android:id="@id/my_location_ll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <com.accuweather.android.views.SimpleSearchView android:id="@id/search_view" android:paddingLeft="10.0dip" android:layout_width="@dimen/search_view_width" android:layout_height="48.0dip" android:layout_marginTop="4.0dip" />
+        <TextView android:textSize="14.0dip" android:textColor="@android:color/white" android:layout_gravity="center_horizontal" android:id="@id/or_use" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip" android:text="@string/OrUse_Abbr8" />
+        <Button android:textSize="20.0dip" android:textColor="@android:color/white" android:layout_gravity="center_horizontal" android:id="@id/use_gps" android:background="@drawable/first_launch_location_selector" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/MyCurrentLocation" />
+        <TextView android:textSize="14.0dip" android:textColor="@android:color/white" android:gravity="center_horizontal" android:id="@id/descrip_enable_loc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/AllowApplicationFindCurrentLocation" />
+    </LinearLayout>
+    <ListView android:id="@android:id/list" android:background="@null" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00ffffff" android:layout_below="@id/my_location_ll" />
+    <RelativeLayout android:id="@id/progress_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:background="#88808080" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ProgressBar android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

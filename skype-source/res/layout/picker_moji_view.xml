@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/picker_moji_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.skype.android.widget.fliks.FlikRelativeLayout android:id="@id/picker_moji_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/picker_moji_margin" android:layout_marginTop="@dimen/picker_moji_margin" android:layout_marginRight="@dimen/picker_moji_margin">
+        <ImageView android:id="@id/picker_item_image_view" android:layout_width="@dimen/picker_moji_size" android:layout_height="@dimen/picker_moji_size" android:layout_centerInParent="true" />
+        <RelativeLayout android:id="@id/send_state" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/send_overlay" android:background="@color/skype_blue_with_25_percent_transparency" android:layout_width="@dimen/picker_moji_size" android:layout_height="@dimen/picker_moji_size" />
+            <com.skype.android.widget.SymbolView android:textSize="@dimen/picker_moji_send_symbol_size" android:textColor="@color/white" android:id="@id/send_symbol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" app:symbol_code="Send" />
+        </RelativeLayout>
+    </com.skype.android.widget.fliks.FlikRelativeLayout>
+    <TextView android:textSize="@dimen/font_extra_extra_small" android:ellipsize="end" android:gravity="center" android:id="@id/picker_item_description_view" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/picker_moji_size" android:singleLine="true" android:layout_below="@id/picker_moji_container" android:layout_alignLeft="@id/picker_moji_container" android:layout_alignRight="@id/picker_moji_container" />
+</RelativeLayout>

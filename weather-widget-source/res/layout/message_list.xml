@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/msg_list_layout" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/back" android:layout_width="@dimen/title_height" android:layout_height="fill_parent" android:src="@drawable/title_back_selector" android:scaleType="centerInside" android:contentDescription="@null" />
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:gravity="left|center" android:layout_gravity="left|center" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/msg_center" android:layout_weight="1.0" style="@style/title_style" />
+        <Button android:layout_gravity="center_vertical" android:id="@id/message_dustbin" android:background="@drawable/message_dustbin_selector" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" />
+    </LinearLayout>
+    <ListView android:id="@id/message_list" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:cacheColorHint="#00000000" android:divider="#00000000" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/no_message_tip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="18.0dip" android:textColor="@color/light_gray" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/msg_center_no_msg" android:singleLine="true" android:drawableTop="@drawable/common_no_data_cloud_icon" android:drawablePadding="18.0dip" />
+    </LinearLayout>
+</LinearLayout>

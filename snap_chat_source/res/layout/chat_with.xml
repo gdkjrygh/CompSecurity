@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/action_bar" style="@style/TopPanel">
+        <RelativeLayout android:id="@id/chat_with_back_button_area" android:background="@drawable/action_bar_touch_selector" android:paddingRight="@dimen/default_gap" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageButton android:id="@id/chat_with_back_arrow" android:background="@drawable/aa_action_bar_up_arrow_blue" android:clickable="false" android:layout_width="10.0dip" android:layout_height="26.0dip" android:layout_marginLeft="8.0dip" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <EditText android:textColor="@color/blue" android:textColorHint="@color/blue" android:id="@id/chat_with_action_bar_search_bar" android:background="@drawable/aa_holo_edit_text_blue_selector" android:paddingLeft="14.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/ui_element_unit" android:layout_marginRight="@dimen/default_gap" android:hint="@string/chat_with_title" android:maxLength="25" android:layout_toRightOf="@id/chat_with_back_button_area" android:layout_centerVertical="true" android:inputType="textVisiblePassword" android:imeOptions="actionSearch" android:textCursorDrawable="@drawable/aa_search_bar_cursor_blue" style="@android:style/Widget.Holo.EditText" />
+        <ImageButton android:id="@id/clear_search_bar" android:background="@drawable/aa_search_bar_clear_blue" android:visibility="invisible" android:layout_width="23.0dip" android:layout_height="23.0dip" android:layout_marginTop="11.0dip" android:layout_marginRight="12.0dip" android:layout_alignRight="@id/chat_with_action_bar_search_bar" />
+    </RelativeLayout>
+    <View android:background="@color/divider_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/action_bar" />
+    <com.emilsjolander.components.stickylistheaders.StickyListHeadersListView android:id="@id/chat_with_list" android:background="@android:color/white" android:paddingLeft="@dimen/default_gap_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/menuitem_background_paddedright" android:divider="@null" android:layout_centerHorizontal="true" android:fastScrollEnabled="true" android:overScrollMode="never" />
+    <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/chat_with_no_results" android:padding="@dimen/default_gap_2x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@android:style/TextAppearance.Large" />
+</LinearLayout>

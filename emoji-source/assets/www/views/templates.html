@@ -1,0 +1,66 @@
+ <!-- Header -->
+<nav class="top-bar fixed-header">
+    <a id="back_button" ng-if="selected_tag" class="back" ng-click="back()"><i class="icon-chevron-left"></i></a>
+	<h1 ng-hide="selected_tag">Make a Comic</h1>
+	<h1 ng-show="selected_tag">{{selected_tag | removeHashes}}</h1>
+</nav>
+
+<!-- Switch Char -->
+<switch-character class="ng-cloak"></switch-character>
+
+<!-- Scenes -->
+<div ng-hide="selected_tag" class="row">
+    <div class="large-10 columns large-centered search">
+    <comic-search-text-input></comic-search-text-input>
+    </div>
+</div>
+
+<div infinite-scroll="load_more()" can-load="canLoad" threshold="500">
+    <div class="row">
+        <div class="large-10 large-centered columns" id='feed'>
+            <!-- or add filter:search -->
+			<div ng-if="search.length >= 3">
+				<p class="no-results" ng-class='{hidesub: isLatest || isCaptionContest}'>
+					<span>{{search_comics.length}}</span> <span ng-show="selected_tag">scene</span><span ng-show="!selected_tag">result</span><span ng-show="search_comics.length != 1">s</span>
+				</p>
+                <p class="caption-contest" ng-if="isCaptionContest">
+                    Caption this comic. Our daily favorite is published in Metro newspapers! <a ng-click="viewIt('http://company.bitstrips.com/contests/caption_rules.html')">Contest Rules</a>
+                </p>
+				<div class="panel bitmatize search-result" ng-repeat="comic in (search_comics = (comics | filter:comic_type | filter:my_search | orderBy:ordering)) | limitTo:limit">
+
+					<div class="magic-feed-img" queued="{{comic.thumb}}" q-fail="comic-fail.png" q-retry="true" q-click="customize(comic)"></div>
+					<p class="feed-title" ng-if="comic.caption" ng-bind="comic.caption"></p>
+                    <div class="customize-btn"><a ng-if="!comic.needs_costar" ng-click="customize(comic)" id='share'>Customize &amp; Share</a></div>
+					<!--BROKEN-->
+					<!--<a ng-if="comic.needs_costar" class="edit btn" href="#/add_costar">Add a Costar</a>-->
+
+				</div>
+			</div>
+			<!-- Not searching - show tags -->
+			<div ng-if="search.length <= 2" class="tags">
+				<ul class="small-block-grid-2" id="feed">
+					<li ng-repeat="comic_tag in (filtered_comics = (tag_comics)) | limitTo:limit">
+						<div class="panel">
+							<div class="magic-feed-img" queued="{{comic_tag.comic.thumb}}" q-fail="comic-fail.png" q-retry="true" q-click="tags_click(comic_tag)">
+							</div>
+                            <a class="tag-title" ng-click="tags_click(comic_tag)">{{comic_tag.display_tag | removeHashes }}</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-5 large-centered columns">
+        <div class="no-results" ng-show="search.length >= 3 && search_comics.length == 0 && !selected_tag">
+<!--
+            <p>Tell Bitstrips to make comics about <b>{{search}}</b></p>
+            <p><a class="edit btn">Suggest "{{search}}" comics</a></p>
+            <h1>Thanks for your suggestion!</h1>
+-->
+                <a class="edit btn" ng-click="clear_search()" id='clear_search'>clear search results</a>
+            </div>
+        </div>
+    </div>

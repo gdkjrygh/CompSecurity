@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/media_picker_search_scrollview_container" android:paddingLeft="@dimen/picker_tab_side_margin" android:paddingRight="@dimen/picker_tab_side_margin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/media_picker_search_emoticon_container" android:paddingTop="@dimen/padding3b" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.skype.android.widget.SymbolView android:textSize="@dimen/font_medium_large" android:textColor="@color/skype_blue" android:gravity="bottom" android:id="@id/media_picker_search_emoticon_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/media_picker_search_emoticons_title_text" app:symbol_code="MojiEmoticonStroke" />
+                <TextView android:gravity="bottom" android:id="@id/media_picker_search_emoticon_text_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/media_picker_search_emoticons_title_text" />
+            </LinearLayout>
+            <TextView android:id="@id/media_picker_search_no_emoticon_found_textview" android:paddingLeft="@dimen/padding4b" android:paddingTop="@dimen/padding2b" android:layout_width="wrap_content" android:layout_height="@dimen/size_6x" android:text="@string/media_picker_search_no_emoticons_found_text" />
+        </LinearLayout>
+        <android.support.v4.view.ViewPager android:id="@id/media_picker_search_emoticon_rows_view_pager" android:paddingTop="@dimen/padding2b" android:layout_width="fill_parent" android:layout_height="@dimen/size_6x" />
+        <com.skype.android.widget.ViewPagerIndicator android:layout_gravity="center_horizontal" android:id="@id/emoticon_pager_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding1b" />
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/padding3b" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.skype.android.widget.SymbolView android:textSize="@dimen/font_medium_large" android:textColor="@color/skype_blue" android:id="@id/media_picker_search_moji_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/media_picker_search_mojis_title_text" app:symbol_code="MojiFullStroke" />
+                <TextView android:id="@id/media_picker_search_moji_text_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/media_picker_search_mojis_title_text" />
+            </LinearLayout>
+            <TextView android:id="@id/media_picker_search_no_moji_found_textview" android:paddingLeft="@dimen/padding4b" android:paddingTop="@dimen/padding2b" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/media_picker_search_moji_view_height" android:text="@string/media_picker_search_no_mojis_found_text" />
+        </LinearLayout>
+        <android.support.v4.view.ViewPager android:id="@id/media_picker_search_moji_rows_view_pager" android:paddingTop="@dimen/padding2b" android:layout_width="fill_parent" android:layout_height="@dimen/media_picker_search_moji_view_height" />
+        <com.skype.android.widget.ViewPagerIndicator android:layout_gravity="center_horizontal" android:id="@id/moji_pager_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding1b" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/text_container" android:padding="@dimen/margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_toLeftOf="@id/dismiss_bt" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="true">
+            <TextView android:id="@id/title_tv" style="@style/dialog_title" />
+            <TextView android:id="@id/subtitle_tv" android:visibility="gone" style="@style/dialog_subtitle" />
+            <TextView android:id="@id/text_tv" android:paddingTop="@dimen/margin_half" android:visibility="gone" style="@style/dialog_pinterest_text" />
+        </LinearLayout>
+        <Button android:textSize="@dimen/text_subhead" android:id="@id/dismiss_bt" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/margin" android:text="@string/done" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/button_backgroundless" />
+    </RelativeLayout>
+    <View android:id="@id/title_divider" style="@style/dialog_divider" />
+</merge>

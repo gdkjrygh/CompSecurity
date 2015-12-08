@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.aetn.history.android.historyhere">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" android:required="false"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" android:required="false"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <permission android:name="com.aetn.history.android.historyhere.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.aetn.history.android.historyhere.permission.C2D_MESSAGE"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="true"/>
+    <uses-feature android:glEsVersion="0x20000" android:required="true"/>
+    <application android:icon="@drawable/launcher_icon" android:label="@string/app_name" android:largeHeap="true" android:name="com.aetn.history.android.historyhere.HistoryHereApplication" android:theme="@android:style/Theme.Holo.NoActionBar">
+        <activity android:configChanges="orientation" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.aetn.history.android.historyhere.MainNavigationActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="historyhere"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/more_page_name" android:name="com.aetn.history.android.historyhere.view.MoreActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/about_page_name" android:name="com.aetn.history.android.historyhere.view.AboutActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/suggest_page_name" android:name="com.aetn.history.android.historyhere.view.SuggestActivity" android:screenOrientation="portrait"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <receiver android:name="com.localytics.android.PushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.aetn.history.android.historyhere"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="LOCALYTICS_APP_KEY" android:value="130e764c5d99adff2728600-b7377986-704d-11e4-4f47-00a426b17dd8"/>
+        <meta-data android:name="LOCALYTICS_NOTIFICATION_ICON" android:value="@drawable/ic_notification"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDSMeF4pB7LMLtK6cOpbuBL23r0XKeJ6H0"/>
+    </application>
+</manifest>

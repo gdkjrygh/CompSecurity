@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="horizontal" android:background="@color/sidebar_item_color" android:layout_width="fill_parent" android:layout_height="@dimen/card_sidebar_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:kik="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_gravity="left" android:id="@id/app_content_container" android:layout_width="0.0dip" android:layout_height="@dimen/card_sidebar_item_height">
+        <ImageView android:id="@id/new_notification" android:visibility="invisible" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginLeft="6.0dip" android:src="@drawable/notification" android:layout_centerVertical="true" />
+        <com.kik.sdkutils.LazyLoadingImage android:id="@id/app_icon" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="6.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="11.0dip" android:scaleType="centerCrop" android:layout_toRightOf="@id/new_notification" kik:nullBackground="@drawable/app_drawer_browser" />
+        <ImageView android:id="@id/app_icon_overlay" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="6.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="11.0dip" android:src="@drawable/iconmask" android:scaleType="fitXY" android:layout_toRightOf="@id/new_notification" />
+        <LinearLayout android:orientation="vertical" android:duplicateParentState="true" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="-2.0dip" android:layout_toRightOf="@id/app_icon" android:layout_centerVertical="true">
+            <kik.android.widget.RobotoTextView android:textSize="16.0dip" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/app_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:layout_marginRight="10.0dip" android:singleLine="true" />
+            <kik.android.widget.RobotoTextView android:textSize="14.0dip" android:ellipsize="end" android:id="@id/app_url" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_marginRight="10.0dip" android:singleLine="true" android:drawablePadding="2.0dip" android:layout_below="@id/app_name" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="right" android:orientation="horizontal" android:id="@id/edit_contents" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="@dimen/card_sidebar_item_height" android:layout_alignParentRight="true">
+        <ImageView android:id="@id/card_item_handle_secondary" android:duplicateParentState="true" android:layout_width="40.0dip" android:layout_height="fill_parent" android:src="@drawable/icon_sort" android:scaleType="centerInside" />
+        <ImageView android:id="@id/button_delete_app" android:background="@xml/misc_grey_selector" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@xml/button_delete_app" android:scaleType="center" />
+    </LinearLayout>
+    <View android:id="@id/card_item_handle" android:layout_width="fill_parent" android:layout_height="@dimen/card_sidebar_item_height" />
+</FrameLayout>

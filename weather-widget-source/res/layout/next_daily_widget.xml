@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gtp.nextlauncher.widget.weatherwidget.HourlyTypeView android:orientation="vertical" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="3.0" />
+            <include android:gravity="center" android:layout_gravity="center" android:id="@id/city_name" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="5.0" layout="@layout/next_earth" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="6.0">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="4.0">
+                        <com.gtp.nextlauncher.widget.weatherwidget.WeatherIcon android:gravity="center" android:layout_gravity="center" android:id="@id/weather_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/next_unknown" />
+                    </LinearLayout>
+                    <ImageView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="right" android:layout_gravity="right" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0">
+                    <LinearLayout android:gravity="center" android:layout_gravity="right" android:orientation="vertical" android:background="@drawable/next_btn_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center" android:layout_gravity="right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                            <com.gtp.nextlauncher.widget.weatherwidget.ProgressBar android:gravity="center" android:layout_gravity="center" android:id="@id/refresh_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/next_update_selector" />
+                            <ImageView android:layout_gravity="center_vertical" android:background="@drawable/next_top_btn_cut" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                            <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/trendButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/next_week_icon_seletor" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:layout_gravity="right" android:orientation="vertical" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="4.0">
+                        <include android:gravity="center" android:id="@id/digital" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/digital_clock" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:background="@drawable/next_hours_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="5.0">
+                <include android:id="@id/first_hour" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/hour_btn" />
+                <ImageView android:layout_gravity="center_vertical" android:background="@drawable/next_hourly_cut" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                <include android:id="@id/second_hour" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/hour_btn" />
+                <ImageView android:gravity="bottom" android:layout_gravity="center_vertical" android:background="@drawable/next_hourly_cut" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                <include android:id="@id/third_hour" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/hour_btn" />
+                <ImageView android:layout_gravity="center_vertical" android:background="@drawable/next_hourly_cut" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                <include android:id="@id/fourth_hour" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/hour_btn" />
+                <ImageView android:layout_gravity="center_vertical" android:background="@drawable/next_hourly_cut" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                <include android:id="@id/fith_hour" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/hour_btn" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</com.gtp.nextlauncher.widget.weatherwidget.HourlyTypeView>

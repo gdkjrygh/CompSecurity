@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pinterest.ui.imageview.GrayWebImageView android:id="@id/icon_wiv" android:layout_width="@dimen/thumbnail_size" android:layout_height="@dimen/thumbnail_size" android:layout_marginRight="@dimen/list_cell_text_image_gap" android:scaleType="centerCrop" />
+    <LinearLayout android:orientation="vertical" android:id="@id/text_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/icons_right" android:layout_toRightOf="@id/icon_wiv" android:layout_centerVertical="true">
+        <TextView android:textStyle="normal" android:id="@id/lbl_tv" android:visibility="gone" style="@style/pin_lbl" />
+        <TextView android:textColorLink="@color/text_dark" android:id="@id/title_tv" style="@style/pin_username" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/icons_right" android:layout_width="wrap_content" android:layout_height="@dimen/thumbnail_size" android:layout_marginLeft="@dimen/list_cell_text_image_gap" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <com.pinterest.ui.text.IconView android:layout_gravity="center_vertical" android:id="@id/secret_iv" android:layout_marginRight="0.0dip" android:contentDescription="@string/secret_board" style="@style/secret_iv" />
+        <ImageView android:layout_gravity="bottom" android:id="@id/arrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/disclosure_spinner" />
+    </LinearLayout>
+</merge>

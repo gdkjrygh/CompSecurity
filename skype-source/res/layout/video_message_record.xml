@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="center" android:id="@id/camera" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.skype.android.widget.SymbolView android:layout_gravity="top|left|center" android:id="@id/cancel_button" android:background="@drawable/btn_gray_circle_button_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/camera_controls_side_margin" android:layout_marginTop="@dimen/camera_controls_top_margin" android:soundEffectsEnabled="false" android:contentDescription="@string/acc_cancel_button" app:symbol_code="Cancel" style="@style/ControlButtonOnViewfinder" />
+    <ImageView android:layout_gravity="top|right|center" android:id="@id/skype_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding5" android:layout_marginRight="@dimen/padding5" android:src="@drawable/skype_call_logo" />
+    <RelativeLayout android:layout_gravity="bottom|center" android:id="@id/toolbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/camera_controls_bottom_margin">
+        <TextView android:textSize="@dimen/vim_timer_text_size" android:textColor="@color/main_light_color" android:id="@id/record_time" android:padding="@dimen/padding3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/record_button" android:layout_centerHorizontal="true" />
+        <ImageButton android:id="@id/record_button" android:background="@drawable/btn_red_round_button_selector" android:layout_width="@dimen/end_call_button_size" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding4" android:layout_marginRight="@dimen/padding4" android:src="@drawable/vim_btn_record" android:scaleType="centerInside" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:contentDescription="@string/acc_record_button" />
+    </RelativeLayout>
+</FrameLayout>

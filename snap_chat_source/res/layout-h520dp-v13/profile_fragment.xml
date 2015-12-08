@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/camera_activity_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub android:id="@id/profile_mask_stub" android:layout="@layout/profile_mask_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/profile_control_buttons" android:paddingTop="@dimen/system_status_bar_height" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/question_button" android:padding="@dimen/profile_button_padding" android:layout_width="@dimen/profile_button_size" android:layout_height="@dimen/profile_button_size" android:src="@drawable/profile_question_button_selector" android:layout_alignParentLeft="true" />
+            <ImageView android:id="@id/settings_button" android:padding="@dimen/profile_button_padding" android:layout_width="@dimen/profile_button_size" android:layout_height="@dimen/profile_button_size" android:src="@drawable/profile_settings_button_selector" android:layout_alignParentRight="true" />
+            <ImageView android:id="@id/trophy_button" android:padding="@dimen/profile_button_padding" android:layout_width="@dimen/profile_button_size" android:layout_height="@dimen/profile_button_size" android:src="@drawable/profile_white_trophy_selector" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            <include layout="@layout/trophy_case_tooltip" />
+        </RelativeLayout>
+        <RelativeLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/profile_control_buttons">
+            <View android:id="@id/center_shim" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_centerVertical="true" />
+            <RelativeLayout android:gravity="center" android:id="@id/snapcode_box_parent" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/center_shim">
+                <RelativeLayout android:id="@id/snapcode_container" android:layout_width="@dimen/profile_snapcode_size" android:layout_height="@dimen/profile_snapcode_size" android:layout_marginBottom="10.0dip" android:layout_centerHorizontal="true">
+                    <ImageView android:id="@id/snapcode_empty_ghost" android:layout_width="@dimen/profile_snapcode_size" android:layout_height="@dimen/profile_snapcode_size" android:src="@drawable/profile_qr_ghost" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                    <ImageView android:id="@id/snapcode_background" android:background="@color/white" android:visibility="gone" android:layout_width="@dimen/profile_profile_picture_size" android:layout_height="@dimen/profile_profile_picture_size" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:contentDescription="@string/content_description_no_profile_picture" />
+                </RelativeLayout>
+                <TextView android:textSize="@dimen/profile_display_name_text_size" android:textColor="@color/profile_text_color" android:gravity="center" android:id="@id/display_name" android:paddingLeft="@dimen/default_gap" android:paddingTop="@dimen/default_gap_half" android:paddingRight="@dimen/default_gap" android:paddingBottom="@dimen/default_gap_half" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/snapcode_container" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="@dimen/profile_username_text_size" android:textColor="@color/profile_text_color" android:gravity="center" android:id="@id/username" android:paddingLeft="@dimen/default_gap" android:paddingRight="@dimen/default_gap" android:paddingBottom="@dimen/default_gap_quarter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/display_name" android:layout_centerHorizontal="true" />
+                <include layout="@layout/profile_pictures_tooltip" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="top|center" android:id="@id/profile_navigation_buttons" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/center_shim">
+                <TableLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TableRow android:id="@id/new_friends_button" android:paddingTop="@dimen/profile_button_padding_y" android:paddingBottom="@dimen/profile_button_padding_y" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_gravity="left|center" android:id="@id/addedme_button_image" android:layout_width="@dimen/profile_button_icon_size" android:layout_height="@dimen/profile_button_icon_size" android:layout_marginRight="@dimen/profile_button_margin_between_icon_and_text" android:src="@drawable/profile_addedme_level_list" android:scaleType="centerInside" />
+                        <TextView android:textSize="@dimen/profile_button_text_size" android:textColor="@color/profile_text_color" android:layout_gravity="left|center" android:id="@id/new_friends_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/added_me_button" />
+                    </TableRow>
+                    <TableRow android:id="@id/add_friends_button" android:paddingTop="@dimen/profile_button_padding_y" android:paddingBottom="@dimen/profile_button_padding_y" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_gravity="left|center" android:layout_width="@dimen/profile_button_icon_size" android:layout_height="@dimen/profile_button_icon_size" android:layout_marginRight="@dimen/profile_button_margin_between_icon_and_text" android:src="@drawable/profile_addfriends_button_selector" android:scaleType="centerInside" />
+                        <TextView android:textSize="@dimen/profile_button_text_size" android:textColor="@color/profile_text_color" android:layout_gravity="left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_friends_title" />
+                    </TableRow>
+                    <TableRow android:id="@id/my_friends_button" android:paddingTop="@dimen/profile_button_padding_y" android:paddingBottom="@dimen/profile_button_padding_y" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_gravity="left|center" android:layout_width="@dimen/profile_button_icon_size" android:layout_height="@dimen/profile_button_icon_size" android:layout_marginRight="@dimen/profile_button_margin_between_icon_and_text" android:src="@drawable/profile_myfriends_button_selector" android:scaleType="centerInside" />
+                        <TextView android:textSize="@dimen/profile_button_text_size" android:textColor="@color/profile_text_color" android:layout_gravity="left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_friends_title" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView android:id="@id/back_button" android:paddingLeft="@dimen/default_gap_2x" android:paddingTop="@dimen/default_gap" android:paddingRight="@dimen/default_gap_2x" android:paddingBottom="@dimen/default_gap_2x" android:layout_width="60.0dip" android:layout_height="44.0dip" android:src="@drawable/profile_back_button_selector" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <ViewStub android:id="@id/profile_picture_stub" android:layout="@layout/profile_picture_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

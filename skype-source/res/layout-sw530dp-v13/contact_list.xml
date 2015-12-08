@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.skype.android.widget.ZoomRelativeLayout android:id="@id/semantic_zoom_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/contact_filters" layout="@layout/contact_list_filters" />
+    <com.skype.android.widget.recycler.TwoWayRecyclerView android:id="@id/list" android:background="@color/main_light_color" android:paddingLeft="@dimen/size_2x" android:paddingRight="@dimen/size_2x" android:paddingBottom="@dimen/people_list_grid_view_padding_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@color/main_light_color" android:horizontalSpacing="@dimen/size_0_5x" android:verticalSpacing="@dimen/people_list_grid_view_vertical_spacing" android:numColumns="@integer/list_items_count_per_row" android:maxRows="@integer/list_items_count_per_row" android:layout_below="@id/contact_filters" style="@style/ContactGrid" />
+    <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/people_list_empty_view_margin_left" android:layout_below="@id/contact_filters" layout="@layout/contacts_grid_empty_view" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/contact_filters" layout="@layout/contacts_grid_alpha_view" style="@style/ContactGridAlpha" />
+</com.skype.android.widget.ZoomRelativeLayout>

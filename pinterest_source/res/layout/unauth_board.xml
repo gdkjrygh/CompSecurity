@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_grid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="@dimen/margin_double" android:paddingTop="@dimen/margin" android:paddingRight="@dimen/margin" android:paddingBottom="@dimen/margin_half" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/signup_board_bt" android:text="@string/signup" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:textAllCaps="false" style="@style/button_red" />
+        <TextView android:textSize="@dimen/text_display" android:textStyle="bold" android:textColor="@color/text_dark" android:gravity="top|left|center" android:id="@id/board_title" android:paddingRight="@dimen/margin" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <com.pinterest.ui.grid.BoardInfo android:id="@id/board_data" android:paddingLeft="@dimen/margin" android:paddingRight="@dimen/margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" />
+    <com.pinterest.ui.grid.PinterestGridView android:id="@id/grid_vw" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

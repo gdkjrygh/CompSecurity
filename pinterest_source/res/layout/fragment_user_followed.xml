@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_container" android:background="@color/bg_grid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pinterest.ui.scrollview.ObservableScrollView android:id="@id/user_followed_scroll" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.pinterest.ui.grid.AdapterEmptyView android:id="@id/user_followed_empty" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:orientation="vertical" android:id="@id/user_followed_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.pinterest.activity.user.view.UserMetadataView android:id="@id/user_followed_metadata" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <RelativeLayout style="@style/user_followed_section_header">
+                    <TextView android:text="@string/boards" style="@style/user_followed_section_title" />
+                    <Button android:id="@id/see_all_boards_bt" android:text="@string/see_all" style="@style/user_followed_section_see_all" />
+                </RelativeLayout>
+                <com.pinterest.activity.user.view.UserFollowedBoardsView android:orientation="horizontal" android:id="@id/followed_boards" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" />
+                <RelativeLayout style="@style/user_followed_section_header">
+                    <TextView android:text="@string/topics" style="@style/user_followed_section_title" />
+                    <Button android:id="@id/see_all_interests_bt" android:text="@string/see_all" style="@style/user_followed_section_see_all" />
+                </RelativeLayout>
+                <com.pinterest.activity.user.view.UserFollowedInterestsView android:orientation="horizontal" android:id="@id/followed_interests" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" />
+                <RelativeLayout style="@style/user_followed_section_header">
+                    <TextView android:text="@string/pinners" style="@style/user_followed_section_title" />
+                    <Button android:id="@id/see_all_pinners_bt" android:text="@string/see_all" style="@style/user_followed_section_see_all" />
+                </RelativeLayout>
+                <com.pinterest.activity.user.view.UserFollowedPinnersView android:orientation="vertical" android:id="@id/followed_pinners" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </FrameLayout>
+    </com.pinterest.ui.scrollview.ObservableScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

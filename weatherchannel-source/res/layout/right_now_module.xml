@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:paddingLeft="@dimen/right_now_module_paddingleft" android:stretchColumns="*" style="@style/module_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <com.weather.commons.ui.fonts.TextViewWithFont android:layout_marginBottom="@dimen/right_now_title_bottom_margin" android:text="@string/right_now_title" style="@style/module_header" />
+    <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/right_now_observation_time_value_textsize" android:textColor="@color/right_now_record_creation_time" android:id="@id/recordCreationTime" style="@style/RightNowValueStyle" />
+    </TableRow>
+    <TableRow android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/right_now_observation_time_value_textsize" android:id="@id/observationTime" style="@style/RightNowValueStyle" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/right_now_observation_time_value_textsize" android:id="@id/observationStation" style="@style/RightNowValueStyle" />
+    </TableRow>
+    <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/right_now_module_valuerow_margintop">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content">
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/right_now_feelslike_value_textsize" android:id="@id/feelslike" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/RightNowValueStyle" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:layout_width="wrap_content" android:text="@string/feelslike" style="@style/RightNowLabelStyle" />
+        </LinearLayout>
+        <RelativeLayout android:layout_gravity="bottom" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_span="2">
+            <com.weather.Weather.ui.ColorArc android:gravity="bottom" android:id="@id/ten_day_header_sun_arc" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="28.0dip" android:layout_marginRight="28.0dip" android:layout_above="@id/sunrise" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:contentDescription="@string/sunrise" weather:colorArcStartAngle="@integer/right_now_sun_arc_start_angle" weather:colorArcSweepAngle="@integer/right_now_sun_arc_sweep_angle" weather:colorArcColor="@color/sunarc" weather:colorArcBgColor="@color/sunarc_background" weather:colorArcProgress="1.0" weather:colorArcStrokeWidth="@dimen/right_now_sun_arc_stroke_width" />
+            <ImageView android:id="@id/sun" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sun" android:adjustViewBounds="false" android:baselineAlignBottom="true" android:layout_alignBaseline="@id/sunrise" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:contentDescription="@string/sunrise" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/sunrise" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" style="@style/RightNowSunriseStyle" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/sunset" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/RightNowSunriseStyle" />
+        </RelativeLayout>
+    </TableRow>
+    <View android:layout_gravity="center" android:background="@drawable/module_right_now_line" android:layout_width="fill_parent" android:layout_height="@dimen/right_now_module_separator_line_height" android:layerType="software" />
+    <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/humidity" style="@style/RightNowValueStyle" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/dewpoint" style="@style/RightNowValueStyle" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/visibility" style="@style/RightNowValueStyle" />
+    </TableRow>
+    <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:text="@string/humidity" style="@style/RightNowLabelStyle" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:text="@string/dewPoint" style="@style/RightNowLabelStyle" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:text="@string/visibility" style="@style/RightNowLabelStyle" />
+    </TableRow>
+    <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/right_now_module_lastvaluerow_margintop">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/right_now_pressure_value_textsize" android:id="@id/pressure" style="@style/RightNowValueStyle" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/right_now_uv_value_textsize" android:id="@id/uvindex" style="@style/RightNowValueStyle" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/right_now_wind_value_textsize" android:id="@id/wind" android:textAllCaps="true" style="@style/RightNowValueStyle" />
+    </TableRow>
+    <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:text="@string/pressure" style="@style/RightNowLabelStyle" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:text="@string/uv" style="@style/RightNowLabelStyle" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:text="@string/wind" style="@style/RightNowLabelStyle" />
+    </TableRow>
+    <View android:layout_gravity="center" android:id="@id/video_separator" android:background="@drawable/module_right_now_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/right_now_module_separator_line_height" android:layerType="software" />
+    <TableRow android:id="@id/video_preview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.5">
+            <com.weather.commons.ui.FixedAspectRatioImageView android:id="@id/video_image" android:background="@color/video_module_image_default" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/video_row_thumbnail_contentDescription" weather:farivAspectWidth="@integer/video_aspect_width" weather:farivAspectHeight="@integer/video_aspect_height" />
+            <ImageView android:id="@id/video_play_button" android:layout_width="@dimen/video2_grid_item_play_icon_small" android:layout_height="@dimen/video2_grid_item_play_icon_small" android:layout_marginLeft="@dimen/video_play_btn_margin" android:layout_marginBottom="@dimen/video_play_btn_margin" android:src="@drawable/btn_video_play" android:layout_alignBottom="@id/video_image" android:layout_alignParentLeft="true" android:contentDescription="@string/right_now_video_content_description" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/video_image_caption" android:paddingLeft="@dimen/right_now_video_text_marginleft" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.5">
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/right_now_video_title_textsize" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/tv_video_teaser" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:includeFontPadding="false" android:layout_alignParentTop="true" android:layout_centerVertical="true" weather:font="Roboto-Light.ttf" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/right_now_sunrise_textsize" android:textColor="@color/right_now_label" android:id="@id/video_watch_now" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/video_list_margin" android:text="@string/right_now_video_watch" android:drawableRight="@drawable/btn_right_now_video_play" android:drawablePadding="@dimen/video_play_btn_margin" android:layout_below="@id/tv_video_teaser" android:layout_centerVertical="true" android:textAllCaps="true" weather:font="Roboto-Medium.ttf" />
+        </RelativeLayout>
+    </TableRow>
+    <Space android:layout_width="fill_parent" android:layout_height="@dimen/right_now_module_bottom_spacer_height" />
+</TableLayout>

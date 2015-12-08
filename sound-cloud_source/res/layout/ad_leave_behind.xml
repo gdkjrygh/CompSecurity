@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/ad_overlay_padding" android:paddingRight="@dimen/ad_overlay_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/leave_behind_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/leave_behind_image_holder">
+        <Button android:layout_gravity="bottom|right|center" android:layout_marginBottom="@dimen/ad_overlay_padding" style="@style/AdOverlayClose" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/leave_behind_image_holder" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="@drawable/ad_overlay_selector" android:layout_alignParentBottom="true">
+        <com.soundcloud.android.view.AspectRatioImageView android:id="@id/leave_behind_image" android:visibility="gone" style="@style/LeaveBehindImage" />
+    </FrameLayout>
+</RelativeLayout>

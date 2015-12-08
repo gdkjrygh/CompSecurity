@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView style="@style/wrap_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_marginTop="@dimen/margin" style="@style/wrap_view">
+        <com.pinterest.ui.text.PEditText android:id="@id/email" android:hint="@string/email" android:inputType="textEmailAddress" style="@style/SignupEditText" />
+        <com.pinterest.ui.text.PEditText android:id="@id/password" android:hint="@string/password" android:inputType="textPassword" style="@style/SignupEditText" />
+        <com.pinterest.ui.text.PEditText android:id="@id/business_name" android:hint="@string/business_name" style="@style/SignupEditText" />
+        <Button android:gravity="left|center" android:id="@id/business_type" android:layout_width="fill_parent" android:layout_marginLeft="@dimen/margin" android:layout_marginTop="@dimen/margin_half" android:layout_marginRight="@dimen/margin" android:text="@string/select_business_type" style="@style/button_plain" />
+        <com.pinterest.ui.text.PEditText android:id="@id/website" android:hint="@string/website_optional" style="@style/SignupEditText" />
+        <Button android:id="@id/create_bt" android:layout_width="@dimen/signup_button_width" android:layout_margin="@dimen/margin" android:text="@string/signup_create_account" style="@style/button_red" />
+        <View style="@style/list_cell_divider" />
+        <TextView android:gravity="center" android:id="@id/terms" android:padding="@dimen/margin" android:layout_width="@dimen/match_parent" android:text="@string/terms_and_privacy_business" android:maxLines="3" android:singleLine="false" android:lineSpacingMultiplier="1.2" style="@style/text_subtitle" />
+    </LinearLayout>
+</ScrollView>

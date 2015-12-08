@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/base_alert_dialog_background" android:padding="@dimen/default_gap_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lens_purchase_dialog_top_margin_from_icon">
+        <TextView android:textSize="@dimen/text_size_default" android:textStyle="bold" android:gravity="center" android:id="@id/title_text" android:padding="@dimen/default_gap" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/default_gap_2x" android:text="@string/lens_purchase_dialog_title" />
+        <com.snapchat.android.ui.LinkFriendlyTextView android:textSize="@dimen/text_size_small" android:gravity="center" android:id="@id/description_text" android:padding="@dimen/default_gap" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Button android:id="@id/buy_button" android:text="@string/lens_purchase_dialog_button_buy" style="@style/sc_alert_dialog_yes_button" />
+        <Button android:id="@id/cancel_button" android:text="@string/cancel" style="@style/sc_alert_dialog_no_button" />
+    </LinearLayout>
+    <ImageView android:id="@id/lens_img" android:background="@drawable/lens_purchase_dialog_icon_bg" android:padding="@dimen/default_gap_half" android:layout_width="@dimen/lens_purchase_dialog_icon_bg_size" android:layout_height="@dimen/lens_purchase_dialog_icon_bg_size" android:layout_centerHorizontal="true" />
+</RelativeLayout>

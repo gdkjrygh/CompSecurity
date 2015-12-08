@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Simple data types -->
+    <xs:simpleType name="not-empty-string">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="not-negative-integer">
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="0"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="GeoDataType">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="2" />
+            <xs:enumeration value="4" />
+            <xs:enumeration value="7" />
+            <xs:enumeration value="10" />
+            <xs:enumeration value="13" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PollingUnits">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="sec" />
+            <xs:enumeration value="msec" />
+            <xs:enumeration value="min" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="boolean-string">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TRUE" />
+            <xs:enumeration value="FALSE" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="restricted-string">
+      <xs:restriction base="xs:string">
+        <xs:pattern value="[_a-zA-Z0-9]+"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="transparency-units">
+       <xs:restriction base="xs:string">
+           <xs:enumeration value="percent" />
+       </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="latitude-coordinate">
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="-90.0" />
+            <xs:maxInclusive value="90.0" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="longitude-coordinate">
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="-180.0" />
+            <xs:maxInclusive value="180.0" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="MeasurementUnits">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ENGLISH" />
+            <xs:enumeration value="METRIC" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="temperature-unit">
+        <xs:restriction base="not-empty-string">
+            <xs:enumeration value="F" />
+            <xs:enumeration value="C" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="wind-speed-unit">
+        <xs:restriction base="not-empty-string">
+            <xs:enumeration value="MPH" />
+            <xs:enumeration value="KPH" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Complex data types -->
+    <xs:complexType name="LocaleString">
+        <xs:simpleContent>
+            <xs:extension base="not-empty-string">
+                <xs:attribute name="locale" type="xs:string" default="en" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="Transparency">
+        <xs:simpleContent>
+            <xs:extension base="not-negative-integer">
+                <xs:attribute name="units" type="transparency-units" default="percent" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="TokenService">
+        <xs:sequence>
+            <xs:element name="SharedKey" type="not-empty-string" />
+            <xs:element name="MemberID" type="not-empty-string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Category">
+        <xs:sequence>
+            <xs:element name="Name" type="not-empty-string" />
+            <xs:element name="FeatureID" type="not-empty-string" />
+            <xs:element name="TurnOnByDefault" type="boolean-string" default="FALSE" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Categories">
+        <xs:sequence>
+            <xs:element name="Category" type="Category" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ValidDate">
+        <xs:sequence>
+            <xs:element name="SinceDay" type="not-empty-string" />
+            <xs:element name="UpToDay" type="not-empty-string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Height">
+        <xs:sequence>
+            <xs:element name="LessOrEqual" type="not-negative-integer" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ExcludeOptions">
+        <xs:sequence>
+            <xs:element name="ValidDate" type="ValidDate" minOccurs="0" />
+            <xs:element name="Height" type="Height" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Overlay">
+        <xs:sequence>
+            <xs:element name="OverlayID" type="GeoDataType" />
+            <xs:element name="Name" type="not-empty-string" />
+            <xs:element name="Polling" type="PollingTimeInterval" />
+            <xs:element name="Decluttering" type="boolean-string" />
+            <xs:element name="TurnOnByDefault" type="boolean-string" default="FALSE" minOccurs="0" />
+            <xs:element name="Categories" type="Categories" minOccurs="0" />
+            <xs:element name="ExcludeOptions" type="ExcludeOptions" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Overlays">
+        <xs:sequence>
+            <xs:element name="Overlay" type="Overlay" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AddOverlay">
+        <xs:sequence>
+            <xs:element name="OverlayID" type="GeoDataType" />
+            <xs:element name="Name" type="not-empty-string" />
+            <xs:element name="Polling" type="PollingTimeInterval" />
+            <xs:element name="Decluttering" type="boolean-string" />
+        </xs:sequence>
+        <xs:attribute name="ID" type="not-negative-integer" use="optional" /><!-- CHECK THIS -->
+    </xs:complexType>
+
+    <xs:complexType name="AdditionalOverlays">
+        <xs:sequence>
+            <xs:element name="AddOverlay" type="AddOverlay" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PollingTimeInterval">
+        <xs:simpleContent>
+            <xs:extension base="not-negative-integer">
+                <xs:attribute name="units" type="PollingUnits" default="sec" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="Layer">
+        <xs:sequence>
+            <xs:element name="Name" type="LocaleString" maxOccurs="unbounded" />
+            <xs:element name="Url" type="restricted-string" />
+            <xs:element name="Polling" type="PollingTimeInterval" />
+            <xs:element name="ShowLegend" type="boolean-string" />
+            <xs:element name="ShowLoop" type="boolean-string" />
+            <xs:element name="LegendFileName" type="xs:string" />
+            <xs:element name="UnitDependent" type="boolean-string" minOccurs="0" />
+            <xs:element name="Transparency" type="Transparency" />
+            <xs:element name="BumpMapping" type="boolean-string" minOccurs="0" />
+            <xs:element name="LogoName" type="not-empty-string" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Layers">
+        <xs:sequence>
+            <xs:element name="Layer" type="Layer" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LoopingRestrictions">
+        <xs:sequence>
+            <xs:element name="WIFI" type="not-negative-integer" />
+            <xs:element name="CELL" type="not-negative-integer" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Application configuration structure definition -->
+    <xs:element name="Configuration">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="TokenService" type="TokenService" />
+                <xs:element name="Overlays" type="Overlays" />
+                <xs:element name="RasterLayers" type="Layers" />
+                <xs:element name="MeasurementUnits" type="MeasurementUnits" />
+                <xs:element name="TemperatureUnit" type="temperature-unit" minOccurs="0" />
+                <xs:element name="WindUnit" type="wind-speed-unit" minOccurs="0" />
+                <xs:element name="LoopingRestrictions" type="LoopingRestrictions" />
+                <xs:element name="LayerTilesURL" type="xs:anyURI" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

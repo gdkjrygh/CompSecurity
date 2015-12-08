@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:text="@string/about" style="@style/profile_about_section_title" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/card_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/update_bt" android:background="@drawable/touch_clear_bg" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height" android:text="@string/update_ota" style="@style/section_item_label" />
+        <View android:id="@id/update_divider" android:visibility="gone" style="@style/section_item_divider" />
+        <RelativeLayout android:id="@id/settings_version_bt" android:background="@drawable/touch_clear_bg" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_compact_height">
+            <TextView android:text="@string/version" style="@style/section_item_label" />
+            <TextView android:id="@id/settings_version" style="@style/section_item_meta" />
+        </RelativeLayout>
+    </LinearLayout>
+</merge>

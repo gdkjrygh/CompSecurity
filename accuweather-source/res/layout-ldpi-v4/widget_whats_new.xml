@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/first_launch_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background_lines" android:background="@drawable/background_lines_20_tiled" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <com.accuweather.android.views.TutorialProgressStrip android:id="@id/tutorialProgressIndicator" android:layout_width="fill_parent" android:layout_height="5.0dip" />
+    <ScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/button_layout" android:layout_below="@id/tutorialProgressIndicator">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="@dimen/whats_new_width_ll" android:layout_height="wrap_content" android:layout_marginTop="@dimen/new_ll_margin_top">
+            <TextView android:textSize="@dimen/whats_new_label_tv" android:textColor="@android:color/white" android:layout_gravity="center" android:id="@id/whats_new_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/WhatsNew_Abbr20" />
+            <ImageView android:id="@id/tutorial_img" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/widget_whats_new_holo_dark" android:adjustViewBounds="true" />
+            <TextView android:textSize="20.0dip" android:textColor="@android:color/white" android:gravity="center_horizontal" android:id="@id/tap_to_switch_tv" android:paddingBottom="40.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-44.0dip" android:text="@string/TapToSwitchAmongSavedLocations" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:background="@drawable/abs__ab_transparent_dark_holo" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <Button android:textColor="@android:color/white" android:id="@id/lets_go" android:background="@drawable/first_launch_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/LetsGo_exclamation" android:layout_weight="1.0" />
+        </LinearLayout>
+        <include android:id="@id/branding_bar" android:layout_width="fill_parent" android:layout_height="32.0dip" layout="@layout/branding_bar_light" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/search_prompt_layout" android:background="@android:color/white" android:paddingLeft="@dimen/cloudlib_dp16" android:paddingRight="@dimen/cloudlib_dp16" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp72">
+            <ProgressBar android:id="@id/progress_bar" android:layout_width="@dimen/cloudlib_dp48" android:layout_height="@dimen/cloudlib_dp48" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/cloudlib_dp15" android:textColor="#ff505a5e" android:id="@id/search_prompt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/cloudlib_dp16" android:layout_toRightOf="@id/progress_bar" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/cloudlib_dp15" android:textColor="#ff505a5e" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/search_empty" android:background="@android:color/white" android:paddingLeft="@dimen/cloudlib_dp16" android:paddingRight="@dimen/cloudlib_dp16" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp72" android:maxLines="2" />
+    </LinearLayout>
+    <com.roidapp.cloudlib.sns.modifiedrefresh.SwipeRefreshLayout2 android:id="@id/swipe_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ListView android:id="@id/search_result_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/sns_split_color" android:dividerHeight="@dimen/cloudlib_dp1" />
+    </com.roidapp.cloudlib.sns.modifiedrefresh.SwipeRefreshLayout2>
+    <TextView android:textSize="@dimen/cloudlib_dp15" android:textColor="#ff505a5e" android:ellipsize="end" android:gravity="center" android:id="@id/search_error" android:paddingLeft="@dimen/cloudlib_dp10" android:paddingRight="@dimen/cloudlib_dp10" android:paddingBottom="@dimen/cloudlib_dp95" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_centerInParent="true" />
+</RelativeLayout>

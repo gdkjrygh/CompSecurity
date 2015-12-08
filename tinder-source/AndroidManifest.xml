@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.tinder" platformBuildVersionCode="23" platformBuildVersionName="6.0-2166767">
+    <supports-screens android:requiresSmallestWidthDp="320"/>
+    <permission android:name="com.tinder.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.tinder.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <permission android:name="com.tinder.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.tinder.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-feature android:glEsVersion="0x20000" android:required="true"/>
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@drawable/android_app_icon_circled" android:label="@string/app_name" android:largeHeap="true" android:name="com.tinder.managers.ManagerApp" android:theme="@style/Tindered">
+        <receiver android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.tinder"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.tinder.services.GCMListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.tinder.services.GCMRegistrationIntentService"/>
+        <service android:exported="false" android:name="com.tinder.services.InstanceIdUpdateListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.tinder.services.WearIntentService"/>
+        <service android:enabled="true" android:exported="true" android:name="com.tinder.services.WearClientService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.appboy.services.AppboyLocationService"/>
+        <receiver android:name="com.appboy.AppboyGcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.tinder"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.tinder.receivers.ReceiverAppboy">
+            <intent-filter>
+                <action android:name="com.tinder.intent.APPBOY_PUSH_RECEIVED"/>
+                <action android:name="com.tinder.intent.APPBOY_NOTIFICATION_OPENED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:label="NetworkConnection" android:name="com.tinder.receivers.BroadcastReceiverConnectionChange">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:launchMode="singleTop" android:name="com.tinder.activities.ActivityMain" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="tinder"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="tinder"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tinder.base.ActivitySignedInBase" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.tinder.activities.ActivityLogin" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tinder.activities.ActivityEditProfile" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.tinder.activities.ActivityUsername" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysVisible"/>
+        <activity android:name="com.tinder.activities.ActivityJob" android:screenOrientation="portrait"/>
+        <activity android:name="com.tinder.activities.ActivitySchool" android:screenOrientation="portrait"/>
+        <activity android:name="com.tinder.activities.ActivityAddPhoto" android:screenOrientation="portrait"/>
+        <activity android:name="eu.janmuller.android.simplecropimage.CropImage" android:screenOrientation="portrait"/>
+        <activity android:name="com.tinder.activities.ActivityCredits" android:screenOrientation="portrait"/>
+        <activity android:name="com.tinder.activities.ActivityVerification" android:screenOrientation="portrait"/>
+        <activity android:name="com.tinder.activities.ActivityPassport" android:screenOrientation="portrait" android:theme="@style/ActivityPassport"/>
+        <activity android:name="com.tinder.activities.ActivityBanned" android:screenOrientation="portrait"/>
+        <activity android:name="com.tinder.activities.ActivityProfile" android:screenOrientation="portrait"/>
+        <activity android:name="com.tinder.activities.WebViewActivityInstagram" android:screenOrientation="portrait"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationName" android:value="@string/app_name"/>
+        <activity android:name="com.tinder.activities.ActivityCallToActionBrowser" android:screenOrientation="portrait" android:theme="@style/Tindered.NoText.Translucent"/>
+        <activity android:name="com.tinder.sunset.ActivityMomentViewer" android:screenOrientation="portrait" android:theme="@style/Tindered.Translucent"/>
+        <activity android:name="com.tinder.activities.ActivityBlend" android:screenOrientation="portrait"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyC7xmPh819jEMii1z3t1RW5K_2fApDz0vM"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="732ac240ca05753e16441565e052e4973c14d8ac"/>
+        <meta-data android:name="iabApiKey" android:value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy0E306pdnMYXp4             /jrkfM4/x/sT8QdKLyZ3ss3IaJzvFezeSg06PQvBqgMgUapZmwX7144YTTJEKkUKdCFErEalZw             zzKHl+TyBq8lTyJ4+BpwNEqaysuMoMz9Yx7ZORVLluS9ni7nQK35PFPlI7jun+tspXlJls45Dl             wUjSxNU3n9vVHrBTjIjuKzCujpwQV4d1Ge1Z8I3JpMF24T60u+nBKt4VocsMK2nI86/6wXM/gU             EZ+vTS/jY3oaIrJv87JVFO1CXOfSWpWg2ihWA3swVtmE8G2Z3/C/W1j4/I2KHoV9Au1eSTS+MN             0g37i/P2HZWvuODm6W6MKLtJT3KmoHeQIDAQAB"/>
+        <provider android:authorities="com.tinder.google_measurement_service" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementContentProvider"/>
+        <receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@style/Theme.IAPTheme"/>
+        <service android:name="com.appboy.services.AppboyDataSyncService"/>
+    </application>
+</manifest>

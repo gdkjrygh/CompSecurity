@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.contextlogic.wish" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <permission android:name="com.contextlogic.wish.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.contextlogic.wish.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <application android:hardwareAccelerated="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.contextlogic.wish.WishApplication" android:theme="@style/WishAppTheme">
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation" android:label="@string/app_name" android:name="com.facebook.LoginActivity" android:theme="@style/FacebookTheme"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_prod_app_id"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation" android:launchMode="standard" android:name="com.contextlogic.wish.ui.activity.login.LoginActivity" android:theme="@style/WishAppLoginTheme" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation" android:label="" android:launchMode="singleTop" android:name="com.contextlogic.wish.ui.activity.root.RootActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation" android:label="" android:launchMode="standard" android:name="com.contextlogic.wish.activity.facebook.WishFacebookDeepLinkActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation" android:label="" android:launchMode="standard" android:name="com.contextlogic.wish.activity.link.WishDeepLinkActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/deep_link_protocol"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation" android:exported="true" android:label="" android:launchMode="standard" android:name="com.contextlogic.wish.activity.link.PushNotificationLinkActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation" android:exported="true" android:label="" android:launchMode="standard" android:name="com.contextlogic.wish.push.LocalNotificationAlarmReceiverActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTask" android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="com.contextlogic.wish.braintree"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.contextlogic.wish.push.PushNotificationReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.contextlogic.wish"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.contextlogic.wish.push.PushNotificationService"/>
+        <receiver android:exported="true" android:name="com.contextlogic.wish.receiver.InstallReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.gms.wallet.EnableWalletOptimizationReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wallet.ENABLE_WALLET_OPTIMIZATION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.contextlogic.wish.push.LocalNotificationAlarmReceiver"/>
+        <activity android:name="com.paypal.android.sdk.onetouch.core.PayPalOneTouchActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="d1658013a24ddc094d2e5c94019656ca19b09b3c"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <uses-library android:name="com.amazon.device.messaging" android:required="false"/>
+        <uses-library android:name="com.amazon.application.compatibility.enforcer" android:required="false"/>
+        <meta-data android:name="amazon.device.messaging.client.version" android:value="@integer/amazon_device_messaging_client_version"/>
+        <meta-data android:name="required_amazon_package:com.amazon.device.messaging" android:value="2057500"/>
+        <meta-data android:name="required_amazon_package:com.amazon.device.messaging.sdk.library" android:value="2074700"/>
+        <meta-data android:name="required_amazon_package:com.amazon.application.compatibility.enforcer.sdk.library" android:value="19000"/>
+    </application>
+</manifest>

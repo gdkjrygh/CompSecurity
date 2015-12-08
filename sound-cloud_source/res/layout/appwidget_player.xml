@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/main_holder" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Widget.Container">
+        <ImageView android:id="@id/icon" style="@style/Widget.Image" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:weightSum="9.0" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:id="@id/track_info" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="1.0dip" android:layout_weight="4.0">
+                <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/user_txt" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:maxWidth="100.0dip" android:maxLines="1" android:singleLine="true" style="@style/Widget.TextView.Clickable" />
+                <TextView android:gravity="center_vertical" android:id="@id/separator_txt" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/hyphen" style="@style/Widget.TextView.Separator" />
+                <TextView android:ellipsize="end" android:gravity="left|center" android:id="@id/title_txt" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:singleLine="true" android:layout_weight="1.0" style="@style/Widget.TextView.Clickable" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/transport_bar" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="5.0">
+                <ImageButton android:id="@id/prev" android:background="@drawable/appwidget_button_center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_skip_previous_black_36dp" android:layout_weight="1.0" />
+                <ImageButton android:id="@id/toggle_playback" android:background="@drawable/appwidget_button_center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_play_arrow_black_36dp" android:layout_weight="1.0" />
+                <ImageButton android:id="@id/next" android:background="@drawable/appwidget_button_center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_skip_next_black_36dp" android:layout_weight="1.0" />
+                <ImageButton android:id="@id/btn_like" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/widget_like_orange" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView style="@style/Widget.OrangeLine" />
+</FrameLayout>

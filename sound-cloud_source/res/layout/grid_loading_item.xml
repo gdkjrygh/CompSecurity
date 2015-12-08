@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/track_info_row" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/gridview_loading_height">
+        <ProgressBar android:gravity="center" android:id="@id/ak_list_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateOnly="true" android:layout_centerInParent="true" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ak_list_retry" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/gridview_loading_height">
+            <View style="@style/HorizontalDivider" />
+            <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="0.0dip" android:text="@string/ak_error_pager_failed" android:layout_weight="1.0" style="@style/Ak.EmptyViewContent" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

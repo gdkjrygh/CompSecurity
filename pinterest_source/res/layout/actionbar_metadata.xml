@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/shadow_up" android:visibility="gone" style="@style/dropshadow_up" />
+    <RelativeLayout style="@style/MetadataBar">
+        <com.pinterest.ui.text.PTextView android:textStyle="bold" android:textColor="@color/text_brio_dark" android:gravity="top" android:id="@id/header_tv" android:paddingTop="@dimen/margin_half" android:paddingRight="@dimen/margin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/icon_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/header_tv" android:layout_centerVertical="true" />
+        <com.pinterest.ui.text.PTextView android:gravity="center_vertical" android:id="@id/title_tv" android:paddingLeft="@dimen/margin" android:paddingRight="@dimen/margin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/addons_ll" android:layout_toRightOf="@id/icon_iv" android:layout_below="@id/header_tv" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/addons_ll" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:id="@id/shadow_down" style="@style/dropshadow_down" />
+</merge>

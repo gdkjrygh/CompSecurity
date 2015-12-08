@@ -1,0 +1,506 @@
+*,
+*:before,
+*:after {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-focus-ring-color: rgba(0,0,0,0);
+  outline: none;
+}
+div {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-size: base-font-size;
+  font-family: Avenir Next, Avenir, arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+.content {
+  background-color: #fff;
+  overflow: hidden;
+  height: 100%;
+}
+.content .gender-selector {
+  width: 100%;
+  height: 100%;
+}
+.content .gender-selector a {
+  text-decoration: none;
+  width: 100%;
+  height: 50%;
+  display: block;
+  position: relative;
+}
+.content .gender-selector a span {
+  text-align: left;
+  padding: 20px;
+  font-size: 1.25em;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+}
+.content .gender-selector a img {
+  height: 85%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.content .gender-selector a.male {
+  background-color: #4393fa;
+  color: #2d68b4;
+}
+.content .gender-selector a.female {
+  background-color: #f74594;
+  color: #b22f69;
+}
+.content .avatar-style-selector {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+.content .avatar-style-selector .bitclippy {
+  width: 100%;
+  display: table-row;
+}
+.content .avatar-style-selector .bitclippy:after {
+  clear: both;
+  content: " ";
+  display: block;
+}
+.content .avatar-style-selector .bitclippy .begin {
+  background: url("../images/bitclippy_01.png") 0 0 no-repeat;
+  background-size: contain;
+  width: 90px;
+  height: 90px;
+  float: left;
+}
+.content .avatar-style-selector .bitclippy .main {
+  background: url("../images/bitclippy_02.png") 0 0 repeat-x;
+  background-size: contain;
+  width: 100%;
+  height: 90px;
+}
+.content .avatar-style-selector .bitclippy .main span {
+  padding-top: 22px;
+  display: block;
+  text-align: left;
+  font-size: 0.83em;
+  max-height: 62px;
+  overflow: hidden;
+  font-weight: 500;
+}
+.content .avatar-style-selector .bitclippy .end {
+  background: url("../images/bitclippy_03.png") 0 0 no-repeat;
+  background-size: contain;
+  width: 28px;
+  height: 90px;
+  float: right;
+}
+.content .avatar-style-selector .select-style {
+  height: 100%;
+  width: 100%;
+  display: table-row;
+  text-align: center;
+  font-weight: bold;
+}
+.content .avatar-style-selector .select-style .classic {
+  background: #e8ebeb;
+}
+.content .avatar-style-selector .select-style .cute {
+  background: #d2eff0;
+  position: relative;
+  overflow: hidden;
+}
+.content .avatar-style-selector .select-style .cute,
+.content .avatar-style-selector .select-style .classic {
+  height: 50%;
+}
+.content .avatar-style-selector .select-style .cute .wrap,
+.content .avatar-style-selector .select-style .classic .wrap {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.content .avatar-style-selector .select-style .cute .wrap span,
+.content .avatar-style-selector .select-style .classic .wrap span {
+  font-size: 85%;
+}
+.content .avatar-style-selector .select-style .cute .wrap img,
+.content .avatar-style-selector .select-style .classic .wrap img {
+  display: block;
+  margin: 0 auto 8px;
+}
+@media screen and (max-height: 480px) {
+  .content .avatar-style-selector .select-style .cute .wrap img,
+  .content .avatar-style-selector .select-style .classic .wrap img {
+    max-width: 110px;
+    max-height: 110px;
+  }
+}
+@media screen and (min-height: 481px) and (max-height: 899px) {
+  .content .avatar-style-selector .select-style .cute .wrap img,
+  .content .avatar-style-selector .select-style .classic .wrap img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+@media screen and (min-height: 900px) {
+  .content .avatar-style-selector .select-style .cute .wrap img,
+  .content .avatar-style-selector .select-style .classic .wrap img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+}
+.content .avatar-style-selector .select-style .corner-ribbon {
+  width: 200px;
+  background: #39c5ca;
+  position: absolute;
+  top: 5px;
+  right: -70px;
+  left: auto;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #f7f7f7;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.content .avatar-builder {
+  width: 100%;
+  height: 100%;
+}
+.content .avatar-builder .avatar-display {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  background: url("../images/dot-pattern.png") repeat #f0faff;
+  padding: 15px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.content .avatar-builder .avatar-display .avatar-container {
+  height: 100%;
+}
+.content .avatar-builder .avatar-display .avatar-container .retry-layer {
+  width: 100%;
+  height: 100%;
+}
+.content .avatar-builder .avatar-display .avatar-container .retry-layer .retry-container {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: table-cell;
+}
+.content .avatar-builder .avatar-display .avatar-container .retry-layer .retry-container .retry-image {
+  width: 100px;
+}
+.content .avatar-builder .avatar-display .avatar-container .retry-layer .retry-container .retry-text {
+  font-weight: bold;
+  color: #e74c3c;
+  font-size: 1.1em;
+  padding: 5px 50px 0;
+}
+.content .avatar-builder .avatar-display .avatar-container .avatar-layer {
+  height: 100%;
+}
+.content .avatar-builder .avatar-display .avatar-container .avatar-layer img {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.content .avatar-builder .avatar-display .avatar-container .avatar-layer img.loaded {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.content .avatar-builder .options-carousel {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+.content .avatar-builder .options-carousel .options-container {
+  height: 100%;
+  background: #f7f7f7;
+  float: left;
+  width: 100%;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+.content .avatar-builder .options-carousel .options-container:after {
+  clear: both;
+  content: " ";
+  display: block;
+}
+.content .avatar-builder .options-carousel .options-container:after {
+  padding-bottom: 48px;
+}
+@media screen and (min-width: 650px) and (max-width: 899px) {
+  .content .avatar-builder .options-carousel .options-container:after {
+    padding-bottom: 60px;
+  }
+}
+.content .avatar-builder .options-carousel .options-grid-wrapper-scrollable {
+  overflow: hidden;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.content .avatar-builder .options-carousel .options-grid-wrapper-scrollable:after {
+  clear: both;
+  content: " ";
+  display: block;
+}
+.content .avatar-builder .options-carousel .options-grid {
+  min-width: 360;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.content .avatar-builder .options-carousel .options-grid:after {
+  clear: both;
+  content: " ";
+  display: block;
+}
+.content .avatar-builder .options-carousel .option {
+  width: 33.33333%;
+  float: left;
+  display: block;
+/*
+                 * Options customizations
+                 * Class customizations for per-item tweaks
+                 *    -- CategoryName
+                 *          -- option_id
+                 *
+                 *  <div class="CategoryName option-image option_id" />
+                 */
+/*
+                 * List options
+                 */
+}
+.content .avatar-builder .options-carousel .option:last-of-type {
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 650px) and (max-width: 899px) {
+  .content .avatar-builder .options-carousel .option {
+    width: 25%;
+    float: left;
+  }
+  .content .avatar-builder .options-carousel .option:nth-child(4n) {
+    margin-right: 0;
+    float: right;
+  }
+}
+@media screen and (min-width: 900px) {
+  .content .avatar-builder .options-carousel .option {
+    width: 16.66667%;
+    float: left;
+    display: block;
+  }
+}
+.content .avatar-builder .options-carousel .option .option-color,
+.content .avatar-builder .options-carousel .option .option-image {
+  width: 100%;
+  padding-bottom: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.content .avatar-builder .options-carousel .option .option-image-wrapper {
+  padding: 0.75em;
+  background: #fff;
+}
+.content .avatar-builder .options-carousel .option .option-image-wrapper.HairStyle,
+.content .avatar-builder .options-carousel .option .option-image-wrapper.BeardType {
+  padding: 0.4em;
+}
+.content .avatar-builder .options-carousel .option.option-selected .option-color {
+  position: relative;
+}
+.content .avatar-builder .options-carousel .option.option-selected .option-color .selected-overlay {
+  position: absolute;
+  background: url("../images/selected.png") center center no-repeat;
+  top: 32%;
+  height: 35%;
+  width: 100%;
+  background-size: contain;
+}
+.content .avatar-builder .options-carousel .option.option-selected .option-image-wrapper {
+  position: relative;
+}
+.content .avatar-builder .options-carousel .option.option-selected .option-image-wrapper .selected-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.content .avatar-builder .options-carousel .option .option-image.hat_hairclip01,
+.content .avatar-builder .options-carousel .option .option-image.hat_hairclip02 {
+  background-size: auto;
+}
+.content .avatar-builder .options-carousel .option .option-image._blank {
+  padding-bottom: 98%;
+}
+.content .avatar-builder .options-carousel .option.option-list {
+  width: 100%;
+  background-color: #fff;
+}
+.content .avatar-builder .options-carousel .option.option-list .option-list-item {
+  padding: 18px;
+  font-size: 1.1em;
+  color: #666;
+  font-weight: normal;
+  text-align: left;
+}
+.content .avatar-builder .options-carousel .option.option-selected .option-list-item {
+  font-weight: 600;
+}
+.content .avatar-builder .options-carousel .finished {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.content .avatar-builder .options-carousel .finished .wrap {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-top: -20px;
+}
+.content .avatar-builder .options-carousel .finished .wrap p {
+  padding: 0 15px;
+  margin: 0;
+}
+.content .avatar-builder .options-carousel .finished .wrap p.small-msg {
+  font-size: 85%;
+  color: #8e9b96;
+  padding-top: 10px;
+}
+.content .avatar-builder .options-carousel .option-select {
+  position: relative;
+  height: 40px;
+}
+.content .avatar-builder .options-carousel .option-select:after {
+  clear: both;
+  content: " ";
+  display: block;
+}
+.content .avatar-builder .options-carousel .option-select .prev,
+.content .avatar-builder .options-carousel .option-select .next {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+}
+.content .avatar-builder .options-carousel .option-select .prev .arrow,
+.content .avatar-builder .options-carousel .option-select .next .arrow {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.content .avatar-builder .options-carousel .option-select .prev.disabled,
+.content .avatar-builder .options-carousel .option-select .next.disabled {
+  opacity: 0.25;
+}
+.content .avatar-builder .options-carousel .option-select .prev {
+  left: 0;
+  padding: 10px 16px 10px 10px;
+}
+.content .avatar-builder .options-carousel .option-select .next {
+  right: 0;
+  padding: 10px 10px 10px 16px;
+}
+.content .avatar-builder .options-carousel .option-select select {
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  padding: 0 50px;
+}
+.content .avatar-builder .options-carousel .option-select select:focus,
+.content .avatar-builder .options-carousel .option-select select:active {
+  outline: none;
+}
+.content .avatar-builder .options-carousel .option-select .option-select-overlay {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 600;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  height: 40px;
+  line-height: 40px;
+}
+.android .content .avatar-builder .options-carousel .options-container {
+  border: none;
+}
+.android-gingerbread,
+.android-gingerbread .content,
+.android-gingerbread body {
+  height: auto;
+  overflow: auto;
+  width: 100%;
+  display: block;
+}
+.android-gingerbread {
+  height: auto;
+}
+.android-gingerbread .content .avatar-builder {
+  height: auto;
+}
+.android-gingerbread .content .avatar-builder .avatar-display {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.android-gingerbread .content .avatar-builder .options-carousel {
+  height: auto;
+  overflow: auto;
+}
+.android-gingerbread .content .avatar-builder .options-carousel .option-select {
+  position: fixed;
+  width: 100%;
+  top: 40%;
+  z-index: 10;
+}
+.android-gingerbread .content .avatar-builder .options-carousel .options-container {
+  height: auto;
+  margin-top: 69.6%;
+}
+.android-gingerbread .content .avatar-builder .options-carousel .options-container:after {
+  padding-bottom: 0;
+}
+@media screen and (min-width: 650px) and (max-width: 899px) {
+  .android-gingerbread .content .avatar-builder .options-carousel .options-container:after {
+    padding-bottom: 0;
+  }
+}

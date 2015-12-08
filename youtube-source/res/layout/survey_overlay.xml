@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/small_font_size" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:id="@id/minimize_survey" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="false" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/normal_survey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:minWidth="@dimen/survey_min_width" android:minHeight="@dimen/survey_min_height">
+        <TextView android:textSize="@dimen/medium_font_size" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/survey_question" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="false" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/survey_answers_row_1" android:layout_width="fill_parent" android:layout_height="@dimen/survey_button_height" android:layout_marginBottom="@dimen/survey_button_margin" android:layout_weight="1.0">
+            <include android:id="@id/survey_answer_1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="@dimen/survey_button_margin" android:layout_weight="1.0" layout="@layout/survey_button" />
+            <include android:id="@id/survey_answer_2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/survey_button" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/survey_answers_row_2" android:layout_width="fill_parent" android:layout_height="@dimen/survey_button_height" android:layout_marginBottom="@dimen/survey_button_margin" android:layout_weight="1.0">
+            <include android:id="@id/survey_answer_3" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="@dimen/survey_button_margin" android:layout_weight="1.0" layout="@layout/survey_button" />
+            <include android:id="@id/survey_answer_4" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/survey_button" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/survey_answers_row_3" android:layout_width="fill_parent" android:layout_height="@dimen/survey_button_height" android:layout_marginBottom="@dimen/survey_button_margin" android:layout_weight="1.0">
+            <include android:id="@id/survey_answer_5" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="@dimen/survey_button_margin" android:layout_weight="1.0" layout="@layout/survey_button" />
+            <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/small_font_size" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:layout_gravity="right" android:id="@id/skip_button" android:background="@drawable/survey_skip_background" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/skip_survey" android:singleLine="true" android:drawableRight="@drawable/ad_skip" android:drawablePadding="0.0dip" />
+                <TextView android:textSize="@dimen/small_font_size" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:layout_gravity="right" android:id="@id/submit_button" android:background="@drawable/survey_submit_background" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/submit_survey" android:singleLine="true" />
+            </FrameLayout>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/extra_small_font_size" android:textColor="#ffffffff" android:id="@id/survey_attribution" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:text="@string/survey_attribution" android:singleLine="true" />
+    </LinearLayout>
+</FrameLayout>

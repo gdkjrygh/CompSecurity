@@ -1,0 +1,103 @@
+<!-- Header -->
+
+<nav class="top-bar fixed-header" id="header">
+	<a id="back_button" ng-if="customizing != 1" class="back" ng-click="back()"><i class="icon-chevron-left"></i></a>
+	<h1>Share</h1>
+</nav>
+
+<div class="tabs clearfix">
+	<a class="half everyone" ng-class="{active: selected === 'everyone'}" ng-click="sharePublic()"><p>Everyone</p></a>
+	<a class="half direct" ng-class="{active: selected === 'direct'}" ng-click="shareDirect()"><p>Direct</p></a>
+</div>
+
+<div class="row" ng-show="selected === 'everyone'">
+	<div class="large-10 large-centered columns">
+		<div class="sharing-options">
+			<a ng-click="share_comic('fb')" class="green btn-fixed" id="share">SHARE</i></a>
+
+			<div class="settings-list">
+				<fancy-checkbox disabled="true"><span class="disabled bitstrips name"><i class="icon-bitstrips icon-large"></i> Post to Bitstrips</span></fancy-checkbox>
+				<fancy-checkbox field-model="last_share.facebook"><span class="facebook name"><i class="icon-facebook icon-large"></i> Post to Facebook</span></fancy-checkbox>
+			</div>
+
+			<div class="spacer"></div>
+
+			<div class="settings-list">
+				<a ng-click="share_comic('native', $event, 'everyone')"><i class="icon-share"></i> Share to Other</a>
+			</div>
+
+            <p class="caption-contest" ng-if="isCaptionContest">
+                Post your comic to Bitstrips or Facebook to submit your entry to the caption contest.
+            </p>
+		</div>
+	</div>
+</div>
+
+
+<div ng-show="selected === 'direct'" class="row">
+	<div class="large-10 large-centered columns">
+		<div class="sharing-options">
+			<div class="sendto">
+				<p>To:</p>
+				<span ng-if="recipients.length === 0"></span>
+				<div ng-repeat="recipient in recipients" class="recipient" ng-class="{disabled: isCostar(recipient)}">
+					<span ng-bind="recipient | displayName"></span>
+					<i class="icon-close-circle icon-large" ng-click="removeRecipient(recipient)" ng-hide="isCostar(recipient)"></i>
+				</div>
+			</div>
+
+			<div class="direct-select">
+				<div class="search">
+					<form blur-on-submit>
+						<input bs-hide-footer="share-button" class="searchbox" on-focus-unfix-header type="text" placeholder="Search friends"
+						ng-model="search"/>
+					</form>
+					<div ng-show="!search.length"><i class="icon-search icon-large"></i></div>
+					<div ng-show="search.length" ng-click="search = ''"><i class="icon-close-circle icon-large"></i></div>
+				</div>
+
+				<h4 class="blue-title">Friends with Bitstrips ({{filteredFriends.length}})</h4>
+
+				<div class="settings-list" infinite-scroll="showMoreFriends()"
+					can-load="canShowMoreFriends">
+					<fancy-checkbox ng-repeat="friend in filteredFriends|limitTo:maxFriends" field-model="selectedFriends[friend.bs_id]" disabled="friend.isCostar || (maxRecipientsReached && !selectedFriends[friend.bs_id])" ng-class="{disabled: selectedFriends[friend.bs_id] && friend.isCostar}">
+						<div class="profile-contain">
+							<div class="cast" queued="{{friend.thumb}}" q-fail="profile-fail.png" q-retry="true"></div>
+						</div>
+						<span class="name">{{ friend.name }}</span>
+					</fancy-checkbox>
+				</div>
+
+				<div ng-if="friendsWithoutBitstrips">
+					<h4 class="blue-title">Friends without Bitstrips ({{filteredFriendsWithoutBitstrips.length}})
+						<span class="sub">These friends cannot receive direct comics yet</span>
+					</h4>
+					<div class="settings-list disabled-list">
+						<div ng-repeat="friend in filteredFriendsWithoutBitstrips">
+							<div class="list-item">
+								<div class="profile-contain">
+									<div class="cast" queued="{{friend.thumb}}" q-fail="profile-fail.png" q-retry="true"></div>
+								</div>
+								<span class="name">{{ friend.name }}&nbsp;</span>
+							</div>
+						</div>
+					</div>
+				</div> <!-- end friends without bitstrips -->
+
+			</div> <!-- end direct select -->
+		</div> <!-- end sharing options -->
+	</div>
+
+	<button ng-click="sendDirect($event)" class="green" id="share-button" ng-disabled="recipients.length < 1">
+	<ng-pluralize count="recipients.length"
+					when="{'0': 'CHOOSE A RECIPIENT',
+					'one': 'SEND TO 1 FRIEND',
+					'other': 'SEND TO {} FRIENDS'}">
+	</ng-pluralize>
+	</button>
+
+</div>
+
+
+
+<input type="hidden" id="flash_ref"/>

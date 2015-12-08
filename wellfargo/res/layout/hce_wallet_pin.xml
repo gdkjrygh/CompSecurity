@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:scrollbarStyle="insideOverlay" android:padding="5.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/rootView" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="13.0dip">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_alert" android:contentDescription="@string/wallet_alert" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hce_wallet_nfc_off_message" android:contentDescription="@string/hce_wallet_nfc_off_message" style="@style/wallet_sub_text" />
+                <Button android:textStyle="bold" android:textColor="@color/link" android:id="@id/hce_wallet_nfc_settings" android:background="@null" android:clickable="true" android:layout_width="wrap_content" android:layout_height="20.0dip" android:text="@string/hce_wallet_nfc_settings_link_title" android:contentDescription="@string/hce_wallet_nfc_settings_link_title" android:filterTouchesWhenObscured="true" style="@style/wallet_Link" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:layout_marginTop="13.0dip" android:layout_marginBottom="12.0dip" android:text="@string/hce_wallet_pin_title" android:contentDescription="@string/wallet_pin_title" style="@style/wallet_headline" />
+        <TextView android:id="@id/wallet_wac_pin_error_message" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:drawablePadding="10.0dip" android:contentDescription="@string/wallet_error" style="@style/wallet_error_text" />
+        <EditText android:textColorHint="@color/signon_field_hint_text" android:gravity="left" android:id="@id/walletPinInput" android:background="@drawable/wallet_pin_input" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_marginBottom="15.0dip" android:hint="@string/wac_hint_text" android:inputType="numberPassword" android:imeOptions="actionGo|flagNoExtractUi" android:imeActionLabel="@string/hce_wallet_pay_now_txt" style="@style/wallet_pin_input" />
+        <Button android:textStyle="bold" android:textColor="@color/link" android:id="@id/hce_wallet_forgot_pin" android:background="@null" android:paddingBottom="0.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="20.0dip" android:layout_margin="0.0dip" android:text="@string/forgot_access_code_link" android:contentDescription="@string/forgot_access_code_link" android:filterTouchesWhenObscured="true" style="@style/wallet_Link" />
+        <Button android:textColor="@color/wallet_button_text" android:id="@id/walletPayNowButton" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="15.0dip" android:text="@string/hce_wallet_pay_now_txt" android:contentDescription="@string/hce_wallet_pay_now_txt" style="@style/WFButtonPrimary" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:weightSum="1.0">
+            <Button android:id="@id/walletCancelPinAuth" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="5.0dip" android:text="@string/hce_wallet_cancel_txt" android:layout_weight="0.5" android:contentDescription="@string/hce_wallet_cancel_txt" style="@style/WFButtonSecondary" />
+            <Button android:id="@id/walletHome" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:text="@string/hce_wallet_wallet_home_txt" android:layout_weight="0.5" android:contentDescription="@string/hce_wallet_wallet_home_txt" style="@style/WFButtonSecondary" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

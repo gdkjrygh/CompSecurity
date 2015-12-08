@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nbcsports.liveextra.ui.player.AltCamOverlay android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/alt_cam_shim" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" />
+    <FrameLayout android:id="@id/cam_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/alt_cam_shim">
+        <TextView android:textColor="@color/nbc_gold_highlight" android:gravity="center" android:layout_gravity="center" android:id="@id/cams_available" android:background="#aa000000" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/camera_views_available" android:drawableLeft="@drawable/ic_alt_cam_adjusted" android:drawablePadding="8.0dip" style="@style/_TextAppearance.Primary" />
+    </FrameLayout>
+    <ScrollView android:id="@id/cam_view" android:background="#aa000000" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="@dimen/control_bar_margin_right" android:paddingBottom="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/alt_cam_shim" android:layout_centerHorizontal="true">
+        <GridLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/cams" android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnCount="@integer/alt_cam_columns" />
+    </ScrollView>
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:layout_alignParentRight="true">
+        <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/cam_indicator" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_alt_cam_available" />
+    </FrameLayout>
+</com.nbcsports.liveextra.ui.player.AltCamOverlay>

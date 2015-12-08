@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/bundle_summary_included_items_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="96.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/checkbox_container" android:layout_width="64.0dip" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <CheckBox android:id="@id/checkBox" android:focusable="false" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/button_checkbox_bundles" android:layout_centerHorizontal="true" />
+        <TextView android:textColor="@color/item_details_blue" android:gravity="center" android:id="@id/out_of_stock_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/shop_out_of_stock" android:layout_centerHorizontal="true" style="@style/Text.Caption" />
+    </RelativeLayout>
+    <View android:id="@id/vertical_divider" android:background="@color/divider_grey" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toRightOf="@id/checkbox_container" />
+    <RelativeLayout android:id="@id/image_container" android:padding="5.0dip" android:layout_width="64.0dip" android:layout_height="fill_parent" android:layout_marginRight="2.0dip" android:layout_toRightOf="@id/vertical_divider" android:layout_centerVertical="true">
+        <com.walmart.android.ui.ImageViewExtended android:id="@id/product_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/button_checkbox_bundles" />
+        <ImageView android:id="@id/options" android:paddingRight="5.0dip" android:paddingBottom="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bundle_option" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/text_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_toLeftOf="@id/price_container" android:layout_toRightOf="@id/image_container" android:layout_centerVertical="true">
+        <TextView android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Product title can be a very long line that should wrap to max 2, the rest should be cut." android:maxLines="2" style="@style/Text.SubHeader.Multiline" />
+        <com.walmartlabs.ui.StarsView android:id="@id/stars" android:paddingTop="5.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:starsEmptyIcon="@drawable/star_empty" custom:starsFullIcon="@drawable/star_full" />
+        <TextView android:id="@id/variants" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text.SubHeader.Multiline" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/price_container" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="20.0dip" android:layout_alignTop="@id/text_container" android:layout_alignParentRight="true">
+        <TextView android:id="@id/adds_text" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Adds" android:singleLine="true" style="@style/Text.SubHeader" />
+        <com.walmartlabs.ui.PriceView android:layout_gravity="right" android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:price="$0.00" style="@style/Price.Small" />
+    </LinearLayout>
+    <View android:id="@id/out_of_stock_overlay" android:background="@color/halftransparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/vertical_divider" />
+</RelativeLayout>

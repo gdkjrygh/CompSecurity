@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.splitfare.InviteToSplitView android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.controls.BackButtonToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/split_payment_fee" android:background="@color/grey_4" android:paddingTop="3.0dip" android:paddingBottom="3.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.6" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="14.0sp" android:textColor="@color/charcoal_2" android:gravity="center" android:layout_gravity="center" android:id="@id/empty_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="60.0dip" android:layout_marginRight="60.0dip" android:text="@string/invite_to_split_empty_state_text" android:drawableTop="@drawable/ic_split_pay_pink" android:drawablePadding="25.0dip" />
+        <ListView android:layout_gravity="top|center" android:id="@id/contacts_list" android:visibility="visible" android:choiceMode="none" android:fastScrollEnabled="true" style="@style/ContactsListViewStyle" />
+        <Button android:layout_gravity="bottom|center" android:id="@id/send_invites_button" android:text="@string/split_fare_send_invites_button" style="@style/FullBleedButton.SendInvitesButton" />
+    </FrameLayout>
+</me.lyft.android.ui.splitfare.InviteToSplitView>

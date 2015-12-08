@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:scrollbarThumbVertical="@android:color/transparent" android:layout_gravity="center_horizontal" android:background="@color/wallet_tab_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:id="@id/points_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/header_footer_internal_padding" android:text="JOIN YES2YOU REWARDS" />
+        <RelativeLayout android:id="@id/points_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/reward_not_enrolled_padding">
+            <ImageView android:id="@id/save_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip" android:src="@drawable/ic_save_green" android:contentDescription="Points" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/reward_not_enrolled_padding" android:layout_toRightOf="@id/save_image">
+                <TextView android:textSize="@dimen/loyalty_title_fontsize" android:textStyle="bold" android:textColor="@color/loyalty_green" android:id="@id/save_title" android:paddingBottom="@dimen/wallet_padding_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="S A V E" />
+                <TextView android:textSize="@dimen/loyalty_content_fontsize" android:textColor="@color/loyalty_default" android:id="@id/save_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loyalty_not_enrolled" android:layout_below="@id/save_title" android:lineSpacingMultiplier="1.3" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/reward_not_enrolled_padding" android:layout_marginBottom="@dimen/reward_not_enrolled_padding">
+            <ImageView android:id="@id/save_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip" android:src="@drawable/ic_share_pink" android:contentDescription="Points" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/reward_not_enrolled_padding" android:layout_toRightOf="@id/save_image">
+                <TextView android:textSize="@dimen/loyalty_title_fontsize" android:textStyle="bold" android:textColor="@color/loyalty_pink" android:id="@id/share_title" android:paddingBottom="@dimen/wallet_padding_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="S H A R E" />
+                <TextView android:textSize="@dimen/loyalty_content_fontsize" android:textColor="@color/loyalty_default" android:id="@id/share_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loyalty_not_enrolled_2" android:layout_below="@id/share_title" android:lineSpacingMultiplier="1.3" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/reward_not_enrolled_padding" android:layout_marginBottom="@dimen/reward_not_enrolled_padding">
+            <ImageView android:id="@id/save_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip" android:src="@drawable/ic_surprise_yellow" android:contentDescription="Points" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/reward_not_enrolled_padding" android:layout_toRightOf="@id/save_image">
+                <TextView android:textSize="@dimen/loyalty_title_fontsize" android:textStyle="bold" android:textColor="@color/loyalty_yellow" android:id="@id/surprise_title" android:paddingBottom="@dimen/wallet_padding_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="S U R P R I S E" />
+                <TextView android:textSize="@dimen/loyalty_content_fontsize" android:textColor="@color/loyalty_default" android:id="@id/surprise_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loyalty_not_enrolled_3" android:layout_below="@id/surprise_title" android:lineSpacingMultiplier="1.3" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <TextView android:textSize="14.0dip" android:gravity="center" android:layout_gravity="center" android:id="@id/rewards_signup_btn" android:background="@drawable/reward_card_border" android:paddingLeft="@dimen/reward_not_enrolled_padding" android:paddingRight="@dimen/reward_not_enrolled_padding" android:clickable="true" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="@string/sign_up" />
+    </LinearLayout>
+</ScrollView>

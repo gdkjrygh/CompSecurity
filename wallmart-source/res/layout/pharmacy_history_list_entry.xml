@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:id="@id/history_list_entry_section_header" android:paddingLeft="20.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:singleLine="true" style="@style/Rx.Text.Medium" />
+    <TextView android:textColor="@color/white" android:ellipsize="end" android:id="@id/history_list_entry_date_header" android:background="@drawable/title_bg" android:paddingLeft="10.0dip" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/pharmacy_transfer_your_pickup_location" android:singleLine="true" style="@style/Rx.Text.Medium" />
+    <TableLayout android:background="@drawable/card_bg_selector" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="0" android:shrinkColumns="0">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/history_list_entry_status" layout="@layout/pharmacy_status_flag" />
+        </FrameLayout>
+        <TableRow android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="15.0dip">
+            <TextView android:textColor="@color/pharmacy_text_orange_selector" android:ellipsize="end" android:id="@id/drug" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Abacavir Paracetamol Novalgina Apsroirna" android:singleLine="false" android:layout_weight="1.0" style="@style/Rx.Text.Big.Light" />
+            <TextView android:gravity="right" android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="$23.23" style="@style/Rx.Text.Medium" />
+        </TableRow>
+        <TableRow android:layout_marginLeft="15.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="15.0dip">
+            <TextView android:textSize="15.0sp" android:ellipsize="end" android:id="@id/rxnbr" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Rx #12345678" android:singleLine="true" android:layout_weight="1.0" style="@style/Rx.Text.Medium.Light" />
+            <TextView android:gravity="right" android:id="@id/history_fill_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Filled: Jul 20, 2012" style="@style/Rx.Text.Medium.Light" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

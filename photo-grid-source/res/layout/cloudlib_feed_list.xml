@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/feed_title_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.roidapp.cloudlib.sns.modifiedrefresh.SwipeRefreshLayout2 android:gravity="center" android:id="@id/feed_swipe" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/feed_title_layout">
+        <com.roidapp.cloudlib.sns.basepost.PinnedListView2 android:id="@id/feed_list" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:headerDividersEnabled="false" android:footerDividersEnabled="false" />
+    </com.roidapp.cloudlib.sns.modifiedrefresh.SwipeRefreshLayout2>
+    <ProgressBar android:id="@id/feed_progress" android:paddingTop="50.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <FrameLayout android:id="@id/feed_tip_layout" android:paddingTop="50.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</RelativeLayout>

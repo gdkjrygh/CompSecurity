@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/label_speech_input" android:key="key_voice_prefs">
+        <intent android:targetPackage="com.google.android.apps.translate" android:targetClass="com.google.android.apps.translate.pref.PrefsActivity">
+            <extra android:name="settings" android:value="2" />
+        </intent>
+    </Preference>
+    <Preference android:title="@string/label_data_usage">
+        <intent android:targetPackage="com.google.android.apps.translate" android:targetClass="com.google.android.apps.translate.pref.PrefsActivity">
+            <extra android:name="settings" android:value="4" />
+        </intent>
+    </Preference>
+    <Preference android:title="@string/label_manage_offline_pkg">
+        <intent android:targetPackage="com.google.android.apps.translate" android:targetClass="com.google.android.apps.translate.pref.OfflineActivity" />
+    </Preference>
+    <Preference android:title="@string/label_about_translate">
+        <intent android:targetPackage="com.google.android.apps.translate" android:targetClass="com.google.android.apps.translate.pref.PrefsActivity">
+            <extra android:name="settings" android:value="5" />
+        </intent>
+    </Preference>
+</PreferenceScreen>

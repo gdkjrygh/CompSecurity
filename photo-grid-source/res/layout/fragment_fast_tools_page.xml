@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/fast_tools_content" android:background="@color/bg_main_tabs" android:paddingBottom="@dimen/cloudlib_dp15" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp409"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:background="#ff384248" android:paddingBottom="@dimen/cloudlib_dp34" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/cloudlib_dp14" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/title_recent" android:paddingLeft="@dimen/cloudlib_dp16" android:paddingTop="@dimen/cloudlib_dp16" android:paddingBottom="@dimen/cloudlib_dp16" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp48" android:text="Recent" />
+        <com.roidapp.baselib.hlistview.HListView android:id="@id/recent_data" android:paddingLeft="@dimen/cloudlib_dp12" android:paddingRight="@dimen/cloudlib_dp12" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp95" android:listSelector="@android:color/transparent" android:layout_below="@id/title_recent" />
+        <TextView android:textSize="@dimen/cloudlib_dp18" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:id="@id/empty_view" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp95" android:text="No recent photo." android:layout_below="@id/title_recent" />
+    </RelativeLayout>
+    <HorizontalScrollView android:id="@id/fast_tools" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/cloudlib_dp38">
+        <LinearLayout android:orientation="horizontal" android:id="@id/tools_list" android:paddingLeft="@dimen/cloudlib_dp5" android:paddingRight="@dimen/cloudlib_dp5" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/tool_grid" android:layout_width="@dimen/cloudlib_dp81" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/bg_fast_tools_shape_selector" android:layout_width="@dimen/cloudlib_dp59" android:layout_height="@dimen/cloudlib_dp59" android:src="@drawable/pg_fast_tool_grid" android:scaleType="center" />
+                <TextView android:textSize="@dimen/cloudlib_dp14" android:textColor="@android:color/white" android:gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp16" android:layout_marginTop="@dimen/cloudlib_dp8" android:text="Grid" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/tool_photo_editor" android:layout_width="@dimen/cloudlib_dp81" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/bg_fast_tools_shape_selector" android:layout_width="@dimen/cloudlib_dp59" android:layout_height="@dimen/cloudlib_dp59" android:src="@drawable/pg_fast_tool_photo_editor" android:scaleType="center" />
+                <TextView android:textSize="@dimen/cloudlib_dp14" android:textColor="@android:color/white" android:gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp16" android:layout_marginTop="@dimen/cloudlib_dp8" android:text="PhotoEditor" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/tool_camera" android:layout_width="@dimen/cloudlib_dp81" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/bg_fast_tools_shape_selector" android:layout_width="@dimen/cloudlib_dp59" android:layout_height="@dimen/cloudlib_dp59" android:src="@drawable/pg_fast_tool_selfie_cam" android:scaleType="center" />
+                <TextView android:textSize="@dimen/cloudlib_dp14" android:textColor="@android:color/white" android:gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp16" android:layout_marginTop="@dimen/cloudlib_dp8" android:text="SelfCam" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/tool_video" android:layout_width="@dimen/cloudlib_dp81" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/bg_fast_tools_shape_selector" android:layout_width="@dimen/cloudlib_dp59" android:layout_height="@dimen/cloudlib_dp59" android:src="@drawable/pg_fast_tool_video_slide" android:scaleType="center" />
+                <TextView android:textSize="@dimen/cloudlib_dp14" android:textColor="@android:color/white" android:gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp16" android:layout_marginTop="@dimen/cloudlib_dp8" android:text="Video" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/tool_scrapbook" android:layout_width="@dimen/cloudlib_dp81" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/bg_fast_tools_shape_selector" android:layout_width="@dimen/cloudlib_dp59" android:layout_height="@dimen/cloudlib_dp59" android:src="@drawable/pg_fast_tool_scrapbook" android:scaleType="center" />
+                <TextView android:textSize="@dimen/cloudlib_dp14" android:textColor="@android:color/white" android:gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp16" android:layout_marginTop="@dimen/cloudlib_dp8" android:text="Scrapbook" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/tool_template" android:layout_width="@dimen/cloudlib_dp81" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/bg_fast_tools_shape_selector" android:layout_width="@dimen/cloudlib_dp59" android:layout_height="@dimen/cloudlib_dp59" android:src="@drawable/pg_fast_tool_template" android:scaleType="center" />
+                <TextView android:textSize="@dimen/cloudlib_dp14" android:textColor="@android:color/white" android:gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp16" android:layout_marginTop="@dimen/cloudlib_dp8" android:text="Template" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/tool_filmstrip" android:layout_width="@dimen/cloudlib_dp81" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/bg_fast_tools_shape_selector" android:layout_width="@dimen/cloudlib_dp59" android:layout_height="@dimen/cloudlib_dp59" android:src="@drawable/pg_fast_tool_filmstrip" android:scaleType="center" />
+                <TextView android:textSize="@dimen/cloudlib_dp14" android:textColor="@android:color/white" android:gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="@dimen/cloudlib_dp16" android:layout_marginTop="@dimen/cloudlib_dp8" android:text="Filmstrip" />
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/finish_self" android:background="@drawable/btn_fast_tools_shape_selector" android:visibility="invisible" android:layout_width="@dimen/cloudlib_dp60" android:layout_height="@dimen/cloudlib_dp60" android:layout_marginTop="@dimen/cloudlib_dp36" android:src="@drawable/pg_close_fast_tools" android:scaleType="center" />
+</LinearLayout>

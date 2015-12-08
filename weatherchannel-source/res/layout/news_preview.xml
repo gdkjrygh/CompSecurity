@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@null" android:clickable="true" android:layout_width="@dimen/news_preview_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/news_preview_image" android:layout_width="@dimen/news_preview_image_width" android:layout_height="@dimen/news_preview_image_height" android:scaleType="centerCrop" android:contentDescription="@string/content_description" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/news_preview_background" android:layout_width="@dimen/news_preview_image_width" android:layout_height="wrap_content">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/news_preview_title_textSize" android:textColor="@android:color/black" android:ellipsize="end" android:id="@id/news_preview_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/news_preview_text_margin" android:layout_marginTop="@dimen/news_preview_text_vertical_padding" android:layout_marginRight="@dimen/news_preview_text_margin" android:lines="2" weather:font="Roboto-Light.ttf" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/news_preview_publish_date_textSize" android:textColor="@color/news_preview_publish_date_color" android:id="@id/news_preview_publish_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/news_preview_text_margin" android:layout_marginTop="@dimen/news_article_publish_date" android:layout_marginRight="@dimen/news_preview_text_margin" android:layout_marginBottom="@dimen/news_preview_text_vertical_padding" weather:font="Roboto-Light.ttf" />
+    </LinearLayout>
+</LinearLayout>

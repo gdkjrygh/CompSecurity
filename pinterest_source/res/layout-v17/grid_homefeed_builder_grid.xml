@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/interests_cell_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin_extra_small">
+        <com.pinterest.ui.imageview.ProportionalImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View android:layout_gravity="bottom" android:id="@id/overlay" android:background="@drawable/gradient_semi_to_transparent" android:layout_width="fill_parent" android:layout_height="@dimen/dynamic_story_overlay_height" />
+        <LinearLayout android:gravity="center" android:layout_gravity="bottom|center" android:orientation="vertical" android:padding="@dimen/margin_quarter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin_quarter">
+            <com.pinterest.ui.text.PTextView android:textSize="@dimen/text_tab" android:textColor="@color/white" android:gravity="center" android:id="@id/title" android:maxLines="2" android:singleLine="false" android:shadowColor="@color/text_shadow" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:lineSpacingMultiplier="0.8" android:textAlignment="4" style="@style/text_base" />
+            <com.pinterest.ui.text.PTextView android:textSize="@dimen/text_grid_caption" android:textColor="@color/white" android:gravity="center" android:id="@id/subtitle" android:shadowColor="@color/text_shadow" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:textAlignment="4" style="@style/text_base" />
+        </LinearLayout>
+    </FrameLayout>
+    <Button android:textSize="@dimen/text_caption" android:textColor="@color/red" android:layout_gravity="center" android:id="@id/follow_bt" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/button_height_sm" android:text="@string/follow" style="@style/button_plain" />
+</LinearLayout>

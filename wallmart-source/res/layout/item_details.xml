@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.walmart.android.ui.SafeScrollView android:id="@id/content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/item_details_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:id="@id/item_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu." android:maxLines="4" style="@style/Text.Header.Multiline" />
+            <include layout="@layout/item_details_reviews_header" />
+            <include android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="82.0dip" layout="@layout/item_details_image_pager" />
+            <include android:id="@id/item_details_extra_info_container" layout="@layout/item_details_extra_info_section" />
+            <LinearLayout android:orientation="vertical" android:id="@id/item_details_variants_container" android:paddingLeft="20.0dip" android:paddingTop="20.0dip" android:paddingRight="20.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <include android:id="@id/item_details_online_section" layout="@layout/item_details_online_section" />
+            <include android:id="@id/item_details_add_to_registry_section" layout="@layout/item_details_add_to_registry_section" />
+            <include android:id="@id/item_details_sellers_section" layout="@layout/item_details_sellers_section" />
+            <include layout="@layout/item_details_store_section" />
+            <include layout="@layout/item_details_review_section" />
+            <include layout="@layout/item_details_description_section" />
+            <include layout="@layout/item_details_similar_items_section" />
+            <LinearLayout android:orientation="vertical" android:id="@id/item_details_modules_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.walmart.android.ui.SafeScrollView>
+    <include android:id="@id/loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/loading_page" />
+</FrameLayout>

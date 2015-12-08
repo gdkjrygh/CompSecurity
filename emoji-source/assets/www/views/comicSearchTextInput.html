@@ -1,0 +1,5 @@
+<form blur-on-submit>
+<input class="searchbox" bs-hide-footer on-focus-unfix-header type="text" placeholder="Search scenes" ng-model="search" ng-change="search_change()"/>
+</form>
+<div ng-show="search.length <= 2"><i class="icon-search icon-large"></i></div>
+<div ng-show="search.length >= 3" ng-click="clear_search()"><i class="icon-close-circle icon-large"></i></div>

@@ -1,0 +1,54 @@
+{
+   "version":"1.0",
+   "dsxDataUrl": "http://{DSX_SERVER}.weather.com",
+   "dsxSecureUrl": "https://{DSX_SERVER_SECURE}.weather.com",
+   "brandedBackgroundUrl": "http://{DSX_SERVER}.weather.com/util/image/a/%1$s?v=%2$s&w=%3$s&h=%4$s&creativeId=%5$s",
+   "eventLogs":{
+      "enabled":true,
+      "tagFilter":".*",
+      "geocodeRequests":{
+         "enabled":false
+      },
+      "followMeTracking":{
+         "enabled":true
+      },
+      "warningLogs":{
+         "enabled":false
+      },
+      "errorLogs":{
+         "enabled":false
+      },
+      "locationUpdate":{
+         "requestMethod":"POST",
+         "endPoint":"sqs.us-east-1.amazonaws.com",
+         "region":"us-east-1",
+         "path":"events_ANDROID_LocationUpdate",
+         "service":"sqs",
+         "user":"events_ANDROID_LocationUpdate_writer"
+      },
+      "awsWarnings":{
+        "requestMethod":"PUT",
+        "endPoint":"mobile.prod.twc.s3.amazonaws.com",
+        "region":"us-east-1",
+        "path":"android/eventlog/warnings/",
+        "service":"s3",
+        "user":"mobile"
+      },
+      "awsErrors":{
+        "requestMethod":"PUT",
+        "endPoint":"mobile.prod.twc.s3.amazonaws.com",
+        "region":"us-east-1",
+        "path":"android/eventlog/errors/",
+        "service":"s3",
+        "user":"mobile"
+      },
+      "awsTimeStamp":{
+        "requestMethod":"PUT",
+        "endPoint":"mobile.prod.twc.s3.amazonaws.com",
+        "region":"us-east-1",
+        "path":"android/eventlog/timestamp/",
+        "service":"s3",
+        "user":"mobile"
+      }
+   }
+}

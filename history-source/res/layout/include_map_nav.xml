@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/detail_nav_bar" android:padding="@dimen/padding_large" android:paddingTop="100.0dip" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/left_menu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+        <ImageButton android:id="@id/btn_map" android:background="@drawable/shape_nav_btn_left_rounded_pressed" android:clickable="false" android:src="@drawable/ic_btn_map_disabled" android:scaleType="fitCenter" android:text="@string/menu_text_map" style="@style/DetailMenuButton" />
+        <include layout="@layout/item_menu_button_seperator" />
+        <ImageButton android:gravity="center" android:id="@id/btn_list" android:background="@drawable/selector_nav_btn_right_rounded" android:src="@drawable/ic_btn_list_active" android:scaleType="fitCenter" style="@style/DetailMenuButton" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/middle_menu" android:paddingLeft="@dimen/padding_small" android:paddingRight="@dimen/padding_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <TextView android:textSize="10.0sp" android:gravity="center" android:id="@id/btn_menu" android:background="@drawable/selector_nav_btn_rounded" android:text="@string/menu_text_menu" style="@style/DetailSingleMenuButton" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@id/right_menu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+        <ImageButton android:gravity="center" android:id="@id/btn_show_search" android:background="@drawable/selector_nav_btn_left_rounded" android:src="@drawable/ic_btn_search_active" android:scaleType="fitCenter" style="@style/DetailMenuButton" />
+        <include layout="@layout/item_menu_button_seperator" />
+        <ImageButton android:gravity="center" android:id="@id/btn_suggest" android:background="@drawable/selector_nav_btn_right_rounded" android:src="@drawable/ic_btn_suggest_active" android:scaleType="fitCenter" style="@style/DetailMenuButton" />
+    </LinearLayout>
+</RelativeLayout>

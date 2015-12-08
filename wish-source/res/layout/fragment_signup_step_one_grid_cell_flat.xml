@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.contextlogic.wish.ui.components.image.BorderedImageView android:layout_gravity="center" android:id="@id/fragment_signup_step_one_grid_cell_image" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/fragment_signup_step_one_grid_cell_price_layout" android:background="@color/wish_feed_button" android:layout_width="fill_parent" android:layout_height="29.0dip">
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="11.0dip" android:textColor="@color/wish_crossed_out_price" android:layout_gravity="center" android:id="@id/fragment_signup_step_one_grid_cell_price_sub_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" />
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="@color/wish_dark_blue_text" android:layout_gravity="center" android:id="@id/fragment_signup_step_one_grid_cell_price_main_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <FrameLayout android:background="@drawable/feed_cell_button_bg_selector_flat" android:layout_width="fill_parent" android:layout_height="29.0dip">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:id="@id/fragment_signup_step_one_grid_cell_wish_button_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+                <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/wish_dark_blue_text" android:layout_gravity="center" android:id="@id/fragment_signup_step_one_grid_cell_wish_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_name" />
+            </LinearLayout>
+            <ProgressBar android:layout_gravity="center" android:id="@id/fragment_signup_step_one_grid_cell_wish_button_loading_spinner" android:layout_width="20.0dip" android:layout_height="20.0dip" android:indeterminateOnly="true" style="@style/WishAppThemeProgressIndicator" />
+            <ImageView android:layout_gravity="center" android:id="@id/fragment_signup_step_one_grid_cell_check_image" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_edit_feed_flat" />
+        </FrameLayout>
+    </LinearLayout>
+</merge>

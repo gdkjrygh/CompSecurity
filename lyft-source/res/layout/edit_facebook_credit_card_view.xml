@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.payment.EditFacebookCreditCardView android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.controls.BackButtonToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span48" android:src="@drawable/messenger_logo_medium" />
+    <TextView android:id="@id/card_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span8" android:layout_marginBottom="@dimen/span48" style="@style/PrimaryText" />
+    <TextView android:textSize="@dimen/normal_text" android:textStyle="italic" android:gravity="center" android:id="@id/is_default_text_view" android:layout_width="fill_parent" android:layout_height="@dimen/span56" android:text="@string/payment_default_card_title" style="@style/TertiaryText" />
+    <TextView android:textSize="@dimen/xsmall_text" android:textStyle="italic" android:textColor="@color/red_1" android:gravity="center" android:id="@id/error_text_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/payment_edit_facebook_credit_card_error_message" />
+    <Button android:id="@id/make_default_button" android:layout_width="fill_parent" android:layout_marginLeft="@dimen/span16" android:layout_marginRight="@dimen/span16" android:text="@string/payment_make_default_card_button" style="@style/TransparentGreyButton" />
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="vertical" android:id="@id/footer_view" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/xsmall_text" android:textStyle="italic" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span36" android:layout_marginRight="@dimen/span36" android:text="@string/payment_edit_facebook_credit_card_footer" style="@style/SecondaryText" />
+        <TextView android:textSize="@dimen/xsmall_text" android:textColor="@color/blue_1" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span8" android:layout_marginBottom="@dimen/span36" android:text="@string/payment_facebook_messenger" />
+    </LinearLayout>
+</me.lyft.android.ui.payment.EditFacebookCreditCardView>

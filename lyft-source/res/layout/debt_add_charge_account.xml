@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.payment.DebtChargeAccountView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageButton android:layout_gravity="top|left|center" android:id="@id/back_button" android:src="@drawable/actionbar_back_button" style="@style/RegistrationActionbarButton" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/big_text_3" android:gravity="center" android:id="@id/title_txt" android:layout_width="fill_parent" android:layout_marginTop="@dimen/span48" android:text="@string/payment_add_credit_card_title" style="@style/PrimaryText" />
+            <TextView android:textSize="@dimen/small_text" android:gravity="center" android:id="@id/subtitle_txt" android:layout_width="fill_parent" android:layout_marginTop="@dimen/span8" android:text="@string/registration_charge_account_note" style="@style/TertiaryText" />
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/span16" android:paddingRight="@dimen/span16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span16">
+                <me.lyft.android.ui.payment.cardinput.CreditCardInput android:id="@id/credit_card_input" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:textStyle="italic" android:layout_gravity="center" android:id="@id/edit_card_note" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span8" style="@style/TertiaryText" />
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <Button android:id="@id/save_button" android:background="@drawable/btn_charcoal" android:layout_width="fill_parent" android:layout_marginTop="8.0dip" android:text="@string/save_button" style="@style/PinkFullBleedButton" />
+        </LinearLayout>
+    </FrameLayout>
+</me.lyft.android.ui.payment.DebtChargeAccountView>

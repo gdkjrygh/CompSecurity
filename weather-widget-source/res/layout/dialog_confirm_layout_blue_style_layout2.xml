@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/content_layout" android:background="@drawable/common_dialog_blue_style_bg" android:paddingLeft="@dimen/dialog_content_padding_left" android:paddingRight="@dimen/dialog_content_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="22.0dip" android:textColor="#ff00a0e9" android:gravity="left|center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="66.0dip" android:text="@string/app_name" />
+    <View android:background="#ff00a0e9" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <ScrollView android:scrollbarThumbVertical="@drawable/common_scrollbar_thumb_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="16.0sp" android:textColor="#ff767676" android:gravity="left" android:id="@id/message" android:paddingTop="@dimen/dialog_content_padding_top" android:paddingBottom="@dimen/dialog_content_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/app_name" />
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:id="@id/checkbox_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="30.0dip">
+        <CheckBox android:layout_gravity="center_vertical" android:id="@id/checkbox" android:background="@drawable/common_checkbox_blue_style_selector" android:clickable="false" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginRight="12.0dip" android:checked="true" android:button="@null" />
+        <TextView android:textSize="14.0dip" android:textColor="#ffc5c5c5" android:ellipsize="marquee" android:gravity="left|center" android:layout_gravity="center_vertical" android:id="@id/checkbox_label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/no_show_again" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="15.0dip">
+        <TextView android:textSize="16.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@id/ok" android:background="@drawable/common_button_positive_blue_style_bg_selector" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_button_height" android:layout_marginBottom="15.0dip" android:text="@string/sure" />
+        <TextView android:textSize="16.0dip" android:textColor="#ff757575" android:gravity="center" android:id="@id/cancle" android:background="@drawable/common_button_negative_blue_style_bg_selector" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_button_height" android:text="@string/cancel" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="@drawable/share_weather_top_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/back" android:layout_width="@dimen/title_height" android:layout_height="fill_parent" android:src="@drawable/title_back_selector" android:scaleType="centerInside" android:contentDescription="@null" />
+        <TextView android:gravity="left|center" android:layout_gravity="left|center" android:id="@id/language_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/language_setting" style="@style/title_style" />
+    </LinearLayout>
+    <TextView android:gravity="left|center" android:paddingLeft="@dimen/setting_item_padding_left" android:layout_width="fill_parent" android:layout_height="@dimen/setting_classify_title_height" android:text="@string/help_translate_language" style="@style/setting_classify_title" />
+    <View android:background="@color/setting_classify_title_divider" android:layout_width="fill_parent" android:layout_height="@dimen/setting_classify_title_divider" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/help_translate_layout" android:background="@drawable/gw_weather_setting_selector" android:paddingLeft="@dimen/setting_item_padding_left" android:paddingRight="@dimen/setting_item_padding_right" android:layout_width="fill_parent" android:layout_height="@dimen/setting_row_height">
+        <TextView android:textSize="@dimen/setting_item_text" android:textColor="@color/setting_item_text" android:gravity="left|center" android:layout_gravity="left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help_translate_language" />
+        <TextView android:textSize="@dimen/setting_item_summary" android:textColor="@color/setting_item_summary" android:gravity="left|center" android:layout_gravity="left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help_translate_detail" />
+    </LinearLayout>
+    <View android:background="@color/setting_item_divider" android:layout_width="fill_parent" android:layout_height="@dimen/setting_item_divider" />
+    <TextView android:gravity="left|center" android:paddingLeft="@dimen/setting_item_padding_left" android:layout_width="fill_parent" android:layout_height="@dimen/setting_classify_title_height" android:text="@string/support_translate_language" style="@style/setting_classify_title" />
+    <View android:background="@color/setting_classify_title_divider" android:layout_width="fill_parent" android:layout_height="@dimen/setting_classify_title_divider" />
+    <ListView android:scrollbarThumbVertical="@drawable/forecast_article_drag_vertical" android:id="@id/language_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" android:cacheColorHint="#00000000" android:divider="@drawable/setting_line" android:dividerHeight="0.6dip" />
+</LinearLayout>

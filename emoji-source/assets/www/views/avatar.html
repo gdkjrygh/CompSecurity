@@ -1,0 +1,43 @@
+<nav class="top-bar fixed-header">
+    <h1 ng-bind="user.name"></h1>
+    <!-- <refresh-button promise-function="loadLatest"></refresh-button> -->
+    <i class="icon-cog right-btn" ng-click="go_settings()"></i>
+</nav>
+
+<div class="tab-switch" ng-show="tabSwitching"></div>
+
+<div class="small-12 user-info">
+    <div class="profile-contain">
+        <div class="cast" queued="{{user.thumb}}" q-fail="profile-fail.png" q-retry="true" ng-click="change_picture()"></div>
+    </div>
+    <div class="profile-menu clearfix">
+        <a class="profile-action" ng-click="edit_avatar()"><i class="icon-user-edit icon-large"></i> Edit Avatar</a>
+        <a class="profile-action" ng-click="native_share($event)"><i class="icon-user-pic icon-large"></i> Share Pic</a>
+    </div>
+</div>
+
+
+<loading-spinner visible="loading && !feedFailedToLoad"></loading-spinner>
+
+<!-- feed fails to load -->
+<div class="reload-feed" ng-show="feedFailedToLoad">
+	<a ng-click="getFeed()"><i class="icon-refresh"></i> Tap to retry</a>
+</div>
+
+<div class="row empty-feed" ng-if="feedIsEmpty">
+    <div class="large-10 large-centered columns">
+        <h6>You haven't made any comics yet!</h6>
+        <a class="edit btn" ng-click="putMeInTemplate()">Create Comic <i class="icon-edit icon-large"></i></a>
+    </div>
+</div>
+
+<div ng-if="!feedIsEmpty" class="ios-hide" bs-ios-wait infinite-scroll="add()" can-load="canLoad" threshold="500" id="feed_comics">
+    <div class="row update-feed" ng-repeat="feed_item in feed.feed_items | limitTo:feed.limit">
+        <div ng-if="feed_item.item_type == 1" class="large-10 large-centered columns">
+            <fast-feed-comic comic="feed_item.item_data"></fast-feed-comic>
+        </div>
+    </div>
+
+    <loading-spinner visible="fetchingMoreComics"></loading-spinner>
+</div>
+

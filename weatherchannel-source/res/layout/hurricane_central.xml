@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/active_storm_header_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/hurricane_central_activity_title_text_size" android:textColor="@color/hurricane_central_activity_title_color" android:layout_gravity="center_horizontal" android:id="@id/hurricane_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hurricane_central_activity_title_margin" android:layout_marginBottom="@dimen/hurricane_central_title_space" android:text="@string/no_data_available" weather:font="Roboto-Medium.ttf" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/hurricane_central_activity_subtitle_text_size" android:textColor="@color/hurricane_central_activity_subtitle_color" android:gravity="center_horizontal" android:id="@id/hurricane_position" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/module_inset" android:layout_marginRight="@dimen/module_inset" android:layout_marginBottom="@dimen/hurricane_central_line_indicator_margin" weather:font="Roboto-Regular.ttf" />
+        <com.weather.Weather.ui.LinePageIndicator android:id="@id/hurricane_central_feedpager_indicator" android:layout_width="fill_parent" android:layout_height="@dimen/line_indicator_height" />
+    </LinearLayout>
+    <com.weather.Weather.ui.UninterceptableViewPager android:id="@id/hurricane_central_feed_pager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</LinearLayout>

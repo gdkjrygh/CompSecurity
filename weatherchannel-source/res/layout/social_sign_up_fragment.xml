@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView style="@style/SettingsSection"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="right" style="@style/WrapperMaxWidth380dp">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/almost_done_text_size" android:textColor="@android:color/black" android:gravity="center_horizontal" android:id="@id/ups_signup_almost_done_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/almost_done_text" weather:font="Roboto-Regular.ttf" />
+        <com.weather.commons.ui.fonts.EditTextWithFont android:textSize="@dimen/ups_signup_text_size" android:textColor="@android:color/black" android:id="@id/ups_username" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ups_sign_up_view_margin" android:hint="@string/ups_profile_completion_username_hint" android:singleLine="true" android:imeOptions="actionDone" weather:font="Roboto-Regular.ttf" />
+        <com.weather.commons.ui.fonts.EditTextWithFont android:textSize="@dimen/ups_signup_text_size" android:textColor="@android:color/black" android:id="@id/ups_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ups_sign_up_view_margin" android:hint="@string/ups_profile_completion_email_hint" android:singleLine="true" android:inputType="textEmailAddress" android:imeOptions="actionDone" weather:font="Roboto-Regular.ttf" />
+        <include layout="@layout/terms_of_use_layout" />
+        <com.weather.commons.ui.ActionButtonWithFont android:textSize="@dimen/ups_button_text_size" android:textColor="@android:color/white" android:layout_gravity="right" android:id="@id/ups_sign_up_button" android:background="@drawable/ups_generic_button_selector" android:layout_width="@dimen/wx_profile_login_button_width" android:layout_height="@dimen/wx_profile_login_button_height" android:text="@string/sign_up_button_text" android:contentDescription="@string/done_button_description" android:textAllCaps="true" weather:font="Roboto-Medium.ttf" />
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dalton_padding" layout="@layout/dalton_logo" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/user_facebook" android:text="@string/facebook" android:drawableRight="@drawable/ic_facebook" style="@style/profile_about_cell_single" />
+        <View android:id="@id/divider" style="@style/list_cell_divider_vertical" />
+        <TextView android:id="@id/user_twitter" android:text="@string/twitter" android:drawableRight="@drawable/ic_twitter" style="@style/profile_about_cell_single" />
+    </LinearLayout>
+    <View android:id="@id/divider_web" style="@style/list_cell_divider" />
+    <LinearLayout android:id="@id/user_web" android:background="@null" android:layout_width="fill_parent" style="@style/profile_about_cell">
+        <com.pinterest.ui.text.PTextView android:textStyle="normal" android:id="@id/user_web_lbl" android:background="@drawable/touch_clear_bg" android:layout_width="0.0dip" android:layout_margin="0.0dip" android:drawableRight="@drawable/ic_web" android:layout_weight="1.0" style="@style/profile_about_cell_lbl" />
+        <include android:id="@id/user_web_button_container" layout="@layout/view_user_edit" />
+    </LinearLayout>
+    <com.pinterest.ui.text.PTextView android:id="@id/add_web" android:text="@string/add_site" style="@style/about_add_text" />
+    <View android:id="@id/divider_impressum" style="@style/list_cell_divider" />
+    <LinearLayout android:id="@id/user_impressum" android:background="@null" android:visibility="gone" android:layout_width="fill_parent" style="@style/profile_about_cell">
+        <com.pinterest.ui.text.PTextView android:textStyle="normal" android:id="@id/user_impressum_lbl" android:background="@drawable/touch_clear_bg" android:layout_width="0.0dip" android:layout_margin="0.0dip" android:text="@string/impressum" android:drawableRight="@drawable/ic_web" android:layout_weight="1.0" style="@style/profile_about_cell_lbl" />
+        <include android:id="@id/user_impressum_button_container" layout="@layout/view_user_edit" />
+    </LinearLayout>
+    <com.pinterest.ui.text.PTextView android:id="@id/add_impressum" android:text="@string/add_your_impressum" style="@style/about_add_text" />
+</merge>

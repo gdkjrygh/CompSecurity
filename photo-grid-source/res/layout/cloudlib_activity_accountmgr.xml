@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/title2_lo" android:background="@drawable/cloudlib_bg_titlebar_gray" android:layout_width="fill_parent" android:layout_height="@dimen/image_selector_title2Lo_height">
+        <ImageButton android:id="@id/home2Btn" android:background="@drawable/cloudlib_btn_cancel" android:layout_width="@dimen/image_selector_cancel2Btn_width" android:layout_height="fill_parent" android:src="@drawable/cloudlib_icon_home" android:scaleType="center" android:layout_alignParentRight="true" />
+        <TextView android:ellipsize="end" android:id="@id/folderName" android:background="@drawable/cloudlib_btn_back" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/title_text_marginRight" android:singleLine="true" android:drawableLeft="@drawable/icon_back" android:layout_alignParentLeft="true" style="@style/backBtn_text" />
+    </RelativeLayout>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/textview_privacypolicy" android:layout_below="@id/title2_lo" />
+    <TextView android:textSize="15.0sp" android:gravity="right" android:autoLink="all" android:id="@id/textview_privacypolicy" android:padding="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cloud_p_policy" android:layout_alignParentBottom="true" />
+</RelativeLayout>

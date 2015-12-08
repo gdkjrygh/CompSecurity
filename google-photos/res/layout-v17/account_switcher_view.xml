@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/cover_photo_container" android:layout_width="fill_parent" android:layout_height="@dimen/account_switcher_cover_height">
+        <ImageView android:id="@id/cover_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null" />
+        <View android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.4" />
+    </FrameLayout>
+    <ImageView android:id="@id/avatar" android:layout_width="@dimen/account_switcher_avatar_size" android:layout_height="@dimen/account_switcher_avatar_size" android:layout_margin="@dimen/account_switcher_avatar_margin" android:layout_centerVertical="true" android:contentDescription="@null" />
+    <RelativeLayout android:layout_gravity="bottom" android:id="@id/toggle_account_list_view" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="64.0dip">
+        <RelativeLayout android:id="@id/account_list_buttons" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_alignParentEnd="true">
+            <ImageView android:id="@id/show_account_list_image" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_arrow_drop_down_white_24" android:scaleType="center" android:contentDescription="@string/accountswitcher_accessibility_show_account_list_button" />
+            <ImageView android:id="@id/hide_account_list_image" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_arrow_drop_up_white_24" android:scaleType="center" android:layout_toLeftOf="@id/show_account_list_image" android:contentDescription="@string/accountswitcher_accessibility_hide_account_list_button" android:layout_toStartOf="@id/show_account_list_image" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_toLeftOf="@id/account_list_buttons" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="true" android:layout_toStartOf="@id/account_list_buttons">
+            <TextView android:ellipsize="end" android:id="@id/display_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" style="@style/quantum_text_body_1_white" />
+            <TextView android:ellipsize="end" android:id="@id/account_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:alpha="0.72" style="@style/quantum_text_body_1_white" />
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <jp.co.cyberagent.android.gpuimage.GPUImageView android:layout_gravity="center" android:id="@id/roidapp_imagelib_skin_imagePhoto" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/roidapp_imagelib_layout_basebar" />
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/retouchParamsSettingLayout" android:background="@drawable/roidapp_imagelib_bg_popup_baseline" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_above="@id/roidapp_imagelib_layout_basebar" />
+    <ImageView android:id="@id/Look_original_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/roidapp_imagelib_compare_bg" android:layout_alignTop="@id/roidapp_imagelib_skin_imagePhoto" android:layout_alignParentRight="true" />
+    <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@id/seek_tip" android:background="@drawable/roidapp_imagelib_bg_popup_baseline" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="50.0dip" android:layout_marginBottom="10.0dip" android:layout_above="@id/retouchParamsSettingLayout" android:layout_centerHorizontal="true" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/roidapp_imagelib_layout_basebar" android:background="@drawable/roidapp_imagelib_bg_popup" android:layout_width="fill_parent" android:layout_height="@dimen/grid_bottomBtn_height" android:layout_alignParentBottom="true">
+        <RelativeLayout android:id="@id/auto_retouch" android:background="@color/light_gray_color" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/banner_text_size" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/auto_retouch" android:drawableTop="@drawable/roidapp_imagelib_auto_retouch_icon" android:drawablePadding="@dimen/banner_text_paddingTop" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/green_hook_btn" android:paddingLeft="8.0dip" android:paddingTop="17.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/roidapp_imagelib_green_hook" />
+        </RelativeLayout>
+        <FrameLayout android:id="@id/smoother" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/banner_text_size" android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/smoother" android:drawableTop="@drawable/roidapp_imagelib_icon_smooth" android:drawablePadding="@dimen/banner_text_paddingTop" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/whiten" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/banner_text_size" android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/whiten" android:drawableTop="@drawable/roidapp_imagelib_icon_white" android:drawablePadding="@dimen/banner_text_paddingTop" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/blemish" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/banner_text_size" android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/blemish" android:drawableTop="@drawable/roidapp_imagelib_icon_blemishes" android:drawablePadding="@dimen/banner_text_paddingTop" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

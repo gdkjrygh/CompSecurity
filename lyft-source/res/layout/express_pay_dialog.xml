@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.driver.expresspay.ExpressPayDialogView style="@style/DialogContainerView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:paddingTop="@dimen/span16" style="@style/DialogView">
+        <ImageView android:layout_gravity="center" android:id="@id/dialog_icon_image_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/span8" android:src="@drawable/graphic_error" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/title_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/dialog_title_image_view" android:padding="@dimen/span8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/graphic_bolt_medium" />
+            <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="@color/primary_text" android:id="@id/dialog_title_text_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:id="@id/message_txt" android:layout_marginBottom="@dimen/span16" android:includeFontPadding="false" style="@style/DialogMessage" />
+        <TextView android:gravity="center" android:id="@id/text_url_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/span24" style="@style/SecondaryText" />
+        <View android:id="@id/list_divider" android:visibility="gone" style="@style/HorizontalDialogDivider" />
+        <me.lyft.android.ui.dialogs.DialogButton android:textSize="@dimen/big_text_1" android:textStyle="bold" android:textColor="@color/primary_text" android:id="@id/button_txt" android:visibility="gone" style="@style/DialogButton" />
+    </LinearLayout>
+    <ImageView android:id="@id/close_button" style="@style/CloseDialogButton" />
+</me.lyft.android.ui.driver.expresspay.ExpressPayDialogView>

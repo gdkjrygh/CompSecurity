@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/bg_grid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textStyle="bold" android:id="@id/to_tv" android:background="@android:color/white" android:paddingLeft="@dimen/margin" android:paddingTop="@dimen/conversation_searchbar_topbottom_padding" android:paddingBottom="@dimen/conversation_searchbar_topbottom_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/to" android:layout_alignTop="@id/people_facet_search_bar" android:layout_alignBottom="@id/people_facet_search_bar" />
+    <com.pinterest.activity.conversation.view.PeopleFacetSearchBar android:id="@id/people_facet_search_bar" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/to_tv" android:layout_below="@id/actionbar" android:overScrollMode="never">
+        <LinearLayout android:id="@id/search_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/list_cell_padding_topbottom_half" android:layout_marginBottom="@dimen/list_cell_padding_topbottom_half">
+            <com.pinterest.activity.conversation.view.PeopleSearchEditText android:id="@id/searchEt" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/list_cell_guided_text_image_gap" android:layout_marginTop="@dimen/list_cell_padding_topbottom" android:layout_marginBottom="@dimen/list_cell_padding_topbottom" android:minWidth="@dimen/conversation_create_searchbar_min_width" android:inputType="textFilter|textAutoComplete" android:imeOptions="actionSearch|flagNoExtractUi" android:textCursorDrawable="@null" />
+        </LinearLayout>
+    </com.pinterest.activity.conversation.view.PeopleFacetSearchBar>
+    <ListView android:id="@id/people_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/people_facet_search_bar" style="@style/listview" />
+    <View android:layout_below="@id/people_facet_search_bar" style="@style/dropshadow_down" />
+    <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+</RelativeLayout>

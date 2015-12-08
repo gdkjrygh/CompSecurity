@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/topbar" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/native_topbar_height" />
+    <LinearLayout android:gravity="left|center" android:orientation="horizontal" android:clickable="false" android:layout_width="wrap_content" android:layout_height="@dimen/native_topbar_height"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <FrameLayout android:id="@id/back_button" android:background="@xml/topbar_button_selector" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="16.0dip">
+            <ImageView android:layout_gravity="center_vertical" android:duplicateParentState="true" android:layout_width="@dimen/material_navbar_button_width" android:layout_height="@dimen/material_navbar_button_height" android:src="@drawable/back_grey" android:scaleType="center" />
+        </FrameLayout>
+        <kik.android.widget.RobotoTextView android:textSize="@dimen/topbar_text_size" android:textColor="@color/top_bar_text_color" android:ellipsize="end" android:gravity="left|center" android:id="@id/title_view" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/title_share_with" android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/conversations_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/topbar">
+        <ListView android:id="@id/conversation_list" android:background="@color/conversations_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@color/list_divider_color" android:dividerHeight="1.0px" android:layout_weight="1.0" android:isScrollContainer="true" />
+        <kik.android.widget.RobotoTextView android:gravity="center" android:id="@id/empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/you_have_no_conversations" />
+    </LinearLayout>
+    <FrameLayout android:background="@drawable/nav_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/topbar" />
+</merge>

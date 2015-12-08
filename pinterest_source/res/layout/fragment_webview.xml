@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg_grid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub android:id="@id/open_in_app_bar_viewstub" android:layout="@layout/layout_open_in_app_bar" android:inflatedId="@id/open_in_app_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <ViewStub android:id="@id/browser_pin_bar_viewstub" android:layout="@layout/layout_browser_pin_bar" android:inflatedId="@id/browser_pin_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/browser_pin_bar" android:layout_below="@id/actionbar" android:layout_alignWithParentIfMissing="true" />
+    <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+</RelativeLayout>

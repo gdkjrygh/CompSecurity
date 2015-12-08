@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tinder.views.CustomDrawerLayout android:id="@id/drawer_main" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.tinder.views.SkippableViewPager android:id="@id/viewPager_activity_main" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <fragment android:name="com.tinder.fragments.FragmentSideMenu" android:layout_gravity="left" android:id="@id/fragment_menu" android:layout_width="@dimen/menu_width" android:layout_height="fill_parent" />
+    </com.tinder.views.CustomDrawerLayout>
+    <fragment android:tag="passport" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.tinder.fragments.FragmentAnchoredPopup" />
+    <fragment android:tag="like_meter_low" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.tinder.fragments.FragmentAnchoredPopup" />
+    <fragment android:tag="superlike_feature" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.tinder.fragments.FragmentAnchoredPopup" />
+    <fragment android:tag="superlike_reminder" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.tinder.fragments.FragmentAnchoredPopup" />
+    <com.tinder.views.DrawingDebugView android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

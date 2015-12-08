@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.landing.SignupView android:orientation="vertical" android:id="@id/singup_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.controls.BackButtonToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/signup_promo_banner_view" />
+            <FrameLayout android:gravity="center" android:id="@id/facebook_login_button" android:layout_width="fill_parent" android:layout_marginLeft="@dimen/span16" android:layout_marginTop="@dimen/span16" android:layout_marginRight="@dimen/span16" android:layout_marginBottom="0.0dip" style="@style/FacebookButton">
+                <TextView android:textSize="@dimen/big_text_1" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="55.0dip" android:text="@string/landing_signup_facebook" android:drawableLeft="@drawable/ic_facebook_white" android:drawablePadding="@dimen/span16" />
+            </FrameLayout>
+            <TextView android:textSize="@dimen/small_text" android:textStyle="italic" android:textColor="@color/charcoal_1" android:gravity="center_horizontal" android:padding="@dimen/span16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/landing_signup_alternative_message" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span16" android:layout_marginRight="@dimen/span8" android:layout_weight="1.0">
+                    <me.lyft.android.controls.AdvancedEditText android:id="@id/first_name" android:nextFocusDown="@id/last_name" android:layout_marginBottom="0.0dip" android:hint="@string/landing_first_name_hint" android:maxLength="25" android:inputType="textPersonName|textCapSentences" style="@style/EditText" />
+                    <TextView android:id="@id/inline_first_name_error_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" style="@style/InlineErrorTextV2" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span8" android:layout_marginRight="@dimen/span16" android:layout_weight="1.0">
+                    <me.lyft.android.controls.AdvancedEditText android:id="@id/last_name" android:nextFocusDown="@id/email" android:hint="@string/landing_last_name_hint" android:maxLength="25" android:inputType="textPersonName|textCapSentences" style="@style/EditText" />
+                    <TextView android:id="@id/inline_last_name_error_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_marginBottom="0.0dip" style="@style/InlineErrorTextV2" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span16" android:layout_marginRight="@dimen/span16">
+                <me.lyft.android.controls.EmailAutoFillEditText android:id="@id/email" android:layout_marginTop="@dimen/span8" android:hint="@string/landing_email_hint" android:inputType="textEmailAddress" style="@style/EditText" />
+                <TextView android:id="@id/inline_email_error_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/InlineErrorTextV2" />
+            </LinearLayout>
+            <View android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginTop="@dimen/span16" android:layout_weight="1.0" />
+            <Button android:id="@id/next_button" android:text="@string/next_button" style="@style/PinkFullBleedButton" />
+        </LinearLayout>
+    </ScrollView>
+</me.lyft.android.ui.landing.SignupView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/charcoal_1" android:gravity="center_vertical" android:id="@id/pickup_address_field" android:background="@drawable/selectable_item_translucent_rounded" android:paddingLeft="@dimen/span40" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/span52" style="@style/PrimaryText" />
+    <TextView android:textColor="@color/charcoal_1" android:gravity="center_vertical" android:id="@id/destination_address_field" android:background="@drawable/selectable_item_translucent_rounded" android:paddingLeft="@dimen/span40" android:layout_width="fill_parent" android:layout_height="@dimen/span52" android:text="@string/passenger_request_ride_add_destination_label" android:layout_below="@id/divider" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" style="@style/PrimaryText" />
+    <me.lyft.android.ui.passenger.v2.PickupETATextView android:gravity="center_vertical" android:id="@id/pickup_address_eta" android:paddingRight="@dimen/span16" android:layout_width="wrap_content" android:layout_height="@dimen/span52" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:textAllCaps="true" android:layout_alignParentEnd="true" style="@style/SecondaryText" />
+    <View android:id="@id/divider" android:background="@drawable/horizontal_divider" android:layout_marginLeft="@dimen/span40" android:layout_below="@id/pickup_address_eta" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" style="@style/HorizontalDialogDivider" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/span16" android:layout_alignBottom="@id/destination_address_field" android:layout_alignParentTop="true">
+        <ImageView android:layout_width="@dimen/span8" android:layout_height="@dimen/span8" android:src="@drawable/ic_dot_fill_blue" />
+        <View android:layout_height="@dimen/span28" android:layout_marginTop="@dimen/span8" android:layout_marginBottom="@dimen/span8" style="@style/VerticalDialogButtonDivider" />
+        <ImageView android:layout_width="@dimen/span8" android:layout_height="@dimen/span8" android:src="@drawable/ic_dot_fill_pink" />
+    </LinearLayout>
+</RelativeLayout>

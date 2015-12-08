@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/popup_full_bright" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:padding="@dimen/photo_main_padding_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_select_path_text" style="@style/PhotoTextStyle.Large" />
+    <View android:background="@color/photo_card_divider_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/photo_path_button_height">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/for_all_button" android:background="@drawable/photo_dialog_button" android:padding="@dimen/photo_main_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/photo_select_bulk" android:scaleType="center" android:layout_weight="1.0" android:contentDescription="@string/photo_image_description" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_select_path_option_for_all" style="@style/PhotoTextStyle.Medium" />
+        </LinearLayout>
+        <View android:background="@color/photo_card_divider_grey" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/for_each_button" android:background="@drawable/photo_dialog_button" android:padding="@dimen/photo_main_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/photo_select_individually" android:scaleType="center" android:layout_weight="1.0" android:contentDescription="@string/photo_image_description" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_select_path_option_for_each" style="@style/PhotoTextStyle.Medium" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

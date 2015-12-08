@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/native_topbar_height" />
+    <kik.android.widget.TransparentListView android:id="@android:id/list" android:background="@color/preference_list_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/native_topbar_height" android:cacheColorHint="@color/white" android:layout_alignTop="@id/topbar" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/topbar" android:layout_width="fill_parent" android:layout_height="@dimen/native_topbar_height">
+        <include layout="@layout/kik_back_button_clear" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/nav_bar_shadow" android:background="@drawable/nav_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/topbar" />
+</RelativeLayout>

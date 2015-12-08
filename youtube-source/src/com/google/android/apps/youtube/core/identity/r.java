@@ -1,0 +1,32 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.apps.youtube.core.identity;
+
+import java.util.Iterator;
+import java.util.List;
+
+// Referenced classes of package com.google.android.apps.youtube.core.identity:
+//            o, v
+
+final class r
+    implements Runnable
+{
+
+    final Exception a;
+    final o b;
+
+    r(o o1, Exception exception)
+    {
+        b = o1;
+        a = exception;
+        super();
+    }
+
+    public final void run()
+    {
+        for (Iterator iterator = o.a(b).iterator(); iterator.hasNext(); ((v)iterator.next()).a(a)) { }
+        o.a(b).clear();
+    }
+}

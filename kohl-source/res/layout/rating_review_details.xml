@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="@color/global_light_background" android:paddingLeft="20.0dip" android:paddingTop="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip">
+                <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="12.0sp" android:textColor="@color/black" android:id="@id/id_ratingReviewDetails_nameOfProduct" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Name of Product" android:lineSpacingExtra="7.0dip" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldTextView android:textSize="12.0sp" android:textColor="@color/sale_price_color" android:id="@id/id_ratingReviewDetails_salePriceOfProduct" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="12.0sp" android:textColor="@color/regular_price_color" android:id="@id/id_ratingReviewDetails_originalPriceOfProduct" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@color/line_seperator_review" android:paddingTop="3.0dip" android:layout_marginBottom="20.0dip" style="@style/divider_horizontal_dark" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+                        <RatingBar android:id="@id/id_ratingReviewDetails_userRatingBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:isIndicator="true" style="@style/KohlsRatingBarLarge" />
+                        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="9.0dip" android:gravity="right|center" android:id="@id/id_ratingReviewDetails_date" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    </LinearLayout>
+                    <com.kohls.mcommerce.opal.framework.view.component.views.GothamBoldTextView android:textSize="12.0sp" android:gravity="left" android:id="@id/id_ratingReviewDetails_reviewTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+                    <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="12.0sp" android:gravity="left" android:id="@id/id_ratingReviewDetails_reviewUserInfo" android:paddingBottom="15.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:textSize="12.0sp" android:gravity="left" android:id="@id/id_ratingReviewDetails_reviewText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:lineSpacingExtra="10.0dip" />
+                    <LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@id/id_ratingReviewDetails_ratingProLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="35.0dip">
+                        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="PROS" />
+                        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:id="@id/id_ratingReviewDetails_ratingPro" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:lineSpacingExtra="5.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@id/id_ratingReviewDetails_ratingConLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="35.0dip">
+                        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="CONS" />
+                        <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:id="@id/id_ratingReviewDetails_ratingCon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:lineSpacingExtra="5.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="left" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip">
+                            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:id="@id/id_ratingReviewDetails_ratingCount" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/rating_review_quality" />
+                            <RatingBar android:id="@id/id_ratingReviewDetails_ratingBarQuality" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:isIndicator="true" style="@style/KohlsRatingBox" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip">
+                            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:id="@id/id_ratingReviewDetails_ratingCount" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/rating_review_style" />
+                            <RatingBar android:id="@id/id_ratingReviewDetails_ratingBarStyle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:isIndicator="true" style="@style/KohlsRatingBox" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip">
+                            <com.kohls.mcommerce.opal.framework.view.component.views.GothamBookTextView android:id="@id/id_ratingReviewDetails_ratingCount" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/rating_review_value" />
+                            <RatingBar android:id="@id/id_ratingReviewDetails_ratingBarValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:isIndicator="true" style="@style/KohlsRatingBox" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

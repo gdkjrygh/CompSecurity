@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.youtube.app.ui.WatchWhileLayout android:id="@id/watch_while_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" yt:playerViewId="@id/player_fragment" yt:metadataViewId="@id/video_info_fragment" yt:metadataPanelViewId="@id/watch_info_panel_fragment" yt:overlayViewId="@id/overlay" yt:tabletLayout="true" yt:miniPlayerWidth="@dimen/watch_while_mini_player_width" yt:miniPlayerPadding="@dimen/watch_while_mini_player_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <fragment android:name="com.google.android.apps.youtube.app.fragments.PlayerFragment" android:id="@id/player_fragment" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <fragment android:name="com.google.android.apps.youtube.app.fragments.VideoInfoFragment" android:id="@id/video_info_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <fragment android:name="com.google.android.apps.youtube.app.fragments.WatchInfoPanelFragment" android:id="@id/watch_info_panel_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/overlay" android:background="@color/black" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/guide_activity" />
+</com.google.android.apps.youtube.app.ui.WatchWhileLayout>

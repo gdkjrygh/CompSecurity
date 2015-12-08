@@ -1,0 +1,93 @@
+syntax = "proto3";
+
+package common;
+option java_package = "com.kik.ximodel";
+option java_multiple_files = true;
+option java_outer_classname = "CommonModelProto";
+
+import "protobuf_validation.proto";
+
+//*************************************************************************************************
+// General data structures
+//*************************************************************************************************
+
+message XiUuid {
+    sfixed64 msb = 1;
+    sfixed64 lsb = 2;
+}
+
+//*************************************************************************************************
+// General tigase stuff
+//*************************************************************************************************
+
+//message XiJid {
+//    string local_part = 1;
+//    string domain = 2;
+//    string resource = 2;
+//}
+
+//*************************************************************************************************
+// User identifiers
+//*************************************************************************************************
+
+// A bare JID for a kik user.
+// Domain component is omited and assumed to be talk.kik.com
+message XiBareUserJid {
+    string local_part = 1 [(kik.validation.field_validation) = {
+            mandatory: true
+            regex: "^[\\w\\.]{2,30}(_[A-Za-z0-9]{3})?$"
+        }];
+}
+
+message XiUserJid {
+    XiBareUserJid bare_jid = 1 [(kik.validation.field_validation) = { mandatory: true }];
+    string resource = 2;
+}
+
+message XiUsername {
+    string username = 1;
+}
+
+message XiUid {
+    uint64 uid = 1 [(kik.validation.field_validation) = {
+            min_val: 1
+            max_val: 1099511627775 // 2^40 - 1
+        }];
+}
+
+//*************************************************************************************************
+// Group identifiers
+//*************************************************************************************************
+
+message XiGid {
+    uint64 gid = 1 [(kik.validation.field_validation) = {
+            min_val: 1099511627776 // 2^40
+            max_val: 2199023255551 // 2^41 - 1
+        }];
+}
+
+// Domain component is omited and assumed to be groups.kik.com
+message XiGroupJid {
+    string local_part = 1 [(kik.validation.field_validation) = {
+            mandatory: true
+            regex: "^\\d{13}_g$"
+        }];
+}
+
+//*************************************************************************************************
+// Mixed identifiers
+//*************************************************************************************************
+
+message XiUidOrGid {
+    oneof uid_or_gid {
+        XiUid uid = 1;
+        XiGid gid = 2;
+    }
+}
+
+message XiBareUserOrGroupJid {
+    oneof user_or_group_jid {
+        XiBareUserJid user_jid = 1;
+        XiGroupJid group_jid = 2;
+    }
+}

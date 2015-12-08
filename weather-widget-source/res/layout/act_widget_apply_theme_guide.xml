@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_layout" android:layout_width="fill_parent" android:layout_height="@dimen/theme_store_title_height" layout="@layout/theme_store_title_layout" />
+    <ScrollView android:scrollbars="none" android:fadingEdgeLength="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/theme_store_title_height_except_shadow">
+        <FrameLayout android:id="@id/guide_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/guide_image" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/theme_store_widget_theme_apply_guide" android:scaleType="fitXY" android:contentDescription="@null" />
+            <LinearLayout android:orientation="vertical" android:id="@id/step1_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="80.0dip" android:layout_marginTop="42.0dip" android:layout_marginRight="20.0dip">
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/theme_store_widget_apply_theme_guide_step1" style="@style/widget_apply_theme_guide_step_text" />
+                <TextView android:textSize="12.0dip" android:textColor="#ff03a9f4" android:id="@id/how_to_add_widget_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/how_to_add_go_weather_ex_widget" />
+            </LinearLayout>
+            <TextView android:id="@id/step2_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:layout_marginTop="280.0dip" android:layout_marginRight="20.0dip" android:text="@string/theme_store_widget_apply_theme_guide_step2" style="@style/widget_apply_theme_guide_step_text" />
+            <TextView android:id="@id/step3_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:layout_marginTop="340.0dip" android:layout_marginRight="150.0dip" android:text="@string/theme_store_widget_apply_theme_guide_step3" style="@style/widget_apply_theme_guide_step_text" />
+            <TextView android:id="@id/step4_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:layout_marginTop="340.0dip" android:layout_marginRight="10.0dip" android:text="@string/theme_store_widget_apply_theme_guide_step4" style="@style/widget_apply_theme_guide_step_text" />
+        </FrameLayout>
+    </ScrollView>
+</FrameLayout>

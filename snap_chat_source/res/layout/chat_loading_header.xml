@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/loading_layout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:id="@id/spinner" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/tap_to_retry_layout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/text_size_tap_to_retry" android:textColor="@color/chat_sending_failed_color" android:id="@id/tap_to_retry_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chat_loading_header_tap_to_load" android:layout_centerInParent="true" android:textAllCaps="false" />
+        <ImageView android:id="@id/tap_to_load_icon" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:layout_marginRight="6.0dip" android:src="@drawable/chat_retry_medium" android:layout_toLeftOf="@id/tap_to_retry_msg" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

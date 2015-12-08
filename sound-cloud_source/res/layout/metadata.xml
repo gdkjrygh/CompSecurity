@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center_vertical" android:id="@id/artwork" android:background="@android:color/darker_gray" android:clickable="true" android:layout_width="@dimen/record_progress_icon_width" android:layout_height="@dimen/share_progress_icon_height" android:scaleType="centerCrop" android:layout_alignParentLeft="true" />
+    <Button android:textAppearance="?android:textAppearanceSmall" android:id="@id/artwork_button" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="@string/record_change_artwork" android:layout_toRightOf="@id/artwork" android:layout_alignTop="@id/artwork" android:textAllCaps="true" style="?android:attr/borderlessButtonStyle" />
+    <TextView android:id="@id/title_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/record_track_title" android:layout_below="@id/artwork" />
+    <EditText android:ellipsize="end" android:id="@id/title" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/title_header" android:inputType="textCapSentences" android:fadeScrollbars="true" />
+    <TextView android:id="@id/txt_record_options" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/record_privacy_header" android:layout_below="@id/title" />
+    <RadioGroup android:orientation="horizontal" android:id="@id/rdo_privacy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_below="@id/txt_record_options">
+        <RadioButton android:id="@id/rdo_public" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="@string/sc_upload_public" android:layout_weight="1.0" />
+        <RadioButton android:id="@id/rdo_private" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="@string/sc_upload_private" android:layout_weight="1.0" />
+    </RadioGroup>
+</RelativeLayout>

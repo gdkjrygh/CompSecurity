@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView style="@style/SettingsSection"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="right" style="@style/WrapperMaxWidth380dp">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/tv_start_experience" style="@style/DefaultFontStyle.PersonalWeatherTitle" />
+        <com.weather.commons.ui.fonts.EditTextWithFont android:id="@id/ups_email" android:hint="@string/upper_email" android:inputType="textEmailAddress" style="@style/DefaultFontStyle.Input" />
+        <com.weather.commons.ui.fonts.EditTextWithFont android:id="@id/etPassword" android:hint="@string/password_length_hint" android:inputType="textPassword" style="@style/DefaultFontStyle.Input" />
+        <include layout="@layout/terms_of_use_layout" />
+        <com.weather.commons.ui.ActionButtonWithFont android:textSize="@dimen/ups_button_text_size" android:textColor="@android:color/white" android:id="@id/ups_sign_up_button" android:background="@drawable/ups_generic_button_selector" android:layout_width="@dimen/wx_profile_login_button_width" android:layout_height="@dimen/wx_profile_login_button_height" android:text="@string/ups_title_signup" android:contentDescription="@string/twclogin_button_description" android:textAllCaps="true" weather:font="Roboto-Medium.ttf" />
+        <LinearLayout style="@style/Separator">
+            <View android:layout_gravity="center_vertical" android:background="@color/ups_signup_default_color" android:layout_width="0.0dip" android:layout_height="@dimen/ups_signup_line_height" android:layout_weight="6.0" />
+            <TextView android:textColor="@color/ups_signup_or_color" android:gravity="center_horizontal" android:id="@id/widget_or" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/widget_setup_or" android:layout_weight="2.0" />
+            <View android:layout_gravity="center_vertical" android:background="@color/ups_signup_default_color" android:layout_width="0.0dip" android:layout_height="@dimen/ups_signup_line_height" android:layout_weight="6.0" />
+        </LinearLayout>
+        <LinearLayout style="@style/Wrapper.Horizontal">
+            <com.weather.commons.ui.LoginButton android:id="@id/btFacebookSignUp" android:contentDescription="@string/signup_with_fb" weather:text="@string/signup_with_fb" weather:icon_normal="@drawable/ups_facebook_normal_icon" weather:icon_pressed="@drawable/ups_facebook_pressed_icon" weather:background_normal="@drawable/ups_facebook_button_background_normal" weather:background_pressed="@drawable/ups_facebook_button_background_pressed" style="@style/AlternativeSignUpButton" />
+            <Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <com.weather.commons.ui.LoginButton android:id="@id/btGooglePlusSignUp" android:contentDescription="@string/signup_with_gp" weather:text="@string/signup_with_gp" weather:icon_normal="@drawable/ups_google_normal_icon" weather:icon_pressed="@drawable/ups_google_pressed_icon" weather:background_normal="@drawable/ups_google_button_background_normal" weather:background_pressed="@drawable/ups_google_button_background_pressed" style="@style/AlternativeSignUpButton" />
+            <com.weather.commons.ui.LoginButton android:id="@id/btAmazonSignUp" android:visibility="gone" android:contentDescription="@string/signup_with_amazon_text" weather:text="@string/signup_with_amazon_text" weather:icon_normal="@drawable/ups_amazon_normal_icon" weather:icon_pressed="@drawable/ups_amazon_pressed_icon" weather:background_normal="@drawable/ups_amazon_button_background_normal" weather:background_pressed="@drawable/ups_amazon_button_background_pressed" style="@style/AlternativeSignUpButton" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/already_have_account" style="@style/AlreadyHaveAnAccountWrapper">
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/wx_sign_up_profile_links_text_size" android:textColor="@color/ups_already_have_account_text_color" android:id="@id/tv_existing_account" android:paddingRight="@dimen/wx_profile_no_account_text_padding_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/account_already_exists" weather:font="Roboto-Medium.ttf" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/wx_profile_links_text_size" android:textColor="@color/ups_add_address_text_color" android:id="@id/log_in_link" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ups_sign_up_view_margin" android:text="@string/ups_title_login" weather:font="Roboto-Medium.ttf" />
+        </LinearLayout>
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dalton_padding" layout="@layout/dalton_logo" />
+    </LinearLayout>
+</ScrollView>

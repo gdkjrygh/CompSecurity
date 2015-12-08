@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="TWS" android:key="tws_root">
+        <EditTextPreference android:title="Buildcl" android:key="key_tws_build_cl" android:summary="TWS buildcl" android:defaultValue="" />
+        <CheckBoxPreference android:title="Disable translation cache" android:key="key_disable_translation_cache" android:summary="Disable translation cache so that translation result is always requested to server" android:defaultValue="@string/default_disable_translation_cache" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Speech" android:key="speech_root">
+        <CheckBoxPreference android:title="Translate speech pipeline (1-language)" android:key="key_use_translate_s2s_single" android:summary="Use Translate speech pipeline for single language recognition" android:defaultValue="@string/default_use_translate_s2s_single" />
+        <CheckBoxPreference android:title="Translate speech pipeline (2-languages)" android:key="key_use_translate_s2s_multi" android:summary="Use Translate speech pipeline for multi language recognition" android:defaultValue="@string/default_use_translate_s2s_multi" />
+        <CheckBoxPreference android:title="Disable TTS audio file cache" android:key="key_disable_tts_cache" android:summary="Disable TTS audio file cache so that it is always downloaded from server" android:defaultValue="@string/default_disable_tts_cache" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Handwriting" android:key="handwriting_root">
+        <CheckBoxPreference android:title="Use Google Handwriting Input offline" android:key="key_allow_offline_handwriting" android:summary="Use Google Handwriting Input for offline handwriting" android:defaultValue="@string/default_allow_offline_handwriting" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,18 @@
+<div class="tabs clearfix">
+	<a class="third activity" ng-class="{active: selected === 'activity'}" ng-click="home_feed()"><p>Home</p></a>
+	<a class="third direct" ng-class="{active: selected === 'direct'}"
+		ng-click="goToInbox()">
+		<span class="align-to">
+			<p>Direct
+			 <span ng-show="unreadDirectMessages" class="noti-badge">{{unreadDirectMessages}}</span>
+            </p>
+		</span>
+	</a>
+	<a class="third notifications" ng-class="{active: selected === 'notifications'}" ng-click="notification_feed()">
+		<span class="align-to">
+			<p>Activity
+                <span ng-show="unreadActivityCount" class="noti-badge">{{unreadActivityCount}}</span>
+            </p>
+		</span>
+	</a>
+</div>

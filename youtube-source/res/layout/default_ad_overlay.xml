@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/ad_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="@dimen/controls_overlay_top_right_buttons_width" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/thumbnail" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="40.0dip" android:layout_marginTop="4.0dip" android:adjustViewBounds="true" />
+        <TextView android:textSize="20.0sp" android:textColor="#ffcccccc" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:maxLines="1" android:shadowColor="#7f000000" android:shadowDx="2.0" android:shadowDy="2.0" android:shadowRadius="1.0" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/ad_overlay_ad_text_size" android:textColor="@color/white" android:ellipsize="end" android:gravity="bottom" android:id="@id/ad_text" android:padding="@dimen/ad_overlay_ad_text_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ad_progress_bar_height" android:text="@string/ad_normal" android:maxLines="1" android:includeFontPadding="false" android:shadowColor="#7f000000" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="0.01" android:layout_alignParentBottom="true" />
+    <FrameLayout android:id="@id/skip_ad_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:minHeight="48.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="#88000000" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textColor="#ffffffff" android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:id="@id/skip_ad_text" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/skip_ad_in" android:singleLine="true" android:includeFontPadding="false" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/skip_ad_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/ad_skip" android:contentDescription="@string/skip_ad" />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

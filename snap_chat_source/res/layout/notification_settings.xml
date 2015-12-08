@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_panel" style="@style/TopPanel">
+        <RelativeLayout android:id="@id/settings_back_button_area" android:background="@drawable/action_bar_touch_selector" android:paddingRight="@dimen/default_gap" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/up_arrow" android:background="@drawable/aa_action_bar_up_arrow_green" android:layout_width="9.0dip" android:layout_height="26.0dip" android:layout_marginLeft="@dimen/default_gap" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/text_size_default" android:textStyle="normal" android:textColor="@color/green" android:id="@id/settings_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap" android:text="@string/notification_settings_title" android:layout_toRightOf="@id/up_arrow" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:background="@color/divider_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <ScrollView android:id="@id/notification_settings_scrollview" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/default_gap_2x" android:layout_marginTop="4.0dip" android:layout_marginRight="@dimen/default_gap_2x">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/notification_settings_general_view" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:text="@string/settings_receive_notifications" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <CheckBox android:id="@id/notification_settings_general_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/notification_settings_wake_screen_view" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:id="@id/notification_settings_wake_screen_textview" android:text="@string/notification_settings_wake_screen" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <CheckBox android:id="@id/notification_settings_wake_screen_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/notification_settings_led_view" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:id="@id/notification_settings_led_textview" android:text="@string/settings_notification_led" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <CheckBox android:id="@id/notification_settings_led_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/notification_settings_vibration_view" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:id="@id/notification_settings_vibration_textview" android:text="@string/settings_notification_vibration" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <CheckBox android:id="@id/notification_settings_vibrate_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+            <include layout="@layout/list_separator" />
+            <RelativeLayout android:id="@id/notification_settings_sound_view" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+                <TextView android:id="@id/notification_settings_sound_textview" android:text="@string/settings_notification_sound" android:layout_centerVertical="true" style="@style/settings_item_name" />
+                <CheckBox android:id="@id/notification_settings_sound_checkbox" style="@style/settings_checkbox" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

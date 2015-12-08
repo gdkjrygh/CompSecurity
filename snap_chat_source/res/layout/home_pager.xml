@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center_horizontal" android:id="@id/root_layout" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/home_layout_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.snapchat.android.util.SnapchatViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <ViewStub android:id="@id/in_app_prompt_flipper_stub" android:layout="@layout/in_app_prompt_flipper" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_with_status_bar_height" />
+    <com.snapchat.android.ui.snapview.MultiLeveledSnapView android:id="@id/double_xl_snap_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/in_app_notification_stub" android:layout="@layout/notification_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/custom_volume_stub" android:layout="@layout/custom_volume" android:layout_width="fill_parent" android:layout_height="@dimen/custom_volume_height" />
+    <com.snapchat.android.ui.diagnostics.DiagnosticsView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap" />
+</FrameLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/cart_item_edit_modal" android:background="@drawable/fragment_cart_footer_cell_bg" android:padding="10.0dip" android:visibility="gone" android:layout_width="240.0dip" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.contextlogic.wish.ui.components.image.BorderedImageView android:layout_gravity="top|center" android:id="@id/cart_item_edit_modal_product_image" android:layout_width="100.0dip" android:layout_height="100.0dip" />
+            <FrameLayout android:layout_gravity="top|right|center" android:id="@id/cart_item_edit_modal_close_button" android:layout_width="35.0dip" android:layout_height="35.0dip">
+                <ImageView android:layout_gravity="top|right|center" android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@drawable/exit_x" android:adjustViewBounds="false" />
+            </FrameLayout>
+        </FrameLayout>
+        <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="@color/wish_main_text" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/cart_quantity" android:singleLine="false" />
+        <Spinner android:id="@id/cart_item_edit_modal_quantity_spinner" android:background="@drawable/cart_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+        <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="16.0dip" android:textColor="@color/wish_white" android:gravity="center" android:id="@id/cart_item_edit_modal_done_button" android:background="@drawable/orange_button_bg_selector_flat" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="20.0dip" android:text="@string/done" app:useAllCaps="true" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </LinearLayout>
+</merge>

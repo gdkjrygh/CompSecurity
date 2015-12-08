@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="66.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/route_progress_layout" android:layout_width="24.0dip" android:layout_height="fill_parent" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layout_alignParentLeft="true">
+        <ImageView android:id="@id/stop_image_view" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" android:layout_centerHorizontal="true" />
+        <View android:id="@id/dashed_path_view" android:background="@drawable/dashed_line" android:visibility="invisible" android:layout_width="@dimen/span52" android:layout_height="@dimen/span52" android:layout_marginLeft="-15.0dip" android:layout_marginRight="-15.0dip" android:layout_below="@id/stop_image_view" android:layout_centerHorizontal="true" android:layerType="software" />
+        <View android:id="@id/path_view" android:background="@color/charcoal_2" android:visibility="invisible" android:layout_width="2.0dip" android:layout_height="@dimen/span52" android:layout_below="@id/stop_image_view" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/route_point_details_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="20.0dip" android:layout_marginBottom="8.0dip" android:layout_toRightOf="@id/route_progress_layout">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-3.0dip" android:layout_toLeftOf="@id/navigate_to_passenger_button" android:layout_alignParentLeft="true">
+            <TextView android:textSize="@dimen/big_text_1" android:ellipsize="end" android:id="@id/title_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+            <TextView android:textSize="@dimen/small_text" android:textStyle="normal" android:textColor="@color/grey_4" android:ellipsize="end" android:id="@id/subtitle_address_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        </LinearLayout>
+        <Button android:id="@id/navigate_to_passenger_button" android:background="@drawable/ride_overview_navigation_button" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="8.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

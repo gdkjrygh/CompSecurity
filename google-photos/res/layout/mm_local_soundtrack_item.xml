@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/mm_local_soundtrack_item_height">
+        <FrameLayout android:background="@color/quantum_grey800" android:layout_width="@dimen/mm_local_soundtrack_album_art_size" android:layout_height="@dimen/mm_local_soundtrack_album_art_size" android:layout_margin="@dimen/mm_local_soundtrack_album_art_margin">
+            <ImageView android:layout_gravity="center" android:id="@id/mm_local_soundtrack_album_art_placeholder" android:layout_width="@dimen/mm_local_soundtrack_no_album_icon_size" android:layout_height="@dimen/mm_local_soundtrack_no_album_icon_size" android:src="@drawable/quantum_ic_audiotrack_white_24" android:scaleType="center" android:alpha="0.46" />
+            <ImageView android:id="@id/mm_local_soundtrack_album_art" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/mm_local_soundtrack_item_height">
+            <TextView android:id="@id/mm_local_song_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/quantum_text_subhead_white" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/mm_local_soundtrack_item_album_text_height" android:layout_marginBottom="@dimen/mm_local_soundtrack_item_text_margin">
+                <TextView android:textColor="@color/quantum_grey500" android:id="@id/mm_local_artist" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/quantum_text_body_1_white" />
+                <TextView android:textColor="@color/quantum_grey500" android:id="@id/mm_local_separator" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/quantum_text_body_1_white" />
+                <TextView android:textColor="@color/quantum_grey500" android:id="@id/mm_local_album" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/quantum_text_body_1_white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/mm_black" android:layout_width="fill_parent" android:layout_height="@dimen/mm_divider_thickness" />
+    <TextView android:id="@id/mm_waveform_panel" android:background="@color/quantum_grey900" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/mm_waveform_panel_height" />
+</LinearLayout>

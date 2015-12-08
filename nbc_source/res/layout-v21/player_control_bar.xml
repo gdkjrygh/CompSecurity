@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nbcsports.liveextra.ui.player.PlayerControlBar android:id="@id/control_bar" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/play_bar_layout" android:background="@color/controls_background" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="@dimen/control_bar_margin_right" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:animateLayoutChanges="true">
+        <include layout="@layout/player_ad_bar" />
+        <LinearLayout android:gravity="center" android:id="@id/play_bar" android:visibility="gone" android:addStatesFromChildren="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:splitMotionEvents="true">
+            <ImageButton android:id="@id/skip_prev" android:background="?selectableItemBackgroundBorderless" android:layout_marginRight="8.0dip" android:src="@drawable/ic_skip_previous" style="@android:style/MediaButton" />
+            <TextView android:textStyle="bold" android:textColor="?android:textColorPrimary" android:id="@id/current" android:background="?selectableItemBackgroundBorderless" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:minWidth="56.0dip" android:textAllCaps="true" />
+            <RelativeLayout android:id="@id/seek_bar_layout" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <SeekBar android:id="@id/seek_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxHeight="1000.0dip" android:max="1000" android:layout_centerInParent="true" android:progressTint="@color/nbc_gold" android:progressBackgroundTint="@color/color_white" android:backgroundTint="@color/color_white" android:thumbTint="@color/nbc_gold_highlight" />
+                <com.nbcsports.liveextra.ui.player.SeekBarOverlay android:id="@id/seek_bar_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <TextView android:textColor="?android:textColorPrimary" android:id="@id/duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:textAllCaps="true" />
+            <TextView android:id="@id/cc_button" android:visibility="gone" style="@style/PlayerControlBarButton.ClosedCaptions" />
+            <TextView android:id="@id/aa_button" android:visibility="gone" android:text="AA" style="@style/PlayerControlBarButton.AlternateAudio" />
+            <ImageButton android:layout_gravity="right|center" android:id="@id/play_button" android:background="?selectableItemBackgroundBorderless" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:scaleType="centerInside" style="@android:style/MediaButton" />
+        </LinearLayout>
+    </FrameLayout>
+</com.nbcsports.liveextra.ui.player.PlayerControlBar>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/first_launch_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background_lines" android:background="@drawable/background_lines_20_tiled" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <com.accuweather.android.views.TutorialProgressStrip android:id="@id/tutorialProgressIndicator" android:layout_width="fill_parent" android:layout_height="5.0dip" />
+    <ScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/button_layout" android:layout_below="@id/tutorialProgressIndicator">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/minuteCastTutorialImage1" android:layout_width="fill_parent" android:layout_height="400.0dip" android:src="@drawable/minute_cast_tutorial_page1" android:adjustViewBounds="true" />
+            <TextView android:textSize="@dimen/whatsNewHeaderTextSize" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/newMinuteCastTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/NewMinuteCast" />
+            <TextView android:textSize="@dimen/whatsNewDetailsTextSize" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/minuteCastDescriptionTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="25.0dip" android:text="@string/MinuteCastWhatsNewForecast" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:background="@drawable/abs__ab_transparent_dark_holo" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <Button android:textColor="@android:color/white" android:id="@id/nextButton" android:background="@drawable/first_launch_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/Next" android:layout_weight="1.0" />
+        </LinearLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/branding_bar" android:layout_width="fill_parent" android:layout_height="32.0dip" layout="@layout/branding_bar_light" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

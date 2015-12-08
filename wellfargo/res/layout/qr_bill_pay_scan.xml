@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="8.0dip">
+        <ImageView android:id="@id/qr_code_ques_icon" android:background="@drawable/andr_icn_question" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/help" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff5174b8" android:id="@id/qr_code_maintext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/scanning_tips" android:hint="@string/scanning_tips" android:ems="10" android:layout_toRightOf="@id/qr_code_ques_icon" android:layout_centerVertical="true" />
+        <Button android:textColor="@color/wallet_button_text" android:id="@id/qr_scan_cancel_button" android:background="@drawable/button_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/cancel" android:filterTouchesWhenObscured="true" style="@style/WFButton" />
+    </RelativeLayout>
+    <FrameLayout android:orientation="vertical" android:id="@id/qr_scan_layout" android:background="#ffc0c0c0" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="8.0dip">
+        <TextView android:textSize="13.0sp" android:textColor="#ff000000" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/qr_billpay_long_text" android:hint="@string/qr_billpay_long_text" android:ems="10" />
+    </LinearLayout>
+</LinearLayout>

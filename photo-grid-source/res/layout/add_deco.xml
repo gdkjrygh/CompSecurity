@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/title_lo" android:background="@drawable/roidapp_imagelib_bg_titlebar_gray" android:layout_width="fill_parent" android:layout_height="@dimen/image_merger_title_height" android:layout_alignParentTop="true">
+        <RelativeLayout android:id="@id/backBtn" android:background="@drawable/btn_back" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/btn_delete" android:layout_alignParentLeft="true">
+            <ImageView android:id="@id/btn_back" android:background="@drawable/btn_back" android:layout_width="@dimen/image_selector_cancel2Btn_width" android:layout_height="fill_parent" android:src="@drawable/icon_back" android:scaleType="center" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/editer_textSize" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/txt_limit" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_margin="2.0dip" android:singleLine="true" android:layout_toRightOf="@id/btn_back" />
+        </RelativeLayout>
+        <ImageButton android:id="@id/btn_delete" android:background="@drawable/filemanager_btn_ok" android:visibility="gone" android:layout_width="@dimen/image_merger_title_btnWidth" android:layout_height="fill_parent" android:src="@drawable/icon_delete" android:scaleType="center" android:layout_toLeftOf="@id/btn_confirm" />
+        <ImageButton android:gravity="center" android:id="@id/btn_confirm" android:background="@drawable/cloudlib_btn_confirm_s" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/icon_checkwhite" android:minWidth="@dimen/share_send_width" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <com.roidapp.baselib.view.FixedDrawerLayout android:id="@id/drawer_layout" android:background="@drawable/bg_merge_repeat" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title_lo">
+        <FrameLayout android:id="@id/drawer_layout_framelayout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:layout_gravity="left" android:orientation="vertical" android:id="@id/slingdingmenu_layout" android:background="@color/white" android:layout_width="@dimen/slidingmenu_width" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/slidingmenu_first" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/slidingmenu_list_height">
+                <TextView android:textSize="@dimen/slidingmenu_textsize_more" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:background="@drawable/cloudlib_btn_confirm_s" android:paddingLeft="@dimen/slidingmenu_padding_text" android:paddingRight="@dimen/slidingmenu_padding_text" android:layout_width="@dimen/slidingmenu_width_more" android:layout_height="@dimen/slidingmenu_height_more" android:text="" android:singleLine="true" android:drawableLeft="@drawable/icon_morestickers" />
+            </LinearLayout>
+            <View android:background="@color/slidingmenu_list_divider_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <ListView android:id="@id/left_drawer" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@android:color/transparent" android:dividerHeight="0.0dip" android:choiceMode="singleChoice" />
+        </LinearLayout>
+    </com.roidapp.baselib.view.FixedDrawerLayout>
+    <include android:id="@id/progressbar" layout="@layout/progressbar" />
+    <ImageView android:id="@id/btn_sidebar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_sidebar" android:layout_below="@id/progressbar" android:layout_centerVertical="true" />
+</RelativeLayout>

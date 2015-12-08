@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@drawable/list_default_selector_with_divider" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="20.0sp" android:textColor="@color/black" android:ellipsize="end" android:id="@id/review_descr_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Title" android:maxLines="1" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.walmartlabs.ui.StarsView android:layout_gravity="center_vertical" android:id="@id/review_product_stars" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" custom:starsEmptyIcon="@drawable/star_empty" custom:starsFullIcon="@drawable/star_full" />
+        <TextView android:textColor="@color/item_details_review_text_light_grey" android:id="@id/review_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="07/22/1013" />
+    </LinearLayout>
+    <TextView android:textSize="15.0sp" android:textColor="@color/black" android:ellipsize="end" android:id="@id/review_descr_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="This is the best product ever" android:maxLines="2" />
+    <TextView android:textColor="@color/item_details_review_text_light_grey" android:gravity="bottom" android:id="@id/review_helpful" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="180 of 230 people found this review helpful" android:drawableLeft="@drawable/icn_helpful" android:drawablePadding="7.0dip" style="@style/Text.Bodycopy" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/dialpad_number" />
+    <RelativeLayout android:id="@id/dialpad_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dialpad_side_margin" android:layout_marginTop="@dimen/dialpad_vertical_margin" android:layout_marginRight="@dimen/dialpad_side_margin" android:layout_marginBottom="@dimen/dialpad_vertical_margin" android:layout_below="@id/dialpad_top_layout">
+        <com.skype.android.app.dialer.DialpadView android:id="@id/dialpad_view" android:layout_width="fill_parent" android:layout_height="@dimen/dialpad_height" />
+        <ImageButton android:id="@id/dialpad_call_button" android:background="@drawable/button_positive_selector" android:layout_width="@dimen/dialpad_call_button_width" android:layout_height="@dimen/dialpad_call_button_height" android:layout_marginTop="@dimen/dialpad_vertical_margin" android:src="@drawable/call_btn_answer" android:layout_below="@id/dialpad_view" android:layout_centerHorizontal="true" android:contentDescription="@string/action_call" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/recent_calls" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dialpad_side_margin" android:layout_marginRight="@dimen/dialpad_side_margin" android:layout_marginBottom="@dimen/dialpad_vertical_margin" android:layout_below="@id/dialpad_group">
+        <TextView android:textSize="@dimen/font_medium" android:textColor="@color/skype_light_grey" android:id="@id/recent_calls_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_recent_calls" />
+        <fragment android:name="com.skype.android.app.dialer.CallHistoryFragment" android:id="@id/call_history" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/recent_calls_header" />
+    </RelativeLayout>
+</RelativeLayout>

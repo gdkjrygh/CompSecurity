@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.onboarding.BecomeLyftDriverView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.ui.onboarding.BecomeDriverHelpToolbarView android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:id="@id/become_driver_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <ImageView android:id="@id/lyft_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:src="@drawable/logo_big" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="@dimen/big_text_1" android:textStyle="bold" android:id="@id/become_driver_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/become_lyft_driver_label" android:layout_below="@id/lyft_logo" android:layout_centerHorizontal="true" style="@style/PrimaryText" />
+                <me.lyft.android.controls.AdvancedTextView android:id="@id/region_txt" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:hint="@string/become_lyft_driver_city_hint" android:layout_below="@id/become_driver_subtitle" android:layout_centerHorizontal="true" style="@style/Dropdown" />
+                <me.lyft.android.controls.AdvancedEditText android:id="@id/driver_referral_code_txt" android:layout_marginLeft="16.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="16.0dip" android:hint="@string/driver_referral_code_hint" android:maxLength="16" android:layout_below="@id/region_txt" android:layout_centerHorizontal="true" android:inputType="textCapCharacters" style="@style/EditText" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/normal_text" android:textColor="@color/pink_1" android:gravity="center" android:id="@id/error_details_txt" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="10.0dip" android:textAlignment="4" />
+            <Button android:layout_gravity="bottom" android:id="@id/go_to_application_button" android:background="@drawable/btn_charcoal" android:layout_width="fill_parent" android:text="@string/become_lyft_driver_go_to_application_button" style="@style/FullBleedButton" />
+        </LinearLayout>
+    </ScrollView>
+    <include android:id="@id/retry_view" layout="@layout/retry" />
+</me.lyft.android.ui.onboarding.BecomeLyftDriverView>

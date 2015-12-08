@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/playlist_list_item" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View style="@style/Divider.Section" />
+    <View style="@style/Divider.Background" />
+    <View style="@style/Divider.Section" />
+    <include layout="@layout/stream_item_header" />
+    <RelativeLayout style="@style/Stream.Card">
+        <com.soundcloud.android.view.ParallaxImageView android:id="@id/image" style="@style/Stream.Image.Playlist" />
+        <com.soundcloud.android.view.JaggedTextView android:id="@id/creator" android:layout_marginTop="16.0dip" android:layout_marginRight="20.0dip" android:layout_alignTop="@id/image" style="@style/Stream.ArtistText" />
+        <com.soundcloud.android.view.JaggedTextView android:id="@id/title" android:layout_below="@id/creator" style="@style/Stream.TitleText" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/circle_playlist_tracks_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginBottom="16.0dip" android:layout_alignBottom="@id/image">
+            <TextView android:id="@id/track_count" style="@style/Stream.PlaylistTracks.Count" />
+            <TextView android:id="@id/tracks_text" style="@style/Stream.PlaylistTracks.Text" />
+        </LinearLayout>
+    </RelativeLayout>
+    <include layout="@layout/stream_item_footer" />
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout android:gravity="bottom" android:id="@id/sliding_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:panelHeight="@dimen/player_footer" app:dragView="@id/player_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/toolbar" />
+        <android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar_id">
+            <android.support.design.widget.AppBarLayout android:id="@id/appbar" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="com.soundcloud.android.view.FlingBehavior">
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll" app:layout_collapseMode="none" layout="@layout/profile_header" />
+                <android.support.design.widget.TabLayout android:id="@id/tab_indicator" android:background="@color/white" android:paddingLeft="@dimen/profile_tabs_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foregroundGravity="bottom" app:layout_collapseMode="pin" style="@style/TabsTheme.Scrollable" />
+            </android.support.design.widget.AppBarLayout>
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <View style="@style/ToolbarShadow" />
+            </FrameLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </RelativeLayout>
+    <fragment android:name="com.soundcloud.android.playback.ui.PlayerFragment" android:id="@id/player_root" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/image_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.pinterest.ui.ObservableImageView android:id="@id/right_oiv" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" android:layout_centerHorizontal="true" />
+            <com.pinterest.ui.ObservableImageView android:id="@id/left_oiv" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" android:layout_centerHorizontal="true" />
+            <com.pinterest.ui.ObservableImageView android:id="@id/center_oiv" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/text_container" android:paddingLeft="30.0dip" android:paddingRight="30.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="20.0dip" android:layout_weight="1.0">
+            <TextView android:gravity="center_horizontal" android:id="@id/message_tv" android:layout_marginBottom="16.0dip" style="@style/list_empty_message" />
+            <Button android:gravity="center" android:id="@id/action_bt" android:visibility="gone" android:layout_marginBottom="16.0dip" style="@style/button_red" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

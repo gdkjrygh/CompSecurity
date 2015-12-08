@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/content_layout" android:background="@drawable/dialog_background" android:paddingLeft="@dimen/dialog_content_padding_left" android:paddingRight="@dimen/dialog_content_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_title_margin_top" android:layout_marginBottom="@dimen/dialog_title_margin_bottom" android:text="@string/app_name" style="@style/dialog_title_style" />
+    <include layout="@layout/common_classify_divider_layout" />
+    <ScrollView android:scrollbarThumbVertical="@drawable/common_scrollbar_thumb_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:gravity="left" android:id="@id/message" android:paddingTop="@dimen/dialog_content_padding_top" android:paddingBottom="@dimen/dialog_content_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/app_name" style="@style/dialog_content_style" />
+    </ScrollView>
+    <FrameLayout android:paddingLeft="17.5dip" android:paddingRight="17.5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="15.0dip">
+        <TextView android:gravity="center" android:id="@id/button" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_button_height" android:text="@string/sure" style="@style/dialog_button_style" />
+    </FrameLayout>
+</LinearLayout>

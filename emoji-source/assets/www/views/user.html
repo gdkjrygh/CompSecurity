@@ -1,0 +1,36 @@
+<nav class="top-bar fixed-header">
+	<a id="back_button" class="back" ng-click="back()"><i class="icon-chevron-left"></i></a>
+	<h1 ng-bind="user.name"></h1>
+	<refresh-button promise-function="loadLatest"></refresh-button>
+</nav>
+
+<div class="small-12 user-info">
+	<div class="profile-contain">
+		<div class="cast" queued="{{user.thumb}}" q-fail="profile-fail.png" q-retry="true"></div>
+	</div>
+	<div class="profile-menu full">
+		<a class="profile-action" ng-click="put_user_in_template()"><i class="icon-edit icon-large"></i> Make Comic </a>
+	</div>
+</div>
+
+<loading-spinner visible="loading"></loading-spinner>
+
+<div ng-if="!feedIsEmpty" class="ios-hide" bs-ios-wait infinite-scroll="add()" can-load="canLoad" threshold="500" id="feed_comics">
+
+	<div class="row update-feed" ng-repeat="feed_item in feed.feed_items | limitTo:feed.limit">
+		<div ng-if="feed_item.item_type == 1" class="large-10 large-centered columns">
+			<fast-feed-comic comic="feed_item.item_data"></fast-feed-comic>
+		</div>
+	</div>
+
+	<loading-spinner visible="fetchingMoreComics"></loading-spinner>
+
+</div>
+
+
+<div class="row empty-feed" ng-if="feedIsEmpty">
+	<div class="large-10 large-centered columns">
+		<h6>{{user.first_name}} doesn't have any comics!</h6>
+		<a class="edit btn" ng-click="put_user_in_template()">Create Comic <i class="icon-edit icon-large"></i></a>
+	</div>
+</div>

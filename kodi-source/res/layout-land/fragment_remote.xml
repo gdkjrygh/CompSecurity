@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/info_panel" android:paddingTop="@dimen/remote_page_indicator_height" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/remote_content_hmargin" android:layout_marginRight="@dimen/remote_content_hmargin" android:layout_weight="1.0">
+        <TextView android:id="@id/info_title" style="@style/TextAppearance.Info.Title" />
+        <TextView android:id="@id/info_message" android:layout_below="@id/info_title" style="@style/TextAppearance.Info.Details" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/media_panel" android:paddingTop="@dimen/remote_page_indicator_height" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/remote_content_hmargin" android:layout_marginRight="@dimen/remote_content_hmargin" android:layout_weight="1.0">
+        <ImageView android:id="@id/art" android:layout_width="@dimen/remote_poster_width" android:layout_height="@dimen/remote_poster_height" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:contentDescription="@string/poster" />
+        <TextView android:id="@id/title" android:background="?contentBackgroundColor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/art" android:layout_alignLeft="@id/art" style="@style/TextAppearance.Media.Remote.Title" />
+        <TextView android:id="@id/details" android:background="?contentBackgroundColor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title" android:layout_alignLeft="@id/title" style="@style/TextAppearance.Media.Remote.Details" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/media_button_bar" android:background="?contentBackgroundColor" android:layout_width="fill_parent" android:layout_height="@dimen/default_icon_size" android:layout_below="@id/details" android:layout_alignLeft="@id/details" style="@style/ButtonBar">
+            <ImageButton android:id="@id/rewind" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="?iconRewind" android:layout_weight="1.0" android:contentDescription="@string/rewind" style="@style/Widget.Button.Borderless" />
+            <ImageButton android:id="@id/stop" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="?iconStop" android:layout_weight="1.0" android:contentDescription="@string/stop" style="@style/Widget.Button.Borderless" />
+            <ImageButton android:id="@id/play" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="?iconPlay" android:layout_weight="1.0" android:contentDescription="@string/play" style="@style/Widget.Button.Borderless" />
+            <ImageButton android:id="@id/fast_forward" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="?iconFastForward" android:layout_weight="1.0" android:contentDescription="@string/fast_forward" style="@style/Widget.Button.Borderless" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="bottom" android:id="@id/remote" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/remote_content_hmargin" android:layout_marginBottom="@dimen/default_padding">
+        <ImageView android:id="@id/context" android:layout_width="@dimen/remote_icon_size" android:layout_height="@dimen/remote_icon_size" android:src="?iconContext" android:layout_alignParentLeft="true" android:contentDescription="@string/codec_info" />
+        <ImageView android:id="@id/up" android:layout_width="@dimen/remote_icon_size" android:layout_height="@dimen/remote_icon_size" android:src="?iconUp" android:layout_toRightOf="@id/context" android:layout_alignTop="@id/context" android:contentDescription="@string/up" />
+        <ImageView android:id="@id/info" android:layout_width="@dimen/remote_icon_size" android:layout_height="@dimen/remote_icon_size" android:src="?iconInfo" android:layout_toRightOf="@id/up" android:layout_alignTop="@id/context" android:contentDescription="@string/info" />
+        <ImageView android:id="@id/left" android:layout_width="@dimen/remote_icon_size" android:layout_height="@dimen/remote_icon_size" android:src="?iconLeft" android:layout_below="@id/context" android:contentDescription="@string/left" />
+        <ImageView android:id="@id/select" android:layout_width="@dimen/remote_icon_size" android:layout_height="@dimen/remote_icon_size" android:src="?iconSelect" android:layout_toRightOf="@id/left" android:layout_alignTop="@id/left" android:contentDescription="@string/select" />
+        <ImageView android:id="@id/right" android:layout_width="@dimen/remote_icon_size" android:layout_height="@dimen/remote_icon_size" android:src="?iconRight" android:layout_toRightOf="@id/select" android:layout_alignTop="@id/left" android:contentDescription="@string/right" />
+        <ImageView android:id="@id/back" android:layout_width="@dimen/remote_icon_size" android:layout_height="@dimen/remote_icon_size" android:src="?iconBack" android:layout_below="@id/left" android:contentDescription="@string/back" />
+        <ImageView android:id="@id/down" android:layout_width="@dimen/remote_icon_size" android:layout_height="@dimen/remote_icon_size" android:src="?iconDown" android:layout_toRightOf="@id/back" android:layout_alignTop="@id/back" android:contentDescription="@string/down" />
+        <ImageView android:id="@id/osd" android:layout_width="@dimen/remote_icon_size" android:layout_height="@dimen/remote_icon_size" android:src="?iconMenu" android:layout_toRightOf="@id/down" android:layout_alignTop="@id/back" android:contentDescription="@string/osd" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/button_bar" android:layout_width="@dimen/buttonbar_height" android:layout_height="fill_parent" style="@style/ButtonBar.Bottom">
+        <ImageButton android:id="@id/home" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="?iconHome" android:layout_weight="1.0" android:contentDescription="@string/home" style="@style/Widget.Button.Borderless" />
+        <ImageButton android:id="@id/movies" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="?iconMovies" android:layout_weight="1.0" android:contentDescription="@string/movies" style="@style/Widget.Button.Borderless" />
+        <ImageButton android:id="@id/tv_shows" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="?iconTvShows" android:layout_weight="1.0" android:contentDescription="@string/tv_shows" style="@style/Widget.Button.Borderless" />
+        <ImageButton android:id="@id/music" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="?iconMusic" android:layout_weight="1.0" android:contentDescription="@string/music" style="@style/Widget.Button.Borderless" />
+        <ImageButton android:id="@id/pictures" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="?iconPicture" android:layout_weight="1.0" android:contentDescription="@string/pictures" style="@style/Widget.Button.Borderless" />
+    </LinearLayout>
+</LinearLayout>

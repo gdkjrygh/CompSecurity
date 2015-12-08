@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/topic_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin">
+        <com.pinterest.ui.imageview.ProportionalImageView android:layout_gravity="center_vertical" android:id="@id/image" android:layout_width="@dimen/homefeed_builder_topic_image_width" android:layout_height="@dimen/homefeed_builder_topic_image_width" android:layout_weight="0.0" />
+        <TextView android:textSize="@dimen/text_subhead" android:textStyle="bold" android:textColor="@color/text_dark" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/topic_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_half" android:layout_weight="1.0" />
+        <com.pinterest.ui.text.PImageButton android:layout_gravity="center_vertical" android:id="@id/dismiss_topic_button" android:background="@null" android:layout_width="@dimen/button_height" android:layout_height="@dimen/button_height" android:layout_marginLeft="@dimen/margin_half" android:layout_marginRight="@dimen/margin_half" android:src="@drawable/ic_dismiss" />
+        <com.pinterest.activity.home.view.HomefeedBuilderInterestFollowButton android:layout_gravity="center_vertical" android:id="@id/follow_bt" android:layout_width="@dimen/homefeed_builder_follow_btn_width" android:layout_weight="0.0" style="@style/button_plain" />
+    </LinearLayout>
+    <org.lucasr.twowayview.TwoWayView android:orientation="horizontal" android:id="@id/sample_pin_list" android:layout_width="fill_parent" android:layout_height="@dimen/homefeed_builder_pin_width" android:layout_marginLeft="@dimen/margin" android:drawSelectorOnTop="false" android:layout_below="@id/topic_info" />
+</merge>

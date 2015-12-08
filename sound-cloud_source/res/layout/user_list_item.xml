@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/user_list_item" style="@style/ListItemLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.soundcloud.android.view.CircularBorderImageView android:id="@id/image" style="@style/ListItemImage.User" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.soundcloud.android.view.CustomFontTextView android:textColor="@color/list_primary" android:id="@id/list_item_header" style="@style/ListItemText.SecondaryText" />
+        <com.soundcloud.android.view.CustomFontTextView android:textColor="@color/list_secondary" android:id="@id/list_item_subheader" style="@style/ListItemText.PrimaryText" />
+        <com.soundcloud.android.view.CustomFontTextView android:id="@id/list_item_counter" android:drawableLeft="@drawable/stats_followers" style="@style/ListItemText.Numeric.Stats" />
+    </LinearLayout>
+    <ToggleButton android:id="@id/toggle_btn_follow" android:focusable="false" android:visibility="gone" style="@style/Profile.ToggleButton.Follow.List" />
+</LinearLayout>

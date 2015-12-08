@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/route_background" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/route_under_buttons" android:background="@drawable/route_buttons_style" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/route_margin" android:layout_marginRight="@dimen/route_margin" layout="@layout/route_item_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/route_buttons" android:background="@drawable/under_style" android:paddingLeft="20.0dip" android:paddingTop="3.0dip" android:paddingRight="20.0dip" android:paddingBottom="3.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0">
+        <ImageButton android:id="@id/route_direction_button" android:src="@drawable/route_action_direction" android:contentDescription="@string/direction_action" style="@style/route_action_button" />
+        <ImageButton android:id="@id/route_map_button" android:src="@drawable/route_action_map" android:contentDescription="@string/map_action" style="@style/route_action_button" />
+        <ImageButton android:id="@id/route_fav_button" android:src="@drawable/route_action_favorite" android:contentDescription="@string/favorite_action" style="@style/route_action_button" />
+        <ImageButton android:id="@id/route_schedule_button" android:src="@drawable/route_action_clock" android:contentDescription="@string/schedule_action" style="@style/route_action_button" />
+    </LinearLayout>
+</LinearLayout>

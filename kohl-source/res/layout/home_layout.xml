@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:paddingTop="?android:actionBarSize" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/id_home_scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/search_header" />
+            <LinearLayout android:orientation="vertical" android:id="@id/home_cms_progress_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ProgressBar android:layout_gravity="top|center" android:layout_width="80.0dip" android:layout_height="80.0dip" android:indeterminate="true" android:layout_weight="3.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/home_cms_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:id="@id/id_loyalty_meter" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/loyalty_meter" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/id_view_pager" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <android.support.v4.view.ViewPager android:id="@id/home_pager" android:focusable="true" android:layout_width="fill_parent" android:layout_height="120.0dip" />
+                    <com.viewpagerindicator.CirclePageIndicator android:id="@id/home_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+                <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/id_home_sixSpotTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+                </LinearLayout>
+                <com.kohls.mcommerce.opal.framework.view.component.views.WrappedGridView android:id="@id/id_home_gridView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@android:color/white" android:numColumns="2" />
+                <ImageView android:id="@id/home_promomodule_1" android:layout_width="fill_parent" android:layout_height="160.0dip" android:scaleType="fitXY" />
+                <LinearLayout android:orientation="horizontal" android:paddingBottom="11.0dip" android:layout_width="fill_parent" android:layout_height="140.0dip">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <com.android.volley.toolbox.NetworkImageView android:layout_gravity="center" android:id="@id/id_home_brandFeature_1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <com.android.volley.toolbox.NetworkImageView android:layout_gravity="center" android:id="@id/id_home_brandFeature_2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView android:id="@id/home_recommendation" android:layout_width="fill_parent" android:layout_height="160.0dip" android:scaleType="fitXY" />
+                <ImageView android:id="@id/home_promomodule_2" android:layout_width="fill_parent" android:layout_height="160.0dip" android:scaleType="fitXY" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

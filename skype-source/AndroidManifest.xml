@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:amazon="http://schemas.amazon.com/apk/res/android" xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.skype.raider" platformBuildVersionCode="23" platformBuildVersionName="6.0-2166767">
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <permission android:name="com.skype.android.permission.READ_CONTACTS" android:permissionGroup="android.permission-group.PERSONAL_INFO" android:protectionLevel="normal"/>
+    <permission android:name="com.skype.android.permission.WRITE_CONTACTS" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <permission android:name="com.skype.raider.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.skype.raider.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <permission android:name="com.skype.raider.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.skype.raider.permission.RECEIVE_ADM_MESSAGE"/>
+    <uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE"/>
+    <uses-permission android:name="com.nokia.pushnotifications.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <permission android:name="com.skype.permission.ACCOUNT" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.skype.permission.ACCOUNT"/>
+    <uses-feature android:glEsVersion="0x20000" android:required="true"/>
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <application android:allowBackup="false" android:backupAgent="com.skype.android.app.settings.BackupPrefs" android:hardwareAccelerated="true" android:icon="@drawable/skype_blue" android:label="@string/app_name" android:name="com.skype.android.SkypeApplication" android:theme="@style/AppTheme">
+        <meta-data android:name="amazon_3d_icon" android:value="ic_skype_appsgrid:ic_skype_appsgrid.scene"/>
+        <meta-data android:name="amazon_3d_icon_large" android:value="icon_skype:icon_skype.scene"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/gms_version"/>
+        <meta-data android:name="com.google.android.gms.car.application" android:resource="@xml/automotive_app_desc"/>
+        <meta-data android:name="roboguice.annotations.packages" android:value="com.skype.android"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/google_maps_key"/>
+        <meta-data android:name="com.microsoft.applications.telemetry.tenantToken" android:value="2838566e64c64816a189aa5c4e3c9f36-5c965392-71a0-47db-ae72-14fd27fa3586-6972"/>
+        <amazon:enable-feature android:name="com.amazon.device.messaging" android:required="false"/>
+        <receiver android:name="com.skype.android.app.wearable.WearReplyReceiver">
+            <intent-filter>
+                <action android:name="com.skype.action.REPLY_MESSAGE"/>
+                <action android:name="com.skype.action.REPLY_WITH_EMOTICON"/>
+                <category android:name="com.skype.raider"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.skype.android.app.wearable.CarReadReceiver">
+            <intent-filter>
+                <action android:name="com.skype.action.READ_MESSAGE_CAR"/>
+                <category android:name="com.skype.raider"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.skype.android.service.LocaleChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <category android:name="com.skype.raider"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.skype.android.wakeup.WakeupEventReceiver"/>
+        <receiver android:exported="true" android:name="com.skype.android.audio.BluetoothReceiver">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED"/>
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED"/>
+                <action android:name="android.media.SCO_AUDIO_STATE_CHANGED"/>
+                <action android:name="android.media.SCO_AUDIO_STATE_UPDATED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.skype.android.push.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.skype.raider"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.skype.android.push.adm.ADMPushMessageReceiver" android:permission="com.amazon.device.messaging.permission.SEND">
+            <intent-filter>
+                <action android:name="com.amazon.device.messaging.intent.REGISTRATION"/>
+                <action android:name="com.amazon.device.messaging.intent.RECEIVE"/>
+                <category android:name="com.skype.raider"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.skype.android.push.nna.NokiaPushReceiver" android:permission="com.nokia.pushnotifications.permission.SEND">
+            <intent-filter>
+                <action android:name="com.nokia.pushnotifications.intent.RECEIVE"/>
+                <action android:name="com.nokia.pushnotifications.intent.REGISTRATION"/>
+                <category android:name="com.skype.raider"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.skype.android.push.RegisterReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="com.skype.android.push.REGISTER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.skype.android.app.calling.SeamlessCapabilityReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.skype.android.service.ContactsAlarmReceiver">
+            <intent-filter>
+                <category android:name="com.skype.raider"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.skype.android.config.partner.CampaignReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.skype.android.service.GetAccountReceiver" android:permission="com.skype.permission.ACCOUNT">
+            <intent-filter>
+                <action android:name="com.skype.ACTION_GET_ACCOUNT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:name="com.skype.android.app.settings.SnoozeNotificationHelper"/>
+        <service android:name="com.skype.android.push.gcm.GCMIntentService"/>
+        <service android:exported="false" android:name="com.skype.android.push.PushHandlingService"/>
+        <service android:exported="false" android:name="com.skype.android.push.adm.ADMMessageHandler"/>
+        <service android:name="com.skype.android.push.nna.NokiaPushService"/>
+        <service android:exported="false" android:name="com.skype.android.service.AccountService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/sync_contacts"/>
+            <meta-data android:name="android.provider.CONTACTS_STRUCTURE" android:resource="@xml/contact_structure"/>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/sync_authenticator"/>
+        </service>
+        <service android:name="com.skype.android.app.calling.VideoMonitor"/>
+        <service android:name="com.skype.android.app.wear.CommandHandlerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.skype.raider.media.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.skype.android.app.media.MediaDocumentFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/mediadocumentpaths"/>
+        </provider>
+        <activity android:launchMode="standard" android:name="com.skype.android.app.main.SplashActivity" android:theme="@style/Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="smsto"/>
+                <data android:scheme="sms"/>
+                <data android:scheme="tel"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter android:icon="@drawable/quickaction_skype_video_call">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/com.skype.android.videocall.action"/>
+            </intent-filter>
+            <intent-filter android:icon="@drawable/quickaction_skype_call">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/com.skype.android.skypecall.action"/>
+            </intent-filter>
+            <intent-filter android:icon="@drawable/quickaction_skype_chat">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/com.skype.android.chat.action"/>
+            </intent-filter>
+            <intent-filter android:icon="@drawable/skype_blue" android:priority="0">
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.CALL"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="skype"/>
+            </intent-filter>
+            <intent-filter android:icon="@drawable/skype_blue" android:priority="0">
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.CALL"/>
+                <action android:name="android.intent.action.DIAL"/>
+                <action android:name="android.intent.action.CALL_PRIVILEGED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="tel"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:name="com.skype.raider.Main" android:targetActivity="com.skype.android.app.main.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:name="com.skype.android.app.contacts.ContactListActivity" android:theme="@style/LightActionBarNormal" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.skype.android.app.recents.RecentListActivity" android:theme="@style/LightActionBarNormal" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.skype.android.app.main.EditPropertyActivity" android:theme="@style/LeftPanelWhenLarge" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.skype.android.app.account.EditEmailActivity" android:theme="@style/LightActionBarNormal" android:windowSoftInputMode="adjustResize"/>
+        <activity android:allowTaskReparenting="true" android:clearTaskOnLaunch="true" android:name="com.skype.android.app.main.HubActivity" android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:allowTaskReparenting="true" android:clearTaskOnLaunch="true" android:name="com.skype.android.app.main.HubMaterialActivity" android:theme="@style/Material.Light.NoActionBar.StatusBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:excludeFromRecents="true" android:name="com.skype.android.app.calling.ConnectionDialogTransparentHostActivity" android:noHistory="true" android:theme="@style/DialogTransparentActivityTheme"/>
+        <activity android:launchMode="singleTop" android:name="com.skype.android.app.account.MyInfoActivity" android:theme="@style/RightPanelWhenLargeNoActionBar" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout" android:name="com.skype.android.app.account.WebActivity" android:theme="@style/WebActivity" android:uiOptions="0x0"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout" android:name="com.skype.android.app.account.UserFeedbackWebActivity" android:theme="@style/LightActionBarNormal"/>
+        <activity android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|orientation|screenLayout|uiMode|fontScale" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.skype.android.app.calling.CallActivity" android:taskAffinity=":call" android:theme="@style/DarkSplitOverlay" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.skype.android.app.calling.PreCallActivity" android:taskAffinity=":call" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.calling.AfterCallEndedActivity" android:theme="@style/NoActionBarTransparent"/>
+        <activity android:name="com.skype.android.app.chat.ChatActivity" android:theme="@style/ChatActionBarOverlay" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:name="com.skype.android.app.chat.MigratedChatActivity" android:theme="@style/LightActionBarOverlay"/>
+        <activity android:launchMode="singleTop" android:name="com.skype.android.app.chat.AddParticipantsActivity" android:theme="@style/NoActionBarTransparentWithWhite" android:windowSoftInputMode="stateVisible"/>
+        <activity android:name="com.skype.android.app.contacts.ContactPickerActivity" android:theme="@style/NoActionBarTransparentWithWhiteToolbar"/>
+        <activity android:name="com.skype.android.app.chat.ParticipantActivity" android:theme="@style/LeftPanelWhenLarge"/>
+        <activity android:label="@string/acc_add_number_activity_label" android:launchMode="singleTop" android:name="com.skype.android.app.contacts.ContactAddNumberActivity" android:theme="@style/LeftPanelWhenLarge" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:name="com.skype.android.app.contacts.ContactProfileActivity" android:theme="@style/LeftPanelWhenLarge" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.skype.android.app.contacts.ContactEditActivity" android:theme="@style/LeftPanelWhenLarge" android:windowSoftInputMode="adjustPan"/>
+        <activity android:label="@string/acc_add_people_screen_label" android:name="com.skype.android.app.contacts.ContactDirectorySearchActivity" android:theme="@style/LightActionBarDirectorySearch" android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:name="com.skype.android.app.account.AccountProfileInfoActivity" android:theme="@style/LightActionBarNormal" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.skype.android.app.contacts.ContactSendAuthRequestActivity" android:theme="@style/LeftPanelWhenLarge" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:launchMode="singleTop" android:name="com.skype.android.app.dialer.DialpadActivity" android:theme="@style/GreyActionBar" android:uiOptions="0x0" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.skype.android.app.dialer.SelectCountryActivity" android:theme="@style/LeftPanelWhenLarge"/>
+        <activity android:launchMode="singleTop" android:name="com.skype.android.app.signin.LandingPageActivity" android:theme="@style/NoActionBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:launchMode="singleTop" android:name="com.skype.android.app.signin.UnifiedLandingPageActivity" android:theme="@style/NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:launchMode="singleTop" android:name="com.skype.android.app.signin.SimpleLandingPageActivity" android:theme="@style/NoActionBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:label="@string/message_signing_in_screen" android:launchMode="singleTop" android:name="com.skype.android.app.signin.SignInActivity" android:theme="@style/SignInStyle" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:name="com.skype.android.app.signin.SignUpActivity" android:theme="@style/LightActionBarNormal" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout" android:name="com.skype.android.app.signin.SignInLiveIdActivity" android:theme="@style/LightBlueActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout" android:name="com.skype.android.app.signin.AuthenticateWithMsaActivity" android:theme="@style/LightBlueActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.skype.android.app.signin.TermsOfUseActivity" android:theme="@style/NoActionBar"/>
+        <activity android:launchMode="singleTop" android:name="com.skype.android.app.signin.SelectSkypeNameActivity" android:theme="@style/LightActionBarNormal"/>
+        <activity android:name="com.skype.android.app.settings.AboutActivity" android:theme="@style/LightActionBarNormal"/>
+        <activity android:name="com.skype.android.app.settings.ManageAliasesActivity" android:theme="@style/LightActionBarNormal"/>
+        <activity android:name="com.skype.android.app.settings.SettingsActivity" android:theme="@style/SettingsScreen"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout" android:label="@string/acc_video_message_record" android:launchMode="singleTop" android:name="com.skype.android.app.vim.VideoMessageRecorderActivity" android:theme="@style/NoActionBar"/>
+        <activity android:label="@string/acc_video_message_review" android:launchMode="singleTop" android:name="com.skype.android.app.vim.VideoMessageReviewActivity" android:theme="@style/NoActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout" android:label="@string/label_video_message" android:name="com.skype.android.app.vim.VideoMessagePlayerActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.vim.VideoMessagePromotionActivity" android:theme="@style/NoActionBar"/>
+        <activity android:label="@string/header_call_forwarding" android:name="com.skype.android.app.account.CallForwardingActivity" android:theme="@style/LightActionBarNormal"/>
+        <activity android:label="@string/header_add_number" android:name="com.skype.android.app.account.CallForwardingNumberActivity" android:theme="@style/LightActionBarNormal" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:name="com.skype.android.app.signin.LinkingSkypeNamesFoundActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.signin.LinkingSkypeNamesNotFoundActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.signin.LinkingPickSuggestedAccountsActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.signin.LinkingPreSignInActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.signin.LinkingSkypeSignInActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.signin.LinkingAccountsAnimationActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.signin.LinkingDoneActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.signin.LinkingErrorSignInActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.signin.LinkingErrorConnectionDroppedActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.signin.LinkingErrorAccountMergedActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.signin.LinkingErrorAccountBlockedActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.signin.LinkingTermsOfUseActivity" android:theme="@style/NoActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.skype.android.app.shortcircuit.StallNewUserActivity" android:screenOrientation="portrait" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.media.MediaPhotoViewerActivity" android:theme="@style/MediaPhotoViewerStyle" android:uiOptions="0x0"/>
+        <activity android:name="com.skype.android.app.mnv.MnvActivity" android:theme="@style/NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.skype.android.app.mnv.MnvAddNumberActivity" android:theme="@style/NoActionBar" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:name="com.skype.android.app.signin.SignoutEducationActivity" android:theme="@style/NoActionBar"/>
+        <activity android:configChanges="orientation" android:name="com.skype.android.app.chat.picker.Search.MediaPickerSearchActivity" android:screenOrientation="portrait" android:theme="@style/LightActionBarNormal" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="net.hockeyapp.android.UpdateActivity"/>
+        <activity android:name="com.skype.android.app.location.ReceivedLocationActivity" android:theme="@style/LightActionBarNormal"/>
+        <activity android:name="com.skype.android.app.location.SendLocationActivity" android:theme="@style/LightActionBarNormal"/>
+        <activity android:name="com.skype.android.app.contacts.PickerActivity" android:theme="@style/NoActionBarTransparentWithWhiteToolbar"/>
+        <activity android:name="com.skype.android.app.chat.OutlookNotInstalledActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.chat.OfficeNotInstalledActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.signin.SignOutActivity" android:theme="@style/NoActionBar"/>
+        <activity android:name="com.skype.android.app.contacts.OffNetworkInviteActivity" android:theme="@style/Material.Light.NoActionBar"/>
+        <activity android:exported="false" android:icon="@drawable/msa_ms_logo" android:label="@string/webflow_header" android:name="com.microsoft.onlineid.authenticator.AccountAddPendingActivity" android:theme="@style/Theme.MSA"/>
+        <activity android:configChanges="orientation" android:exported="false" android:name="com.microsoft.onlineid.internal.ui.WebFlowActivity" android:theme="@style/Theme.MSA.NoActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation" android:exported="false" android:icon="@drawable/msa_ms_logo" android:label="@string/webflow_header" android:name="com.microsoft.onlineid.ui.AddAccountActivity" android:theme="@style/Theme.MSA" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="com.microsoft.onlineid.internal.ADD_ACCOUNT"/>
+                <action android:name="com.microsoft.onlineid.internal.SIGN_UP_ACCOUNT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation" android:exported="false" android:name="com.microsoft.onlineid.ui.SignOutActivity" android:theme="@style/Theme.MSA.Transparent"/>
+        <activity android:exported="false" android:icon="@drawable/msa_ms_logo" android:label="@string/webflow_header" android:name="com.microsoft.onlineid.internal.ui.AccountPickerActivity" android:theme="@style/Theme.MSA.Dialog">
+            <intent-filter>
+                <action android:name="com.microsoft.onlineid.internal.PICK_ACCOUNT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:icon="@drawable/msa_ms_logo" android:label="@string/webflow_header" android:name="com.microsoft.onlineid.internal.ui.InterruptResolutionActivity" android:theme="@style/Theme.MSA"/>
+        <service android:exported="false" android:name="com.microsoft.onlineid.internal.sso.client.BackupService">
+            <intent-filter>
+                <action android:name="com.microsoft.onlineid.internal.sso.client.PUSH_BACKUP"/>
+                <action android:name="com.microsoft.onlineid.internal.sso.client.PUSH_BACKUP_IF_NEEDED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.microsoft.onlineid.internal.MsaService">
+            <intent-filter>
+                <action android:name="com.microsoft.onlineid.internal.GET_TICKET"/>
+                <action android:name="com.microsoft.onlineid.internal.UPDATE_PROFILE"/>
+                <action android:name="com.microsoft.onlineid.internal.SIGN_OUT"/>
+                <action android:name="com.microsoft.onlineid.internal.SIGN_OUT_ALL_APPS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="com.microsoft.onlineid.internal.sso.service.MsaSsoService">
+            <intent-filter>
+                <action android:name="com.microsoft.msa.action.SSO_SERVICE"/>
+            </intent-filter>
+            <meta-data android:name="com.microsoft.msa.service.sso_version" android:value="2"/>
+            <meta-data android:name="com.microsoft.msa.service.sdk_version" android:value="@string/sdk_version_name"/>
+        </service>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@style/Theme.IAPTheme"/>
+        <meta-data android:name="com.google.android.wearable.beta.app" android:resource="@xml/android_wear_micro_apk"/>
+    </application>
+</manifest>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.driver.TrainingRideCompletedDialogView style="@style/DialogContainerView"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:divider="@drawable/horizontal_divider" android:showDividers="middle" style="@style/DialogView">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <FrameLayout android:layout_gravity="center" android:layout_width="115.0dip" android:layout_height="115.0dip" android:layout_marginTop="@dimen/span28" android:layout_marginBottom="@dimen/span20" android:foreground="@drawable/split_fare_profile_image_frame">
+                <com.makeramen.roundedimageview.RoundedImageView android:id="@id/passenger_photo_image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:riv_oval="true" />
+            </FrameLayout>
+            <TextView android:textStyle="bold" android:gravity="center" android:id="@id/primary_message_text_view" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/training_ride_complete_primary_message" style="@style/PrimaryText" />
+            <TextView android:textColor="@color/primary_text" android:gravity="center" android:id="@id/secondary_message_text_view" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/training_ride_complete_secondary_message" style="@style/SecondaryText" />
+        </LinearLayout>
+        <Button android:textStyle="bold" android:id="@id/replay_walkthrough_button" android:text="@string/training_ride_replay_button" style="@style/DialogButtonPrimary" />
+        <Button android:id="@id/dismiss_button" android:text="@string/close_button" style="@style/DialogButton" />
+    </LinearLayout>
+</me.lyft.android.ui.driver.TrainingRideCompletedDialogView>

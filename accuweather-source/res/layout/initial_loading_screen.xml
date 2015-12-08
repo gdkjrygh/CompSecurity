@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/first_launch_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background_lines" android:background="@drawable/background_lines_20_tiled" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/outer_ll" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/initial_setup_label_tv" android:textColor="@android:color/white" android:gravity="center_horizontal" android:id="@id/initial_setup_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="40.0dip" android:text="@string/InitialSetup_ellipsis_Abbr40" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/progress_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="100.0">
+                <ProgressBar android:id="@id/progress" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="60.0" style="@android:style/Widget.ProgressBar.Horizontal" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:weightSum="100.0">
+            <TextView android:textSize="16.0dip" android:textColor="@android:color/white" android:gravity="center_horizontal" android:id="@id/give_us_a_moment_tv" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/GiveUsMomentToGetThingsReadyForYou_exclamation_Abbr120" android:lines="2" android:layout_weight="60.0" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

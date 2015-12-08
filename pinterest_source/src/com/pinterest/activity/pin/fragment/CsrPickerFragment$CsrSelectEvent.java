@@ -1,0 +1,22 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.pinterest.activity.pin.fragment;
+
+
+public class _url
+{
+
+    private String _url;
+
+    public String getUrl()
+    {
+        return _url;
+    }
+
+    public (String s)
+    {
+        _url = s;
+    }
+}

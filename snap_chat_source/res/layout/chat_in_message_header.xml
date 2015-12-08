@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/chat_time_text_size" android:textColor="@color/list_view_secondary_text" android:gravity="center" android:id="@id/conversation_date" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" />
+    <RelativeLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/chat_message_header_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/chat_name_header_text_size" android:textStyle="normal" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/chat_message_header_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="20.0dip" android:layout_marginLeft="@dimen/default_gap" />
+        <ProgressBar android:id="@id/sending_spinner" android:visibility="gone" android:layout_width="@dimen/chat_header_icon_size" android:layout_height="@dimen/chat_header_icon_size" android:layout_toRightOf="@id/chat_message_header_title" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/tap_to_retry_icon" android:visibility="gone" android:layout_width="@dimen/chat_header_icon_size" android:layout_height="@dimen/chat_header_icon_size" android:layout_marginLeft="5.0dip" android:src="@drawable/chat_retry_medium" android:layout_toRightOf="@id/chat_message_header_title" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

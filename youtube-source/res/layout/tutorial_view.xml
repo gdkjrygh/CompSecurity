@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.youtube.app.ui.TutorialView android:id="@id/tutorial_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <com.google.android.apps.youtube.app.ui.ClingView android:id="@id/cling_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" yt:highlightImage="@drawable/cling_target" />
+    <FrameLayout android:id="@id/ok" android:background="@drawable/btn_cling" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:minWidth="100.0dip" android:minHeight="40.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <TextView android:textColor="@color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ok" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/text_area" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="140.0dip" android:layout_marginTop="176.0dip" android:layout_marginRight="16.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/large_font_size" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/text" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="300.0dip" yt:robotoFont="light" />
+    </LinearLayout>
+</com.google.android.apps.youtube.app.ui.TutorialView>

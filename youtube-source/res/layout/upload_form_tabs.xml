@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.youtube.core.ui.TabRow android:id="@id/tabrow" android:background="@color/tab_row_solid_background" android:layout_width="fill_parent" android:layout_height="@dimen/tab_row_height" />
+    <LinearLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/UploadWorkspaces">
+        <com.google.android.apps.youtube.core.ui.Workspace android:id="@id/workspace" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ScrollView android:tag="@string/upload_details" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <include layout="@layout/upload_form_details" />
+            </ScrollView>
+            <ScrollView android:tag="@string/upload_share" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <include layout="@layout/upload_form_sharing" />
+            </ScrollView>
+        </com.google.android.apps.youtube.core.ui.Workspace>
+    </LinearLayout>
+</LinearLayout>

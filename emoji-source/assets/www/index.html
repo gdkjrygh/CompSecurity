@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" ng-app="mfbApp">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>Bitstrips</title>
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/facebookConnectPlugin.js"></script>
+
+    <script src="bower_components/raygun4js/dist/raygun.min.js"></script>
+    <script>
+        Raygun.init('pWZbZ1+zEdFf0sT3kf5H3A==').setVersion('1.8.142.0').saveIfOffline(true).attach();
+    </script>
+
+	<script src="bower_components/es5-shim/es5-shim.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/handlebars/handlebars.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-managed-view/angular-managed-view.js"></script>
+    <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
+    <script src="bower_components/easeljs/lib/easeljs-NEXT.min.js"></script>
+    <script type="text/javascript" src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script type="text/javascript" src="bower_components/sprintf/dist/sprintf.min.js"></script>
+    <script type="text/javascript" src="bower_components/react/react-with-addons.min.js"></script>
+    <script type="text/javascript" src="bower_components/avatar-builder/dist/locales.min.js"></script>
+    <script type="text/javascript" src="bower_components/avatar-builder/dist/avatar-builder.js"></script>
+    <link href="bower_components/avatar-builder/dist/avatar-builder.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="bower_components/avatar-builder/dist/avatar-builder-bitstrips-theme.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+	<!-- build:js({.tmp,app}) scripts/scripts.js -->
+	<script src="scripts/app.js"></script>
+	<script src="scripts/seedrandom.js"></script>
+	<script src="scripts/hbs_templates.js"></script>
+    <script src="scripts/easel-models/stage.js"></script>
+    <script src="scripts/easel-models/scene-stage.js"></script>
+    <script src="scripts/easel-models/photo-stage.js"></script>
+    <script src="scripts/easel-models/bubble.js"></script>
+    <script src="scripts/easel-models/bubble-pointer.js"></script>
+    <script src="scripts/easel-models/character.js"></script>
+    <script src="scripts/easel-models/background-layer.js"></script>
+
+	<script src="scripts/services/jQueryService.js"></script>
+	<script src="scripts/services/costarsService.js"></script>
+	<script src="scripts/services/usersService.js"></script>
+	<script src="scripts/services/templatesService.js"></script>
+	<script src="scripts/services/templatesHelperService.js"></script>
+	<script src="scripts/services/launchService.js"></script>
+	<script src="scripts/services/logService.js"></script>
+	<script src="scripts/services/stateService.js"></script>
+	<script src="scripts/services/userAuth.js"></script>
+	<script src="scripts/services/queuedLoaderService.js"></script>
+	<script src="scripts/services/remoteService.js"></script>
+	<script src="scripts/services/feedsService.js"></script>
+	<script src="scripts/services/feedShimService.js"></script>
+	<script src="scripts/services/comicsService.js"></script>
+	<script src="scripts/services/navService.js"></script>
+	<script src="scripts/services/mementoService.js"></script>
+	<script src="scripts/services/authInterceptor.js"></script>
+	<script src="scripts/services/retryInterceptor.js"></script>
+	<script src="scripts/services/utils.js"></script>
+	<script src="scripts/services/handlebarsService.js"></script>
+	<script src="scripts/services/makeComicWizard.js"></script>
+	<script src="scripts/services/imageLoaderService.js"></script>
+	<script src="scripts/services/storageService.js"></script>
+	<script src="scripts/services/sharingService.js"></script>
+	<script src="scripts/services/directComics.js"></script>
+	<script src="scripts/services/refreshService.js"></script>
+	<script src="scripts/services/schemeURIService.js"></script>
+    <script src="scripts/services/fbService.js"></script>
+    <script src="scripts/services/appRateService.js"></script>
+    <script src="scripts/services/keyboardService.js"></script>
+    <script src="scripts/services/drawingService.js"></script>
+    <script src="scripts/services/uploadService.js"></script>
+    <script src="scripts/services/avatarBuilder.js"></script>
+    <script src="scripts/services/spinnerDialog.js"></script>
+    <script src="scripts/services/bitmojiServices.js"></script>
+    <script src="scripts/services/pushNotifications.js"></script>
+    <script src="scripts/services/photosService.js"></script>
+
+    <script src="scripts/directives/infiniteScroll.js"></script>
+	<script src="scripts/directives/queued.js"></script>
+	<script src="scripts/directives/feedComic.js"></script>
+	<script src="scripts/directives/fastFeedComic.js"></script>
+	<script src="scripts/directives/bsHideFooter.js"></script>
+	<script src="scripts/directives/bsIosWait.js"></script>
+	<script src="scripts/directives/bsAutoExpand.js"></script>
+	<script src="scripts/directives/disableDigest.js"></script>
+	<script src="scripts/directives/mfbfooter.js"></script>
+	<script src="scripts/directives/switchCharacter.js"></script>
+	<script src="scripts/directives/fancyCheckbox.js"></script>
+	<script src="scripts/directives/comicSearchTextInput.js"></script>
+	<script src="scripts/directives/captionTextareaInput.js"></script>
+	<script src="scripts/directives/quadPanel.js"></script>
+	<script src="scripts/directives/latestComics.js"></script>
+	<script src="scripts/directives/comicTags.js"></script>
+	<script src="scripts/directives/userLinkable.js"></script>
+	<script src="scripts/directives/comicLikes.js"></script>
+	<script src="scripts/directives/comicComment.js"></script>
+	<script src="scripts/directives/comicComments.js"></script>
+	<script src="scripts/directives/classFromRoute.js"></script>
+	<script src="scripts/directives/feedTabs.js"></script>
+	<script src="scripts/directives/offlineAlert.js"></script>
+	<script src="scripts/directives/focusOn.js"></script>
+	<script src="scripts/directives/preventEnter.js"></script>
+	<script src="scripts/directives/refreshButton.js"></script>
+	<script src="scripts/directives/fixedHeader.js"></script>
+	<script src="scripts/directives/visibleOnFocus.js"></script>
+	<script src="scripts/directives/emitOnNgRepeatFinished.js"></script>
+    <script src="scripts/directives/blurOnSubmit.js"></script>
+	<script src="scripts/directives/loadingSpinner.js"></script>
+    <script src="scripts/directives/coachMark.js"></script>
+	<script src="scripts/directives/appUpdate.js"></script>
+    <script src="scripts/directives/experimentalFeatures.js"></script>
+    <script src="scripts/directives/dynamicSize.js"></script>
+    <script src="scripts/directives/handleTextareaClicks.js"></script>
+
+	<script src="scripts/filters/thumbnail.js"></script>
+	<script src="scripts/filters/timestamp_format.js"></script>
+	<script src="scripts/filters/displayName.js"></script>
+	<script src="scripts/filters/removeHashes.js"></script>
+
+	<script src="scripts/controllers/settings.js"></script>
+	<script src="scripts/controllers/friendSelect.js"></script>
+	<script src="scripts/controllers/profilePicsCtrl.js"></script>
+	<script src="scripts/controllers/login.js"></script>
+	<script src="scripts/controllers/home.js"></script>
+	<script src="scripts/controllers/direct.js"></script>
+	<script src="scripts/controllers/templatesCtrl.js"></script>
+	<script src="scripts/controllers/viewComic.js"></script>
+	<script src="scripts/controllers/error.js"></script>
+	<script src="scripts/controllers/user.js"></script>
+	<script src="scripts/controllers/notifications.js"></script>
+	<script src="scripts/controllers/intro.js"></script>
+    <script src="scripts/controllers/shareCtrl.js"></script>
+    <script src="scripts/controllers/customizeScene.js"></script>
+    <script src="scripts/controllers/photoCompose.js"></script>
+    <script src="scripts/controllers/avatarBuilder.js"></script>
+    <script src="scripts/tools/performanceLogService.js"></script>
+	<!-- endbuild -->
+
+	<!-- Symlink to configuration_staging.js -->
+    <script src="scripts/configuration.js"></script>
+
+    <!-- Replace with specific platform bootstrap for testing (under app/configs) -->
+    <script src="scripts/bootstrap.js"></script>
+
+	<!--
+	  <link rel="stylesheet" href="stylesheets/android.css" />
+	-->
+	<link rel="stylesheet" href="stylesheets/ios.css" />
+
+</head>
+<body class-from-route>
+
+	<offline-alert></offline-alert>
+	<div ng-view class="ng-cloak">
+	</div>
+
+<mfbfooter></mfbfooter>
+
+</body>
+</html>

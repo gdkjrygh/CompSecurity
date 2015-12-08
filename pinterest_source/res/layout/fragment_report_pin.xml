@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg_grid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/container_report_top" android:background="@drawable/card_bg" android:weightSum="5.0" style="@style/report_pin_cell">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="4.0">
+            <TextView android:id="@id/report_top_title" style="@style/section_title" />
+            <TextView android:id="@id/report_top_subtitle" style="@style/section_text_value" />
+        </LinearLayout>
+        <Button android:id="@id/report_done_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin" android:text="@string/done" android:layout_weight="1.0" style="@style/button_red" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/learn_about_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <TextView android:id="@id/learn_about_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/learn_about" style="@style/section_text_value" />
+        <TextView android:id="@id/learn_about_link" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/section_text_red" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/learn_about_container" android:layout_below="@id/container_report_top">
+        <TextView android:id="@id/report_explanation_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin" style="@style/section_text_value" />
+        <ListView android:id="@id/report_pin_listview" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/listview" />
+    </LinearLayout>
+</RelativeLayout>

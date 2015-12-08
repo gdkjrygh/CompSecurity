@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <me.lyft.android.controls.PhoneInputView android:id="@id/phone_input_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span24" android:layout_marginRight="@dimen/span24" />
+        <TextView android:textColorHint="@color/charcoal_2" android:gravity="center" android:id="@id/phone_hint_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span4" android:hint="@string/landing_phone_number_description" style="@style/InlineErrorTextV2" />
+        <me.lyft.android.ui.landing.TermsOfServiceView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tos_checkbox" android:paddingLeft="@dimen/tos_checkbox_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span24" android:layout_marginTop="@dimen/span24" android:layout_marginRight="@dimen/span24" android:checked="false" android:button="@drawable/custom_checkbox" android:hint="@string/landing_signup_terms_of_service" />
+        <Space android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginTop="@dimen/span16" android:layout_weight="1.0" />
+        <me.lyft.android.controls.NumericKeyboard android:id="@id/keyboard" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/span8" />
+        <Button android:id="@id/next_button" android:text="@string/next_button" style="@style/PinkFullBleedButton" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.youtube.app.ui.SelectorOnTopFrameLayout android:id="@id/call_to_action_layout" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <com.google.android.apps.youtube.core.ui.FixedAspectRatioFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" yt:aspectRatio="@fraction/aspect_ratio_2_1">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:id="@id/pivot_view" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/left_thumbnail" android:background="#ff999999" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_toLeftOf="@id/pivot_view" />
+            <ImageView android:id="@id/top_right_thumbnail" android:background="#ff999999" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_toRightOf="@id/pivot_view" android:layout_above="@id/pivot_view" />
+            <ImageView android:id="@id/bottom_right_thumbnail" android:background="#ff999999" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_toRightOf="@id/pivot_view" android:layout_below="@id/pivot_view" />
+            <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/medium_font_size" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/call_to_action_button" android:background="@drawable/btn_play_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" yt:robotoFont="regular" />
+        </RelativeLayout>
+    </com.google.android.apps.youtube.core.ui.FixedAspectRatioFrameLayout>
+</com.google.android.apps.youtube.app.ui.SelectorOnTopFrameLayout>

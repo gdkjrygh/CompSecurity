@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/cart_billing_webview_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.contextlogic.wish.ui.components.webview.InterceptingTouchWebView android:id="@id/cart_billing_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/cart_billing_webview_overlay_loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/fragment_embedded_browser_loading_bg" android:layout_width="150.0dip" android:layout_height="150.0dip" android:layout_centerInParent="true">
+            <ProgressBar android:layout_gravity="center" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginBottom="10.0dip" android:indeterminateOnly="true" />
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="@color/wish_white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/loading" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

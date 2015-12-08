@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/light_blue_gradient" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/call_controls_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding4" android:layout_alignParentBottom="true">
+        <com.skype.android.app.calling.CallControlsView android:id="@id/call_controls" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include android:id="@id/calling_buttons" layout="@layout/calling_buttons" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding4" android:layout_above="@id/call_controls_container" android:layout_alignParentTop="true">
+        <include android:id="@id/pre_call_avatar" layout="@layout/pre_call_avatar" />
+    </RelativeLayout>
+</RelativeLayout>

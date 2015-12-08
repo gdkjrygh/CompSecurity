@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/big_text_3" android:gravity="center" android:id="@id/title_txt" android:layout_width="fill_parent" android:layout_marginTop="@dimen/span48" android:text="@string/payment_add_credit_card_title" style="@style/PrimaryText" />
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/span16" android:paddingRight="@dimen/span16" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/add_wallet_button" android:layout_width="0.0dip" android:layout_height="@dimen/span48" android:layout_marginTop="@dimen/span8" android:src="@drawable/ic_button_wallet" android:layout_weight="0.5" style="@style/WhiteButton" />
+        <Space android:layout_width="@dimen/span8" android:layout_height="fill_parent" />
+        <ImageButton android:id="@id/add_paypal_button" android:layout_width="0.0dip" android:layout_height="@dimen/span48" android:layout_marginTop="@dimen/span8" android:src="@drawable/ic_button_paypal" android:layout_weight="0.5" style="@style/WhiteButton" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/micro_text" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span8" android:text="@string/payment_or" style="@style/TertiaryText" />
+    <TextView android:gravity="center" android:id="@id/subtitle_text_view" android:layout_marginTop="@dimen/span8" android:layout_marginBottom="@dimen/span16" android:text="@string/registration_charge_account_note" style="@style/TertiaryText" />
+    <me.lyft.android.ui.payment.cardinput.CreditCardInput android:id="@id/credit_card_input" android:paddingLeft="@dimen/span16" android:paddingRight="@dimen/span16" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textStyle="italic" android:layout_gravity="center" android:id="@id/edit_card_note" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span8" style="@style/TertiaryText" />
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <Button android:id="@id/save_button" android:background="@drawable/btn_charcoal" android:layout_width="fill_parent" android:layout_marginTop="8.0dip" android:text="@string/save_button" style="@style/PinkFullBleedButton" />
+</merge>

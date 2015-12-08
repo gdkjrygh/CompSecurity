@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/payment_input_statement_credit_container" android:background="@color/commerce_text_blue" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pinterest.ui.text.PTextView android:textColor="@color/white" android:id="@id/payment_input_statement_credit_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/margin" app:pTypeface="bold" />
+    </FrameLayout>
+    <com.pinterest.activity.commerce.braintree.view.CardEditText android:id="@id/payment_input_card_number" android:nextFocusDown="@id/payment_input_expiration" android:layout_width="fill_parent" android:hint="@string/commerce_payment_card_number" android:imeOptions="actionNext" style="@style/EditTextForCardCommerce" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pinterest.activity.commerce.braintree.view.MonthYearEditText android:id="@id/payment_input_expiration" android:nextFocusDown="@id/payment_input_cvv" android:layout_width="0.0dip" android:hint="@string/commerce_payment_expiration" android:layout_weight="1.0" android:imeOptions="actionNext" style="@style/EditTextForCardCommerce" />
+        <com.pinterest.activity.commerce.braintree.view.CvvEditText android:id="@id/payment_input_cvv" android:layout_width="0.0dip" android:hint="@string/commerce_payment_cvv" android:layout_weight="1.0" style="@style/EditTextForCardCommerce" />
+    </LinearLayout>
+    <com.pinterest.ui.text.PButton android:id="@id/payment_input_populate_dummy" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Populate dummy card" style="@style/button_blue" />
+    <LinearLayout android:id="@id/payment_input_switch_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginTop="@dimen/margin_half" android:layout_marginRight="@dimen/margin">
+        <com.pinterest.ui.text.PTextView android:textColor="@color/commerce_checkout_text_dark_grey" android:id="@id/payment_input_switch_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/commerce_payment_use_shipping_address_billing" android:layout_weight="1.0" app:pTypeface="bold" />
+    </LinearLayout>
+    <com.pinterest.activity.commerce.view.AddressFormView android:id="@id/payment_input_address_form" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.pinterest.ui.text.PTextView android:id="@id/payment_input_address_billing_address" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin" />
+    <com.pinterest.ui.text.PTextView android:textSize="@dimen/commerce_checkout_text_small" android:gravity="center_horizontal" android:id="@id/payment_input_disclaimer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginTop="@dimen/margin_half" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin_half" />
+</merge>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/list_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.walmartlabs.ui.recycler.ListRecyclerView android:id="@id/wishlist_item_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/button_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <View android:background="@drawable/drop_shadow_bottom_up" android:layout_width="fill_parent" android:layout_height="@dimen/drop_shadow_default_height" />
+            <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:text="@string/wishlist_match_receipt_info_text_selected_items" />
+            <Button android:id="@id/mark_purchased_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="@string/wishlist_mark_as_purchased" style="@style/PrimaryButton.Orange" />
+        </LinearLayout>
+    </RelativeLayout>
+    <include layout="@layout/wishlist_giver_match_empty_list" />
+    <include android:id="@id/wishlist_item_list_loading_view" layout="@layout/translucent_loading_page" />
+</FrameLayout>

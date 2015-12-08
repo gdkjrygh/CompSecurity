@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.roidapp.photogrid" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727">
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="false" android:smallScreens="true" android:xlargeScreens="true"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <permission android:name="com.roidapp.photogrid.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.roidapp.photogrid.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <application android:allowBackup="true" android:hardwareAccelerated="false" android:icon="@drawable/icon" android:label="@string/app_name" android:name="com.roidapp.photogrid.common.PhotoGridApplication" android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.video.TrackSelector" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.release.ImageSelector" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.release.PickFolder" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.release.ImageEditor" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.release.EffectsList" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:icon="@drawable/icon_notifilter" android:label="@string/filter_text" android:name="com.roidapp.photogrid.release.ShareEntryFilter" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <data android:mimeType="image/png"/>
+                <data android:mimeType="image/jpeg"/>
+                <data android:mimeType="image/gif"/>
+                <data android:mimeType="image/bmp"/>
+                <data android:mimeType="image/x-ms-bmp"/>
+                <data android:mimeType="image/mpo"/>
+                <data android:mimeType="image/webp"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:icon="@drawable/icon_share_free" android:label="@string/sharelabel_free" android:name="com.roidapp.photogrid.release.ShareEntryFree" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <data android:mimeType="image/png"/>
+                <data android:mimeType="image/jpeg"/>
+                <data android:mimeType="image/gif"/>
+                <data android:mimeType="image/bmp"/>
+                <data android:mimeType="image/x-ms-bmp"/>
+                <data android:mimeType="image/mpo"/>
+                <data android:mimeType="image/webp"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <data android:mimeType="image/png"/>
+                <data android:mimeType="image/jpeg"/>
+                <data android:mimeType="image/gif"/>
+                <data android:mimeType="image/bmp"/>
+                <data android:mimeType="image/x-ms-bmp"/>
+                <data android:mimeType="image/mpo"/>
+                <data android:mimeType="image/webp"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:icon="@drawable/icon_share_grid" android:label="@string/sharelabel_grid" android:name="com.roidapp.photogrid.release.ShareEntryGrid" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <data android:mimeType="image/png"/>
+                <data android:mimeType="image/jpeg"/>
+                <data android:mimeType="image/gif"/>
+                <data android:mimeType="image/bmp"/>
+                <data android:mimeType="image/x-ms-bmp"/>
+                <data android:mimeType="image/mpo"/>
+                <data android:mimeType="image/webp"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:icon="@drawable/icon_share_video" android:label="@string/sharelabel_video" android:name="com.roidapp.photogrid.release.ShareEntryVideo" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <data android:mimeType="image/png"/>
+                <data android:mimeType="image/jpeg"/>
+                <data android:mimeType="image/gif"/>
+                <data android:mimeType="image/bmp"/>
+                <data android:mimeType="image/x-ms-bmp"/>
+                <data android:mimeType="image/mpo"/>
+                <data android:mimeType="image/webp"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:icon="@drawable/icon_share_single" android:label="@string/sharelabel_single" android:name="com.roidapp.photogrid.release.ShareEntrySingle" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <data android:mimeType="image/png"/>
+                <data android:mimeType="image/jpeg"/>
+                <data android:mimeType="image/gif"/>
+                <data android:mimeType="image/bmp"/>
+                <data android:mimeType="image/x-ms-bmp"/>
+                <data android:mimeType="image/mpo"/>
+                <data android:mimeType="image/webp"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:icon="@drawable/icon" android:label="@string/sharelabel_photogrid" android:name="com.roidapp.photogrid.release.ShareEntryPhotoGrid" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <data android:mimeType="image/png"/>
+                <data android:mimeType="image/jpeg"/>
+                <data android:mimeType="image/gif"/>
+                <data android:mimeType="image/bmp"/>
+                <data android:mimeType="image/x-ms-bmp"/>
+                <data android:mimeType="image/mpo"/>
+                <data android:mimeType="image/webp"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:hardwareAccelerated="true" android:name="com.roidapp.photogrid.release.PhotoGridActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:icon="@drawable/icon_share_single" android:label="@string/filter_text" android:name="com.roidapp.photogrid.filter.ImageEditGLESActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:icon="@drawable/icon_share_single" android:label="@string/filter_text" android:name="com.roidapp.photogrid.filter.selfiecam.SystemCameraActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:icon="@drawable/icon_share_single" android:label="@string/filter_text" android:name="com.roidapp.photogrid.filter.selfiecam.SelfieCamImageEditGLESActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:icon="@drawable/icon_share_single" android:label="@string/filter_text" android:name="com.roidapp.photogrid.filter.selfiecam.SelfieCamImageShowActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.release.RetouchActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:hardwareAccelerated="true" android:launchMode="standard" android:name="com.roidapp.photogrid.MainPage" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.FacebookMessengerActivity" android:screenOrientation="portrait" android:theme="@style/base_theme">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.facebook.orca.category.PLATFORM_THREAD_20150314"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.LauncherActivity" android:screenOrientation="portrait" android:theme="@style/base_theme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="open" android:pathPrefix="/" android:scheme="photogrid"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.release.Preference" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.release.More" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.common.JoinAndroidBeta" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.common.PrivacyPolicy" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.common.Eula" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation|orientation" android:name="com.roidapp.photogrid.release.PathSelector" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService"/>
+        <receiver android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.roidapp.photogrid.video.MusicPlayerService"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.cloudlib.AccountMgrActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="542129432493562"/>
+        <provider android:authorities="com.facebook.app.FacebookContentProvider542129432493562" android:exported="true" android:name="com.facebook.FacebookContentProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.cloud.FbPhotoSelectorActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.cloudlib.facebook.FbFriendListActivity" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.cloudlib.facebook.FbAlbumListActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.cloudlib.facebook.FbLoginActivity" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.cloudlib.flickr.FlickrListCloud" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.cloudlib.flickr.FlickrAuthenActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.cloud.FlickrSelectorActivity" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.cloud.DropBoxSelectorActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:launchMode="singleTask" android:name="com.dropbox.client2.android.AuthActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <data android:scheme="db-5tjilag14iugj2j"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.cloud.GoogleSearchSelectorActivity" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.cloudlib.google.GoogleAuthActivity" android:screenOrientation="portrait" android:theme="@style/transparent" android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.cloudlib.instagram.InstagramAuthActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.cloudlib.instagram.InstagramListCloud" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.cloud.InstagramSelectorActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.cloud.TemplateSelectorActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.cloud.TemplateChangeActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.release.FaceDetectorActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.release.ImageEditFreeCropActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.cloudlib.twitter.TwitterLoginActivity" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.cloudlib.twitter.TwitterVerifyActivity" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.cloud.BaseShareActivity" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.cloud.PGShareActivity" android:screenOrientation="portrait" android:theme="@style/base_theme" android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <service android:exported="false" android:name="com.roidapp.cloudlib.upload.UploadPhotoService" android:process=":share">
+            <intent-filter android:priority="1000">
+                <action android:name="com.roidapp.cloudlib.uploader"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.roidapp.cloudlib.sns.upload.UploadPGService"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:launchMode="singleTask" android:name="com.roidapp.cloudlib.upload.UploadManagerActivity" android:process=":share" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.video.VideoPictureEditActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <service android:exported="false" android:name="com.roidapp.videolib.core.VideoEncodeService" android:process=":video"/>
+        <activity android:name="com.roidapp.photogrid.social.SuggestFriendPage" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.release.HelpActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.release.BackgroundImageCrop" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.photogrid.release.CameraPreviewActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.roidapp.cloudlib.ads.PushAdActivity" android:screenOrientation="portrait" android:theme="@style/base_theme"/>
+        <receiver android:name="com.roidapp.cloudlib.push.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.roidapp.photogrid.notification"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.facebook.ads.InterstitialAdActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.jirbo.adcolony.AdColonyOverlay" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.jirbo.adcolony.AdColonyFullscreen" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.jirbo.adcolony.AdColonyBrowser" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.mopub.mobileads.MoPubActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.mopub.mobileads.MraidActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.mopub.common.MoPubBrowser"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.mopub.mobileads.MraidVideoPlayerActivity"/>
+        <meta-data android:name="com.cleanmaster.sdk.cmloginsdk.ApplicationId" android:value="@string/app_id"/>
+        <meta-data android:name="com.cleanmaster.sdk.cmloginsdk.ApplicationSalt" android:value="@string/app_salt"/>
+        <service android:name="com.roidapp.photogrid.cmid.LoginService"/>
+        <meta-data android:name="io.fabric.ApiKey" android:value="b448f0ab669f671079ba56991856c432d43c4f98"/>
+        <meta-data android:name="com.roidapp.photogrid.common.PhotoGridGlideModule" android:value="GlideModule"/>
+        <provider android:authorities="com.roidapp.photogrid.quickpic" android:enabled="true" android:exported="true" android:name="com.roidapp.cloudlib.sns.QuickPicInvitationCodeProvider"/>
+        <activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@style/Theme.IAPTheme"/>
+        <activity android:launchMode="singleTask" android:name="com.cmcm.adsdk.nativead.PicksLoadingActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+    </application>
+</manifest>

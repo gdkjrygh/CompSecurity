@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <me.lyft.android.controls.AdvancedEditText android:layout_gravity="center_vertical" android:id="@id/card_number_edit_text" android:paddingLeft="@dimen/span44" android:paddingRight="@dimen/span56" android:layout_width="fill_parent" android:layout_height="@dimen/span48" android:hint="@string/payment_credit_card_number_hint" android:digits="0123456789 " android:inputType="number" android:imeOptions="actionNext" style="@style/EditText" />
+        <ImageView android:layout_gravity="left|center" android:id="@id/card_type_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cc_default_outlined" />
+        <ImageView android:layout_gravity="right|center" android:id="@id/scan_card_button" android:paddingLeft="@dimen/span24" android:layout_width="@dimen/span48" android:layout_height="@dimen/span40" android:src="@drawable/ic_camera_dark_small" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <LinearLayout android:layout_gravity="left|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <me.lyft.android.controls.AdvancedEditText android:id="@id/expires_edit_txt" android:nextFocusDown="@id/cvc_edit_text" android:layout_width="0.0dip" android:layout_marginRight="@dimen/span8" android:hint="@string/payment_credit_card_expiry_hint" android:digits="0123456789/" android:layout_weight="0.25" android:inputType="number" android:imeOptions="actionNext" style="@style/EditText" />
+            <me.lyft.android.controls.AdvancedEditText android:id="@id/cvc_edit_text" android:nextFocusDown="@id/zip_edit_text" android:layout_width="0.0dip" android:layout_marginLeft="@dimen/span8" android:layout_marginRight="@dimen/span8" android:hint="@string/payment_credit_card_cvv_hint" android:maxLength="4" android:layout_weight="0.25" android:inputType="number" android:imeOptions="actionNext" style="@style/EditText" />
+            <me.lyft.android.controls.AdvancedEditText android:id="@id/zip_edit_text" android:layout_width="0.0dip" android:layout_marginLeft="@dimen/span8" android:hint="@string/payment_credit_card_zip_hint" android:singleLine="true" android:maxLength="6" android:layout_weight="0.5" android:inputType="textVisiblePassword" android:imeOptions="actionDone" style="@style/EditText" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="right|center" android:id="@id/change_zip_code_button" android:paddingLeft="@dimen/span24" android:layout_width="@dimen/span48" android:layout_height="@dimen/span40" android:src="@drawable/ic_flag_usa" />
+    </FrameLayout>
+    <View android:id="@id/billing_address_space" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="36.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/billing_address_view_group" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <me.lyft.android.controls.AdvancedEditText android:id="@id/billing_address_edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/address_hint_i" android:singleLine="true" android:imeOptions="actionNext" style="@style/EditText" />
+        <LinearLayout android:layout_gravity="left|center" android:orientation="horizontal" android:id="@id/city_state_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span20" android:layout_weight="1.0">
+            <me.lyft.android.controls.AdvancedEditText android:id="@id/billing_city_edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/span8" android:hint="@string/city_hint_i" android:singleLine="true" android:layout_weight="0.5" android:imeOptions="actionNext" style="@style/EditText" />
+            <me.lyft.android.controls.AdvancedEditText android:id="@id/billing_state_edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span8" android:hint="@string/state_hint_i" android:singleLine="true" android:layout_weight="0.5" android:imeOptions="actionDone" style="@style/EditText" />
+        </LinearLayout>
+        <TextView android:textStyle="italic" android:gravity="center" android:id="@id/creditcardinput_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/span20" android:text="@string/invalid_credit_card" style="@style/InlineErrorTextV2" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,10 @@
+<div ng-if="update && !update.hidden" class="update-msg clearfix">
+	<div class="center-lrg">
+		<a class="close" ng-click="appUpdateHide()"><i class="icon-close"></i></a>
+		<div class="update-icon" queued="{{update.image}}"></div>
+		<span>
+			<p>{{update.header}}<br>{{update.byline}}</p>
+			<a class="edit btn" ng-click="doAppUpdate()">{{update.button}}</a>
+		</span>
+	</div>
+</div>

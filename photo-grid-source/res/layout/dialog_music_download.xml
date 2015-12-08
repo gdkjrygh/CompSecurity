@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+        <ImageView android:id="@id/menu_icon" android:layout_width="@dimen/slidingmenu_list_height" android:layout_height="@dimen/slidingmenu_list_height" android:layout_marginLeft="@dimen/slidingmenu_margin_icon" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/slidingmenu_textsize_name" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/music_name" android:paddingRight="@dimen/slidingmenu_padding_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:singleLine="true" android:layout_toRightOf="@id/menu_icon" android:layout_alignTop="@id/menu_icon" android:layout_alignParentTop="true" />
+        <TextView android:textSize="@dimen/music_list_author_size" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/music_auther" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:singleLine="true" android:layout_below="@id/music_name" android:layout_alignLeft="@id/music_name" />
+        <ImageView android:id="@id/slidingmenu_music_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/image_selector_leftImagesInfo_textSize" android:textColor="@color/image_count" android:gravity="center" android:id="@id/slidingmenu_music_tips" android:background="@drawable/sliding_list_selector_no_more" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/slidingmenu_list_height" android:text="@string/slidingmenu_tips" />
+        <ImageView android:id="@id/music_use_cancel" android:background="@drawable/icon_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+        <TextView android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/music_archive_link" />
+        <TextView android:gravity="top" android:id="@id/dec_archive" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+        <TextView android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/music_license_link" />
+        <TextView android:gravity="top" android:id="@id/dec_license" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="16.0dip">
+        <TextView android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/music_author_link" />
+        <TextView android:gravity="top" android:id="@id/dec_author" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" />
+    </LinearLayout>
+</LinearLayout>

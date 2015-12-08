@@ -1,0 +1,52 @@
+<!-- Header -->
+<nav class="top-bar fixed-header">
+	<a id="back_button" class="back" ng-click="back()"><i class="icon-chevron-left"></i></a>
+    <h1>Select a Friend</h1>
+</nav>
+
+<div class="costar row add-to-bottom" infinite-scroll="add()" can-load="canLoad" threshold="300">
+	<div class="large-10 large-centered columns search">
+        <form blur-on-submit>
+		    <input class="searchbox" on-focus-unfix-header type="text" placeholder="Search friends" ng-model="search" ng-change="search_change()"/>
+        </form>
+		<div ng-show="search.length == 0"><i class="icon-search icon-large"></i></div>
+		<div ng-show="search.length != 0" ng-click="search = ''"><i class="icon-close-circle icon-large"></i></div>
+	</div>
+
+	<div ng-if="search.length != 0">
+		<div class="large-10 large-centered columns add-to-top">
+			<div ng-if="friends_avatars.length != 0">
+				<ul class="friend-grid small-block-grid-3">
+					<li ng-repeat="friend in friends | filter:{name:search} | orderBy:ordering | limitTo:search_count">
+						<a>
+							<div class="av-friend" queued="{{friend.thumb}}" q-fail="profile-fail.png" q-retry="true" q-click="friend_click(friend.fb_id)">
+							</div>
+							<p class="mini" ng-bind="friend.name"></p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div ng-if="search.length == 0">
+		<div class="large-10 large-centered columns">
+			<!-- Friends Without Avatars -->
+
+			<div ng-if="friends_none.length != 0" id='friends_without_avatars'>
+				<h4 class="friends-title">Create an Avatar <span>{{friends_none.length}}</span></h4>
+
+				<ul class="friend-grid small-block-grid-3">
+					<li ng-repeat="friend in friends_none | orderBy:'name' | limitTo:none_count">
+						<a>
+							<div class="av-friend" queued="{{friend.thumb}}" q-fail="profile-fail.png" q-retry="true" q-click="friend_click(friend.fb_id)">
+							</div>
+							<p class="mini" ng-bind="friend.name"></p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

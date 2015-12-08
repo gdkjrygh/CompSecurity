@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/drawerLayout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.CoordinatorLayout android:id="@id/coordinatorLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.design.widget.AppBarLayout android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="com.skype.android.widget.AppBarFlingBehavior">
+            <android.support.v7.widget.Toolbar android:id="@id/toolBar" android:layout_width="fill_parent" android:layout_height="@dimen/hub_action_bar_height" app:layout_scrollFlags="enterAlways|scroll" style="@style/ActionBarStyleMaterial">
+                <com.skype.android.widget.SymbolView android:textSize="@dimen/hub_logo_size" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/skypeLogo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/label_skype" app:symbol_code="LogoSkypeMedium" />
+            </android.support.v7.widget.Toolbar>
+            <android.support.design.widget.TabLayout android:id="@id/tabs" android:layout_width="fill_parent" android:layout_height="@dimen/size_6x" style="@style/TabLayoutMaterial" />
+            <com.skype.android.app.recents.EditModeBar android:orientation="horizontal" android:id="@id/edit_mode_bar" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/size_6x" />
+            <TextView android:textSize="@dimen/font_small" android:textColor="@color/skype_grey_dark" android:gravity="center" android:id="@id/notification_banner" android:background="@color/skype_grey_cool10" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/size_5_5x" android:singleLine="true" />
+        </android.support.design.widget.AppBarLayout>
+        <com.skype.android.app.search.SearchWidget android:id="@id/search_widget" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <com.skype.android.widget.ViewPagerWrapper android:id="@id/main_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <View android:id="@id/shadow_line" android:background="@drawable/action_bar_shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/size_0_5x" />
+    </android.support.design.widget.CoordinatorLayout>
+    <com.skype.android.widget.SkypeFabMenu android:id="@id/hub_fab" android:padding="@dimen/size_2x" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:overlayColor="@color/fab_overlay" app:itemsVerticalMargin="@dimen/size_2x" app:labelsHorizontalMargin="@dimen/size_1x" app:labelsTextStyle="@style/FabMenuItemLabel" app:labelsPadding="@dimen/size_1x">
+        <com.skype.android.widget.fabmenu.FabMenuItem android:id="@id/hub_fab_main" android:layout_width="wrap_content" android:layout_height="wrap_content" app:symbol_code="Plus" style="@style/FabMainItem" />
+        <com.skype.android.widget.fabmenu.FabMenuItem android:id="@id/hub_fab_chat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/fab_menu_chat" app:symbol_code="Message" app:label="@string/fab_menu_chat" style="@style/FabSubItem" />
+        <com.skype.android.widget.fabmenu.FabMenuItem android:id="@id/hub_fab_audiocall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/fab_menu_audiocall" app:symbol_code="CallStart" app:label="@string/fab_menu_audiocall" style="@style/FabSubItem" />
+        <com.skype.android.widget.fabmenu.FabMenuItem android:id="@id/hub_fab_videocall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/fab_menu_videocall" app:symbol_code="Video" app:label="@string/fab_menu_videocall" style="@style/FabSubItem" />
+        <com.skype.android.widget.fabmenu.FabMenuItem android:id="@id/hub_fab_videomessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/fab_menu_videomessage" app:symbol_code="QikLogoPart205" app:symbol_padding="-6.0dip" app:label="@string/fab_menu_videomessage" style="@style/FabSubItem" />
+    </com.skype.android.widget.SkypeFabMenu>
+    <android.support.design.widget.NavigationView android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <fragment android:name="com.skype.android.app.account.MyInfoFragment" android:id="@id/my_info" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/wish_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.contextlogic.wish.ui.components.webview.InterceptingTouchWebView android:id="@id/fragment_embedded_browser_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/fragment_embedded_browser_toolbar" />
+    <RelativeLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/fragment_embedded_browser_overlay_loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/fragment_embedded_browser_loading_bg" android:layout_width="150.0dip" android:layout_height="150.0dip" android:layout_centerInParent="true">
+            <ProgressBar android:layout_gravity="center" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginBottom="10.0dip" android:indeterminateOnly="true" />
+            <com.contextlogic.wish.ui.components.text.UnifiedFontTextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="@color/wish_white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/loading" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/fragment_embedded_browser_toolbar" android:background="@color/wish_dark_background" android:layout_width="fill_parent" android:layout_height="44.0dip" android:baselineAligned="false" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/fragment_embedded_browser_back_button" android:background="@drawable/leftarrow" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ProgressBar android:id="@id/fragment_embedded_browser_spinner" android:layout_width="30.0dip" android:layout_height="30.0dip" android:indeterminateOnly="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/fragment_embedded_browser_forward_button" android:background="@drawable/rightarrow" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

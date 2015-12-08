@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.tinder.views.RoundedRelativeLayout android:gravity="center" android:id="@id/location_rounded_relative" android:layout_width="fill_parent" android:layout_height="fill_parent" app:corners="@dimen/rounded_card_radius">
+        <View android:id="@id/suggest_location_bg" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/suggest_location_img" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+        <com.tinder.views.CustomButton android:textSize="@dimen/go_to_location_textsize" android:textColor="@drawable/selector_premium_blue_text" android:gravity="center" android:id="@id/suggest_location_btn_go" android:background="@drawable/selector_nav_menu_option_bg" android:padding="@dimen/padding_large" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Go to Istanbul" android:layout_alignParentBottom="true" app:font="semi_bold" />
+        <View android:id="@id/suggest_location_divider_btm" android:background="@color/ab_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/default_divider_stroke_width" android:layout_marginTop="@dimen/margin_med" android:layout_above="@id/suggest_location_btn_go" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/suggest_location_user_linear" android:paddingLeft="@dimen/padding_small" android:paddingRight="@dimen/padding_small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/suggest_location_divider_btm" android:layout_centerHorizontal="true">
+            <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+            <com.tinder.views.RoundImageView android:id="@id/active_avatar_1" android:layout_width="@dimen/avatar_length_passport_active_user" android:layout_height="@dimen/avatar_length_passport_active_user" app:defaultStyle="circle" />
+            <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="0.5" />
+            <com.tinder.views.RoundImageView android:id="@id/active_avatar_2" android:layout_width="@dimen/avatar_length_passport_active_user" android:layout_height="@dimen/avatar_length_passport_active_user" app:defaultStyle="circle" />
+            <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="0.5" />
+            <com.tinder.views.RoundImageView android:id="@id/active_avatar_3" android:layout_width="@dimen/avatar_length_passport_active_user" android:layout_height="@dimen/avatar_length_passport_active_user" app:defaultStyle="circle" />
+            <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="0.5" />
+            <com.tinder.views.RoundImageView android:id="@id/active_avatar_4" android:layout_width="@dimen/avatar_length_passport_active_user" android:layout_height="@dimen/avatar_length_passport_active_user" app:defaultStyle="circle" />
+            <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="0.5" />
+            <com.tinder.views.RoundImageView android:id="@id/active_avatar_5" android:layout_width="@dimen/avatar_length_passport_active_user" android:layout_height="@dimen/avatar_length_passport_active_user" app:defaultStyle="circle" />
+            <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+        <com.tinder.views.CustomTextView android:textSize="@dimen/suggested_locations_active_text_size" android:textColor="@color/text_dark" android:id="@id/suggest_location_active_in_txt" android:paddingLeft="@dimen/suggested_locations_active_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/suggested_locations_active_text_margin" android:layout_marginBottom="@dimen/suggested_locations_active_text_margin" android:text="Active in Istanbul" android:layout_above="@id/suggest_location_user_linear" app:font="semi_bold" />
+        <View android:id="@id/suggest_location_divider_mid" android:background="@color/ab_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/default_divider_stroke_width" android:layout_above="@id/suggest_location_active_in_txt" />
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/suggest_location_divider_mid" android:layout_below="@id/suggest_location_img">
+            <com.tinder.views.CustomTextView android:textSize="@dimen/suggested_locations_active_text_size" android:textColor="@color/text_dark" android:id="@id/suggest_location_pop" android:paddingLeft="@dimen/suggested_locations_active_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pop. 14M" android:layout_above="@id/suggest_location_user_linear" app:font="semi_bold" />
+            <com.tinder.views.CustomTextView android:textSize="@dimen/suggested_locations_active_text_size" android:textColor="@color/text_dark" android:id="@id/suggest_location_time" android:paddingLeft="@dimen/suggested_locations_active_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_small" android:layout_weight="1.0" app:font="semi_bold" />
+        </LinearLayout>
+    </com.tinder.views.RoundedRelativeLayout>
+</FrameLayout>

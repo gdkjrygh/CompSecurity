@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/talk_to_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <kik.android.widget.RobotoEditText android:id="@id/contacts_compose_to" android:background="@drawable/send_to_username_name_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:hint="@string/find_people_search_placeholder" android:singleLine="true" android:layout_below="@id/dialog_container" android:inputType="textVisiblePassword" />
+    <kik.android.widget.TransparentListView android:id="@id/compose_list" android:background="@color/talk_to_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/list_divider_color" android:dividerHeight="1.0px" android:layout_below="@id/contacts_compose_to" android:smoothScrollbar="true" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/empty_view" android:paddingLeft="14.0dip" android:paddingTop="14.0dip" android:paddingRight="14.0dip" android:paddingBottom="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/contacts_compose_to">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/default_nocontacts" />
+        <kik.android.widget.RobotoTextView android:textSize="16.0sp" android:textColor="@color/empty_view_text_color" android:id="@id/empty_view_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-10.0dip" />
+    </LinearLayout>
+    <FrameLayout android:background="@drawable/nav_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/contacts_compose_to" />
+</RelativeLayout>

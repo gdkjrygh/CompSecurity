@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/stories_list_item_all_stories" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/story_cell_height" android:layout_marginRight="@dimen/default_gap"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/stories_list_item_all_stories_thumbnail_container" android:paddingLeft="@dimen/default_gap_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_gap" android:layout_marginRight="@dimen/default_gap" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <ImageView android:id="@id/stories_list_item_all_stories_thumbnail_image_view" android:layout_width="@dimen/story_thumbnail_height" android:layout_height="@dimen/story_thumbnail_height" android:src="@drawable/story_circle_placeholder" />
+        <ProgressBar android:id="@id/stories_list_item_all_stories_thumbnail_progress_bar" android:visibility="gone" android:layout_width="@dimen/story_progress_bar_height" android:layout_height="@dimen/story_progress_bar_height" android:layout_marginLeft="@dimen/default_gap" android:layout_marginTop="@dimen/default_gap" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/default_gap" android:layout_toRightOf="@id/stories_list_item_all_stories_thumbnail_container" android:layout_centerVertical="true">
+        <TextView android:textColor="@color/primary_black" android:ellipsize="end" android:id="@id/stories_list_item_all_stories_primary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" style="@android:style/TextAppearance.Medium" />
+        <TextView android:textColor="@color/secondary_black" android:ellipsize="end" android:id="@id/stories_list_item_all_stories_secondary_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" style="@android:style/TextAppearance.Small" />
+    </LinearLayout>
+    <com.snapchat.android.ui.EmojiTextView android:id="@id/stories_list_item_all_stories_friendmoji" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/default_gap_3x" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@android:style/TextAppearance.Small" />
+</RelativeLayout>

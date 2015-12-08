@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/signup_dialog" android:background="@drawable/dialog_bg_5dp_rounded" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_body" android:textStyle="bold" android:textColor="@color/text_dark" android:id="@id/firstlastname" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textColor="@color/text_dark" android:ellipsize="end" android:id="@id/email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/button_container" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.pinterest.ui.text.PButton android:layout_gravity="center" android:id="@id/user_edit" android:paddingLeft="@dimen/margin" android:paddingTop="@dimen/margin_half" android:paddingRight="@dimen/margin" android:paddingBottom="@dimen/margin_half" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/edit" style="@style/button_plain" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.pinterest.ui.text.PEditText android:id="@id/password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginTop="@dimen/margin_half" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin" android:hint="@string/password" android:inputType="textPassword" android:imeOptions="actionGo|flagNoExtractUi" style="@style/EditTextPinterest" />
+    <Button android:id="@id/signup_bt" android:layout_width="@dimen/signup_button_width" android:layout_marginLeft="@dimen/margin" android:layout_marginRight="@dimen/margin" android:layout_marginBottom="@dimen/margin" android:text="@string/signup" style="@style/button_red" />
+    <View style="@style/list_cell_divider" />
+    <Button android:id="@id/business_bt" android:layout_marginTop="@dimen/margin_half" android:layout_marginBottom="@dimen/margin_half" android:text="@string/continue_as_bussiness" style="@style/button_embeded" />
+</LinearLayout>

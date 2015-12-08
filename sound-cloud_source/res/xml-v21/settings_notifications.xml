@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference android:title="@string/pref_notifications_wifi_only" android:key="@string/key_notifications_wifi_only" android:summary="@string/pref_notifications_wifi_only_description" android:defaultValue="false" />
+    <ListPreference android:entries="@array/pref_notifications_frequency_entries" android:title="@string/pref_notifications_frequency" android:key="@string/key_notifications_frequency" android:summary="@string/pref_notifications_frequency_description" android:defaultValue="14400000" android:entryValues="@array/pref_notifications_frequency_values" />
+    <PreferenceCategory android:title="@string/pref_notifications_stream">
+        <SwitchPreference android:title="@string/pref_notifications_incoming" android:key="@string/key_notifications_incoming" android:summary="@string/pref_notifications_incoming_description" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_notifications_activity">
+        <SwitchPreference android:title="@string/pref_notifications_likes" android:key="@string/key_notifications_favoritings" android:summary="@string/pref_notifications_likes_description" android:defaultValue="true" />
+        <SwitchPreference android:title="@string/pref_notifications_comments" android:key="@string/key_notifications_comments" android:summary="@string/pref_notifications_comments_description" android:defaultValue="true" />
+        <SwitchPreference android:title="@string/pref_notifications_reposts" android:key="@string/key_notifications_reposts" android:summary="@string/pref_notifications_reposts_description" android:defaultValue="true" />
+        <SwitchPreference android:title="@string/pref_notifications_followers" android:key="@string/key_notifications_followers" android:summary="@string/pref_notifications_followers_description" android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

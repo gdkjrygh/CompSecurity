@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.weather.Weather.checkin.CheckinMapViewLayout android:orientation="vertical" android:id="@id/checkin_map_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/location_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/checkin_debugging_information" />
+    <TextView android:id="@id/camera_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/checkin_debugging_information" />
+    <TextView android:id="@id/visible_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/checkin_debugging_information" />
+    <TextView android:id="@id/geohash_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/checkin_debugging_information" />
+    <TextView android:id="@id/full_geohash_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/checkin_debugging_information" />
+    <fragment android:name="com.google.android.gms.maps.MapFragment" android:id="@id/map" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/checkin_button_strip_height">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/checkin_lockout_text_size" android:gravity="center" android:id="@id/lockout_text" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/checkin_report_your_weather_again_later" weather:font="Roboto-Medium.ttf" />
+        <LinearLayout android:orientation="vertical" android:id="@id/report_your_weather" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/checkin_prompt_text_size" android:textColor="@color/checkin_map_blue" android:gravity="center" android:id="@id/prompt_text" android:layout_width="fill_parent" android:layout_height="@dimen/checkin_prompt_text_box_height" android:text="@string/checkin_report_your_weather" weather:font="Roboto-Medium.ttf" />
+            <HorizontalScrollView android:layout_gravity="center" android:id="@id/buttonStrip" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+                <LinearLayout android:gravity="top|center" android:orientation="horizontal" android:paddingLeft="@dimen/checkin_button_spacing" android:paddingBottom="@dimen/checkin_button_strip_bottom_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/checkin_button_thunderstorm" android:contentDescription="@string/checkin_icon_thunderstorm_phrase" style="@style/CheckinButton" />
+                    <ImageView android:id="@id/checkin_button_rain" android:contentDescription="@string/checkin_icon_rain_phrase" style="@style/CheckinButton" />
+                    <ImageView android:id="@id/checkin_button_hail" android:contentDescription="@string/checkin_icon_hail_phrase" style="@style/CheckinButton" />
+                    <ImageView android:id="@id/checkin_button_foggy" android:contentDescription="@string/checkin_icon_fog_phrase" style="@style/CheckinButton" />
+                    <ImageView android:id="@id/checkin_button_clear_day" android:contentDescription="@string/checkin_icon_sunny_phrase" style="@style/CheckinButton" />
+                    <ImageView android:id="@id/checkin_button_clear_night" android:contentDescription="@string/checkin_icon_clear_phrase" style="@style/CheckinButton" />
+                    <ImageView android:id="@id/checkin_button_partly_cloudy_day" android:contentDescription="@string/checkin_icon_partly_cloudy_phrase" style="@style/CheckinButton" />
+                    <ImageView android:id="@id/checkin_button_partly_cloudy_night" android:contentDescription="@string/checkin_icon_partly_cloudy_phrase" style="@style/CheckinButton" />
+                    <ImageView android:id="@id/checkin_button_cloudy" android:contentDescription="@string/checkin_icon_cloudy_phrase" style="@style/CheckinButton" />
+                    <ImageView android:id="@id/checkin_button_breezy" android:contentDescription="@string/checkin_icon_breezy_phrase" style="@style/CheckinButton" />
+                    <ImageView android:id="@id/checkin_button_snow" android:contentDescription="@string/checkin_icon_snow_phrase" style="@style/CheckinButton" />
+                    <ImageView android:id="@id/checkin_button_mix" android:contentDescription="@string/checkin_icon_snow_rain_phrase" style="@style/CheckinButton" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </FrameLayout>
+</com.weather.Weather.checkin.CheckinMapViewLayout>

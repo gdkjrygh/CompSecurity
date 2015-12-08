@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/chat_remove_text_view" />
+    <com.skype.android.widget.bubbles.BubbleRelativeLayout android:id="@id/async_media_content_layout" android:background="@drawable/chat_file_transfer_bubble_background" android:layout_width="@dimen/chat_file_transfer_bubble_size" android:layout_height="@dimen/chat_file_transfer_bubble_size">
+        <ImageView android:id="@id/async_media_content_thumbnail" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+        <RelativeLayout android:id="@id/action_progress_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.skype.android.widget.SymbolView android:textColor="@color/chat_picture_placeholder_color" android:id="@id/async_media_center_symbol" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/ChatXmmSymbol" />
+            <com.skype.android.widget.SymbolView android:textSize="@dimen/chat_file_transfer_action_button_large_size" android:textColor="@color/white" android:id="@id/async_media_action" android:background="@drawable/chat_file_transfer_icon_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <com.skype.android.widget.CircularProgressBar android:id="@id/async_media_progressbar" android:visibility="invisible" android:layout_width="@dimen/chat_file_transfer_progress_circle_size" android:layout_height="@dimen/chat_file_transfer_progress_circle_size" android:indeterminateOnly="false" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </com.skype.android.widget.bubbles.BubbleRelativeLayout>
+    <RelativeLayout android:id="@id/async_media_info" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/size_1_5x" android:layout_toRightOf="@id/async_media_content_layout">
+        <com.skype.android.widget.EllipsizingTextView android:ellipsize="middle" android:id="@id/async_media_filename" android:singleLine="true" style="@style/ChatFileTransferInfoDarkBold" />
+        <TextView android:id="@id/async_media_file_size" android:layout_below="@id/async_media_filename" style="@style/ChatFileTransferInfo" />
+        <TextView android:id="@id/async_media_action_text" android:layout_below="@id/async_media_file_size" style="@style/ChatFileTransferInfoAction" />
+    </RelativeLayout>
+</RelativeLayout>

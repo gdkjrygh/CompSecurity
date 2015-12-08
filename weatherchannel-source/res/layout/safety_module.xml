@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/module_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/safety_header" android:text="@string/safety_title" android:layout_alignParentLeft="true" style="@style/module_header" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/safety_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_below="@id/safety_header">
+        <FrameLayout android:id="@id/safety_and_preparedness_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/safety_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/safety" android:adjustViewBounds="true" android:contentDescription="@string/safety_description" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textColor="@color/hurricane_central_card_item_text_foreground" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/safety_and_preparedness_footer" android:background="@color/hurricane_central_card_item_text_background" android:paddingLeft="@dimen/hurricane_central_card_item_text_padding" android:paddingRight="@dimen/hurricane_central_card_item_text_padding" android:layout_width="fill_parent" android:layout_height="@dimen/hurricane_central_card_item_textview_height" android:text="@string/safety_and_preparedness" weather:font="Roboto-Medium.ttf" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/red_cross_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hurricane_central_card_item_layout_margin_left" android:layout_weight="1.0">
+            <ImageView android:id="@id/red_cross_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/red_cross" android:adjustViewBounds="true" android:contentDescription="@string/red_cross_description" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textColor="@color/hurricane_central_card_item_text_foreground" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/red_cross_footer" android:background="@color/hurricane_central_card_item_text_background" android:paddingLeft="@dimen/hurricane_central_card_item_text_padding" android:paddingRight="@dimen/hurricane_central_card_item_text_padding" android:layout_width="fill_parent" android:layout_height="@dimen/hurricane_central_card_item_textview_height" android:text="@string/red_cross_text" weather:font="Roboto-Medium.ttf" />
+        </FrameLayout>
+    </LinearLayout>
+    <Space android:layout_width="fill_parent" android:layout_height="@dimen/hurricane_central_card_bottom_spacer_height" android:layout_below="@id/safety_layout" />
+</RelativeLayout>

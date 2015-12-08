@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/bug_report_fragment_debug_info_container" android:paddingLeft="@dimen/default_gap" android:paddingRight="@dimen/default_gap" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                <TextView android:id="@id/bug_report_fragment_debug_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" />
+                <TextView android:textColor="@color/link_blue" android:id="@id/bug_report_fragment_click_to_send_to_self" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/bug_report_fragment_debug_info" android:layout_alignParentLeft="true" />
+                <ImageView android:id="@id/bug_report_fragment_screenshot" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_alignParentRight="true" />
+                <ImageView android:id="@id/bug_report_fragment_add_back_screenshot" android:visibility="gone" android:layout_width="64.0dip" android:layout_height="64.0dip" android:src="@drawable/bug_report_add_screenshot" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/bug_report_fragment_bug_description_container" android:paddingLeft="@dimen/default_gap" android:paddingRight="@dimen/default_gap" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/bug_report_fragment_debug_info_container">
+                <TextView android:textStyle="bold" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Please describe what happened:" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <EditText android:id="@id/bug_report_fragment_bug_description" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="Type or speak description" android:maxLines="3" android:layout_weight="1.0" android:inputType="textMultiLine" android:imeOptions="actionNext" />
+                    <ImageButton android:id="@id/speech_input" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/ic_btn_speak_now" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/bug_report_fragment_steps_to_repro_container" android:paddingLeft="@dimen/default_gap" android:paddingRight="@dimen/default_gap" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/bug_report_fragment_bug_description_container">
+                <TextView android:textStyle="bold" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="List the steps that lead to this bug:" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <EditText android:id="@id/bug_report_fragment_steps_to_repro" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="1. " android:maxLines="5" android:inputType="textMultiLine" android:imeOptions="actionNext" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/bug_report_fragment_extra_options_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="2.0" android:layout_below="@id/bug_report_fragment_steps_to_repro_container" style="?android:attr/buttonBarStyle">
+                <Button android:id="@id/bug_report_fragment_add_remote_recipient" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Remote Log" android:layout_weight="1.0" style="?android:attr/buttonBarButtonStyle" />
+                <Button android:id="@id/bug_report_fragment_can_repro" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Project" android:layout_weight="1.0" style="?android:attr/buttonBarButtonStyle" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <Button android:enabled="false" android:id="@id/bug_report_submit" android:text="SUBMIT" style="@style/RegistrationContinueButton" />
+</RelativeLayout>

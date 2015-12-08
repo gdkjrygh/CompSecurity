@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="@dimen/brief_card_title_high" layout="@layout/brief_card_title_layout" />
+    <FrameLayout android:layout_gravity="center" android:background="@drawable/home_brief_card_bg_selector" android:layout_width="fill_parent" android:layout_height="@dimen/brief_card_content_high">
+        <include android:id="@id/hour_trend" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/forecast_hour_trend" />
+        <TextView android:textSize="16.0dip" android:textColor="#c2ffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/brief_card_tap_for_more" android:background="@drawable/brief_card_tap_for_more" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/brief_card_tap_for_more" android:shadowDx="0.0" android:shadowDy="0.0" android:shadowRadius="8.0" />
+        <com.gau.go.launcherex.gowidget.weather.globalview.GoWeatherEXTextView android:textSize="14.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/no_weather_display" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:text="@string/weather_no_data_warn" android:drawableTop="@drawable/no_weather_display" android:drawablePadding="15.0dip" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,39 @@
+syntax = "proto2"; // Need proto2 for custom options
+
+package kik.validation;
+option java_package = "com.kik.protovalidation";
+
+import "google/protobuf/descriptor.proto";
+
+extend google.protobuf.FieldOptions {
+    // Note tag is just a random number between 50000-99999
+    // (see https://developers.google.com/protocol-buffers/docs/proto#customoptions)
+    optional FieldValidation field_validation = 76249;
+}
+
+message FieldValidation {
+    // TODO: Document semantics of this
+    optional bool mandatory = 1 [default = false];
+
+    optional string regex = 2;
+
+    //optional bool exclusive_min = 9 [default = false];
+    //optional bool exclusive_max = 10 [default = false];
+
+    // For strings:
+    //optional int32 min_codepoints = 3;
+    //optional int32 max_codepoints = 4;
+
+    // Valid for strings and byte arrays:
+    optional int32 min_byte_length = 5;
+    optional int32 max_byte_length = 6;
+
+    optional sfixed64 min_val = 7;
+    optional sfixed64 max_val = 8;
+
+    //optional double min_double_val = 11;
+    //optional double max_double_val = 12;
+
+    optional uint32 min_repetitions = 15;
+    optional uint32 max_repetitions = 16;
+}

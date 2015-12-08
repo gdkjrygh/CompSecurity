@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/pinner_vw" android:paddingBottom="@dimen/margin_half" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pinterest.ui.imageview.WebImageView android:id="@id/pinner_iv" android:layout_width="@dimen/thumbnail_small_round_size" android:layout_height="@dimen/thumbnail_small_round_size" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/title_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/add_comment" android:paddingLeft="@dimen/margin_half" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/comment_add_bubble" android:layout_alignParentRight="true" />
+            <TextView android:textSize="@dimen/pin_closeup_text_small" android:textStyle="bold" android:gravity="center" android:id="@id/comment_stats" android:background="@drawable/comment_stats_bubble" android:paddingBottom="@dimen/pin_closeup_small_spacing" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+            <TextView android:textColor="@color/text_light" android:id="@id/date_tv" android:paddingLeft="@dimen/margin_half" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/add_comment" />
+            <TextView android:textSize="@dimen/pin_closeup_text_default" android:textColor="@color/pin_closeup_text_dark" android:ellipsize="end" android:id="@id/pinner_name" android:paddingLeft="@dimen/pin_closeup_pinner_name_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin_quarter" android:maxLines="1" android:layout_toLeftOf="@id/add_comment" android:layout_alignParentLeft="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/comment_bubble" android:background="@drawable/closeup_comment_bubble_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_half">
+            <TextView android:textSize="@dimen/pin_closeup_text_default" android:textColor="@color/pin_closeup_text_dark" android:id="@id/pinner_comment" android:paddingLeft="@dimen/margin_half" android:paddingTop="@dimen/margin_half" android:paddingBottom="@dimen/margin_half" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

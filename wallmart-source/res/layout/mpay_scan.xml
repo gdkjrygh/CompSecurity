@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.walmartlabs.payment.view.SlidingUpPanelLayout android:gravity="bottom" android:id="@id/sliding_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true" sothree:umanoPanelHeight="@dimen/payment_drawer_closed_height" sothree:umanoShadowHeight="0.0dip" sothree:umanoFadeColor="@color/transparent" sothree:umanoOverlay="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sothree="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/mpay_barcode_scan" layout="@layout/mpay_barcode_scan" />
+        <View android:id="@id/mpay_barcode_scan_foreground" android:background="@drawable/mpay_scan_header_shadow" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include android:id="@id/mpay_barcode_scan_loading" layout="@layout/loading_layout_with_text" />
+    </FrameLayout>
+    <FrameLayout android:gravity="top|center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/mpay_scan_top_closed_bg" layout="@layout/mpay_scan_top_closed_bg" />
+        <include android:id="@id/mpay_scan_top_closed_fg" layout="@layout/mpay_scan_top_closed_fg" />
+        <LinearLayout android:orientation="vertical" android:id="@id/mpay_scan_open_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:id="@id/mpay_scan_header_top_open" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/mpay_scan_header_top_open" />
+            <include android:id="@id/mpay_scan_top_open" layout="@layout/mpay_scan_top_open" />
+            <ScrollView android:id="@id/mpay_drawer_list_container" android:background="@color/payment_background_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:background="@color/payment_background_drawer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.walmartlabs.ui.recycler.ListRecyclerView android:orientation="vertical" android:id="@id/mpay_drawer_list_cc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/payment_margin" android:layout_marginBottom="@dimen/payment_margin" />
+                    <TextView android:layout_gravity="left|center" android:id="@id/mpay_scan_cc_btn_add" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/payment_margin" android:layout_marginRight="@dimen/payment_margin" android:layout_marginBottom="@dimen/payment_margin" android:text="@string/mpay_scan_cc_btn_add" android:drawableLeft="@drawable/ic_add" android:drawablePadding="@dimen/payment_margin_small" style="@style/Payment.Text.Subhead.White" />
+                    <include android:id="@id/mpay_scan_assoc" layout="@layout/mpay_scan_assoc" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </FrameLayout>
+</com.walmartlabs.payment.view.SlidingUpPanelLayout>

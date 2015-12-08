@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/merger_layout" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/background_changer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+    <RelativeLayout android:id="@id/merger_lo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <RelativeLayout android:id="@id/merger_lo_cover" android:background="@drawable/bg_merge_repeat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <com.roidapp.photogrid.release.ProgressView android:id="@id/video_progressView" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/merger_lo_cover">
+        <com.roidapp.photogrid.video.HorizontalScrollViewEx android:id="@id/video_timeline" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="@dimen/video_timeline_item_height" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/video_play" android:background="@drawable/btn_video_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/video_watermark" android:layout_width="fill_parent" android:layout_height="@dimen/video_watermark_layout_height" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    <TextView android:textSize="@dimen/video_totaltime_textsize" android:typeface="sans" android:textColor="@color/text_white" android:gravity="center" android:id="@id/video_photos_tip" android:background="@drawable/bg_basebar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/video_watermark" android:layout_centerHorizontal="true" />
+</RelativeLayout>

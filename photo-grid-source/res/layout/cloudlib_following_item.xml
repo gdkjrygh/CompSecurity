@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="72.0dip">
+        <TextView android:textSize="18.0sp" android:textColor="#ff384828" android:gravity="right|center" android:id="@id/rank" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:minWidth="22.0dip" android:layout_centerVertical="true" />
+        <com.roidapp.baselib.view.RoundImageView android:id="@id/image_head" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_margin="16.0dip" android:layout_toRightOf="@id/rank" android:layout_centerVertical="true" />
+        <RelativeLayout android:id="@id/layout_followbtn" android:layout_width="100.0dip" android:layout_height="32.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:id="@id/btn_follow" android:background="@drawable/cloudlib_follow_bg" android:layout_width="86.0dip" android:layout_height="32.0dip" android:singleLine="true" android:layout_centerInParent="true" />
+            <ProgressBar android:id="@id/followProgress" android:layout_width="86.0dip" android:layout_height="30.0dip" android:layout_alignRight="@id/btn_follow" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <TextView android:textSize="15.0sp" android:textColor="#ff384828" android:ellipsize="end" android:gravity="left|center" android:id="@id/follow_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:maxLines="1" android:drawablePadding="16.0dip" android:layout_toLeftOf="@id/layout_followbtn" android:layout_toRightOf="@id/image_head" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:id="@id/line" android:background="@color/cloudlist_listview_divider_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</LinearLayout>

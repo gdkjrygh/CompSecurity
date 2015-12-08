@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/mainlayout" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/pharmacy_service_suspended" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip" style="@style/Rx.Text.Medium" />
+            <include android:id="@id/pharmacy_scan_to_refill" layout="@layout/pharmacy_home_orange_list_entry" />
+            <include android:id="@id/pharmacy_my_prescriptions" layout="@layout/pharmacy_home_orange_list_entry" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:baselineAligned="false">
+                <include android:id="@id/pharmacy_transfer_prescription" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="4.0dip" android:layout_weight="1.0" layout="@layout/pharmacy_home_blue_list_entry" />
+                <include android:id="@id/pharmacy_find_a_pharmacy" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:layout_weight="1.0" layout="@layout/pharmacy_home_blue_list_entry" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/pharmacy_four_dollar_prescriptions" android:background="@drawable/btn_hollow_home" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <ImageView android:id="@id/four_dollars_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/four_bucks_image" android:adjustViewBounds="true" android:layout_alignParentLeft="true" />
+                <TextView android:textSize="18.0sp" android:textColor="@color/pharmacy_home_light_blue_text" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/four_dollars_img" android:layout_centerVertical="true" style="@style/FontLight" />
+            </RelativeLayout>
+            <TextView android:textSize="12.0sp" android:textColor="@color/pharmacy_home_light_blue_text" android:gravity="center_horizontal" android:layout_gravity="bottom" android:id="@id/pharmacy_home_privacy_notice" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="10.0dip" android:text="@string/pharmacy_privacy_notice" />
+        </LinearLayout>
+    </ScrollView>
+    <include android:id="@id/loading_view" layout="@layout/loading_page" />
+</RelativeLayout>

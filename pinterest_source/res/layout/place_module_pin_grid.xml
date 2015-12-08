@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/image_cell_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/left_column" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin_extra_small" android:layout_weight="1.0">
+        <com.pinterest.ui.imageview.WebImageView android:id="@id/pin_iv_3" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" app:riv_corner_radius="0.0dip" />
+        <com.pinterest.ui.imageview.WebImageView android:id="@id/pin_iv_4" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/margin_extra_small" android:scaleType="centerCrop" app:riv_corner_radius="0.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/margin_extra_small" android:layout_weight="1.0">
+        <com.pinterest.ui.imageview.WebImageView android:id="@id/pin_iv_2" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" app:riv_corner_radius="0.0dip" />
+        <FrameLayout android:id="@id/image_wrapper_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/margin_extra_small">
+            <com.pinterest.ui.imageview.WebImageView android:id="@id/pin_iv_1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" app:riv_corner_radius="0.0dip" />
+            <ImageView android:id="@id/pin_count_dimming_layer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/dimming_layer" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/num_pins_wrapper" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:paddingTop="@dimen/place_pin_collection_text_padding" android:paddingRight="@dimen/place_pin_collection_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pin_collection" />
+                    <TextView android:id="@id/pin_count_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/pin_closeup_place_num_pins" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

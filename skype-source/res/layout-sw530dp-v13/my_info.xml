@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/skype_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/info_avatar_and_name" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.skype.android.widget.SquareImageView android:id="@id/info_avatar_image" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" android:contentDescription="@string/acc_avatar" />
+            <RelativeLayout android:id="@id/info_account_title_container" android:padding="@dimen/padding3b" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                <TextView android:textSize="@dimen/font_medium" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="end" android:id="@id/info_account_fullname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/font_medium" android:textColor="@color/white" android:id="@id/info_account_name" android:paddingBottom="@dimen/padding6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/info_account_fullname" android:layout_alignLeft="@id/info_account_fullname" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@id/info_mood_message_edit_container" android:background="@color/skype_blue" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/info_avatar_and_name">
+        <com.skype.android.widget.ChatEditText android:id="@id/info_mood_message_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/text_hint_enter_mood" android:maxLines="5" android:inputType="textMultiLine" android:imeOptions="actionDone" style="@style/ProfileMoodMessageText" />
+        <com.skype.android.widget.SymbolView android:textSize="@dimen/my_info_emoticon_symbol_size" android:textColor="@color/text_button_colors" android:id="@id/mood_emoticon_button" android:focusable="true" android:focusableInTouchMode="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/acc_add_emoticon" app:symbol_code="EmoticonStroke" style="@style/ChatMessageEmoticonBtn" />
+    </RelativeLayout>
+    <include android:id="@id/info_account_status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding2b" android:layout_below="@id/info_mood_message_edit_container" layout="@layout/my_info_status_sublayout" />
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/info_account_status" android:layout_alignParentBottom="true">
+        <include android:id="@id/info_skype_credit_button" android:layout_width="fill_parent" android:layout_height="@dimen/my_profile_button_size" layout="@layout/my_info_button" />
+        <include android:id="@id/info_view_account_button" android:layout_width="fill_parent" android:layout_height="@dimen/my_profile_button_size" layout="@layout/my_info_button" />
+        <include android:id="@id/info_signout_button" android:layout_width="fill_parent" android:layout_height="@dimen/my_profile_button_size" layout="@layout/my_info_button" />
+    </LinearLayout>
+</RelativeLayout>

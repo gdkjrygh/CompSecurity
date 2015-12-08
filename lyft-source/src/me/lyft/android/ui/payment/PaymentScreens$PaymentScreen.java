@@ -1,0 +1,19 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package me.lyft.android.ui.payment;
+
+
+public class een extends een
+{
+
+    public een()
+    {
+    }
+
+    public een(String s)
+    {
+        super(s);
+    }
+}

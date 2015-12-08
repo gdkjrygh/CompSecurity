@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/mm_preview_controls_background" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:moviemaker="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/mm_accessibility_announcement_view" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/mm_timeline" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/mm_unit" android:paddingTop="@dimen/mm_small_unit_3" android:paddingRight="@dimen/mm_unit" android:paddingBottom="@dimen/mm_small_unit_3" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageButton android:layout_gravity="left" android:id="@id/mm_timeline_cancel" android:background="@color/mm_transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_clear_white_24" android:contentDescription="@string/mm_content_cancel_timeline" />
+            </FrameLayout>
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageButton android:layout_gravity="center" android:id="@id/mm_timeline_add_asset" android:background="@color/mm_transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_add_to_photos_white_24" />
+            </FrameLayout>
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/mm_timeline_controls" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="4.0">
+                <ImageButton android:id="@id/mm_timeline_crop" android:background="@color/mm_transparent" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_content_cut_white_18" android:layout_weight="2.0" android:contentDescription="@string/mm_content_trim_clip" />
+                <ImageButton android:id="@id/mm_timeline_remove" android:background="@color/mm_transparent" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/remove_button" android:layout_weight="2.0" android:contentDescription="@string/mm_content_delete_clip" />
+            </LinearLayout>
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageButton android:layout_gravity="right" android:id="@id/mm_timeline_save" android:background="@color/mm_transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_check_white_24" android:contentDescription="@string/mm_content_save_timeline" />
+            </FrameLayout>
+        </LinearLayout>
+        <com.google.android.apps.moviemaker.ui.StoryboardStripView android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/mm_storyboard_strip_view" android:layout_width="fill_parent" android:layout_height="@dimen/mm_storyboard_editor_item_height" moviemaker:itemSpacing="@dimen/mm_editor_item_spacing" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/mm_editor_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.apps.moviemaker.ui.ActionBarShadow android:id="@id/mm_action_bar_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

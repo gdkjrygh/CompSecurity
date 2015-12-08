@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/map_tile" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.accuweather.android.views.MyImageView android:id="@id/image_tile" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="-20.0dip" android:src="@drawable/add_box" android:scaleType="fitXY" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/add" android:layout_centerInParent="true" />
+        <View android:id="@id/touch_overlay" android:background="@drawable/abs__list_selector_holo_light" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="9.0dip" android:src="@drawable/indented_arrow" android:scaleType="fitXY" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip">
+        <TextView android:textSize="12.0dip" android:id="@id/add_location_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="3.0dip" android:text="@string/AddLocation" />
+        <RelativeLayout android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/home_location_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0dip" android:src="@drawable/ic_homelocation" android:layout_alignParentLeft="true" />
+        </RelativeLayout>
+        <TextView android:textSize="12.0dip" android:textStyle="bold" android:textColor="@color/secondary_text" android:id="@id/current_location_text" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="3.0dip" />
+    </LinearLayout>
+</LinearLayout>

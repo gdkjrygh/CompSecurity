@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:focusable="true" card_view:cardBackgroundColor="@android:color/white" card_view:cardCornerRadius="@dimen/photos_assistant_cardui_corner_radius" style="@style/AssistantCardBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_gravity="left|center" android:id="@id/title" android:paddingLeft="@dimen/photos_assistant_cardui_text_linear_layout_padding" android:paddingTop="@dimen/photos_assistant_cardui_text_linear_layout_padding" android:paddingRight="@dimen/photos_assistant_cardui_text_end_padding" android:paddingBottom="@dimen/photos_assistant_cardui_text_linear_layout_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" style="@style/quantum_text_subhead_black" />
+            <include layout="@layout/assistant_card_overflow_button" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/photos_assistant_cardui_overlay_photo_height">
+            <com.google.android.apps.photos.assistant.cardui.CardPhotoView android:id="@id/photo_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/accessibility_photo_button" />
+            <ImageView android:background="@color/photos_assistant_cardui_black_30_percent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:id="@id/assistantCardButtonBar" android:layout_alignParentBottom="true" style="@style/AssistantCardButtonLinearLayout">
+                <Button android:id="@id/primary_button" style="@style/AssistantCardButtonWhite" />
+                <Button android:id="@id/secondary_button" style="@style/AssistantCardButtonWhite" />
+            </LinearLayout>
+            <TextView android:id="@id/description" android:paddingLeft="@dimen/photos_assistant_cardui_text_linear_layout_padding" android:paddingRight="@dimen/photos_assistant_cardui_text_linear_layout_padding" android:paddingBottom="@dimen/photos_assistant_cardui_text_linear_layout_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/assistantCardButtonBar" style="@style/quantum_text_subhead_white" />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

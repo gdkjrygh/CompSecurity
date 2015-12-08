@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.help.HelpView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.controls.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:id="@id/faq_section_button" android:text="@string/help_faq_section" style="@style/HelpCellButton" />
+        <Button android:id="@id/roadside_assistance_section_button" android:text="@string/roadside_assistance_section" style="@style/HelpCellButton" />
+        <Button android:id="@id/legal_section_button" android:text="@string/help_legal_section" style="@style/HelpCellButton" />
+        <Button android:id="@id/jobs_section_button" android:text="@string/help_jobs_section" style="@style/HelpCellButton" />
+        <View android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" style="@style/SplitterMaterial" />
+        <LinearLayout android:orientation="vertical" android:id="@id/app_version_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:soundEffectsEnabled="false">
+            <TextView android:layout_marginLeft="16.0dip" android:layout_marginTop="8.0dip" android:text="@string/help_app_version" style="@style/HeaderText" />
+            <TextView android:id="@id/app_version_txt" android:layout_marginLeft="16.0dip" android:layout_marginBottom="8.0dip" style="@style/TertiaryText" />
+        </LinearLayout>
+        <TextView android:id="@id/developer_mode_title" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:soundEffectsEnabled="false" style="@style/TertiaryText" />
+    </LinearLayout>
+</me.lyft.android.ui.help.HelpView>

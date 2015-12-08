@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/white_bg_corner" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/update_tittle" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+    <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/update_grey" android:id="@id/updatev_tittle" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/new_update_available" />
+    <ScrollView android:id="@id/dialog_check_result_scrollview" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginTop="16.0dip">
+        <RelativeLayout android:id="@id/dialog_check_result_relativelayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/message_text_size" android:textColor="@color/update_gray" android:id="@id/textView2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:text="@string/localversion" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="?android:attr/dialogPreferenceStyle" />
+            <TextView android:textSize="@dimen/message_text_size" android:textColor="@color/update_gray" android:id="@id/localversion" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="43.0dip" android:text="local" android:layout_toRightOf="@id/textView2" android:layout_alignBaseline="@id/textView2" android:layout_alignBottom="@id/textView2" />
+            <TextView android:textSize="@dimen/message_text_size" android:textColor="@color/update_gray" android:id="@id/updateversion" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/checking" android:layout_alignLeft="@id/localversion" android:layout_alignTop="@id/textView1" android:layout_alignBottom="@id/textView1" />
+            <TextView android:textSize="@dimen/message_text_size" android:textColor="@color/update_gray" android:id="@id/updatenew" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/textView2" />
+            <TextView android:textSize="@dimen/message_text_size" android:textColor="@color/update_gray" android:id="@id/textView1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/updateversion" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="35.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="24.0dip">
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/update_cancel" android:background="@drawable/grey_bg_corner" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/cancel" android:layout_weight="8.0" />
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/update_install" android:background="@drawable/green_bg_corner" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/install_now" android:layout_weight="8.0" />
+    </LinearLayout>
+</LinearLayout>

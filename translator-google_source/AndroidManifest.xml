@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.google.android.apps.translate" platformBuildVersionCode="23" platformBuildVersionName="6.0-2166767">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:maxSdkVersion="22" android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@mipmap/product_logo_translate_launcher_color_48" android:label="@string/app_name" android:name="com.google.android.apps.translate.TranslateApplication" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.google.android.apps.translate.TranslateActivity" android:theme="@style/AppTheme.Launcher" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="translate.google.com" android:path="/" android:scheme="http"/>
+                <data android:host="translate.google.com" android:path="/" android:scheme="https"/>
+                <data android:host="translate.google.com" android:path="/m" android:scheme="http"/>
+                <data android:host="translate.google.com" android:path="/m" android:scheme="https"/>
+                <data android:host="translate.google.com" android:path="/m/translate" android:scheme="http"/>
+                <data android:host="translate.google.com" android:path="/m/translate" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="*" android:path="/with_inputmethod" android:scheme="googletranslate"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:label="@string/input_bar_hint" android:name="com.google.android.apps.translate.QuickTranslateActivity" android:theme="@16974393">
+            <intent-filter>
+                <action android:name="android.intent.action.PROCESS_TEXT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.userfeedback.android.api.UserFeedbackActivity" android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="adjustResize"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.userfeedback.android.api.PreviewActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.userfeedback.android.api.ShowTextActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.userfeedback.android.api.ShowStringListActivity" android:theme="@android:style/Theme.Dialog"/>
+        <service android:exported="false" android:name="com.google.userfeedback.android.api.SendUserFeedbackService"/>
+        <receiver android:enabled="false" android:exported="true" android:name="com.google.userfeedback.android.api.FeedbackConnectivityReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:hardwareAccelerated="false" android:label="@string/label_product_guide" android:name="com.google.android.apps.translate.help.TourActivity" android:screenOrientation="sensorPortait" android:theme="@style/TourTheme"/>
+        <activity android:exported="false" android:label="@string/open_source_licenses" android:name="com.google.android.apps.translate.help.LicensesActivity" android:theme="@style/DialogTheme"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.apps.translate.help.HelpActivity" android:theme="@style/AppTitleTheme"/>
+        <service android:exported="false" android:name="com.google.android.libraries.translate.sync.PhraseSyncService"/>
+        <service android:name="com.google.analytics.tracking.android.CampaignTrackingService"/>
+        <receiver android:exported="true" android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:label="@string/menu_settings" android:name="com.google.android.apps.translate.pref.PrefsActivity" android:theme="@style/AppTitleTheme"/>
+        <activity android:exported="false" android:label="@string/label_manage_offline_pkg" android:name="com.google.android.apps.translate.pref.OfflineActivity" android:theme="@style/AppTitleTheme"/>
+        <activity android:exported="false" android:label="@string/label_manage_wordlens_pkg" android:name="com.google.android.apps.translate.pref.WLOfflineActivity" android:theme="@style/AppTitleTheme"/>
+        <receiver android:exported="true" android:name="com.google.android.apps.translate.offline.OfflineDownloadReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED"/>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.google.android.libraries.translate.offline.PackageProcessService"/>
+        <receiver android:exported="true" android:name="com.google.android.apps.translate.TranslateAPIReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT"/>
+                <data android:host="*" android:path="/lang_pair" android:scheme="googletranslate"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:host="*" android:path="/support_for_lang" android:scheme="googletranslate"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="true" android:name="com.google.android.apps.translate.LauncherShortcuts" android:theme="@style/ShortcutConfigTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

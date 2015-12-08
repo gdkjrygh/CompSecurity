@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/picker_tab_side_margin" android:paddingRight="@dimen/picker_tab_side_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/mru_empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/font_medium" android:textColor="@color/skype_light_grey" android:gravity="center" android:id="@id/mru_empty_text" android:padding="@dimen/size_2_5x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/mru_content_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/picker_sections_divider" />
+            <LinearLayout android:orientation="vertical" android:id="@id/mru_rows_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/size_0_5x" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

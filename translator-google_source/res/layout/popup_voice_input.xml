@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ns="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/lang_bar" android:padding="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_alignParentBottom="true">
+        <com.google.android.apps.translate.widget.VoiceLangButton android:ellipsize="end" android:gravity="center" android:id="@id/lang1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/voice_lang_1" />
+        <com.google.android.apps.translate.widget.VoiceLangButton android:ellipsize="start" android:gravity="center" android:id="@id/lang2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/voice_lang_2" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/cards_holder" android:background="@android:color/white" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:id="@id/input_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <com.google.android.apps.translate.widget.WordWrapInput android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/voice_active_color" android:gravity="top" android:id="@id/txt_recognized" android:background="@null" android:paddingLeft="@dimen/voice_input_padding" android:paddingTop="@dimen/voice_input_top_padding" android:paddingRight="@dimen/voice_input_padding" android:paddingBottom="@dimen/voice_input_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0" android:inputType="textMultiLine" android:privateImeOptions="nm" android:imeOptions="actionDone" style="@style/EditorTextStyle">
+                    <requestFocus />
+                </com.google.android.apps.translate.widget.WordWrapInput>
+                <com.google.android.apps.translate.widget.TintImageView android:layout_gravity="top" android:id="@id/btn_clear_input" android:visibility="invisible" android:clickable="true" android:layout_width="48.0dip" android:layout_height="48.0dip" android:contentDescription="@string/label_cancel_input" ns:mask="@drawable/ic_clear_black" ns:tint="@color/icon_dark_clickable" ns:iconSize="24.0dip" />
+            </LinearLayout>
+            <View android:id="@id/divider" android:background="@color/activity_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/source_target_divider_size" />
+            <LinearLayout android:id="@id/result_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/voice_translation_color" android:id="@id/txt_translated" android:background="@drawable/bg_voice_result_card" android:paddingLeft="@dimen/voice_input_padding" android:paddingTop="@dimen/voice_input_top_padding" android:paddingRight="@dimen/voice_input_padding" android:paddingBottom="@dimen/voice_input_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/voice_translated_text" />
+                <RelativeLayout android:background="@drawable/bg_clickable_blue" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <com.google.android.apps.translate.widget.TintImageView android:id="@id/btn_fullscreen" android:background="@drawable/bg_clickable_blue" android:visibility="invisible" android:layout_width="@dimen/default_touch_target" android:layout_height="@dimen/default_touch_target" android:scaleType="center" android:layout_alignParentTop="true" android:contentDescription="@string/label_fullscreen" ns:mask="@drawable/ic_fullscreen_black" ns:tint="@color/icon_dark_clickable" />
+                    <ImageView android:id="@id/img_arrow" android:visibility="invisible" android:layout_width="@dimen/default_touch_target" android:layout_height="@dimen/default_touch_target" android:src="@drawable/ic_forward_link" android:scaleType="center" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.apps.translate.widget.VoiceButton android:layout_gravity="center_horizontal" android:id="@id/btn_voice_drop_down" android:visibility="invisible" android:layout_width="@dimen/voice_button_size" android:layout_height="@dimen/voice_button_size" />
+    </LinearLayout>
+    <ViewStub android:id="@id/fullscreen_stub" android:layout="@layout/popup_voice_fullscreen" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.translate.widget.PulseView android:id="@id/img_pulse" android:visibility="gone" android:layout_width="@dimen/pulse_width" android:layout_height="@dimen/pulse_height" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <com.google.android.apps.translate.widget.VoiceButton android:id="@id/btn_voice" android:visibility="gone" android:layout_width="@dimen/voice_button_size" android:layout_height="@dimen/voice_button_size" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:contentDescription="@string/msg_tap_to_speak_description" />
+</RelativeLayout>

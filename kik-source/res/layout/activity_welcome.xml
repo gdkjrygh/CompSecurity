@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:kik="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/kik_banner" android:background="#ffff0000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/background" android:scaleType="centerCrop" />
+    <ScrollView android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_below="@id/back_button">
+        <FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:paddingLeft="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:layout_marginBottom="50.0dip" android:src="@drawable/logo_big" android:scaleType="centerInside" android:layout_weight="1.0" />
+                <kik.android.widget.RobotoTextView android:textSize="20.0dip" android:typeface="sans" android:textColor="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="-25.0dip" android:text="@string/ask_new_to_kik" kik:font_type="light" />
+                <kik.android.widget.RobotoTextView android:textSize="18.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@id/register_button" android:background="@xml/register_button_selector" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="18.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="25.0dip" android:text="@string/title_register" />
+                <kik.android.widget.RobotoTextView android:textSize="20.0dip" android:textColor="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="@string/ask_already_have_a_kik_account" kik:font_type="light" />
+                <kik.android.widget.RobotoTextView android:textSize="18.0dip" android:textColor="#ff474747" android:gravity="center" android:id="@id/login_button" android:background="@xml/button_white_selector" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="18.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="15.0dip" android:text="@string/title_log_in" />
+                <kik.android.widget.RobotoTextView android:textSize="14.0dip" android:textColor="@color/white" android:gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_marginBottom="15.0dip" android:text="@string/made_with_love_in_waterloo" />
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+</FrameLayout>

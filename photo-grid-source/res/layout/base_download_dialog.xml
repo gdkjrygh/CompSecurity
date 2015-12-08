@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/download_retry_text_size" android:textColor="@color/download_text" android:id="@id/download_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:text="@string/base_download_text" />
+        <TextView android:textSize="@dimen/download_retry_text_size" android:textColor="@color/download_text" android:id="@id/download_text_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="75.0dip">
+        <ProgressBar android:id="@id/download_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip" android:max="100" android:progress="0" android:progressDrawable="@drawable/border_seek_bar" android:layout_centerInParent="true" style="?android:attr/progressBarStyleHorizontal" />
+        <ImageView android:id="@id/download_refresh" android:background="@drawable/btn_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="1.0px">
+        <View android:background="@drawable/downloadspliteline" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/download_cancel" android:background="@drawable/btn_save" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <TextView android:textSize="@dimen/download_retry_text_size" android:textColor="@color/white" android:id="@id/download_cancel_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/base_download_cancel" />
+    </LinearLayout>
+</LinearLayout>

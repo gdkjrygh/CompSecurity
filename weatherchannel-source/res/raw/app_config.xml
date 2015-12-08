@@ -1,0 +1,1908 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="app_config_schema.xsd">
+    <Tessera><!-- Tessera 3.0 configuration, and target Tessera service configuration -->
+        <Version>3.0</Version>
+        <Domain>http://t.imwx.com</Domain>
+        <Release>201109</Release>
+        <Culture>en-US</Culture>
+        <MemberID>0009</MemberID>
+        <MapID>0001</MapID>
+    </Tessera>
+
+    <Overlays>
+        <Overlay>
+            <OverlayID>10</OverlayID>
+            <Name locale="en">Alerts Overlay (US and Canada)</Name>
+            <Name locale="ar">تنبيهات التراكبات (الولايات المتحدة وكندا)</Name>
+            <Name locale="ca">Superposició d&apos;avisos (EUA i Canadà)</Name>
+            <Name locale="cs">Překryvná vrstva upozornění (USA a Kanada)</Name>
+            <Name locale="da">Alarmtilretninger (USA og Canada)</Name>
+            <Name locale="de">Eingeblendete Warnungen (US und Kanada)</Name>
+            <Name locale="el">Υπέρθεση ειδοποιήσεων (Η.Π.Α. και Καναδάς)</Name>
+            <Name locale="en-rGB">Alerts Overlay (US and Canada)</Name>
+            <Name locale="es">Alertas (EE.UU. y Canadá)</Name>
+            <Name locale="fa">همپوشانی هشدارها (آمریکا و کانادا)</Name>
+            <Name locale="fi">Hälytyskerros (Yhdysvallat ja Kanada)</Name>
+            <Name locale="fr">Incrustations d&apos;alertes (États-Unis et Canada)</Name>
+            <Name locale="he">שכבת-על של התראות (ארה״ב וקנדה)</Name>
+            <Name locale="hi">अलर्ट  ओवरले(यूएस  और  कनाडा)</Name>
+            <Name locale="hr">Nadsloj upozorenja (SAD i Kanada)</Name>
+            <Name locale="hu">Jelzésátfedések (USA és Kanada)</Name>
+            <Name locale="id">Peringatan Hamparan (AS dan Kanada)</Name>
+            <Name locale="it">Banner allerte (Stati Uniti e Canada)</Name>
+            <Name locale="ja">警告オーバーレイ（米国およびカナダ）</Name>
+            <Name locale="ko">알림 오버레이(미국 및 캐나다)</Name>
+            <Name locale="ms">Tindihan Atas Amaran (AS dan Kanada)</Name>
+            <Name locale="nl">Waarschuwingen-overlay (VS en Canada)</Name>
+            <Name locale="no">Varslingsoverlegg (USA og Canada)</Name>
+            <Name locale="pl">Nakładka ostrzeżeń (USA i Kanada)</Name>
+            <Name locale="pt-rBR">Camadas de Alertas (EUA e Canadá)</Name>
+            <Name locale="pt">Sobreposição de alertas (EUA e Canadá)</Name>
+            <Name locale="ro">Suprapunere alerte (S.U.A și Canada)</Name>
+            <Name locale="ru">Наложение уведомлений (США и Канада)</Name>
+            <Name locale="sk">Vrstva pre výstrahy (USA a Kanda)</Name>
+            <Name locale="sv">Lager för varningar (USA och Kanada)</Name>
+            <Name locale="th">ซ้อนทับการแจ้งเตือน (อเมริกาและแคนาดา)</Name>
+            <Name locale="tr">Uyarılar Katmanı (ABD ve Kanada)</Name>
+            <Name locale="uk">Схема попереджень (США і Канада)</Name>
+            <Name locale="vi">Lớp phủ Cảnh báo (Hoa Kỳ và Canada)</Name>
+            <Name locale="zh-rCN">提醒叠层（美国和加拿大）</Name>
+            <Name locale="zh-rTW">提醒重疊（美國和加拿大）</Name>
+            <Polling units="sec">600</Polling>
+            <Decluttering>FALSE</Decluttering>
+            <Categories>
+                <Category ID="0121">
+                    <Name locale="en">Tropical</Name>
+                    <Name locale="ar">استوائيl</Name>
+                    <Name locale="ca">Tropical</Name>
+                    <Name locale="cs">Tropické</Name>
+                    <Name locale="da">Tropisk</Name>
+                    <Name locale="de">Tropen</Name>
+                    <Name locale="el">Τροπικά</Name>
+                    <Name locale="en-rGB">Tropical</Name>
+                    <Name locale="es">Tormenta tropical</Name>
+                    <Name locale="fa">استوایی</Name>
+                    <Name locale="fi">Trooppiset</Name>
+                    <Name locale="fr">Tropical</Name>
+                    <Name locale="he">מזג אוויר טרופי</Name>
+                    <Name locale="hi">उष्णकटिबंधीय</Name>
+                    <Name locale="hr">Tropsko područje</Name>
+                    <Name locale="hu">Trópusi</Name>
+                    <Name locale="id">Tropis</Name>
+                    <Name locale="it">Tropicale</Name>
+                    <Name locale="ja">熱帯</Name>
+                    <Name locale="ko">회귀선</Name>
+                    <Name locale="ms">Tropika</Name>
+                    <Name locale="nl">Tropisch</Name>
+                    <Name locale="no">Tropisk</Name>
+                    <Name locale="pl">Zwrotnikowe</Name>
+                    <Name locale="pt-rBR">Tropical</Name>
+                    <Name locale="pt">Tropical</Name>
+                    <Name locale="ro">Tropicale</Name>
+                    <Name locale="ru">Тропические</Name>
+                    <Name locale="sk">Tropické</Name>
+                    <Name locale="sv">Tropiskt väder</Name>
+                    <Name locale="th">เขตร้อน</Name>
+                    <Name locale="tr">Tropikal</Name>
+                    <Name locale="uk">Тропічні</Name>
+                    <Name locale="vi">Khu vực nhiệt đới</Name>
+                    <Name locale="zh-rCN">热带</Name>
+                    <Name locale="zh-rTW">熱帶</Name>
+                    <FeatureID>WatchWarningTropical</FeatureID>
+                </Category>
+                <Category ID="0123">
+                    <Name locale="en">Severe Storms</Name>
+                    <Name locale="ar">عواصف قاسية</Name>
+                    <Name locale="ca">Tempestes fortes</Name>
+                    <Name locale="cs">Silné bouřky</Name>
+                    <Name locale="da">Hårde storme</Name>
+                    <Name locale="de">Unwetter</Name>
+                    <Name locale="el">Επικίνδυνες καταιγίδες</Name>
+                    <Name locale="en-rGB">Severe Storms</Name>
+                    <Name locale="es">Tormentas fuertes</Name>
+                    <Name locale="fa">توفان های شدید</Name>
+                    <Name locale="fi">Voimakkaat myrskyt</Name>
+                    <Name locale="fr">Forts orages</Name>
+                    <Name locale="he">סופות קשות</Name>
+                    <Name locale="hi">भयंकर  तूफान</Name>
+                    <Name locale="hr">Snažne oluje</Name>
+                    <Name locale="hu">Súlyos vihar</Name>
+                    <Name locale="id">Badai Parah</Name>
+                    <Name locale="it">Forti tempeste</Name>
+                    <Name locale="ja">暴風雨</Name>
+                    <Name locale="ko">폭풍</Name>
+                    <Name locale="ms">Ribut Teruk</Name>
+                    <Name locale="nl">Zware stormen</Name>
+                    <Name locale="no">Alvorlig Stormer</Name>
+                    <Name locale="pl">Silne burze</Name>
+                    <Name locale="pt-rBR">Tempestades Rigorosas</Name>
+                    <Name locale="pt">Tesmpestades fortes</Name>
+                    <Name locale="ro">Furtuni severe</Name>
+                    <Name locale="ru">сильные бури</Name>
+                    <Name locale="sk">Silné búrky</Name>
+                    <Name locale="sv">Kraftiga stormar</Name>
+                    <Name locale="th">พายุระดับรุนแรง</Name>
+                    <Name locale="tr">Kuvvetli Fırtına</Name>
+                    <Name locale="uk">Сильні бурі</Name>
+                    <Name locale="vi">Bão Mạnh</Name>
+                    <Name locale="zh-rCN">恶劣风暴</Name>
+                    <Name locale="zh-rTW">嚴重暴風雪</Name>
+                    <FeatureID>WatchWarningThunderstorm</FeatureID>
+                </Category>
+                <Category ID="0124">
+                    <Name locale="en">Floods</Name>
+                    <Name locale="ar">Fفيضانات</Name>
+                    <Name locale="ca">Inundacions</Name>
+                    <Name locale="cs">Záplavy</Name>
+                    <Name locale="da">Oversvømmelser</Name>
+                    <Name locale="de">Überschwemmungen</Name>
+                    <Name locale="el">Πλημμύρες</Name>
+                    <Name locale="en-rGB">Floods</Name>
+                    <Name locale="es">Inundaciones</Name>
+                    <Name locale="fa">سیل</Name>
+                    <Name locale="fi">Tulvat</Name>
+                    <Name locale="fr">Inondations</Name>
+                    <Name locale="he">שיטפונות</Name>
+                    <Name locale="hi">बाढ़</Name>
+                    <Name locale="hr">Poplave</Name>
+                    <Name locale="hu">Áradások</Name>
+                    <Name locale="id">Banjir</Name>
+                    <Name locale="it">Inondazioni</Name>
+                    <Name locale="ja">洪水</Name>
+                    <Name locale="ko">홍수</Name>
+                    <Name locale="ms">Banjir</Name>
+                    <Name locale="nl">Overstromingen</Name>
+                    <Name locale="no">Flom</Name>
+                    <Name locale="pl">Powodzie</Name>
+                    <Name locale="pt-rBR">Enchentes</Name>
+                    <Name locale="pt">Cheias</Name>
+                    <Name locale="ro">Inundații</Name>
+                    <Name locale="ru">Наводнения</Name>
+                    <Name locale="sk">Záplavy</Name>
+                    <Name locale="sv">Översvämningar</Name>
+                    <Name locale="th">น้ำท่วม</Name>
+                    <Name locale="tr">Sel</Name>
+                    <Name locale="uk">Повені</Name>
+                    <Name locale="vi">Lũ lụt</Name>
+                    <Name locale="zh-rCN">洪水</Name>
+                    <Name locale="zh-rTW">洪水</Name>
+                    <FeatureID>WatchWarningFlood</FeatureID>
+                </Category>
+                <Category ID="0125">
+                    <Name locale="en">Winter</Name>
+                    <Name locale="ar">مطر</Name>
+                    <Name locale="ca">Hivern</Name>
+                    <Name locale="cs">Zima</Name>
+                    <Name locale="da">Vinter</Name>
+                    <Name locale="de">Winter</Name>
+                    <Name locale="el">Χειμώνας</Name>
+                    <Name locale="en-rGB">Winter</Name>
+                    <Name locale="es">Tiempo invernal</Name>
+                    <Name locale="fa">زمستان</Name>
+                    <Name locale="fi">Talvi</Name>
+                    <Name locale="fr">Hiver</Name>
+                    <Name locale="he">חורף</Name>
+                    <Name locale="hi">सर्दी</Name>
+                    <Name locale="hr">Zima</Name>
+                    <Name locale="hu">Tél</Name>
+                    <Name locale="id">Musim Dingin</Name>
+                    <Name locale="it">Inverno</Name>
+                    <Name locale="ja">冬季</Name>
+                    <Name locale="ko">겨울</Name>
+                    <Name locale="ms">Musim Sejuk</Name>
+                    <Name locale="nl">Winters</Name>
+                    <Name locale="no">Vinter</Name>
+                    <Name locale="pl">Zima</Name>
+                    <Name locale="pt-rBR">Inverno</Name>
+                    <Name locale="pt">Inverno</Name>
+                    <Name locale="ro">Iarnă</Name>
+                    <Name locale="ru">Зимние бури</Name>
+                    <Name locale="sk">Zima</Name>
+                    <Name locale="sv">Vinter</Name>
+                    <Name locale="th">ฤดูหนาว</Name>
+                    <Name locale="tr">Kış</Name>
+                    <Name locale="uk">Зимові</Name>
+                    <Name locale="vi">Mùa đông</Name>
+                    <Name locale="zh-rCN">冬季</Name>
+                    <Name locale="zh-rTW">冬季</Name>
+                    <FeatureID>WatchWarningWinter</FeatureID>
+                </Category>
+                <Category ID="0126">
+                    <Name locale="en">Marine</Name>
+                    <Name locale="ar">بحري</Name>
+                    <Name locale="ca">Marina</Name>
+                    <Name locale="cs">Námořní</Name>
+                    <Name locale="da">Havet</Name>
+                    <Name locale="de">Auf See</Name>
+                    <Name locale="el">Θάλασσα</Name>
+                    <Name locale="en-rGB">Marine</Name>
+                    <Name locale="es">Temporal marítimo</Name>
+                    <Name locale="fa">دریایی</Name>
+                    <Name locale="fi">Meri</Name>
+                    <Name locale="fr">Mer</Name>
+                    <Name locale="he">טמפרטורת הים</Name>
+                    <Name locale="hi">समुद्री</Name>
+                    <Name locale="hr">Pomorje</Name>
+                    <Name locale="hu">Tengeri</Name>
+                    <Name locale="id">Laut</Name>
+                    <Name locale="it">Marittima</Name>
+                    <Name locale="ja">海上</Name>
+                    <Name locale="ko">해양</Name>
+                    <Name locale="ms">Marin</Name>
+                    <Name locale="nl">Scheepvaart</Name>
+                    <Name locale="no">Marin</Name>
+                    <Name locale="pl">Sytuacja na morzu</Name>
+                    <Name locale="pt-rBR">Marinho</Name>
+                    <Name locale="pt">Marítimo</Name>
+                    <Name locale="ro">Maritime</Name>
+                    <Name locale="ru">Морская погода</Name>
+                    <Name locale="sk">Moreplavba</Name>
+                    <Name locale="sv">Havsväder</Name>
+                    <Name locale="th">ทะเล</Name>
+                    <Name locale="tr">Deniz</Name>
+                    <Name locale="uk">На морі</Name>
+                    <Name locale="vi">Biển</Name>
+                    <Name locale="zh-rCN">海洋</Name>
+                    <Name locale="zh-rTW">海洋</Name>
+                    <FeatureID>WatchWarningMarine</FeatureID>
+                </Category>
+                <Category ID="0127">
+                    <Name locale="en">Other</Name>
+                    <Name locale="ar">آخر</Name>
+                    <Name locale="ca">Altres</Name>
+                    <Name locale="cs">Jiné</Name>
+                    <Name locale="da">Andet</Name>
+                    <Name locale="de">Andere</Name>
+                    <Name locale="el">Άλλα</Name>
+                    <Name locale="en-rGB">Other</Name>
+                    <Name locale="es">Otra</Name>
+                    <Name locale="fa">سایر</Name>
+                    <Name locale="fi">Muut</Name>
+                    <Name locale="fr">Autre</Name>
+                    <Name locale="he">אחר</Name>
+                    <Name locale="hi">अन्य</Name>
+                    <Name locale="hr">Ostalo</Name>
+                    <Name locale="hu">Egyéb</Name>
+                    <Name locale="id">Lainnya</Name>
+                    <Name locale="it">Altro</Name>
+                    <Name locale="ja">その他</Name>
+                    <Name locale="ko">기타</Name>
+                    <Name locale="ms">Lain-lain</Name>
+                    <Name locale="nl">Overige</Name>
+                    <Name locale="no">Annet</Name>
+                    <Name locale="pl">Inne</Name>
+                    <Name locale="pt-rBR">Outro</Name>
+                    <Name locale="pt">Outro</Name>
+                    <Name locale="ro">Altele</Name>
+                    <Name locale="ru">Прочее</Name>
+                    <Name locale="sk">Iné</Name>
+                    <Name locale="sv">Annat</Name>
+                    <Name locale="th">อื่นๆ</Name>
+                    <Name locale="tr">Diğer</Name>
+                    <Name locale="uk">Інші</Name>
+                    <Name locale="vi">Khác</Name>
+                    <Name locale="zh-rCN">其他</Name>
+                    <Name locale="zh-rTW">其他</Name>
+                    <FeatureID>WatchWarningOther</FeatureID>
+                </Category>
+            </Categories>
+        </Overlay>
+        <Overlay ID="0144">
+            <OverlayID>2</OverlayID>
+            <Name locale="en">Storm Tracks</Name>
+            <Name locale="ar">مسارات العاصفة</Name>
+            <Name locale="ca">Seguiment de tempestes</Name>
+            <Name locale="cs">Bouřkové trasy</Name>
+            <Name locale="da">Stormspor</Name>
+            <Name locale="de">Sturmverläufe</Name>
+            <Name locale="el">Τροχιές καταιγίδων</Name>
+            <Name locale="en-rGB">Storm Tracks</Name>
+            <Name locale="es">Trayectorias de tormentas</Name>
+            <Name locale="fa">مسیرهای توفان</Name>
+            <Name locale="fi">Myrskyjen reitit</Name>
+            <Name locale="fr">Trajectoires de tempête</Name>
+            <Name locale="he">מסלולי סופה</Name>
+            <Name locale="hi">तूफान  का मार्ग</Name>
+            <Name locale="hr">Praćenje oluja</Name>
+            <Name locale="hu">Viharok útvonalai</Name>
+            <Name locale="id">Lintasan Badai</Name>
+            <Name locale="it">Rilevamento temporali</Name>
+            <Name locale="ja">暴風雨経路</Name>
+            <Name locale="ko">폭풍 추적</Name>
+            <Name locale="ms">Jejak Ribut</Name>
+            <Name locale="nl">Banen van stormen</Name>
+            <Name locale="no">Stormsoner</Name>
+            <Name locale="pl">Ścieżki burz</Name>
+            <Name locale="pt-rBR">Rotas de Tempestade</Name>
+            <Name locale="pt">Acompanhamento de tempestades</Name>
+            <Name locale="ro">Traiectorii furtună</Name>
+            <Name locale="ru">Отслеживание бурь</Name>
+            <Name locale="sk">Búrkové stopy</Name>
+            <Name locale="sv">Stormbanor</Name>
+            <Name locale="th">ร่องรอยพายุ</Name>
+            <Name locale="tr">Fırtına Kuşakları</Name>
+            <Name locale="uk">Відстеження бурь</Name>
+            <Name locale="vi">Đường đi của Bão</Name>
+            <Name locale="zh-rCN">风暴跟踪</Name>
+            <Name locale="zh-rTW">暴風雨追踪</Name>
+            <Polling units="sec">60</Polling>
+            <Decluttering>TRUE</Decluttering>
+            <TurnOnByDefault>FALSE</TurnOnByDefault>
+            <ExcludeOptions>
+                <ValidDate>
+                    <SinceDay>3/16</SinceDay>
+                    <UpToDay>10/1</UpToDay>
+                </ValidDate>
+                <Height>
+                    <LessOrEqual>340</LessOrEqual>
+                </Height>
+            </ExcludeOptions>
+        </Overlay>
+        <Overlay ID="0112">
+            <OverlayID>7</OverlayID>
+            <Name locale="en">Official NHC Forecast Tracks for Active Tropical Storms/Hurricanes</Name>
+            <Name locale="ar">NHC الرسمي لتوقعات مسارات العواصف الاستوائية/الهوريكان النشطة</Name>
+            <Name locale="pt-rBR">Rotas de Previsão da NHC para Tempestades/Furacões Tropicais Ativos</Name>
+            <Name locale="ca">Seguiment de les previsions oficials del NHC de tempestes tropicals/huracans</Name>
+            <Name locale="hr">Službeno NHC praćenje prognoze za aktivne tropske oluje/uragane</Name>
+            <Name locale="cs">Oficiální předpověď NHC pro trasy aktivních tropických bouřek/hurikánů</Name>
+            <Name locale="da">Officielle NHC vejrudsigtsspor for aktive tropiske storme/orkaner</Name>
+            <Name locale="de">Offizielle Prognosen des National Hurricane Center der USA zu Verläufen tropischer Stürme bzw. Hurrikans</Name>
+            <Name locale="en-rGB">Official NHC Forecast Tracks for Active Tropical Storms/Hurricanes</Name>
+            <Name locale="es">Pronóstico oficial del NHC de la trayectoria de las tormentas tropicales y los huracanes activos</Name>
+            <Name locale="fa">NHC رسمی مسیرهای توفان ها/تندبادهای فعال استوایی را پیش بینی می کند</Name>
+            <Name locale="fi">NHC:n viralliset reittiennusteet aktiivisille trooppisille myrskyille/hurrikaaneille</Name>
+            <Name locale="fr">Suivi de prévisions officiel NHC pour les tempêtes tropicales/ouragans actifs</Name>
+            <Name locale="el">Επίσημες τροχιές προγνώσεων από το NHC (Εθνικό κέντρο τυφώνων) για ενεργές τροπικές καταιγίδες/τυφώνες</Name>
+            <Name locale="he">מסלולים רשמיים של התחזית מטעם מרכז ההוריקנים הלאומי האמריקני לסופות/הוריקנים טרופיים פעילים</Name>
+            <Name locale="hi">सक्रिय उष्णकटिबंधीय तूफानों/झंझावातों के मार्ग का आधिकारिक  NHC  पूर्वानुमान</Name>
+            <Name locale="hu">Hivatalos NHC-útvonal-előrejelzés az aktív trópusi viharokhoz/hurrikánokhoz</Name>
+            <Name locale="id">Lintasan Prakiraan NHC Resmi untuk Badai/Angin Topan Aktif</Name>
+            <Name locale="it">Previsioni NHC (Centro Nazionale Uragani) per il rilevamento di tempeste tropicali e uragani</Name>
+<Name locale="ja">NHCによる現在の熱帯低気圧/ハリケーンの公式予想進路</Name>
+            <Name locale="ko">활동 중인 열대성 폭풍/허리케인에 대한 공식 NHC 예보 추적</Name>
+            <Name locale="ms">Jejak Ramalan Rasmi NHC untuk Ribut Tropika/Taufan Aktif</Name>
+            <Name locale="nl">Officiële NHC-voorspellingen over banen van actieve tropische stormen/orkanen</Name>
+            <Name locale="no">Offisielt NHC-varsel for aktive tropiske stormer/orkaner</Name>
+            <Name locale="pl">Oficjalna prognoza NHC: ścieżki aktywnych burz tropikalnych i huraganów</Name>
+            <Name locale="pt">Acompanhamento da previsão oficial do NHC para furacões/tempestades tropicais activos</Name>
+            <Name locale="ro">Traiectorii prognozate oficial de NHC pentru furtunile tropicale/uraganele active</Name>
+            <Name locale="ru">Официальные данные отслеживания от NHC для активных бурь и ураганов</Name>
+            <Name locale="sv">Officiell prognos från NHC för aktiva tropiska stormar/orkaner</Name>
+            <Name locale="sk">Oficiálna predpoveď NHC pre stopy aktívnych tropických búrok/hurikánov</Name>
+            <Name locale="zh-rTW">NHC 官方氣象預測追踪：進行中的熱帶暴風雨/颶風</Name>
+            <Name locale="th">ร่องรอยการพยากรณ์อากาศ NHC เป็นทางการสำหรับพายุเขตร้อน/พายุเฮอร์ริเคน</Name>
+            <Name locale="tr">Aktif Tropikal Fırtınalar/Kasırgalar İçin Resmi NHC Tahmini Yolları</Name>
+            <Name locale="uk">Офіційне відстеження прогнозів для активних тропічних бурь/ураганів від NHC</Name>
+            <Name locale="vi">Theo dõi Dự báo Chính thức của Trung tâm Dự báo Bão Quốc gia để biết Bão Nhiệt đới/Bão đang Hoạt động</Name>
+            <Name locale="zh-rCN">NHC 官方天气预报跟踪：活跃的热带风暴/飓风</Name>
+            <Polling units="sec">3600</Polling>
+            <Decluttering>FALSE</Decluttering>
+            <TurnOnByDefault>FALSE</TurnOnByDefault>
+        </Overlay>
+
+        
+	</Overlays>
+    
+    <RasterLayers>
+        <Layer ID="0039" futureID="0098">
+            <Name locale="en">Radar (Most Of North America)</Name>        
+            <Name locale="ar">الرادار (معظم شمال أمريكا)</Name>        
+            <Name locale="ca">Radar (Major part de l&apos;Amèrica del Nord)</Name>        
+            <Name locale="cs">Radary (převážná část S. Ameriky)</Name>        
+            <Name locale="da">Radar (det meste af Nordamerika)</Name>        
+            <Name locale="de">Radar (Weite Teile Nordamerikas)</Name>        
+            <Name locale="el">Ραντάρ (στις περισσότερες περιοχές της Βόρειας Αμερικής)</Name>        
+            <Name locale="en-rGB">Radar (Most of North America)</Name>        
+            <Name locale="es">Radar (la mayoría de Norteamérica)</Name>        
+            <Name locale="fa">رادار (غالب نواحی آمریکای شمالی)</Name>        
+            <Name locale="fi">Tutka (suurin osa Pohjois-Amerikasta)</Name>        
+            <Name locale="fr">Radar (majeure partie de l&apos;Amérique du Nord)</Name>        
+            <Name locale="he">רדאר (מרבית אמריקה הצפונית)</Name>        
+            <Name locale="hi">रडार  (अधिकांश  उत्तरी  अमेरिका)</Name>        
+            <Name locale="hr">Radar (većina Sjeverne Amerike)</Name>        
+            <Name locale="hu">Radar (Észak-Amerika legnagyobb része)</Name>        
+            <Name locale="id">Radar (Sebagian Besar Amerika Utara)</Name>        
+            <Name locale="it">Radar (maggior parte dell&apos;America del Nord)</Name>        
+            <Name locale="ja">レーダー（北米の大部分）</Name>        
+            <Name locale="ko">레이더(대다수 북미 지역)</Name>        
+            <Name locale="ms">Radar (Kebanyakan Kawasan Amerika Utara)</Name>        
+            <Name locale="nl">Radar (grootste deel van Noord-Amerika)</Name>        
+            <Name locale="no">Radar (det meste av Nord-Amerika)</Name>        
+            <Name locale="pl">Radar (większość Ameryki Płn.)</Name>        
+            <Name locale="pt-rBR">Radar (maior parte da América do Norte)</Name>        
+            <Name locale="pt">Radar (maior parte da América do Norte)</Name>        
+            <Name locale="ro">Radar (majoritatea Americii de Nord)</Name>        
+            <Name locale="ru">Radar (Большая часть территории Северной Америки)</Name>        
+            <Name locale="sk">Radar (väčšina územia Severnej Ameriky)</Name>        
+            <Name locale="sv">Radar (större delen av Nordamerika)</Name>        
+            <Name locale="th">เรดาร์ (ส่วนใหญ่ของอเมริกาเหนือ)</Name>        
+            <Name locale="tr">Radar (Kuzey Amerika&apos;nın Çoğu)</Name>        
+            <Name locale="uk">Радар (більша частина Північної Америки)</Name>        
+            <Name locale="vi">Ra-đa (Phần lớn Bắc Mỹ)</Name>        
+            <Name locale="zh-rCN">雷达（北美大部分地区）</Name>       
+            <Name locale="zh-rTW">雷達（北美大部分地區）</Name>        
+            <Url>hdRadarSmoothPaletteA</Url>
+            <Polling units="sec">120</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>radar.png</LegendFileName>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+
+        <Layer ID="0044">
+            <Name locale="en">Radar (Alaska)</Name>
+            <Name locale="ar">الرادار (ألاسكا)</Name>
+            <Name locale="ca">Radar (Alaska)</Name>
+            <Name locale="cs">Radary (Aljaška)</Name>
+            <Name locale="da">Radar (Alaska)</Name>
+            <Name locale="de">Radar (Alaska)</Name>
+            <Name locale="el">Ραντάρ (Αλάσκα)</Name>
+            <Name locale="en-rGB">Radar (Alaska)</Name>
+            <Name locale="es">Radar (Alaska)</Name>
+            <Name locale="fa">رادار (آلاسکا)</Name>
+            <Name locale="fi">Tutka (Alaska)</Name>
+            <Name locale="fr">Radar (Alaska)</Name>
+            <Name locale="he">רדאר (אלסקה)</Name>
+            <Name locale="hi">रडार (अलास्का)</Name>
+            <Name locale="hr">Radar (Aljaska)</Name>
+            <Name locale="hu">Radar (Alaszka)</Name>
+            <Name locale="id">Radar (Alaska)</Name>
+            <Name locale="it">Radar (Alaska)</Name>
+            <Name locale="ja">レーダー（アラスカ）</Name>
+            <Name locale="ko">레이더(알래스카)</Name>
+            <Name locale="ms">Radar (Alaska)</Name>
+            <Name locale="nl">Radar (Alaska)</Name>
+            <Name locale="no">Radar (Alaska)</Name>
+            <Name locale="pl">Radar (Alaska)</Name>
+            <Name locale="pt-rBR">Radar (Alasca)</Name>
+            <Name locale="pt">Radar (Alasca)</Name>
+            <Name locale="ro">Radar (Alaska)</Name>
+            <Name locale="ru">Radar (Аляска)</Name>
+            <Name locale="sk">Radar (Aljaška)</Name>
+            <Name locale="sv">Radar (Alaska)</Name>
+            <Name locale="th">เรดาร์ (อลาสก้า)</Name>
+            <Name locale="tr">Radar (Alaska)</Name>
+            <Name locale="uk">Радар (Аляска)</Name>
+            <Name locale="vi">Ra-đa (Alaska)</Name>
+            <Name locale="zh-rCN">雷达（阿拉斯加）</Name>
+            <Name locale="zh-rTW">雷達（阿拉斯加）</Name>
+            <Url>hdRadarSmoothPaletteA</Url>
+            <Polling units="sec">120</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>radar.png</LegendFileName>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+        
+        <Layer ID="0046" >
+            <Name locale="en">Radar (Hawaii)</Name>
+            <Name locale="ar">الرادار (هاواي)</Name>
+            <Name locale="ca">Radar (Hawaii)</Name>
+            <Name locale="cs">Radary (Havaj)</Name>
+            <Name locale="da">Radar (Hawaii)</Name>
+            <Name locale="de">Radar (Hawaii)</Name>
+            <Name locale="el">Ραντάρ (Χαβάη)</Name>
+            <Name locale="en-rGB">Radar (Hawaii)</Name>
+            <Name locale="es">Radar (Hawái)</Name>
+            <Name locale="fa">رادار (هاوایی)</Name>
+            <Name locale="fi">Tutka (Havaiji)</Name>
+            <Name locale="fr">Radar (Hawaï)</Name>
+            <Name locale="he">רדאר (הוואי)</Name>
+            <Name locale="hi">रडार  (हवाई)</Name>
+            <Name locale="hr">Radar (Havaji)</Name>
+            <Name locale="hu">Radar (Hawaii)</Name>
+            <Name locale="id">Radar (Hawaii)</Name>
+            <Name locale="it">Radar (Hawaii)</Name>
+            <Name locale="ja">レーダー（ハワイ）</Name>
+            <Name locale="ko">레이더(하와이)</Name>
+            <Name locale="ms">Radar (Hawaii)</Name>
+            <Name locale="nl">Radar (Hawaii)</Name>
+            <Name locale="no">Radar (Hawaii)</Name>
+            <Name locale="pl">Radar (Hawaje)</Name>
+            <Name locale="pt-rBR">Radar (Havaí)</Name>
+            <Name locale="pt">Radar (Havai)</Name>
+            <Name locale="ro">Radar (Hawaii)</Name>
+            <Name locale="ru">Radar (Гавайи)</Name>
+            <Name locale="sk">Radar (Havajské ostrovy)</Name>
+            <Name locale="sv">Radar (Hawaii)</Name>
+            <Name locale="th">เรดาร์ - ฮาวาย</Name>
+            <Name locale="tr">Radar (Hawaii)</Name>
+            <Name locale="uk">Радар (Гаваї)</Name>
+            <Name locale="vi">Ra-đa (Hawaii)</Name>
+            <Name locale="zh-rCN">雷达（夏威夷）</Name>
+            <Name locale="zh-rTW">雷達（夏威夷）</Name>
+            <Url>hdRadarSmoothPaletteA</Url>
+            <Polling units="sec">120</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>radar.png</LegendFileName>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+        
+        <Layer ID="0048" futureID="0146">
+            <Name locale="en">Radar (Europe)</Name>
+            <Name locale="ar">الرادار (أوروبا)</Name>
+            <Name locale="ca">Radar (Europa)</Name>
+            <Name locale="cs">Radary (Evropa)</Name>
+            <Name locale="da">Radar (Europa)</Name>
+            <Name locale="de">Radar (Europa)</Name>
+            <Name locale="el">Ραντάρ (Ευρώπη)</Name>
+            <Name locale="en-rGB">Radar (Europe)</Name>
+            <Name locale="es">Radar (Europa)</Name>
+            <Name locale="fa">رادار (اروپا)</Name>
+            <Name locale="fi">Tutka (Eurooppa)</Name>
+            <Name locale="fr">Radar (Europe)</Name>
+            <Name locale="he">רדאר (אירופה)</Name>
+            <Name locale="hi">रडार  (यूरोप)</Name>
+            <Name locale="hr">Radar (Europa)</Name>
+            <Name locale="hu">Radar (Európa)</Name>
+            <Name locale="id">Radar (Eropa)</Name>
+            <Name locale="it">Radar (Europa)</Name>
+            <Name locale="ja">レーダー（ヨーロッパ）</Name>
+            <Name locale="ko">레이더(유럽)</Name>
+            <Name locale="ms">Radar (Eropah)</Name>
+            <Name locale="nl">Radar (Europa)</Name>
+            <Name locale="no">Radar (Europa)</Name>
+            <Name locale="pl">Radar (Europa)</Name>
+            <Name locale="pt-rBR">Radar (Europa)</Name>
+            <Name locale="pt">Radar (Europa)</Name>
+            <Name locale="ro">Radar (Europa)</Name>
+            <Name locale="ru">Radar (Европа)</Name>
+            <Name locale="sk">Radar (Európa)</Name>
+            <Name locale="sv">Radar (Europa)</Name>
+            <Name locale="th">เรดาร์ - (ยุโรป)</Name>
+            <Name locale="tr">Radar (Avrupa)</Name>
+            <Name locale="uk">Радар (Європа</Name>
+            <Name locale="vi">Ra-đa (Châu Âu)</Name>
+            <Name locale="zh-rCN">雷达（欧洲）</Name>
+            <Name locale="zh-rTW">雷達（歐洲）</Name>
+            <Url>hdRadarSmoothPaletteA</Url>
+            <Polling units="sec">120</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>radar.png</LegendFileName>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+        
+        <Layer ID="0045" >
+            <Name locale="en">Radar (Australia)</Name>
+            <Name locale="ar">الرادار (أستراليا)</Name>
+            <Name locale="pt-rBR">Radar (Austrália)</Name>
+            <Name locale="ca">Radar (Austràlia)</Name>
+            <Name locale="hr">Radar (Australija)</Name>
+            <Name locale="cs">Radary (Austrálie)</Name>
+            <Name locale="da">Radar (Australien)</Name>
+            <Name locale="de">Radar (Australien)</Name>
+            <Name locale="en-rGB">Radar (Australia)</Name>
+            <Name locale="es">Radar (Australia)</Name>
+            <Name locale="fa">رادار (استرالیا)</Name>
+            <Name locale="fi">Tutka (Australia)</Name>
+            <Name locale="fr">Radar (Australie)</Name>
+            <Name locale="el">Ραντάρ (Αυστραλία)</Name>
+            <Name locale="he">רדאר (אוסטרליה)</Name>
+            <Name locale="hi">रडार  (ऑस्ट्रेलिया)</Name>
+            <Name locale="hu">Radar (Ausztrália)</Name>
+            <Name locale="id">Radar (Australia)</Name>
+            <Name locale="it">Radar (Australia)</Name>
+            <Name locale="ja">レーダー（オーストラリア）</Name>
+            <Name locale="ko">레이더(오스트레일리아)</Name>
+            <Name locale="ms">Radar (Australia)</Name>
+            <Name locale="nl">Radar (Australië)</Name>
+            <Name locale="no">Radar (Australia)</Name>
+            <Name locale="pl">Radar (Australia)</Name>
+            <Name locale="pt">Radar (Austrália)</Name>
+            <Name locale="ro">Radar (Australia)</Name>
+            <Name locale="ru">Radar (Австралия)</Name>
+            <Name locale="sv">Radar (Australien)</Name>
+            <Name locale="sk">Radar (Austrália)</Name>
+            <Name locale="zh-rTW">雷達（澳大利亞）</Name>
+            <Name locale="th">เรดาร์ (ออสเตรเลีย)</Name>
+            <Name locale="tr">Radar (Avustralya)</Name>
+            <Name locale="uk">Радар (Австралія)</Name>
+            <Name locale="vi">Ra-đa (Úc)</Name>
+            <Name locale="zh-rCN">雷达（澳大利亚）</Name>
+            <Url>hdRadarSmoothPaletteA</Url>
+            <Polling units="sec">120</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>radar.png</LegendFileName>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+        
+        
+        <MultiLayer>
+            <Name locale="en">Radar And Clouds (Most of North America)</Name>
+            <Name locale="ar">الرادار والغيوم (معظم شمال أمريكا)</Name>
+            <Name locale="ca">Radar i núvols (Major part de l&apos;Amèrica del Nord)</Name>
+            <Name locale="cs">Radary a oblačnost (převážná část S. Ameriky)</Name>
+            <Name locale="da">Radar og skyer (det meste af Nordamerika)</Name>
+            <Name locale="de">Radar und Wolken (Weite Teile Nordamerikas)</Name>
+            <Name locale="el">Ραντάρ και νεφώσεις (στις περισσότερες περιοχές της Βόρειας Αμερικής)</Name>
+            <Name locale="en-rGB">Radar And Clouds (Most of North America)</Name>
+            <Name locale="es">Radar y nubes (la mayoría de Norteamérica)</Name>
+            <Name locale="fa">رادار و ابرها (غالب نواحی آمریکای شمالی)</Name>
+            <Name locale="fi">Tutka ja pilvet (suurin osa Pohjois-Amerikasta)</Name>
+            <Name locale="fr">Radar et nuages (majeure partie de l&apos;Amérique du Nord)</Name>
+            <Name locale="he">רדאר ועננים (מרבית אמריקה הצפונית)</Name>
+            <Name locale="hi">रडार  और बादल (अधिकांश उत्तरी अमेरिका)</Name>
+            <Name locale="hr">Radar i oblaci (većina Sjeverne Amerike)</Name>
+            <Name locale="hu">Radar és felhők (Észak-Amerika legnagyobb része)</Name>
+            <Name locale="id">Radar dan Awan (Sebagian Besar Amerika Utara)</Name>
+            <Name locale="it">Radar e nuvole (maggior parte dell&apos;America del Nord)</Name>
+            <Name locale="ja">レーダーと雲（北米の大部分）</Name>
+            <Name locale="ko">레이더 및 구름(대다수 북미 지역)</Name>
+            <Name locale="ms">Radar Dan Awan (Kebanyakan Kawasan Amerika Utara)</Name>
+            <Name locale="nl">Radar en wolken (grootste deel van Noord-Amerika)</Name>
+            <Name locale="no">Radar og skyer (det meste av Nord-Amerika)</Name>
+            <Name locale="pl">Radar i chmury (większość Ameryki Płn.)</Name>
+            <Name locale="pt-rBR">Radar e Nuvens (maior parte da América do Norte)</Name>
+            <Name locale="pt">Radar e nebulosidade (maior parte da América do Norte)</Name>
+            <Name locale="ro">Radar și nori (majoritatea Americii de Nord)</Name>
+            <Name locale="ru">Radar  и облачность (Большая часть территории Северной Америки)</Name>
+            <Name locale="sk">Radar a oblačnosť (väčšina územia Severnej Ameriky)</Name>
+            <Name locale="sv">Radar och moln (större delen av Nordamerika)</Name>
+            <Name locale="th">เรดาร์และเมฆ (ส่วนใหญ่ของอเมริกาเหนือ)</Name>
+            <Name locale="tr">Radar ve Bulutlar (Kuzey Amerika&apos;nın Çoğu)</Name>
+            <Name locale="uk">Радар і хмарність (більша частина Північної Америки)</Name>
+            <Name locale="vi">Ra-đa Và Đám mây (Phần lớn Bắc Mỹ)</Name>
+            <Name locale="zh-rCN">雷达和云（北美大部分地区）</Name>
+            <Name locale="zh-rTW">雷達和雲</Name>
+            <ShowLegend>TRUE</ShowLegend>
+            <LegendFileName>radar.png</LegendFileName>
+            <Layer ID="0039" futureID="0108">
+                <Name locale="en">Radar (Precipitation)</Name>
+                 <Name locale="ar">الرادار (الترسبات)</Name>
+                <Name locale="ca">Radar (Precipitació)</Name>
+                <Name locale="cs">Radary (srážky)</Name>
+                <Name locale="da">Radar (nedbør)</Name>
+                <Name locale="de">Radar (Niederschläge)</Name>
+                <Name locale="el">Ραντάρ (Βροχόπτωση)</Name>
+                <Name locale="en-rGB">Radar (Precipitation)</Name>
+                <Name locale="es">Radar (precipitación)</Name>
+                <Name locale="fa">رادار (بارش)</Name>
+                <Name locale="fi">Tutka (sademäärä)</Name>
+                <Name locale="fr">Radar (précipitations)</Name>
+                <Name locale="he">רדאר (משקעים)</Name>
+                <Name locale="hi">रडार (अवक्षेपण)</Name>
+                <Name locale="hr">Radar (padaline)</Name>
+                <Name locale="hu">Radar (csapadék)</Name>
+                <Name locale="id">Radar (Presipitasi)</Name>
+                <Name locale="it">Radar (precipitazioni)</Name>
+                <Name locale="ja">レーダー（降水量）</Name>
+                <Name locale="ko">레이더(강수량)</Name>
+                <Name locale="ms">Radar (Kerpasan)</Name>
+                <Name locale="nl">Radar (neerslag)</Name>
+                <Name locale="no">Radar (Nedbør)</Name>
+                <Name locale="pl">Radar (opady)</Name>
+                <Name locale="pt-rBR">Radar (precipitação)</Name>
+                <Name locale="pt">Radar (precipitação)</Name>
+                <Name locale="ro">Radar (precipitații)</Name>
+                <Name locale="ru">Radar (осадки)</Name>
+                <Name locale="sk">Radar (zrážky)</Name>
+                <Name locale="sv">Radar (nederbörd)</Name>
+                <Name locale="th">เรดาร์ (น้ำฟ้า)</Name>
+                <Name locale="tr">Radar (Yağış Miktarı)</Name>
+                <Name locale="uk">Радар (опади)</Name>
+                <Name locale="vi">Ra-đa (Lượng mưa)</Name>
+                <Name locale="zh-rCN">雷达（降水）</Name>
+                <Name locale="zh-rTW">雷達（降雨）</Name>
+                <Url>hdRadarSmoothPaletteA</Url>
+                <Polling units="sec">120</Polling>
+                <ShowLoop>TRUE</ShowLoop>
+                <Transparency units="percent">40</Transparency>
+            </Layer>
+            <Layer ID="0040"  futureID="0099">
+                <Name locale="en">Satellite (Clouds)</Name>
+                <Name locale="ar">القمر الاصطناعي (غيوم)</Name>
+                <Name locale="ca">Satèl·lit (Núvols)</Name>
+                <Name locale="cs">Satelity (oblačnost)</Name>
+                <Name locale="da">Satellit (skyer)</Name>
+                <Name locale="de">Satellit (Wolken)</Name>
+                <Name locale="el">Δορυφόρος (Νεφώσεις)</Name>
+                <Name locale="en-rGB">Satellite (Clouds)</Name>
+                <Name locale="es">Satélite (nubes)</Name>
+                <Name locale="fa">ماهواره (ابرها)</Name>
+                <Name locale="fi">Satelliitti (pilvet)</Name>
+                <Name locale="fr">Satellite (nuages)</Name>
+                <Name locale="he">לוויין (עננים)</Name>
+                <Name locale="hi">उपग्रह  (बादल)</Name>
+                <Name locale="hr">Satelit (oblaci)</Name>
+                <Name locale="hu">Műhold (felhők)</Name>
+                <Name locale="id">Satelit (Awan)</Name>
+                <Name locale="it">Satellite (nuvole)</Name>
+                <Name locale="ja">衛星（雲）</Name>
+                <Name locale="ko">위성(구름)</Name>
+                <Name locale="ms">Satelit (Awan)</Name>
+                <Name locale="nl">Satelliet (wolken)</Name>
+                <Name locale="no">Satellitt (Skyer)</Name>
+                <Name locale="pl">Satelita (chmury)</Name>
+                <Name locale="pt-rBR">Satélite (Nuvens)</Name>
+                <Name locale="pt">Satélite (nebulosidade)</Name>
+                <Name locale="ro">Satelit (nori)</Name>
+                <Name locale="ru">Спутник (облачность)</Name>
+                <Name locale="sk">Satelit (oblačnosť)</Name>
+                <Name locale="sv">Satellit (moln)</Name>
+                <Name locale="th">ดาวเทียม (เมฆ)</Name>
+                <Name locale="tr">Uydu (Bulutlar)</Name>
+                <Name locale="uk">Супутник (хмарність)</Name>
+                <Name locale="vi">Vệ tinh (Đám mây)</Name>
+                <Name locale="zh-rCN">卫星（云）</Name>
+                <Name locale="zh-rTW">衛星（雲）</Name>
+                <Url>hdVisSatIRBlend</Url>
+                <Polling units="sec">300</Polling>
+                <ShowLoop>TRUE</ShowLoop>
+                <Transparency units="percent">5</Transparency>
+            </Layer>
+        </MultiLayer>
+        
+        
+        
+        
+        <Layer ID="0040" futureId="0099">
+            <Name locale="en">Clouds (Most Of North America)</Name>
+            <Name locale="ar">الغيوم (معظم شمال أمريكا)</Name>
+            <Name locale="ca">Núvols (Major part de l&apos;Amèrica del Nord)</Name>
+            <Name locale="cs">Oblačnost (převážná část S. Ameriky)</Name>
+            <Name locale="da">Skyer (det meste af Nordamerika)</Name>
+            <Name locale="de">Wolken (Weite Teile Nordamerikas)</Name>
+            <Name locale="el">Νεφώσεις (στις περισσότερες περιοχές της Βόρειας Αμερικής)</Name>
+            <Name locale="en-rGB">Clouds (Most of North America)</Name>
+            <Name locale="es">Nubes (la mayoría de Norteamérica)</Name>
+            <Name locale="fa">ابرها (غالب نواحی آمریکای شمالی)</Name>
+            <Name locale="fi">Pilvet (suurin osa Pohjois-Amerikasta)</Name>
+            <Name locale="fr">Nuages (majeure partie de l&apos;Amérique du Nord)</Name>
+            <Name locale="he">עננים (מרבית אמריקה הצפונית)</Name>
+            <Name locale="hi">रडार (अधिकांश उत्तरी अमेरिका)</Name>
+            <Name locale="hr">Oblaci (većina Sjeverne Amerike)</Name>
+            <Name locale="hu">Felhők  (Észak-Amerika legnagyobb része)</Name>
+            <Name locale="id">Awan (Sebagian Besar Amerika Utara)</Name>
+            <Name locale="it">Nuvole (maggior parte dell&apos;America del Nord)</Name>
+            <Name locale="ja">雲（北米の大部分）</Name>
+            <Name locale="ko">구름(대다수 북미 지역)</Name>
+            <Name locale="ms">Awan (Kebanyakan Kawasan Amerika Utara)</Name>
+            <Name locale="nl">Wolken (grootste deel van Noord-Amerika)</Name>
+            <Name locale="no">Skyer (det meste av Nord-Amerika)</Name>
+            <Name locale="pl">Chmury (większość Ameryki Płn.)</Name>
+            <Name locale="pt-rBR">Nuvens (maior parte da América do Norte)</Name>
+            <Name locale="pt">Nebulosidade (maior parte da América do Norte)</Name>
+            <Name locale="ro">Nori (majoritatea Americii de Nord)</Name>
+            <Name locale="ru">Облачность (Большая часть территории Северной Америки)</Name>
+            <Name locale="sk">Oblačnosť (väčšina územia Severnej Ameriky)</Name>
+            <Name locale="sv">Moln (större delen av Nordamerika)</Name>
+            <Name locale="th">เรดาร์ (ส่วนใหญ่ของอเมริกาเหนือ)</Name>
+            <Name locale="tr">Bulutlar (Kuzey Amerika&apos;nın Çoğu)</Name>
+            <Name locale="uk">Хмарність (більша частина Північної Америки)</Name>
+            <Name locale="vi">Đám mây (Phần lớn Bắc Mỹ)</Name>
+            <Name locale="zh-rCN">云（北美大部分地区）</Name>
+            <Name locale="zh-rTW">雲（北美大部分地區）</Name>
+            <Url>hdVisSatIRBlend</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>FALSE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName/>
+            <Transparency units="percent">5</Transparency>
+            <BumpMapping>TRUE</BumpMapping>
+        </Layer>
+        <Layer ID="0105">
+            <Name locale="en">Clouds (World)</Name>
+            <Name locale="ar">الغيوم (العالم)</Name>
+            <Name locale="ca">Núvols (Món)</Name>
+            <Name locale="cs">Oblačnost (svět)</Name>
+            <Name locale="da">Skyer (Verden)</Name>
+            <Name locale="de">Wolken (Welt)</Name>
+            <Name locale="el">Νεφώσεις (Παγκόσμια)</Name>
+            <Name locale="en-rGB">Clouds (World)</Name>
+            <Name locale="es">Nubes (mundo)</Name>
+            <Name locale="fa">ابرها (جهان)</Name>
+            <Name locale="fi">Pilvet (maailma)</Name>
+            <Name locale="fr">Nuages (Monde)</Name>
+            <Name locale="he">עננים (עולם)</Name>
+            <Name locale="hi">क्लाउड  (विश्व)</Name>
+            <Name locale="hr">Oblaci (svijet)</Name>
+            <Name locale="hu">Felhők (világ)</Name>
+            <Name locale="id">Awan (Dunia)</Name>
+            <Name locale="it">Nuvole (Mondo)</Name>
+            <Name locale="ja">雲（世界）</Name>
+            <Name locale="ko">구름(세계)</Name>
+            <Name locale="ms">Awan (Dunia)</Name>
+            <Name locale="nl">Wolken (wereld)</Name>
+            <Name locale="no">Skyer (verden)</Name>
+            <Name locale="pl">Chmury (świat)</Name>
+            <Name locale="pt-rBR">Nuvens (mundial)</Name>
+            <Name locale="pt">Nebulosidade (Mundo)</Name>
+            <Name locale="ro">Nori (Global)</Name>
+            <Name locale="ru">Облачность (весь мир)</Name>
+            <Name locale="sk">Oblačnosť (svet)</Name>
+            <Name locale="sv">Moln - (världen)</Name>
+            <Name locale="th">เมฆ (ทั่วโลก)</Name>
+            <Name locale="tr">Bulutlar (Dünya)</Name>
+            <Name locale="uk">Хмарність (по всьому світу)</Name>
+            <Name locale="vi">Đám mây (Thế giới)</Name>
+            <Name locale="zh-rCN">云（全球）</Name>
+            <Name locale="zh-rTW">雲（全球）</Name>
+            <Url>hdVisSatIRBlend</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>FALSE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName/>
+            <Transparency units="percent">5</Transparency>
+            <BumpMapping>TRUE</BumpMapping>
+        </Layer>
+        <Layer ID="0041">
+            <Name locale="en">Clouds (Europe)</Name>
+            <Name locale="ar">الغيوم (أوروبا)</Name>
+            <Name locale="ca">Núvols (Europa)</Name>
+            <Name locale="cs">Oblačnost (Evropa)</Name>
+            <Name locale="da">Skyer (Europa)</Name>
+            <Name locale="de">Wolken (Europa)</Name>
+            <Name locale="el">Νεφώσεις (Ευρώπη)</Name>
+            <Name locale="en-rGB">Clouds (Europe)</Name>
+            <Name locale="es">Nubes (Europa)</Name>
+            <Name locale="fa">ابرها (اروپا)</Name>
+            <Name locale="fi">Pilvet (Eurooppa)</Name>
+            <Name locale="fr">Nuages (Europe)</Name>
+            <Name locale="he">עננים (אירופה)</Name>
+            <Name locale="hi">क्लाउड  (यूरोप)</Name>
+            <Name locale="hr">Oblaci (Europa)</Name>
+            <Name locale="hu">Felhők (Európa)</Name>
+            <Name locale="id">Awan (Eropa)</Name>
+            <Name locale="it">Nuvole (Europa)</Name>
+            <Name locale="ja">雲（ヨーロッパ）</Name>
+            <Name locale="ko">구름(유럽)</Name>
+            <Name locale="ms">Awan (Eropah)</Name>
+            <Name locale="nl">Wolken (Europa)</Name>
+            <Name locale="no">Skyer (Europa)</Name>
+            <Name locale="pl">Chmury (Europa)</Name>
+            <Name locale="pt-rBR">Nuvens (Europa)</Name>
+            <Name locale="pt">Nebulosidade (Europa)</Name>
+            <Name locale="ro">Nori (Europa)</Name>
+            <Name locale="ru">Облачность (Европа)</Name>
+            <Name locale="sk">Oblačnosť (Európa)</Name>
+            <Name locale="sv">Moln - (Europa)</Name>
+            <Name locale="th">เมฆ (ยุโรป)</Name>
+            <Name locale="tr">Bulutlar (Avrupa)</Name>
+            <Name locale="uk">Хмарність (Європа)</Name>
+            <Name locale="vi">Đám mây (Châu Âu)</Name>
+            <Name locale="zh-rCN">云（欧洲）</Name>
+            <Name locale="zh-rTW">雲（歐洲）</Name>
+            <Url>hdVisSatIRBlend</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>FALSE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName/>
+            <Transparency units="percent">5</Transparency>
+            <BumpMapping>TRUE</BumpMapping>
+        </Layer>
+        <Layer ID="0042">
+            <Name locale="en">Clouds (S. Africa)</Name>
+            <Name locale="ar">الغيوم (جنوب أفريقيا)</Name>
+            <Name locale="ca">Núvols (Sud-àfrica)</Name>
+            <Name locale="cs">Oblačnost (J. Afrika)</Name>
+            <Name locale="da">Skyer (Sydafrika)</Name>
+            <Name locale="de">Wolken (Südafrika)</Name>
+            <Name locale="el">Νεφώσεις (Νότια Αφρική)</Name>
+            <Name locale="en-rGB">Clouds (S. Africa)</Name>
+            <Name locale="es">Nubes (Sudáfrica)</Name>
+            <Name locale="fa">ابرها  (آمریکای جنوبی)</Name>
+            <Name locale="fi">Pilvet (Etelä-Afrikka)</Name>
+            <Name locale="fr">Nuages (Afrique du S.)</Name>
+            <Name locale="he">עננים (דרום אפריקה)</Name>
+            <Name locale="hi">क्लाउड  (द.  अफ़्रीका)</Name>
+            <Name locale="hr">Oblaci (J. Afrika)</Name>
+            <Name locale="hu">Felhők (Dél-Afrika)</Name>
+            <Name locale="id">Awan (Afrika Selatan)</Name>
+            <Name locale="it">Nuvole (Sudafrica)</Name>
+            <Name locale="ja">雲（南アフリカ）</Name>
+            <Name locale="ko">구름(남아프리카)</Name>
+            <Name locale="ms">Awan (Afrika Selatan)</Name>
+            <Name locale="nl">Wolken (Zuid-Afrika)</Name>
+            <Name locale="no">Skyer (Sør-Afrika)</Name>
+            <Name locale="pl">Chmury (Afryka Płd.)</Name>
+            <Name locale="pt-rBR">Nuvens (África do Sul)</Name>
+            <Name locale="pt">Nebulosidade (África do Sul)</Name>
+            <Name locale="ro">Nori (Africa de Sud)</Name>
+            <Name locale="ru">Облачность (Южная Африка)</Name>
+            <Name locale="sk">Oblačnosť (Južná Afrika)</Name>
+            <Name locale="sv">Moln - (Södra Afrika)</Name>
+            <Name locale="th">เมฆ (แอฟริกาไต้)</Name>
+            <Name locale="tr">Bulutlar (G. Afrika)</Name>
+            <Name locale="uk">Хмарність (Півд. Африка)</Name>
+            <Name locale="vi">Đám mây (Nam Phi)</Name>
+            <Name locale="zh-rCN">云（南美）</Name>
+            <Name locale="zh-rTW">雲（南美）</Name>
+            <Url>hdVisSatIRBlend</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>FALSE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName/>
+            <Transparency units="percent">5</Transparency>
+            <BumpMapping>TRUE</BumpMapping>
+        </Layer>
+        <Layer ID="0049">
+            <Name locale="en">Clouds (Tropics)</Name>
+            <Name locale="ar">الغيوم (استوائي)</Name>
+            <Name locale="ca">Núvols (Tròpics)</Name>
+            <Name locale="cs">Oblačnost (tropy)</Name>
+            <Name locale="da">Skyer (troperne)</Name>
+            <Name locale="de">Wolken (Tropen)</Name>
+            <Name locale="el">Νεφώσεις (Τροπικοί κύκλοι)</Name>
+            <Name locale="en-rGB">Clouds (Tropics)</Name>
+            <Name locale="es">Nubes (trópicos)</Name>
+            <Name locale="fa">ابرها (استوا)</Name>
+            <Name locale="fi">Pilvet (päiväntasaajan alue)</Name>
+            <Name locale="fr">Nuages (Tropiques)</Name>
+            <Name locale="he">עננים (אזורים טרופיים)</Name>
+            <Name locale="hi">बादल  (उष्णकटिबंधीय)</Name>
+            <Name locale="hr">Oblaci (Tropsko područje)</Name>
+            <Name locale="hu">Felhők (Trópusok)</Name>
+            <Name locale="id">Awan (Tropis)</Name>
+            <Name locale="it">Nuvole (Tropici)</Name>
+            <Name locale="ja">雲（熱帯地方）</Name>
+            <Name locale="ko">구름(회귀선)</Name>
+            <Name locale="ms">Awan (Kawasan Tropika)</Name>
+            <Name locale="nl">Wolken (Tropen)</Name>
+            <Name locale="no">Skyer (tropene)</Name>
+            <Name locale="pl">Chmury (tropikalne)</Name>
+            <Name locale="pt-rBR">Nuvens (Trópicos)</Name>
+            <Name locale="pt">Nebulosidade (Trópicos)</Name>
+            <Name locale="ro">Nori (Tropice)</Name>
+            <Name locale="ru">Облачность (тропики)</Name>
+            <Name locale="sk">Oblačnosť (trópy)</Name>
+            <Name locale="sv">Moln - (Tropikerna)</Name>
+            <Name locale="th">เมฆ (เขตร้อน)</Name>
+            <Name locale="tr">Bulutlar (Tropikal Kuşak)</Name>
+            <Name locale="uk">Хмарність (Тропічні регіони)</Name>
+            <Name locale="vi">Đám mây (Khu vực nhiệt đới)</Name>
+            <Name locale="zh-rCN">云（热带）</Name>
+            <Name locale="zh-rTW">雲（熱帶）</Name>
+            <Url>hdVisSatIRBlend</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>FALSE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName/>
+            <Transparency units="percent">5</Transparency>
+            <BumpMapping>TRUE</BumpMapping>
+        </Layer>
+        
+        <Layer ID="0110">
+            <Name locale="en">Water Temp</Name>
+            <Name locale="ar">درجة حرارة الماء</Name>
+            <Name locale="ca">Temp. de l&apos;aigua</Name>
+            <Name locale="cs">Teplota vody</Name>
+            <Name locale="da">Vandtemp.</Name>
+            <Name locale="de">Wassertemperatur</Name>
+            <Name locale="el">Θερμοκρασία νερού</Name>
+            <Name locale="en-rGB">Water Temp</Name>
+            <Name locale="es">Temperatura del agua</Name>
+            <Name locale="fa">دمای آب</Name>
+            <Name locale="fi">Veden lämpötila</Name>
+            <Name locale="fr">Température de l&apos;eau</Name>
+            <Name locale="he">טמפ׳ המים</Name>
+            <Name locale="hi">जलीय तापमान</Name>
+            <Name locale="hr">Temperatura vode</Name>
+            <Name locale="hu">Vízhőmérséklet</Name>
+            <Name locale="id">Suhu Air</Name>
+            <Name locale="it">Temperatura dell&apos;acqua</Name>
+            <Name locale="ja">水温</Name>
+            <Name locale="ko">수온</Name>
+            <Name locale="ms">Suhu Air</Name>
+            <Name locale="nl">Watertemperatuur</Name>
+            <Name locale="no">Vanntemp</Name>
+            <Name locale="pl">Temperatura wody</Name>
+            <Name locale="pt-rBR">Temp. da Água</Name>
+            <Name locale="pt">Temperatura da água</Name>
+            <Name locale="ro">Temperatura apei</Name>
+            <Name locale="ru">Температура воды</Name>
+            <Name locale="sk">Teplota vody</Name>
+            <Name locale="sv">Vattentemperatur</Name>
+            <Name locale="th">อุณหภูมิน้ำ</Name>
+            <Name locale="tr">Su Sıcaklığı</Name>
+            <Name locale="uk">Температура води</Name>
+            <Name locale="vi">Nhiệt độ Nước</Name>
+            <Name locale="zh-rCN">水温</Name>
+            <Name locale="zh-rTW">水溫</Name>
+            <Url>WaterTempsAtlantic</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>temp.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+        </Layer>
+        
+        <Layer ID="0090" futureID="0100">
+           <Name locale="en">Observed Temps (US)</Name>
+           <Name locale="ar">Observed Temps (الولايات المتحدة)</Name>
+           <Name locale="ca">Registre de temp. (EUA)</Name>
+           <Name locale="cs">Teploty (USA)</Name>
+           <Name locale="da">Registrerede temp. (USA)</Name>
+           <Name locale="de">Gemessene Temperatur</Name>
+           <Name locale="el">Καταγεγραμμένες θερμοκρασίες (Η.Π.Α.)</Name>
+           <Name locale="en-rGB">Observed Temps (US)</Name>
+           <Name locale="es">Temperaturas observadas (EE.UU.)</Name>
+           <Name locale="fa">دماهای مشاهده شده (آمریکا)</Name>
+           <Name locale="fi">Havaitut lämpötilat (USA)</Name>
+           <Name locale="fr">Températures observées (É.-U.)</Name>
+           <Name locale="he">טמפ׳ שנמדדו ב-(ארה״ב)</Name>
+           <Name locale="hi">द्वारा पर्यवेक्षित तापमान (यूएस)</Name>
+           <Name locale="hr">zabilježene temperature (SAD)</Name>
+           <Name locale="hu">Hőmérsékleti adatok a rendszerből (USA)</Name>
+           <Name locale="id">Suhu yang Diamati (AS)</Name>
+           <Name locale="it">Temperatura osservate (USA)</Name>
+           <Name locale="ja">による実測気温（米国）</Name>
+           <Name locale="ko">관측 온도(미국)</Name>
+           <Name locale="ms">Suhu Cerapan (AS)</Name>
+           <Name locale="nl">Waargenomen temperaturen volgens (VS)</Name>
+           <Name locale="no">obs. temperaturer (USA)</Name>
+           <Name locale="pl">- obserwowana temperatura (USA)</Name>
+           <Name locale="pt-rBR">Temp. Observadas (EUA)</Name>
+           <Name locale="pt">Temperaturas registadas (EUA)</Name>
+           <Name locale="ro">Temperaturi observate (S.U.A.)</Name>
+           <Name locale="ru">Температура согласно (США)</Name>
+           <Name locale="sk">Pozorované teploty (USA)</Name>
+           <Name locale="sv">-temperaturer (USA)</Name>
+           <Name locale="th">อุณหภูมิที่เฝ้าสังเกตุไว้สำหรับ (อเมริกา)</Name>
+           <Name locale="tr">Gözlenen Sıcaklıklar (ABD)</Name>
+           <Name locale="uk">Спостережені температури (США)</Name>
+           <Name locale="vi">Nhiệt độ được Quan trắc (Hoa Kỳ)</Name>
+           <Name locale="zh-rCN">观测温度（美国）</Name>
+           <Name locale="zh-rTW">觀測氣溫（美國）</Name>
+           <Url>Temperature</Url>
+           <Polling units="sec">300</Polling>
+           <ShowLegend>TRUE</ShowLegend>
+           <ShowLoop>TRUE</ShowLoop>
+           <LegendFileName>temp.png</LegendFileName>
+           <UnitDependent>TRUE</UnitDependent>
+           <Transparency units="percent">40</Transparency>
+        </Layer>
+        
+        <Layer ID="0091" futureID="0101">
+            <Name locale="en">Observed Feels-Like (US)</Name>
+            <Name locale="ar">Observed المستشعرة (الولايات المتحدة)</Name>
+            <Name locale="ca">Registre de temp. de sensació (EUA)</Name>
+            <Name locale="cs">Pocitové teploty (USA)</Name>
+            <Name locale="da">Registrerede føles som (USA)</Name>
+            <Name locale="de">Gefühlte Temperatur (US)</Name>
+            <Name locale="el">Καταγεγραμμένες αισθητές θερμοκρασίες (Η.Π.Α.)</Name>
+            <Name locale="en-rGB">Observed Feels-Like (US)</Name>
+            <Name locale="es">Sensación observada (EE.UU.)</Name>
+            <Name locale="fa">وضعیت آب و هوای مشاهده شده (آمریکا)</Name>
+            <Name locale="fi">Tuntuu kuin -havainnot (USA)</Name>
+            <Name locale="fr">Températures ressenties (É.-U.)</Name>
+            <Name locale="he">התחושה כעת ב-היא של (ארה״ב)</Name>
+            <Name locale="hi"> द्वारा पर्यवेक्षित महसूस होने जैसे(यूएस)</Name>
+            <Name locale="hr">zabilježeni dojmovi (SAD)</Name>
+            <Name locale="hu">Hőmérsékletérzet a rendszerből (USA)</Name>
+            <Name locale="id">Yang Diamati Terasa Seperti (AS)</Name>
+            <Name locale="it">Temperatura percepita (USA)</Name>
+            <Name locale="ja">による実測体感（米国）</Name>
+            <Name locale="ko">관측 체감 온도(미국)</Name>
+            <Name locale="ms">Rasa-Seperti Cerapan (AS)</Name>
+            <Name locale="nl">Waargenomen gevoelstemperaturen volgens (VS)</Name>
+            <Name locale="no">obs. føles som (USA)</Name>
+            <Name locale="pl">- obserwowana temp. odczuwalna (USA)</Name>
+            <Name locale="pt-rBR">Sensação Observada (EUA)</Name>
+            <Name locale="pt">Sensação térmica registada (EUA)</Name>
+            <Name locale="ro">Temperaturi resimțite observate (S.U.A.)</Name>
+            <Name locale="ru">Ощущаемая температура согласно (США)</Name>
+            <Name locale="sk">Pozorované pocitové teploty (USA)</Name>
+            <Name locale="sv">upplevelseprognos (USA)</Name>
+            <Name locale="th">ความรู้สึกที่เฝ้าสังเกตุไว้สำหรับ (อเมริกา)</Name>
+            <Name locale="tr">Gözlenen Hissedilen (ABD)</Name>
+            <Name locale="uk">Спостережені температури за відчуттям (США)</Name>
+            <Name locale="vi">Nhiệt độ cảm nhận hiện tại được Quan trắc (Hoa Kỳ)</Name>
+            <Name locale="zh-rCN">观测的感觉温度（美国）</Name>
+            <Name locale="zh-rTW">觀測的感覺溫度（美國）</Name>
+            <Url>WindSpeed</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>temp.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+                
+        <Layer ID="0094" futureID="0103">
+            <Name locale="en">Wind Speed (US)</Name>
+            <Name locale="ar">سرعة رياح (الولايات المتحدة)</Name>
+            <Name locale="ca">Velocitat del vent (EUA)</Name>
+            <Name locale="cs">Rychlost větru (USA)</Name>
+            <Name locale="da">Vindhastighed (USA)</Name>
+            <Name locale="de">Windgeschwindigkeiten (US)</Name>
+            <Name locale="el">Ταχύτητα ανέμου (Η.Π.Α.)</Name>
+            <Name locale="en-rGB">Wind Speed (US)</Name>
+            <Name locale="es">Velocidad del viento (EE.UU.)</Name>
+            <Name locale="fa">سرعت باد (آمریکا)</Name>
+            <Name locale="fi">Tuulenvoimakkuus (USA)</Name>
+            <Name locale="fr">Vitesse des vents (É.-U.)</Name>
+            <Name locale="he">מהירות הרוח ב-(ארה״ב)</Name>
+            <Name locale="hi">वायु गति(यूएस)</Name>
+            <Name locale="hr">brzina vjetra (SAD)</Name>
+            <Name locale="hu">Szélsebesség a rendszerből (USA)</Name>
+            <Name locale="id">Kecepatan Angin (AS)</Name>
+            <Name locale="it">Velocità del vento (USA)</Name>
+            <Name locale="ja">による風速（米国）</Name>
+            <Name locale="ko">풍속(미국)</Name>
+            <Name locale="ms">Kelajuan Angin (AS)</Name>
+            <Name locale="nl">Windsnelheid volgens (VS)</Name>
+            <Name locale="no">vindstyrke (USA)</Name>
+            <Name locale="pl">- szybkość wiatru (USA)</Name>
+            <Name locale="pt-rBR">Velocidade do Vento (EUA)</Name>
+            <Name locale="pt">Velocidade do vento (EUA)</Name>
+            <Name locale="ro">Viteza vântului (S.U.A.)</Name>
+            <Name locale="ru">Скорость ветра согласно (США)</Name>
+            <Name locale="sk">Rýchlosť vetra (USA)</Name>
+            <Name locale="sv">vindhastigheter (USA)</Name>
+            <Name locale="th">ความเร็วลมของ (อเมริกา)</Name>
+            <Name locale="tr">Rüzgar Hızı (ABD)</Name>
+            <Name locale="uk">Швидкість вітру (США)</Name>
+            <Name locale="vi">Tốc độ Gió (Hoa Kỳ)</Name>
+            <Name locale="zh-rCN">风速（美国）</Name>
+            <Name locale="zh-rTW">風速（美國）</Name>
+            <Url>WindSpeed</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>wind.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+                
+        <Layer ID="0095"  futureID="0102">
+            <Name locale="en">Dewpoint (US)</Name>
+            <Name locale="ar">نقطة الندى (الولايات المتحدة)</Name>
+            <Name locale="ca">Punt de rosada (EUA)</Name>
+            <Name locale="cs">Rosný bod (USA)</Name>
+            <Name locale="da">Dugpunkt (USA)</Name>
+            <Name locale="de">Taupunkte (US)</Name>
+            <Name locale="el">Σημείο δρόσου (Η.Π.Α.)</Name>
+            <Name locale="en-rGB">Dewpoint (US)</Name>
+            <Name locale="es">Punto de condensación (EE.UU.)</Name>
+            <Name locale="fa">نقطه شبنم (آمریکا)</Name>
+            <Name locale="fi">Kastepiste (USA)</Name>
+            <Name locale="fr">Point de rosée (É.-U.)</Name>
+            <Name locale="he">נקודת טל ב-(ארה״ב)</Name>
+            <Name locale="hi">ओसांक(यूएस)</Name>
+            <Name locale="hr">rosište (SAD)</Name>
+            <Name locale="hu">Harmatpont a rendszerből (USA)</Name>
+            <Name locale="id">Titik Embun (AS)</Name>
+            <Name locale="it">Punto di rugiada (USA)</Name>
+            <Name locale="ja">による露点（米国）</Name>
+            <Name locale="ko">이슬점(미국)</Name>
+            <Name locale="ms">Takat Embun (AS)</Name>
+            <Name locale="nl">Dauwpunt volgens (VS)</Name>
+            <Name locale="no">duggpunkt (USA)</Name>
+            <Name locale="pl">- punkt rosy (USA)</Name>
+            <Name locale="pt-rBR">Ponto de Condensação (EUA)</Name>
+            <Name locale="pt">Ponto de orvalho (EUA)</Name>
+            <Name locale="ro">Punct de rouă (S.U.A.)</Name>
+            <Name locale="ru">Точка росы согласно (США)</Name>
+            <Name locale="sk">Rosný bod (USA)</Name>
+            <Name locale="sv">daggpunktstemperaturer (USA)</Name>
+            <Name locale="th">จุดน้ำค้างที่ (อเมริกา)</Name>
+            <Name locale="tr">Çiy Noktası (ABD)</Name>
+            <Name locale="uk">Точка роси (США)</Name>
+            <Name locale="vi">Điểm đọng sương (Hoa Kỳ)</Name>
+            <Name locale="zh-rCN">露点（美国）</Name>
+            <Name locale="zh-rTW">露點（美國）</Name>
+            <Url>WindSpeed</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>dew.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+                
+        <Layer ID="0097"  futureID="0104">
+            <Name locale="en">UV Index (US)</Name>
+            <Name locale="ar">مؤشر للأشعة فوق البنفسجية (الولايات المتحدة)</Name>
+            <Name locale="ca">Índex ultraviolat (EUA)</Name>
+            <Name locale="cs">UV index (USA)</Name>
+            <Name locale="da">UV-indeks (USA)</Name>
+            <Name locale="de">UV-Index (US)</Name>
+            <Name locale="el">Δείκτης UV (Η.Π.Α.)</Name>
+            <Name locale="en-rGB">UV Index (US)</Name>
+            <Name locale="es">Índice UV (EE.UU.)</Name>
+            <Name locale="fa">شاخص فرابنفش (آمریکا)</Name>
+            <Name locale="fi">UV-indeksi (USA)</Name>
+            <Name locale="fr">Indices UV (É.-U.)</Name>
+            <Name locale="he">מדד UV ב-(ארה״ב)</Name>
+            <Name locale="hi">UV सूचकांक(यूएस)</Name>
+            <Name locale="hr">UV indeks (SAD)</Name>
+            <Name locale="hu">UV-index a rendszerből (USA)</Name>
+            <Name locale="id">Indeks UV (AS)</Name>
+            <Name locale="it">Indice UV (US)</Name>
+            <Name locale="ja">による紫外線指数（米国）</Name>
+            <Name locale="ko">자외선 지수(미국)</Name>
+            <Name locale="ms">Indeks UV (AS)</Name>
+            <Name locale="nl">UV-index volgens (VS)</Name>
+            <Name locale="no">UV-indeks (USA)</Name>
+            <Name locale="pl">- indeks UV (USA)</Name>
+            <Name locale="pt-rBR">Índice de UV (EUA)</Name>
+            <Name locale="pt">Índice UV (EUA)</Name>
+            <Name locale="ro">Indice UV (S.U.A.)</Name>
+            <Name locale="ru">УФ-индекс согласно (США)</Name>
+            <Name locale="sk">Index UV (USA)</Name>
+            <Name locale="sv">UV-index (USA)</Name>
+            <Name locale="th">ดัชนียูวีที่ (อเมริกา)</Name>
+            <Name locale="tr">UV İndeksi (ABD)</Name>
+            <Name locale="uk">Індекс УФ (США)</Name>
+            <Name locale="vi">Chỉ số UV (Hoa Kỳ)</Name>
+            <Name locale="zh-rCN">紫外线指数（美国）</Name>
+            <Name locale="zh-rTW">紫外線指數（美國）</Name>
+            <Url>WindSpeed</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>uv.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+                
+        <Layer ID="0092">
+            <Name locale="en">Observed 24-hr Precip (US)</Name>
+            <Name locale="ar">الهطول المتوقع في 24 ساعة (الولايات المتحدة)</Name>
+            <Name locale="ca">Registre de precip. en 24 h (EUA)</Name>
+            <Name locale="cs">Srážky za 24 hod (USA)</Name>
+            <Name locale="da">Registreret 24 t. nedb.(USA)</Name>
+            <Name locale="de">Vermerkte Niederschläge der letzten 24 Std. (US)</Name>
+            <Name locale="el">Καταγεγραμμένη ατμ. κατακρ. 24 ωρών (Η.Π.Α.)</Name>
+            <Name locale="en-rGB">Observed 24-hr Precip (US)</Name>
+            <Name locale="es">Precipitación observada últimas 24 h (EE.UU.)</Name>
+            <Name locale="fa">بارندگی 24 ساعته مشاهده شده (آمریکا)</Name>
+            <Name locale="fi">Havaittu 24 h sademäärä (USA)</Name>
+            <Name locale="fr">Précipitations dernières 24 h (É.-U.)</Name>
+            <Name locale="he">משקעים ביממה האחרונה ב-(ארה״ב)</Name>
+            <Name locale="hi">द्वारा पर्यवेक्षित 24 घंटे का अवक्षेपण(यूएस)</Name>
+            <Name locale="hr">zabilježene padaline u 24 h (SAD)</Name>
+            <Name locale="hu">Elmúlt 24 óra csapadékadatai a rendszerből (USA)</Name>
+            <Name locale="id">Presip yang Diamati 24-jm (AS)</Name>
+            <Name locale="it">Precipitazioni 24 ore osservate (USA)</Name>
+            <Name locale="ja">による実測24時間降水量（米国）</Name>
+            <Name locale="ko">관측 24시간 강수량(미국)</Name>
+            <Name locale="ms">Kerpasan 24 Jam Cerapan (AS)</Name>
+            <Name locale="nl">Waargenomen neerslag 24 uur volgens (VS)</Name>
+            <Name locale="no">obs. 24 t. nedbør (USA)</Name>
+            <Name locale="pl">- obserwowane opady, 24 godz. (USA)</Name>
+            <Name locale="pt-rBR">Precip. Observada em 24h (EUA)</Name>
+            <Name locale="pt">Precipitação registada nas últimas 24 h (EUA)</Name>
+            <Name locale="ro">Precipitații în 24 h observate (S.U.A.)</Name>
+            <Name locale="ru">Суточная освещенность согласно (США)</Name>
+            <Name locale="sk">Pozorované zrážky za 24 h (USA)</Name>
+            <Name locale="sv">nederbörd senaste dygnet (USA)</Name>
+            <Name locale="th">น้ำฟ้า 24 ชม. ที่ผ่านมาที่เฝ้าสังเกตุไว้สำหรับ (อเมริกา)</Name>
+            <Name locale="tr">Gözlenen 24 Saatlik Yağış (ABD)</Name>
+            <Name locale="uk">Спостережені опади за добу (США)</Name>
+            <Name locale="vi">Lượng mưa 24 giờ được Quan trắc (Hoa Kỳ)</Name>
+            <Name locale="zh-rCN">观测的 24 小时内降水（美国）</Name>
+            <Name locale="zh-rTW">觀測的 24 小時內降雨（美國）</Name>
+            <Url>WindSpeed</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>tf_hr_rainfall.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+                
+        <Layer ID="0093">
+            <Name locale="en">Observed 24-hr Snowfall (US)</Name>
+            <Name locale="ar">سقوط الثلج المتوقع في 24 ساعة (الولايات المتحدة)</Name>
+            <Name locale="ca">Registre de nevada en 24 h (EUA)</Name>
+            <Name locale="cs">Sněžení za 24 hod (USA)</Name>
+            <Name locale="da">Registreret 24 t. snefald (USA)</Name>
+            <Name locale="de">Vermerkte Schneefälle der letzten 24 Std. (US)</Name>
+            <Name locale="el">Καταγεγραμμένη χιονόπτωση 24 ωρών (Η.Π.Α.)</Name>
+            <Name locale="en-rGB">Observed 24-hr Snowfall (US)</Name>
+            <Name locale="es">Nieve observada últimas 24 h (EE.UU.)</Name>
+            <Name locale="fa">بارش برف 24 ساعته مشاهده شده (آمریکا)</Name>
+            <Name locale="fi">Havaittu 24 h lumisademäärä (USA)</Name>
+            <Name locale="fr">Neige dernières 24 h (É.-U.)</Name>
+            <Name locale="he">ירידת שלגים ביממה האחרונה ב-(ארה״ב)</Name>
+            <Name locale="hi"> द्वारा पर्यवेक्षित 24  घंटे का हिमपात(यूएस)</Name>
+            <Name locale="hr">zabilježeni snijeg u 24 h (SAD)</Name>
+            <Name locale="hu">Elmúlt 24 óra havazási adatai a rendszerből (USA)</Name>
+            <Name locale="id">Hujan Salju yang Diamati 24-jm (AS)</Name>
+            <Name locale="it">Nevicate 24 ore osservate (USA)</Name>
+            <Name locale="ja">による実測24時間降雪量（米国）</Name>
+            <Name locale="ko">관측 24시간 강설량(미국)</Name>
+            <Name locale="ms">Curahan Salji 24 Jam Cerapan (AS)</Name>
+            <Name locale="nl">Waargenomen sneeuwval 24 uur volgens (VS)</Name>
+            <Name locale="no">obs. 24 t. snøfall (USA)</Name>
+            <Name locale="pl">- obserwowane opady śniegu, 24 godz. (USA)</Name>
+            <Name locale="pt-rBR">Caída de Neve Observada em 24h (EUA)</Name>
+            <Name locale="pt">Precipitação (neve) registada nas últimas 24 h (EUA)</Name>
+            <Name locale="ro">Ninsori în 24 h observate (S.U.A.)</Name>
+            <Name locale="ru">Суточный снегопад согласно (США)</Name>
+            <Name locale="sk">Pozorované sneženie za 24 h (USA)</Name>
+            <Name locale="sv">snöfall senaste dygnet (USA)</Name>
+            <Name locale="th">ปริมาณหิมะ 24 ชม. ที่ผ่านมาที่เฝ้าสังเกตุไว้สำหรับ (อเมริกา)</Name>
+            <Name locale="tr">Gözlenen 24 Saatlik Kar Yağışı (ABD)</Name>
+            <Name locale="uk">Спостережений сніг за добу (США)</Name>
+            <Name locale="vi">Lượng tuyết rơi 24 giờ được Quan trắc (Hoa Kỳ)</Name>
+            <Name locale="zh-rCN">观测的 24 小时内降雪（美国）</Name>
+            <Name locale="zh-rTW">觀測的 24 小時內降雪（美國）</Name>
+            <Url>WindSpeed</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>tf_hr_snowfall.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+                
+        <Layer ID="0096">
+            <Name locale="en">Observed 24-hr Temp Change (US)</Name>
+            <Name locale="ar">تغييرات درجة الحرارة في 24 ساعة (الولايات المتحدة)</Name>
+            <Name locale="ca">Registre de canvis de temp. en 24 h (EUA)</Name>
+            <Name locale="cs">Teplotní změny za 24 hod (USA)</Name>
+            <Name locale="da">Registreret 24 t. temp.ændring (USA)</Name>
+            <Name locale="de">Vermerkte Temperaturveränderungen der letzten 24 Std. (US)</Name>
+            <Name locale="el">Καταγεγραμμένες μεταβολές θερμοκρασίας 24 ωρών (Η.Π.Α.)</Name>
+            <Name locale="en-rGB">Observed 24-hr Temp Change (US)</Name>
+            <Name locale="es">Variación térmica observada últimas 24 h (EE.UU.)</Name>
+            <Name locale="fa">تغییر دمای 24 ساعته مشاهده شده (آمریکا)</Name>
+            <Name locale="fi">Havaittu 24 h lämpötilan muutos (USA)</Name>
+            <Name locale="fr">Changements de température dernières 24 h (É.-U.)</Name>
+            <Name locale="he">שינויי טמפרטורה ביממה האחרונה ב-(ארה״ב)</Name>
+            <Name locale="hi"> द्वारा पर्यवेक्षित 24  घंटे का तापमान परिवर्तन(यूएस)</Name>
+            <Name locale="hr">zabilježena promjena temperature u 24 h (SAD)</Name>
+            <Name locale="hu">Elmúlt 24 óra hőmérsékleti változásai a rendszerből (USA)</Name>
+            <Name locale="id">Perubahan Suhu yang Diamati 24-jm (AS)</Name>
+            <Name locale="it">Variazioni di temperatura 24 ore osservate (USA)</Name>
+            <Name locale="ja">による実測24時間気温変化（米国）</Name>
+            <Name locale="ko">관측 24시간 온도 변화(미국)</Name>
+            <Name locale="ms">Perubahan Suhu 24 Jam Cerapan (AS)</Name>
+            <Name locale="nl">Waargenomen temperatuurwisseling 24 uur volgens (VS)</Name>
+            <Name locale="no">obs. 24 t. temp.endring (USA)</Name>
+            <Name locale="pl">- obserwowane zmiany temperatury, 24 godz. (USA)</Name>
+            <Name locale="pt-rBR">Mudança de Temp. Observada em 24h (EUA)</Name>
+            <Name locale="pt">Variação de temperatura registada nas últimas 24 h (EUA)</Name>
+            <Name locale="ro">Variații temperatură în 24 h observate (S.U.A.)</Name>
+            <Name locale="ru">Суточное изменение температуры согласно (США)</Name>
+            <Name locale="sk">Pozorované zmeny teploty za 24 h (USA)</Name>
+            <Name locale="sv">temperaturförändringar det senaste dygnet (USA)</Name>
+            <Name locale="th">การเปลี่ยนแปลงของอุณหภูมิ 24 ชม. ที่ผ่านมาที่เฝ้าสังเกตุไว้สำหรับ (อเมริกา)</Name>
+            <Name locale="tr">Gözlenen 24 Saatlik Sıcaklık Değişimi (ABD)</Name>
+            <Name locale="uk">Спостережені змінення температури за добу (США)</Name>
+            <Name locale="vi">Thay đổi Nhiệt độ 24 giờ được Quan trắc (Hoa Kỳ)</Name>
+            <Name locale="zh-rCN">观测的 24 小时内温度变化（美国）</Name>
+            <Name locale="zh-rTW">觀測的 24 小時內氣溫變更（美國）</Name>
+            <Url>WindSpeed</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>temp.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+        
+        
+       <Layer ID="0139" futureID="0154">
+           <Name locale="en">Observed Temps (Europe)</Name>
+           <Name locale="ar">درجات الحرارة المتوقعة (أوروبا)</Name>
+           <Name locale="ca">Registre de temp. (Europa)</Name>
+           <Name locale="cs">Teploty (Evropa)</Name>
+           <Name locale="da">Registrerede temp. (Europa)</Name>
+           <Name locale="de">Vermerkte Temp. (Europa)</Name>
+           <Name locale="el">Καταγεγραμμένες θερμοκρασίες (Ευρώπη)</Name>
+           <Name locale="en-rGB">Observed Temps (Europe)</Name>
+           <Name locale="es">Temperaturas observadas (Europa)</Name>
+           <Name locale="fa">دماهای مشاهده شده (اروپا)</Name>
+           <Name locale="fi">Havaitut lämpötilat (Eurooppa)</Name>
+           <Name locale="fr">Températures observées (Europe)</Name>
+           <Name locale="he">טמפ׳ שנמדדו ב-(אירופה)</Name>
+           <Name locale="hi"> द्वारा पर्यवेक्षित तापमान (यूरोप)</Name>
+           <Name locale="hr">zabilježene temperature (Europa)</Name>
+           <Name locale="hu">Hőmérsékleti adatok a rendszerből (Európa)</Name>
+           <Name locale="id">Suhu yang Diamati (Eropa)</Name>
+           <Name locale="it">Temperature osservate (Europa)</Name>
+           <Name locale="ja">による実測気温（ヨーロッパ）</Name>
+           <Name locale="ko">관측 온도(유럽)</Name>
+           <Name locale="ms">Suhu Cerapan (Eropah)</Name>
+           <Name locale="nl">Waargenomen temperaturen volgens (Europa)</Name>
+           <Name locale="no">obs. temperaturer (Europa)</Name>
+           <Name locale="pl">- obserwowana temperatura (Europa)</Name>
+           <Name locale="pt-rBR">Temp. Observadas (Europa)</Name>
+           <Name locale="pt">Temperaturas registadas (Europa)</Name>
+           <Name locale="ro">Temperaturi observate (Europa)</Name>
+           <Name locale="ru">Температура согласно (Европа)</Name>
+           <Name locale="sk">Pozorované teploty (Európa)</Name>
+           <Name locale="sv">-temperaturer (Europa)</Name>
+           <Name locale="th">อุณหภูมิที่เฝ้าสังเกตุไว้สำหรับ (ยุโรป)</Name>
+           <Name locale="tr">Gözlenen Sıcaklıklar (Avrupa)</Name>
+           <Name locale="uk">Спостережені температури (Європа)</Name>
+           <Name locale="vi">Nhiệt độ được Quan trắc (Châu Âu)</Name>
+           <Name locale="zh-rCN">观测温度（欧洲）</Name>
+           <Name locale="zh-rTW">觀測氣溫（歐洲）</Name>
+           <Url>Temperature</Url>
+           <Polling units="sec">300</Polling>
+           <ShowLegend>TRUE</ShowLegend>
+           <ShowLoop>TRUE</ShowLoop>
+           <LegendFileName>temp.png</LegendFileName>
+           <UnitDependent>TRUE</UnitDependent>
+           <Transparency units="percent">40</Transparency>
+        </Layer>
+        
+        <Layer ID="0143" futureID="0155">
+            <Name locale="en">Observed Feels-Like (Europe)</Name>
+            <Name locale="ar">Observed المستشعرة (أوروبا)</Name>
+            <Name locale="ca">Registre de temp. de sensació (Europa)</Name>
+            <Name locale="cs">Pocitové teploty (Evropa)</Name>
+            <Name locale="da">Registrerede føles som (Europa)</Name>
+            <Name locale="de">Vermerkte Gefühlte Temp. (Europa)</Name>
+            <Name locale="el">Καταγεγραμμένες αισθητές θερμοκρασίες (Ευρώπη)</Name>
+            <Name locale="en-rGB">Observed Feels-Like (Europe)</Name>
+            <Name locale="es">Sensación observada (Europa)</Name>
+            <Name locale="fa">وضعیت آب و هوای مشاهده شده (اروپا)</Name>
+            <Name locale="fi">Tuntuu kuin -havainnot (Eurooppa)</Name>
+            <Name locale="fr">Températures ressenties (Europe)</Name>
+            <Name locale="he">התחושה כעת ב-היא של (אירופה)</Name>
+            <Name locale="hi">द्वारा पर्यवेक्षित महसूस होने जैसे(यूरोप)</Name>
+            <Name locale="hr">zabilježeni dojmovi (Europa)</Name>
+            <Name locale="hu">Hőmérsékletérzet a rendszerből (Európa)</Name>
+            <Name locale="id">Yang Diamati Terasa Seperti (Eropa)</Name>
+            <Name locale="it">Temperatura percepita (Europa)</Name>
+            <Name locale="ja">による実測体感（ヨーロッパ）</Name>
+            <Name locale="ko">관측 체감 온도(유럽)</Name>
+            <Name locale="ms">Rasa-Seperti Cerapan (Eropah)</Name>
+            <Name locale="nl">Waargenomen gevoelstemperaturen volgens (Europa)</Name>
+            <Name locale="no">obs. føles som (Europa)</Name>
+            <Name locale="pl">- obserwowana temp. odczuwalna (Europa)</Name>
+            <Name locale="pt-rBR">Sensação Observada (Europa)</Name>
+            <Name locale="pt">Sensação térmica registada (Europa)</Name>
+            <Name locale="ro">Temperaturi resimțite observate (Europa)</Name>
+            <Name locale="ru">Ощущаемая температура согласно (Европа)</Name>
+            <Name locale="sk">Pozorované pocitové teploty (Európa)</Name>
+            <Name locale="sv">upplevelseprognos (Europa)</Name>
+            <Name locale="th">ความรู้สึกที่เฝ้าสังเกตุไว้สำหรับ (ยุโรป)</Name>
+            <Name locale="tr">Gözlenen Hissedilen (Avrupa)</Name>
+            <Name locale="uk">Спостережені температури за відчуттям (Європа)</Name>
+            <Name locale="vi">Nhiệt độ cảm nhận hiện tại được Quan trắc (Châu Âu)</Name>
+            <Name locale="zh-rCN">观测的感觉温度（欧洲）</Name>
+            <Name locale="zh-rTW">觀測的感覺溫度（歐洲）</Name>
+            <Url>WindSpeed</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>feels.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+        <Layer ID="0148" futureID="0157">
+            <Name locale="en">Wind Speed (Europe)</Name>
+            <Name locale="ar">سرعة رياح (أوروبا)</Name>
+            <Name locale="ca">Velocitat del vent (Europa)</Name>
+            <Name locale="cs">Rychlost větru (Evropa)</Name>
+            <Name locale="da">Vindhastighed (Europa)</Name>
+            <Name locale="de">Windgeschwindigkeiten (Europa)</Name>
+            <Name locale="el">Ταχύτητα ανέμου (Ευρώπη)</Name>
+            <Name locale="en-rGB">Wind Speed (Europe)</Name>
+            <Name locale="es">Velocidad del viento (Europa)</Name>
+            <Name locale="fa">سرعت باد (اروپا)</Name>
+            <Name locale="fi">Tuulenvoimakkuus (Eurooppa)</Name>
+            <Name locale="fr">Vitesse de vent (Europe)</Name>
+            <Name locale="he">מהירות הרוח ב-(אירופה)</Name>
+            <Name locale="hi"> वायु गति(यूरोप)</Name>
+            <Name locale="hr">brzina vjetra (Europa)</Name>
+            <Name locale="hu">Szélsebesség a rendszerből (Európa)</Name>
+            <Name locale="id">Kecepatan Angin (Eropa)</Name>
+            <Name locale="it">Velocità del vento (Europa)</Name>
+            <Name locale="ja">による風速（ヨーロッパ）</Name>
+            <Name locale="ko">풍속(유럽)</Name>
+            <Name locale="ms">Kelajuan Angin (Eropah)</Name>
+            <Name locale="nl">Windsnelheid volgens (Europa)</Name>
+            <Name locale="no">vindstyrke (Europa)</Name>
+            <Name locale="pl">- szybkość wiatru (Europa)</Name>
+            <Name locale="pt-rBR">Velocidade do Vento (Europa)</Name>
+            <Name locale="pt">Velocidade do vento (Europa)</Name>
+            <Name locale="ro">Viteza vântului (Europa)</Name>
+            <Name locale="ru">Скорость ветра согласно (Европа)</Name>
+            <Name locale="sk">Rýchlosť vetra (Európa)</Name>
+            <Name locale="sv">vindhastigheter (Europa)</Name>
+            <Name locale="th">ความเร็วลมของ (ยุโรป)</Name>
+            <Name locale="tr">Rüzgar Hızı (Avrupa)</Name>
+            <Name locale="uk">Швидкість вітру (Європа)</Name>
+            <Name locale="vi">Tốc độ Gió (Châu Âu)</Name>
+            <Name locale="zh-rCN">风速（欧洲）</Name>
+            <Name locale="zh-rTW">風速（歐洲）</Name>
+            <Url>WindSpeed</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>wind.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+                
+        <Layer ID="0150"  futureID="0158">
+            <Name locale="en">Dewpoint (Europe)</Name>
+            <Name locale="ar">نقطة الندى (أوروبا)</Name>
+            <Name locale="ca">Punt de rosada (Europa)</Name>
+            <Name locale="cs">Rosný bod (Evropa)</Name>
+            <Name locale="da">Dugpunkt (Europa)</Name>
+            <Name locale="de">Taupunkte (Europa)</Name>
+            <Name locale="el">Σημείο δρόσου (Ευρώπη)</Name>
+            <Name locale="en-rGB">Dewpoint (Europe)</Name>
+            <Name locale="es">Punto de condensación (Europa)</Name>
+            <Name locale="fa">نقطه شبنم (اروپا)</Name>
+            <Name locale="fi">Kastepiste (Eurooppa)</Name>
+            <Name locale="fr">Point de rosée (Europe)</Name>
+            <Name locale="he">נקודת טל ב-(אירופה)</Name>
+            <Name locale="hi"> ओसांक(यूरोप)</Name>
+            <Name locale="hr">rosište (Europa)</Name>
+            <Name locale="hu">Harmatpont a rendszerből (Európa)</Name>
+            <Name locale="id">Titik Embun (Eropa)</Name>
+            <Name locale="it">Punto di rugiada (Europa)</Name>
+            <Name locale="ja">による露点（ヨーロッパ）</Name>
+            <Name locale="ko">이슬점(유럽)</Name>
+            <Name locale="ms">Takat Embun (Eropah)</Name>
+            <Name locale="nl">Dauwpunt volgens (Europa)</Name>
+            <Name locale="no">duggpunkt (Europa)</Name>
+            <Name locale="pl">- punkt rosy (Europa)</Name>
+            <Name locale="pt-rBR">Ponto de Condensação (Europa)</Name>
+            <Name locale="pt">Ponto de orvalho (Europa)</Name>
+            <Name locale="ro">Punct de rouă (Europa)</Name>
+            <Name locale="ru">Точка росы согласно (Европа)</Name>
+            <Name locale="sk">Rosný bod (Európa)</Name>
+            <Name locale="sv">daggpunktstemperaturer (Europa)</Name>
+            <Name locale="th">จุดน้ำค้างที่ (ยุโรป)</Name>
+            <Name locale="tr">Çiy Noktası (Avrupa)</Name>
+            <Name locale="uk">Точка роси (Європа)</Name>
+            <Name locale="vi">Điểm đọng sương (Châu Âu)</Name>
+            <Name locale="zh-rCN">露点（欧洲）</Name>
+            <Name locale="zh-rTW">露點（歐洲）</Name>
+            <Url>WindSpeed</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>dew.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+                
+        <Layer ID="0152"  futureID="0158">
+            <Name locale="en">UV Index (Europe)</Name>
+            <Name locale="ar">مؤشر للأشعة فوق البنفسجية (أوروبا)</Name>
+            <Name locale="ca">Índex ultraviolat (Europa)</Name>
+            <Name locale="cs">UV index (Evropa)</Name>
+            <Name locale="da">UV-indeks (Europa)</Name>
+            <Name locale="de">UV-Index (Europa)</Name>
+            <Name locale="el">Δείκτης UV (Ευρώπη)</Name>
+            <Name locale="en-rGB">UV Index (Europe)</Name>
+            <Name locale="es">Índice UV (Europa)</Name>
+            <Name locale="fa">شاخص فرابنفش (اروپا)</Name>
+            <Name locale="fi">UV-indeksi (Eurooppa)</Name>
+            <Name locale="fr">Indices UV (Europe)</Name>
+            <Name locale="he">מדד UV ב-(אירופה)</Name>
+            <Name locale="hi">UV सूचकांक(यूरोप)</Name>
+            <Name locale="hr">UV indeks (Europa)</Name>
+            <Name locale="hu">UV-index a rendszerből (Európa)</Name>
+            <Name locale="id">Indeks UV (Eropa)</Name>
+            <Name locale="it">Indice UV (Europa)</Name>
+            <Name locale="ja">による紫外線指数（ヨーロッパ）</Name>
+            <Name locale="ko">자외선 지수(유럽)</Name>
+            <Name locale="ms">Indeks UV (Eropah)</Name>
+            <Name locale="nl">UV-index volgens (Europa)</Name>
+            <Name locale="no">UV-indeks (Europa)</Name>
+            <Name locale="pl">- indeks UV (Europa)</Name>
+            <Name locale="pt-rBR">Índice de UV (Europa)</Name>
+            <Name locale="pt">Índice UV (Europa)</Name>
+            <Name locale="ro">Indice UV (Europa)</Name>
+            <Name locale="ru">УФ-индекс согласно (Европа)</Name>
+            <Name locale="sk">Index UV (Európa)</Name>
+            <Name locale="sv">UV-index (Europa)</Name>
+            <Name locale="th">ดัชนียูวีที่ (ยุโรป)</Name>
+            <Name locale="tr">UV İndeksi (Avrupa)</Name>
+            <Name locale="uk">Індекс УФ (Європа)</Name>
+            <Name locale="vi">Chỉ số UV (Châu Âu)</Name>
+            <Name locale="zh-rCN">紫外线指数（欧洲）</Name>
+            <Name locale="zh-rTW">紫外線指數（歐洲）</Name>
+            <Url>WindSpeed</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>uv.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+                
+        <Layer ID="0145">
+            <Name locale="en">Observed 24-hr Precip (Europe)</Name>
+            <Name locale="ar">الهطول المتوقع في 24 ساعة (أوروبا)</Name>
+            <Name locale="ca">Registre de precip. en 24 h (Europa)</Name>
+            <Name locale="cs">Srážky za 24 hod (Evropa)</Name>
+            <Name locale="da">Registreret 24 t. nedb.(Europa)</Name>
+            <Name locale="de">Vermerkte Niederschläge der letzten 24 Std. (Europa)</Name>
+            <Name locale="el">Καταγεγραμμένη ατμ. κατακρ. 24 ωρών (Ευρώπη)</Name>
+            <Name locale="en-rGB">Observed 24-hr Precip (Europe)</Name>
+            <Name locale="es">Precipitación observada últimas 24 h (Europa)</Name>
+            <Name locale="fa">بارندگی 24 ساعته مشاهده شده (اروپا)</Name>
+            <Name locale="fi">Havaittu 24 h sademäärä (Eurooppa)</Name>
+            <Name locale="fr">Précipitations dernières 24 h (Europe)</Name>
+            <Name locale="he">משקעים ביממה האחרונה ב-(אירופה)</Name>
+            <Name locale="hi"> द्वारा पर्यवेक्षित 24-घंटे का अवक्षेपण(यूरोप)</Name>
+            <Name locale="hr">zabilježene padaline u 24 h (Europa)</Name>
+            <Name locale="hu">Elmúlt 24 óra csapadékadatai a rendszerből (Európa)</Name>
+            <Name locale="id">Presip yang Diamati 24-jm (Eropa)</Name>
+            <Name locale="it">Precipitazioni 24 ore osservate (Europa)</Name>
+            <Name locale="ja">による実測24時間降水量（ヨーロッパ）</Name>
+            <Name locale="ko">관측 24시간 강수량(유럽)</Name>
+            <Name locale="ms">Kerpasan 24 Jam Cerapan (Eropah)</Name>
+            <Name locale="nl">Waargenomen neerslag 24 uur volgens (Europa)</Name>
+            <Name locale="no">obs. 24 t. nedbør (Europa)</Name>
+            <Name locale="pl">- obserwowane opady, 24 godz. (Europa)</Name>
+            <Name locale="pt-rBR">Precip. Observada em 24h (Europa)</Name>
+            <Name locale="pt">Precipitação registada nas últimas 24 h (Europa)</Name>
+            <Name locale="ro">Precipitații în 24 h observate (Europa)</Name>
+            <Name locale="ru">Суточная освещенность согласно (Европа)</Name>
+            <Name locale="sk">Pozorované zrážky za 24 h (Európa)</Name>
+            <Name locale="sv">nederbörd senaste dygnet (Europa)</Name>
+            <Name locale="th">น้ำฟ้า 24 ชม. ที่ผ่านมาที่เฝ้าสังเกตุไว้สำหรับ (ยุโรป)</Name>
+            <Name locale="tr">Gözlenen 24 Saatlik Yağış (Avrupa)</Name>
+            <Name locale="uk">Спостережені опади за добу (Європа)</Name>
+            <Name locale="vi">Lượng mưa 24 giờ được Quan trắc (Châu Âu)</Name>
+            <Name locale="zh-rCN">观测的 24 小时内降水（欧洲）</Name>
+            <Name locale="zh-rTW">觀測的 24 小時內降雨（歐洲）</Name>
+            <Url>WindSpeed</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>tf_hr_rainfall.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+                
+        <Layer ID="0147">
+            <Name locale="en">Observed 24-hr Snowfall (Europe)</Name>
+            <Name locale="ar">سقوط الثلج المتوقع في 24 ساعة (أوروبا)</Name>
+            <Name locale="ca">Registre de precip. en 24 h (Europa)</Name>
+            <Name locale="cs">Srážky za 24 hod (Evropa)</Name>
+            <Name locale="da">Registreret 24 t. snefald (Europa)</Name>
+            <Name locale="de">Vermerkte Schneefälle der letzten 24 Std. (Europa)</Name>
+            <Name locale="el">Καταγεγραμμένη χιονόπτωση 24 ωρών (Ευρώπη)</Name>
+            <Name locale="en-rGB">Observed 24-hr Snowfall (Europe)</Name>
+            <Name locale="es">Nieve observada últimas 24 h (Europa)</Name>
+            <Name locale="fa">بارش برف 24 ساعته مشاهده شده (اروپا)</Name>
+            <Name locale="fi">Havaittu 24 h lumisademäärä (Eurooppa)</Name>
+            <Name locale="fr">Neige dernières 24 h (Europe)</Name>
+            <Name locale="he">ירידת שלגים ביממה האחרונה ב-(אירופה)</Name>
+            <Name locale="hi"> द्वारा पर्यवेक्षित 24-घंटे का हिमपात(यूरोप)</Name>
+            <Name locale="hr">zabilježeni snijeg u 24 h (Europa)</Name>
+            <Name locale="hu">Elmúlt 24 óra havazási adatai a rendszerből (Európa)</Name>
+            <Name locale="id">Hujan Salju yang Diamati 24-jm (Eropa)</Name>
+            <Name locale="it">Nevicate 24 ore osservate (Europa)</Name>
+            <Name locale="ja">による実測24時間降雪量（ヨーロッパ）</Name>
+            <Name locale="ko">관측 24시간 강설량(유럽)</Name>
+            <Name locale="ms">Curahan Salji 24 Jam Cerapan (Eropah)</Name>
+            <Name locale="nl">Waargenomen sneeuwval 24 uur volgens (Europa)</Name>
+            <Name locale="no">obs. 24 t. snøfall (Europa)</Name>
+            <Name locale="pl">- obserwowane opady śniegu, 24 godz. (Europa)</Name>
+            <Name locale="pt-rBR">Caída de Neve Observada em 24h (Europa)</Name>
+            <Name locale="pt">Precipitação (neve) registada nas últimas 24 h (Europa)</Name>
+            <Name locale="ro">Ninsori în 24 h observate (Europa)</Name>
+            <Name locale="ru">Суточный снегопад согласно (Европа)</Name>
+            <Name locale="sk">Pozorované sneženie za 24 h (Európa)</Name>
+            <Name locale="sv">snöfall det senaste dygnet (Europa)</Name>
+            <Name locale="th">ปริมาณหิมะ 24 ชม. ที่ผ่านมาที่เฝ้าสังเกตุไว้สำหรับ (ยุโรป)</Name>
+            <Name locale="tr">Gözlenen 24 Saatlik Kar Yağışı (Avrupa)</Name>
+            <Name locale="uk">Спостережений сніг за добу (Європа)</Name>
+            <Name locale="vi">Lượng tuyết rơi 24 giờ được Quan trắc (Châu Âu)</Name>
+            <Name locale="zh-rCN">观测的 24 小时内降雪（欧洲）</Name>
+            <Name locale="zh-rTW">觀測的 24 小時內降雪（歐洲）</Name>
+            <Url>WindSpeed</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>tf_hr_snowfall.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+                
+        <Layer ID="0151">
+            <Name locale="en">Observed 24-hr Temp Change (Europe)</Name>
+            <Name locale="ar">تغييرات درجة الحرارة في 24 ساعة (أوروبا)</Name>
+            <Name locale="ca">Registre de canvis de temp. en 24 h (Europa)</Name>
+            <Name locale="cs">Teplotní změny za 24 hod (Evropa)</Name>
+            <Name locale="da">Registreret 24 t. temp.ændring (Europa)</Name>
+            <Name locale="de">Vermerkte Temperaturveränderungen der letzten 24 Std. (Europa)</Name>
+            <Name locale="el">Καταγεγραμμένες μεταβολές θερμοκρασίας 24 ωρών (Ευρώπη)</Name>
+            <Name locale="en-rGB">Observed 24-hr Temp Change (Europe)</Name>
+            <Name locale="es">Variación térmica observada últimas 24 h (Europa)</Name>
+            <Name locale="fa">تغییر دمای 24 ساعته مشاهده شده (اروپا)</Name>
+            <Name locale="fi">Havaittu 24 h lämpötilan muutos (Eurooppa)</Name>
+            <Name locale="fr">Changements de température dernières 24 h (Europe)</Name>
+            <Name locale="he">שינויי טמפרטורה ביממה האחרונה ב-(אירופה)</Name>
+            <Name locale="hi">द्वारा पर्यवेक्षित 24  घंटे का तापमान परिवर्तन(यूरोप)</Name>
+            <Name locale="hr">zabilježena promjena temperature u 24 h (Europa)</Name>
+            <Name locale="hu">Elmúlt 24 óra hőmérsékleti változásai a rendszerből (Európa)</Name>
+            <Name locale="id">Perubahan Suhu yang Diamati 24-jm (Eropa)</Name>
+            <Name locale="it">Variazioni di temperatura 24 ore osservate (Europa)</Name>
+            <Name locale="ja">による実測24時間気温変化（ヨーロッパ）</Name>
+            <Name locale="ko">관측 24시간 온도 변화(유럽)</Name>
+            <Name locale="ms">Perubahan Suhu 24 Jam Cerapan (Eropah)</Name>
+            <Name locale="nl">Waargenomen temperatuurwisseling 24 uur volgens (Europa)</Name>
+            <Name locale="no">obs. 24 t. temp.endring (Europa)</Name>
+            <Name locale="pl">- obserwowane zmiany temperatury, 24 godz. (Europa)</Name>
+            <Name locale="pt-rBR">Mudança de Temp. Observada em 24h (Europa)</Name>
+            <Name locale="pt">Variação de temperatura registada nas últimas 24 h (Europa)</Name>
+            <Name locale="ro">Variații temperatură în 24 h observate (Europa)</Name>
+            <Name locale="ru">Суточное изменение температуры согласно (Европа)</Name>
+            <Name locale="sk">Pozorované zmeny teploty za 24 h (Európa)</Name>
+            <Name locale="sv">temperaturförändringar det senaste dygnet (Europa)</Name>
+            <Name locale="th">การเปลี่ยนแปลงของอุณหภูมิ 24 ชม. ที่ผ่านมาที่เฝ้าสังเกตุไว้สำหรับ (ยุโรป)</Name>
+            <Name locale="tr">Gözlenen 24 Saatlik Sıcaklık Değişimi (Avrupa)</Name>
+            <Name locale="uk">Спостережені змінення температури за добу (Європа)</Name>
+            <Name locale="vi">Thay đổi Nhiệt độ 24 giờ được Quan trắc (Châu Âu)</Name>
+            <Name locale="zh-rCN">观测的 24 小时内温度变化（欧洲）</Name>
+            <Name locale="zh-rTW">觀測的 24 小時內氣溫變更（歐洲）</Name>
+            <Url>WindSpeed</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>TRUE</ShowLoop>
+            <LegendFileName>temp.png</LegendFileName>
+            <UnitDependent>TRUE</UnitDependent>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>
+                
+        <Layer ID="0052">
+            <Name locale="en">Road Weather Index (US)</Name>
+            <Name locale="ar">مؤشر حالة الطقس على الطرق (الولايات المتحدة)</Name>
+            <Name locale="ca">Índex del temps a les carreteres (EUA)</Name>
+            <Name locale="cs">Sjízdnost silnic (USA)</Name>
+            <Name locale="da">Vejvejrsindeks (USA)</Name>
+            <Name locale="de">Index der Straßenverhältnisse (US)</Name>
+            <Name locale="el">Δείκτης οδικών καιρικών συνθηκών (Η.Π.Α.)</Name>
+            <Name locale="en-rGB">Road Weather Index (US)</Name>
+            <Name locale="es">Índice meteorológico en carretera (EE.UU.)</Name>
+            <Name locale="fa">شاخص آب و هوای جاده ای (آمریکا)</Name>
+            <Name locale="fi">Tiesääindeksi (USA)</Name>
+            <Name locale="fr">Indice de météo des routes (É.-U.)</Name>
+            <Name locale="he">מדד מזג האוויר בכבישים (ארה״ב)</Name>
+            <Name locale="hi">मार्ग मौसम सूचकांक(यूएस)</Name>
+            <Name locale="hr">Indeks uvjeta na cestama (SAD)</Name>
+            <Name locale="hu">Utak időjárását jelző index (USA)</Name>
+            <Name locale="id">Indeks Cuaca Jalan (AS)</Name>
+            <Name locale="it">Indice condizioni stradali (USA)</Name>
+            <Name locale="ja">主要道路の気象指数（米国）</Name>
+            <Name locale="ko">도로 기상 지수(미국)</Name>
+            <Name locale="ms">Indeks Cuaca Jalan Raya (AS)</Name>
+            <Name locale="nl">Index voor weerinformatie voor verkeer (VS)</Name>
+            <Name locale="no">Veiforhold-indeks (USA)</Name>
+            <Name locale="pl">Indeks - pogoda drogowa (USA)</Name>
+            <Name locale="pt-rBR">Índice do Tempo na Estrada (EUA)</Name>
+            <Name locale="pt">Índice de tempo na estrada (EUA)</Name>
+            <Name locale="ro">Indice condiții meteo rutiere (S.U.A.)</Name>
+            <Name locale="ru">Индекс погоды на дорогах (США)</Name>
+            <Name locale="sk">Index počasia na cestách (USA)</Name>
+            <Name locale="sv">Väglagskarta (USA)</Name>
+            <Name locale="th">ดัชนีสภาพอากาศบนถนน (อเมริกา)</Name>
+            <Name locale="tr">Yol Hava Durumu İndeksi (ABD)</Name>
+            <Name locale="uk">Індекс RWI для водіїв (США)</Name>
+            <Name locale="vi">Chỉ số Thời tiết Đường bộ (Hoa Kỳ)</Name>
+            <Name locale="zh-rCN">道路天气指数（美国）</Name>
+            <Name locale="zh-rTW">道路氣象指數（美國）</Name>
+            <Url>RoadWeather</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>FALSE</ShowLoop>
+            <LegendFileName>LegendRoadIndex.png</LegendFileName>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>        
+
+        <Layer ID="0056">
+            <Name locale="en">Fire Weather Index (US)</Name>
+            <Name locale="ar">مؤشر الحرائق (الولايات المتحدة)</Name>
+            <Name locale="ca">Índex de risc d&apos;incenci (EUA)</Name>
+            <Name locale="cs">Nebezpečí požárů (USA)</Name>
+            <Name locale="da">Brandvejrsindeks (USA)</Name>
+            <Name locale="de">Waldbrand-Gefahrenindex (US)</Name>
+            <Name locale="el">Δείκτης επικινδυνότητας πυρκαγιών (Η.Π.Α.)</Name>
+            <Name locale="en-rGB">Fire Weather Index (US)</Name>
+            <Name locale="es">Índice meteorológico de incendio (EE.UU.)</Name>
+            <Name locale="fa">شاخص هوای آتش سوزی (آمریکا)</Name>
+            <Name locale="fi">Metsäpalosääindeksi (USA)</Name>
+            <Name locale="fr">Indice de conditions propices aux incendies (É.-U.)</Name>
+            <Name locale="he">מדד מזג האוויר עם סיכון לשריפות (ארה״ב)</Name>
+            <Name locale="hi">अग्नि मौसम सूचकांक(यूएस)</Name>
+            <Name locale="hr">Indeks vremenskih uvjeta koji pogoduju nastanku požara (SAD)</Name>
+            <Name locale="hu">Tűzveszélyes időjárást jelző index (USA)</Name>
+            <Name locale="id">Indeks Cuaca Kebakaran (AS)</Name>
+            <Name locale="it">Indice meteorologico di incendi (USA)</Name>
+            <Name locale="ja">火災気象指数（米国）</Name>
+            <Name locale="ko">화재 지수(미국)</Name>
+            <Name locale="ms">Indeks Cuaca Kebakaran (AS)</Name>
+            <Name locale="nl">Index voor kans op branden (VS)</Name>
+            <Name locale="no">Brannvær-indeks (USA)</Name>
+            <Name locale="pl">Indeks ppoż. (USA)</Name>
+            <Name locale="pt-rBR">Índice do Tempo de Fogo (EUA)</Name>
+            <Name locale="pt">Índice de risco de incêndio (EUA)</Name>
+            <Name locale="ro">Indice condiții incendiu (S.U.A.)</Name>
+            <Name locale="ru">Индекс пожароопасности (США)</Name>
+            <Name locale="sk">Index rizika vzniku požiarov (USA)</Name>
+            <Name locale="sv">Brandriskkarta (USA)</Name>
+            <Name locale="th">ดัชนีสภาพอากาศสำหรับไฟป่า (อเมริกา)</Name>
+            <Name locale="tr">Yangın Havası İndeksi (ABD)</Name>
+            <Name locale="uk">Індекс пожеж FWI (США)</Name>
+            <Name locale="vi">Chỉ số Thời tiết Hạn hán (Hoa Kỳ)</Name>
+            <Name locale="zh-rCN">火灾天气指数（美国）</Name>
+            <Name locale="zh-rTW">火災氣象指數（美國）</Name>
+            <Url>RoadWeather</Url>
+            <Polling units="sec">300</Polling>
+            <ShowLegend>TRUE</ShowLegend>
+            <ShowLoop>FALSE</ShowLoop>
+            <LegendFileName>legend_fire.png</LegendFileName>
+            <Transparency units="percent">40</Transparency>
+            <BumpMapping>FALSE</BumpMapping>
+        </Layer>        
+        
+        <Layer ID="0053">
+           <Name locale="en">Snow Cover (CONUS)</Name>
+           <Name locale="ar">الغطاء الثلجي (الولايات المتحدة المتجاورة)</Name>
+           <Name locale="ca">Capa de neu (CONUS)</Name>
+           <Name locale="cs">Sněhová pokrývka (CONUS)</Name>
+           <Name locale="da">Snedække (CONUS)</Name>
+           <Name locale="de">Schneehöhe (CONUS)</Name>
+           <Name locale="el">Χιονοκάλυψη (CONUS)</Name>
+           <Name locale="en-rGB">Snow Cover (CONUS)</Name>
+           <Name locale="es">Capa de nieve (CONUS)</Name>
+           <Name locale="fa">راداپوشش برفی (قاره آمریکا)</Name>
+           <Name locale="fi">Lumipeite (CONUS)</Name>
+           <Name locale="fr">Accumulation de neige (CONUS)</Name>
+           <Name locale="he">מעטה שלג (CONUS)</Name>
+           <Name locale="hi">बर्फ का आवरण (CONUS)</Name>
+           <Name locale="hr">Snježni pokrivač (CONUS)</Name>
+           <Name locale="hu">Hófedettség (CONUS)</Name>
+           <Name locale="id">Hamparan Salju (CONUS)</Name>
+           <Name locale="it">Accumuli nevosi (CONUS)</Name>
+           <Name locale="ja">積雪（CONUS）</Name>
+           <Name locale="ko">적설량(CONUS)</Name>
+           <Name locale="ms">Liputan Salji (CONUS)</Name>
+           <Name locale="nl">Sneeuwdek (CONUS)</Name>
+           <Name locale="no">Snødekke (CONUS)</Name>
+           <Name locale="pl">Pokrywa śnieżna (CONUS)</Name>
+           <Name locale="pt-rBR">Cobertura de Neve (CONUS)</Name>
+           <Name locale="pt">Neve (EUA)</Name>
+           <Name locale="ro">Strat de zăpadă (CONUS)</Name>
+           <Name locale="ru">Снежный покров (CONUS)</Name>
+           <Name locale="sk">Snehová pokrývka (CONUS)</Name>
+           <Name locale="sv">Snödjup (CONUS)</Name>
+           <Name locale="th">ระดับการปกคลุมของหิมะ (CONUS)</Name>
+           <Name locale="tr">Kar Kalınlığı (CONUS)</Name>
+           <Name locale="uk">Глибина сніжного шару (континентальна частина США)</Name>
+           <Name locale="vi">Phạm vi phủ Tuyết (CONUS)</Name>
+           <Name locale="zh-rCN">积雪（美国大陆）</Name>
+           <Name locale="zh-rTW">積雪（美國大陸）</Name>
+           <Url>SnowCover</Url>
+           <Polling units="sec">300</Polling>
+           <ShowLegend>TRUE</ShowLegend>
+           <ShowLoop>TRUE</ShowLoop>
+           <LegendFileName>LegendsSnow_MPH.png</LegendFileName>
+           <UnitDependent>TRUE</UnitDependent>
+           <Transparency units="percent">40</Transparency>
+        </Layer>
+                
+    </RasterLayers>
+</Configuration>

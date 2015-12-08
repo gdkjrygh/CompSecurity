@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/widget_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/primary_widget_background_holo_light" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="3.0dip">
+            <LinearLayout android:background="@color/dark_green" android:layout_width="@dimen/widget_my_accuweather_cell_width" android:layout_height="fill_parent" />
+            <LinearLayout android:background="@color/dark_green" android:layout_width="@dimen/widget_cell_width_overflow" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/now_row_ll" android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:layout_width="@dimen/widget_primary_cell_width" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="@dimen/widget_name_height">
+                <TextView android:ellipsize="end" android:id="@id/city_name" android:padding="0.0dip" android:layout_width="108.0dip" android:layout_height="wrap_content" android:layout_margin="0.0dip" android:singleLine="true" android:includeFontPadding="true" style="@style/TextAppearance.Widget.Light.Description" />
+                <LinearLayout android:background="@color/tertiary_text" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" />
+                <ImageButton android:id="@id/next_location" android:background="@drawable/abs__list_selector_holo_dark" android:padding="6.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/widget_arrow_green" android:scaleType="centerInside" />
+                <LinearLayout android:background="@color/tertiary_text" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:id="@id/primary_icon" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/icon_06" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Widget.Icon" />
+                    <ImageView android:id="@id/alert_icon" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginTop="4.0dip" android:src="@drawable/ic_alert" android:layout_alignLeft="@id/primary_icon" android:layout_alignParentTop="true" />
+                    <TextView android:textSize="36.0dip" android:id="@id/primary_temperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12dp" android:layout_toLeftOf="@id/primary_icon" android:layout_centerVertical="true" style="@style/TextAppearance.Widget.Light.Description.Large" />
+                </RelativeLayout>
+            </LinearLayout>
+            <ImageView android:layout_width="wrap_content" android:layout_height="12.0dip" android:layout_marginBottom="3.0dip" android:src="@drawable/accuweatherlogo_dark" android:scaleType="fitStart" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/background_lines" android:background="@drawable/background_lines_10_tiled" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="3.0dip" android:scaleType="fitXY" />
+</RelativeLayout>

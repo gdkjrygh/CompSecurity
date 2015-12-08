@@ -1,0 +1,15 @@
+<div class="login row">
+	<div class="large-8 large-centered columns">
+		<div class="intro">
+			<h2>Introducing the Bitstrips Home Feed</h2>
+			<h4>See all of your friends' latest comics and let them know what you think!</h4>
+			<a class="edit btn" ng-click="hideIntro()">Explore</a>
+		</div>
+	</div>
+	<a class="close" ng-click="hideIntro()"><i class="icon-close-circle"></i></a>
+</div>
+
+<div class="intro-container">
+    <div ng-if="!highResDevice" class="intro-graphic" style="background-image: url(images/team-feed-intro-sm.png);"></div>
+    <div ng-if="highResDevice" class="intro-graphic" style="background-image: url(images/team-feed-intro.png);"></div>
+</div>

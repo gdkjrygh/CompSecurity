@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:orientation="horizontal" android:id="@id/relative_settings_header" android:layout_width="fill_parent" android:layout_height="@dimen/settings_header_height">
+            <ImageView android:id="@id/img_header_background" android:layout_width="fill_parent" android:layout_height="@dimen/settings_header_height" android:src="@color/transparent" />
+            <View android:background="@color/header_bg_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="center" android:id="@id/linear_settings_avatar_holder" android:background="@drawable/rounded_white_bg" android:layout_width="@dimen/settings_avatar_holder_length" android:layout_height="@dimen/settings_avatar_holder_length" android:layout_marginLeft="@dimen/margin_large" android:layout_centerVertical="true">
+                <com.tinder.views.RoundImageView android:layout_gravity="center" android:id="@id/img_settings_avatar" android:layout_width="@dimen/settings_avatar_length" android:layout_height="@dimen/settings_avatar_length" android:scaleType="centerCrop" app:defaultStyle="circle" />
+            </LinearLayout>
+            <com.tinder.views.CustomTextView android:textSize="@dimen/nav_menu_name_text_size" android:textColor="@color/white" android:id="@id/txt_settings_my_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_med" android:layout_toRightOf="@id/linear_settings_avatar_holder" android:layout_above="@id/div" app:font="semi_bold" />
+            <View android:id="@id/div" android:layout_width="1.0dip" android:layout_height="1.0dip" android:layout_centerVertical="true" />
+            <com.tinder.views.CustomTextView android:textSize="@dimen/text_small" android:textColor="@color/white" android:id="@id/txt_view_profile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_med" android:text="@string/view_profile" android:layout_toRightOf="@id/linear_settings_avatar_holder" android:layout_below="@id/div" app:font="regular" />
+            <com.tinder.views.BadgeView android:id="@id/verified_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_badges" android:adjustViewBounds="true" android:layout_toRightOf="@id/txt_view_profile" android:layout_alignTop="@id/txt_view_profile" android:layout_alignBottom="@id/txt_view_profile" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/relative_discover_prefs" style="@style/settings_option_container">
+            <ImageView android:id="@id/img_discover_icon" android:layout_width="@dimen/settings_icon_length" android:layout_height="@dimen/settings_icon_length" android:src="@drawable/menu_discovery" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <LinearLayout android:layout_toRightOf="@id/img_discover_icon" style="@style/settings_option_text_container">
+                <com.tinder.views.CustomTextView android:id="@id/txt_discover_title" android:text="@string/discover_prefs" app:font="semi_bold" style="@style/settings_option_title_text" />
+                <com.tinder.views.CustomTextView android:text="@string/discover_prefs_details" app:font="medium" style="@style/settings_option_details_text" />
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="@dimen/nav_divider_height" android:layout_toRightOf="@id/img_discover_icon" android:layout_alignParentBottom="true" style="@style/menu_divider" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/relative_app_settings" style="@style/settings_option_container">
+            <ImageView android:id="@id/img_app_settings_icon" android:layout_width="@dimen/settings_icon_length" android:layout_height="@dimen/settings_icon_length" android:src="@drawable/menu_appsettings" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <LinearLayout android:layout_toRightOf="@id/img_app_settings_icon" style="@style/settings_option_text_container">
+                <com.tinder.views.CustomTextView android:id="@id/txt_settings_title" android:text="@string/app_settings" app:font="semi_bold" style="@style/settings_option_title_text" />
+                <com.tinder.views.CustomTextView android:text="@string/app_settings_details" app:font="medium" style="@style/settings_option_details_text" />
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="@dimen/nav_divider_height" android:layout_toRightOf="@id/img_app_settings_icon" android:layout_alignParentBottom="true" style="@style/menu_divider" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/relative_faq" style="@style/settings_option_container">
+            <ImageView android:id="@id/img_contact_tinder_icon" android:layout_width="@dimen/settings_icon_length" android:layout_height="@dimen/settings_icon_length" android:src="@drawable/menu_support" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <LinearLayout android:layout_toRightOf="@id/img_contact_tinder_icon" style="@style/settings_option_text_container">
+                <com.tinder.views.CustomTextView android:id="@id/txt_contact_tinder_title" android:text="@string/main_settings_faq" app:font="semi_bold" style="@style/settings_option_title_text" />
+                <com.tinder.views.CustomTextView android:text="@string/main_settings_faq_details" app:font="medium" style="@style/settings_option_details_text" />
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="@dimen/nav_divider_height" android:layout_toRightOf="@id/img_contact_tinder_icon" android:layout_alignParentBottom="true" style="@style/menu_divider" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/relative_rate_us" style="@style/settings_option_container">
+            <ImageView android:id="@id/img_rate_us_icon" android:layout_width="@dimen/settings_icon_length" android:layout_height="@dimen/settings_icon_length" android:src="@drawable/selector_rate_us" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <LinearLayout android:layout_toRightOf="@id/img_rate_us_icon" style="@style/settings_option_text_container">
+                <com.tinder.views.CustomTextView android:id="@id/txt_rate_us_title" android:text="@string/rate_us" app:font="semi_bold" style="@style/settings_option_title_text" />
+                <com.tinder.views.CustomTextView android:id="@id/txt_rate_us_details" android:text="@string/rate_us_details" app:font="medium" style="@style/settings_option_details_text" />
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="@dimen/nav_divider_height" android:layout_toRightOf="@id/img_rate_us_icon" android:layout_alignParentBottom="true" style="@style/menu_divider" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/relative_give_feedback" style="@style/settings_option_container">
+            <ImageView android:id="@id/img_feedback_icon" android:layout_width="@dimen/settings_icon_length" android:layout_height="@dimen/settings_icon_length" android:src="@drawable/menu_feedback" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <LinearLayout android:layout_toRightOf="@id/img_feedback_icon" style="@style/settings_option_text_container">
+                <com.tinder.views.CustomTextView android:id="@id/txt_feedback_title" android:text="@string/give_us_feedback" app:font="semi_bold" style="@style/settings_option_title_text" />
+                <com.tinder.views.CustomTextView android:text="@string/give_us_feedback_details" app:font="medium" style="@style/settings_option_details_text" /> />
+</LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="@dimen/nav_divider_height" android:layout_toRightOf="@id/img_feedback_icon" android:layout_alignParentBottom="true" style="@style/menu_divider" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/relative_get_plus" style="@style/settings_option_container">
+            <ImageView android:id="@id/img_get_plus_icon" android:layout_width="@dimen/settings_icon_length" android:layout_height="@dimen/settings_icon_length" android:src="@drawable/menu_plus" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <LinearLayout android:layout_toRightOf="@id/img_get_plus_icon" style="@style/settings_option_text_container">
+                <com.tinder.views.CustomTextView android:textColor="@color/tinder_red" android:text="@string/purchase_title" app:font="semi_bold" style="@style/settings_option_title_text" />
+                <com.tinder.views.CustomTextView android:id="@id/text_get_plus" android:text="Rewind your last swipe" app:font="medium" style="@style/settings_option_details_text" />
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="@dimen/nav_divider_height" android:layout_toRightOf="@id/img_get_plus_icon" android:layout_alignParentBottom="true" style="@style/menu_divider" />
+        </RelativeLayout>
+        <com.tinder.views.DevControls android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_med" />
+    </LinearLayout>
+</ScrollView>

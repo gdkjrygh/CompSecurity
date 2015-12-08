@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/verification_screen_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <com.tinder.views.CustomTextView android:textSize="@dimen/verification_title_size" android:textColor="@color/gray_dark" android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/verify_prompt" app:font="semi_bold" />
+        <com.tinder.views.CustomTextView android:textSize="@dimen/text_large" android:textColor="@color/text_light" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_med" android:text="@string/verify_details" app:font="semi_bold" />
+        <com.tinder.views.CustomTextView android:textSize="@dimen/text_xlarge" android:textColor="@color/text_dark" android:gravity="left" android:id="@id/textView_country" android:background="@null" android:paddingLeft="@dimen/padding_xsmall" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_xlarge" android:text="United States (+1)" android:onClick="showCountrySelection" />
+        <View android:layout_width="fill_parent" android:layout_height="@dimen/edittext_underline_height" style="@style/edittext_underline" />
+        <com.tinder.views.CustomEditText android:textSize="@dimen/text_xlarge" android:textColor="@color/text_dark" android:textColorHint="@color/text_light" android:id="@id/editText_phone" android:background="@null" android:paddingLeft="@dimen/padding_xsmall" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:hint="@string/phone_number" android:inputType="number" android:imeOptions="actionGo" />
+        <View android:layout_width="fill_parent" android:layout_height="@dimen/edittext_underline_height" style="@style/edittext_underline" /> g
+<com.tinder.views.CustomTextView android:textSize="@dimen/text_xlarge" android:id="@id/textView_request_code" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="@string/request_code" app:font="semi_bold" style="@style/orange_rect_button" />
+    </LinearLayout>
+</ScrollView>

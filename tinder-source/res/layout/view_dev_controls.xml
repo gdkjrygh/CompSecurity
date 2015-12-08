@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/relative_dev_settings" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.tinder.views.CustomTextView android:textColor="@color/tinder_red" android:padding="@dimen/padding_small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Environment" app:font="bold" />
+    <RadioGroup android:orientation="vertical" android:id="@id/dev_radiogroup" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.tinder.views.CustomRadioButton android:textColor="@drawable/selector_nav_menu_option_details_text" android:id="@id/dev_radio_prod" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Prod" android:layout_weight="1.0" app:font="bold" />
+        <com.tinder.views.CustomRadioButton android:textColor="@drawable/selector_nav_menu_option_details_text" android:id="@id/dev_radio_prodtest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ProdTest" android:layout_weight="1.0" app:font="bold" />
+        <com.tinder.views.CustomRadioButton android:textColor="@drawable/selector_nav_menu_option_details_text" android:id="@id/dev_radio_dev" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dev" android:layout_weight="1.0" app:font="bold" />
+        <com.tinder.views.CustomRadioButton android:textColor="@drawable/selector_nav_menu_option_details_text" android:id="@id/dev_radio_sandbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sandbox" android:layout_weight="1.0" app:font="bold" />
+    </RadioGroup>
+    <com.tinder.views.CustomTextView android:textColor="@color/tinder_red" android:padding="@dimen/padding_small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Debugging" app:font="bold" />
+    <com.tinder.views.CustomCheckBox android:textColor="@drawable/selector_nav_menu_option_details_text" android:id="@id/dev_checkbox_logging" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Logging" app:font="bold" />
+    <com.tinder.views.CustomCheckBox android:textColor="@drawable/selector_nav_menu_option_details_text" android:id="@id/dev_checkbox_fb_web_sso" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FB App Login" app:font="bold" />
+    <ListView android:scrollbarAlwaysDrawHorizontalTrack="true" android:scrollbarAlwaysDrawVerticalTrack="true" android:id="@id/dev_controls_status_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

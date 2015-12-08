@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@id/waitText" android:background="#ff4a5f66" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="35.0dip" android:text="3 files waiting to post" android:layout_centerInParent="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/failLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/current_uploadLayout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/pics_thumnail" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_margin="16.0dip" />
+        <RelativeLayout android:id="@id/waitingLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="16.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="#ff565656" android:id="@id/feed_upload_failed_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cloud_upload_waiting" android:layout_alignParentLeft="true" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/uploadingLayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="16.0dip">
+            <ProgressBar android:id="@id/upload_progress" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_marginBottom="12.0dip" android:progressDrawable="@drawable/uploading_progressbar" android:layout_centerInParent="true" style="?android:attr/progressBarStyleHorizontal" />
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/upload_progress">
+                <TextView android:textSize="16.0sp" android:textColor="#ff1de9b6" android:id="@id/upload_progress_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Uploading" android:layout_alignParentLeft="true" />
+                <TextView android:textSize="16.0sp" android:textColor="#ff1de9b6" android:id="@id/upload_progress_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/uploadFailLayout" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:textSize="16.0sp" android:textColor="#ff565656" android:id="@id/upload_failed_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cloud_post_failed" android:layout_alignParentLeft="true" android:layout_centerInParent="true" />
+            <RelativeLayout android:id="@id/upload_failed_close" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_alignParentRight="true" android:layout_centerInParent="true">
+                <ImageView android:background="@drawable/icon_uploadclose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/upload_failed_refresh" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_toLeftOf="@id/upload_failed_close" android:layout_centerInParent="true">
+                <ImageView android:background="@drawable/icon_uploadrefresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

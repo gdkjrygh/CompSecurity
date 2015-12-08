@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/skype_blue" android:paddingLeft="@dimen/padding2b" android:paddingRight="@dimen/padding2b" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/add_number_description"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/mnv_not_now_buttons" layout="@layout/mnv_not_now" />
+    <include android:id="@id/add_number_description" layout="@layout/mnv_add_number_content" />
+    <RelativeLayout android:id="@id/phone_edit_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/add_number_description">
+        <com.skype.android.widget.AccessibleAutoCompleteTextView android:gravity="center_horizontal" android:id="@id/phone_edit" android:background="@drawable/editbox_underline_selector" android:paddingTop="@dimen/padding4b" android:layout_width="@dimen/mnv_add_number_edit_width" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding1" android:hint="@string/label_add_phone_number" android:singleLine="true" android:layout_centerHorizontal="true" android:inputType="phone" style="@style/SigninInputField" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/country_button_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/phone_edit_container">
+        <TextView android:textSize="@dimen/font_small" android:textStyle="bold" android:textColor="@color/white" android:id="@id/country_button" android:background="@drawable/focus_highlight" android:paddingTop="@dimen/padding2b" android:paddingBottom="@dimen/padding2b" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/country_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/small_arrow_right_selector" android:layout_toRightOf="@id/country_button" android:layout_alignTop="@id/country_button" android:layout_alignBottom="@id/country_button" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/next_button_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/country_button_container" android:layout_alignParentBottom="true">
+        <ImageButton android:id="@id/next_button" android:background="@drawable/btn_on_blue_big_circle_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/mnv_bottom_button_margin" android:src="@drawable/continue_arrow_right_selector" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:contentDescription="@string/label_next" />
+    </RelativeLayout>
+</RelativeLayout>

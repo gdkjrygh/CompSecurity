@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_bar_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/native_topbar_height">
+        <include android:layout_width="wrap_content" android:layout_height="@dimen/native_topbar_height" android:layout_toLeftOf="@id/left_button" android:layout_alignParentLeft="true" layout="@layout/kik_back_button" />
+        <ImageView android:id="@id/left_button" android:background="@xml/topbar_button_selector" android:focusable="true" android:layout_width="@dimen/material_navbar_button_width" android:layout_height="fill_parent" android:src="@drawable/rotatephoto_left_grey" android:scaleType="centerInside" android:layout_toLeftOf="@id/right_button" />
+        <ImageView android:id="@id/right_button" android:background="@xml/topbar_button_selector" android:focusable="true" android:layout_width="@dimen/material_navbar_button_width" android:layout_height="fill_parent" android:src="@drawable/rotatephoto_right_grey" android:scaleType="centerInside" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:id="@id/bottom_bar" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/native_topbar_height" android:layout_weight="0.0" android:layout_alignParentBottom="true">
+        <Button android:textSize="18.0dip" android:textColor="@xml/conversation_name_color_selector" android:id="@id/cancel_button" android:background="@xml/android_blue_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/title_cancel" android:layout_weight="0.5" />
+        <FrameLayout android:background="@drawable/content_bubble_separator_vert" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+        <Button android:textSize="18.0dip" android:textColor="@xml/conversation_name_color_selector" android:id="@id/ok_button" android:background="@xml/android_blue_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/title_done" android:layout_weight="0.5" />
+    </LinearLayout>
+    <FrameLayout android:gravity="center" android:background="@color/misc_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/bottom_bar" android:layout_below="@id/top_bar_layout">
+        <kik.android.widget.KikCropView android:gravity="center" android:layout_gravity="center" android:id="@id/crop_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <FrameLayout android:background="@drawable/nav_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/top_bar_layout" />
+    <FrameLayout android:background="@drawable/chatbar_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/bottom_bar" />
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/result_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewFlipper android:id="@id/fullscreen_texts" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.google.android.apps.translate.widget.ZoomTextView android:textColor="@color/result_text" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.apps.translate.widget.CopyTextView android:textSize="40.0sp" android:textColor="@color/result_text" android:padding="@dimen/card_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </ViewFlipper>
+    <LinearLayout android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="64.0dip">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="center" android:id="@id/lang1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/full_screen_voice_lang_1" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@android:color/white" android:ellipsize="start" android:gravity="center" android:id="@id/lang2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/full_screen_voice_lang_2" />
+    </LinearLayout>
+</LinearLayout>

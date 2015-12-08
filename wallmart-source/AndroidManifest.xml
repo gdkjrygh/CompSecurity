@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.walmart.android" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:required="false"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.walmart.android.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.walmart.android.permission.C2D_MESSAGE"/>
+    <permission android:name="com.walmart.android.permission.UA_DATA" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.walmart.android.permission.UA_DATA"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-feature android:glEsVersion="0x20000" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="false" android:xlargeScreens="true"/>
+    <application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="Walmart" android:name="com.walmart.android.app.WalmartApplication" android:supportsRtl="true" android:theme="@style/Theme.Walmart">
+        <activity android:configChanges="keyboardHidden|orientation" android:label="Walmart" android:launchMode="singleTop" android:name="com.walmart.android.app.main.MainActivity" android:theme="@style/Theme.WalmartSplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="walmart"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.walmart.com" android:pathPrefix="/ip" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="mobile.walmart.com" android:pathPrefix="/ip" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.walmart.com" android:path="/" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="mobile.walmart.com" android:path="/" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="www.walmart.com"/>
+                <data android:path="/lists/view-wish-list-items"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.walmart.android.action.SURPRISE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.walmart.android.action.SCAN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <meta-data android:name="DELAY" android:value="500"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:label="Walmart" android:launchMode="singleTask" android:name="com.walmart.android.app.main.HomeActivity" android:theme="@style/Theme.Walmart.Main.WithToolbar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/shop_search"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.walmart.android.app.pharmacy.PharmacyActivity" android:theme="@style/Theme.Walmart.Main.WithToolbar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.walmart.android.app.main.OnboardingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Walmart.Main"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.walmart.android.app.shop.ShopFilterActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.walmart.android.app.main.MainActivity"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.account.AccountActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.walmart.android.app.main.MainActivity"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.walmart.android.app.qr.QRMediaPlayer" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.walmart.android.app.qr.QRProductPageActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.walmart.android.app.main.MainActivity"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.moremenu.MockSettingActivity"/>
+        <activity android:name="com.walmart.android.wmservice.DialogActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name="com.walmart.android.app.main.UpgradeActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Walmart.NoActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.walmart.android.app.ereceipt.EReceiptReturnActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.saver.SaverScannerActivity" android:theme="@style/Theme.Walmart.NoActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.saver.SaverSubmitReceiptActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.saver.SaverAutomaticSubmitReceiptActivity" android:theme="@style/Theme.Walmart.NoStatusBar.Translucent"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.saver.SaverCelebrationActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Walmart.NoStatusBar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.main.RedLaserActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.walmart.android.app.main.MiscActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.walmart.android.app.item.AdditionalSellersActivity"/>
+        <activity android:launchMode="singleTop" android:name="com.walmart.android.app.item.ReturnPolicyActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.main.ProductDetailsActivity" android:parentActivityName="com.walmart.android.app.main.HomeActivity" android:theme="@style/Theme.Walmart.Main.WithToolbar">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.walmart.android.app.main.HomeActivity"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.saver.SaverReceiptActivity" android:parentActivityName="com.walmart.android.app.main.HomeActivity" android:theme="@style/Theme.Walmart.Main.WithToolbar">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.walmart.android.app.main.HomeActivity"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.saver.SaverReceiptImageActivity" android:parentActivityName="com.walmart.android.app.saver.SaverReceiptActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.walmart.android.app.saver.SaverReceiptActivity"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.saver.SaverRedeemActivity" android:parentActivityName="com.walmart.android.app.main.HomeActivity" android:theme="@style/Theme.Walmart.Main.WithToolbar">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.walmart.android.app.main.HomeActivity"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmartlabs.payment.controller.edit.PaymentEditActivity" android:theme="@style/Theme.Walmart.Main.WithToolbar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmartlabs.payment.controller.mpay.MobilePayActivity" android:theme="@style/Theme.Walmart.Main.WithToolbar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.payment.PaymentPinActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Walmart.Main.WithToolbar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.payment.MobilePayScannerActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Walmart.Payment.Scanner"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmartlabs.payment.controller.setup.SetupActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Walmart.Main.WithToolbar"/>
+        <receiver android:label="Walmart Search" android:name="com.walmart.android.widget.SearchWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_search_info"/>
+        </receiver>
+        <service android:label="GCM Notification Service" android:name="com.walmart.android.app.ereceipt.GCMIntentService"/>
+        <receiver android:name="com.walmart.android.app.ereceipt.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.walmart.android"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.walmart.android.wmservice.fastpickup.FastPickupNotificationReceiver"/>
+        <receiver android:name="com.walmart.android.wmservice.fastpickup.FastPickupService$AlarmReceiver"/>
+        <service android:name="com.walmart.android.wmservice.fastpickup.FastPickupService"/>
+        <activity android:name="com.urbanairship.actions.ActionActivity"/>
+        <activity android:name="com.urbanairship.CoreActivity"/>
+        <receiver android:exported="false" android:name="com.urbanairship.CoreReceiver">
+            <intent-filter android:priority="-999">
+                <action android:name="com.urbanairship.push.OPENED"/>
+                <category android:name="com.walmart.android"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.urbanairship.push.GCMPushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.walmart.android"/>
+            </intent-filter>
+        </receiver>
+        <service android:label="Push Notification Service" android:name="com.urbanairship.push.PushService"/>
+        <service android:label="Event Service" android:name="com.urbanairship.analytics.EventService"/>
+        <service android:name="com.urbanairship.actions.ActionService"/>
+        <provider android:authorities="com.walmart.android.urbanairship.provider" android:exported="true" android:multiprocess="true" android:name="com.urbanairship.UrbanAirshipProvider" android:permission="com.walmart.android.permission.UA_DATA"/>
+        <receiver android:exported="false" android:name="com.walmart.android.app.PushIntentReceiver">
+            <intent-filter>
+                <action android:name="com.urbanairship.push.CHANNEL_UPDATED"/>
+                <action android:name="com.urbanairship.push.OPENED"/>
+                <action android:name="com.urbanairship.push.RECEIVED"/>
+                <category android:name="com.walmart.android"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCq0VeAkFSqFB9WaZ-2VL_qVtwKEQEza-U"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:name="com.walmart.android.wmservice.WalmartLocationService"/>
+        <receiver android:name="com.walmart.android.wmservice.WalmartLocationService$AlarmReceiver"/>
+        <receiver android:enabled="false" android:name="com.walmart.android.wmservice.WalmartLocationService$ProvidersChangedReceiver">
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.walmart.android.wmservice.WalmartLocationService$NetworkConnectivtyChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.walmart.android.wmservice.WalmartLocationService$ShutdownReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWEROFF"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="faa98d1fbb6cb55e6ac5b72a40593c33fac951a8"/>
+        <provider android:authorities="com.walmart.search" android:exported="false" android:name="com.walmart.android.app.main.SearchContentProvider"/>
+        <provider android:authorities="com.walmart.ereceipt" android:exported="false" android:grantUriPermissions="true" android:name="com.walmart.android.service.saver.EReceiptImageContentProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/ereceipt_filepaths"/>
+        </provider>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.weeklyad.WeeklyAdActivity" android:theme="@style/Theme.Walmart.Main.WithToolbar"/>
+        <activity android:name="com.walmart.android.app.photo.PhotoCenterStoresActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.walmartlabs.android.photo.controller.MainActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Walmart.Main.WithToolbar"/>
+        <activity android:launchMode="singleTop" android:name="com.walmartlabs.android.photo.controller.OrderActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.walmartlabs.android.photo.controller.SinglePhotoActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.walmartlabs.android.photo.controller.LearnMoreActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.uservoice.uservoicesdk.activity.ContactActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.settings.RegistrySettingsActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.settings.PharmacyHybridSettingsActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.settings.CXOHybridSettingsActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.hybrid.CookiesActivity"/>
+        <service android:label="@string/photo_service_name" android:name="com.walmartlabs.android.photo.service.order.OrderService"/>
+        <provider android:authorities="com.walmart.android.mock" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/filepaths"/>
+        </provider>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.wishlist.FindListActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Walmart.Main.WithToolbar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.wishlist.ListCreatorActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Walmart.Main.WithToolbar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmart.android.app.wishlist.DeepLinkActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Walmart.Main.WithToolbar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@style/Theme.IAPTheme"/>
+        <activity android:name="com.arubanetworks.meridian.search.SearchActivity"/>
+        <service android:name="com.arubanetworks.meridian.location.MeridianLocationService"/>
+        <service android:name="com.arubanetworks.meridian.campaigns.CampaignsService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmartlabs.payment.controller.edit.ConfirmationActivity" android:theme="@style/Payment.Theme.Confirmation"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.walmartlabs.payment.controller.settings.MobilePaySettingsActivity" android:theme="@style/Payment.Theme.Main"/>
+    </application>
+</manifest>

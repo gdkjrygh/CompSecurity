@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/gray_lightest" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pinterest.ui.layout.NoLimitLinearLayout android:orientation="vertical" android:id="@id/core_concepts_homefeed_frame" android:paddingLeft="@dimen/core_concepts_feed_padding" android:paddingRight="@dimen/core_concepts_feed_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.pinterest.ui.imageview.WebImageView android:layout_gravity="top" android:id="@id/core_concepts_homefeed_top_fade" android:layout_width="fill_parent" android:layout_height="@dimen/core_concepts_homefeed_top_fade" />
+    <me.grantland.widget.AutofitLayout android:id="@id/core_concepts_homefeed_title_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pinterest.ui.text.PTextView android:id="@id/core_concepts_homefeed_title" style="@style/core_concepts_title" />
+    </me.grantland.widget.AutofitLayout>
+    <com.pinterest.ui.imageview.WebImageView android:layout_gravity="bottom" android:id="@id/core_concepts_homefeed_bottom_fade" android:layout_width="fill_parent" android:layout_height="@dimen/core_concepts_homefeed_bottom_fade" android:alpha="0.0" />
+    <com.pinterest.ui.text.PButton android:textSize="@dimen/core_concepts_button_text" android:textColor="@android:color/white" android:layout_gravity="bottom|center" android:id="@id/core_concepts_homefeed_pick_interests_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/core_concepts_pick_interest_btn_margin" android:alpha="0.0" style="@style/button_red" />
+</FrameLayout>

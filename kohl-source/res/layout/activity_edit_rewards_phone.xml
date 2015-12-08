@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Spinner android:entries="@array/phonetype" android:id="@id/phonetype_spinner" android:padding="10.0dip" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/loyalty_page_left_margin" android:layout_marginTop="30.0dip" android:layout_marginRight="10.0dip" android:layout_alignBottom="@id/phone_edittext" style="@style/LoyaltyTextStyle" />
+    <EditText android:id="@id/phone_edittext" android:background="@drawable/edit_text_rectangle" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_marginRight="@dimen/loyalty_page_right_margin" android:layout_marginBottom="2.0dip" android:hint="@string/phone_hint_str" android:maxLength="13" android:layout_toRightOf="@id/phonetype_spinner" android:layout_alignParentRight="true" android:inputType="number" style="@style/LoyaltyTextStyle" />
+    <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerVertical="true" layout_centerInParent="true">
+        <include layout="@layout/processbar" />
+    </RelativeLayout>
+</RelativeLayout>

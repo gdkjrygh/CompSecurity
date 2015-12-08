@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" style="@style/module_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/hourly_title_textview" android:paddingLeft="@dimen/hourly_rowpadding_default" android:text="@string/hourly_title" style="@style/module_header" />
+    <LinearLayout android:orientation="vertical" android:id="@id/hourly_module_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/hourly_module_column_names" android:layout_width="fill_parent" android:layout_height="@dimen/hourly_row_line_height" layout="@layout/hourly_header_columns" />
+        <ListView android:gravity="center" android:id="@id/hourly_listview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="@dimen/hourly_module_list_height" android:listSelector="@android:color/transparent" android:divider="@null" android:dividerHeight="0.0dip" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/hourly_more" android:text="@string/more" style="@style/module_more" />
+    </LinearLayout>
+    <include layout="@layout/hourly_module_no_data" />
+</LinearLayout>

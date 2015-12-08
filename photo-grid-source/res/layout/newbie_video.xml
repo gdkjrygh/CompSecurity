@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/title_bar" android:background="@color/newbie_bg" android:layout_width="fill_parent" android:layout_height="@dimen/image_merger_title_height" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/bottom_layout" android:layout_width="fill_parent" android:layout_height="@dimen/video_bottom_height" android:layout_alignParentBottom="true">
+        <View android:id="@id/bottom_item_view1" android:background="@color/newbie_bg" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <View android:id="@id/bottom_item_view2" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <View android:id="@id/bottom_item_view3" android:background="@color/newbie_bg" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <View android:id="@id/bottom_item_view4" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <View android:id="@id/bottom_item_view5" android:background="@color/newbie_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/play_transparent_layout" android:background="@color/newbie_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom_layout" android:layout_below="@id/title_bar">
+        <RelativeLayout android:id="@id/btn_video_play_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/play_transparent_area" android:background="@drawable/btn_video_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/up_arrow_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/play_transparent_area" android:layout_centerHorizontal="true">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/up_arrow" />
+                <View android:layout_height="33.0dip" style="@style/newbie_up_arrow_line_style" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/folder_add_tip_textSize" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/newbie_video_tips4" android:layout_above="@id/up_arrow_layout" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/up_arrow_layout2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/up_arrow" />
+            <View android:layout_height="@dimen/newbie_video_arrow_height" style="@style/newbie_up_arrow_line_style" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/folder_add_tip_textSize" android:textColor="@color/white" android:id="@id/add_music_tx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/newbie_video_tips2" android:layout_above="@id/up_arrow_layout2" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/up_arrow_layout3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/up_arrow_layout2" android:layout_alignParentBottom="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/up_arrow" />
+            <View android:layout_height="@dimen/newbie_video_arrow_height_2" style="@style/newbie_up_arrow_line_style" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/folder_add_tip_textSize" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/newbie_video_tips3" android:layout_above="@id/up_arrow_layout3" android:layout_alignLeft="@id/up_arrow_layout3" />
+        <TextView android:id="@id/confirmBtn" android:layout_marginBottom="10.0dip" android:layout_above="@id/add_music_tx" android:layout_centerHorizontal="true" style="@style/newbie_ok_btn_style" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/positive_choice_container" android:padding="@dimen/padding3" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PreferenceItem">
+            <TextView android:textSize="@dimen/font_medium" android:id="@id/positive_choice_header" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/DialogText" />
+            <TextView android:textSize="@dimen/font_small" android:id="@id/positive_choice_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding2" android:layout_toLeftOf="@id/positive_choice_radio_button" android:layout_below="@id/positive_choice_header" android:layout_alignParentLeft="true" style="@style/DialogText" />
+            <RadioButton android:id="@id/positive_choice_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <RelativeLayout android:id="@id/negative_choice_container" android:padding="@dimen/padding3" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PreferenceItem">
+            <TextView android:textSize="@dimen/font_medium" android:id="@id/negative_choice_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding2" style="@style/DialogText" />
+            <TextView android:textSize="@dimen/font_small" android:id="@id/negative_choice_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding2" android:layout_toLeftOf="@id/negative_choice_radio_button" android:layout_below="@id/negative_choice_header" android:layout_alignParentLeft="true" style="@style/DialogText" />
+            <RadioButton android:id="@id/negative_choice_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

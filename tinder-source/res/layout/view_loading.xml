@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:clickable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/actionbar_size_neg"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/loading_relative_avatar_and_pings" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <ImageView android:id="@id/img_circle_one" android:layout_width="@dimen/loading_img_length" android:layout_height="@dimen/loading_img_length" android:src="@drawable/transparent_ring" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/img_circle_two" android:layout_width="@dimen/loading_img_length" android:layout_height="@dimen/loading_img_length" android:src="@drawable/transparent_ring" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/img_circle_three" android:visibility="invisible" android:layout_width="@dimen/loading_img_length" android:layout_height="@dimen/loading_img_length" android:src="@drawable/transparent_ring" android:layout_centerInParent="true" />
+        <FrameLayout android:id="@id/framelayout_avatar" android:background="@drawable/rounded_white_bg" android:layout_width="@dimen/loading_img_container_length" android:layout_height="@dimen/loading_img_container_length" android:layout_centerInParent="true">
+            <com.tinder.views.RoundImageView android:layout_gravity="center" android:id="@id/roundimg_thumb" android:layout_width="@dimen/loading_img_length" android:layout_height="@dimen/loading_img_length" android:scaleType="centerCrop" app:defaultStyle="circle" />
+        </FrameLayout>
+    </RelativeLayout>
+    <com.tinder.views.CustomTextView android:textSize="@dimen/text_xlarge" android:textColor="@color/text_light" android:id="@id/txt_prompt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_xlarge" android:text="@string/finding_people" android:layout_below="@id/loading_relative_avatar_and_pings" android:layout_centerHorizontal="true" app:font="regular" />
+</RelativeLayout>

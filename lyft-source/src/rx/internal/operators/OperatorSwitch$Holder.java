@@ -1,0 +1,20 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package rx.internal.operators;
+
+
+// Referenced classes of package rx.internal.operators:
+//            OperatorSwitch
+
+final class 
+{
+
+    static final OperatorSwitch INSTANCE = new OperatorSwitch(null);
+
+
+    private ()
+    {
+    }
+}

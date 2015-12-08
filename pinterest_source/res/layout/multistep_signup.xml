@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/bg_white_full_opacity" style="@style/full_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/multistep_signup_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/multistep_signup_buttons" />
+    <FrameLayout android:orientation="vertical" android:layout_above="@id/multistep_signup_bottom" style="@style/full_view">
+        <ImageView android:layout_gravity="top|center" android:id="@id/pins_grid_background" android:src="@drawable/brio_signup_wall" android:scaleType="centerCrop" style="@style/full_view" />
+        <View android:layout_gravity="bottom" android:background="@drawable/white_to_transparent_gradient" android:layout_width="fill_parent" android:layout_height="@dimen/multistep_signup_gradient_height" />
+        <ImageView android:layout_gravity="bottom|center" android:id="@id/logo" android:layout_width="@dimen/brio_signup_wall_big_logo" android:layout_height="@dimen/brio_signup_wall_big_logo" android:layout_marginBottom="@dimen/brio_signup_big_logo_margin" android:src="@drawable/pinvitational_big_logo" />
+    </FrameLayout>
+</RelativeLayout>

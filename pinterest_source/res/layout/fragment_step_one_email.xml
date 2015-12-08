@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg_white_full_opacity" style="@style/full_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" style="@style/full_view">
+        <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+        <TextView android:text="@string/what_is_email_address" style="@style/signup_field_description" />
+        <com.pinterest.ui.text.PEditText android:id="@id/email_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress" style="@style/GraySignupEditText" />
+        <include layout="@layout/multistep_next" />
+    </LinearLayout>
+    <TextView android:id="@id/use_phone" android:visibility="invisible" android:text="@string/use_phone" style="@style/alternative_signup_text" />
+</RelativeLayout>

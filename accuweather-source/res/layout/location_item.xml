@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/icon" android:layout_width="44.0dip" android:layout_height="44.0dip" />
+        <ImageView android:id="@id/alertIcon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="2.0dip" android:src="@drawable/ic_alert" android:scaleType="fitXY" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="12.0dip" android:textColor="@color/secondary_text" android:ellipsize="end" android:id="@id/my_location_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/CurrentLocation_Abbr25" android:maxLines="1" android:includeFontPadding="false" />
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-2.0dip">
+            <TextView android:textSize="16.0dip" android:textColor="@color/primary_text" android:ellipsize="end" android:id="@id/location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+            <ImageView android:id="@id/home_icon" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="16.0dip" android:layout_marginLeft="4.0dip" android:src="@drawable/ic_homelocation" />
+        </LinearLayout>
+        <TextView android:textSize="14.0dip" android:textColor="@color/primary_text" android:id="@id/short_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_marginBottom="2.0dip" />
+    </LinearLayout>
+    <TextView android:textSize="28.0dip" android:textColor="@color/primary_text" android:gravity="right|center" android:id="@id/temperature" android:paddingTop="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" />
+</LinearLayout>

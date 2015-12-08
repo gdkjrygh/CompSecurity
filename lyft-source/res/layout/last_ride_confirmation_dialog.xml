@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.driver.LastRideConfirmationDialogView style="@style/DialogContainerView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/DialogView">
+        <TextView android:text="@string/last_ride_confirmation_title" style="@style/DialogTitle" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <HorizontalScrollView android:layout_gravity="center_horizontal" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:overScrollMode="never">
+                <LinearLayout android:layout_gravity="left" android:orientation="horizontal" android:id="@id/passenger_photo_list" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span20" android:layout_marginBottom="@dimen/span24" android:divider="@drawable/vertical_divider_transparent" android:showDividers="middle" android:dividerPadding="10.0dip" />
+            </HorizontalScrollView>
+        </FrameLayout>
+        <View style="@style/HorizontalDialogDivider" />
+        <Button android:id="@id/confirm_last_ride_button" android:text="@string/last_ride_confirm" style="@style/DialogButtonWarning" />
+        <View style="@style/HorizontalDialogDivider" />
+        <me.lyft.android.ui.dialogs.DialogButton android:id="@id/stay_online_button" android:text="@string/last_ride_stay_online" style="@style/DialogButton" />
+    </LinearLayout>
+</me.lyft.android.ui.driver.LastRideConfirmationDialogView>

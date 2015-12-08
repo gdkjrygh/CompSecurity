@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textColor="@color/mpay_text_setup_medium" android:gravity="center_horizontal" android:id="@id/mpay_terms_conditions_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/payment_margin_large" android:layout_marginTop="55.0dip" android:layout_marginRight="@dimen/payment_margin_large" android:text="@string/mpay_setup_tc_text" android:layout_alignParentTop="true" style="@style/Payment.Text.Subhead.Medium" />
+        <LinearLayout android:orientation="horizontal" android:padding="@dimen/payment_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="2.0" android:layout_alignParentBottom="true">
+            <Button android:id="@id/mpay_terms_conditions_btn_cancel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@android:string/cancel" android:layout_weight="1.0" style="@style/Payment.PrimaryButton.Blue" />
+            <View android:layout_width="@dimen/payment_margin" android:layout_height="fill_parent" />
+            <Button android:id="@id/mpay_terms_conditions_btn_continue" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/continue_button" android:layout_weight="1.0" style="@style/Payment.PrimaryButton.Orange" />
+        </LinearLayout>
+    </RelativeLayout>
+    <include android:id="@id/loading_page" android:visibility="gone" layout="@layout/loading_page" />
+</FrameLayout>

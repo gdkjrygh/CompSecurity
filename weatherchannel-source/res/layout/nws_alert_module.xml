@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/module_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/nws_header" android:text="@string/nws_alert_module_title" style="@style/module_header" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/nws_alert_icon" android:layout_width="@dimen/nws_alert_module_icon_size" android:layout_height="fill_parent" android:layout_marginRight="@dimen/nws_alert_module_icon_margin" android:scaleType="centerInside" android:contentDescription="@string/severe_alert_icon_description" />
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/nws_alert_module_headline_text_size" android:textColor="@color/nws_alert_module_headline_color" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/nws_alert_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" weather:font="Roboto-Regular.ttf" />
+    </LinearLayout>
+    <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/nws_read_more_text_size" android:textColor="@color/nws_read_more_color" android:layout_gravity="left" android:id="@id/nws_alert_read_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/nws_read_more_left_margin" android:layout_marginTop="@dimen/nws_read_more_top_margin" android:text="@string/nws_alert_read_more" weather:font="Roboto-Regular.ttf" />
+</LinearLayout>

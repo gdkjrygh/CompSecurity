@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/interstitial_close" android:paddingLeft="@dimen/ad_overlay_padding" android:paddingRight="@dimen/ad_overlay_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/interstitial_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignLeft="@id/interstitial_image_holder" android:layout_alignRight="@id/interstitial_image_holder" android:layout_alignParentTop="true">
+        <com.soundcloud.android.view.CustomFontTextView android:layout_gravity="bottom|center" android:id="@id/advertisement" android:padding="@dimen/ad_overlay_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ads_advertisement" style="@style/AdText.Advertisement" />
+        <Button android:layout_gravity="bottom|right|center" android:layout_marginTop="@dimen/interstitial_padding_large" android:layout_marginBottom="@dimen/ad_overlay_padding" style="@style/AdOverlayClose" />
+    </FrameLayout>
+    <include layout="@layout/interstitial_image" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/interstitial_preview_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/interstitial_padding_large" android:layout_marginTop="@dimen/interstitial_padding_large" android:layout_marginRight="@dimen/interstitial_padding_large" android:layout_marginBottom="@dimen/interstitial_padding_large" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <ImageView android:id="@id/interstitial_now_playing_artwork" android:background="@color/wave_above" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="@dimen/ad_overlay_padding" />
+        <com.soundcloud.android.view.CustomFontTextView android:id="@id/interstitial_now_playing_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/AdText.NextUp.Title" />
+    </LinearLayout>
+</RelativeLayout>

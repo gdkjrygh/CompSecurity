@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@id/pm_list_item_cc_container" android:layout_width="fill_parent" android:layout_height="wrap_content" card_view:cardCornerRadius="4.0dip" card_view:cardElevation="2.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/pm_list_item_gc_container" android:background="@color/payment_background_list_item" android:paddingTop="@dimen/payment_margin_small" android:paddingBottom="@dimen/payment_margin_small" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/pm_list_item_gc_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/payment_margin_small" android:layout_marginRight="@dimen/payment_margin_small" android:src="@drawable/gift_card" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/pm_list_item_gc_text_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/pm_list_item_gc_icon">
+            <TextView android:layout_gravity="left|center" android:id="@id/pm_list_item_gc_digits" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pm_add_credit_card_hint_card_number" style="@style/Payment.Text.CardNumber" />
+            <TextView android:layout_gravity="left|center" android:id="@id/pm_list_item_gc_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pm_add_credit_card_details_title" style="@style/Payment.Text.CardInfo" />
+        </LinearLayout>
+        <TextView android:id="@id/pm_list_item_gc_balance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/payment_margin_small" android:text="@string/pm_edit_gift_card_balance" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Payment.Text.CardBalance" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

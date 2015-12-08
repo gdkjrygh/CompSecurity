@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/chat_module" style="@style/module_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <com.weather.commons.ui.fonts.TextViewWithFont android:id="@id/checkin_weather_header" android:text="@string/checkin_module_header" android:layout_alignParentLeft="true" style="@style/module_header" />
+    <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/checkin_message_size_people_report" android:textColor="@color/checkin_module_color_people_reporting" android:id="@id/checkin_message_people_report" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/social_module_report_message_margin_top" android:text="@string/checkin_message_people_near_report" android:layout_below="@id/checkin_weather_header" android:layout_alignParentLeft="true" weather:font="Roboto-Light.ttf" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/report_share_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/social_module_report_share_layout_margin_top" android:baselineAligned="false" android:layout_below="@id/checkin_message_people_report">
+        <FrameLayout android:id="@id/report_weather" android:layout_width="0.0dip" android:layout_height="@dimen/social_module_report_share_layout_height" android:layout_weight="1.0">
+            <ImageView android:id="@id/checkin_map" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/checkin_map_description" />
+            <ImageView android:layout_gravity="center" android:id="@id/checkin_weather_icon" android:layout_width="@dimen/social_module_report_weather_icon" android:layout_height="@dimen/social_module_report_weather_icon" android:layout_marginBottom="@dimen/social_module_report_weather_icon_margin_bottom" android:src="@drawable/check_wx_pin" android:contentDescription="@string/checkin_weather_icon_description" />
+            <com.weather.commons.ui.fonts.TextViewWithFont android:textColor="@color/checkin_module_color_people_reporting" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/report_weather_message" android:background="@color/social_module_weather_message_text_background" android:layout_width="fill_parent" android:layout_height="@dimen/social_module_report_share_message_textview_height" android:text="@string/report_title" android:textAllCaps="true" weather:font="Roboto-Medium.ttf" />
+        </FrameLayout>
+        <RelativeLayout android:id="@id/share_weather" android:background="@color/checkin_blue_overlay" android:layout_width="0.0dip" android:layout_height="@dimen/social_module_report_share_layout_height" android:layout_marginLeft="@dimen/social_module_share_layout_margin_left" android:layout_weight="1.0">
+            <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/share_weather_message">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera" android:layout_centerInParent="true" android:contentDescription="@string/checkin_weather_icon_description" />
+            </RelativeLayout>
+            <com.weather.commons.ui.fonts.AutoFitTextView android:textColor="@color/checkin_module_color_people_reporting" android:gravity="center" android:id="@id/share_weather_message" android:background="@color/social_module_share_message_text_background" android:layout_width="fill_parent" android:layout_height="@dimen/social_module_report_share_message_textview_height" android:text="@string/chat_title" android:layout_alignParentBottom="true" android:textAllCaps="true" weather:font="Roboto-Medium.ttf" />
+        </RelativeLayout>
+    </LinearLayout>
+    <Space android:layout_width="fill_parent" android:layout_height="@dimen/social_module_bottom_spacer_height" android:layout_below="@id/report_share_layout" />
+</RelativeLayout>

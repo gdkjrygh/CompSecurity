@@ -1,0 +1,64 @@
+<nav class="top-bar fixed-header" id="header">
+    <a id="back_button" class="back" ng-click="back()"><i class="icon-chevron-left"></i></a>
+    <h1>Create Photo Comic</h1>
+    <i ng-show="canvasIsLoaded && hasBackground" class="icon-check right-btn btn-customize-ok" ng-click="goToShare()"></i>
+</nav>
+
+<div data-top-section class="clearfix">
+    <div class="canvas-wrapper">
+        <div class="canvas-container">
+            <canvas class="canvas" id="canvas" width="896" height="656"></canvas>
+            <textarea
+                id="bubble-textarea"
+                maxlength="140"
+                ng-show="editMode"
+                dynamic-size
+                handle-textarea-clicks
+                canvas-width="896"
+                placeholder="Type here"
+                class="pretend-bubble"
+                ng-model="textBubbleValue"
+                ng-keypress="textKeypress($event)"
+                ng-blur="setEditMode(0)"
+                ng-change="applyTextFromUser(textBubbleValue)">
+            </textarea>
+        </div>
+    </div>
+</div>
+
+<div class="control-panel">
+    <div class="control-panel-tabs tabs">
+        <div class="tab photo" ng-class="{active: photoTab}" ng-click="changeControlsTab('photoTab')"><i class="icon-image"></i></div>
+        <div class="tab bubble" ng-class="{active: bubbleTab}" ng-click="changeControlsTab('bubbleTab')"><i class="icon-comment"></i></div>
+        <div class="tab emotion" ng-class="{active: emotionTab}" ng-click="changeControlsTab('emotionTab')"><i class="icon-mood"></i></div>
+    </div><!--// .control-panel-tabs -->
+
+    <div class="control-panel-inner">
+        <div class="photo-controls" dynamic-emo-container ng-show="photoTab">
+            <a ng-click="choose()" class="choose-photo">Choose Photo</a>
+            <a ng-click="snap()" class="snap-photo">Snap Photo</a>
+        </div>
+        <div class="bubble-controls" dynamic-emo-container ng-show="bubbleTab">
+            <div ng-hide="hasTextBubble()">
+                <a ng-click="addText()"><i class="icon-bubble-add"></i> Add bubble</a>
+            </div>
+
+            <div class="clearfix" ng-show="hasTextBubble()">
+                <a class="bubble-edit" ng-click="addText()"><i class="icon-bubble-edit"></i> Modify</a>
+                <a class="bubble-remove" ng-click="removeTextBubble()"><i class="icon-bubble-remove"></i> Remove</a>
+            </div>
+        </div>
+
+        <div class="emotion-controls clearfix" dynamic-emo-container ng-show="emotionTab">
+            <div class="poses-wrapper clearfix">
+                <div
+                    class="emotion pose"
+                    ng-repeat="template in avatarTemplates"
+                    ng-click="placeAvatar(template.url, $index)"
+                    ng-class="{active: isActiveAvatar($index)}">
+                    <img ng-src="{{template.url}}" crossorigin="">
+                </div>
+            </div>
+        </div>
+    </div><!--// .control-panel-inner -->
+</div><!--// .control-panel -->

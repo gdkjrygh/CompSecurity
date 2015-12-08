@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@id/txt_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/authentication_I_forgot_my_password" android:layout_alignParentLeft="true" style="@style/txt_auth_title" />
+        <EditText android:textColor="@android:color/white" android:textColorHint="@color/gray_text" android:id="@id/txt_email_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/authentication_your_email_address" android:lines="1" android:singleLine="true" android:layout_below="@id/txt_title" android:layout_alignLeft="@id/txt_title" android:inputType="textEmailAddress" android:imeOptions="actionDone" android:textCursorDrawable="@null" style="@style/txt_auth_input" />
+        <TextView android:id="@id/txt_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/authentication_recover_password_msg" android:layout_below="@id/txt_email_address" android:layout_alignLeft="@id/txt_email_address" android:layout_alignRight="@id/txt_email_address" style="@style/txt_auth_msg" />
+    </RelativeLayout>
+    <Button android:textColor="@android:color/white" android:id="@id/btn_ok" android:background="@drawable/item_background_dark" android:layout_width="fill_parent" android:layout_height="@dimen/button_bar_height" android:text="@string/authentication_recover_password_send" android:layout_alignParentBottom="true" />
+</RelativeLayout>

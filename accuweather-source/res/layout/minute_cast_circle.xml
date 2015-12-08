@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:id="@id/summaryTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:maxLines="4" />
+    <RelativeLayout android:layout_gravity="center" android:id="@id/divider" android:background="#ff7f7f7f" android:layout_width="50.0dip" android:layout_height="1.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="10.0dip" />
+    <TextView android:textSize="16.0dip" android:gravity="center_horizontal" android:id="@id/selectedPrecipDescriptionTextView" android:layout_width="fill_parent" android:layout_height="22.0dip" android:layout_marginTop="-3.0dip" />
+    <RelativeLayout android:id="@id/outerMinuteCastContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-10.0dip">
+        <com.accuweather.android.minutecast.MinuteCastCircle android:id="@id/minuteCastCircle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:layout_centerHorizontal="true" custom:circleArmColor="@color/black" custom:circleThumbColor="@color/black" custom:innerCircleColor="@color/white" custom:anchorTextColor="@color/black" custom:startColorCircleArmGradient="@color/black" custom:endColorCircleArmGradient="@color/black_transparent" />
+        <ImageView android:id="@id/precipitationIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" android:layout_centerInParent="true" />
+        <TextView android:id="@id/shortPhrase_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:lines="2" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

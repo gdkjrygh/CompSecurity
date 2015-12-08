@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/old_notification_bar" android:paddingLeft="@dimen/default_gap_2x" android:paddingRight="@dimen/default_gap_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/system_status_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/notification_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/notification_icon" android:layout_width="@dimen/notification_icon_size" android:layout_height="@dimen/notification_icon_size" android:layout_marginRight="@dimen/default_gap" android:src="@drawable/aa_action_bar_add_friend_icon_white" />
+            <TextView android:textSize="@dimen/notification_primary_text_size" android:layout_gravity="center_vertical" android:id="@id/notification_primary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="username!" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/notification_secondary_text_size" android:layout_gravity="center" android:id="@id/notification_secondary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/added" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center" android:id="@id/dancing_ghost_image" android:visibility="gone" android:layout_width="@dimen/notification_dancing_ghost_size" android:layout_height="@dimen/notification_dancing_ghost_size" />
+</FrameLayout>

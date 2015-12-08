@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="bottom" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/fast_tools_content" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <View android:id="@id/lineTop" android:background="#ffe3e3e3" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <TextView android:textSize="16.0dip" android:textColor="#ff979797" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:text="Hot" />
+            <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/hot_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.roidapp.baselib.view.FlowLayout android:gravity="top|left|center" android:id="@id/hotTagContainer" android:paddingLeft="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <RelativeLayout android:layout_gravity="center" android:id="@id/hotFailed" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <TextView android:textSize="16.0sp" android:id="@id/loadTipTxt" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cloud_common_load_failed" />
+                <ImageView android:id="@id/loadTipRefresh" android:background="@drawable/cloud_lib_loading_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_below="@id/loadTipTxt" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <View android:id="@id/lineHot" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="16.0dip" />
+            <TextView android:textSize="16.0dip" android:textColor="#ff979797" android:id="@id/historyText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:text="History" />
+            <com.roidapp.baselib.view.FlowLayout android:gravity="top|left|center" android:id="@id/historyTagContainer" android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="16.0dip" />
+            <TextView android:textSize="16.0dip" android:textColor="#ff979797" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/clearhistory" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_margin="16.0dip" android:text="Clear History" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

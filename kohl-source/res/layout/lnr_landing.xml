@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingTop="?android:actionBarSize" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:isScrollContainer="false">
+        <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.android.volley.toolbox.NetworkImageView android:id="@id/id_list_landing_bg_imgview" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            <include android:id="@id/id_list_landing_search_layout" layout="@layout/lnr_landing_search" />
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_alignParentBottom="true">
+        <Button android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/id_lnr_landing_create_list_btn" android:background="@color/button_enable" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginBottom="20.0dip" android:text="@string/lnr_create_new_list_button_text" />
+        <Button android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/id_lnr_landing_mylist_btn" android:background="@color/button_enable" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginBottom="20.0dip" android:text="@string/lnr_my_lists_button_text" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/relativeLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center" android:id="@id/roidapp_imagelib_frameImageView" android:paddingBottom="@dimen/filter_bottom_height" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <jp.co.cyberagent.android.gpuimage.GPUImageView android:layout_gravity="center" android:id="@id/roidapp_imagelib_imagePhoto" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/roidapp_imagelib_frame_layout" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/roidapp_imagelib_layout_basebar" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/banner_text_size" android:typeface="sans" android:textColor="@color/text_white" android:gravity="center" android:id="@id/roidapp_imagelib_btnFilter" android:background="@color/green_light_color" android:paddingTop="@dimen/five" android:layout_width="0.0dip" android:layout_height="@dimen/filter_bottom_height" android:text="@string/roidapp_imagelib_filter_text" android:drawableTop="@drawable/roidapp_imagelib_icon_filter" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/banner_text_size" android:typeface="sans" android:textColor="@color/text_white" android:gravity="center" android:layout_gravity="bottom" android:id="@id/roidapp_imagelib_btnImageColor" android:paddingTop="@dimen/five" android:layout_width="0.0dip" android:layout_height="@dimen/filter_bottom_height" android:text="@string/roidapp_imagelib_adjust_text" android:drawableTop="@drawable/roidapp_imagelib_icon_adjust" android:layout_weight="1.0" />
+    </LinearLayout>
+</FrameLayout>

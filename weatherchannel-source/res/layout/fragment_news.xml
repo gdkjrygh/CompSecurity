@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/news_image_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:weather="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/news_image_icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/news_viewpager_default_margin" android:src="@drawable/news_video_default" android:scaleType="centerCrop" android:contentDescription="@string/news_line_icon_contentDescription" />
+    <RelativeLayout android:gravity="left" android:background="@color/news_viewpager_title_background" android:padding="@dimen/news_viewpager_default_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/news_viewpager_default_margin" android:layout_alignParentBottom="true" android:alpha="0.8">
+        <com.weather.commons.ui.fonts.TextViewWithFont android:textSize="@dimen/news_viewpager_title_text_size" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/news_viewpager_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_centerVertical="true" weather:font="Roboto-Regular.ttf" />
+    </RelativeLayout>
+</RelativeLayout>

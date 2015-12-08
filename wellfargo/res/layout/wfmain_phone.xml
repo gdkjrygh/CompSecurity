@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="100.0">
+        <com.wf.wellsfargomobile.widget.LockableScrollView android:id="@id/scrollMain" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_alignParentTop="true">
+            <RelativeLayout android:id="@id/wfMain" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/webviewParent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:background="@color/signon_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip">
+                        <ImageView android:id="@id/qb_gripper" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gripper_fastlook_open" android:layout_centerHorizontal="true" android:contentDescription="@string/qb_gripper_open" />
+                    </RelativeLayout>
+                    <fragment android:id="@id/logonWFFragment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="0.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="0.0dip" class="com.wf.wellsfargomobile.LogonFragment" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/hideableFrontPorchAndFooter" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <Button android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/wf_neutral_dark_gray" android:gravity="left|center" android:id="@id/wallet_fp" android:background="@drawable/wallet_tile" android:paddingLeft="28.0dip" android:paddingTop="12.0dip" android:paddingRight="28.0dip" android:paddingBottom="12.0dip" android:visibility="gone" android:text="@string/wallet_title_fp" android:singleLine="true" android:drawableLeft="@drawable/ic_wallet" android:drawablePadding="20.0dip" android:filterTouchesWhenObscured="true" style="@style/wallet_fp" />
+                        <fragment android:id="@id/tilesWebViewFragment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" class="com.wf.wellsfargomobile.FrontPorchTilesWebViewFragment" />
+                        <fragment android:id="@id/logonFooterFragment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" class="com.wf.wellsfargomobile.LogonFooterFragment" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </com.wf.wellsfargomobile.widget.LockableScrollView>
+        <fragment android:id="@id/quick_balance_panel_webview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_marginBottom="10.0dip" android:minHeight="10.0dip" android:layout_above="@id/scrollMain" android:layout_alignParentTop="true" class="com.wf.wellsfargomobile.quickbalance.QuickBalanceWebViewFragment" />
+    </RelativeLayout>
+    <fragment android:layout_gravity="left" android:id="@id/slidingMenuWebViewFragment" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.wf.wellsfargomobile.SlidingMenuWebViewFragment" />
+</android.support.v4.widget.DrawerLayout>

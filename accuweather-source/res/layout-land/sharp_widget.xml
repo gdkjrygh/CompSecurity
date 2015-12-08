@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/app_widget_header_section_shape" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="@drawable/app_widget_main_content_shape" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/accuweatherLogo" android:layout_width="85.0dip" android:layout_height="35.0dip" android:layout_marginLeft="6.0dip" android:layout_marginTop="-8.0dip" android:src="@drawable/accuweatherlogo" android:layout_alignParentTop="true" />
+            <ImageView android:id="@id/alertImageView" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="6.0dip" android:layout_marginTop="-7.0dip" android:src="@drawable/alert_img" android:layout_below="@id/accuweatherLogo" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/clockContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/accuweatherLogo" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+                <TextView android:textSize="42.0dip" android:textStyle="bold" android:textColor="@color/white" android:id="@id/clockTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="11:08" />
+                <TextView android:textSize="28.0dip" android:textStyle="bold" android:textColor="@color/white" android:id="@id/clockAmPmTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="6.0dip" android:text="AM" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:weightSum="5.0" android:layout_weight="2.0">
+            <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.9">
+                <RelativeLayout android:id="@id/locationAndCurrentConditionsContainer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:orientation="vertical" android:id="@id/currentSidebarLinear" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="7.0dip" android:layout_marginTop="2.0dip">
+                        <TextView android:textSize="12.0dip" android:textColor="#b3ffffff" android:id="@id/currentLocationTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="5.0dip" android:text="@string/CurrentLocation_Abbr25" />
+                        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-8.0dip">
+                            <TextView android:textSize="48.0dip" android:textStyle="bold" android:textColor="@color/white" android:id="@id/currentTemperatureTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="46°" />
+                            <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/white" android:id="@id/currentTemperatureUnitsTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="F" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-6.0dip">
+                            <TextView android:textSize="12.0dip" android:textColor="#b3ffffff" android:id="@id/updatedAtLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/UpdatedAt" />
+                            <TextView android:textSize="12.0dip" android:textColor="#b3ffffff" android:id="@id/updatedAtTimeTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:text="11:06" />
+                            <TextView android:textSize="12.0dip" android:textColor="#b3ffffff" android:id="@id/updatedAtTimezoneTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="EST" />
+                        </LinearLayout>
+                        <TextView android:textSize="20.0dip" android:textColor="@color/white" android:id="@id/locationNameTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:text="TOKYO" android:singleLine="true" />
+                    </LinearLayout>
+                    <ImageView android:id="@id/currentConditionsIcon" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="7.0dip" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="9.0dip" android:layout_weight="2.1">
+                <RelativeLayout android:background="#ff7f7f7f" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginBottom="10.0dip" />
+                <RelativeLayout android:id="@id/extendedForecast" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/dayOneLinear" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                            <TextView android:textSize="16.0dip" android:textColor="@color/white" android:id="@id/dayOneNameTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MON" />
+                            <ImageView android:id="@id/dayOneConditionsIcon" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="8.0dip" />
+                            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                                <TextView android:textSize="14.0dip" android:textColor="@color/white" android:id="@id/dayOneHiTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="25°" />
+                                <TextView android:textSize="14.0dip" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/" />
+                                <TextView android:textSize="14.0dip" android:textColor="@color/white" android:id="@id/dayOneLoTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15°" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/dayTwoLinear" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip">
+                            <TextView android:textSize="16.0dip" android:textColor="@color/white" android:id="@id/dayTwoNameTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TUE" />
+                            <ImageView android:id="@id/dayTwoConditionsIcon" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="8.0dip" />
+                            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                                <TextView android:textSize="14.0dip" android:textColor="@color/white" android:id="@id/dayTwoHiTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="25°" />
+                                <TextView android:textSize="14.0dip" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/" />
+                                <TextView android:textSize="14.0dip" android:textColor="@color/white" android:id="@id/dayTwoLoTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15°" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/getFullApp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/get_full_app_banner" android:layout_alignParentRight="true" />
+</RelativeLayout>

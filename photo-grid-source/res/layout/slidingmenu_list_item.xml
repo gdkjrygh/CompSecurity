@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/slidingmenu_listselector" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/slidingmenu_list_height">
+        <ImageView android:id="@id/slidingmenu_selected" android:background="@drawable/bg_green_sliding_selected" android:layout_width="@dimen/slidingmenu_selected_width" android:layout_height="fill_parent" android:layout_alignParentLeft="true" />
+        <FrameLayout android:id="@id/slidingmenu_framelayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/slidingmenu_selected" android:layout_alignParentTop="true">
+            <ImageView android:id="@id/slidingmenu_image_icon" android:layout_width="@dimen/slidingmenu_icon_width" android:layout_height="@dimen/slidingmenu_icon_width" android:layout_marginTop="@dimen/slidingmenu_margin_icon" android:layout_marginRight="@dimen/slidingmenu_margin_icon" android:scaleType="centerInside" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/slidingmenu_new_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_new" />
+        </FrameLayout>
+        <TextView android:textSize="@dimen/slidingmenu_textsize_name" android:textColor="@color/black" android:ellipsize="end" android:gravity="center" android:id="@id/slidingmenu_content" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/slidingmenu_margin_icon" android:text="" android:layout_toRightOf="@id/slidingmenu_framelayout" />
+        <ImageView android:id="@id/slidingmenu_image_state" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/slidingmenu_padding_more" android:src="@drawable/icon_downloadsticker" android:layout_alignParentRight="true" />
+        <ImageView android:id="@id/slidingmenu_image_ad" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mark_present_gray" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:background="@color/slidingmenu_list_divider_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

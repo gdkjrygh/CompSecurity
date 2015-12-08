@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/goplay_detail_item_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.jiubang.playsdk.views.ProportionFrameLayout android:id="@id/image_layout" android:layout_width="@dimen/goplay_detail_image_item_width" android:layout_height="wrap_content" ktp:proportion="1.65" xmlns:ktp="http://schemas.android.com/apk/res-auto">
+        <com.jiubang.playsdk.imageload.KPNetworkImageView android:id="@id/pic" android:background="@drawable/goplay_default_banner" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:adjustViewBounds="true" />
+        <com.jiubang.playsdk.imageload.KPNetworkImageView android:layout_gravity="top|right|center" android:id="@id/appinfo_adapter_feature" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" android:contentDescription="@null" />
+    </com.jiubang.playsdk.views.ProportionFrameLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="19.0dip" android:layout_marginBottom="10.0dip">
+            <ImageView android:id="@id/logo" android:layout_width="42.0dip" android:layout_height="42.0dip" android:layout_marginLeft="10.0dip" android:scaleType="fitXY" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff434343" android:gravity="center_vertical" android:id="@id/title_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="2.0dip" android:text="city light" />
+        </LinearLayout>
+        <Button android:textSize="16.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/get_now_view" android:background="@drawable/goplay_detail_get_now_selector" android:layout_width="240.0dip" android:layout_height="36.0dip" android:layout_marginLeft="25.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="26.5dip" android:text="@string/goplay_detail_get_now" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

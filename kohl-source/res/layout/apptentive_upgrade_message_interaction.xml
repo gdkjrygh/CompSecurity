@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:paddingLeft="@dimen/apptentive_activity_side_padding" android:paddingRight="@dimen/apptentive_activity_side_padding" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:paddingTop="@dimen/apptentive_activity_vertical_padding" android:paddingBottom="@dimen/apptentive_activity_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/apptentive_activity_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:gravity="center" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" />
+                    </LinearLayout>
+                    <WebView android:id="@id/webview" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </LinearLayout>
+                <include layout="@layout/apptentive_branding" />
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+</LinearLayout>

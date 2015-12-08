@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/card_bg" android:paddingTop="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/in_store_address_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip">
+        <ImageView android:id="@id/in_store_store_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_instore_store" android:scaleType="center" android:layout_alignBottom="@id/in_store_address" />
+        <TextView android:textSize="15.0sp" android:id="@id/in_store_module_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/in_store_module_title" android:layout_toRightOf="@id/in_store_store_icon" />
+        <TextView android:textColor="@color/in_store_store_address" android:ellipsize="end" android:id="@id/in_store_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8400 Edgewater Dr, Oakland CA" android:singleLine="true" android:layout_below="@id/in_store_module_header" android:layout_alignLeft="@id/in_store_module_header" style="@style/Text.Bodycopy" />
+    </RelativeLayout>
+    <View android:id="@id/in_store_module_divider" android:background="@color/in_store_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <include android:id="@id/instore_action_fast_pickup" layout="@layout/instore_module_fast_pickup" />
+    <include android:id="@id/in_store_action_store_search" layout="@layout/instore_module_basic_action" />
+    <include android:id="@id/in_store_action_scan" layout="@layout/instore_module_basic_action" />
+    <include android:id="@id/in_store_action_weekly_ads" layout="@layout/instore_module_basic_action" />
+</LinearLayout>

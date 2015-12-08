@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/global_bg_tile" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/listview" style="@style/listview_white" />
+    <ScrollView android:id="@id/empty_wrapper_sv" android:visibility="gone" style="@style/listview">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.pinterest.activity.search.SearchNagView android:id="@id/nag_container" android:visibility="gone" style="@style/fullline_view" />
+            <com.pinterest.ui.grid.AdapterEmptyView android:id="@id/empty_vw" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

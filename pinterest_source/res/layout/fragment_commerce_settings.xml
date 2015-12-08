@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/fragment_commerce_settings" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pinterest.ui.actionbar.ActionBar android:id="@id/actionbar" style="@style/ActionBar" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v4.widget.SwipeRefreshLayout android:id="@id/commerce_settings_refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.RecyclerView android:id="@id/commerce_settings_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:layout_gravity="center" android:id="@id/commerce_settings_empty_state_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.pinterest.ui.text.PTextView android:textSize="@dimen/commerce_text_large" android:textColor="@color/commerce_checkout_text_dark_grey" android:gravity="center" android:id="@id/commerce_settings_empty_state_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/commerce_closeup_description_margin" android:layout_marginRight="@dimen/commerce_closeup_description_margin" />
+                <ProgressBar android:id="@id/commerce_settings_empty_state_spinner" android:layout_width="@dimen/commerce_spinner_width_height" android:layout_height="@dimen/commerce_spinner_width_height" android:layout_marginLeft="@dimen/margin_half" android:layout_marginRight="@dimen/margin_half" android:indeterminate="true" android:layout_centerInParent="true" />
+                <Button android:textSize="@dimen/text_title" android:id="@id/commerce_start_shopping_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin" android:layout_marginTop="@dimen/margin_double" android:layout_marginRight="@dimen/margin" android:text="@string/commerce_settings_start_shopping" android:layout_below="@id/commerce_settings_empty_state_text" android:layout_centerHorizontal="true" style="@style/button_blue" />
+            </RelativeLayout>
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

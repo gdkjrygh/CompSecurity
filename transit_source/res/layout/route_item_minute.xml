@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/route_time_parent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/route_time_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <View android:id="@id/route_realtime_padding" android:layout_width="10.0dip" android:layout_height="fill_parent" />
+        <TextView android:textSize="@dimen/large" android:layout_gravity="center_vertical" android:id="@id/route_frequency" android:layout_marginTop="3.0dip" style="@style/default_text_view" />
+        <TextView android:textSize="@dimen/subtitle" android:id="@id/route_time" android:layout_marginTop="3.0dip" style="@style/default_text_view" />
+        <com.thetransitapp.droid.ui.ShadowImageView android:id="@id/route_no_service" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/larger" android:layout_marginTop="3.0dip" android:src="@drawable/finished" android:contentDescription="@string/app_name" />
+        <LinearLayout android:layout_gravity="top|right|center" android:orientation="vertical" android:id="@id/route_realtime" android:layout_width="10.0dip" android:layout_height="wrap_content">
+            <com.thetransitapp.droid.ui.ShadowImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/real_time_wave_big" android:contentDescription="@string/real_time" />
+            <com.thetransitapp.droid.ui.ShadowImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-10.0dip" android:src="@drawable/real_time_wave_small" android:contentDescription="@string/real_time" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/small" android:textStyle="bold" android:layout_gravity="center_horizontal" android:id="@id/route_minutes" android:layout_marginTop="-3.0dip" style="@style/default_text_view" />
+</LinearLayout>

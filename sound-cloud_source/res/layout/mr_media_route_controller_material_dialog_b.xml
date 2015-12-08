@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/title_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="?android:textColorPrimary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/route_name" android:layout_width="0.0dip" android:layout_height="72.0dip" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" android:singleLine="true" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/settings" android:background="?selectableItemBackgroundBorderless" android:padding="12.0dip" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="12.0dip" android:src="?mediaRouteSettingsDrawable" android:contentDescription="@string/mr_media_route_controller_settings_description" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/media_route_control_frame" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/default_control_frame" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/art" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" android:adjustViewBounds="true" android:maxHeight="@dimen/mr_media_route_controller_art_max_height" />
+            <ImageButton android:id="@id/play_pause" android:background="?selectableItemBackgroundBorderless" android:padding="12.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_below="@id/art" android:layout_alignParentRight="true" android:contentDescription="@string/mr_media_route_controller_play" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/text_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:minHeight="64.0dip" android:layout_toLeftOf="@id/play_pause" android:layout_below="@id/art" android:layout_alignParentLeft="true">
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="16.0sp" android:textStyle="bold" android:textColor="?android:textColorPrimary" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="14.0sp" android:textColor="?android:textColorPrimary" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@id/media_route_volume_layout" android:padding="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="64.0dip">
+        <ImageView android:gravity="center" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/mr_ic_audio_vol" android:scaleType="center" />
+        <SeekBar android:id="@id/media_route_volume_slider" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/buttons" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:gravity="center" android:id="@id/disconnect" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="48.0dip" android:text="@string/mr_media_route_controller_disconnect" android:layout_weight="1.0" />
+        <Button android:textColor="?colorAccent" android:gravity="center" android:id="@id/stop" android:background="?selectableItemBackgroundBorderless" android:layout_width="0.0dip" android:layout_height="48.0dip" android:text="@string/mr_media_route_controller_stop" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

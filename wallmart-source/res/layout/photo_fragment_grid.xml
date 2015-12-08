@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layers_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/base_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+        <TextView android:gravity="center" android:id="@id/selection_text" android:paddingLeft="@dimen/photo_main_padding" android:paddingTop="@dimen/photo_main_padding" android:paddingRight="@dimen/photo_main_padding" android:paddingBottom="@dimen/photo_main_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/photo_tap_to_select" style="@style/PhotoTextStyle.Regular" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.walmartlabs.ui.LoadingContainerView android:id="@id/grid_container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:loadingContainerEmptyText="@string/photo_no_photos" app:loadingContainerContentLayout="@layout/photo_grid" />
+            <ImageView android:background="@drawable/photo_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:contentDescription="@string/photo_image_description" />
+        </RelativeLayout>
+        <View android:background="@color/photo_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <RelativeLayout android:id="@id/footer" android:background="@color/photo_white" android:padding="@dimen/photo_main_padding_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/photo_touch_size">
+            <Button android:enabled="false" android:id="@id/ok_button" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/photo_continue" android:layout_centerInParent="true" style="@style/PhotoPrimaryButton" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/overlay_layout" android:background="@color/photo_blue_slightly_transparent" android:padding="@dimen/photo_main_padding_2x" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/photo_photocenter_white" android:contentDescription="@string/photo_image_description" />
+            <TextView android:textColor="@color/photo_white" android:gravity="center" android:padding="@dimen/photo_main_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_select_to_print_same_day" style="@style/PhotoTextStyle.Large" />
+        </LinearLayout>
+        <Button android:id="@id/hint_button" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/photo_ok" style="@style/PhotoPrimaryButton" />
+        <TextView android:textColor="@color/photo_white" android:gravity="center" android:id="@id/learn_more_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/photo_main_padding" android:text="@string/photo_learn_more" style="@style/PhotoTextStyle.Small" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.lyft.android.ui.landing.LoginView android:orientation="vertical" android:id="@id/login_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.lyft.android.controls.BackButtonToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:gravity="center" android:id="@id/facebook_login_button" android:layout_width="fill_parent" android:layout_marginLeft="@dimen/span16" android:layout_marginTop="@dimen/span16" android:layout_marginRight="@dimen/span16" android:layout_marginBottom="0.0dip" style="@style/FacebookButton">
+                <TextView android:textSize="@dimen/big_text_1" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="55.0dip" android:text="@string/landing_login_facebook" android:drawableLeft="@drawable/ic_facebook_white" android:drawablePadding="@dimen/span16" />
+            </FrameLayout>
+            <TextView android:textSize="@dimen/small_text" android:textStyle="italic" android:textColor="@color/charcoal_1" android:gravity="center_horizontal" android:padding="@dimen/span12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/landing_login_alternative_message" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <me.lyft.android.controls.PhoneInputView android:id="@id/phone_input_view_login" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/span16" android:layout_marginRight="@dimen/span16" />
+                <TextView android:gravity="center" android:id="@id/inline_phone_error_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/span4" android:layout_marginBottom="0.0dip" android:hint="@string/landing_phone_number_description" style="@style/InlineErrorTextV2" />
+            </LinearLayout>
+            <Space android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginTop="@dimen/span8" android:layout_weight="1.0" />
+            <me.lyft.android.controls.NumericKeyboard android:id="@id/keyboard" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/span4" />
+            <Button android:id="@id/next_button" android:text="@string/next_button" style="@style/PinkFullBleedButton" />
+        </LinearLayout>
+    </ScrollView>
+</me.lyft.android.ui.landing.LoginView>

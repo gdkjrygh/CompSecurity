@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/relativeLayout3" android:layout_width="fill_parent" android:layout_height="@dimen/image_selector_relativeLayout3_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/bottom_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="@dimen/image_selector_linearLayout1_height">
+            <RelativeLayout android:id="@id/relativeLayout4" android:background="@drawable/bg_darkgray" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="horizontal" android:id="@id/image_selector_next" android:background="@color/disable" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+                    <TextView android:textSize="@dimen/image_selector_createBtn_text" android:textColor="@color/text_white" android:gravity="center" android:id="@id/image_selector_message" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/image_selector_createBtn_marginLeft" android:text="@string/next" android:drawableRight="@drawable/icon_pre" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/image_selector_leftImagesInfo_textSize" android:textColor="@color/image_count" android:gravity="center_vertical" android:id="@id/left_images_info" android:background="@drawable/btn_btn3" android:paddingRight="@dimen/image_selector_leftImagesInfo_marginLeft" android:layout_width="wrap_content" android:layout_height="fill_parent" android:drawableLeft="@drawable/icon_delete" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/image_selector_leftImagesInfo_textSize" android:textColor="@color/image_count" android:gravity="center" android:id="@id/max_images_count" android:paddingLeft="@dimen/image_selector_leftImagesInfo_marginLeft" android:paddingRight="@dimen/image_selector_leftImagesInfo_marginLeft" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toRightOf="@id/left_images_info" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/image_selector_leftImagesInfo_textSize" android:textColor="@color/text_white" android:gravity="center" android:id="@id/remove_all" android:background="@drawable/video_edit_banner" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/remove_all_text" android:layout_alignLeft="@id/left_images_info" android:layout_alignRight="@id/max_images_count" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout android:background="@drawable/bg_merge_repeat" android:paddingLeft="@dimen/image_selector_horizontalScrollView1_marginLeft" android:paddingTop="@dimen/image_selector_horizontalScrollView1_marginTop" android:layout_width="fill_parent" android:layout_height="@dimen/image_selector_horizontalScrollView1_height">
+            <HorizontalScrollView android:id="@id/horizontalScrollView1" android:background="@drawable/bg_merge_repeat" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="@dimen/image_selector_horizontalScrollView1_height" android:fillViewport="false">
+                <LinearLayout android:orientation="horizontal" android:id="@id/selected_item_gallery" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </HorizontalScrollView>
+            <TextView android:gravity="center" android:id="@id/no_selectImage_tip" android:background="@drawable/bg_merge_repeat" android:paddingLeft="@dimen/image_selector_horizontalScrollView1_marginLeft" android:paddingTop="@dimen/image_selector_horizontalScrollView1_marginTop" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/image_selector_horizontalScrollView1_height" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

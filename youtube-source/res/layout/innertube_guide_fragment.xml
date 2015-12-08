@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube">
+    <include android:id="@id/guide_header" android:layout_alignParentTop="true" layout="@layout/guide_account_header" />
+    <ListView android:id="@id/guide_sections" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@null" android:groupIndicator="@null" android:divider="@null" android:layout_below="@id/guide_header" />
+    <FrameLayout android:id="@id/guide_offline_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/guide_header">
+        <View android:layout_gravity="bottom" android:id="@id/separator" android:background="@color/guide_label_divider" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/guide_item" android:paddingLeft="@dimen/guide_item_horizontal_padding" android:paddingRight="@dimen/guide_item_horizontal_padding" android:layout_width="fill_parent" android:layout_height="@dimen/guide_height" android:layout_marginBottom="@dimen/guide_separator_height">
+            <FrameLayout android:id="@id/thumbnail_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/list_item_padding">
+                <ImageView android:id="@id/thumbnail" android:layout_width="@dimen/guide_small_avatar_width" android:layout_height="@dimen/guide_small_avatar_height" android:src="@drawable/ic_drawer_upload" android:scaleType="centerCrop" />
+            </FrameLayout>
+            <com.google.android.apps.youtube.core.ui.YouTubeTextView android:textSize="@dimen/medium_font_size" android:textColor="@color/guide_item" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/guide_offline_videos" android:maxLines="1" android:layout_weight="1.0" yt:robotoFont="regular" />
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:id="@id/status_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/list_status_item_min_height" android:layout_weight="1.0" android:layout_centerInParent="true">
+        <ProgressBar android:layout_gravity="center" android:tag="progressbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:tag="error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:tag="alert_error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:src="@drawable/alert_error" />
+            <TextView android:textSize="@dimen/medium_font_size" android:textColor="@color/grey_text" android:gravity="center" android:tag="error_message" android:paddingLeft="@dimen/list_item_padding" android:paddingRight="@dimen/list_item_padding" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <Button android:id="@id/retry_button" android:tag="retry_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/retry" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

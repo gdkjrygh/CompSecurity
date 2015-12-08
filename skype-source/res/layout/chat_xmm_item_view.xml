@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/chat_remove_text_view" />
+    <com.skype.android.widget.bubbles.BubbleRelativeLayout android:id="@id/chat_xmm_content_layout" android:layout_width="@dimen/chat_xmm_width" android:layout_height="@dimen/chat_xmm_height">
+        <ImageView android:id="@id/chat_xmm_content_thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <com.skype.android.widget.SymbolView android:id="@id/chat_xmm_symbol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/chat_xmm_symbol_margin_right" android:layout_marginBottom="@dimen/chat_xmm_symbol_margin_bottom" android:layout_alignRight="@id/chat_xmm_content_thumbnail" android:layout_alignBottom="@id/chat_xmm_content_thumbnail" style="@style/ChatXmmSymbol" />
+    </com.skype.android.widget.bubbles.BubbleRelativeLayout>
+    <TextView android:id="@id/chat_xmm_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message_play" android:layout_alignTop="@id/chat_xmm_content_layout" style="@style/ChatXmmTitle" />
+</RelativeLayout>

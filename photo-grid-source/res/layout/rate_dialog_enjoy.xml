@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ratio_dismiss" android:background="@drawable/rate_background_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:src="@drawable/icon_cancel" android:scaleType="center" android:layout_alignParentRight="true" />
+    <RelativeLayout android:layout_gravity="center" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/ratio_dismiss">
+        <TextView android:textSize="22.0sp" android:textColor="#ff5e5e5e" android:gravity="center" android:id="@id/rate_enjoy_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="@string/rate_enjoy" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/rate_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_below="@id/rate_enjoy_text">
+            <Button android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/rate_feedback" android:background="@drawable/rate_background_grey" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/rate_feedback" android:layout_weight="1.0" />
+            <Button android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/rate_enjoy" android:background="@drawable/save_background" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/rate_confirm" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:layout_width="1.0dip" android:layout_height="20.0dip" android:layout_below="@id/rate_layout" />
+    </RelativeLayout>
+</RelativeLayout>

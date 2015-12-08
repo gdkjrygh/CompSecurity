@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/header_privacy" android:key="@string/key_category_privacy">
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="@string/label_save_my_pwd" android:key="@string/key_privacy_save_user_pwd" android:summary="@string/label_save_my_pwd_summary" android:defaultValue="true" />
+        <ListPreference android:entries="@array/settings_privacy_allow_requests_from_entries" android:title="@string/label_allow_ims_from" android:key="@string/key_allow_ims_from_mode" android:negativeButtonText="@null" android:entryValues="@array/settings_mode_values" />
+        <ListPreference android:entries="@array/settings_privacy_allow_requests_from_entries" android:title="@string/label_receive_calls_from" android:key="@string/key_allow_calls_from_mode" android:negativeButtonText="@null" android:entryValues="@array/settings_mode_values" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="@string/label_allow_targeted_ads" android:key="@string/key_allow_targeted_ads" android:summary="@string/label_allow_targeted_ads_desc" android:defaultValue="true" />
+        <Preference android:title="@string/label_manage_how_people_find_me" android:key="@string/key_short_circuit_manage_aliases" android:summary="@string/label_manage_how_people_find_me_description" />
+        <com.skype.android.util.accessibility.AccessibleSwitchPreference android:title="@string/label_allow_direct_connections" android:key="@string/key_allow_direct_connections" android:summary="@string/label_allow_direct_connections_desc" />
+    </PreferenceCategory>
+</PreferenceScreen>

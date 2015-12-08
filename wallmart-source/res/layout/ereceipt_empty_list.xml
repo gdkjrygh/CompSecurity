@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ff007dff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="25.0dip" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/info_header" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ereceipts_info_title" style="@style/Text.EReceipt.Light" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/info_text_container" android:layout_below="@id/info_header">
+        <com.walmartlabs.ui.ListSafeViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip" android:overScrollMode="never" />
+        <ImageView android:layout_gravity="left|center" android:id="@id/left_arrow" android:paddingLeft="20.0dip" android:paddingTop="20.0dip" android:paddingRight="5.0dip" android:paddingBottom="20.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ereceipt_info_left" />
+        <ImageView android:layout_gravity="right|center" android:id="@id/right_arrow" android:paddingLeft="5.0dip" android:paddingTop="20.0dip" android:paddingRight="20.0dip" android:paddingBottom="20.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ereceipt_info_right" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/info_text_container" android:background="@color/white" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="18.0dip" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@id/info_text" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ereceipts_info_text" style="@style/Text.EReceipt.Light" />
+        <Button android:id="@id/info_text_register_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="50.0dip" android:text="@string/ereceipts_register_button" style="@style/PrimaryButton.Blue" />
+    </LinearLayout>
+</RelativeLayout>

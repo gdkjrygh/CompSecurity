@@ -1,0 +1,17 @@
+<nav class="top-bar fixed-header">
+    <a id="back_button" class="back" ng-click="back()"><i class="icon-chevron-left"></i></a>
+    <h1>Comic</h1>
+	<refresh-button promise-function="refreshClick" ng-if="comic.comic_id"></refresh-button>
+</nav>
+
+<div class="single-comic">
+	<feed-comic ng-if="comic.comic_id" comic="comic"></feed-comic>
+
+	<loading-spinner visible="!comic.comic_id && !comicDeleted"></loading-spinner>
+</div>
+
+<div class="comic-deleted ios-hide" ng-show="comicDeleted" bs-ios-wait>
+	<i class="icon-trash"></i>
+	<p>This comic has been deleted.</p>
+	<a class="edit btn" ng-click="goHome()">Home Feed</a>
+</div>

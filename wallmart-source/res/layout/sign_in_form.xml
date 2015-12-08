@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/sign_in_form" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/sign_in_form_header_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/form_field_bigger_spacing" android:text="@string/sign_in_header_normal_instruction_text" style="@style/InstructionalText" />
+    <TextView android:textColor="@color/pharmacy_error" android:id="@id/sign_in_error_info_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/form_field_spacing" android:text="@string/sign_in_header_error_text" style="@style/Theme.SmallText" />
+    <com.walmartlabs.ui.FloatLabel android:id="@id/sign_in_username_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sign_in_username_text" style="@style/FloatLabel" />
+    <EditText android:id="@id/sign_in_username" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/sign_in_username_text" android:singleLine="true" android:inputType="textEmailAddress" android:imeOptions="actionNext" style="@style/FormTextField" />
+    <com.walmartlabs.ui.FloatLabel android:id="@id/sign_in_password_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/form_field_spacing" android:text="@string/sign_in_password_text" style="@style/FloatLabel" />
+    <EditText android:typeface="normal" android:id="@id/sign_in_password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/sign_in_password_text" android:singleLine="true" android:inputType="textPassword" style="@style/FormTextField" />
+    <TextView android:layout_gravity="left" android:id="@id/sign_in_forgot_password" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/form_field_spacing" android:text="@string/sign_in_forgot_password" style="@style/Theme.SmallTextBlue" />
+    <Button android:layout_gravity="center_horizontal" android:id="@id/sign_in_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/form_field_bigger_spacing" android:text="@string/sign_in_button_text" style="@style/PrimaryButton.Orange" />
+</LinearLayout>

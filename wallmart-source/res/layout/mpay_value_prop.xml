@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/mpay_value_button_container" android:background="@color/mpay_value_prop_bg_dark" android:padding="@dimen/payment_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:gravity="center" android:id="@id/mpay_value_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mpay_value_button_text" style="@style/Payment.PrimaryButton" />
+    </FrameLayout>
+    <com.walmart.android.ui.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/mpay_value_button_container">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <View android:background="@drawable/mpay_value_prop_gradient" android:layout_width="fill_parent" android:layout_height="215.0dip" />
+                <View android:background="@color/mpay_value_prop_bg_light" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="@dimen/payment_margin" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/payment_margin" android:layout_marginBottom="@dimen/payment_margin" android:src="@drawable/walmart_pay_logo" />
+                <TextView android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mpay_value_title" style="@style/Payment.Text.Headline.Light" />
+                <TextView android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="@dimen/payment_margin" android:text="@string/mpay_value_subtitle" style="@style/Payment.Text.Subhead.Light" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="120.0dip" android:layout_height="120.0dip" android:layout_marginRight="@dimen/payment_margin" android:src="@drawable/mpay_value_prop_1" />
+                    <TextView android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/mpay_value_body_1" android:layout_weight="1.0" style="@style/Payment.Text.Subhead" />
+                </LinearLayout>
+                <View android:background="@color/text_white_translucent" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/mpay_value_body_2" android:layout_weight="1.0" style="@style/Payment.Text.Subhead" />
+                    <ImageView android:layout_width="120.0dip" android:layout_height="120.0dip" android:layout_marginLeft="@dimen/payment_margin" android:src="@drawable/mpay_value_prop_2" />
+                </LinearLayout>
+                <View android:background="@color/text_white_translucent" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="10.0dip" android:layout_marginBottom="15.0dip" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="120.0dip" android:layout_height="120.0dip" android:layout_marginRight="@dimen/payment_margin" android:src="@drawable/mpay_value_prop_3" />
+                    <TextView android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/mpay_value_body_3" android:layout_weight="1.0" style="@style/Payment.Text.Subhead" />
+                </LinearLayout>
+                <View android:background="@color/text_white_translucent" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="10.0dip" android:layout_marginBottom="15.0dip" />
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/mpay_value_link_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip" android:text="@string/mpay_value_link_info" android:textAllCaps="true" style="@style/Payment.Text.Subhead" />
+            </LinearLayout>
+        </FrameLayout>
+    </com.walmart.android.ui.SafeScrollView>
+    <View android:background="@drawable/mpay_value_prop_shadow" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_above="@id/mpay_value_button_container" />
+</RelativeLayout>

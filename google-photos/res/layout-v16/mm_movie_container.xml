@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.moviemaker.ui.AspectRatioEnforcingFrameLayout android:layout_gravity="center" android:id="@id/mm_movie_container" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:moviemaker="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.moviemaker.ui.AspectRatioEnforcingFrameLayout android:id="@id/mm_output_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <com.google.android.apps.moviemaker.ui.SizeLimitingSurfaceView android:id="@id/mm_video_surface_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/mm_poster" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:id="@id/mm_scrim" android:background="@color/mm_black_66_percent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.google.android.apps.moviemaker.ui.AspectRatioEnforcingFrameLayout>
+    <com.google.android.apps.moviemaker.ui.ThemeSelectorView android:id="@id/mm_theme_selector" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.apps.moviemaker.ui.ProgressSpinner android:id="@id/mm_spinner" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:keepScreenOn="true" android:contentDescription="@string/mm_content_progress_indicator" />
+    <FrameLayout android:id="@id/mm_playback_error" android:background="@color/mm_playback_error_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/mm_secondary_small_text_size" android:textColor="@android:color/white" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/mm_playback_error_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mm_video_playback_error_generic" android:drawableLeft="@drawable/ic_error_normal" android:drawablePadding="@dimen/mm_unit" android:textIsSelectable="false" android:fontFamily="sans-serif-light" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="center" android:id="@id/mm_play_button_holder" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageButton android:layout_gravity="center" android:id="@id/mm_play_button" android:background="@color/mm_transparent" android:padding="@dimen/mm_small_unit_3" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_mm_play" android:contentDescription="@string/mm_play" />
+        <ImageButton android:layout_gravity="center" android:id="@id/mm_pause_button" android:background="@color/mm_transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_mm_pause" android:contentDescription="@string/mm_pause" />
+    </FrameLayout>
+</com.google.android.apps.moviemaker.ui.AspectRatioEnforcingFrameLayout>
