@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher android:orientation="vertical" android:id="@id/view_switcher_collages" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/collage_fragment_hint_container" layout="@layout/fragment_web_collages_retry" />
+    <RelativeLayout android:id="@id/collages_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.malinskiy.superrecyclerview.SuperRecyclerView android:gravity="center" android:id="@id/collage_gridview" android:background="@color/fragment_web_collages_background_color" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" app:recyclerClipToPadding="false" app:recyclerPaddingTop="@dimen/fragment_web_collages_grid_view_padding" app:recyclerPaddingLeft="@dimen/fragment_web_collages_grid_view_padding" app:recyclerPaddingRight="@dimen/fragment_web_collages_grid_view_padding" />
+    </RelativeLayout>
+</ViewSwitcher>

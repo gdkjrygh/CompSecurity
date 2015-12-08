@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/mdx_mini_player_controls_group" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/mdx_mini_player_seek_bar_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <TextView android:gravity="right|center" android:layout_gravity="center_vertical" android:id="@id/mdx_mini_player_seek_bar_current_time" android:layout_width="@dimen/mdx_mini_player_seek_bar_time_view_width" android:layout_height="@dimen/mdx_mini_player_seek_bar_time_view_height" android:singleLine="true" style="@style/SecondaryText.Micro" />
+        <include android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/mdx_mini_player_seek_bar" />
+        <TextView android:gravity="left|center" android:layout_gravity="center_vertical" android:id="@id/mdx_mini_player_seek_bar_remaining_time" android:layout_width="@dimen/mdx_mini_player_seek_bar_time_view_width" android:layout_height="@dimen/mdx_mini_player_seek_bar_time_view_height" android:singleLine="true" style="@style/SecondaryText.Micro" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/mdx_mini_player_playcard_controls_group" android:layout_width="fill_parent" android:layout_height="@dimen/mdx_mini_player_controls_group_height" android:layout_marginBottom="@dimen/mdx_mini_player_bottom_margin" android:layout_below="@id/mdx_mini_player_seek_bar_group" android:layout_centerHorizontal="true">
+        <com.netflix.mediaclient.android.widget.IconFontTextView android:textSize="24.0dip" android:id="@id/mdx_mini_player_skip_back_btn_expanded" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/icon_font_skip_back_30" android:layout_weight="1.0" android:contentDescription="@string/accesibility_btnSkipBack" style="@style/IconFontButton" />
+        <ImageView android:id="@id/mdx_mini_player_play_pause_btn_expanded" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/p4t_play" android:layout_weight="1.0" android:contentDescription="@string/accesibility_btnPlayPause" style="@style/MdxMiniPlayerActionButton" />
+        <ImageView android:id="@id/mdx_mini_player_stop_btn" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/p4t_stop" android:layout_weight="1.0" android:contentDescription="@string/accesibility_btnStop" style="@style/MdxMiniPlayerActionButton" />
+    </LinearLayout>
+</RelativeLayout>

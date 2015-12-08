@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="bottom" android:id="@id/postplay" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" layout="@layout/postplay_poster" />
+    <View android:id="@id/postplay_episodes_overlay_black" android:background="@color/postplay_episode_black_overlay" android:layout_width="fill_parent" android:layout_height="@dimen/postplay_episodes_phones_overlay_black_height" android:layout_alignParentBottom="true" />
+    <View android:background="@drawable/postplay_episodes_bg" android:layout_width="fill_parent" android:layout_height="@dimen/postplay_episodes_phones_overlay_gradient_height" android:layout_above="@id/postplay_episodes_overlay_black" />
+    <include android:id="@id/postplay_include" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/postplay_episodes_margin" android:layout_marginBottom="@dimen/postplay_episodes_margin" android:layout_alignParentBottom="true" layout="@layout/postplay_buttons" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/postplay_ignore_tap" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/postplay_episodes_margin" android:layout_marginRight="@dimen/postplay_episodes_margin" android:layout_above="@id/postplay_include">
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/postplay_episodes_first_line_top_margin" android:layout_marginBottom="@dimen/postplay_episodes_first_line_bottom_margin" layout="@layout/postplay_info_container" />
+        <TextView android:layout_gravity="left|center" android:id="@id/postplay_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/postplay_episodes_second_line_bottom_margin" android:singleLine="true" style="@style/PostPlayTitle" />
+        <TextView android:ellipsize="end" android:layout_gravity="left|center" android:id="@id/postplay_synopsis" android:visibility="@string/postplay_synopsis_visibility" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/postplay_episodes_second_line_bottom_margin" android:maxWidth="@dimen/postplay_episodes_metadata_width" android:maxLines="3" style="@style/PostPlaySynopsis" />
+    </LinearLayout>
+</RelativeLayout>

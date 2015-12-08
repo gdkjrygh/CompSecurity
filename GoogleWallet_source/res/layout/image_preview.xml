@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/title" android:text="@string/looks_good" android:layout_alignParentTop="true" android:contentDescription="@string/wobs_looks_good_content_description" style="@style/OcrImagePreviewMessageText" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="40.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="40.0dip" android:layout_marginBottom="10.0dip" android:layout_above="@id/next" android:layout_below="@id/title">
+        <com.google.android.libraries.commerce.ocr.wobs.ui.RoundedCornerClickableImage android:gravity="center" android:layout_gravity="center" android:id="@id/image1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.google.android.libraries.commerce.ocr.wobs.ui.RoundedCornerClickableImage android:gravity="center" android:layout_gravity="center" android:id="@id/image2" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <Button android:id="@id/next" android:text="@string/next" android:layout_alignParentBottom="true" style="@style/OcrImagePreviewNextButton" />
+    <RelativeLayout android:gravity="center" android:id="@id/ocrProgressOverlay" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout style="@style/DialogRoot"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/DialogContainer">
+        <include layout="@layout/generic_dialog_header" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip">
+            <TextView android:textColor="@color/txt_popup_body" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ViewStub android:id="@id/extra_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <include layout="@layout/generic_dialog_two_buttons" />
+    </LinearLayout>
+</FrameLayout>

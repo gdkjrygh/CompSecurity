@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ffffffff" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/primary_header" android:background="@drawable/grey_list" android:layout_width="fill_parent" android:layout_height="26.0dip">
+            <com.jcp.views.TypefaceTextView android:textSize="15.0sp" android:textColor="#ff333333" android:gravity="center_vertical" android:id="@id/primary_address_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22.0dip" android:text="Primary Address" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" app:customTypeface="LORA_ITALIC" />
+        </RelativeLayout>
+        <ListView android:id="@id/primary_address_listview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_below="@id/primary_header" android:layout_alignParentLeft="true" />
+        <RelativeLayout android:id="@id/additonal_header" android:background="@drawable/grey_list" android:layout_width="fill_parent" android:layout_height="26.0dip" android:layout_below="@id/primary_address_listview">
+            <com.jcp.views.TypefaceTextView android:textSize="15.0sp" android:textColor="#ff333333" android:gravity="center_vertical" android:id="@id/additonal_address_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22.0dip" android:text="Additional Addresses" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" app:customTypeface="LORA_ITALIC" />
+        </RelativeLayout>
+        <ListView android:id="@id/additonal_address_listview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_below="@id/additonal_header" android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+</RelativeLayout>

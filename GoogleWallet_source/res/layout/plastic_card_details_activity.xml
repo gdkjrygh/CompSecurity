@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/ActionButton">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/HeaderImageSection" android:background="@color/primary" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/HeaderImage" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="-12.0dip" android:src="@drawable/img_wcard_active" android:contentDescription="@string/wallet_card_headline_no_digits" />
+                <TextView android:gravity="center_horizontal" android:id="@id/MessageBelowHeaderImage" android:padding="@dimen/default_spacing" android:text="" style="@style/Caption.Inverted" />
+            </LinearLayout>
+            <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout android:orientation="vertical" android:background="@color/application_background" android:paddingTop="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/Heading" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" style="@style/ListItemPrimaryText" />
+                <TextView android:id="@id/Body" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" style="@style/ListItemSecondaryText" />
+                <LinearLayout android:orientation="vertical" android:id="@id/ArrivalPrompts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginRight="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing">
+                    <TextView android:id="@id/NeverArrivedLink" android:paddingBottom="@dimen/default_spacing" style="@style/ListItemSecondaryText" />
+                    <TextView android:text="@string/wallet_card_details_activate_prompt" style="@style/ListItemSecondaryText" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <Button android:theme="@style/Theme_RaisedButton" android:id="@id/LockPlasticCardToggleButton" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing" style="@style/RaisedButton" />
+                    <Button android:theme="@style/Theme_RaisedButton" android:id="@id/CancelPlasticCardButton" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing" android:text="@string/wallet_card_cancel_button" style="@style/RaisedButton" />
+                    <Button android:theme="@style/Theme_RaisedButton.Action" android:id="@id/ActivatePlasticCardButton" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginRight="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing" android:text="@string/wallet_card_details_activate_button" style="@style/RaisedButton.Action" />
+                </LinearLayout>
+                <TextView android:id="@id/AboutLock" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wallet_card_why_lock_title" style="@style/Body" />
+                <LinearLayout android:orientation="vertical" android:id="@id/AlertSection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/default_spacing">
+                    <View style="@style/HorizontalDivider" />
+                    <TextView android:id="@id/AlertHeader" android:paddingLeft="@dimen/default_spacing" android:paddingTop="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" style="@style/ListItemPrimaryText.Error" />
+                    <TextView android:id="@id/AlertBody" android:paddingLeft="@dimen/default_spacing" style="@style/ListItemSecondaryText" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/ShippingAddressSection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/default_spacing">
+                    <View style="@style/HorizontalDivider" />
+                    <TextView android:paddingLeft="@dimen/default_spacing" android:paddingTop="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:text="@string/wallet_card_details_shipping_address_label" style="@style/ListItemPrimaryText" />
+                    <TextView android:id="@id/AddressLine1" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" style="@style/ListItemSecondaryText" />
+                    <TextView android:id="@id/AddressLine2" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" style="@style/ListItemSecondaryText" />
+                    <TextView android:id="@id/AddressLine3" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" style="@style/ListItemSecondaryText" />
+                    <TextView android:id="@id/WrongAddressLink" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:text="@string/wallet_card_details_wrong_address_link" style="@style/ListItemSecondaryText" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/CashWithdrawalSection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/default_spacing">
+                    <View style="@style/HorizontalDivider" />
+                    <TextView android:id="@id/CashWithdrawalLimitText" android:paddingLeft="@dimen/default_spacing" android:paddingTop="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" style="@style/ListItemPrimaryText" />
+                    <TextView android:id="@id/CashWithdrawalFeeInfoText" android:paddingLeft="@dimen/default_spacing" style="@style/ListItemSecondaryText" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/LockedSection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/default_spacing">
+                    <View style="@style/HorizontalDivider" />
+                    <TextView android:paddingLeft="@dimen/default_spacing" android:paddingTop="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:text="@string/locked_plastic_card_headline" style="@style/ListItemPrimaryText" />
+                    <TextView android:id="@id/LockedBody" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" style="@style/ListItemSecondaryText" />
+                </LinearLayout>
+                <View style="@style/HorizontalDivider" />
+                <TextView android:id="@id/PhoneSupportLink" android:padding="@dimen/default_spacing" android:text="@string/wallet_card_details_contact_link" style="@style/ListItemSecondaryText" />
+            </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/ActionButton" android:text="@string/wallet_card_details_order_button" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+</RelativeLayout>

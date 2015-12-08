@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:paddingLeft="@dimen/horizontal_margin_step" android:paddingRight="@dimen/horizontal_margin_step" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="72.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <TextView android:textAppearance="@style/TextAppearance.ExerciseRowDateText" android:id="@id/date" android:paddingRight="@dimen/horizontal_margin_step" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" fitbit:font="proxima_nova_regular" />
+    <FrameLayout android:id="@id/map_layout" android:layout_width="@dimen/exercise_map_thumbnail_size" android:layout_height="@dimen/exercise_map_thumbnail_size" android:layout_marginLeft="@dimen/horizontal_margin_step" android:layout_marginRight="28.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ProgressBar android:layout_gravity="center" android:id="@id/loading_view" android:layout_width="20.0dip" android:layout_height="20.0dip" />
+        <ImageView android:id="@id/map_thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/running" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/map_layout" android:layout_toRightOf="@id/date" android:layout_centerVertical="true">
+        <TextView android:textAppearance="@style/TextAppearance.ExerciseRowTitleText" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" fitbit:font="proxima_nova_regular" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/TextAppearance.ExerciseRowDetailsText" android:id="@id/distance" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.5" fitbit:font="proxima_nova_regular" />
+            <TextView android:textAppearance="@style/TextAppearance.ExerciseRowDetailsText" android:id="@id/duration" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.5" fitbit:font="proxima_nova_regular" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/audio_ad_background_color" android:layout_width="@dimen/modal_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:id="@id/audio_ad_image" android:layout_width="@dimen/audio_ad_art_size" android:layout_height="@dimen/audio_ad_art_size" android:layout_margin="20.0dip" android:src="@drawable/empty_art" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip">
+        <ImageButton android:id="@id/audioad_playpause" android:background="@android:color/transparent" android:paddingRight="15.0dip" android:visibility="visible" android:layout_width="40.0dip" android:layout_height="wrap_content" android:src="@drawable/pause_selector" android:scaleType="center" android:contentDescription="@string/cd_pause" />
+        <TextView android:textStyle="bold" android:textColor="@color/why_ads_label_text_color" android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/why_ads_label" android:layout_weight="1.0" android:textAlignment="4" />
+        <com.pandora.android.view.RoundLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/why_ads_button" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" pandora:cornerRadius="5.0dip" pandora:layoutBackgroundColor="@color/why_ads_button_background_color" pandora:selectedBackgroundColor="@color/why_ads_button_selected_color">
+            <TextView android:textStyle="bold" android:textColor="@color/why_ads_button_text_color" android:id="@id/why_ads_button_label" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="@dimen/audio_ad_why_ads_margin" android:layout_marginRight="5.0dip" android:layout_marginBottom="@dimen/audio_ad_why_ads_margin" android:text="@string/why_ads_button_label" style="@android:style/TextAppearance.Medium" />
+        </com.pandora.android.view.RoundLinearLayout>
+    </LinearLayout>
+</LinearLayout>

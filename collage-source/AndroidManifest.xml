@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.cardinalblue.piccollage.google" platformBuildVersionCode="23" platformBuildVersionName="6.0-2166767">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <permission android:name="com.cardinalblue.piccollage.google.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.cardinalblue.piccollage.google.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-feature android:glEsVersion="0x20000" android:required="true"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="false" android:xlargeScreens="true"/>
+    <application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/application_name" android:largeHeap="true" android:name="com.cardinalblue.android.piccollage.PCApplication" android:theme="@style/Theme.Cblue">
+        <meta-data android:name="com.cardinalblue.android.picprint.FLURRY_KEY" android:value="@string/flurry_prod_key"/>
+        <uses-library android:name="com.amazon.device.home" android:required="false"/>
+        <meta-data android:name="com.aviary.android.feather.v1.API_KEY" android:value="d4806dfbb1a0bfd0"/>
+        <activity android:name="com.cardinalblue.android.piccollage.multitouch.photoproto.activities.MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="piccollage"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:name="com.cardinalblue.android.piccollage.activities.HomeActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="orientation" android:launchMode="singleTop" android:name="com.cardinalblue.android.piccollage.activities.PhotoProtoActivity" android:screenOrientation="portrait" android:theme="@style/ActionBarBlack" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/activity_title_echoes" android:name="com.cardinalblue.android.piccollage.activities.EchoesListActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_templates" android:name="com.cardinalblue.android.piccollage.activities.RemixableListActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_facebook_albums" android:name="com.cardinalblue.android.piccollage.activities.PicUsersListActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/profile" android:name="com.cardinalblue.android.piccollage.activities.PicProfileActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Cblue"/>
+        <activity android:label="@string/title_facebook_albums" android:name="com.cardinalblue.android.piccollage.activities.FbAlbumListActivity" android:screenOrientation="portrait" android:theme="@style/ActionBarBlack"/>
+        <activity android:label="@string/title_facebook_friend_list" android:name="com.cardinalblue.android.piccollage.activities.FbFriendListActivity" android:screenOrientation="portrait" android:theme="@style/ActionBarBlack"/>
+        <activity android:label="@string/facebook" android:name="com.cardinalblue.android.piccollage.activities.login.FbLoginActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/facebook" android:name="com.cardinalblue.android.piccollage.activities.login.FbLoginForReadActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/facebook" android:name="com.cardinalblue.android.piccollage.activities.FbPhotoListActivity" android:screenOrientation="portrait" android:theme="@style/ActionBarBlack"/>
+        <activity android:label="@string/google_plus" android:name="com.cardinalblue.android.piccollage.activities.GooglePlusPhotoListActivity" android:screenOrientation="portrait" android:theme="@style/ActionBarBlack"/>
+        <activity android:launchMode="singleTop" android:name="com.cardinalblue.android.piccollage.activities.WebSearchActivity" android:screenOrientation="portrait" android:theme="@style/ActionBarBlack"/>
+        <activity android:name="com.cardinalblue.android.piccollage.activities.VideoScrapPreviewActivity" android:screenOrientation="landscape" android:theme="@style/ActionBarBlack"/>
+        <provider android:authorities="com.cardinalblue.piccollage.google.suggestionprovider" android:name="com.cardinalblue.android.piccollage.MySuggestionProvider"/>
+        <activity android:label="@string/twitter" android:name="com.cardinalblue.android.piccollage.activities.login.TwitterLoginActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/tumblr" android:name="com.cardinalblue.android.piccollage.activities.login.TumblrLoginActivity"/>
+        <activity android:name="com.cardinalblue.android.piccollage.activities.HelpActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/au_cloud" android:name="com.cardinalblue.android.piccollage.activities.KddiAlbumListActivity" android:screenOrientation="portrait" android:theme="@style/ActionBarBlack"/>
+        <activity android:label="@string/au_cloud" android:name="com.cardinalblue.android.piccollage.activities.KddiMediaListActivity" android:screenOrientation="portrait" android:theme="@style/ActionBarBlack"/>
+        <activity android:label="@string/au_cloud" android:name="com.cardinalblue.android.piccollage.activities.KddiShareActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/au_cloud" android:name="com.cardinalblue.android.piccollage.activities.KddiLoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.cardinalblue.android.piccollage.activities.SearchFriendsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/activity_stickers_title" android:name="com.cardinalblue.android.piccollage.activities.StickersActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/activity_text_title" android:name="com.cardinalblue.android.piccollage.activities.TextActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:label="@string/activity_clip_title" android:name="com.cardinalblue.android.piccollage.activities.ClipActivity" android:screenOrientation="portrait" android:theme="@style/ActionBarBlack"/>
+        <activity android:exported="true" android:name="com.cardinalblue.android.piccollage.activities.PublicCollageActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Cblue.ActionBarOverlay"/>
+        <activity android:label="@string/sign_in_to_piccollage" android:name="com.cardinalblue.android.piccollage.auth.PicLoginActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/sign_in_to_piccollage" android:name="com.cardinalblue.android.piccollage.auth.PicEditAccountActivity" android:screenOrientation="portrait"/>
+        <activity android:icon="@drawable/im_act_logo" android:name="com.cardinalblue.android.piccollage.activities.CropImageActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.cardinalblue.android.piccollage.activities.ConfigDebugActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.cardinalblue.android.piccollage.activities.FeedsListActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.cardinalblue.android.piccollage.activities.PhotoAdderActivity" android:screenOrientation="portrait" android:theme="@style/ActionBarBlack"/>
+        <activity android:name="com.cardinalblue.android.piccollage.activities.YoutubeActivity" android:screenOrientation="portrait" android:theme="@style/ActionBarBlack"/>
+        <activity android:name="com.cardinalblue.android.piccollage.activities.FindFriendsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.cardinalblue.android.piccollage.activities.AccountSettingsActivity" android:screenOrientation="portrait"/>
+        <receiver android:exported="true" android:name="com.cardinalblue.android.piccollage.WidgetBroadcastReceiver" android:permission="com.amazon.permission.HERO_WIDGET_INTENT_SENDER">
+            <intent-filter>
+                <action android:name="com.amazon.device.home.action.HERO_WIDGET"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.cardinalblue.android.piccollage.controller.AmazonHeroWidgetUpdateReceiver">
+            <intent-filter>
+                <action android:name="piccollage.intent.action.UPDATE_HERO"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation" android:hardwareAccelerated="true" android:largeHeap="true" android:name="com.aviary.android.feather.sdk.FeatherActivity" android:process=":aviarysdk" android:screenOrientation="portrait" android:theme="@style/AviaryTheme"/>
+        <service android:exported="false" android:name="com.aviary.android.feather.cds.AviaryCdsService" android:process=":aviarycds">
+            <intent-filter>
+                <action android:name="aviary.intent.action.CDS_DOWNLOAD_START"/>
+                <action android:name="aviary.intent.action.CDS_RESTORE_USER_ITEMS"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="aviary.intent.action.CDS_DOWNLOAD_START"/>
+                <action android:name="aviary.intent.action.CDS_RESTORE_USER_ITEMS"/>
+                <action android:name="aviary.intent.action.CDS_VERIFY_SUBSCRIPTIONS"/>
+                <action android:name="aviary.intent.action.CDS_RESTORE_OWNED_PACKS"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.cardinalblue.piccollage.google.AviaryCdsProvider" android:exported="false" android:name="com.aviary.android.feather.cds.AviaryCdsProvider" android:process=":aviarycds" android:syncable="true"/>
+        <receiver android:exported="true" android:name="com.aviary.android.feather.cds.AviaryCdsReceiver" android:permission="android.permission.SEND_DOWNLOAD_COMPLETED_INTENTS" android:process=":aviarycds">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.cardinalblue.piccollage.google"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.cardinalblue.piccollage.google.GCMIntentService"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/fb_piccollage_id"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.facebook.app.FacebookContentProvider217116108329566" android:exported="true" android:name="com.facebook.FacebookContentProvider"/>
+        <activity android:name="com.uservoice.uservoicesdk.activity.PortalActivity" android:theme="@style/UserVoiceTheme"/>
+        <activity android:name="com.uservoice.uservoicesdk.activity.ForumActivity" android:theme="@style/UserVoiceTheme"/>
+        <activity android:name="com.uservoice.uservoicesdk.activity.ArticleActivity" android:theme="@style/UserVoiceTheme"/>
+        <activity android:name="com.uservoice.uservoicesdk.activity.TopicActivity" android:theme="@style/UserVoiceTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.uservoice.uservoicesdk.activity.ContactActivity" android:theme="@style/UserVoiceTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.uservoice.uservoicesdk.activity.PostIdeaActivity" android:theme="@style/UserVoiceTheme"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="80270a52c57d6f1e140c698a298494a13f175076"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:hardwareAccelerated="true" android:name="com.inmobi.rendering.InMobiAdActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@style/Theme.IAPTheme"/>
+        <activity android:configChanges="orientation" android:hardwareAccelerated="true" android:name="com.supersonicads.sdk.controller.ControllerActivity"/>
+        <activity android:configChanges="orientation" android:hardwareAccelerated="true" android:name="com.supersonicads.sdk.controller.InterstitialActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="orientation" android:hardwareAccelerated="true" android:name="com.supersonicads.sdk.controller.OpenUrlActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.vungle.publisher.FullScreenAdActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <service android:exported="false" android:name="com.cardinalblue.android.piccollage.FileObserverService"/>
+        <service android:exported="false" android:name="com.cardinalblue.android.piccollage.InAppNotificationService"/>
+        <service android:exported="false" android:name="com.cardinalblue.android.piccollage.helpers.PICAppRoutesService">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="app"/>
+                <data android:scheme="piccollage"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.cardinalblue.android.picprint.AMPLITUDE_KEY" android:value="3e2b59b20133e2782ca165fe4c25628b"/>
+        <activity android:name="com.cardinalblue.android.piccollage.activities.IabBackgroundActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="ly.kite.journey.selection.ProductSelectionActivity" android:theme="@style/Theme.KiteSDK.ProductSelection"/>
+        <activity android:launchMode="singleTop" android:name="ly.kite.journey.creation.ProductCreationActivity" android:theme="@style/Theme.KiteSDK.ProductCreation"/>
+        <activity android:label="@string/title_activity_checkout" android:name="ly.kite.checkout.CheckoutActivity" android:screenOrientation="portrait" android:theme="@style/Theme.KiteSDK.Checkout"/>
+        <activity android:label="@string/title_activity_payment" android:name="ly.kite.checkout.PaymentActivity" android:screenOrientation="portrait" android:theme="@style/Theme.KiteSDK.Payment" android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:label="@string/title_activity_order_receipt" android:name="ly.kite.checkout.OrderReceiptActivity" android:screenOrientation="portrait" android:theme="@style/Theme.KiteSDK.OrderReceipt"/>
+        <activity android:label="@string/title_activity_address_book" android:name="ly.kite.address.AddressBookActivity" android:screenOrientation="portrait" android:theme="@style/Theme.KiteSDK.AddressBook"/>
+        <activity android:label="@string/title_activity_address_edit" android:name="ly.kite.address.AddressEditActivity" android:screenOrientation="portrait" android:theme="@style/Theme.KiteSDK.AddressEdit" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/title_activity_address_search" android:name="ly.kite.address.AddressSearchActivity" android:screenOrientation="portrait" android:theme="@style/Theme.KiteSDK.AddressSearch"/>
+        <service android:exported="false" android:name="com.paypal.android.sdk.payments.PayPalService"/>
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity"/>
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity"/>
+        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity"/>
+        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="io.card.payment.CardIOActivity"/>
+        <activity android:name="io.card.payment.DataEntryActivity"/>
+        <service android:exported="false" android:name="ly.kite.gcm.GCMRegistrationService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="ly.kite.gcm.GCMInstanceIDListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <activity android:label="@string/title_activity_login" android:name="ly.kite.instagramphotopicker.InstagramLoginActivity" android:theme="@style/Theme.InstagramPhotoPicker"/>
+        <activity android:label="@string/title_activity_instagram_gallery" android:name="ly.kite.instagramphotopicker.InstagramGalleryActivity" android:theme="@style/Theme.InstagramPhotoPicker"/>
+        <activity android:label="@string/title_activity_device_folder" android:name="ly.kite.photopicker.DeviceFolderActivity" android:theme="@style/Theme.PhotoPicker"/>
+        <activity android:label="@string/title_activity_gallery" android:name="ly.kite.photopicker.GalleryActivity" android:theme="@style/Theme.PhotoPicker"/>
+        <activity android:label="@string/title_activity_print_preview" android:launchMode="singleTop" android:name="com.hp.mss.hpprint.activity.PrintPreview" android:theme="@style/PreviewTheme"/>
+        <activity android:label="@string/mmadsdk_app_name" android:name="com.millennialmedia.internal.MMActivity" android:theme="@style/Theme.MMTransparent"/>
+        <activity android:label="sdk" android:name="com.millennialmedia.internal.MMIntentWrapperActivity"/>
+    </application>
+</manifest>

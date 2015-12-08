@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/ZipEntry" android:hint="@string/hint_zip_code" style="@style/SetupZipDisplay" />
+    <View style="@style/HorizontalDivider" />
+    <TableLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing" android:layout_weight="1.0">
+        <TableRow android:gravity="center" android:layout_weight="1.0">
+            <Button android:id="@id/Zip1" android:text="@string/pin_button_numeral1" style="@style/SetupZipButton" />
+            <Button android:id="@id/Zip2" android:text="@string/pin_button_numeral2" style="@style/SetupZipButton" />
+            <Button android:id="@id/Zip3" android:text="@string/pin_button_numeral3" style="@style/SetupZipButton" />
+        </TableRow>
+        <TableRow android:gravity="center" android:layout_weight="1.0">
+            <Button android:id="@id/Zip4" android:text="@string/pin_button_numeral4" style="@style/SetupZipButton" />
+            <Button android:id="@id/Zip5" android:text="@string/pin_button_numeral5" style="@style/SetupZipButton" />
+            <Button android:id="@id/Zip6" android:text="@string/pin_button_numeral6" style="@style/SetupZipButton" />
+        </TableRow>
+        <TableRow android:gravity="center" android:layout_weight="1.0">
+            <Button android:id="@id/Zip7" android:text="@string/pin_button_numeral7" style="@style/SetupZipButton" />
+            <Button android:id="@id/Zip8" android:text="@string/pin_button_numeral8" style="@style/SetupZipButton" />
+            <Button android:id="@id/Zip9" android:text="@string/pin_button_numeral9" style="@style/SetupZipButton" />
+        </TableRow>
+        <TableRow android:gravity="center" android:layout_weight="1.0">
+            <ImageButton android:id="@id/ZipBackspace" android:src="@drawable/quantum_ic_backspace_white_24" android:tint="@color/medium" android:contentDescription="@string/pin_button_backspace_description" style="@style/SetupZipButton" />
+            <Button android:id="@id/Zip0" android:text="@string/pin_button_numeral0" style="@style/SetupZipButton" />
+            <com.google.android.apps.wallet.widgets.button.StateTintingImageButton android:id="@id/ZipContinue" android:src="@drawable/ic_check_circle_white_40dp" android:contentDescription="@string/button_continue" wallet:tint="@color/zip_continue_button_tint" style="@style/SetupZipButton" />
+        </TableRow>
+    </TableLayout>
+</merge>

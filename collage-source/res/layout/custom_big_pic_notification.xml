@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/light_gray_primary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/notification_description" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="64.0dip" android:minHeight="64.0dip">
+        <FrameLayout android:id="@id/icon_group" android:layout_width="64.0dip" android:layout_height="64.0dip">
+            <ImageView android:id="@id/icon" android:background="@drawable/bg_stat_notify_piccollage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:scaleType="centerInside" />
+            <ImageView android:layout_gravity="bottom|right|center" android:id="@id/right_icon" android:padding="3.0dip" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:scaleType="centerInside" />
+        </FrameLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:layout_toRightOf="@id/icon_group">
+            <TextView android:textSize="12.0sp" android:textColor="@android:color/darker_gray" android:id="@id/date_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:ellipsize="marquee" android:id="@id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@id/date_time" android:layout_alignParentLeft="true" />
+            <TextView android:textSize="14.0sp" android:textColor="@android:color/darker_gray" android:ellipsize="marquee" android:id="@id/summary" android:visibility="gone" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:layout_below="@id/title" android:layout_alignLeft="@id/title" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <ImageView android:id="@id/big_picture" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:layout_below="@id/notification_description" />
+</RelativeLayout>

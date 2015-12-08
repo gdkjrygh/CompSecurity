@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ClaimMoneyHeader" android:background="@color/primary" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.apps.wallet.p2p.SenderRowView android:id="@id/SendersContainer" android:paddingBottom="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" wallet:isLarge="true" />
+            <TextView android:id="@id/ClaimMoneyHeadline" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" style="@style/LargeTitle.Inverted" />
+            <TextView android:gravity="center_horizontal" android:id="@id/SendersParagraph" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" style="@style/Title.Inverted" />
+            <TextView android:id="@id/Memo" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" style="@style/Body.Splash.Inverted" />
+        </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout>
+        <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/ClaimToWalletBalanceTile" android:padding="@dimen/default_spacing" style="@style/Card.Touchable">
+                <ImageView android:id="@id/Icon" android:src="@drawable/ic_mywallet_gwc_color_40dp" android:layout_alignParentTop="true" android:contentDescription="@null" android:importantForAccessibility="2" style="@style/ListItemPrimaryAction" />
+                <TextView android:gravity="center_vertical" android:id="@id/Headline" android:text="@string/claim_money_to_wallet_balance_headline" android:layout_toRightOf="@id/Icon" android:layout_alignParentTop="true" style="@style/ListItemPrimaryText" />
+                <TextView android:id="@id/Body" android:text="@string/claim_money_to_wallet_balance_body" android:layout_toRightOf="@id/Icon" android:layout_below="@id/Headline" android:layout_alignParentRight="true" style="@style/ListItemSecondaryText" />
+            </RelativeLayout>
+            <View android:id="@id/HorizontalDivider" android:visibility="gone" style="@style/HorizontalDivider" />
+            <RelativeLayout android:id="@id/ClaimToBankAccountTile" android:padding="@dimen/default_spacing" android:visibility="gone" style="@style/Card.Touchable">
+                <ImageView android:id="@id/Icon" android:src="@drawable/ic_bankaccount_dropdown_color_40dp" android:layout_alignParentTop="true" android:contentDescription="@null" android:importantForAccessibility="2" style="@style/ListItemPrimaryAction" />
+                <TextView android:gravity="center_vertical" android:id="@id/Headline" android:text="@string/claim_money_to_bank_account_headline" android:layout_toRightOf="@id/Icon" android:layout_alignParentTop="true" style="@style/ListItemPrimaryText" />
+                <TextView android:id="@id/Body" android:text="@string/claim_money_to_bank_account_body" android:layout_toRightOf="@id/Icon" android:layout_below="@id/Headline" android:layout_alignParentRight="true" style="@style/ListItemSecondaryText" />
+            </RelativeLayout>
+        </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout>
+    </LinearLayout>
+</ScrollView>

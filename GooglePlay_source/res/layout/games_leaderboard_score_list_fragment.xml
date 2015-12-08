@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/games_leaderboard_score_list_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/width_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/games_leaderboard_score_view_pager_page_width">
+            <include android:id="@id/games_leaderboard_butterbar" layout="@layout/games_butterbar" />
+            <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_refresh_widget" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Games.DarkList" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
+        <View android:id="@id/width_empty_view" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/games_leaderboard_score_list_width_empty_view" />
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/empty_view_no_results_text" android:layout_gravity="center" android:id="@id/empty_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/games_leaderboard_scores_generic_error" android:drawableTop="@drawable/games_ic_search_null_game" android:drawablePadding="16.0dip" style="@style/Games.EmptyViewText" />
+    <include android:visibility="gone" layout="@layout/games_network_error_message" />
+    <LinearLayout android:orientation="vertical" android:id="@id/loading_view" style="@style/Games.LoadingViewContainer">
+        <ProgressBar android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Games.ProgressBar.Large" />
+    </LinearLayout>
+    <View android:id="@id/transparent_overlay" android:background="@color/games_leaderboard_overlay_transparent" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

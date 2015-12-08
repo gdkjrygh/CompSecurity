@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/app_default_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:layout_marginBottom="40.0dip">
+            <Button android:id="@id/sign_in" android:text="@string/sign_in_to_piccollage" android:layout_centerHorizontal="true" style="@style/CblueButtonBig.Green" />
+            <include android:id="@id/settings_edit_info" android:visibility="gone" layout="@layout/account_settings_action_circle_icon" />
+        </RelativeLayout>
+        <TextView android:textAppearance="@android:style/TextAppearance.Medium.Inverse" android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/text_pull_to_refresh" android:layout_width="fill_parent" android:layout_height="32.0dip" android:layout_marginLeft="18.0dip" android:text="@string/settings_category_share_account" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="40.0dip">
+            <include android:id="@id/connect_au_cloud" layout="@layout/account_settings_toggle_connect" />
+            <include android:id="@id/connect_facebook" layout="@layout/account_settings_toggle_connect" />
+            <include android:id="@id/connect_tumblr" layout="@layout/account_settings_toggle_connect" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="40.0dip">
+            <include android:id="@id/notification_switch" layout="@layout/account_settings_toggle_switch" />
+            <include android:id="@id/hd_switch" layout="@layout/account_settings_toggle_switch" />
+            <include android:id="@id/in_app_notification" layout="@layout/account_settings_toggle_switch" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/find_friends" layout="@layout/account_settings_action_normal" />
+            <include android:id="@id/news" layout="@layout/account_settings_action_normal" />
+            <include android:id="@id/help" layout="@layout/account_settings_action_normal" />
+            <include android:id="@id/faq" layout="@layout/account_settings_action_normal" />
+            <include android:id="@id/debug_page" android:visibility="gone" layout="@layout/account_settings_action_normal" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip">
+            <Button android:id="@id/sign_out" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:text="@string/logout" style="@style/CblueButtonBig.Gray" />
+            <TextView android:textAppearance="@android:style/TextAppearance.Small" android:textColor="?android:textColorPrimary" android:id="@id/app_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" />
+            <TextView android:textAppearance="@android:style/TextAppearance.Small" android:textColor="@color/text_navy_blue" android:id="@id/privacy_policy" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/title_privacy_policy" />
+            <TextView android:textAppearance="@android:style/TextAppearance.Small" android:textColor="@color/text_grass_green" android:id="@id/iab_restore" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/restore_purchased_stickers" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

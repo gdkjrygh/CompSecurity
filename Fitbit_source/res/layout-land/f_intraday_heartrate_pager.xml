@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="30.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/txt_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="22.0sp" android:textColor="@color/white" android:id="@id/txt_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/txt_title" android:layout_centerHorizontal="true" />
+        <ImageButton android:id="@id/btn_shrink" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/FullscreenShrinkButton" />
+    </RelativeLayout>
+    <com.fitbit.heartrate.charts.IntradayHeartRateChartView_ android:id="@id/chart" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

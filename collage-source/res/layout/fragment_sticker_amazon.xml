@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="horizontal" android:id="@id/sticker_pack_info_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/sticker_pack_info_container" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/imageview_sticker_pack_thumbnail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/tn_sticker_pack" android:scaleType="centerCrop" android:layout_centerVertical="true" />
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="18.0sp" android:textColor="#ff4a4a4a" android:id="@id/textview_sticker_pack_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/imageview_sticker_pack_thumbnail" android:layout_alignParentTop="true" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="14.0sp" android:textColor="@color/dark_gray_tertiary" android:id="@id/textview_sticker_pack_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/textview_sticker_pack_title" android:layout_alignLeft="@id/textview_sticker_pack_title" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/textview_sticker_pack_description" android:layout_alignLeft="@id/textview_sticker_pack_title">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="14.0sp" android:textColor="@color/dark_gray_tertiary" android:id="@id/textview_sticker_pack_price" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <View android:background="@color/bt_red" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_alignLeft="@id/textview_sticker_pack_price" android:layout_alignRight="@id/textview_sticker_pack_price" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="14.0sp" android:textColor="@color/dark_gray_tertiary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" -> " />
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="14.0sp" android:textColor="@color/dark_gray_tertiary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/free" />
+            </LinearLayout>
+            <Button android:textColor="@android:color/white" android:gravity="center" android:id="@id/button_sticker_download" android:maxLines="1" android:layout_alignBottom="@id/imageview_sticker_pack_thumbnail" android:layout_alignParentRight="true" style="@style/CblueButton.Green" />
+        </RelativeLayout>
+        <ViewStub android:id="@id/header_banner_stub" android:layout="@layout/sticker_banner" android:inflatedId="@id/sticker_banner_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/sticker_gridview" android:paddingLeft="20.0dip" android:paddingTop="8.0dip" android:paddingRight="20.0dip" android:fadingEdge="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

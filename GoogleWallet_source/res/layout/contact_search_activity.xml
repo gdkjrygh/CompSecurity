@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.text.clearable.ClearableEditText android:layout_gravity="top" android:id="@id/ContactTextInput" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:inputType="textEmailAddress" android:imeOptions="actionNext|flagNoExtractUi" style="@style/Card" />
+    <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@id/ErrorView" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/default_spacing" style="@style/Font_FieldValidationErrors" />
+        <ImageView android:id="@id/EmptyContactList" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/img_empty_p2p_color_248x192dp" android:scaleType="center" android:layout_below="@id/ErrorView" android:contentDescription="@null" android:importantForAccessibility="2" />
+        <ListView android:id="@id/ContactList" android:listSelector="@android:color/transparent" android:layout_below="@id/ErrorView" style="@style/List" />
+        <TextView android:gravity="center" android:id="@id/UnknownContactBar" android:background="@color/butter" android:paddingLeft="16.0dip" android:paddingTop="14.0dip" android:paddingRight="16.0dip" android:paddingBottom="14.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginRight="@dimen/default_spacing" android:text="@string/send_money_unknown_contact_warning" android:layout_below="@id/ContactList" style="@style/Font_Paragraph06" />
+    </RelativeLayout>
+</LinearLayout>

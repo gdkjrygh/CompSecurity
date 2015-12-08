@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/games_onyx_card_external_margin" android:elevation="@dimen/games_onyx_card_elevation"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/player_xp_summary_card" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/games_destination_player_detail_level_progress_bar" android:layout_width="fill_parent" android:layout_height="@dimen/games_xp_chart_level_progress_bar_height">
+                <View android:id="@id/games_destination_player_detail_level_progress_bar_left" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <View android:id="@id/games_destination_player_detail_level_progress_bar_right" android:background="@color/games_tile_progress_unfilled" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/games_xp_chart_font_size" android:textColor="@color/games_xp_chart_level_progress" android:gravity="left|center" android:id="@id/games_destination_player_detail_level_text" android:paddingLeft="@dimen/games_xp_chart_edge_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Left side" />
+            <TextView android:textSize="@dimen/games_xp_chart_font_size" android:textColor="@color/games_xp_chart_level_progress" android:gravity="right|center" android:id="@id/games_destination_player_detail_level_progress" android:paddingRight="@dimen/games_xp_chart_edge_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Right side" />
+        </FrameLayout>
+        <include android:id="@id/player_xp_chart_layout" android:background="@android:color/white" layout="@layout/games_destination_player_detail_xp_chart" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

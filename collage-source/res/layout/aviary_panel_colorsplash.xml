@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="?attr/aviaryBottomBarOptionPanelContainerStyleNoMargin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aviary="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:weightSum="100.0" style="?attr/aviaryBottomBarOptionPanelContainerStyle">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="?aviarySplashItemWeight">
+            <com.aviary.android.feather.sdk.widget.AviaryHighlightImageButton android:id="@id/aviary_button1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/aviary_ic_free" android:contentDescription="@string/feather_colorsplash_free" aviary:aviary_checked="true" aviary:aviary_untoggleable="false" style="?attr/aviaryColorSplashOptionPanelToggleLeftButtonStyle" />
+            <com.aviary.android.feather.sdk.widget.AviaryTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/feather_colorsplash_free" style="?attr/aviaryBottomBarToolTextStyle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="?aviarySplashItemWeight">
+            <com.aviary.android.feather.sdk.widget.AviaryHighlightImageButton android:id="@id/aviary_button2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/aviary_ic_smart" android:contentDescription="@string/feather_colorsplash_smart" aviary:aviary_untoggleable="false" style="?attr/aviaryColorSplashOptionPanelToggleRightButtonStyle" />
+            <com.aviary.android.feather.sdk.widget.AviaryTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/feather_colorsplash_smart" style="?attr/aviaryBottomBarToolTextStyle" />
+        </LinearLayout>
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="?aviarySplashDividerWeight" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="?aviarySplashItemWeight">
+            <com.aviary.android.feather.sdk.widget.AviaryHighlightImageButton android:id="@id/aviary_button3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/aviary_ic_eraser" android:contentDescription="@string/feather_colorsplash_eraser" aviary:aviary_untoggleable="false" style="?attr/aviaryColorSplashOptionPanelToggleButtonStyle" />
+            <com.aviary.android.feather.sdk.widget.AviaryTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/feather_colorsplash_eraser" style="?attr/aviaryBottomBarToolTextStyle" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/aviary_disable_status" android:background="?aviaryPanelDisabledStatusBackground" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

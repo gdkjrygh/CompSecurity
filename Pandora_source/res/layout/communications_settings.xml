@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:background="@color/settings_background" android:paddingBottom="@dimen/settings_row_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pandora.android.view.RoundLinearLayout android:id="@id/notifications_optin_row" android:layout_marginTop="@dimen/settings_row_margin" pandora:roundedCorners="all" style="@style/settings_row_style">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/settings_row_margin">
+                <CheckBox android:id="@id/notifications_optin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkmark_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notifications_optin" android:layout_toLeftOf="@id/notifications_optin" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/settings_text_large" />
+            </RelativeLayout>
+        </com.pandora.android.view.RoundLinearLayout>
+        <TextView android:textStyle="bold" android:paddingLeft="@dimen/settings_row_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/settings_row_margin" android:text="@string/from_pandora" style="@style/settings_text_large" />
+        <com.pandora.android.view.RoundLinearLayout pandora:roundedCorners="all" style="@style/settings_row_style">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/settings_row_margin">
+                <CheckBox android:id="@id/pandora_email_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkmark_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:id="@id/pandora_email_switch_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pandora_email" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/settings_text_large" />
+                <TextView android:textColor="@color/settings_text_color_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pandora_email_help" android:layout_toLeftOf="@id/pandora_email_switch" android:layout_below="@id/pandora_email_switch_text" android:layout_alignParentLeft="true" style="@style/settings_text_medium" />
+            </RelativeLayout>
+        </com.pandora.android.view.RoundLinearLayout>
+        <View style="@style/settings_row_divider_style" />
+        <com.pandora.android.view.RoundLinearLayout pandora:roundedCorners="bottom_left|bottom_right" style="@style/settings_row_style">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/settings_row_margin">
+                <CheckBox android:id="@id/pandora_mobile_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkmark_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:id="@id/pandora_mobile_switch_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pandora_mobile" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/settings_text_large" />
+                <TextView android:textColor="@color/settings_text_color_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pandora_mobile_help" android:layout_toLeftOf="@id/pandora_mobile_switch" android:layout_below="@id/pandora_mobile_switch_text" android:layout_alignParentLeft="true" style="@style/settings_text_medium" />
+            </RelativeLayout>
+        </com.pandora.android.view.RoundLinearLayout>
+        <TextView android:textStyle="bold" android:paddingLeft="@dimen/settings_row_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/settings_row_margin" android:text="@string/from_friends" style="@style/settings_text_large" />
+        <com.pandora.android.view.RoundLinearLayout pandora:roundedCorners="top_left|top_right" style="@style/settings_row_style">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/settings_row_margin">
+                <CheckBox android:id="@id/friends_email_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkmark_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:id="@id/friends_email_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/friends_email" android:layout_toLeftOf="@id/friends_email_switch" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/settings_text_large" />
+                <TextView android:textColor="@color/settings_text_color_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_email_help" android:layout_toLeftOf="@id/friends_email_switch" android:layout_below="@id/friends_email_text" android:layout_alignParentLeft="true" style="@style/settings_text_medium" />
+            </RelativeLayout>
+        </com.pandora.android.view.RoundLinearLayout>
+        <View style="@style/settings_row_divider_style" />
+        <com.pandora.android.view.RoundLinearLayout pandora:roundedCorners="bottom_left|bottom_right" style="@style/settings_row_style">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/settings_row_margin">
+                <CheckBox android:id="@id/friends_mobile_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkmark_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:id="@id/friends_mobile_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_mobile" android:layout_toLeftOf="@id/friends_mobile_switch" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/settings_text_large" />
+                <TextView android:textColor="@color/settings_text_color_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_mobile_help" android:layout_toLeftOf="@id/friends_mobile_switch" android:layout_below="@id/friends_mobile_text" android:layout_alignParentLeft="true" style="@style/settings_text_medium" />
+            </RelativeLayout>
+        </com.pandora.android.view.RoundLinearLayout>
+        <ViewStub android:id="@id/artists_email_opt_in_stub" android:layout="@layout/settings_artists_optin_email_layout" android:inflatedId="@id/artists_email_opt_in" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

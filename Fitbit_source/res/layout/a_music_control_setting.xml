@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/main_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.fitbit.ui.FixedFocusScrollView android:id="@id/content_view" android:background="@color/main_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:background="@color/main_bg_color" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/using_music_control" style="@style/MusicControlText.Primary" />
+            <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:text="@string/using_music_control_desc" style="@style/MusicControlText.Detail" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/to_connect_music_control" style="@style/MusicControlText.Primary" />
+            <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <TableLayout android:id="@id/steps_table" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="1" style="@style/MusicControlText.Detail" />
+        </LinearLayout>
+    </com.fitbit.ui.FixedFocusScrollView>
+</FrameLayout>

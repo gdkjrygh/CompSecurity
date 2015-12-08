@@ -1,0 +1,59 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.netflix.mediaclient.service.webclient.model.branches;
+
+
+// Referenced classes of package com.netflix.mediaclient.service.webclient.model.branches:
+//            ListModel
+
+public class Season
+{
+    public static class Detail extends Video.Summary
+    {
+
+        public int currentEpisodeNumber;
+        private int episodeCount;
+        private int number;
+        private int year;
+
+        public int getCurrentEpisodeNumber()
+        {
+            return currentEpisodeNumber;
+        }
+
+        public int getEpisodeCount()
+        {
+            return episodeCount;
+        }
+
+        public int getNumber()
+        {
+            return number;
+        }
+
+        public int getYear()
+        {
+            return year;
+        }
+
+        public Detail setId(String s)
+        {
+            id = s;
+            return this;
+        }
+
+        public Detail()
+        {
+        }
+    }
+
+
+    public Detail detail;
+    public ListModel episodes;
+
+    public Season()
+    {
+    }
+}

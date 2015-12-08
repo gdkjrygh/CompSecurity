@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/collage_container" android:padding="@dimen/gallery_item_gap" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@id/imageview_collage_thumbnail" android:background="@drawable/home_collage_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_centerInParent="true" />
+        <ProgressBar android:id="@id/progressbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateOnly="true" android:layout_centerInParent="true" style="?android:attr/progressBarStyleInverse" />
+    </RelativeLayout>
+    <ImageButton android:id="@id/delete_collage" android:background="@drawable/selector_delete" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_alignLeft="@id/collage_container" android:layout_alignTop="@id/collage_container" />
+</RelativeLayout>

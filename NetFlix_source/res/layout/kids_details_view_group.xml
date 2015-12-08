@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/kids_video_details_img_group" android:paddingLeft="@dimen/kids_details_view_img_padding" android:paddingRight="@dimen/kids_details_view_img_padding" android:paddingBottom="@dimen/kids_details_view_img_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/kids_video_details_img_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/kids_details_view_img_bg" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/kids_video_details_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <ImageView android:layout_width="@dimen/kids_play_overlay_size" android:layout_height="@dimen/kids_play_overlay_size" android:src="@drawable/kids_play_overlay" android:layout_centerInParent="true" />
+        <View android:id="@id/kids_video_details_img_overlay" android:background="@drawable/shadow_trans_to_black_rounded" android:layout_width="fill_parent" android:layout_height="@dimen/view_gradient_overlay_height" android:layout_alignParentBottom="true" />
+        <TextView android:ellipsize="end" android:id="@id/kids_video_details_img_title" android:padding="@dimen/content_padding" android:maxLines="1" android:singleLine="true" android:layout_alignParentBottom="true" android:lineSpacingMultiplier="1.0" style="@style/PrimaryText.Medium" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/kids_video_details_info_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/kids_details_view_details_padding" android:layout_marginRight="@dimen/kids_details_view_details_padding" android:layout_marginBottom="@dimen/text_padding">
+        <TextView android:textColor="@color/kids_text_color_off_white" android:id="@id/kids_video_details_rating" android:background="@color/kids_video_details_rating_text_bg" android:layout_marginRight="@dimen/content_padding" style="@style/VideoRatingText" />
+        <TextView android:textColor="@color/kids_text_color_off_white" android:ellipsize="end" android:id="@id/kids_video_details_info" android:maxLines="1" android:singleLine="true" android:lineSpacingMultiplier="1.0" style="@style/PrimaryText.Small" />
+    </LinearLayout>
+    <TextView android:textColor="@color/kids_text_color_off_white" android:ellipsize="end" android:id="@id/kids_video_details_synopsis" android:layout_marginLeft="@dimen/kids_details_view_details_padding" android:layout_marginRight="@dimen/kids_details_view_details_padding" android:layout_marginBottom="@dimen/double_padding" android:maxLines="4" style="@style/PrimaryText.Small" />
+</merge>

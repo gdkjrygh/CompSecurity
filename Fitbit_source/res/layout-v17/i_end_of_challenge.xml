@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/challenge" android:paddingLeft="?EoCPaddingTwo" android:paddingRight="?EoCPaddingTwo" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/inner" android:paddingTop="?EoCInnerPaddingTopTwo" android:paddingRight="?EoCInnerPaddingRightTwo" android:layout_width="fill_parent" android:layout_height="?EoCLayoutHeightTwo" android:layout_marginTop="?EoCInnerMarginTopTwo" android:layout_marginBottom="?EoCLayoutMarginBottomTwo">
+        <FrameLayout android:id="@id/circles_holder" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?EoCCirclesMarginTop" android:layout_marginRight="?EoCCirclesMarginRight" android:layout_alignParentRight="true">
+            <View android:layout_gravity="center" android:background="@drawable/end_of_challenge_circle" android:layout_width="?EoCBigCircleSizeTwo" android:layout_height="?EoCBigCircleSizeTwo" />
+            <View android:layout_gravity="center" android:background="@drawable/end_of_challenge_circle" android:layout_width="?EoCMedCircleSizeTwo" android:layout_height="?EoCMedCircleSizeTwo" />
+            <View android:layout_gravity="center" android:background="@drawable/end_of_challenge_circle" android:layout_width="?EoCSmallCircleSizeTwo" android:layout_height="?EoCSmallCircleSizeTwo" />
+        </FrameLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/main_text" android:paddingLeft="2.0dip" android:paddingTop="4.0dip" android:paddingRight="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+            <TextView android:textSize="?EoCTextSizeBigTwo" android:id="@id/place" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?EoCPlaceMarginLeftTwo" android:layout_marginTop="?EoCTextBigMarginTwo" android:minWidth="?EoCPlaceMinWidthTwo" android:singleLine="true" style="@style/Fitbit.Onboarding.TextView" />
+            <TextView android:textSize="?EoCTextSizeBigTwo" android:textColor="@color/white" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?EoCTextBigMarginTwo" android:layout_marginTop="?EoCTextBigMarginTwo" android:singleLine="true" />
+        </LinearLayout>
+        <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="?EoCTextBigMarginTwo" android:layout_below="@id/main_text" android:layout_alignParentBottom="true">
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?EoCProgressBarMarginLeftTwo" android:layout_toLeftOf="@id/score" android:layout_centerVertical="true" layout="@layout/l_challenge_progress_bar" />
+            <TextView android:textSize="?EoCTextSizeSmallTwo" android:textColor="@color/white" android:id="@id/score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?EoCScoreMarginLeftTwo" android:layout_marginRight="?EoCScoreMarginRightTwo" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:textAlignment="4" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:id="@id/border" android:layout_width="fill_parent" android:layout_height="?EoCLayoutHeightTwo" android:layout_marginTop="?EoCLayoutMarginTopTwo" />
+    <com.fitbit.ui.loadable.CircleLoadablePicassoImageView android:layout_gravity="right" android:id="@id/profile_picture" android:layout_width="?EoCProfPicSizeTwo" android:layout_height="?EoCProfPicSizeTwo" android:layout_marginTop="?EoCProfPicMarginTopTwo" android:layout_marginRight="?EoCProfPicMarginRightTwo" />
+    <LinearLayout android:layout_gravity="right" android:orientation="horizontal" android:id="@id/fancy_stars" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?EoCFancyStarsMarginTopTwo" android:layout_marginRight="?EoCFancyStarsMarginRightTwo">
+        <ImageView android:layout_width="?EoCDiamondStarWidthTwo" android:layout_height="?EoCDiamondStarHeightTwo" android:layout_marginTop="?EoCDiamondStarMarginTopTwo" android:src="@drawable/diamondstar" />
+        <ImageView android:layout_width="?EoCCrossStarWidthTwo" android:layout_height="?EoCCrossStarHeightTwo" android:layout_marginLeft="?EoCCrossStarMarginLeftTwo" android:layout_marginTop="?EoCCrossStarMarginTopTwo" android:src="@drawable/crossstar" />
+        <ImageView android:layout_width="?EoCFancyStarWidthTwo" android:layout_height="?EoCFancyStarHeightTwo" android:layout_marginLeft="@dimen/margin_half_step" android:src="@drawable/end_of_challenge_star" />
+        <ImageView android:layout_width="?EoCAsteriskStarWidthTwo" android:layout_height="?EoCAsteriskStarHeightTwo" android:layout_marginLeft="?EoCAsteriskStarMarginTopTwo" android:layout_marginTop="?EoCAsteriskStarMarginTopTwo" android:src="@drawable/asteriskstar" />
+    </LinearLayout>
+</LinearLayout>

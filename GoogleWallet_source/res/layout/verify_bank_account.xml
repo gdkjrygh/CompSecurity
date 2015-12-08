@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:id="@id/ChooseVerificationMethodLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/VerifyBankAccountTitle" android:padding="@dimen/default_spacing" style="@style/Body" />
+            <RelativeLayout android:orientation="horizontal" android:id="@id/InstantVerification" android:padding="@dimen/default_spacing" style="@style/Card">
+                <ImageView android:id="@id/InstantVerificationIcon" android:src="@drawable/img_yodlee_instant" android:contentDescription="@null" style="@style/ListItemPrimaryAction" />
+                <TextView android:id="@id/InstantVerificationHeadline" android:text="@string/verify_bank_account_instantly" android:layout_toRightOf="@id/InstantVerificationIcon" style="@style/ListItemPrimaryText" />
+                <TextView android:text="@string/verify_bank_account_instantly_description" android:layout_toRightOf="@id/InstantVerificationIcon" android:layout_below="@id/InstantVerificationHeadline" style="@style/ListItemSecondaryText" />
+            </RelativeLayout>
+            <View style="@style/HorizontalDivider" />
+            <RelativeLayout android:orientation="horizontal" android:id="@id/ChallengeDepositVerification" android:padding="@dimen/default_spacing" style="@style/Card">
+                <ImageView android:id="@id/ChallengeDepositIcon" android:src="@drawable/img_yodlee_challengedeposit" android:contentDescription="@null" style="@style/ListItemPrimaryAction" />
+                <TextView android:id="@id/ChallengeDepositHeadline" android:text="@string/verify_bank_account_using_challenge_deposit" android:layout_toRightOf="@id/ChallengeDepositIcon" style="@style/ListItemPrimaryText" />
+                <TextView android:id="@id/ChallengeDepositDescription" android:layout_toRightOf="@id/ChallengeDepositIcon" android:layout_below="@id/ChallengeDepositHeadline" style="@style/ListItemSecondaryText" />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <RelativeLayout android:id="@id/SendChallengeDepositLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/SendChallengeDeposit" android:layout_alignParentTop="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:src="@drawable/img_bank_splash" android:contentDescription="@null" style="@style/SplashHeroImage" />
+                <TextView android:text="@string/verification_ownership_message_title" style="@style/Title.Splash" />
+                <TextView android:id="@id/VerificationMessageContent" style="@style/Body.Splash" />
+            </LinearLayout>
+        </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+        <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/SendChallengeDeposit" android:text="@string/verify_with_deposit" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+    </RelativeLayout>
+</FrameLayout>

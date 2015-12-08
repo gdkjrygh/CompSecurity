@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.fitbit.ui.views.CameraPreview android:id="@id/preview" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ToggleButton android:id="@id/btn_flash" android:background="@drawable/barcode_flash_btn_bg" android:layout_width="@dimen/flash_btn_size" android:layout_height="@dimen/flash_btn_size" android:layout_margin="@dimen/vertical_margin_step_2x" android:checked="false" android:textOn="" android:textOff="" android:layout_alignTop="@id/preview" android:layout_alignRight="@id/preview" />
+    <com.fitbit.runtrack.ui.ExerciseStatsView android:id="@id/stats" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/preview" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/preview">
+        <ImageButton android:layout_gravity="center" android:id="@id/btn_gallery" android:background="@color/transparent" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_collections" android:layout_weight="1.0" />
+        <ImageButton android:layout_gravity="center" android:id="@id/btn_capture" android:background="@drawable/pink_btn" android:layout_width="@dimen/exercise_share_btn_size" android:layout_height="@dimen/exercise_share_btn_size" android:src="@drawable/camera_white" android:scaleType="center" />
+        <ImageButton android:id="@id/btn_camera_toggle" android:background="@color/transparent" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_camera_front" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

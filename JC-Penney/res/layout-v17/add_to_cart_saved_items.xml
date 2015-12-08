@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/saved_cart_layout" android:background="@android:color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/header_item_layout" android:background="@drawable/grey_list" android:paddingLeft="20.0dip" android:paddingTop="5.0dip" android:paddingRight="20.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="20.0dip" android:paddingEnd="20.0dip">
+            <com.jcp.views.TypefaceTextView android:textSize="14.0sp" android:textColor="@color/text_color" android:id="@id/header_num_items_in_bag" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:customTypeface="GOTHAM_MEDIUM" />
+            <com.jcp.views.TypefaceTextView android:textSize="14.0sp" android:textColor="@color/text_color" android:id="@id/header_items_total_price" android:layout_width="wrap_content" android:layout_height="wrap_content" app:customTypeface="GOTHAM_MEDIUM" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/threshold_message_layout" android:background="@color/threshold_message_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/threshold_message_divider" android:layout_width="fill_parent" android:layout_height="@dimen/layout_size_2" />
+            <RelativeLayout android:paddingTop="@dimen/margin_15" android:paddingBottom="@dimen/margin_15" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_15" android:src="@drawable/ic_threshold_info" android:layout_centerVertical="true" android:layout_marginStart="@dimen/margin_15" />
+                <com.jcp.views.TypefaceTextView android:textSize="14.0sp" android:textColor="@color/threshold_message_text" android:gravity="center_vertical" android:id="@id/threshold_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_5" android:layout_toRightOf="@id/info" android:layout_centerVertical="true" android:layout_marginStart="@dimen/margin_5" android:layout_toEndOf="@id/info" app:customTypeface="GOTHAM_BOOK" />
+            </RelativeLayout>
+            <View android:background="@color/threshold_message_divider" android:layout_width="fill_parent" android:layout_height="@dimen/layout_size_2" />
+        </LinearLayout>
+        <ListView android:id="@id/shopping_bag_items_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@android:color/transparent" android:dividerHeight="10.0dip" />
+    </LinearLayout>
+</merge>

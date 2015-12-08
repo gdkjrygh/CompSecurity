@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/fab_shadow" />
+    </item>
+    <item android:left="@dimen/fab_shadow_padding" android:top="@dimen/fab_shadow_padding" android:right="@dimen/fab_shadow_padding" android:bottom="@dimen/fab_shadow_padding">
+        <shape android:shape="oval">
+            <solid android:color="@color/sync_primary_color" />
+        </shape>
+    </item>
+    <item android:left="@dimen/fab_shadow_padding" android:top="@dimen/fab_shadow_padding" android:right="@dimen/fab_shadow_padding" android:bottom="@dimen/fab_shadow_padding">
+        <selector>
+            <item android:state_pressed="true">
+                <shape android:shape="oval">
+                    <solid android:color="@color/translucent_press_overlay" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</layer-list>

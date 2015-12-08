@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/header" android:background="@color/cat_medium_green" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/home_title" android:textAllCaps="true" />
+    <android.support.v4.view.ViewPager android:id="@id/showcase_viewpager" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/showcase_pagerindicator" android:layout_below="@id/header" />
+    <com.spotify.android.paste.widget.ViewPagerIndicator android:id="@id/showcase_pagerindicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/next" android:layout_centerHorizontal="true" />
+    <Button android:id="@id/next" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="50.0dip" android:layout_marginBottom="30.0dip" android:text="@string/showcase_next" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <Button android:id="@id/done" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="50.0dip" android:layout_marginBottom="30.0dip" android:text="@string/showcase_done" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="?pasteButtonStylePrimary" />
+</RelativeLayout>

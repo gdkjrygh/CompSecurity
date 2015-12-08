@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" style="?android:attr/progressBarStyle" />
+        <TextView android:textSize="14.0sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/label_please_wait" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="fill_horizontal" android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="15.0sp" android:typeface="sans" android:textStyle="bold" android:textColor="@color/tile_guide_background_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/related_foods_margin_side" android:layout_marginTop="5.0dip" android:layout_marginRight="@dimen/related_foods_margin_side" android:text="@string/previously_eaten_with" />
+        <TextView android:textSize="20.0sp" android:id="@id/food_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/related_foods_margin_side" android:layout_marginRight="@dimen/related_foods_margin_side" />
+        <View android:background="@color/tile_guide_background_color" android:layout_width="fill_parent" android:layout_height="5.0px" />
+        <ListView android:id="@id/related_items_list_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View android:background="@color/settings_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <TextView android:textSize="20.0sp" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/cancel_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:layout_marginLeft="@dimen/related_foods_margin_side" android:layout_marginRight="@dimen/related_foods_margin_side" android:text="@string/label_cancel" />
+    </LinearLayout>
+</FrameLayout>

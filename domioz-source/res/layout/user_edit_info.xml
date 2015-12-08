@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/RelativeLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/include1" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" layout="@layout/title_bar_blue" />
+    <ScrollView android:id="@id/scrollerContainer" android:background="@drawable/appbkgr" android:padding="10.0dip" android:scrollbars="none" android:fadingEdge="none" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/include1">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/iphone_table_single" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <LinearLayout android:id="@id/hint" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:text="@string/first_name" style="@style/UserAccountHintBlock" />
+                    <EditText android:id="@id/firstName" android:maxLength="40" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/UserAccountEditTextBlock">
+                        <requestFocus />
+                    </EditText>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" style="@style/UserAccountLineDivider" />
+                <LinearLayout android:id="@id/hint" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:text="@string/last_name" style="@style/UserAccountHintBlock" />
+                    <EditText android:id="@id/lastName" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/UserAccountEditTextBlock" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" style="@style/UserAccountLineDivider" />
+                <LinearLayout android:id="@id/hint" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:text="@string/email" style="@style/UserAccountHintBlock" />
+                    <TextView android:textSize="16.0sp" android:id="@id/email" style="@style/UserAccountEditTextBlock" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" style="@style/UserAccountLineDivider" />
+                <LinearLayout android:id="@id/hint" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:text="@string/phone_label" style="@style/UserAccountHintBlock" />
+                    <EditText android:id="@id/phone" android:maxLength="10" android:inputType="number" android:imeOptions="flagNoExtractUi" style="@style/UserAccountEditTextBlock" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" style="@style/UserAccountLineDivider" />
+                <LinearLayout android:id="@id/hint" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:text="@string/extension" style="@style/UserAccountHintBlock" />
+                    <EditText android:id="@id/extension" android:inputType="number" android:imeOptions="actionDone|flagNoExtractUi" style="@style/UserAccountEditTextBlock" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout android:id="@id/titleDropShadow" android:background="@drawable/black_fade_down_light" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_below="@id/include1" android:layout_centerHorizontal="true" />
+</RelativeLayout>

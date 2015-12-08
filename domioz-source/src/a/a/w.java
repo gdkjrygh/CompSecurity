@@ -1,0 +1,151 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package a.a;
+
+import android.app.Activity;
+import com.appboy.c.b;
+import com.appboy.f;
+import com.appboy.f.a;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.CopyOnWriteArraySet;
+import java.util.concurrent.Executor;
+
+// Referenced classes of package a.a:
+//            aa, y, z
+
+public final class w
+    implements aa
+{
+
+    private static final String g;
+    public final ConcurrentMap a = new ConcurrentHashMap();
+    public final ConcurrentMap b = new ConcurrentHashMap();
+    public final ConcurrentMap c = new ConcurrentHashMap();
+    public final Object d = new Object();
+    public final Object e = new Object();
+    public final Object f = new Object();
+    private final Executor h;
+
+    public w(Executor executor)
+    {
+        h = executor;
+    }
+
+    static CopyOnWriteArraySet a(Class class1, CopyOnWriteArraySet copyonwritearrayset)
+    {
+        return b(class1, copyonwritearrayset);
+    }
+
+    private static CopyOnWriteArraySet b(Class class1, CopyOnWriteArraySet copyonwritearrayset)
+    {
+        CopyOnWriteArraySet copyonwritearrayset1 = (CopyOnWriteArraySet)copyonwritearrayset;
+        (new StringBuilder("Triggering ")).append(class1.getName()).append(" on ").append(copyonwritearrayset.size()).append(" subscribers.");
+        return copyonwritearrayset1;
+    }
+
+    public final void a(Object obj, Class class1)
+    {
+        (new StringBuilder()).append(class1.getName()).append(" fired: ").append(obj.toString());
+        Object obj1 = a.entrySet().iterator();
+        do
+        {
+            if (!((Iterator) (obj1)).hasNext())
+            {
+                break;
+            }
+            java.util.Map.Entry entry = (java.util.Map.Entry)((Iterator) (obj1)).next();
+            CopyOnWriteArraySet copyonwritearrayset = (CopyOnWriteArraySet)((ConcurrentMap)entry.getValue()).get(class1);
+            if (copyonwritearrayset != null && !copyonwritearrayset.isEmpty())
+            {
+                ((Activity)entry.getKey()).runOnUiThread(new y(this, class1, copyonwritearrayset, obj));
+            }
+        } while (true);
+        obj1 = (CopyOnWriteArraySet)b.get(class1);
+        if (obj1 != null)
+        {
+            b b1;
+            for (obj1 = b(class1, ((CopyOnWriteArraySet) (obj1))).iterator(); ((Iterator) (obj1)).hasNext(); h.execute(new z(this, b1, obj)))
+            {
+                b1 = (b)((Iterator) (obj1)).next();
+            }
+
+        }
+        obj1 = (CopyOnWriteArraySet)c.get(class1);
+        if (obj1 != null)
+        {
+            for (class1 = b(class1, ((CopyOnWriteArraySet) (obj1))).iterator(); class1.hasNext(); ((b)class1.next()).a(obj)) { }
+        }
+    }
+
+    public final boolean a(b b1, Class class1)
+    {
+        boolean flag = false;
+        Object obj1 = e;
+        obj1;
+        JVM INSTR monitorenter ;
+        ConcurrentMap concurrentmap = b;
+        if (b1 != null) goto _L2; else goto _L1
+_L1:
+        b1 = class1.getName();
+        com.appboy.f.a.d(g, String.format("Error: Attempted to add a null subscriber for eventClass %s. This subscriber is being ignored. Please check your calling code to ensure that all potential subscriptions are valid.", new Object[] {
+            b1
+        }));
+_L3:
+        obj1;
+        JVM INSTR monitorexit ;
+        return flag;
+_L2:
+        CopyOnWriteArraySet copyonwritearrayset = (CopyOnWriteArraySet)concurrentmap.get(class1);
+        Object obj;
+        obj = copyonwritearrayset;
+        if (copyonwritearrayset != null)
+        {
+            break MISSING_BLOCK_LABEL_101;
+        }
+        obj = new CopyOnWriteArraySet();
+        class1 = (CopyOnWriteArraySet)concurrentmap.putIfAbsent(class1, obj);
+        if (class1 != null)
+        {
+            obj = class1;
+        }
+        flag = ((CopyOnWriteArraySet) (obj)).add(b1);
+          goto _L3
+        b1;
+        throw b1;
+    }
+
+    public final boolean b(b b1, Class class1)
+    {
+        Object obj = e;
+        obj;
+        JVM INSTR monitorenter ;
+        class1 = (CopyOnWriteArraySet)b.get(class1);
+        if (class1 == null || b1 == null) goto _L2; else goto _L1
+_L1:
+        if (!class1.remove(b1)) goto _L2; else goto _L3
+_L3:
+        boolean flag = true;
+_L5:
+        obj;
+        JVM INSTR monitorexit ;
+        return flag;
+_L2:
+        flag = false;
+        if (true) goto _L5; else goto _L4
+_L4:
+        b1;
+        throw b1;
+    }
+
+    static 
+    {
+        g = String.format("%s.%s", new Object[] {
+            f.a, a/a/w.getName()
+        });
+    }
+}

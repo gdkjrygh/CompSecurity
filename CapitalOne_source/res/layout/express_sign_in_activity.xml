@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:custom="http://schemas.android.com/apk/res/com.konylabs.capitalone">
+    <com.EnterpriseMobileBanking.Plugins.Components.AppHeader android:id="@id/quicknav" android:background="@drawable/header_bg" android:layout_width="fill_parent" android:layout_height="@dimen/header_default_height" android:layout_alignParentTop="true" custom:navOption="back" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/ELI_lock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="11.0dip" android:src="@drawable/lock" />
+            <com.EnterpriseMobileBanking.Plugins.Components.CapitalOneTextView android:gravity="left" android:id="@id/alp_lpa_text_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" style="@style/pattern_lob_title" />
+        </LinearLayout>
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="14.0dip" android:gravity="left" android:id="@id/alp_lpa_dynamic_text_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginBottom="6.0dip" android:lines="2" />
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <group.pals.android.lib.ui.lockpattern.widget.LockPatternView android:layout_gravity="center" android:id="@id/alp_lpa_lockPattern" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/alp_lpa_layout_footer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.EnterpriseMobileBanking.Plugins.Components.CapitalOneButton android:enabled="false" android:id="@id/alp_lpa_button_restart" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/alp_cmd_restart" android:layout_weight="1.0" style="@style/grey_btn" />
+        <com.EnterpriseMobileBanking.Plugins.Components.CapitalOneButton android:enabled="false" android:id="@id/alp_lpa_button_confirm" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/alp_cmd_next" android:layout_weight="1.0" style="@style/primary_btn" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/alp_lpa_layout_footer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="12.0dip" android:id="@id/mobile_security_footer_link" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="5.0dip" android:text="@string/mobile_security_footer" android:onClick="ShowMobileSecurity" style="@style/eli_footer" />
+        <TextView android:textSize="14.0dip" android:id="@id/mobile_security_footer_divider" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="|" style="@style/eli_footer" />
+        <TextView android:textSize="12.0dip" android:id="@id/pattern_help_footer_link" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="@string/pattern_help_footer" android:layout_toRightOf="@id/mobile_security_footer_link" android:onClick="ShowPatternHelp" style="@style/eli_footer" />
+    </LinearLayout>
+    <TextView android:id="@id/footer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/mobile_security_info_footer" style="@style/eli_footer" />
+    <TextView android:id="@id/footer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/contact_footer" style="@style/eli_footer" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/search_fragment_container" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.moments.ui.titlebar.SyncTitleBar android:id="@id/sync_titlebar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.facebook.widget.listview.BetterListView android:id="@id/search_listview" android:paddingTop="@dimen/search_result_list_top_padding" android:paddingBottom="@dimen/search_result_list_top_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/press_state_background" android:divider="@null" />
+        <com.facebook.resources.ui.FbTextView android:textSize="14.0sp" android:textColor="@color/search_result_header" android:gravity="center" android:id="@id/search_listview_emptyview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="40.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="40.0dip" android:text="@string/search_result_empty_string" />
+        <include android:id="@id/search_fragment_empty_view" layout="@layout/search_fragment_empty_view" />
+    </FrameLayout>
+</LinearLayout>

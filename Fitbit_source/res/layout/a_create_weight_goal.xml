@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/light_grey_panel_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/txt_weight_objective" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/starting_weight_was" style="@style/PlanHeader" />
+    <ScrollView android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/insetwhite_bg" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/txt_current_weight_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginBottom="8.0dip" android:text="@string/current_weight_caps" style="@style/GrayTitle" />
+                <com.fitbit.customui.WeightPicker android:id="@id/weight_picker_current" android:nextFocusDown="@id/weight_picker_desired" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/txt_desired_weight_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/desired_weight_caps" style="@style/GrayTitle" />
+                <com.fitbit.customui.WeightPicker android:id="@id/weight_picker_desired" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView android:gravity="center_horizontal" android:id="@id/txt_hint" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/hint_set_yourself_up_for_success_with_achievable_short_term_goal" style="@style/TotalCalories" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/btn_next" android:background="@drawable/btn_rounded_pink" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/next" style="@style/LogButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

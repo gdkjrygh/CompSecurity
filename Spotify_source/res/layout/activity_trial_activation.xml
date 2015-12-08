@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:background="?pasteDialogBackground" android:layout_width="fill_parent" android:layout_height="350.0dip" app:maxWidth="340.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/activating_trial_bg" android:scaleType="centerCrop" />
+    <com.spotify.mobile.android.ui.view.BoundedLinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="26.0sp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="top|center" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginBottom="5.0dip" android:text="@string/trial_activation_title" android:layout_weight="1.0" />
+        <TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_margin="5.0dip" android:text="@string/trial_activation_explanation" android:layout_weight="1.0" />
+        <ProgressBar android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_margin="5.0dip" android:layout_weight="1.0" />
+        <FrameLayout android:layout_gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <Button android:layout_gravity="center" android:id="@id/continue_in_background_trial_activation_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/trial_activation_continue_later_button" style="?pasteButtonStylePrimary" />
+        </FrameLayout>
+    </com.spotify.mobile.android.ui.view.BoundedLinearLayout>
+</FrameLayout>

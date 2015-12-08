@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/content" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textColor="@color/white" android:gravity="center" android:id="@id/btnFirmwareUpdate" android:background="@color/pink" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/tracker_details_update_banner_height" android:text="@string/label_update_available" android:textAllCaps="false" style="@style/DeviceSettingsUpdateRequiredBannerTextStyle" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/i_device_with_multiple_devices_support_no_spinner" />
+            <include android:id="@id/sync_header" layout="@layout/i_list_view_header_view" />
+            <LinearLayout android:orientation="vertical" android:id="@id/lastSyncTimePanel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/l_tracker_details_last_sync" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/forceSyncPanel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:id="@id/cellForceSync" layout="@layout/l_tracker_details_force_sync" />
+                <include android:id="@id/cellBackgroundSync" layout="@layout/l_tracker_details_background_sync" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/trackerSettings" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:id="@id/general_settings_header_view" layout="@layout/i_list_view_header_view" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/guidePanel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:id="@id/device_guide_header" layout="@layout/i_list_view_header_view" />
+                <include layout="@layout/l_tracker_details_guide" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/musicControlSupportedPanel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:background="@color/white" android:layout_width="fill_parent" android:layout_height="15.0dip" />
+                <include layout="@layout/l_tracker_details_music_control_supported" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

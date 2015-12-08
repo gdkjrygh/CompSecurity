@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/zoomlayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/horizontal_scroll_view_id_01" android:layout_alignParentLeft="true">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/closeProductZoomButton" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_margin="5.0dip" android:src="@drawable/close_black" android:scaleType="centerInside" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+            <FrameLayout android:id="@id/carousel" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/closeProductZoomButton">
+                <com.jcp.views.ExtendedViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <RelativeLayout android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/shareProductZoomButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:src="@drawable/ic_action_share" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+                    <com.jcp.views.CarouselPageIndicator android:id="@id/pageindicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+            </FrameLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <HorizontalScrollView android:id="@id/horizontal_scroll_view_id_01" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

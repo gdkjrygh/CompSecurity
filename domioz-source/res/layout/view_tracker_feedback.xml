@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/feedback" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/divider2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/feedbackDisplay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/feedbackHeader">
+        <LinearLayout android:orientation="vertical" android:id="@id/preFeedback" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/preRatings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/text_grey" android:gravity="center" android:id="@id/shoutout_thanks_textview" android:background="#00000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pizza_tracker_shoutout_thanks" android:singleLine="false" style="@style/FormEditText" />
+            <Spinner android:id="@id/shout_out" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/div" android:background="@color/text_grey" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <RelativeLayout android:id="@id/postFeedback" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/text_grey" android:id="@id/postFeedbackTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/post_feedback_title" android:layout_alignParentTop="true" />
+            <LinearLayout android:orientation="vertical" android:id="@id/feedbackQuestionContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/postFeedbackTitle" />
+            <EditText android:gravity="top|left|center" android:id="@id/adviceEdit" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:maxLines="3" android:lines="3" android:layout_below="@id/adviceTitle" android:inputType="textMultiLine" android:imeOptions="actionDone" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/text_grey" android:id="@id/adviceTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/feedback_advice_hint" android:layout_below="@id/feedbackQuestionContainer" />
+            <Button android:id="@id/send_comment" android:background="@drawable/btn_red" android:clickable="true" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginBottom="3.0dip" android:text="@string/btn_send" android:layout_below="@id/adviceEdit" android:layout_centerHorizontal="true" style="@style/ButtonStyle" />
+            <LinearLayout android:orientation="vertical" android:id="@id/feedbackRatings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/postFeedbackTitle" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/text_grey" android:gravity="center" android:id="@id/commentThanks" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/comment_thanks" android:layout_below="@id/feedbackQuestionContainer" style="@style/FormEditText" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/feedbackHeader" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="expandFeedback">
+        <TextView android:textColor="@color/text_grey" android:id="@id/giveFeedbackLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/give_feedback" />
+        <LinearLayout android:orientation="vertical" android:id="@id/underline" android:background="@color/text_grey" android:layout_width="wrap_content" android:layout_height="1.0px" android:layout_below="@id/giveFeedbackLabel" android:layout_alignLeft="@id/giveFeedbackLabel" android:layout_alignRight="@id/giveFeedbackLabel" />
+        <TextView android:textSize="18.0sp" android:typeface="normal" android:textStyle="bold" android:textColor="@color/text_grey" android:gravity="center_vertical" android:id="@id/caret" android:layout_width="wrap_content" android:layout_height="20.0dip" android:text="@string/greater_than" android:layout_alignTop="@id/giveFeedbackLabel" android:layout_alignBottom="@id/giveFeedbackLabel" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>

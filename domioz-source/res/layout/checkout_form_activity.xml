@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/home_root" android:background="@drawable/appbkgr" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/header" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <include android:id="@id/titleBar" layout="@layout/bar_blue" />
+        <ImageButton android:id="@id/home_button" android:src="@drawable/ic_title_home" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/main_home_description" style="@style/TitleBarAction" />
+        <ImageView android:id="@id/checkout_title_divider" android:layout_toRightOf="@id/home_button" android:layout_alignBaseline="@id/home_button" style="@style/TitleBarSeparator" />
+        <TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/checkout_form_title" android:layout_centerInParent="true" style="@style/TopShadow" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/checkout_form_subheader" android:background="#ffffffff" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/header">
+        <TextView android:textColor="@color/black" android:gravity="center_horizontal" android:id="@id/loyaltyCheckoutSuccessBanner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/checkout_loyalty_success_banner" style="@style/CheckoutSubHeaderText" />
+        <TextView android:textStyle="bold" android:textColor="@color/black" android:id="@id/order_total_static" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@id/loyaltyCheckoutSuccessBanner" android:layout_centerHorizontal="true" style="@style/CheckoutSubHeaderText" />
+        <TextView android:textStyle="bold" android:textColor="@color/black" android:id="@id/balance_due" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@id/order_total_static" android:layout_centerHorizontal="true" style="@style/CheckoutSubHeaderText" />
+        <TextView android:textColor="@color/black" android:id="@id/checkout_form_address" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@id/balance_due" android:layout_centerHorizontal="true" style="@style/CheckoutSubHeaderText" />
+        <TextView android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:id="@id/loyaltyTotalPointsEarnedMessage" android:paddingBottom="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/checkout_form_address" android:layout_centerHorizontal="true" style="@style/CheckoutSubHeaderText" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/header" />
+    <FrameLayout android:id="@id/login_button_fragment_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_login" android:layout_marginBottom="2.0dip" android:layout_below="@id/checkout_form_subheader" />
+    <ScrollView android:id="@id/ScrollView01" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/login_button_fragment_container">
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/padding_checkout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/personal_info_fragment_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:id="@id/createProfileSection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/checkout_item_spacing" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/giftCardSection" android:background="@drawable/login_table_border" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/checkout_item_spacing" android:onClick="addGiftCard">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/giftCardFields" android:background="@drawable/bg_card" android:padding="1.0dip" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:id="@id/gift_card_section" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textStyle="bold" android:textColor="@color/text_grey" android:id="@id/apply_gift_card_text" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/CheckoutTableText" />
+                        <ImageView android:id="@id/bracket2" android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/bracket" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                        <TextView android:textStyle="bold" android:textColor="@color/text_grey" android:id="@id/gift_card_amount" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toLeftOf="@id/bracket2" android:layout_centerVertical="true" style="@style/CheckoutTableText" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/paymentSection" android:background="@drawable/iphone_table_single" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/checkout_item_spacing" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/easyOrderSection" android:background="@drawable/login_table_border" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/checkout_item_spacing">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/easyOrderFields" android:background="@drawable/bg_card" android:padding="1.0dip" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_card" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <TextView android:textStyle="bold" android:textColor="@color/text_grey" android:id="@id/easy_order_text" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/easy_order_text" android:maxLines="2" android:layout_toLeftOf="@id/easyOrderHelpButton" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/CheckoutTableText" />
+                            <ImageButton android:id="@id/easyOrderHelpButton" android:background="#00000000" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginRight="70.0dip" android:src="@drawable/ic_question_mark" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_toLeftOf="@id/easy_order_checkbox" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                            <CheckBox android:id="@id/easy_order_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/easy_order_divider" android:visibility="gone" style="@style/UserAccountLineDivider" />
+                    <LinearLayout android:orientation="horizontal" android:id="@id/easy_order_nickname_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0sp" android:layout_width="75.0dip" android:text="@string/easy_order_nickname_label" style="@style/UserAccountHintBlock" />
+                        <EditText android:id="@id/nicknameEntry" android:background="@drawable/table_button_middle" android:hint="@string/optional" android:maxLength="20" android:inputType="text" android:imeOptions="actionDone|flagNoExtractUi" style="@style/TableStyle" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <include layout="@layout/email_opt_in_layout" />
+            <LinearLayout android:gravity="left" android:orientation="vertical" android:id="@id/footer_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/checkout_item_spacing">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/text_grey" android:gravity="center" android:id="@id/footer_message" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/checkout_footer" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/checkout_button_container1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/checkout_item_spacing">
+                <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <Button android:textSize="25.0sp" android:id="@id/placeOrder" android:background="@drawable/btn_red" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="@string/checkout_form_place_order" android:layout_alignParentRight="true" style="@style/ButtonStyle" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/footerContainerLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/text_grey" android:gravity="center_horizontal" android:id="@id/lblTermsOfUse" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:onClick="displayTerms" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/footer_container_secure_trans" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/footer_title_wrapper_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/secure_transaction_image" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/secure_transaction" />
+                    <TextView android:textStyle="bold" android:textColor="@color/text_grey" android:id="@id/secure_transaction_text" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/secure_transaction" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

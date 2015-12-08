@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/seed_list_row" android:background="@drawable/list_item_selector" android:paddingLeft="8.0dip" android:paddingBottom="2.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="@dimen/station_personalization_seeds_list_item_height">
+        <com.pandora.android.view.SafeImageView android:gravity="left" android:id="@id/media_album_art" android:layout_width="@dimen/station_album_art_size" android:layout_height="@dimen/station_album_art_size" android:src="@drawable/empty_art" android:scaleType="centerCrop" android:contentDescription="@string/cd_album_art" />
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_weight="1.0">
+            <ImageButton android:id="@id/overflowBtn" android:background="@null" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/abc_ic_menu_moreoverflow_normal_holo_light" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/cd_station_options" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/overflowBtn">
+                <TextView android:ellipsize="end" android:id="@id/song_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/StationPersonalizationStyle.TextAppearence.SongName" />
+                <TextView android:ellipsize="end" android:id="@id/artist_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/StationPersonalizationStyle.TextAppearence.ArtistName" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.gms.games.server.api;
+
+import com.google.android.gms.common.server.response.FastMapJsonResponse;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public final class QuestContribution extends FastMapJsonResponse
+{
+
+    private static final TreeMap sFields;
+
+    public QuestContribution()
+    {
+    }
+
+    public final Map getFieldMappings()
+    {
+        return sFields;
+    }
+
+    public final Long getValue()
+    {
+        return (Long)super.mValues.get("value");
+    }
+
+    static 
+    {
+        TreeMap treemap = new TreeMap();
+        sFields = treemap;
+        treemap.put("formattedValue", com.google.android.gms.common.server.response.FastJsonResponse.Field.forString("formattedValue"));
+        sFields.put("value", com.google.android.gms.common.server.response.FastJsonResponse.Field.forLong("value"));
+    }
+}

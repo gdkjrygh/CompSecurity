@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="left" android:orientation="vertical" android:id="@id/low_cal" android:paddingTop="@dimen/added_food_log_slider_labels_padding" android:paddingRight="@dimen/added_food_log_slider_labels_padding" android:paddingBottom="@dimen/added_food_log_slider_labels_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <TextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/slider_low_cal_label" />
+        <TextView android:id="@id/low_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="88,888" />
+    </LinearLayout>
+    <LinearLayout android:gravity="right" android:orientation="vertical" android:id="@id/high_cal" android:paddingLeft="@dimen/added_food_log_slider_labels_padding" android:paddingTop="@dimen/added_food_log_slider_labels_padding" android:paddingBottom="@dimen/added_food_log_slider_labels_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+        <TextView android:textStyle="bold" android:gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/slider_high_cal_label" />
+        <TextView android:id="@id/high_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="88,888" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/common_cal" android:padding="@dimen/added_food_log_slider_labels_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/high_cal" android:layout_toRightOf="@id/low_cal" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+        <TextView android:textStyle="bold" android:textColor="@color/food_log_slider_color" android:gravity="center" android:id="@id/common_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/slider_common_cal_label" />
+        <TextView android:textColor="@color/food_log_slider_color" android:gravity="center" android:id="@id/common_txt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="88,888 cals" />
+    </LinearLayout>
+    <SeekBar android:id="@id/seek_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:thumb="@drawable/slider_thumb" android:layout_below="@id/low_cal" />
+</RelativeLayout>

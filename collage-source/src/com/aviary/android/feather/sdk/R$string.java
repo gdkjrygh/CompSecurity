@@ -1,0 +1,187 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.aviary.android.feather.sdk;
+
+
+// Referenced classes of package com.aviary.android.feather.sdk:
+//            R
+
+public static final class 
+{
+
+    public static final int aviary_meme_font = 0x7f07030f;
+    public static final int aviary_overlay_blemish_text1_position = 0x7f070310;
+    public static final int aviary_overlay_blemish_text2_position = 0x7f070311;
+    public static final int aviary_overlay_default_text_align = 0x7f070312;
+    public static final int aviary_overlay_stickers_text_position = 0x7f0702cc;
+    public static final int aviary_passport = 0x7f070101;
+    public static final int aviary_subscription_tier1_description = 0x7f070102;
+    public static final int aviary_subscription_tier2_description = 0x7f070103;
+    public static final int confirm_quit_message = 0x7f070046;
+    public static final int feather_about_dialog_message = 0x7f070146;
+    public static final int feather_acc_a_sticker = 0x7f070147;
+    public static final int feather_acc_color = 0x7f070148;
+    public static final int feather_acc_decrease_value = 0x7f070149;
+    public static final int feather_acc_flip_h = 0x7f07014a;
+    public static final int feather_acc_flip_v = 0x7f07014b;
+    public static final int feather_acc_increase_value = 0x7f07014c;
+    public static final int feather_acc_lens_toggle = 0x7f07014d;
+    public static final int feather_acc_rotate_ccw = 0x7f07014e;
+    public static final int feather_acc_rotate_cw = 0x7f07014f;
+    public static final int feather_acc_size = 0x7f070150;
+    public static final int feather_activity_not_found = 0x7f070047;
+    public static final int feather_adjust = 0x7f070048;
+    public static final int feather_an_error_occurred = 0x7f070151;
+    public static final int feather_apply = 0x7f070049;
+    public static final int feather_attention = 0x7f07004a;
+    public static final int feather_blemish = 0x7f07004b;
+    public static final int feather_blemish_tool_tip = 0x7f070152;
+    public static final int feather_blur = 0x7f07004c;
+    public static final int feather_borders = 0x7f07004d;
+    public static final int feather_borders_dialog_first_time = 0x7f070153;
+    public static final int feather_brightness = 0x7f07004e;
+    public static final int feather_cancel = 0x7f07004f;
+    public static final int feather_circle = 0x7f070154;
+    public static final int feather_close = 0x7f070050;
+    public static final int feather_colorfix = 0x7f070155;
+    public static final int feather_colorsplash_eraser = 0x7f070156;
+    public static final int feather_colorsplash_free = 0x7f070157;
+    public static final int feather_colorsplash_smart = 0x7f070158;
+    public static final int feather_confirm = 0x7f070051;
+    public static final int feather_contrast = 0x7f070052;
+    public static final int feather_crop = 0x7f070053;
+    public static final int feather_custom = 0x7f070054;
+    public static final int feather_delete = 0x7f070055;
+    public static final int feather_details = 0x7f0700d1;
+    public static final int feather_download = 0x7f070159;
+    public static final int feather_download_start_failed = 0x7f07015a;
+    public static final int feather_draw = 0x7f070056;
+    public static final int feather_edit_bottom_text = 0x7f070057;
+    public static final int feather_edit_top_text = 0x7f070058;
+    public static final int feather_edit_your_photo = 0x7f070059;
+    public static final int feather_effect_loading_message = 0x7f07005a;
+    public static final int feather_effects = 0x7f07005b;
+    public static final int feather_enhance = 0x7f07005c;
+    public static final int feather_enhance_effect_food = 0x7f07015b;
+    public static final int feather_enhance_effect_night = 0x7f07015c;
+    public static final int feather_enhance_effect_portrait = 0x7f07015d;
+    public static final int feather_enhance_effect_scenery = 0x7f07015e;
+    public static final int feather_enter_text_here = 0x7f07005d;
+    public static final int feather_error_download_image_message = 0x7f07005e;
+    public static final int feather_error_saving_image = 0x7f07005f;
+    public static final int feather_featured = 0x7f07015f;
+    public static final int feather_feedback = 0x7f070160;
+    public static final int feather_feedback_dialog_message = 0x7f070161;
+    public static final int feather_filters = 0x7f070162;
+    public static final int feather_flip = 0x7f070060;
+    public static final int feather_generic_error_title = 0x7f070061;
+    public static final int feather_get_more = 0x7f070163;
+    public static final int feather_hidef = 0x7f070164;
+    public static final int feather_iap_download = 0x7f070165;
+    public static final int feather_iap_download_failed = 0x7f070166;
+    public static final int feather_iap_failed_download_informations = 0x7f070167;
+    public static final int feather_iap_failed_download_previews = 0x7f070168;
+    public static final int feather_iap_install = 0x7f070169;
+    public static final int feather_iap_installing = 0x7f07016a;
+    public static final int feather_iap_notification_installed_summary = 0x7f07016b;
+    public static final int feather_iap_owned = 0x7f07016c;
+    public static final int feather_iap_pack_installed = 0x7f07016d;
+    public static final int feather_iap_restore = 0x7f07016e;
+    public static final int feather_iap_restore_all = 0x7f07016f;
+    public static final int feather_iap_restore_all_failed = 0x7f070170;
+    public static final int feather_iap_restore_all_in_progress = 0x7f070171;
+    public static final int feather_iap_restore_all_summary = 0x7f070172;
+    public static final int feather_iap_retry = 0x7f070173;
+    public static final int feather_iap_subscription_banner_text = 0x7f070174;
+    public static final int feather_iap_unavailable = 0x7f070175;
+    public static final int feather_iap_uninstall = 0x7f070176;
+    public static final int feather_illuminate = 0x7f070177;
+    public static final int feather_infoscreen_bottom_button = 0x7f070062;
+    public static final int feather_item_not_found = 0x7f070178;
+    public static final int feather_keep_editing = 0x7f070063;
+    public static final int feather_loading_image = 0x7f070064;
+    public static final int feather_loading_title = 0x7f070065;
+    public static final int feather_meme = 0x7f070066;
+    public static final int feather_message_button_no = 0x7f070179;
+    public static final int feather_message_button_yes = 0x7f07017a;
+    public static final int feather_my_account = 0x7f07017b;
+    public static final int feather_new_stickers = 0x7f07017c;
+    public static final int feather_notification_n_items_cant_be_restored = 0x7f07017d;
+    public static final int feather_notification_no_items_to_restore = 0x7f07017e;
+    public static final int feather_notification_plugins_installed_count = 0x7f07017f;
+    public static final int feather_notification_plus_more = 0x7f070180;
+    public static final int feather_notification_restore_all_completed = 0x7f070181;
+    public static final int feather_notification_some_items_cant_be_restored = 0x7f070182;
+    public static final int feather_original = 0x7f070067;
+    public static final int feather_overlay_blemish_close_text = 0x7f070183;
+    public static final int feather_overlay_blemish_close_title = 0x7f070184;
+    public static final int feather_overlay_blemish_tap_text = 0x7f0702c7;
+    public static final int feather_overlay_stickers_text = 0x7f0702c8;
+    public static final int feather_overlay_tap_title = 0x7f0702c9;
+    public static final int feather_overlay_zoom_text = 0x7f0702ca;
+    public static final int feather_overlay_zoom_title = 0x7f0702cb;
+    public static final int feather_passport = 0x7f070185;
+    public static final int feather_please_try_again_later = 0x7f070186;
+    public static final int feather_powered_by_aviary = 0x7f070068;
+    public static final int feather_rectangle = 0x7f070187;
+    public static final int feather_red_eye = 0x7f070069;
+    public static final int feather_refresh = 0x7f070188;
+    public static final int feather_restore_all_request_sent = 0x7f070189;
+    public static final int feather_restore_original = 0x7f07018a;
+    public static final int feather_revert_dialog_message = 0x7f07006a;
+    public static final int feather_revert_dialog_title = 0x7f07006b;
+    public static final int feather_rotate = 0x7f07006c;
+    public static final int feather_saturation = 0x7f07006d;
+    public static final int feather_save = 0x7f07006e;
+    public static final int feather_save_progress = 0x7f07006f;
+    public static final int feather_see_more = 0x7f07018b;
+    public static final int feather_send_feedback = 0x7f07018c;
+    public static final int feather_settings_join_beta_description = 0x7f07018d;
+    public static final int feather_settings_join_beta_title = 0x7f07018e;
+    public static final int feather_shapes = 0x7f07018f;
+    public static final int feather_sharpen = 0x7f070070;
+    public static final int feather_square = 0x7f070071;
+    public static final int feather_stickers = 0x7f070072;
+    public static final int feather_stickers_dialog_first_time = 0x7f070190;
+    public static final int feather_store_ask_uninstall_free_body = 0x7f070191;
+    public static final int feather_store_checking_additional_packs = 0x7f070192;
+    public static final int feather_store_connection_problem = 0x7f070193;
+    public static final int feather_store_monthly = 0x7f070194;
+    public static final int feather_store_my_stuff = 0x7f070195;
+    public static final int feather_store_passport_account_info = 0x7f070196;
+    public static final int feather_store_passport_banner_text = 0x7f070197;
+    public static final int feather_store_passport_cancelled = 0x7f070198;
+    public static final int feather_store_passport_refunded = 0x7f070199;
+    public static final int feather_store_passport_status = 0x7f07019a;
+    public static final int feather_store_passport_subscribed = 0x7f07019b;
+    public static final int feather_store_passport_type = 0x7f07019c;
+    public static final int feather_store_passport_unknown = 0x7f07019d;
+    public static final int feather_store_passport_welcome_body = 0x7f07019e;
+    public static final int feather_store_passport_welcome_title = 0x7f07019f;
+    public static final int feather_store_purchase_date = 0x7f0701a0;
+    public static final int feather_store_title = 0x7f0701a1;
+    public static final int feather_store_unsubscribe = 0x7f0701a2;
+    public static final int feather_store_yearly = 0x7f0701a3;
+    public static final int feather_subscribe = 0x7f0701a4;
+    public static final int feather_text = 0x7f070073;
+    public static final int feather_tool = 0x7f070074;
+    public static final int feather_tool_colorsplash = 0x7f0701a5;
+    public static final int feather_tool_leave_question = 0x7f070075;
+    public static final int feather_tool_temperature = 0x7f070076;
+    public static final int feather_tool_tiltshift = 0x7f0700d2;
+    public static final int feather_try_again = 0x7f0701a6;
+    public static final int feather_unsaved_from_camera = 0x7f0701a7;
+    public static final int feather_version = 0x7f0701a8;
+    public static final int feather_warning = 0x7f0701a9;
+    public static final int feather_welcome_to_frames = 0x7f0701aa;
+    public static final int feather_welcome_to_stickers = 0x7f0701ab;
+    public static final int feather_whiten = 0x7f070077;
+    public static final int feather_yes_leave = 0x7f070078;
+    public static final int feather_zoom_mode = 0x7f070079;
+
+    public ()
+    {
+    }
+}

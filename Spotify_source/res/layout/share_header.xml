@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/share_header" android:layout_width="fill_parent" android:layout_height="@dimen/share_header_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/share_header_background_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <ImageView android:id="@id/share_header_image" android:layout_width="@dimen/share_header_image_size" android:layout_height="@dimen/share_header_image_size" android:layout_margin="@dimen/share_header_margin" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/share_header_margin" android:layout_marginRight="@dimen/share_header_margin" android:layout_marginBottom="@dimen/share_header_margin" android:layout_toRightOf="@id/share_header_image" android:layout_centerVertical="true">
+        <TextView android:textAppearance="?pasteTextAppearance" android:ellipsize="end" android:id="@id/share_header_title" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textAppearance="?pasteTextAppearanceSecondary" android:ellipsize="end" android:id="@id/share_header_subtitle" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+</RelativeLayout>

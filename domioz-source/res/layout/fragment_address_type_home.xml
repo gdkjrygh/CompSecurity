@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/addressTypeHomeStreetAddressContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeHomeStreetAddress" android:text="@string/form_street_address" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeHomeStreetAddressEntry" android:hint="@string/form_user_hint_required" android:maxLength="@integer/address_max_length" android:layout_toRightOf="@id/addressTypeHomeStreetAddress" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeHomeSuitAptContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeHomeSuitApt" android:text="@string/form_suit_apt_text" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeHomeSuitAptEntry" android:hint="@string/form_user_hint_optional" android:layout_toRightOf="@id/addressTypeHomeSuitApt" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeHomeCityContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeHomeCity" android:text="@string/city" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeHomeCityEntry" android:hint="@string/form_user_hint_required" android:layout_toRightOf="@id/addressTypeHomeCity" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeHomeStateContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeHomeState" android:text="@string/form_delivery_state" style="@style/AddressTypeTextStyle" />
+        <Spinner android:id="@id/addressTypeHomeStateSpinner" android:background="@color/bg_form_text" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" android:layout_marginLeft="@dimen/label_margin_left" android:layout_toRightOf="@id/addressTypeHomeState" android:layout_centerVertical="true" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeHomeZipContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeHomeZip" android:text="@string/form_zip_code_text" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeHomeZipEntry" android:hint="@string/form_user_hint_required" android:maxLength="@integer/address_zip_size" android:layout_toRightOf="@id/addressTypeHomeZip" android:inputType="number" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeHomeDeliveryInstContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeHomeDeliveryInst" android:text="@string/form_delivery_inst" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeHomeDeliveryInstEntry" android:hint="@string/form_user_hint_optional" android:singleLine="true" android:maxLength="@integer/address_delivery_inst_size" android:layout_toRightOf="@id/addressTypeHomeDeliveryInst" android:imeOptions="actionDone|flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+    </RelativeLayout>
+</LinearLayout>

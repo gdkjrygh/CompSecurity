@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <fragment android:name="com.google.android.apps.wallet.network.ui.NoInternetConnectionFragment" android:id="@id/NoInternetConnectionTile" android:tag="com.google.android.apps.wallet.ui.dashbaord.NoInternetConnectionFragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TabHost android:id="@android:id/tabhost" android:background="@color/primary" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TabWidget android:orientation="horizontal" android:id="@android:id/tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="none" />
+                <FrameLayout android:id="@android:id/tabcontent" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="0.0" />
+            </LinearLayout>
+        </TabHost>
+        <android.support.v4.view.ViewPager android:id="@id/WobListViewPager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <com.google.android.apps.wallet.widgets.actionbutton.FloatingActionButton android:layout_gravity="bottom|right|center" android:id="@id/SingleActionButton" android:visibility="gone" android:layout_width="@dimen/fab_diameter" android:layout_height="@dimen/fab_diameter" android:layout_marginRight="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing" android:src="@drawable/quantum_ic_add_white_24" />
+    <com.google.android.apps.wallet.widgets.actionbutton.FloatingActionButton android:layout_gravity="bottom|right|center" android:id="@id/MultiActionButton" android:visibility="gone" android:layout_width="@dimen/fab_diameter" android:layout_height="@dimen/fab_diameter" android:layout_marginRight="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing" android:src="@drawable/quantum_ic_add_white_24" />
+    <com.google.android.apps.wallet.widgets.actionbutton.ActionsContainer android:gravity="top|right|center" android:layout_gravity="top|right|center" android:orientation="vertical" android:id="@id/ActionsContainer" android:paddingRight="@dimen/default_spacing" android:visibility="invisible" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" wallet:actionButtonId="@id/MultiActionButton" />
+</FrameLayout>

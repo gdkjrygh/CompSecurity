@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:scrollbarStyle="outsideOverlay" android:id="@id/Wrapper" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_above="@id/DoneButton" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/Header" android:background="@color/primary" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/Icon" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:id="@id/Amount" style="@style/LargeTitle.Inverted" />
+            </LinearLayout>
+            <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout android:orientation="vertical" android:paddingTop="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/FailedClaimsContainer" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.google.android.apps.wallet.p2p.SenderRowView android:gravity="center_horizontal" android:id="@id/ErrorSendersContainer" android:paddingBottom="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" wallet:isLarge="true" />
+                    <TextView android:gravity="center_horizontal" android:id="@id/ErrorAmount" style="@style/AmountText.Bad" />
+                </LinearLayout>
+                <TextView android:id="@id/Headline" android:paddingTop="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" style="@style/Title.Splash" />
+                <TextView android:gravity="center_horizontal" android:id="@id/Body" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" style="@style/Body" />
+                <LinearLayout android:orientation="vertical" android:id="@id/WalletBalancePromoSection" android:paddingLeft="@dimen/default_spacing" android:paddingTop="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:gravity="center_horizontal" android:text="@string/claim_money_promo" style="@style/Body" />
+                    <ImageView android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/img_claim_promo_walletcard_color_88dp" />
+                    <TextView android:gravity="center_horizontal" android:id="@id/WalletCardPromoLink" android:text="@string/claim_money_wallet_card_promo_headline" style="@style/Title" />
+                    <TextView android:gravity="center_horizontal" android:paddingBottom="@dimen/narrow_spacing" android:text="@string/claim_money_wallet_card_promo_body" style="@style/Body" />
+                    <ImageView android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/img_claim_p2p_color_88dp" />
+                    <TextView android:gravity="center_horizontal" android:id="@id/SendMoneyPromoLink" android:text="@string/claim_money_send_money_promo_headline" style="@style/Title" />
+                    <TextView android:gravity="center_horizontal" android:paddingBottom="@dimen/narrow_spacing" android:text="@string/claim_money_send_money_promo_body" style="@style/Body" />
+                    <ImageView android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/img_claim_promo_play_color_96x63dp" />
+                    <TextView android:gravity="center_horizontal" android:id="@id/PlayPromoLink" android:text="@string/claim_money_play_promo_headline" style="@style/Title" />
+                    <TextView android:gravity="center_horizontal" android:text="@string/claim_money_play_promo_body" style="@style/Body" />
+                </LinearLayout>
+            </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/DoneButton" android:text="@string/button_ok" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+</RelativeLayout>

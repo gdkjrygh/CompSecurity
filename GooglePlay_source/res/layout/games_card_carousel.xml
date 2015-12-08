@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingTop="@dimen/games_carousel_section_padding_top" android:paddingBottom="@dimen/games_carousel_section_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.gms.common.images.internal.LoadingImageView android:id="@id/carousel_background" android:layout_width="fill_parent" android:layout_height="@dimen/games_carousel_bg_height" android:scaleType="centerCrop" android:layout_alignParentTop="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/carousel_header_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+            <TextView android:gravity="left|center" android:id="@id/carousel_title" android:layout_width="wrap_content" android:layout_height="@dimen/games_carousel_header_height" android:layout_marginLeft="@dimen/games_carousel_header_margin_left" style="@style/Games.CarouselHeader" />
+        </LinearLayout>
+        <com.google.android.gms.games.ui.appcontent.CarouselViewPager android:layout_gravity="center_horizontal" android:id="@id/carousel_pager" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/carousel_header_container" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/product_creation_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ly.kite.widget.EditableImageContainerFrame android:id="@id/editable_consumer_image_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:layout_weight="1.0" />
+        <FrameLayout android:padding="@dimen/cta_button_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0">
+            <ly.kite.widget.CustomTypefaceButton android:layout_gravity="bottom|left|center" android:id="@id/cancel_button" android:visibility="gone" style="@style/KiteSDKCTAButton.Offset" />
+            <ly.kite.widget.CustomTypefaceButton android:layout_gravity="bottom|right|center" android:id="@id/confirm_button" style="@style/KiteSDKCTAButton.Offset" />
+        </FrameLayout>
+    </LinearLayout>
+    <ly.kite.widget.PromptTextFrame android:id="@id/prompt_text_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:promptText="@string/edit_image_prompt_text" />
+</FrameLayout>

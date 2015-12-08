@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/titleBar" style="@style/TitleBarRed">
+        <include android:id="@id/titleBarBackground" layout="@layout/bar_blue" />
+        <TextView android:id="@id/titleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/TitleBarText" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/scroller" android:background="@drawable/welcome_header_bg" android:paddingLeft="15.0dip" android:paddingTop="15.0dip" android:paddingRight="15.0dip" android:paddingBottom="15.0dip" android:scrollbars="none" android:fadingEdge="none" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_below="@id/titleBar">
+        <RelativeLayout android:id="@id/scrollViewOnlyChild" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:id="@id/login_confirm_message" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="15.0dip" android:text="@string/login_confirm_message" android:layout_centerHorizontal="true" style="@style/CheckoutTableText" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/fields" android:background="@drawable/iphone_table_single" android:layout_width="@dimen/tablet_max_width" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layout_below="@id/login_confirm_message" android:layout_centerHorizontal="true">
+                <LinearLayout android:id="@id/email_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="16.0sp" android:textColor="@color/hint_text_color" android:gravity="right" android:layout_gravity="center_vertical" android:layout_width="75.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/email" android:maxLines="2" />
+                    <EditText android:id="@id/emailEntry" android:background="#00000000" android:nextFocusLeft="@id/emailEntry" android:nextFocusUp="@id/emailEntry" android:nextFocusDown="@id/passwordEntry" android:layout_height="@dimen/title_height" android:inputType="textEmailAddress" android:imeOptions="flagNoExtractUi" style="@style/UserAccountEditTextBlock" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/field_divider" style="@style/UserAccountLineDivider" />
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="16.0sp" android:layout_width="75.0dip" android:text="@string/login_password_hint" style="@style/UserAccountHintBlock" />
+                    <EditText android:id="@id/passwordEntry" android:background="#00000000" android:layout_height="@dimen/title_height" android:inputType="textPassword" android:imeOptions="actionDone|flagNoExtractUi" style="@style/UserAccountEditTextBlock" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/remember_me_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/fields">
+                <CheckBox android:id="@id/remember_me_checkbox" android:nextFocusDown="@id/loginButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+                <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:id="@id/remember_me_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/remember_me_label" style="@style/CheckoutTableText" />
+                <ImageButton android:id="@id/remember_me_help_button" android:background="#00000000" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/ic_question_mark" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+            </LinearLayout>
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/text_grey" android:gravity="center_horizontal" android:id="@id/remember_me_benefit_text" android:layout_width="@dimen/tablet_max_width" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:text="@string/remember_me_benefit_text" android:layout_below="@id/remember_me_layout" android:layout_centerHorizontal="true" />
+            <RelativeLayout android:id="@id/loginBlock" android:layout_width="@dimen/tablet_max_width" android:layout_height="45.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:layout_below="@id/remember_me_benefit_text" android:layout_centerHorizontal="true">
+                <Button android:textSize="20.0sp" android:textStyle="bold" android:id="@id/loginButton" android:background="@drawable/btn_red" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/sign_in" android:onClick="onSignInClick" style="@style/ButtonStyle" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/forgotPasswordBlock" android:layout_width="@dimen/tablet_max_width" android:layout_height="30.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:layout_below="@id/loginBlock" android:layout_centerHorizontal="true">
+                <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:gravity="left" android:id="@id/forgot_pw" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/forgot_your_password" />
+                <TextView android:textSize="14.0sp" android:textColor="#ff0000ff" android:gravity="right" android:id="@id/reset_password_link" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toRightOf="@id/forgot_pw" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/divider1" android:layout_marginTop="15.0dip" android:layout_below="@id/forgotPasswordBlock" style="@style/UserAccountLineDivider" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/sign_out_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_below="@id/divider1">
+                <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:gravity="right" android:id="@id/sign_out_name" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@id/sign_out_name" />
+                <TextView android:textSize="14.0sp" android:textColor="#ff0000ff" android:gravity="right" android:id="@id/sign_out_link" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:text="@string/sign_out_link_text" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/newProfileBlock" android:background="@drawable/iphone_table_single" android:layout_width="@dimen/tablet_max_width" android:layout_height="wrap_content" android:layout_margin="15.0dip" android:layout_below="@id/divider1" android:layout_centerHorizontal="true">
+                <TextView android:textSize="18.0sp" android:textColor="#ff000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:text="@string/dont_have_profile" />
+                <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:id="@id/newProfileNotesTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="10.0dip" android:text="@string/profile_notes" />
+                <Button android:textSize="16.0sp" android:textStyle="bold" android:id="@id/registerButton" android:background="@drawable/btn_red" android:layout_width="200.0dip" android:layout_height="35.0dip" android:layout_marginBottom="15.0dip" android:text="@string/create_new_profile" android:onClick="onCreateNewProfileClick" style="@style/ButtonStyle" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <FrameLayout android:id="@id/titleDropShadow" android:background="@drawable/black_fade_down_light" android:layout_width="fill_parent" android:layout_height="5.0dip" />
+</RelativeLayout>

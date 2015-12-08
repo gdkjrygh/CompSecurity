@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Last maintenance: " />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/last" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Period: " />
+        <EditText android:id="@id/interval" android:layout_width="0.0dip" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal">
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Days: " />
+        <EditText android:id="@id/days" android:layout_width="0.0dip" android:layout_height="wrap_content" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/btn_apply" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apply" />
+        <Button android:id="@id/btn_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Refresh" />
+    </LinearLayout>
+    <Button android:id="@id/btn_start_now" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Start Now" />
+</LinearLayout>

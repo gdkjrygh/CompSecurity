@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/content_view" android:background="@color/white" android:paddingLeft="@dimen/vertical_margin_step" android:paddingRight="@dimen/vertical_margin_step" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <include layout="@layout/i_device_with_multiple_devices_support_no_spinner" />
+                    <include android:id="@id/scale_name_header" layout="@layout/i_list_view_header_view" />
+                    <EditText android:id="@id/edtScaleName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/vertical_margin_step" android:lines="1" android:ems="10" android:singleLine="true" android:maxLength="15" android:layout_weight="1.0" android:inputType="textVisiblePassword|textNoSuggestions" android:imeOptions="actionDone" />
+                </LinearLayout>
+            </LinearLayout>
+            <include layout="@layout/i_list_view_header_view" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/vertical_margin_step_2x" android:layout_marginRight="@dimen/vertical_margin_step_2x">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/vertical_margin_step_2x">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/last_sync" style="@style/DeviceListItemTitleTextStyle" />
+                    <TextView android:id="@id/txtLastSync" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/segmented_progress_bar_half_gap" style="@style/DeviceListItemDescriptionTextStyle" />
+                </LinearLayout>
+                <View android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/vertical_margin_step_2x" />
+                <View android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/vertical_margin_step_2x" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/last_reading" style="@style/DeviceListItemTitleTextStyle" />
+                    <TextView android:id="@id/txtLastReading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/segmented_progress_bar_half_gap" style="@style/DeviceListItemDescriptionTextStyle" />
+                </LinearLayout>
+                <View android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/vertical_margin_step_2x" />
+                <View android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/vertical_margin_step_2x" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-3.0dip" android:text="@string/label_scale_units" style="@style/DeviceListItemTitleTextStyle" />
+                    <Spinner android:id="@id/spnScaleUnits" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include android:id="@id/blocker_view" layout="@layout/l_data_is_unavailable_view" />
+</FrameLayout>

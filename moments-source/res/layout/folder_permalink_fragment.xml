@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/folder_permalink_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.moments.ui.titlebar.SyncTitleBar android:id="@id/sync_titlebar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <FrameLayout android:orientation="vertical" android:background="@color/permalink_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.facebook.moments.ui.listview.SyncListView android:id="@id/sync_list_view" android:paddingLeft="@dimen/permalink_side_padding" android:paddingRight="@dimen/permalink_side_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.facebook.moments.ui.EmptyView android:id="@id/permalink_list_empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.facebook.moments.ui.permalink.AvatarContainer android:id="@id/avatar_container" android:background="@drawable/avatar_container" android:paddingLeft="@dimen/permalink_synced_people_side_padding" android:layout_width="fill_parent" android:layout_height="@dimen/permalink_synced_people_title_height" fb:hasInviteButton="true" />
+        </FrameLayout>
+    </LinearLayout>
+    <ImageButton android:layout_gravity="bottom|right|center" android:id="@id/add_photos_button" android:background="@drawable/floating_action_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/fab_margin" android:src="@drawable/add_photos_fab" android:scaleType="center" />
+    <com.facebook.moments.ui.affordancepill.AffordancePillView android:layout_gravity="bottom|center" android:id="@id/affordance_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/affordance_pill_margin" fb:hideDirection="bottom" fb:pillColor="@color/sync_primary_color" fb:pillText="@string/permalink_affordance_text" fb:pillDrawable="@drawable/arrow" fb:pillTextColor="@color/white" />
+    <com.facebook.moments.ui.bottomsheet.PhotoActionSheet android:id="@id/photo_action_sheet" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

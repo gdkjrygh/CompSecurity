@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/seenIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_alignTop="@id/userImage" android:layout_alignBottom="@id/userImage" android:layout_alignParentLeft="true" android:contentDescription="@string/inbox_content_description_seen_icon" />
+    <ImageView android:id="@id/userImage" android:layout_width="54.0dip" android:layout_height="54.0dip" android:layout_toRightOf="@id/seenIcon" android:layout_alignParentTop="true" android:contentDescription="@string/inbox_content_description_user_image" />
+    <LinearLayout android:orientation="vertical" android:id="@id/textContainer" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:layout_toLeftOf="@id/accessory" android:layout_toRightOf="@id/userImage" android:layout_alignParentTop="true">
+        <TextView android:id="@id/timestamp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip" android:singleLine="true" style="?pasteTextAppearanceMetadata" />
+        <TextView android:textColor="?pasteColorTextSecondary" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip" android:singleLine="true" style="?pasteTextAppearance" />
+        <TextView android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?pasteTextAppearanceSecondary" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/accessory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</merge>

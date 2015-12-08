@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="top" android:orientation="vertical" android:id="@id/save_address_to_profile_include" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/save_delivery_address_checkbox_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <CheckBox android:gravity="center" android:id="@id/save_delivery_address_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:id="@id/save_delivery_address_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/save_delivery_address_to_profile" style="@style/CheckoutTableText" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/nickname_layout" android:background="@drawable/bg_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/save_delivery_address_checkbox_layout">
+        <EditText android:textSize="@dimen/details_text_size" android:id="@id/nickname" android:background="@drawable/table_button_middle" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" android:maxLength="20" android:inputType="textCapWords" android:imeOptions="actionDone|flagNoExtractUi" style="@style/TableStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/make_this_primary_address_checkbox_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/nickname_layout" android:layout_alignLeft="@id/save_delivery_address_checkbox_layout">
+        <CheckBox android:id="@id/make_this_primary_address_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:id="@id/make_this_primary_address_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/make_this_primary_address" android:layout_toRightOf="@id/make_this_primary_address_checkbox" style="@style/CheckoutTableText" />
+    </LinearLayout>
+</RelativeLayout>

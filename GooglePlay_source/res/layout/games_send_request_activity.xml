@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/play_header_spacer" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <fragment android:id="@id/select_players_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.google.android.gms.games.ui.client.players.SelectPlayersFragment" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/item_container" android:background="#ff656565" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/games_send_request_item_container_height">
+            <TextView android:textSize="@dimen/games_send_request_item_name_font_size" android:textColor="@android:color/white" android:gravity="center_vertical" android:id="@id/item_name" android:paddingLeft="@dimen/games_send_request_item_name_left_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/send_button" android:paddingLeft="@dimen/games_send_request_send_button_padding" android:paddingRight="@dimen/games_send_request_send_button_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/item_icon_container" android:background="@drawable/games_tile_bg" android:layout_width="@dimen/games_send_request_item_icon_background_size" android:layout_height="@dimen/games_send_request_item_icon_background_size" android:layout_marginLeft="@dimen/games_send_request_item_icon_background_left_padding" android:layout_marginBottom="@dimen/games_send_request_item_icon_background_bottom_padding">
+            <com.google.android.gms.common.images.internal.LoadingImageView android:layout_gravity="center" android:id="@id/item_icon" android:layout_width="@dimen/games_send_request_item_icon_size" android:layout_height="@dimen/games_send_request_item_icon_size" />
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

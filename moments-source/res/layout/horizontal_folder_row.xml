@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/photo_row_title_height">
+        <com.facebook.drawee.fbpipeline.FbDraweeView android:layout_gravity="center_vertical" android:id="@id/round_image" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginLeft="13.0dip" android:layout_marginStart="13.0dip" fb:placeholderImage="@drawable/avatar_null" fb:placeholderImageScaleType="fitCenter" fb:actualImageScaleType="centerCrop" fb:roundAsCircle="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/photo_row_title_left_margin" android:layout_weight="1.0" android:layout_marginStart="@dimen/photo_row_title_left_margin">
+            <com.facebook.resources.ui.FbTextView android:layout_gravity="center_vertical" android:id="@id/folder_name" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/search_browse_category_title" />
+            <com.facebook.resources.ui.FbTextView android:ellipsize="end" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" style="@style/search_browse_category_subtitle" />
+        </LinearLayout>
+        <com.facebook.resources.ui.FbButton android:gravity="right|center" android:id="@id/see_all_button" android:background="@drawable/press_state_background" android:paddingLeft="@dimen/photo_row_button_padding_left_right" android:paddingRight="@dimen/photo_row_button_padding_left_right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/friends_folder_row_see_all" style="@style/search_browse_category_title_see_all" />
+    </LinearLayout>
+    <com.facebook.moments.ui.listview.PhotoRowRecyclerView android:orientation="horizontal" android:id="@id/photo_row_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

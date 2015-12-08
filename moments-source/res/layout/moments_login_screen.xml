@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/login_splash" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/login_logo1_splash" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/login_logo2_splash" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ScrollView android:id="@id/login_root" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="5.0" />
+            <include layout="@layout/login_private_instruction" />
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/login_main_group" android:paddingLeft="@dimen/sync_login_screen_side_padding" android:paddingRight="@dimen/sync_login_screen_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:addStatesFromChildren="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+                    <com.facebook.resources.ui.FbTextView android:textColorHint="@color/login_text_hint" android:ellipsize="end" android:gravity="left|center" android:id="@id/user_name" android:background="@drawable/login_edit_text_background" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/login_credential_text" />
+                    <com.facebook.resources.ui.FbAutoCompleteTextView android:textColorHint="@color/login_text_hint" android:gravity="left|center" android:id="@id/email" android:background="@drawable/login_edit_text_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/moments_login_screen_user_hint" android:singleLine="true" android:inputType="textNoSuggestions|textEmailAddress" android:imeOptions="actionNext" style="@style/login_credential_text" />
+                </LinearLayout>
+                <com.facebook.resources.ui.FbEditText android:textColorHint="@color/login_text_hint" android:gravity="left|center" android:id="@id/password" android:background="@drawable/login_edit_text_background" android:nextFocusRight="@id/login" android:nextFocusDown="@id/login" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/login_screen_password_hint" android:password="true" android:singleLine="true" android:inputType="textPassword" android:imeOptions="actionGo" style="@style/login_credential_text" />
+                <com.facebook.widget.text.BetterTextView android:layout_gravity="center" android:id="@id/login" android:background="@drawable/login_button" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/sync_login_button_height" android:layout_marginTop="@dimen/sync_login_button_margin_top" android:text="@string/login_button_text" style="@style/login_button_text" />
+            </LinearLayout>
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="5.0" />
+            <com.facebook.widget.FlowLayout android:gravity="center" android:orientation="horizontal" android:id="@id/login_bottom_group" android:paddingLeft="32.0dip" android:paddingTop="16.0dip" android:paddingRight="32.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/login_bottom_helper_links" />
+                <com.facebook.resources.ui.FbButton android:id="@id/signup" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/login_signup_button_text" android:layout_weight="1.0" style="@style/login_helper_link_text.large" />
+                <include layout="@layout/orca_login_help_button" />
+            </com.facebook.widget.FlowLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

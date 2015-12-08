@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="@string/serving_size" style="@style/GrayTitle" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.fitbit.ui.DecimalEditText android:id="@id/edit_serving_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/zero_num_sample_input" android:lines="1" android:singleLine="true" android:layout_toLeftOf="@id/spinner_serving_units" android:layout_alignParentLeft="true" android:layout_centerVertical="true" fitbit:filterDecimalSymbols="false" fitbit:imeOptionsForKindleFire="actionNone" fitbit:forceNextImeOption="true" />
+        <Spinner android:id="@id/spinner_serving_units" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

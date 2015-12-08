@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/ok" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:background="@color/primary" android:layout_width="fill_parent" android:layout_height="200.0dip">
+                <ImageView android:layout_gravity="center" android:id="@id/lockBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_id_meh_color_200x133dp" android:contentDescription="@null" />
+            </FrameLayout>
+            <TextView android:id="@id/title" android:paddingTop="20.0dip" android:text="@string/kyc_twostep_failed_title" style="@style/Title.Splash" />
+            <TextView android:id="@id/subtitle" android:paddingTop="0.0dip" android:text="@string/kyc_twostep_failed_subtitle" style="@style/Body.Splash.Subcopy" />
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/ok" android:background="@android:color/white" android:text="@string/kyc_twostep_use_license" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+</RelativeLayout>

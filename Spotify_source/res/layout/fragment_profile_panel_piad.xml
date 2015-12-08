@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:paste="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/premium_and_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/premium_destination_holder" android:paddingLeft="24.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <TextView android:textAppearance="@style/TextAppearance.Cat" android:layout_gravity="center_vertical" android:id="@id/go_premium_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/in_app_premium_destination_nav_title_go_premium" />
+            <TextView android:textAppearance="@style/TextAppearance.Cat.Secondary" android:layout_gravity="center_vertical" android:id="@id/go_premium_offer_text_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View android:id="@id/footer_separator" android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="8.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/navigation_cell_height" android:baselineAligned="false" android:layout_below="@id/premium_and_divider" android:layout_alignParentLeft="true">
+        <View android:layout_width="24.0dip" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/profile_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="left|center" android:id="@id/image" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+            <TextView android:textAppearance="@style/TextAppearance.Cat.Secondary" android:textColor="@color/cat_profile_panel" android:ellipsize="end" android:gravity="center" android:id="@id/username" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxLines="2" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/inbox_container" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="fill_parent" android:contentDescription="@string/profile_content_description_inbox">
+            <com.spotify.android.paste.widget.SpotifyIconView android:id="@id/inbox_icon" android:layout_width="18.0dip" android:layout_height="18.0dip" android:scaleType="centerCrop" android:layout_centerInParent="true" paste:iconColor="@color/cat_profile_panel" paste:iconType="icon_inbox_32" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/cat_grayscale_8" android:gravity="center" android:id="@id/unseen_messages" android:background="@drawable/profile_panel_badge_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="16.0dip" android:minHeight="16.0dip" android:layout_alignTop="@id/inbox_icon" android:layout_alignRight="@id/inbox_icon" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/notifications_container" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="fill_parent" android:contentDescription="@string/profile_content_description_notifications">
+            <com.spotify.android.paste.widget.SpotifyIconView android:id="@id/notifications_icon" android:layout_width="18.0dip" android:layout_height="18.0dip" android:scaleType="centerCrop" android:layout_centerInParent="true" paste:iconColor="@color/cat_profile_panel" paste:iconType="icon_notifications_32" />
+            <TextView android:textColor="@color/cat_grayscale_8" android:gravity="center" android:id="@id/unseen_notifications" android:background="@drawable/profile_panel_badge_background" android:visibility="gone" android:layout_width="7.0dip" android:layout_height="7.0dip" android:layout_alignTop="@id/notifications_icon" android:layout_alignRight="@id/notifications_icon" />
+        </RelativeLayout>
+        <FrameLayout android:id="@id/settings_container" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:contentDescription="@string/profile_content_description_settings">
+            <com.spotify.android.paste.widget.SpotifyIconView android:layout_gravity="center" android:layout_width="18.0dip" android:layout_height="18.0dip" android:scaleType="centerCrop" paste:iconColor="@color/cat_profile_panel" paste:iconType="icon_gears_32" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

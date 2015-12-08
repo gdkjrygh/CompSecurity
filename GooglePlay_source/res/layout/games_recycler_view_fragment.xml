@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/games_simple_list_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.SwipeRefreshLayout android:enabled="false" android:id="@id/swipe_refresh_widget" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView android:id="@android:id/list" android:paddingLeft="@dimen/games_onyx_list_edge_padding" android:paddingRight="@dimen/games_onyx_list_edge_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <include android:id="@id/empty_view" android:visibility="gone" layout="@layout/games_empty_view" />
+    <include android:id="@id/network_error_view" android:visibility="gone" layout="@layout/games_network_error_message" />
+    <include android:id="@id/generic_error_view" android:visibility="gone" layout="@layout/games_generic_error_view" />
+    <LinearLayout android:orientation="vertical" android:id="@id/loading_view" android:visibility="gone" style="@style/Games.LoadingViewContainer">
+        <ProgressBar android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleLarge" />
+    </LinearLayout>
+</FrameLayout>

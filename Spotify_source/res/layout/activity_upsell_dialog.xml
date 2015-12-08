@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.spotify.mobile.android.ui.view.BoundedLinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="?pasteDialogBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" paste:maxWidth="340.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:paste="http://schemas.android.com/apk/res-auto">
+        <FrameLayout android:background="@color/cat_black" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.spotify.mobile.android.ui.view.AutoScrollingViewPager android:id="@id/carousel" android:layout_width="fill_parent" android:layout_height="@dimen/upsell_dialog_carousel_max_height" />
+            <com.spotify.android.paste.widget.ViewPagerIndicator android:layout_gravity="bottom|center" android:id="@id/carousel_page_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" paste:indicatorInactiveColor="@color/cat_white" paste:indicatorActiveColor="@color/cat_light_green" />
+        </FrameLayout>
+        <Button android:ellipsize="none" android:gravity="center" android:id="@id/button_action" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?pasteButtonStylePrimary" />
+        <Button android:layout_gravity="center_horizontal" android:id="@id/button_later" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/upsell_dialog_button_later" style="?pasteButtonStyleInfo" />
+    </com.spotify.mobile.android.ui.view.BoundedLinearLayout>
+</ScrollView>

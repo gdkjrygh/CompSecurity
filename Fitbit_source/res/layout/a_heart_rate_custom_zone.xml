@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/main_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.fitbit.ui.FixedFocusScrollView android:id="@id/content_view" android:background="@color/main_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:background="@color/main_bg_color" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_heart_rate_zones" style="@style/HRCustomZoneText.Primary">
+                <requestFocus />
+            </TextView>
+            <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <include android:id="@id/cellCustomZoneGraph" layout="@layout/l_hr_custom_zone_graph" />
+            <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/detail_heart_rate_custom_zone" style="@style/HRCustomZoneText.Detail" />
+            <View android:background="@color/main_bg_color" android:layout_width="fill_parent" android:layout_height="20.0dip" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_heart_rate_custom_zone" style="@style/HRCustomZoneText.Primary" />
+            <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:orientation="vertical" android:background="@drawable/bg_cell" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:id="@id/cell_enable_custom_zone" layout="@layout/l_enable_hr_custom_zone" />
+                <TableLayout android:id="@id/cell_limits" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:stretchColumns="1" />
+            </LinearLayout>
+            <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <TextView android:paddingTop="48.0dip" android:paddingBottom="48.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hr_information" style="@style/HRCustomZoneText.Detail" />
+        </LinearLayout>
+    </com.fitbit.ui.FixedFocusScrollView>
+</FrameLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" style="@style/match">
+        <FrameLayout android:id="@id/video_img_group" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/video_details_image_views" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/video_details_indented_group" android:paddingLeft="@dimen/content_padding" android:paddingRight="@dimen/content_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textStyle="bold" android:ellipsize="end" android:id="@id/video_details_title" android:layout_marginTop="@dimen/details_content_padding" android:maxLines="2" style="@style/PrimaryText.Large" />
+            <include layout="@layout/video_details_info_layout" />
+            <include layout="@layout/video_details_text_descrip" />
+            <include layout="@layout/video_details_social_layout" />
+        </LinearLayout>
+        <ViewStub android:id="@id/video_details_sims_stub" android:layout="@layout/similar_items_grid_frag" style="@style/match" />
+    </LinearLayout>
+</merge>

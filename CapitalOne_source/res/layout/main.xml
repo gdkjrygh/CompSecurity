@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/bankRoot" android:background="@drawable/bankback" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:custom="http://schemas.android.com/apk/res/com.konylabs.capitalone">
+    <RelativeLayout android:id="@id/baseContainer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/menuContainer" android:visibility="invisible" android:layout_width="240.0dip" android:layout_height="fill_parent" android:layout_alignParentLeft="true" layout="@layout/menucontainer" />
+        <include android:id="@id/landingPage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" layout="@layout/homepage" />
+        <com.EnterpriseMobileBanking.AppRelContainer android:id="@id/relContainer" android:background="@drawable/bankback" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.EnterpriseMobileBanking.Plugins.Components.AppHeader android:id="@id/quicknav" android:background="@drawable/header_bg" android:layout_width="fill_parent" android:layout_height="@dimen/header_default_height" android:layout_alignParentTop="true" custom:navOption="menu" />
+            <LinearLayout android:id="@id/atm_tab_bar" android:background="@drawable/atm_tab_bg" android:paddingTop="6.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_below="@id/quicknav">
+                <Button android:textStyle="bold" android:id="@id/atm_bank_tab" android:background="@drawable/atm_tab_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="6.0dip" android:text="Capital One Bank" android:layout_weight="1.0" android:onClick="switchATM" />
+                <Button android:textStyle="bold" android:id="@id/atm_360_tab" android:background="@drawable/atm_tab_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:text="Capital One 360" android:layout_weight="1.0" android:onClick="switchATM" />
+            </LinearLayout>
+            <com.EnterpriseMobileBanking.Plugins.Components.AppWebView android:id="@id/appView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/atm_tab_bar" android:layout_alignParentBottom="true" />
+            <com.EnterpriseMobileBanking.Plugins.Components.TransiteWebView android:scrollbarStyle="insideOverlay" android:id="@id/transiteView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/atm_tab_bar" android:layout_alignParentBottom="true" android:fadeScrollbars="true" />
+            <include android:id="@id/contactus" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/quicknav" layout="@layout/contact_us" />
+        </com.EnterpriseMobileBanking.AppRelContainer>
+        <include android:id="@id/eula_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/eula" />
+        <ImageView android:id="@id/splashImage" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/splash" android:scaleType="fitXY" />
+        <View android:id="@id/Transition1" android:background="@color/darkblue" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+        <View android:id="@id/Transition2" android:background="@color/darkblue" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    </RelativeLayout>
+</LinearLayout>

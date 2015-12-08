@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.pandora.android" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727">
+    <uses-feature android:name="android.hardware.touchscreen" android:required="true"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ADD_SYSTEM_SERVICE"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.pandora.android.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.pandora.android.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" android:permissionGroup="android.permission-group.SYSTEM_TOOLS"/>
+    <permission android:name="com.pandora.android.permission.CONFIG_CONST" android:protectionLevel="signature"/>
+    <application android:allowBackup="true" android:icon="@mipmap/icon" android:label="@string/app_name" android:logo="@drawable/ic_pandora_with_spacing" android:name="com.pandora.android.PandoraApp" android:process="com.pandora.android" android:theme="@style/PandoraNoActionBarTheme">
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|fontScale" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.pandora.android.Main" android:theme="@style/PandoraNoActionBarTheme.Onboarding">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="pandora"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="pandorav2"/>
+                <data android:scheme="pandorav3"/>
+                <data android:scheme="pandorav4"/>
+                <data android:scheme="pandorav5"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:launchMode="singleTop" android:logo="@drawable/ic_pandora_clear_with_spacing" android:name="com.pandora.android.activity.NowPlaying" android:theme="@style/PandoraActionBarTheme.Blue.Translucent" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.pandora.station"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="StationPersonalization" android:name="com.pandora.android.personalization.StationPersonalizationActivity" android:theme="@style/PandoraActionBarTheme.Clear" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|fontScale" android:label="YuMeAdView" android:name="com.pandora.android.activity.YuMeVideoActivity" android:theme="@style/PandoraNoActionBarTheme"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.WelcomeActivity" android:theme="@style/PandoraNoActionBarTheme.Onboarding" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.SignUpActivity" android:theme="@style/PandoraNoActionBarTheme.Onboarding" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.ErrorStateActivity"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.ForgotPasswordActivity" android:theme="@style/PandoraNoActionBarTheme.Onboarding" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.PrivacyNoticeActivity" android:theme="@style/PandoraNoActionBarTheme.Onboarding"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|fontScale" android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.InAppLandingPageActivity" android:theme="@style/PandoraActionBarTheme"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|fontScale" android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.PandoraWebDialogActivity" android:theme="@style/PandoraWebViewDialogTheme"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|fontScale" android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.CapHitActivity" android:theme="@style/PandoraActionBarTheme"/>
+        <activity android:exported="false" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.pandora.android.activity.CapWarningActivity" android:theme="@style/PandoraWebDialogTheme"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|fontScale" android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.VideoAdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.pandora.android.activity.AndroidLinkActivity" android:theme="@style/PandoraActionBarTheme"/>
+        <activity android:exported="false" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.pandora.android.activity.PandoraLinkInterceptorActivity"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.PandoraLinkStatusActivity"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.AndroidLinkConnectActivity"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.AndroidLinkInterceptorActivity"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.InterstitialBaseActivity"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.InterstitialAdActivity"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.InterstitialAnnouncementActivity"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|fontScale" android:exported="false" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.pandora.android.activity.HomeTabsActivity" android:theme="@style/PandoraActionBarTheme.Clear" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|fontScale" android:exported="false" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.pandora.android.activity.HomeDrawerActivity" android:theme="@style/PandoraActionBarTheme.Clear" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|fontScale" android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.BackstageActivity" android:theme="@style/PandoraActionBarTheme.Clear"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.ModalPresenterActivity" android:theme="@style/PandoraTranslucentTheme" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.activity.CustomStationAlertActivity" android:theme="@style/PandoraActionBarTheme"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.pandora.android.tablet.TabletHome" android:theme="@style/PandoraActionBarTheme.TabletActionBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/app_name" android:name="com.pandora.android.activity.CreateStationApiActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/app_name" android:launchMode="singleInstance" android:name="com.pandora.android.activity.AlarmRingerActivity" android:noHistory="true" android:taskAffinity="" android:theme="@style/alarm_ringer_theme"/>
+        <provider android:authorities="com.pandora.android.provider" android:exported="false" android:name="com.pandora.android.provider.AppProvider"/>
+        <activity android:icon="@mipmap/icon" android:label="My Stations" android:name="com.pandora.android.activity.StationLiveFolderActivity" android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_LIVE_FOLDER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.pandora.android.activity.ListeningTimeoutActivity" android:theme="@style/PandoraDialogTheme.SemiTransparent"/>
+        <activity android:exported="false" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.pandora.android.activity.PandoraDialogActivity" android:theme="@style/PandoraDialogTheme"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|fontScale" android:exported="false" android:name="com.admarvel.android.ads.AdMarvelActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|fontScale" android:exported="false" android:name="com.admarvel.android.ads.AdMarvelVideoActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:exported="true" android:label="@string/daydream" android:name="com.pandora.android.daydream.SettingsActivity" android:theme="@style/PandoraActionBarTheme"/>
+        <activity android:name="com.facebook.LoginActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <receiver android:exported="true" android:name="com.pandora.android.gcm.GCMReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.pandora.android"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.pandora.android.push.PushNotificationProcessor"/>
+        <receiver android:name="com.pandora.android.push.PushFeedbackReceiver"/>
+        <service android:name="com.pandora.android.inbox.InboxNotificationProcessor"/>
+        <receiver android:exported="true" android:label="@string/app_name" android:name="com.pandora.android.widget.Widget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DELETED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_OPTIONS_CHANGED"/>
+                <action android:name="update_pandora_widget"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget"/>
+        </receiver>
+        <receiver android:exported="false" android:name="com.pandora.android.widget.RemoteBroadcastsReceiver">
+            <intent-filter>
+                <action android:name="cmd_widget_toggle_pause"/>
+                <action android:name="cmd_widget_thumbs_up"/>
+                <action android:name="cmd_widget_thumbs_down"/>
+                <action android:name="cmd_widget_skip"/>
+                <action android:name="cmd_widget_close"/>
+                <action android:name="cmd_widget_foreground_app"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.pandora.android.activity.MediaButtonBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.pandora.android.api.bluetooth.AutoStartReceiver">
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
+                <action android:name="android.media.ACTION_SCO_AUDIO_STATE_UPDATED"/>
+                <action android:name="android.bluetooth.intent.action.HEADSET_STATE_CHANGED"/>
+                <action android:name="android.bluetooth.headset.action.STATE_CHANGED"/>
+                <action android:name="android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.pandora.android.hap.HapBindReceiver">
+            <intent-filter>
+                <action android:name="HAP_BIND"/>
+            </intent-filter>
+            <meta-data android:name="mip_version" android:value="3.0"/>
+        </receiver>
+        <receiver android:name="com.amazon.device.iap.ResponseReceiver">
+            <intent-filter>
+                <action android:name="com.amazon.inapp.purchasing.NOTIFY" android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.pandora.android.util.StatsCollectorManager$ReportClickedTabsStatsReceiver"/>
+        <receiver android:exported="false" android:name="com.pandora.android.util.TabsClickedStatsCollector$ReportTabsStatsReceiver"/>
+        <receiver android:name="com.pandora.android.util.AlarmClockReceiver"/>
+        <receiver android:name="com.pandora.android.util.AlarmInitReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:path="com.pandora.android" android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.pandora.android.util.ConfigurationReceiver" android:permission="com.pandora.android.permission.CONFIG_CONST">
+            <intent-filter>
+                <action android:name="com.pandora.android.intent.action.RECEIVE_CONFIG"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.pandora.android.util.UpgradeBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.pandora.android.iap.InAppPurchaseReceiver"/>
+        <service android:configChanges="orientation" android:exported="false" android:name="com.pandora.android.PandoraService"/>
+        <service android:name="com.pandora.android.fordsync.AppLinkBluetoothService"/>
+        <service android:name="com.pandora.android.api.bluetooth.BluetoothService"/>
+        <service android:name="com.pandora.android.activity.ForegroundMonitorService"/>
+        <service android:enabled="true" android:exported="true" android:icon="@mipmap/icon" android:label="@string/app_name" android:name="com.pandora.android.daydream.DaydreamService">
+            <intent-filter>
+                <action android:name="android.service.dreams.DreamService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.service.dream" android:resource="@xml/daydream"/>
+        </service>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="7c8e30896e7a4cb3e95f8b41f651f86d0b2299a8"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="7327000"/>
+        <provider android:authorities="com.pandora.radio.provider" android:name="com.pandora.radio.provider.StationProvider"/>
+        <meta-data android:name="com.pandora.radio.art.PandoraGlideModule" android:value="GlideModule"/>
+    </application>
+</manifest>

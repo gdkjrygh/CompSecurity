@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/landing_graph_height" style="?attr/loggingBabyChartStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="@color/white" android:layout_gravity="center" android:id="@android:id/empty" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_measurements" />
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.fitbit.customui.viewpager.FitBitCircledViewPager android:orientation="vertical" android:id="@id/chart_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" fitbit:layoutRes="@layout/l_baby_view_pager" fitbit:activeCircle="@drawable/active_circle" fitbit:passiveCircle="@drawable/passive_circle" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</FrameLayout>

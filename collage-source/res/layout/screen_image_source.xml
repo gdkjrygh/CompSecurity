@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_height="fill_parent" style="@style/single_column_inset_layout">
+        <ly.kite.widget.CustomTypefaceTextView android:textSize="@dimen/prompt_text_size" android:textColor="@color/prompt_text" android:gravity="center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/image_source_prompt" android:layout_weight="0.3" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.7">
+            <GridView android:layout_gravity="top" android:id="@id/image_source_grid_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:verticalSpacing="@dimen/image_source_vertical_spacing" android:numColumns="1" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

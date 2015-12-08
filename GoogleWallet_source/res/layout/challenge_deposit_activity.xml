@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:paddingTop="@dimen/screen_spacing_xlarge" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:src="@drawable/img_challengedeposit_splash_color_173x96dp" android:contentDescription="@null" style="@style/SplashHeroImage" />
+        <TextView android:id="@id/ChallengeDepositPrompt" android:paddingBottom="0.0dip" android:text="@string/challenge_deposit_prompt" style="@style/Title.Splash" />
+        <LinearLayout android:orientation="horizontal" android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0">
+            <TextView android:id="@id/ChallengeDepositMoneySymbol" android:layout_width="wrap_content" android:layout_weight="0.0" style="@style/AmountText" />
+            <com.google.android.apps.wallet.widgets.money.MonetaryValueInput android:id="@id/ChallengeDepositInput" android:layout_width="0.0dip" android:maxLength="4" android:layout_weight="1.0" android:inputType="numberDecimal" android:imeOptions="actionDone" style="@style/AmountText" />
+        </LinearLayout>
+        <TextView android:id="@id/ChallengeDepositLink" style="@style/Body.Splash" />
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

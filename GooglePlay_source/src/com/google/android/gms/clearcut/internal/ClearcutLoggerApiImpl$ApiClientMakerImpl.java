@@ -1,0 +1,26 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.gms.clearcut.internal;
+
+import android.content.Context;
+import com.google.android.gms.clearcut.ClearcutLogger;
+import com.google.android.gms.common.api.GoogleApiClient;
+
+// Referenced classes of package com.google.android.gms.clearcut.internal:
+//            ClearcutLoggerApiImpl
+
+public static final class 
+    implements 
+{
+
+    public final GoogleApiClient make(Context context)
+    {
+        return (new com.google.android.gms.common.api.erImpl(context)).erImpl(ClearcutLogger.API).erImpl();
+    }
+
+    public ()
+    {
+    }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/selector_account_settings_item" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/action_item_icon" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/SettingsItemIcon" />
+    <View android:id="@id/divider" android:layout_toRightOf="@id/action_item_icon" android:layout_alignParentBottom="true" style="@style/SettingsItemDivider" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/action_item_icon" android:layout_above="@id/divider" android:layout_centerVertical="true">
+        <ToggleButton android:id="@id/action_item_toggle" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/ToggleButton" />
+        <TextView android:id="@id/action_item_title" android:layout_toLeftOf="@id/action_item_toggle" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/SettingsItemTitle" />
+    </RelativeLayout>
+</RelativeLayout>

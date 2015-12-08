@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/dialtone_switcher_left_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/dialtone_switcher_top_banner_height">
+        <com.facebook.resources.ui.FbTextView android:textSize="14.0sp" android:textColor="@color/fbui_white" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/switcher_title_text_view" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:drawableRight="@drawable/info_icon" />
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <ToggleButton android:textSize="12.0sp" android:textColor="@color/fbui_white" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/switcher_toggle_button" android:background="@drawable/dialtone_switch" android:layout_width="@dimen/dialtone_switcher_toggle_button_width" android:layout_height="@dimen/dialtone_switcher_top_banner_height" android:textOn="@null" android:textOff="@null" android:text="@null" />
+    </LinearLayout>
+    <ViewStub android:id="@id/dialtone_switcher_info_banner_stub" android:visibility="gone" android:layout="@layout/dialtone_switcher_info_banner" android:inflatedId="@id/switcher_info_banner" android:layout_width="fill_parent" android:layout_height="@dimen/dialtone_switcher_info_banner_height" />
+</LinearLayout>

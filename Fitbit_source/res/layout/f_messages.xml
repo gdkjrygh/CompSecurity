@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <se.emilsjolander.stickylistheaders.StickyListHeadersListView android:scrollbarStyle="insideOverlay" android:id="@id/list" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:gravity="center" android:id="@id/empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_messages_yet" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <include android:id="@id/blocker_view" android:visibility="invisible" layout="@layout/l_data_is_unavailable_view" />
+    <View android:id="@id/plus_button" android:visibility="gone" style="@style/Fitbit.Button.Overflow.Plus" />
+</FrameLayout>

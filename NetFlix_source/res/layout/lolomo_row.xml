@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/lolomo_row_frame" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="top" android:id="@id/lolomo_row_shelf" android:background="@drawable/listview_shelf" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/lolomo_row_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/lolomo_row_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/lolomo_row_retry_button" android:background="@drawable/selectable_item_background" android:paddingLeft="@dimen/content_padding" android:paddingTop="@dimen/content_padding" android:paddingRight="@dimen/content_padding" android:paddingBottom="@dimen/text_padding" android:text="@string/label_reload" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/PrimaryText.Medium" />
+            <TextView android:id="@id/lolomo_row_title" android:paddingBottom="@dimen/text_padding" android:layout_marginTop="@dimen/lolomo_title_margin_top" android:layout_toLeftOf="@id/lolomo_row_retry_button" android:layout_alignParentLeft="true" style="@style/PrimaryText.Medium" />
+            <TextView android:id="@id/kids_lolomo_row_title" android:paddingLeft="@dimen/text_padding" android:paddingTop="16.0dip" android:paddingRight="@dimen/text_padding" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_toLeftOf="@id/lolomo_row_retry_button" android:layout_alignParentLeft="true" style="@style/KidsLolomoTitle" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

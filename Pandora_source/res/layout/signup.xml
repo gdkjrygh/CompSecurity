@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ScrollView android:id="@id/signup_scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:id="@id/logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pandora_logo" android:contentDescription="@string/cd_pandora_logo" />
+                <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/email_fields" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/signin_registration_row_margin">
+                    <com.pandora.android.view.ValidatingEditText android:id="@id/email" android:layout_height="wrap_content" android:hint="@string/label_email" android:drawableLeft="@drawable/edittext_email_left_drawable_selector" android:drawableRight="@drawable/edittext_close_drawable_selector" android:drawablePadding="@dimen/validate_edit_text_drawable_padding" android:inputType="textEmailAddress" style="@style/SignInEditText" />
+                    <View android:layout_gravity="bottom" android:id="@id/email_divider" android:layout_margin="0.0dip" style="@style/SigninRegistrationRowDividerStyle" />
+                    <com.pandora.android.view.ValidatingEditText android:id="@id/password" android:layout_height="wrap_content" android:hint="@string/label_password" android:drawableLeft="@drawable/edittext_password_left_drawable_selector" android:drawableRight="@drawable/edittext_close_drawable_selector" android:drawablePadding="@dimen/validate_edit_text_drawable_padding" android:inputType="textPassword" style="@style/SignInEditText" />
+                    <View android:layout_gravity="bottom" android:id="@id/password_divider" android:layout_margin="0.0dip" style="@style/SigninRegistrationRowDividerStyle" />
+                    <com.pandora.android.view.ValidatingEditText android:id="@id/birth_year" android:layout_height="wrap_content" android:hint="@string/label_birth_year" android:drawableLeft="@drawable/edittext_birthyear_left_drawable_selector" android:drawableRight="@drawable/edittext_close_drawable_selector" android:drawablePadding="@dimen/validate_edit_text_drawable_padding" android:inputType="number" style="@style/SignInEditText" />
+                    <View android:layout_gravity="bottom" android:id="@id/birth_year_divider" android:layout_margin="0.0dip" style="@style/SigninRegistrationRowDividerStyle" />
+                    <com.pandora.android.view.ValidatingEditText android:id="@id/zip_code" android:layout_height="wrap_content" android:hint="@string/label_zip_code" android:drawableLeft="@drawable/edittext_zipcode_left_drawable_selector" android:drawableRight="@drawable/edittext_close_drawable_selector" android:drawablePadding="@dimen/validate_edit_text_drawable_padding" android:inputType="number" style="@style/SignInEditText" />
+                    <View android:layout_gravity="bottom" android:id="@id/zip_code_divider" android:layout_margin="0.0dip" style="@style/SigninRegistrationRowDividerStyle" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/gender_layout" android:layout_width="@dimen/sign_in_fields_width" android:layout_height="wrap_content">
+                        <ImageView android:id="@id/gender" android:background="@android:color/transparent" android:padding="@dimen/sign_up_gender_img_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/edittext_gender_left_drawable_selector" android:contentDescription="@string/label_gender" />
+                        <RadioGroup android:orientation="horizontal" android:id="@id/gender_group" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <RadioButton android:textSize="@dimen/onboarding_text_size_medium" android:textColor="@drawable/clickable_textview_selector" android:id="@id/gender_male" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:text="@string/label_gender_male" android:layout_weight="1.0" />
+                            <RadioButton android:textSize="@dimen/onboarding_text_size_medium" android:textColor="@drawable/clickable_textview_selector" android:id="@id/gender_female" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:text="@string/label_gender_female" android:layout_weight="1.0" />
+                        </RadioGroup>
+                    </LinearLayout>
+                    <View android:layout_gravity="bottom" android:id="@id/gender_divider" android:layout_margin="0.0dip" style="@style/SigninRegistrationRowDividerStyle" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/optIn_layout" android:layout_width="@dimen/sign_in_fields_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sign_up_buttons_margin_top">
+                        <CheckBox android:id="@id/optIn" android:layout_width="wrap_content" android:layout_height="@dimen/sign_up_checkbox_height" android:layout_marginLeft="@dimen/sign_up_checkbox_custom_button_padding" android:checked="true" android:button="@drawable/signup_checkmark_selector" />
+                        <TextView android:textColor="@color/gray_1" android:id="@id/label_optIn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/sign_up_checkbox_custom_button_padding" android:text="@string/label_optIn" style="@style/info_text_small_black" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/agree_layout" android:layout_width="@dimen/sign_in_fields_width" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                        <CheckBox android:id="@id/agree" android:layout_width="wrap_content" android:layout_height="32.0dip" android:layout_marginLeft="@dimen/sign_up_checkbox_custom_button_padding" android:checked="false" android:button="@drawable/signup_checkmark_selector" />
+                        <TextView android:textColor="@color/gray_1" android:id="@id/label_agree" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/sign_up_checkbox_custom_button_padding" android:text="@string/label_agree" style="@style/info_text_small_black" />
+                    </LinearLayout>
+                </LinearLayout>
+                <Button android:enabled="false" android:layout_gravity="center" android:id="@id/button_sign_up_submit" android:layout_marginTop="@dimen/sign_up_buttons_margin_top" android:text="@string/button_sign_up_submit" style="@style/SignUpButtonStyle" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</FrameLayout>

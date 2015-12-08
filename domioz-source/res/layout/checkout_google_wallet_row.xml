@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/card_payment_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@color/grey_down" style="@style/TableDivider" />
+    <ImageView android:id="@id/card_image" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/unknowncard" />
+    <Button android:gravity="left" android:id="@id/card_details" android:background="#00000000" android:paddingLeft="5.0dip" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/card_image" style="@style/CheckoutTableText" />
+    <TextView android:textSize="14.0sp" android:id="@id/cardName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/card_image" style="@style/CheckoutTableText" />
+    <Button android:textSize="14.0sp" android:textColor="@color/blue_button_color_start" android:id="@id/gwEditButton" android:background="@android:color/transparent" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/editUnderline" android:layout_toRightOf="@id/cardName" android:layout_alignBaseline="@id/cardName" style="@style/ButtonStyle" />
+    <TextView android:textSize="14.0sp" android:id="@id/endingIn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/card_image" android:layout_below="@id/cardName" style="@style/CheckoutTableText" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/blue_button_color_start" android:gravity="left" android:id="@id/gwPleaseHaveCardAvailable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pleaseHaveCardAvailable" android:layout_toRightOf="@id/card_image" android:layout_below="@id/endingIn" style="@style/CheckoutTableText" />
+    <RadioButton android:id="@id/credit_payment_radio" android:paddingRight="5.0dip" android:clickable="true" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

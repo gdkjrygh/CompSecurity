@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Background flush period in minutes:" />
+        <EditText android:id="@id/edtBgFlushPeriod" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Background flush period in minutes" android:ems="10" android:inputType="number">
+            <requestFocus />
+        </EditText>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Foreground flush period in seconds" />
+        <EditText android:id="@id/edtFgFlushPeriod" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Foreground flush period in seconds" android:ems="10" android:inputType="number">
+            <requestFocus />
+        </EditText>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Mets and activity type calculation method" />
+        <RadioGroup android:id="@id/radioMetsAndActivityCalculation" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RadioButton android:id="@id/radioDefault" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Default" />
+            <RadioButton android:id="@id/radioHtc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HTC" />
+            <RadioButton android:id="@id/radioFitbit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fitbit" />
+        </RadioGroup>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="HTC Compatibility check result" />
+        <RadioGroup android:id="@id/radioHtcCompatibility" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RadioButton android:id="@id/radioUnchanged" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Unchanged" />
+            <RadioButton android:id="@id/radioCompatible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="COMPATIBLE" />
+            <RadioButton android:id="@id/radioHspNotSupported" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ERROR_HSP_NOT_SUPPORTED" />
+            <RadioButton android:id="@id/radioHspNotInstalled" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ERROR_HSP_NOT_INSTALLED" />
+            <RadioButton android:id="@id/radioHspUpdateRequired" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HSP_UPDATE_REQUIRED" />
+            <RadioButton android:id="@id/radioHmsAppUpdateRequired" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HMS_APP_UPDATE_REQUIRED" />
+            <RadioButton android:id="@id/radioHspNotEnabled" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ERROR_HSP_NOT_ENABLED" />
+            <RadioButton android:id="@id/radioHtcErrorUnknown" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ERROR_UNKNOWN" />
+        </RadioGroup>
+        <CheckBox android:id="@id/chkCanUseAsMultiDeviceTracker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="Can use Mobile Track as a multi-device tracker" />
+        <Button android:id="@id/btnSave" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="Save" />
+    </LinearLayout>
+</ScrollView>

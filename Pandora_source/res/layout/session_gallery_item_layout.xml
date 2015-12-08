@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <com.pandora.android.view.SafeImageView android:id="@id/gallery_item" android:layout_width="@dimen/session_album_art_image_size" android:layout_height="@dimen/session_album_art_image_size" android:contentDescription="@string/cd_album_art" />
+    <View android:id="@id/gallery_item_overlay" android:background="@color/transparent" android:layout_width="@dimen/session_album_art_image_size" android:layout_height="@dimen/session_album_art_image_size" />
+    <LinearLayout android:gravity="bottom|center" android:layout_gravity="bottom|center" android:id="@id/thumbs_overlay" android:padding="@dimen/session_album_art_gallery_thumb_margin" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="?albumArtGalleryThumbMargin">
+        <com.pandora.android.util.ThumbImageButton android:layout_gravity="bottom" android:id="@id/old_track_thumb_down" android:background="@drawable/thumb_down_selector" android:layout_width="@dimen/session_album_art_gallery_thumb_size" android:layout_height="@dimen/session_album_art_gallery_thumb_size" android:layout_marginRight="@dimen/session_album_art_gallery_thumb_margin" pandora:up_or_down="@string/cd_down" />
+        <com.pandora.android.util.ThumbImageButton android:layout_gravity="bottom" android:id="@id/old_track_thumb_up" android:background="@drawable/thumb_up_selector" android:layout_width="@dimen/session_album_art_gallery_thumb_size" android:layout_height="@dimen/session_album_art_gallery_thumb_size" android:layout_marginLeft="@dimen/session_album_art_gallery_thumb_margin" pandora:up_or_down="@string/cd_up" />
+    </LinearLayout>
+</FrameLayout>

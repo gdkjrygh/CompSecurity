@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:paddingLeft="@dimen/horizontal_margin_step" android:paddingRight="@dimen/horizontal_margin_step" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="72.0dip" android:paddingStart="@dimen/horizontal_margin_step" android:paddingEnd="@dimen/horizontal_margin_step"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <TextView android:textAppearance="@style/TextAppearance.ExerciseRowDateText" android:id="@id/date" android:paddingRight="@dimen/horizontal_margin_step" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:paddingEnd="@dimen/horizontal_margin_step" android:layout_alignParentStart="true" fitbit:font="proxima_nova_regular" />
+    <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/date" android:layout_centerVertical="true" android:layout_toEndOf="@id/date">
+        <TextView android:textAppearance="@style/TextAppearance.ExerciseRowTitleText" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" fitbit:font="proxima_nova_regular" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/TextAppearance.ExerciseRowDetailsText" android:id="@id/description1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" fitbit:font="proxima_nova_regular" />
+            <TextView android:textAppearance="@style/TextAppearance.ExerciseRowDetailsText" android:id="@id/description2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" fitbit:font="proxima_nova_regular" />
+            <TextView android:id="@id/description3" android:visibility="invisible" android:layout_width="90.0dip" android:layout_height="1.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

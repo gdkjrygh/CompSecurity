@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?pasteTextAppearanceSectionHeader" android:id="@id/cosmos_test_echo_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="6.0dip" android:text="@string/cosmos_test_echo_header" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/cosmos_test_send_echo_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cosmos_test_send_echo" android:layout_weight="1.0" style="?pasteButtonStylePrimary" />
+            <Button android:id="@id/cosmos_test_echo_subscription_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cosmos_test_subscription" android:layout_weight="1.0" style="?pasteButtonStylePrimary" />
+        </LinearLayout>
+        <TextView android:textAppearance="?pasteTextAppearanceSectionHeader" android:id="@id/cosmos_test_player_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="6.0dip" android:text="@string/cosmos_test_player_header" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/cosmos_test_prev_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cosmos_test_play_prev" style="?pasteButtonStylePrimary" />
+            <Button android:id="@id/cosmos_test_play_track_list_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cosmos_test_play_track_list" style="?pasteButtonStylePrimary" />
+            <Button android:id="@id/cosmos_test_next_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cosmos_test_play_next" style="?pasteButtonStylePrimary" />
+            <CheckBox android:layout_gravity="left|center" android:id="@id/cosmos_test_shuffle_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cosmos_test_shuffle_context" style="?pasteDefaultsCheckboxStyle" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Spinner android:entries="@array/cosmos_test_playback_types" android:id="@id/cosmos_test_playback_type" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <Spinner android:id="@id/cosmos_test_playback_index" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <Button android:id="@id/cosmos_test_player_subscription_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cosmos_test_player_subscribe" style="?pasteButtonStylePrimary" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/cosmos_command_output_clear_button" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="@string/cosmos_test_command_output_clear" android:layout_alignParentRight="true" style="?pasteButtonStyleInfoSmall" />
+            <TextView android:ellipsize="marquee" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cosmos_test_command_output" android:layout_toLeftOf="@id/cosmos_command_output_clear_button" android:layout_alignParentLeft="true" />
+        </RelativeLayout>
+        <ScrollView android:id="@id/command_output_container" android:background="@android:color/background_dark" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:typeface="monospace" android:textColor="@android:color/primary_text_dark" android:id="@id/cosmos_test_command_output" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

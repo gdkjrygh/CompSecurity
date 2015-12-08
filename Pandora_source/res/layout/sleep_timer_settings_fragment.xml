@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/settings_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pandora.android.view.RoundLinearLayout android:id="@id/sleep_timer_group" android:layout_marginTop="@dimen/settings_row_margin" pandora:roundedCorners="all" style="@style/settings_row_style">
+            <TextView android:textStyle="italic" android:id="@id/sleep_timer_time_left" android:focusable="false" android:clickable="false" android:text="@string/sleep_timer_line_2_empty" android:layout_weight="1.0" style="@style/settings_row_label" />
+            <com.pandora.android.util.Switch android:id="@id/sleep_timer_enabled_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/settings_row_padding" style="@style/PSwitch" />
+        </com.pandora.android.view.RoundLinearLayout>
+        <com.pandora.android.view.RoundLinearLayout android:layout_marginTop="@dimen/settings_row_height" pandora:roundedCorners="top_left|top_right" style="@style/settings_row_style">
+            <TextView android:id="@id/sleep_timer_15" android:layout_width="fill_parent" android:text="@string/minutes_15" style="@style/settings_row_label" />
+        </com.pandora.android.view.RoundLinearLayout>
+        <com.pandora.android.view.RoundLinearLayout pandora:roundedCorners="none" style="@style/settings_row_style">
+            <TextView android:id="@id/sleep_timer_30" android:layout_width="fill_parent" android:text="@string/minutes_30" style="@style/settings_row_label" />
+        </com.pandora.android.view.RoundLinearLayout>
+        <com.pandora.android.view.RoundLinearLayout pandora:roundedCorners="bottom_left|bottom_right" style="@style/settings_row_style">
+            <TextView android:id="@id/sleep_timer_60" android:layout_width="fill_parent" android:text="@string/minutes_60" style="@style/settings_row_label" />
+        </com.pandora.android.view.RoundLinearLayout>
+    </LinearLayout>
+</ScrollView>

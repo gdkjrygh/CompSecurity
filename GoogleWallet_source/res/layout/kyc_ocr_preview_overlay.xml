@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/ocrPreviewOverlayRoot" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/ocrBoundingBoxRoot" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/ocrHelpImageView" android:padding="@dimen/kyc_ocr_help_btn_padding" android:visibility="gone" android:layout_width="@dimen/kyc_ocr_help_btn_diameter" android:layout_height="@dimen/kyc_ocr_help_btn_diameter" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:contentDescription="@string/kyc_ocr_help" />
+    <TextView android:id="@id/ocrMessage" style="@style/KycMessageText" />
+    <RelativeLayout android:gravity="center_horizontal" android:id="@id/ocrPreviewButtonContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@id/ocrCaptureFrameButton" android:background="@drawable/camera_button" android:layout_width="@dimen/kyc_ocr_snap_button_size" android:layout_height="@dimen/kyc_ocr_snap_button_size" android:layout_centerInParent="true" android:contentDescription="@string/kyc_ocr_take_picture" />
+        <Button android:id="@id/ocrRetryCaptureButton" android:background="@drawable/kyc_ocr_retry_button" android:layout_width="@dimen/kyc_ocr_snap_button_size" android:layout_height="@dimen/kyc_ocr_snap_button_size" android:layout_toLeftOf="@id/ocrCaptureFrameButton" android:layout_alignTop="@id/ocrCaptureFrameButton" android:contentDescription="@string/kyc_ocr_retry_picture" />
+        <Button android:id="@id/ocrConfirmCaptureButton" android:background="@drawable/kyc_ocr_done_button" android:layout_width="@dimen/kyc_ocr_snap_button_size" android:layout_height="@dimen/kyc_ocr_snap_button_size" android:layout_toRightOf="@id/ocrCaptureFrameButton" android:layout_alignTop="@id/ocrCaptureFrameButton" android:contentDescription="@string/kyc_ocr_retry_picture" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ocrSkipScanContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <View android:id="@id/ocrButtonDivider" android:background="@color/kyc_ocr_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <Button android:id="@id/ocrSkipScanButton" android:background="@drawable/kyc_ocr_btn_transparent" android:padding="@dimen/kyc_ocr_skip_btn_padding" android:text="@string/kyc_ocr_skip_scan" style="@style/KycMessageText" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/ocrProgressOverlay" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    </RelativeLayout>
+</RelativeLayout>

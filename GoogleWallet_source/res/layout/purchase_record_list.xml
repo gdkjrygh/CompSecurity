@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_refresh_widget" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveListView android:scrollbarStyle="outsideOverlay" android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/card_list_rippleable" android:headerDividersEnabled="false" style="@style/List" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <com.google.android.apps.wallet.purchaserecord.LoadingListNoItemsView android:id="@id/EmptyView" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/loading_list_error_view" android:visibility="gone" layout="@layout/retry_widget" />
+</LinearLayout>

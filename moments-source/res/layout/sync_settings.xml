@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/settings_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.moments.ui.titlebar.SyncTitleBar android:id="@id/sync_titlebar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:background="@color/moments_grey_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:orientation="vertical" android:id="@id/row_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" fb:showDividers="beginning|end|middle" fb:divider="#ffe6e6e6" fb:dividerThickness="0.5dip" />
+            <com.facebook.resources.ui.FbTextView android:textSize="13.0sp" android:textColor="#ff252525" android:background="@drawable/press_state_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:text="@string/moments_copyright" android:fontFamily="sans-serif" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

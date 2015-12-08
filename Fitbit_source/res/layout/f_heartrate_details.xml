@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="?attr/loggingBabyChartStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/content" android:background="?android:selectableItemBackground" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageButton style="@style/UnclickableCornerFullscreenIcon" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_centerHorizontal="true">
+            <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/red_heart" />
+            <TextView android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_beats_per_minute_capitalized" />
+        </LinearLayout>
+        <TextView android:textColor="@color/white" android:id="@id/txt_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/details_date_top_margin" android:layout_below="@id/title" android:layout_centerHorizontal="true" />
+        <com.fitbit.heartrate.charts.views.IntradayHeartRateBabyChartView_ android:id="@id/chart_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_below="@id/txt_date" />
+    </RelativeLayout>
+    <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/placeholder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_measurements" />
+    <FrameLayout android:id="@id/progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Fitbit.ProgressBar.White" />
+    </FrameLayout>
+</FrameLayout>

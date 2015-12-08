@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.hp.mss.hpprint.view.PagePreviewView android:id="@id/preview_image_view" android:layout_width="300.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="65.0dip" android:layout_toLeftOf="@id/preview_image_view" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="40.0dip" style="@style/previewSpinnerBG">
+            <TextView android:textSize="16.0sp" android:gravity="bottom|left|center" android:id="@id/paper_size_title" android:paddingLeft="30.0dip" android:layout_width="150.0dip" android:layout_height="wrap_content" android:text="@string/paper_size" android:layout_centerVertical="true" style="@style/previewPaperSizeSpinnerText" />
+            <Spinner android:gravity="bottom|right|center" android:id="@id/paper_size_spinner" android:paddingTop="1.0dip" android:paddingBottom="1.0dip" android:layout_width="70.0dip" android:layout_height="fill_parent" android:prompt="@string/paper_size" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:spinnerMode="dialog" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/support_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/support_title" android:layout_width="fill_parent" android:layout_height="40.0dip">
+                <TextView android:textSize="18.0sp" android:id="@id/print_preview_support_title" android:paddingLeft="15.0sp" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/support" android:layout_alignParentBottom="true" android:textAllCaps="true" style="@style/previewSupportText" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/learn_more" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_below="@id/support_title" style="@style/previewPrintInstructionsBG">
+                <TextView android:textSize="15.0sp" android:id="@id/ic_printing_support_link" android:paddingLeft="30.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/learn_about_mobile_print" android:layout_centerVertical="true" style="@style/previewPrintInstructionsText" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

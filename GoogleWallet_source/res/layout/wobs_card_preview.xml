@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="@dimen/wobs_card_preview_logo_frame_size" android:layout_height="@dimen/wobs_card_preview_logo_frame_size">
+        <ImageView android:layout_gravity="center" android:id="@id/CardLogo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/wobs_customize_card_description" />
+        <TextView android:layout_gravity="center" android:id="@id/ClickableIndicator" android:visibility="gone" android:layout_marginTop="10.0dip" android:text="@string/wobs_edit_color" android:contentDescription="@string/wobs_customize_card_description" style="@style/ClickableIndicator" />
+    </FrameLayout>
+    <View style="@style/VerticalDivider" />
+    <LinearLayout android:orientation="vertical" android:paddingRight="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/CardTitle" android:padding="@dimen/default_spacing" android:layout_width="0.0dip" android:layout_height="wrap_content" android:bufferType="spannable" android:layout_weight="1.0" style="@style/ListItemPrimaryText" />
+            <ImageView android:id="@id/EditCardTitleButton" android:background="@drawable/unbounded_rippleable" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_edit_merchant" android:contentDescription="@string/wobs_edit_merchant_name_description" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/BelowCardTitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:id="@id/BelowTitleText" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListItemSecondaryText" />
+            </FrameLayout>
+            <ImageView android:id="@id/InfoIcon" android:background="@drawable/unbounded_rippleable" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/info" android:contentDescription="@string/gift_cards_balance_learn_more" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

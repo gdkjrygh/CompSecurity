@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.netflix.mediaclient">
+    <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <permission android:name="com.netflix.mediaclient.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.netflix.mediaclient.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.amazon.permission.SET_FLAG_NOSOFTKEYS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/app_name" android:largeHeap="true" android:name=".NetflixApplication" android:theme="@style/Theme.NetflixDefault">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:name=".ui.LaunchActivity" android:theme="@style/Theme.NetflixDefault.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.netflix.com" android:scheme="nflx"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.RelaunchActivity"/>
+        <activity-alias android:enabled="@bool/phone" android:name=".UIWebViewActivity" android:targetActivity=".ui.LaunchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="@bool/tablet" android:name=".UIWebViewTabletActivity" android:targetActivity=".ui.LaunchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:configChanges="keyboardHidden|orientation" android:name=".ui.signup.SignupActivity" android:theme="@style/Theme.NetflixDefault.LightActionBar"/>
+        <activity android:name=".ui.login.LoginActivity" android:windowSoftInputMode="stateVisible"/>
+        <activity android:name=".ui.social.FacebookLoginActivity"/>
+        <activity android:name="com.facebook.LoginActivity"/>
+        <activity android:name=".ui.profiles.ProfileSelectionActivity"/>
+        <activity android:name=".ui.login.LogoutActivity"/>
+        <activity android:launchMode="singleTop" android:name=".ui.home.HomeActivity" android:theme="@style/Theme.NetflixActionBarOverlay">
+            <meta-data android:name="android.app.default_searchable" android:value=".ui.search.SearchActivity"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name=".ui.kids.lolomo.KidsHomeActivity" android:theme="@style/Theme.Kids.NetflixActionBarOverlay">
+            <meta-data android:name="android.app.default_searchable" android:value=".ui.kids.search.KidsSearchActivity"/>
+        </activity>
+        <activity android:name=".ui.kids.lolomo.KidsLomoDetailActivity" android:theme="@style/Theme.Kids.NetflixActionBarOverlay">
+            <meta-data android:name="android.app.default_searchable" android:value=".ui.kids.search.KidsSearchActivity"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name=".ui.details.MovieDetailsActivity" android:theme="@style/Theme.NetflixActionBarOverlay">
+            <meta-data android:name="android.app.default_searchable" android:value=".ui.search.SearchActivity"/>
+        </activity>
+        <activity android:name=".ui.details.ShowDetailsActivity" android:theme="@style/Theme.NetflixActionBarOverlay">
+            <meta-data android:name="android.app.default_searchable" android:value=".ui.search.SearchActivity"/>
+        </activity>
+        <activity android:name=".ui.kids.details.KidsDetailsActivity" android:theme="@style/Theme.Kids.NetflixActionBarOverlay">
+            <meta-data android:name="android.app.default_searchable" android:value=".ui.kids.search.KidsSearchActivity"/>
+        </activity>
+        <activity android:name=".ui.search.SearchQueryDetailsActivity" android:theme="@style/Theme.NetflixActionBarOverlay">
+            <meta-data android:name="android.app.default_searchable" android:value=".ui.search.SearchActivity"/>
+        </activity>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation" android:launchMode="singleTask" android:name=".ui.player.PlayerActivity" android:screenOrientation="sensorLandscape" android:theme="@style/Theme.PlayerNoActionBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name=".ui.player.MDXControllerActivity" android:noHistory="true" android:theme="@style/Theme.PlayerNoActionBar"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation" android:launchMode="singleTask" android:name=".ui.kids.player.KidsPlayerActivity" android:theme="@style/Theme.Kids.PlayerNoActionBar"/>
+        <activity android:label="@string/label_settings" android:name=".ui.settings.SettingsActivity"/>
+        <activity android:label="@string/label_open_source_licenses" android:name=".ui.settings.OpenSourceLicensesActivity"/>
+        <activity android:launchMode="singleTop" android:name=".ui.search.SearchActivity" android:theme="@style/Theme.NetflixActionBarOverlay" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name=".ui.kids.search.KidsSearchActivity" android:theme="@style/Theme.Kids.NetflixActionBarOverlay" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name=".ui.mdx.MdxPlaycardActivity" android:theme="@style/Theme.MdxPlayerNoActionBar"/>
+        <activity android:name="com.crittercism.NotificationActivity"/>
+        <receiver android:enabled="true" android:name="com.netflix.mediaclient.service.user.PartnerReceiver">
+            <intent-filter>
+                <action android:name="com.netflix.mediaclient.intent.action.USER_STATUS"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.netflix.mediaclient"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.netflix.mediaclient.service.mdx.MediaButtonIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.netflix.mediaclient.service.mdx.PostPlayMediaButtonIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".ui.profiles.RestrictedProfilesReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_RESTRICTION_ENTRIES"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.netflix.mediaclient.service.pushnotification.NotificationReceiver">
+            <intent-filter>
+                <action android:name="com.netflix.mediaclient.intent.action.NOTIFICATION_CANCELED"/>
+                <action android:name="com.netflix.mediaclient.intent.action.NOTIFICATION_BROWSER_REDIRECT"/>
+            </intent-filter>
+        </receiver>
+        <service android:name=".GCMIntentService"/>
+        <service android:name=".service.NetflixService"/>
+    </application>
+</manifest>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/inner" android:padding="?EoCPaddingThreeFive" android:layout_width="fill_parent" android:layout_height="?EoCLayoutHeightThreeFive">
+        <FrameLayout android:id="@id/circles_holder" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?EoCCirclesMarginLeftThreeFive" android:layout_alignParentLeft="true">
+            <View android:layout_gravity="center" android:background="@drawable/end_of_challenge_circle" android:layout_width="?EoCBigCircleSizeThreeFive" android:layout_height="?EoCBigCircleSizeThreeFive" />
+            <View android:layout_gravity="center" android:background="@drawable/end_of_challenge_circle" android:layout_width="?EoCMedCircleSizeThreeFive" android:layout_height="?EoCMedCircleSizeThreeFive" />
+            <View android:layout_gravity="center" android:background="@drawable/end_of_challenge_circle" android:layout_width="?EoCSmallCircleSizeThreeFive" android:layout_height="?EoCSmallCircleSizeThreeFive" />
+        </FrameLayout>
+        <TextView android:textSize="?EoCTextSizeThreeFive" android:gravity="center" android:id="@id/place" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?EoCPlaceMarginLeftThreeFive" android:minWidth="?EoCPlaceMinWidthThreeFive" android:layout_centerVertical="true" style="@style/Fitbit.Onboarding.TextView" />
+        <com.fitbit.ui.loadable.CircleLoadablePicassoImageView android:id="@id/profile_picture" android:layout_width="?EoCProfPicSizeThreeFive" android:layout_height="?EoCProfPicSizeThreeFive" android:layout_marginLeft="?EoCProfPicMarginThreeFive" android:layout_marginRight="?EoCProfPicMarginThreeFive" android:layout_toRightOf="@id/place" android:layout_centerVertical="true" />
+        <TextView android:textSize="?EoCTextSizeThreeFive" android:textColor="@color/white" android:id="@id/score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/horizontal_margin_step" android:layout_marginRight="@dimen/horizontal_margin_step" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Fitbit.Onboarding.TextView" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/score" android:layout_toRightOf="@id/profile_picture" android:layout_centerVertical="true">
+            <TextView android:textSize="?EoCTextSizeThreeFive" android:textColor="@color/white" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <include layout="@layout/l_challenge_progress_bar" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:layout_gravity="right" android:orientation="horizontal" android:id="@id/fancy_stars" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?EoCFancyStarsMarginTopThreeFive" android:layout_marginRight="?EoCFancyStarsMarginRightThreeFive">
+        <ImageView android:layout_width="?EoCAsteriskStarWidthThreeFive" android:layout_height="?EoCAsteriskStarHeightThreeFive" android:layout_marginTop="?EoCAsteriskStarMarginTopThreeFive" android:src="@drawable/asteriskstar" />
+        <ImageView android:layout_width="?EoCCrossStarWidthThreeFive" android:layout_height="?EoCCrossStarHeightThreeFive" android:layout_marginLeft="?EoCCrossStarMarginLeftThreeFive" android:layout_marginTop="?EoCCrossStarMarginTopThreeFive" android:src="@drawable/crossstar" />
+        <ImageView android:layout_width="?EoCFancyStarWidthThreeFive" android:layout_height="?EoCFancyStarHeightThreeFive" android:layout_marginLeft="?EoCDiamondStarMarginLeftThreeFive" android:src="@drawable/end_of_challenge_star" />
+    </LinearLayout>
+</LinearLayout>

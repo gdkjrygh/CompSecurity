@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/sync_bg_darker_grey" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/loading_card" android:background="@drawable/onboard_card_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/nav_stack_loading_container_margin">
+        <LinearLayout android:orientation="horizontal" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/count_down_finish_image" android:paddingLeft="@dimen/nav_stack_loading_container_inner_padding" android:paddingRight="@dimen/nav_stack_loading_container_inner_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/onboarding_photo_ring" android:layout_weight="0.0" />
+            <FrameLayout android:layout_gravity="center_vertical" android:id="@id/count_down_progress" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/nav_stack_loading_container_inner_padding" android:layout_marginRight="@dimen/nav_stack_loading_container_inner_padding" android:layout_marginStart="@dimen/nav_stack_loading_container_inner_padding" android:layout_marginEnd="@dimen/nav_stack_loading_container_inner_padding">
+                <com.facebook.moments.navui.nux.CountDownRingProgressView android:id="@id/count_down_ring_progress" android:layout_width="38.0dip" android:layout_height="38.0dip" android:layout_margin="15.0dip" />
+                <com.facebook.resources.ui.FbTextView android:textColor="@color/moments_blue" android:gravity="left" android:layout_gravity="center" android:id="@id/count_down_progress_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/onboard_view_suggestion_card_title" android:maxLines="1" style="@style/nux_card_title_text" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nav_stack_loading_container_margin" android:layout_marginRight="@dimen/nav_stack_loading_container_inner_padding" android:layout_marginBottom="@dimen/nav_stack_loading_container_margin" android:layout_weight="1.0" android:layout_marginEnd="@dimen/nav_stack_loading_container_inner_padding">
+                <com.facebook.resources.ui.FbTextView android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/onboard_loading_suggestion_card_title" android:maxLines="2" style="@style/nux_card_title_text" />
+                <com.facebook.resources.ui.FbTextView android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/onboard_loading_suggestion_card_subtitle" android:maxLines="3" style="@style/onboarding_card_subtitle_text" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/divider_grey" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nav_stack_loading_container_margin" android:layout_marginBottom="@dimen/nav_stack_loading_container_margin">
+            <com.facebook.resources.ui.FbTextView android:textColor="@color/black_40a" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sync_tab_hang_tight" android:singleLine="true" style="@style/onboarding_card_title_text" />
+            <com.facebook.widget.ShimmerFrameLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:auto_start="true" fb:base_alpha="0.0" fb:duration="1000">
+                <com.facebook.resources.ui.FbTextView android:textColor="@color/black_40a" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sync_tab_hang_tight" android:singleLine="true" style="@style/onboarding_card_title_text" />
+            </com.facebook.widget.ShimmerFrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ready_card" android:background="@drawable/onboard_card_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/nav_stack_loading_container_margin">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/onboarding_check_ring" />
+        <com.facebook.resources.ui.FbTextView android:gravity="center" android:layout_gravity="center" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/intro_nux_ready" android:singleLine="true" style="@style/nux_card_title_text" />
+    </LinearLayout>
+</FrameLayout>

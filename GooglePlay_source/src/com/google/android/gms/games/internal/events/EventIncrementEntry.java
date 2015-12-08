@@ -1,0 +1,19 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.gms.games.internal.events;
+
+
+public final class EventIncrementEntry
+{
+
+    public final String eventId;
+    public final int increment;
+
+    public EventIncrementEntry(String s, int i)
+    {
+        eventId = s;
+        increment = i;
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher android:id="@id/gallery_list_switcher" android:background="@color/dark_gray_solid" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="48.0dip" android:weightSum="2.0">
+            <Spinner android:orientation="horizontal" android:id="@id/gallery_album_spinner" android:background="@drawable/spinner_background_material" android:layout_width="0.0dip" android:layout_height="48.0dip" android:popupBackground="@drawable/bg_white_rounded" android:layout_weight="1.0" android:dropDownWidth="248.0dip" android:dropDownHorizontalOffset="-16.0dip" android:dropDownVerticalOffset="@dimen/spinner_vertical_offset" style="@android:style/Widget.Holo.Spinner" />
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView android:id="@id/photos_picker" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/empty_album_holder" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/hint_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/im_empty_post" android:contentDescription="@string/pic_collage" />
+        <TextView android:textAppearance="@android:style/TextAppearance.Medium" android:textColor="?android:textColorTertiary" android:gravity="center" android:id="@id/hint_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:maxWidth="300.0dip" android:text="@string/empty_gallery" />
+        <Button android:id="@id/hint_action" android:text="@string/use_camera" style="@style/CblueButtonBig.Green" />
+    </LinearLayout>
+</ViewSwitcher>

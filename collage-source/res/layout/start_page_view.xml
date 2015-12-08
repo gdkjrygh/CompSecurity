@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/collage_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="5.0">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="14.0dip" android:paddingRight="14.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="2.0" android:layout_weight="3.0">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:layout_weight="1.0">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <android.support.v7.widget.CardView android:layout_gravity="center" android:id="@id/grid" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:layout_marginTop="32.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="2.0dip" android:foreground="?selectableItemBackground" card_view:cardCornerRadius="4.0dip"
+                      xmlns:android="http://schemas.android.com/apk/res/android">
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_start_page_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <ImageView android:layout_width="80.0dip" android:layout_height="80.0dip" android:src="@drawable/im_grid" />
+                            <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/start_page_grid_button" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+                <ImageView android:layout_gravity="top|center" android:layout_width="29.0dip" android:layout_height="29.0dip" android:layout_marginTop="16.0dip" android:src="@drawable/im_circle" />
+            </FrameLayout>
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_weight="1.0">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <android.support.v7.widget.CardView android:layout_gravity="center" android:id="@id/template" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:layout_marginTop="32.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="2.0dip" android:foreground="?selectableItemBackground" card_view:cardCornerRadius="4.0dip"
+                      xmlns:android="http://schemas.android.com/apk/res/android">
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_start_page_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <ImageView android:layout_width="80.0dip" android:layout_height="80.0dip" android:src="@drawable/im_templatesx" />
+                            <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/start_page_temp_button" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+                <ImageView android:layout_gravity="top|center" android:layout_width="32.0dip" android:layout_height="33.0dip" android:layout_marginTop="12.0dip" android:src="@drawable/im_triangle" />
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="2.0">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <android.support.v7.widget.CardView android:layout_gravity="center" android:id="@id/freeform" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" android:foreground="?selectableItemBackground" card_view:cardCornerRadius="4.0dip">
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_start_page_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="2.0">
+                            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/im_freeform" android:layout_weight="1.0" android:contentDescription="@string/start_page_freeform_button" />
+                            <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/start_page_freeform_button" android:layout_weight="1.0" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+                <ImageView android:layout_gravity="left|center" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="0.0dip" android:src="@drawable/im_diamond_ff" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

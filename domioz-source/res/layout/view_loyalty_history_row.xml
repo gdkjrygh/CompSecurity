@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/loyaltyMainInfo" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/loyaltyMoreInfoSelector" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="5.0dip" android:src="@drawable/ic_down_arrow" android:layout_centerVertical="true" />
+        <RelativeLayout android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_toRightOf="@id/loyaltyMoreInfoSelector">
+            <TextView android:textSize="17.0sp" android:textColor="@color/black" android:id="@id/loyaltyTransactionPoints" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="17.0sp" android:textColor="@color/black" android:ellipsize="end" android:id="@id/loylatyTransactionType" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@id/loyaltyTransactionPoints" android:layout_alignParentLeft="true" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/grey_color_text" android:id="@id/transactionDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/loylatyTransactionType" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/black" android:id="@id/loyaltyPointBalance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/loyaltyAdditionalInfo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/loyaltyMainInfo">
+        <TextView android:textSize="15.0sp" android:textColor="@color/black" android:id="@id/loyaltyDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="3.0dip" />
+        <RelativeLayout android:id="@id/orderNumberView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/loyaltyDescription" android:layout_alignParentLeft="true">
+            <TextView android:textSize="15.0sp" android:textColor="@color/grey_color_text" android:id="@id/loyaltyOrderNumberStatic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/loyalty_order_number" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/blue" android:id="@id/loyaltyOrderNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/loyaltyOrderNumberStatic" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/preTipView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/loyaltyDescription">
+            <TextView android:textSize="15.0sp" android:textColor="@color/red" android:id="@id/loyaltyPreTipTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_alignParentRight="true" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/grey_color_text" android:id="@id/loyaltyPreTipTotalStatic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pre_tip_total" android:layout_toLeftOf="@id/loyaltyPreTipTotal" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

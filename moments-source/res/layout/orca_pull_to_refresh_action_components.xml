@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:id="@id/pull_to_refresh_image" android:paddingLeft="@dimen/refreshable_list_view_image_padding_angora" android:paddingRight="@dimen/refreshable_list_view_image_padding_angora" android:layout_width="37.0dip" android:layout_height="42.0dip" android:src="@drawable/pull_to_refresh_arrow_angora" />
+    <LinearLayout android:orientation="vertical" android:id="@id/pull_to_refresh_text_and_date_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <FrameLayout android:layout_gravity="center" android:id="@id/pull_to_refresh_text_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip">
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textStyle="bold" android:layout_gravity="center" android:id="@id/pull_to_refresh_text_pull" android:visibility="invisible" android:text="@string/pull_to_refresh_pull_label" style="@style/RefreshableViewTextStyle" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textStyle="bold" android:layout_gravity="center" android:id="@id/pull_to_refresh_text_popup" android:visibility="invisible" android:text="@string/pull_to_refresh_pull_label" style="@style/RefreshableViewTextStyle" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textStyle="bold" android:layout_gravity="center" android:id="@id/pull_to_refresh_text_push" android:visibility="invisible" android:text="@string/pull_to_refresh_push_label" style="@style/RefreshableViewTextStyle" />
+            <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_medium" android:textStyle="bold" android:layout_gravity="center" android:id="@id/pull_to_refresh_text_release" android:visibility="invisible" android:text="@string/pull_to_refresh_release_label" style="@style/RefreshableViewTextStyle" />
+        </FrameLayout>
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_small" android:layout_gravity="center" android:id="@id/pull_to_refresh_last_loaded_time" android:visibility="gone" style="@style/RefreshableViewTextStyle" />
+    </LinearLayout>
+</merge>

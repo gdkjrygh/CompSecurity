@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/iphone_table_single" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip">
+                <ImageView android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/ic_loyalty" />
+                <TextView android:textSize="@dimen/loyalty_title_size" android:textColor="@color/text_grey" android:layout_gravity="center_vertical" android:id="@id/enrollTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/enroll_in_piece_of_pie" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+            <RelativeLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.75">
+                <TextView android:textSize="12.0sp" android:textColor="@color/text_grey" android:id="@id/loyaltySummary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" />
+                <TextView android:textSize="10.0sp" android:textColor="@color/text_grey" android:id="@id/loyaltyTerms" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_below="@id/loyaltySummary" android:layout_alignLeft="@id/loyaltySummary" android:layout_alignRight="@id/loyaltySummary" />
+                <TextView android:textSize="10.0sp" android:textColor="@color/text_grey" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/limit_one_per_day" android:layout_below="@id/loyaltyTerms" android:layout_alignLeft="@id/loyaltySummary" />
+            </RelativeLayout>
+            <LinearLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.25">
+                <CheckBox android:id="@id/enrollCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/loyaltyInfo" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="5.0dip" android:src="@drawable/ic_question_mark" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</merge>

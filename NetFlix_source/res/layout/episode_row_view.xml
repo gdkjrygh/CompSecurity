@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/episode_row_header_group" android:layout_width="fill_parent" android:layout_height="@dimen/episode_row_primary_height" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/episode_row_play_button" android:background="@drawable/selectable_video_background_with_press" android:padding="@dimen/double_padding" android:visibility="gone" android:layout_width="@dimen/episode_row_primary_height" android:layout_height="@dimen/episode_row_primary_height" android:src="@drawable/ic_play_list" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/accesibility_play_episode" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/content_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/episode_row_play_button" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+            <TextView android:id="@id/episode_row_title" android:singleLine="true" style="@style/PrimaryText.Small" />
+            <ProgressBar android:id="@id/episode_row_progress_bar" android:layout_width="170.0dip" android:layout_height="6.0dip" android:layout_marginTop="@dimen/text_padding" android:max="100" android:indeterminateOnly="false" android:progressDrawable="@drawable/episode_row_progress_bar" style="?android:attr/progressBarStyleHorizontal" />
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView android:id="@id/episode_row_synopsis" android:paddingLeft="@dimen/content_padding" android:paddingRight="@dimen/content_padding" android:paddingBottom="@dimen/content_padding" android:layout_below="@id/episode_row_header_group" style="@style/SecondaryText.Micro" />
+    <View android:layout_below="@id/episode_row_synopsis" style="@style/HorizontalDivider" />
+</merge>

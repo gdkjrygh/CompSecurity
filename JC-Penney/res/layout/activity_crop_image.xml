@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:typeface="serif" android:textStyle="italic" android:textColor="@android:color/white" android:id="@id/text_grab_crop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="180.0dip" android:layout_marginTop="45.0dip" android:text="Grab the frame to crop" />
+    <ImageView android:background="@drawable/arrow_crop" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="160.0dip" android:layout_marginTop="45.0dip" />
+    <RelativeLayout android:id="@id/rel_lay_helper" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/slyce_dimen_68dp" android:layout_above="@id/helper_view">
+        <view android:id="@id/image" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.android.slyce.crop.CropImageView" />
+    </RelativeLayout>
+    <View android:id="@id/helper_view" android:layout_width="fill_parent" android:layout_height="@dimen/slyce_dimen_12dp" android:layout_above="@id/bottom_buttons_bar" />
+    <RelativeLayout android:id="@id/bottom_buttons_bar" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_alignParentBottom="true">
+        <Button android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="left|center" android:id="@id/retake_button" android:background="@android:color/transparent" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retake" android:textAllCaps="false" />
+        <ImageButton android:id="@id/rotate_button" android:background="@android:color/transparent" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/ic_menu_rotate" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <Button android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="right|center" android:id="@id/crop_button" android:background="@android:color/transparent" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Crop" android:layout_alignParentRight="true" android:textAllCaps="false" />
+    </RelativeLayout>
+</RelativeLayout>

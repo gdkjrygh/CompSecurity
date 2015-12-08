@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/games_tile_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.gms.common.images.internal.LoadingImageView android:id="@id/player_image" android:layout_width="@dimen/games_mixed_tile_player_image_size" android:layout_height="@dimen/games_mixed_tile_player_image_size" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <TextView android:id="@id/player_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/player_image" android:layout_centerVertical="true" style="@style/Games.Tile.Mixed.Text.PlayerName" />
+    <View android:id="@id/overlay" android:background="@drawable/games_highlight_overlay" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/overflow_menu" android:focusable="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/games_overflow_menu_content_description" style="@style/Games.Tile.OverflowMenu" />
+</RelativeLayout>

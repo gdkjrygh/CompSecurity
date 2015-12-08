@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/add_friends_header_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/l_invite_by_email" />
+    <RelativeLayout android:id="@id/auth_button_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/connecting_facebook_layout" android:layout_width="fill_parent" android:layout_height="@dimen/mobile_ff_img_avatar_layout_height" android:layout_marginLeft="@dimen/mobile_ff_button_left_margin" android:layout_marginRight="@dimen/mobile_ff_button_right_margin" android:layout_marginBottom="@dimen/mobile_ff_button_bottom_margin">
+        <RelativeLayout android:id="@id/connecting_facebook_image_layout" android:layout_width="@dimen/mobile_ff_img_avatar_layout_width" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_facebook" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/mobile_ff_choises_text_size" android:textColor="@color/mobile_ff_progress_text_color" android:id="@id/connect_facebook_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mobile_ff_friend_item_layout_margin" android:maxWidth="190.0dip" android:text="@string/mobile_ff_connect_facebook" android:layout_toRightOf="@id/connecting_facebook_image_layout" android:layout_centerVertical="true" />
+        <ProgressBar android:id="@id/connect_facebook_progress" android:visibility="invisible" android:layout_width="@dimen/mobile_ff_progress_layout_width" android:layout_height="@dimen/mobile_ff_progress_layout_height" android:indeterminate="true" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/scan_contacts_layout" android:layout_width="fill_parent" android:layout_height="@dimen/mobile_ff_img_avatar_layout_height" android:layout_marginLeft="@dimen/mobile_ff_button_left_margin" android:layout_marginRight="@dimen/mobile_ff_button_right_margin" android:layout_marginBottom="@dimen/mobile_ff_button_bottom_margin">
+        <RelativeLayout android:id="@id/scan_contacts_image_layout" android:layout_width="@dimen/mobile_ff_img_avatar_layout_width" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_contacts" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/mobile_ff_choises_text_size" android:textColor="@color/mobile_ff_textview_text" android:id="@id/scan_contacts_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mobile_ff_friend_item_layout_margin" android:maxWidth="190.0dip" android:text="@string/mobile_ff_scan_contacts" android:layout_toRightOf="@id/scan_contacts_image_layout" android:layout_centerVertical="true" />
+        <ProgressBar android:id="@id/scan_contacts_progress" android:visibility="invisible" android:layout_width="@dimen/mobile_ff_progress_layout_width" android:layout_height="@dimen/mobile_ff_progress_layout_height" android:indeterminate="true" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/perm_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mobile_ff_button_left_margin" android:layout_marginRight="@dimen/mobile_ff_button_right_margin" android:layout_marginBottom="@dimen/mobile_ff_button_bottom_margin">
+        <View android:layout_width="@dimen/mobile_ff_img_avatar_layout_width" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/mobile_ff_choises_text_size" android:textColor="@color/mobile_ff_list_address_text_color" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mobile_ff_friend_item_layout_margin" android:text="@string/mobile_ff_never_contact_only_friends_without_permission" />
+    </LinearLayout>
+    <com.fitbit.friends.ui.views.NewEmailView_ android:id="@id/new_email_sent_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:id="@id/find_friends_line_header" android:background="@color/light_grey" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/activity_list_line_size" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/add_friends_empty_placeholder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mobile_ff_button_left_margin" android:layout_marginTop="@dimen/mobile_ff_buttons_top_margin" android:layout_marginRight="@dimen/mobile_ff_button_right_margin" android:layout_marginBottom="@dimen/mobile_ff_button_bottom_margin">
+        <View android:layout_width="@dimen/mobile_ff_img_avatar_layout_width" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/mobile_ff_choises_text_size" android:textColor="@color/mobile_ff_list_item_grey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mobile_ff_friend_item_layout_margin" android:text="@string/search_activity_no_results" />
+    </LinearLayout>
+</LinearLayout>

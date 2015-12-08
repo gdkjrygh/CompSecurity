@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/appbkgr" style="@style/FullScreen"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/RelativeLayout1" style="@style/TitleBarRed">
+        <include android:id="@id/titleBarBackground" layout="@layout/bar_blue" />
+        <TextView android:id="@id/title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/coupon_wizard_title" android:layout_centerInParent="true" style="@style/TitleBarText" />
+        <ImageView android:layout_toRightOf="@id/coupon_wizard_activity_rl_cancel_container" style="@style/TitleBarSeparator" />
+        <RelativeLayout android:gravity="center" android:id="@id/coupon_wizard_activity_rl_cancel_container" android:layout_width="80.0dip" android:layout_height="50.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerVertical="true" style="@style/TitleBarAction">
+            <TextView android:textSize="18.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/cancel" android:shadowColor="@android:color/black" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" style="@style/ButtonStyle" />
+        </RelativeLayout>
+        <ImageView android:id="@id/barSeparator" android:layout_toLeftOf="@id/editButton" style="@style/TitleBarSeparator" />
+        <RelativeLayout android:gravity="center" android:id="@id/editButton" android:clickable="true" android:layout_width="60.0dip" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/TitleBarAction">
+            <TextView android:textSize="18.0sp" android:id="@id/editButtonText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="@android:color/black" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" style="@style/ButtonStyle" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/LinearLayout1" android:background="@drawable/list_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/RelativeLayout1" />
+    <ImageView android:id="@id/product_line_view_delete" android:visibility="gone" android:layout_width="30.0dip" android:layout_height="35.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/remove_button" android:scaleType="center" android:layout_below="@id/LinearLayout1" android:layout_alignParentLeft="true" />
+    <RelativeLayout android:id="@id/couponItemLayout" android:background="@drawable/product_background_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:layout_toRightOf="@id/product_line_view_delete" android:layout_below="@id/LinearLayout1">
+        <TextView android:id="@id/coupon_line_view_label" android:paddingLeft="10.0dip" android:paddingRight="8.0dip" style="@style/ListItemLabel" />
+        <TextView android:id="@id/coupon_line_view_description" android:paddingLeft="10.0dip" android:paddingRight="8.0dip" android:layout_below="@id/coupon_line_view_label" style="@style/ListItemDescription" />
+        <TextView android:id="@id/coupon_line_view_price" android:paddingLeft="10.0dip" android:paddingRight="8.0dip" android:layout_below="@id/coupon_line_view_description" style="@style/ListItemDescription" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/LinearLayout2" android:background="@drawable/list_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/couponItemLayout" />
+    <FrameLayout android:id="@id/FrameLayout1" android:clipToPadding="false" android:layout_below="@id/LinearLayout2" style="@style/ListViewFrame">
+        <ListView android:id="@android:id/list" android:padding="10.0dip" android:scrollbars="none" android:fadingEdge="none" android:clipToPadding="false" android:listSelector="#00000000" android:divider="#00000000" android:dividerHeight="0.0dip" style="@style/ListViewNormal" />
+        <TextView android:id="@android:id/empty" android:text="@string/nothing_here" style="@style/NoItems" />
+    </FrameLayout>
+</RelativeLayout>

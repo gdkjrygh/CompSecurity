@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/gradient_dark_orange" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.fitbit.ui.FixedFocusScrollView android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:fillViewport="true">
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/profile_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/profile_title" style="?attr/titleTextViewStyle" />
+            <TextView android:id="@id/profile_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/why_are_we_asking_this" android:drawableRight="@drawable/icon_question" android:drawablePadding="5.0dip" android:layout_below="@id/profile_title" android:layout_centerHorizontal="true" style="?attr/subTitleTextViewStyle" />
+            <TableLayout android:id="@id/profile_table" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/profile_subtitle" style="?attr/tableLayoutStyle">
+                <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/tableRowStyle">
+                    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_name" style="?attr/tableTextViewStyle" />
+                    <com.fitbit.ui.EditText android:id="@id/profile_name" android:layout_width="0.0dip" android:layout_weight="1.0" android:inputType="textCapWords|textNoSuggestions" fitbit:imeOptionsForKindleFire="actionGo" style="?attr/tableEditTextStyle">
+                        <requestFocus />
+                    </com.fitbit.ui.EditText>
+                </TableRow>
+                <include layout="@layout/l_empty_table_row" />
+                <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/tableRowStyle">
+                    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_birthday" style="?attr/tableTextViewStyle" />
+                    <com.fitbit.ui.EditText android:id="@id/profile_birthday" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="?attr/tableEditTextStyle" />
+                </TableRow>
+                <include layout="@layout/l_empty_table_row" />
+                <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/tableRowStyle">
+                    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_height" style="?attr/tableTextViewStyle" />
+                    <com.fitbit.customui.LengthPicker android:id="@id/profile_height" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="?attr/measurablePickerStyle" />
+                </TableRow>
+                <include layout="@layout/l_empty_table_row" />
+                <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/tableRowStyle">
+                    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_weight" style="?attr/tableTextViewStyle" />
+                    <com.fitbit.customui.WeightPicker android:id="@id/profile_weight" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="?attr/measurablePickerStyle" />
+                </TableRow>
+                <include layout="@layout/l_empty_table_row" />
+                <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/tableRowStyle">
+                    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_gender" style="?attr/tableTextViewStyle" />
+                    <com.fitbit.ui.EditText android:id="@id/profile_gender" android:layout_width="0.0dip" android:layout_weight="1.0" style="?attr/tableEditTextStyle" />
+                </TableRow>
+            </TableLayout>
+            <Button android:id="@id/save_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="30.0dip" android:text="@string/save" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </com.fitbit.ui.FixedFocusScrollView>
+</FrameLayout>

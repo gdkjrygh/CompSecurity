@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.jcp.views.TypefaceTextView android:textSize="@dimen/font_size_14" android:gravity="center_vertical" android:id="@id/sortbytitle" android:background="@color/product_filter_type_title_background" android:paddingLeft="@dimen/product_filter_common_left_margin" android:layout_width="wrap_content" android:layout_height="@dimen/sort_by_title_height" android:text="@string/sort_by" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" app:customTypeface="GEORGIA_ITALIC" />
+            <ListView android:id="@id/sort_by_value_listview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/layout_size_4" android:divider="@color/sort_by_value_divider_color" android:dividerHeight="@dimen/layout_size_1" android:layout_below="@id/sortbytitle" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" />
+            <com.jcp.views.TypefaceTextView android:textSize="@dimen/font_size_14" android:gravity="center_vertical" android:id="@id/filtertitle" android:background="@color/product_filter_type_title_background" android:paddingLeft="@dimen/product_filter_common_left_margin" android:layout_width="wrap_content" android:layout_height="@dimen/filter_title_height" android:text="@string/filters" android:layout_below="@id/sort_by_value_listview" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" app:customTypeface="GEORGIA_ITALIC" />
+            <ListView android:id="@id/productfiltersortlv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/layout_size_2" android:layout_below="@id/filtertitle" />
+            <RelativeLayout android:id="@id/progress_layout" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+                <ProgressBar android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="?android:attr/progressBarStyleLarge" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

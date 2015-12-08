@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/content_frame" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="left|center" android:id="@id/tv_like_state" android:background="@drawable/bg_echoes_like_state" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:drawableRight="@drawable/im_arrow_gray" />
+    <com.malinskiy.superrecyclerview.SuperRecyclerView android:gravity="center" android:id="@id/collage_gridview" android:background="@color/fragment_web_collages_background_color" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:layout_below="@id/tv_like_state" app:recyclerClipToPadding="false" app:recyclerPaddingTop="@dimen/fragment_web_collages_grid_view_padding" app:recyclerPaddingLeft="@dimen/fragment_web_collages_grid_view_padding" app:recyclerPaddingRight="@dimen/fragment_web_collages_grid_view_padding" />
+    <com.cardinalblue.android.piccollage.view.NoInternetWarningBar android:id="@id/no_internet_warning_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_like_state" />
+</RelativeLayout>

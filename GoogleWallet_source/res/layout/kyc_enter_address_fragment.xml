@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <TextView android:text="@string/kyc_home_address" style="@style/Subheader" />
+            <LinearLayout android:orientation="vertical" android:layout_marginBottom="@dimen/default_spacing" style="@style/Card">
+                <TextView android:text="@string/kyc_home_address_instruction" style="@style/TextFieldInfo" />
+                <com.google.android.apps.wallet.widgets.address.AddressView android:id="@id/KycAddressView" android:layout_width="fill_parent" style="@style/SingleLineTextField" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:id="@id/KycEnterAddressNextButton" android:layout_marginTop="@dimen/default_spacing" android:text="@string/button_next" style="@style/FlatButton.Docked" />
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

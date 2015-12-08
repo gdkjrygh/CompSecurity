@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/cw_view_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerInParent="true" />
+    <com.netflix.mediaclient.android.widget.IconFontTextView android:textSize="@dimen/cw_play_overlay_size" android:id="@id/cw_view_play_overlay" android:text="@string/icon_font_play_w_ring" android:layout_centerInParent="true" style="@style/IconFontBasic" />
+    <View android:id="@id/cw_view_gradient_overlay" android:background="@drawable/shadow_trans_to_black" android:layout_width="fill_parent" android:layout_height="@dimen/view_gradient_overlay_height" android:layout_alignParentBottom="true" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:layout_gravity="center_vertical" android:id="@id/cw_view_title" android:paddingTop="@dimen/content_padding" android:layout_width="0.0dip" android:layout_marginLeft="@dimen/content_padding" android:singleLine="true" android:layout_weight="1.0" style="@style/PrimaryText.Small" />
+        <ImageView android:id="@id/cw_view_info" android:background="@drawable/selectable_item_background" android:paddingLeft="@dimen/double_padding" android:paddingTop="@dimen/double_padding" android:paddingRight="@dimen/double_padding" android:paddingBottom="@dimen/content_padding" android:focusable="true" android:src="@drawable/ic_cw_info" style="@style/wrap" />
+    </LinearLayout>
+    <ProgressBar android:id="@id/cw_view_video_progress" android:layout_width="fill_parent" android:layout_height="2.0dip" android:max="100" android:indeterminateOnly="false" android:progressDrawable="@drawable/cw_progress_bar" android:layout_alignParentBottom="true" style="?android:attr/progressBarStyleHorizontal" />
+</merge>

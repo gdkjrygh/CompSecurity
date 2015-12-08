@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="#ffffffff" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_jcpCard" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="left|center" android:orientation="vertical" android:id="@id/defaultTitle" android:background="@drawable/grey_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="26.0dip">
+            <com.jcp.views.TypefaceTextView android:textSize="14.75dip" android:textColor="#ff333333" android:id="@id/save_creditcard_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="22.0dip" android:text="@string/default_credit_card_msg" app:customTypeface="LORA_ITALIC" />
+        </LinearLayout>
+        <ListView android:id="@id/lv_jcpCard" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/defaultTitle" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_other_cc" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="left|center" android:orientation="vertical" android:id="@id/additionalTitle" android:background="@drawable/grey_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="26.0dip">
+            <com.jcp.views.TypefaceTextView android:textSize="14.75dip" android:textColor="#ff333333" android:id="@id/save_creditcard_title2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="22.0dip" android:text="@string/additional_credit_cards" app:customTypeface="LORA_ITALIC" />
+        </LinearLayout>
+        <ListView android:id="@id/lv_other_cc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/additionalTitle" />
+        <ImageView android:layout_gravity="center" android:id="@id/iv_noCardToDisplay" android:background="@drawable/no_payment" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="150.0dip" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

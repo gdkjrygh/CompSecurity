@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/scrollView1" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:text="@string/label_goals" style="@style/GoalsGroup" />
+        <FrameLayout android:id="@id/activity" style="@style/GoalsItemFrame">
+            <TextView android:text="@string/label_activity" style="@style/GoalsItem" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/nutrition_and_body" style="@style/GoalsItemFrame">
+            <TextView android:text="@string/nutrition_and_body" style="@style/GoalsItem" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/sleep" style="@style/GoalsItemFrame">
+            <TextView android:text="@string/label_sleep" style="@style/GoalsItem" />
+        </FrameLayout>
+        <TextView android:text="@string/label_location" style="@style/GoalsGroup" />
+        <FrameLayout android:id="@id/cell_timezone_auto" style="@style/GoalsItemFrame">
+            <LinearLayout android:gravity="center_vertical" android:paddingLeft="@dimen/activity_list_horizontal_margin" android:paddingTop="@dimen/settings_item_vertical_space" android:paddingRight="@dimen/activity_list_horizontal_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_item_height_72">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:text="@string/automatic_time_zone" style="@style/GoalsItemMajor" />
+                    <TextView android:text="@string/use_network_provided_time" style="@style/GoalsItemMinor" />
+                </LinearLayout>
+                <Switch android:id="@id/cell_timezone_auto_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </FrameLayout>
+        <com.fitbit.ui.InactiveItemSpinner android:id="@id/spn_timezone" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_item_height_72" android:spinnerMode="dialog" />
+        <FrameLayout android:id="@id/cell_country_auto" style="@style/GoalsItemFrame">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/activity_list_horizontal_margin" android:paddingTop="@dimen/settings_item_vertical_space" android:paddingRight="@dimen/activity_list_horizontal_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip">
+                <TextView android:layout_width="0.0dip" android:text="@string/automatic_location" android:layout_weight="1.0" style="@style/GoalsItemMajor" />
+                <Switch android:id="@id/cell_country_auto_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </FrameLayout>
+        <com.fitbit.ui.InactiveItemSpinner android:id="@id/spn_country" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_item_height_72" android:spinnerMode="dialog" />
+        <com.fitbit.ui.InactiveItemSpinner android:id="@id/spn_food_database" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_item_height_72" android:spinnerMode="dialog" />
+        <FrameLayout android:id="@id/cell_units" style="@style/GoalsItemFrame">
+            <TextView android:text="@string/label_units" style="@style/GoalsItem" />
+        </FrameLayout>
+        <TextView android:text="@string/label_advanced" style="@style/GoalsGroup" />
+        <FrameLayout android:id="@id/cell_personal" style="@style/GoalsItemFrame">
+            <TextView android:text="@string/edit_your_profile" style="@style/GoalsItem" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/cell_push_notifications" style="@style/GoalsItemFrame">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/activity_list_horizontal_margin" android:paddingTop="@dimen/settings_item_vertical_space" android:paddingRight="@dimen/activity_list_horizontal_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="96.0dip">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:layout_width="0.0dip" android:text="@string/push_notifications" android:layout_weight="1.0" style="@style/GoalsItemMajor" />
+                    <Switch android:id="@id/cell_push_notifications_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView android:layout_marginTop="8.0dip" android:text="@string/push_notifications_details" style="@style/GoalsItemMinor" />
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:id="@id/cell_hr_custom_zones" android:layout_marginTop="@dimen/settings_item_vertical_space" android:layout_marginBottom="@dimen/settings_item_vertical_space" style="@style/GoalsItemFrame">
+            <TextView android:text="@string/label_hr_zones" style="@style/GoalsItem" />
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>

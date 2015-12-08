@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:layerType="hardware">
+            <android.support.v4.view.ViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:layerType="hardware" />
+            <LinearLayout android:layout_gravity="bottom|center" android:orientation="vertical" android:id="@id/overlaid_components" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/product_overview_overlaid_start_button_spacing_bottom">
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/product_overview_paging_dots_spacing_bottom">
+                    <ly.kite.widget.PagingDots android:layout_gravity="center" android:id="@id/paging_dots" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </FrameLayout>
+                <ly.kite.widget.CustomTypefaceButton android:id="@id/overlaid_start_button" android:text="@string/product_overview_start_button_text" style="@style/KiteSDKCTAButton.Centered" />
+            </LinearLayout>
+        </FrameLayout>
+        <View android:layout_width="fill_parent" android:layout_height="@dimen/product_overview_control_bar_height" />
+    </LinearLayout>
+    <ly.kite.widget.SlidingOverlayFrame android:id="@id/sliding_overlay_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:elevation="10.0dip" custom:expandDirection="up" custom:alwaysVisibleView="@layout/product_overview_drawer_control_bar" custom:revealedView="@layout/product_overview_drawer_content" />
+</FrameLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/sliding_menu_selector" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/group_row_view" android:background="@drawable/sliding_menu_selector" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/row_icon" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_add_station_tablet" android:contentDescription="@string/cd_menu_row_icon" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/row_title_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="18.0sp" android:textColor="@color/sliding_menu_title_color" android:id="@id/row_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/sliding_menu_line2_color" android:id="@id/row_line2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <com.pandora.android.util.Switch android:layout_gravity="center_vertical" android:id="@id/auto_share_switch" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PSwitch" />
+    </LinearLayout>
+    <ImageView android:id="@id/expanded_group_row_bottom_divider" android:background="@drawable/sliding_menu_expanded_group_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_below="@id/group_row_view" android:layout_alignParentBottom="true" android:contentDescription="@null" />
+    <ImageView android:id="@id/group_row_bottom_divider" android:background="@drawable/sliding_menu_divider" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_below="@id/group_row_view" android:layout_alignParentBottom="true" android:contentDescription="@null" />
+</RelativeLayout>

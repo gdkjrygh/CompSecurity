@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/challenge_type_content" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.fitbit.ui.loadable.LoadablePicassoImageView android:layout_gravity="center_horizontal" android:id="@id/source_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_above="@id/content_without_icon" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/content_without_icon" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <TextView android:textSize="22.0sp" android:textColor="@android:color/white" android:gravity="top|center" android:layout_gravity="center_horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" android:bufferType="spannable" style="@style/Fitbit.Onboarding.TextView" />
+        <TextView android:textSize="18.0sp" android:textColor="@android:color/white" android:gravity="top|center" android:layout_gravity="center_horizontal" android:id="@id/detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" style="@style/Fitbit.Onboarding.TextView" />
+        <LinearLayout android:orientation="vertical" android:id="@id/button_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:gravity="top|center" android:id="@id/rules" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="15.0dip" android:text="@string/rules_button_text" style="@style/SmallAlphaButton" />
+    </LinearLayout>
+</RelativeLayout>

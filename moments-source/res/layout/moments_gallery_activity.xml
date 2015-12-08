@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/gallery_background" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.fbui.draggable.widget.DismissibleFrameLayout android:id="@id/sync_gallery_dismissible_container" android:layout_width="fill_parent" android:layout_height="fill_parent" fb:dragDirections="up|down">
+        <com.facebook.moments.ui.gallery.MomentsPhotoGallery android:id="@id/moments_photo_gallery" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.facebook.fbui.draggable.widget.DismissibleFrameLayout>
+    <FrameLayout android:layout_gravity="bottom|center" android:id="@id/sync_gallery_footer_container" android:background="@drawable/photo_gradient_overlay" android:layout_width="fill_parent" android:layout_height="@dimen/gallery_overlay_height">
+        <com.facebook.moments.ui.gallery.SyncGalleryFooterView android:layout_gravity="bottom" android:id="@id/sync_gallery_footer_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <com.facebook.moments.ui.base.SyncPhotoButton android:layout_gravity="top|right|center" android:id="@id/close_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="@dimen/gallery_close_button_margin" android:layout_marginRight="@dimen/gallery_close_button_margin" android:src="@drawable/x" android:contentDescription="@string/photo_gallery_close" android:layout_marginEnd="@dimen/gallery_close_button_margin" fb:overlayColor="@color/sync_fifty_percent_transparent_black" />
+    <com.facebook.moments.ui.bottomsheet.PhotoActionSheet android:id="@id/photo_action_sheet" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

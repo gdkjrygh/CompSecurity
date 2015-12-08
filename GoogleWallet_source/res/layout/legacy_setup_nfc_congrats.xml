@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_above="@id/ConfirmNfcSetupDone" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:src="@drawable/img_nfc_splash_color_150x118dp" android:contentDescription="@null" style="@style/SplashHeroImage" />
+            <TextView android:text="@string/setup_nfc_congrats_header" style="@style/Title.Splash" />
+            <TextView android:id="@id/ConfirmNfcSetupMessage" android:text="@string/setup_nfc_congrats_message_hce" style="@style/Body.Splash" />
+            <TextView android:paddingTop="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:text="@string/setup_nfc_details" style="@style/Body.Splash" />
+            <TextView android:id="@id/NfcGuideLink" style="@style/Body.Splash" />
+            <TextView android:id="@id/PinTimeoutRecommendationMessage" android:visibility="gone" style="@style/Body.Splash" />
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/ConfirmNfcSetupDone" android:text="@string/button_done" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+</RelativeLayout>

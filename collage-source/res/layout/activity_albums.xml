@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.HackyDrawerLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/cblue_toolbar_with_elevation" />
+        <ViewSwitcher android:id="@id/viewswitcher" android:background="@color/dark_gray_solid" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleLarge" />
+            <ListView android:id="@id/listview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </ViewSwitcher>
+    </LinearLayout>
+</android.support.v4.widget.HackyDrawerLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/CancelPlasticCardButton">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:src="@drawable/img_kyc_caution_large" android:contentDescription="@string/alert_icon_description" style="@style/SplashHeroImage" />
+            <TextView android:text="@string/wallet_card_cancel_warning" style="@style/Title.Splash" />
+            <TextView android:text="@string/wallet_card_cancel_explanation" style="@style/Body.Splash" />
+            <TextView android:text="@string/wallet_card_cancel_reason_question" style="@style/Subheader" />
+            <LinearLayout android:orientation="vertical" style="@style/Card">
+                <com.google.android.apps.wallet.widgets.validation.ValidatedSpinner android:id="@id/CancelCardReasonSpinner" android:padding="@dimen/default_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <EditText android:id="@id/CancelPlasticCardOtherExplanation" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginTop="0.0dip" android:layout_marginRight="@dimen/default_spacing" android:layout_marginBottom="@dimen/default_spacing" android:hint="@string/wallet_card_cancel_reason_other_hint" android:maxLength="2048" style="@style/SingleLineTextField" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/CancelPlasticCardButton" android:text="@string/wallet_card_cancel_button" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+</RelativeLayout>

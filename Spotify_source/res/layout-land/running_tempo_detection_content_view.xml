@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/manual_tempo_content_view" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:paste="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="120.0dip">
+            <TextView android:textSize="60.0dip" android:gravity="center_horizontal" android:id="@id/tempo_detection_value" android:layout_width="120.0dip" android:layout_height="wrap_content" android:text="@string/running_no_tempo_value" android:layout_centerInParent="true" paste:fontAsset="?catFontSemibold" />
+            <TextView android:textAppearance="?pasteTextAppearanceMetadata" android:gravity="center_horizontal" android:layout_width="120.0dip" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/running_tempo_activity_stepsmin" android:layout_above="@id/tempo_detection_value" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/tempo_detection_circle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerInside" android:contentDescription="@null" />
+    </FrameLayout>
+    <RelativeLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textAppearance="?pasteTextAppearanceHeading" android:gravity="center_horizontal" android:id="@id/tempo_detection_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="48.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" />
+        <TextView android:textAppearance="?pasteTextAppearanceHeadingSmall" android:gravity="center_horizontal" android:id="@id/tempo_detection_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:layout_below="@id/tempo_detection_header" android:alpha="0.5" />
+        <Button android:id="@id/skip_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="28.0dip" android:layout_marginTop="28.0dip" android:layout_marginRight="28.0dip" android:layout_marginBottom="56.0dip" android:text="@string/running_detect_skip_tempo_button" android:layout_alignParentBottom="true" style="?pasteDefaultsButtonStyle" />
+    </RelativeLayout>
+</LinearLayout>

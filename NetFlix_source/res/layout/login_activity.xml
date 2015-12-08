@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/login_btn_group" android:background="#44666666" android:padding="@dimen/double_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@id/login_action_btn" android:text="@string/label_sign_in" style="@style/RedButton" />
+        <TextView android:id="@id/login_action_forgot_pass" android:layout_marginLeft="@dimen/forget_pass_margin_left" android:text="@string/label_forgot_your_password" style="@style/SecondaryText.Small" />
+    </LinearLayout>
+    <FrameLayout android:layout_above="@id/login_btn_group" style="@style/match">
+        <ScrollView android:layout_gravity="center" style="@style/wrap">
+            <LinearLayout android:orientation="vertical" android:id="@id/login_form" style="@style/wrap">
+                <EditText android:textSize="@dimen/text_medium" android:id="@id/login_email" android:layout_width="@dimen/login_field_width" android:layout_height="wrap_content" android:hint="@string/email" android:singleLine="true" android:maxLength="50" android:drawablePadding="@dimen/content_padding" android:inputType="textEmailAddress" android:imeOptions="flagNoFullscreen" />
+                <EditText android:textSize="@dimen/text_medium" android:id="@id/login_password" android:layout_width="@dimen/login_field_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/double_padding" android:hint="@string/password" android:singleLine="true" android:maxLength="60" android:drawablePadding="@dimen/content_padding" android:inputType="textPassword" android:imeOptions="actionDone|flagNoFullscreen" android:imeActionLabel="@string/label_sign_in" android:imeActionId="@id/ime_action_login" />
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/login_status_group" android:visibility="gone" style="@style/wrap">
+            <include layout="@layout/loading_inset" />
+            <TextView android:id="@id/login_status_message" android:layout_marginTop="@dimen/content_padding" android:text="@string/login_progress_signing_in" style="@style/PrimaryText.Medium" />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/play_header_spacer" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+    <FrameLayout android:id="@id/games_real_time_waiting_room_activity" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/real_time_waiting_room_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:id="@id/header" layout="@layout/games_real_time_waiting_room_header" />
+            <FrameLayout android:id="@id/players_list_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <ListView android:id="@android:id/list" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/games_list_vertical_padding" android:layout_marginBottom="@dimen/games_list_vertical_padding" style="@style/Games.DarkList" />
+                <TextView android:id="@id/empty_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/games_generic_empty_text" style="@style/Games.EmptyViewText" />
+                <include android:visibility="gone" layout="@layout/games_network_error_message" />
+                <LinearLayout android:orientation="vertical" android:id="@id/loading_view" style="@style/Games.LoadingViewContainer">
+                    <ProgressBar android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Games.ProgressBar.Large" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <FrameLayout android:orientation="vertical" android:id="@id/real_time_waiting_room_overlay" android:background="@color/games_waiting_room_translucent_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:layout_gravity="top|center" android:id="@id/overlay_top_popup" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/games_info_popup" />
+            <com.google.android.gms.common.images.internal.LoadingImageView android:layout_gravity="center" android:id="@id/overlay_game_image" android:layout_width="@dimen/games_waiting_room_overlay_game_icon_size" android:layout_height="@dimen/games_waiting_room_overlay_game_icon_size" />
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/button_bar_container" android:background="@drawable/ab_bottom_play_match_bg" android:layout_height="@dimen/games_button_bar_height" style="@style/Games.ButtonBarContainerTransparent">
+            <FrameLayout android:id="@id/waiting_room_start_now_button_container" android:background="@drawable/games_highlight_overlay" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/waiting_room_start_now_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/games_waiting_room_start_now_icon" />
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/waiting_room_start_now_button_container2" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textColor="@android:color/white" android:gravity="bottom" android:id="@id/waiting_room_start_now_text" android:background="@null" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="0.0dip" android:text="@string/games_waiting_room_start_now" android:layout_weight="0.5" style="@style/Games.ButtonBarButtonLight" />
+                        <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:gravity="top" android:id="@id/waiting_room_start_now_subtext" android:background="@null" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="0.5" style="@style/Games.ButtonBarButtonLight" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

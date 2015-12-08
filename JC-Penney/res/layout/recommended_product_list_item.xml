@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/recommended_product_item" android:background="@color/background_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+        <ImageView android:id="@id/recommended_product_image" android:background="@drawable/image_grid" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" />
+        <com.jcp.views.TypefaceTextView android:textSize="12.0sp" android:textColor="@android:color/black" android:gravity="center_vertical" android:id="@id/recommended_product_name" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" app:customTypeface="GOTHAM_BOOK" />
+        <com.jcp.views.TypefaceTextView android:textSize="15.0sp" android:textColor="@color/jcp_red" android:gravity="center_vertical" android:id="@id/recommended_product_sale_price" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" app:customTypeface="GOTHAM_MEDIUM" />
+        <com.jcp.views.TypefaceTextView android:textSize="12.0sp" android:textColor="@color/gray" android:gravity="center_vertical" android:id="@id/recommended_product_original_price" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" app:customTypeface="GOTHAM_BOOK" />
+        <com.jcp.widget.ProductRating android:id="@id/recommended_product_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <include android:id="@id/personalized_recommendations" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/sign_in_for_personalized_recommendations" />
+</LinearLayout>

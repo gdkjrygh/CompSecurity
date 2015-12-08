@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/FullScreen"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/RelativeLayout1" style="@style/TitleBarRed">
+        <include android:id="@id/titleBarBackground" layout="@layout/bar_blue" />
+        <ImageButton android:id="@id/home_button" android:src="@drawable/ic_title_home" android:contentDescription="@string/main_home_description" style="@style/TitleBarAction" />
+        <ImageView android:id="@id/ImageView1" android:layout_toRightOf="@id/home_button" android:layout_alignBaseline="@id/home_button" style="@style/TitleBarSeparator" />
+        <TextView android:id="@id/menu_list_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/linearLayout1" android:layout_toRightOf="@id/ImageView1" android:layout_alignParentRight="false" android:layout_centerVertical="true" style="@style/TitleBarText" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/linearLayout1" android:layout_width="40.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <ListView android:id="@android:id/list" android:background="@drawable/appbkgr" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingRight="15.0dip" android:paddingBottom="10.0dip" android:scrollbars="none" android:fadingEdge="none" android:clipToPadding="true" android:layoutAnimation="@anim/row_layout_animation" android:listSelector="#00000000" android:divider="#00000000" android:dividerHeight="0.0dip" android:layout_below="@id/RelativeLayout1" android:headerDividersEnabled="false" android:footerDividersEnabled="false" style="@style/ListViewNormal" />
+    <TextView android:id="@android:id/empty" android:text="@string/menu_list_no_items" style="@style/NoItems" />
+    <ImageView android:background="@drawable/black_fade_down" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_below="@id/RelativeLayout1" />
+</RelativeLayout>

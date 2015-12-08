@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/nowplaying_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="@color/nowplaying_background_color" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ImageView android:id="@id/station_art_view" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/empty_art" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/alert_replay_view" android:background="@color/nowplaying_background_color" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="15.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:id="@id/alert_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/replay_static_text" style="@style/songName" />
+            <ImageButton android:layout_gravity="center_horizontal" android:id="@id/replay_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:src="@drawable/replay_button_selector" android:contentDescription="@string/now_playing_track_replay" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/alert_expired_view" android:background="@color/nowplaying_background_color" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="15.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:id="@id/alert_expired_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/station_expired_static_text" style="@style/songName" />
+            <TextView android:gravity="center" android:id="@id/alert_expired_date_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/replay_static_text" style="@style/songName" />
+            <ImageButton android:layout_gravity="center_horizontal" android:id="@id/return_to_stationlist_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:src="@drawable/return_to_stationlist_button_selector" android:contentDescription="@string/cd_return_to_station_list" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/title_bar_gradient" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.15">
+        <View android:layout_width="fill_parent" android:layout_height="40.0dip" />
+    </LinearLayout>
+</LinearLayout>

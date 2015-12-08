@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SurfaceView android:layout_gravity="center" android:id="@id/surface_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ToggleButton android:gravity="center_vertical" android:layout_gravity="top|left|center" android:id="@id/light_switcher" android:background="@drawable/barcode_flash_btn_bg" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_margin="30.0dip" android:checked="false" android:textOn="" android:textOff="" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="9.0" />
+        <com.fitbit.food.barcode.ui.BarcodeCrosshairView_ android:layout_gravity="center" android:id="@id/crosshair" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip" android:layout_weight="11.0" />
+        <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="12.0" />
+        <com.fitbit.food.barcode.ui.BarcodeStatusView_ android:id="@id/status_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

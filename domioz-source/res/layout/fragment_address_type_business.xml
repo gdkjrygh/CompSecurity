@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/addressTypeBusinessLocationContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeBusinessLocation" android:text="@string/form_business_name_text" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeBusinessLocationEntry" android:hint="@string/form_user_hint_optional" android:maxLength="@integer/address_max_length" android:layout_toRightOf="@id/addressTypeBusinessLocation" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeBusinessStreetAddressContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeBusinessStreetAddress" android:text="@string/form_street_address" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeBusinessStreetAddressEntry" android:hint="@string/form_user_hint_required" android:maxLength="@integer/address_max_length" android:layout_toRightOf="@id/addressTypeBusinessStreetAddress" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeBusinessSuitAptContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeBusinessSuitApt" android:text="@string/form_suit_apt_text" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeBusinessSuitAptEntry" android:hint="@string/form_user_hint_optional" android:layout_toRightOf="@id/addressTypeBusinessSuitApt" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeBusinessCityContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeBusinessCity" android:text="@string/city" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeBusinessCityEntry" android:hint="@string/form_user_hint_required" android:layout_toRightOf="@id/addressTypeBusinessCity" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeBusinessStateContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeBusinessState" android:text="@string/form_delivery_state" style="@style/AddressTypeTextStyle" />
+        <Spinner android:id="@id/addressTypeBusinessStateSpinner" android:background="@color/bg_form_text" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" android:layout_marginLeft="@dimen/label_margin_left" android:layout_toRightOf="@id/addressTypeBusinessState" android:layout_centerVertical="true" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeBusinessZipContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeBusinessZip" android:text="@string/form_zip_code_text" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeBusinessZipEntry" android:hint="@string/form_user_hint_required" android:maxLength="@integer/address_zip_size" android:layout_toRightOf="@id/addressTypeBusinessZip" android:inputType="number" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeBusinessDeliveryInstContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeBusinessDeliveryInst" android:text="@string/form_delivery_inst" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeBusinessDeliveryInstEntry" android:hint="@string/form_user_hint_optional" android:singleLine="true" android:maxLength="@integer/address_delivery_inst_size" android:layout_toRightOf="@id/addressTypeBusinessDeliveryInst" android:imeOptions="actionDone|flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+    </RelativeLayout>
+</LinearLayout>

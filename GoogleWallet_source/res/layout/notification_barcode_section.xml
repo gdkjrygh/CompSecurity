@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="192.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/BarcodeBitmap" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textAppearance="@style/Text_Body" android:layout_gravity="center_horizontal" android:id="@id/BarcodeValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/notification_barcode_text_padding" />
+        <TextView android:textAppearance="@style/Text_Title" android:gravity="center" android:id="@id/NoBarcodeMsg" android:visibility="gone" style="@style/Body" />
+        <TextView android:textAppearance="@style/Text_Subhead3" android:layout_gravity="center_horizontal" android:id="@id/WobDescription" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/notification_barcode_text_padding" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/FooterSection" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_gravity="center_vertical" android:id="@id/Details" android:paddingLeft="@dimen/default_spacing" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/one_view_notification_details_link" android:layout_weight="1.0" style="@style/Body.Action" />
+        <ImageView android:id="@id/PrevButton" android:background="@drawable/card_list_rippleable" android:layout_width="@dimen/minimum_touch_target" android:layout_height="@dimen/minimum_touch_target" android:src="@drawable/quantum_ic_keyboard_arrow_left_googblue_36" android:scaleType="center" android:contentDescription="@string/one_view_notification_previous_button" />
+        <TextView android:textAppearance="@style/Text_Body" android:layout_gravity="center_vertical" android:id="@id/NavigationProgress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/NextButton" android:background="@drawable/card_list_rippleable" android:layout_width="@dimen/minimum_touch_target" android:layout_height="@dimen/minimum_touch_target" android:src="@drawable/quantum_ic_keyboard_arrow_right_googblue_36" android:scaleType="center" android:contentDescription="@string/one_view_notification_next_button" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:src="@drawable/img_kyc_caution_large" android:contentDescription="@null" style="@style/SplashHeroImage" />
+            <TextView android:text="@string/recurring_topup_error_header" style="@style/Title.Splash" />
+            <TextView android:id="@id/ErrorDescription" style="@style/Body.Splash" />
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/CancelRecurringTopup" android:text="@string/recurring_topup_error_ok" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+</RelativeLayout>

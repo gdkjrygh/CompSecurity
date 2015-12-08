@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" style="@style/ReceiptDetailTokenSection">
+        <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/PurchaseRecordSectionHeader" android:paddingBottom="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Body" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/PurchaseRecordSectionContentText" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Font_Paragraph05" />
+                <TextView android:id="@id/PurchaseRecordSectionRightContentText" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Font_Paragraph05" />
+            </LinearLayout>
+            <TextView android:id="@id/PurchaseRecordSectionFooter" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Body" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="top" android:id="@id/PurchaseRecordSectionContentImg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="@dimen/receipt_detail_token_logo_width" android:maxHeight="@dimen/receipt_detail_token_logo_height" />
+    </LinearLayout>
+    <View android:id="@id/PurchaseRecordSectionThickDivider" android:visibility="gone" android:layout_marginTop="@dimen/narrow_spacing" android:layout_marginBottom="@dimen/narrow_spacing" style="@style/HorizontalDivider" />
+    <View android:id="@id/PurchaseRecordSectionThinDivider" android:visibility="gone" android:layout_marginTop="@dimen/narrow_spacing" android:layout_marginBottom="@dimen/narrow_spacing" style="@style/HorizontalDivider" />
+</LinearLayout>

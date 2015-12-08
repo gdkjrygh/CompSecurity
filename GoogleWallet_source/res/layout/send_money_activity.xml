@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/ButtonBar" android:layout_alignParentTop="true"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:wallet="http://schemas.android.com/apk/res/com.google.android.apps.walletnfcrel">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/P2pHeaderContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <TextView android:id="@id/RecipientName" android:padding="@null" android:paddingLeft="@dimen/default_spacing" android:paddingTop="0.0dip" android:paddingRight="@dimen/default_spacing" android:paddingBottom="0.0dip" android:layout_marginTop="@dimen/p2p_header_offset" style="@style/Title.Splash" />
+        <TextView android:id="@id/RecipientEmail" android:padding="@null" android:paddingLeft="@dimen/default_spacing" android:paddingTop="0.0dip" android:paddingRight="@dimen/default_spacing" android:paddingBottom="12.0dip" android:layout_below="@id/RecipientName" style="@style/Body.Splash" />
+        <TextView android:gravity="center_horizontal" android:id="@id/RequestMemo" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:visibility="gone" android:layout_below="@id/RecipientEmail" style="@style/MemoText" />
+        <TextView android:gravity="center" android:id="@id/UnknownContactBar" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:visibility="gone" android:text="@string/send_money_unknown_contact_warning" android:layout_below="@id/RequestMemo" style="@style/ButterBar" />
+        <View android:id="@id/Divider1" android:layout_below="@id/RequestMemo" style="@style/HorizontalDivider" />
+        <com.google.android.apps.wallet.widgets.money.MoneyInputSection android:id="@id/MoneyInputSection" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/Divider1" />
+        <View android:id="@id/Divider2" android:layout_below="@id/MoneyInputSection" style="@style/HorizontalDivider" />
+        <EditText android:id="@id/Memo" android:padding="@dimen/default_spacing" android:hint="@string/send_money_memo" android:singleLine="true" android:layout_below="@id/Divider2" android:inputType="textCapSentences|textAutoCorrect|textAutoComplete" style="@style/MemoField" />
+    </RelativeLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

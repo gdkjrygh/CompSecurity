@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.HackyDrawerLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/HeaderBar">
+            <include layout="@layout/cblue_toolbar" />
+            <com.google.samples.apps.iosched.ui.widget.SlidingTabLayout android:id="@id/indicator" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <android.support.v4.view.HackyViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</android.support.v4.widget.HackyDrawerLayout>

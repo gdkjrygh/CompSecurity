@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/layout_border" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/layout_size_10" android:layout_marginRight="@dimen/layout_size_10"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/jcp_reward_certificate_common" />
+    <LinearLayout android:orientation="vertical" android:id="@id/rewards_item_bottom_section" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/layout_size_20" android:layout_marginRight="@dimen/layout_size_20">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/layout_size_10">
+                <com.jcp.views.TypefaceTextView android:textAppearance="?android:textAppearanceMedium" android:textSize="@dimen/font_size_15" android:textColor="@color/rewards_perk_tit_color" android:id="@id/rewarddesctxt2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/reward_code" android:layout_weight="0.5" app:customTypeface="GOTHAM_BOOK" />
+                <com.jcp.views.TypefaceTextView android:textAppearance="?android:textAppearanceMedium" android:textSize="@dimen/font_size_15" android:textColor="@color/rewards_perk_tit_color" android:gravity="right" android:id="@id/jcpennyrewardsavl2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/lorem_rewards_code" android:layout_weight="0.5" app:customTypeface="GOTHAM_MEDIUM" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/layout_size_5">
+                <com.jcp.views.TypefaceTextView android:textAppearance="?android:textAppearanceMedium" android:textSize="@dimen/font_size_15" android:textColor="@color/rewards_perk_tit_color" android:id="@id/jcpennyrewardsptsavl" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/serial_no" android:layout_weight="0.5" app:customTypeface="GOTHAM_BOOK" />
+                <com.jcp.views.TypefaceTextView android:textAppearance="?android:textAppearanceMedium" android:textSize="@dimen/font_size_15" android:textColor="@color/rewards_perk_tit_color" android:gravity="right" android:id="@id/reward_sl_no" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/lorem_rewards_serial_no" android:layout_weight="0.5" app:customTypeface="GOTHAM_MEDIUM" />
+            </LinearLayout>
+            <ImageView android:id="@id/rewardbarcodeimg" android:layout_width="fill_parent" android:layout_height="@dimen/layout_size_40" android:layout_marginTop="@dimen/layout_size_25" android:adjustViewBounds="true" />
+            <com.jcp.views.TypefaceTextView android:textSize="@dimen/font_size_10" android:textColor="@color/rewards_perk_tit_color" android:layout_gravity="center" android:id="@id/rewardbarcodenumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/layout_size_2" android:text="@string/lorem_rewards_barcode_no" app:customTypeface="GOTHAM_BOLD_OTF" />
+        </LinearLayout>
+        <View android:background="@color/view_color" android:layout_width="fill_parent" android:layout_height="@dimen/layout_size_2" android:layout_marginTop="@dimen/layout_size_10" />
+        <com.jcp.views.TypefaceTextView android:textSize="@dimen/font_size_15" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/easyscanlayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/layout_size_10" android:layout_marginBottom="@dimen/layout_size_10" android:text="@string/easy_scan_mode" android:drawableLeft="@drawable/scan" android:drawableStart="@drawable/scan" app:customTypeface="GOTHAM_BOOK" />
+    </LinearLayout>
+</LinearLayout>

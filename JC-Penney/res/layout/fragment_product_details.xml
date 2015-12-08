@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/background_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.jcp.views.ScrollViewWithStopMonitor android:id="@id/product_details_scroll_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/select_options_container">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <android.support.v4.view.ViewPager android:layout_gravity="center" android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="300.0dip" android:overScrollMode="never" />
+                <CheckBox android:id="@id/save" android:tag="@string/unchecked" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:button="@drawable/save_for_later_checkbox_selector" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+                <ImageView android:id="@id/close_video" android:visibility="gone" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_margin="5.0dip" android:src="@drawable/close_black" android:scaleType="centerInside" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/newImage" android:background="#ff333333" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/new_product_details" android:layout_alignBaseline="@id/viewpager" android:layout_alignBottom="@id/viewpager" android:layout_alignParentLeft="true" />
+                <com.jcp.views.CarouselPageIndicator android:id="@id/pageindicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="55.0dip" android:layout_marginRight="55.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="bottom|center" android:orientation="vertical" android:id="@id/product_details_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:id="@id/colorlayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <include layout="@layout/full_width_gray_horizontal_line" />
+                    <HorizontalScrollView android:id="@id/horizontal_scroll_view_id_01" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="30.0dip" />
+                    <include layout="@layout/full_width_gray_horizontal_line" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+                    <com.jcp.views.TypefaceTextView android:textSize="16.0sp" android:textColor="#ff7a7a7a" android:id="@id/productname" android:layout_width="wrap_content" android:layout_height="wrap_content" app:customTypeface="GOTHAM_BOOK" />
+                    <com.jcp.views.TypefaceTextView android:textSize="16.0sp" android:textColor="@color/jcp_red" android:id="@id/marketing_label" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" app:customTypeface="GOTHAM_BOLD" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/salespricelayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.jcp.views.TypefaceTextView android:textSize="16.0sp" android:textColor="#ffcc0000" android:id="@id/sale" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" app:customTypeface="GOTHAM_BOLD" />
+                        <com.jcp.views.TypefaceTextView android:textSize="16.0sp" android:textColor="#ff7a7a7a" android:id="@id/salepercentage" android:layout_width="wrap_content" android:layout_height="wrap_content" app:customTypeface="GOTHAM_BOOK" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/originalpricelayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.jcp.views.TypefaceTextView android:textSize="16.0sp" android:textColor="#ff7a7a7a" android:id="@id/originalprice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" app:customTypeface="GOTHAM_BOOK" />
+                        <com.jcp.views.TypefaceTextView android:textSize="16.0sp" android:textColor="#ff7a7a7a" android:id="@id/originalpricepercentage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" app:customTypeface="GOTHAM_BOOK" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/rating_bar_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.jcp.widget.ProductRating android:id="@id/product_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+                        <ImageView android:id="@id/shareIcon" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/ic_action_share" />
+                    </LinearLayout>
+                </LinearLayout>
+                <include layout="@layout/full_width_gray_horizontal_line" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.jcp.views.TypefaceTextView android:textSize="15.0sp" android:textColor="#ff2f2f2f" android:gravity="left|center" android:id="@id/productwebId" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="" app:customTypeface="GOTHAM_BOLD" />
+                <com.jcp.views.TypefaceTextView android:textSize="15.0sp" android:textColor="#ff737373" android:gravity="left|center" android:id="@id/productDescriptions" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="15.0dip" android:text="" app:customTypeface="GOTHAM_BOOK" />
+                <ImageView android:layout_gravity="top|center" android:id="@id/arrow" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+                <com.jcp.views.TypefaceTextView android:textSize="15.0sp" android:textColor="#ff737373" android:gravity="left|center" android:id="@id/tags" android:focusable="false" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="15.0dip" android:text="Tags Description" android:drawableLeft="@drawable/info_icon" android:drawablePadding="5.0dip" app:customTypeface="GOTHAM_BOOK" />
+                <View android:id="@id/view1" android:background="#ff808080" android:layout_width="wrap_content" android:layout_height="1.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="5.0dip" />
+                <LinearLayout android:orientation="vertical" android:id="@id/knowledgeAssistantslayout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <RelativeLayout android:id="@id/knowledgeAssistants" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="15.0sp" android:textColor="#ff737373" android:id="@id/knowledgeAssistantstext" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="13.0dip" android:layout_marginTop="5.0dip" android:text="" android:singleLine="true" android:layout_toLeftOf="@id/nextarrow" android:layout_centerVertical="true" />
+                        <ImageView android:id="@id/nextarrow" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="18.0dip" android:src="@drawable/caricon_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                    <View android:id="@id/view2" android:background="#ff808080" android:layout_width="wrap_content" android:layout_height="1.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/WhiteGlovedDeliveryLayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="15.0sp" android:textColor="#ff2f2f2f" android:gravity="left|center" android:id="@id/WhiteGlovedtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="5.0dip" android:text="White Glove Delivery Item" />
+                    <TextView android:textSize="15.0sp" android:textColor="#ff737373" android:gravity="left|center" android:id="@id/WhiteGlovedtext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="This Item includes White Glove Delivery, our highest level of service. We unpack and assemble your item in any room, in any configuration, and remove all shipping and packing material when we leave." />
+                    <View android:id="@id/view3" android:background="#ff808080" android:layout_width="wrap_content" android:layout_height="1.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:layout_below="@id/textView1" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.jcp.views.HorizontalListOfRecommendedProducts android:id="@id/recommendation_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ListView android:id="@id/reviews_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.jcp.views.ScrollViewWithStopMonitor>
+    <com.jcp.widget.BackToTopButton android:id="@id/back_to_top_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_above="@id/select_options_container" android:layout_alignParentRight="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/select_options_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:id="@id/select_options_buttons" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <com.jcp.views.TypefaceButton android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/best_matches_button" android:background="@color/button_background_gray" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/matching_item" android:singleLine="true" android:layout_weight="1.0" app:customTypeface="GOTHAM_BOLD" />
+            <com.jcp.views.TypefaceButton android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/select_options_button" android:background="@color/jcp_red" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/select_options" android:singleLine="true" android:layout_weight="1.0" app:customTypeface="GOTHAM_BOLD" />
+        </LinearLayout>
+        <include layout="@layout/selectionoptions" />
+    </LinearLayout>
+</RelativeLayout>

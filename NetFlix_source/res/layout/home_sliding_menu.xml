@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="left" android:orientation="vertical" android:id="@id/home_sliding_menu_content" android:background="@color/home_sliding_menu_bg" android:layout_width="@dimen/sliding_menu_width" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/home_sliding_menu_profiles_group" android:background="@drawable/profile_row_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/home_sliding_menu_profiles_switch_icon" android:padding="@dimen/double_padding" android:layout_width="@dimen/sliding_menu_profiles_row_height" android:layout_height="@dimen/sliding_menu_profiles_row_height" android:src="@drawable/ic_change_profile" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/home_sliding_menu_profiles_img" android:padding="@dimen/content_padding" android:layout_width="@dimen/sliding_menu_profiles_row_height" android:layout_height="@dimen/sliding_menu_profiles_row_height" android:src="@drawable/boxart_placeholder" android:scaleType="fitXY" android:layout_alignParentLeft="true" />
+        <TextView android:ellipsize="end" android:id="@id/home_sliding_menu_profiles_title" android:text="@string/label_loading_" android:singleLine="true" android:layout_toLeftOf="@id/home_sliding_menu_profiles_switch_icon" android:layout_toRightOf="@id/home_sliding_menu_profiles_img" android:layout_centerVertical="true" style="@style/PrimaryText.Medium" />
+        <View android:layout_below="@id/home_sliding_menu_profiles_img" style="@style/HorizontalDivider" />
+    </RelativeLayout>
+    <ViewStub android:id="@id/home_sliding_menu_stub" android:layout="@layout/home_sliding_menu_row" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout style="@style/match">
+        <include layout="@layout/loading_and_error_inset" />
+        <ListView android:id="@id/home_sliding_menu_list_view" android:divider="@null" style="@style/NetflixListView" />
+    </FrameLayout>
+</LinearLayout>

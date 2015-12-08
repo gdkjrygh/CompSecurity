@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aviary.android.feather.sdk.widget.IAPDialogList android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@android:color/transparent" android:divider="@null" android:dividerHeight="0.0dip" android:choiceMode="singleChoice" />
+        <include android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" layout="@layout/aviary_iap_download_error_message" />
+        <include android:id="@id/aviary_iap_list_progress" layout="@layout/aviary_progress_medium_inverse" />
+    </RelativeLayout>
+    <View android:background="@color/aviary_iap_list_divider" android:layout_width="fill_parent" android:layout_height="@dimen/aviary_iap_list_divider_height" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/restore_all_container" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0">
+        <com.aviary.android.feather.sdk.widget.AviaryTextView android:textAppearance="?aviaryTextAppearanceMediumInverted" android:gravity="center" android:id="@id/aviary_summary" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/feather_iap_restore_all_summary" />
+        <com.aviary.android.feather.sdk.widget.AviaryButton android:textAppearance="?aviaryTextAppearanceSmall" android:textColor="@color/aviary_iap_restore_all_button_color" android:id="@id/aviary_restore_all_button" android:paddingLeft="8.0dip" android:paddingTop="10.0dip" android:paddingRight="8.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feather_iap_restore_all" style="@style/AviaryWidget.Button.LightGray" />
+    </LinearLayout>
+</com.aviary.android.feather.sdk.widget.IAPDialogList>

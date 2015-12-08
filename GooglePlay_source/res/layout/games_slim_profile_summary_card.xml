@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@id/games_slim_profile_summary_card" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/games_onyx_card_external_margin" android:foreground="?selectableItemBackground" card_view:cardCornerRadius="@dimen/games_onyx_card_corner_radius"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/player_banner_container" android:layout_width="fill_parent" android:layout_height="@dimen/games_card_slim_profile_top_height" android:layout_alignParentTop="true">
+            <View android:id="@id/player_banner_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:id="@id/player_banner" android:background="@drawable/banner_bg_default_games_profile_tiled" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <View android:id="@id/circle_overlap" android:layout_width="fill_parent" android:layout_height="@dimen/games_card_slim_profile_circle_overlap" android:layout_alignTop="@id/player_info_container" />
+        <com.google.android.gms.games.ui.widget.MetagameAvatarView android:id="@id/avatar_container" android:layout_width="@dimen/games_metagame_avatar_slim_profile_width" android:layout_height="@dimen/games_metagame_avatar_slim_profile_height" android:layout_alignBottom="@id/circle_overlap" android:layout_centerHorizontal="true" />
+        <RelativeLayout android:id="@id/player_info_container" android:padding="@dimen/games_onyx_internal_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/player_banner_container">
+            <TextView android:textStyle="bold" android:ellipsize="end" android:id="@id/player_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/PlayClusterTitle" />
+            <TextView android:ellipsize="end" android:gravity="right" android:layout_gravity="right" android:id="@id/next_level" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/player_name" android:layout_alignBaseline="@id/player_name" android:layout_alignParentRight="true" style="@style/PlayCardSubtitle" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/player_subtitle_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/player_name">
+                <TextView android:ellipsize="end" android:id="@id/player_nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/PlayCardSubtitle" />
+                <View android:id="@id/nickname_and_progress_bar_separator" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <ProgressBar android:id="@id/next_level_progress" android:background="@color/games_card_progress_unfilled" android:layout_width="@dimen/games_card_profile_level_progress_width" android:layout_height="@dimen/games_card_profile_level_progress_height" style="@style/Games.XPProgressBar" />
+            </LinearLayout>
+        </RelativeLayout>
+        <FrameLayout android:paddingBottom="@dimen/games_onyx_action_intra_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+            <TextView android:textColor="@color/play_games_theme_status_bar" android:gravity="center" android:id="@id/large_primary_label" android:background="@drawable/games_highlight_overlay" android:paddingLeft="@dimen/games_onyx_got_it_action_horiz_padding" android:paddingRight="@dimen/games_onyx_got_it_action_horiz_padding" android:layout_width="wrap_content" android:layout_height="@dimen/games_onyx_got_it_action_button_height" style="@style/PlayCardAction" />
+        </FrameLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/bottom_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/player_info_container">
+            <TextView android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/congrats_level" android:layout_width="@dimen/games_card_profile_level_size" android:layout_height="@dimen/games_card_profile_level_size" android:layout_marginLeft="@dimen/games_onyx_internal_padding" android:layout_weight="0.0" style="@style/PlayCondensedText" />
+            <TextView android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/congrats_message" android:padding="@dimen/games_card_profile_message_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_weight="1.0" style="@style/PlayCardReason" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:custom="http://schemas.android.com/apk/res/com.konylabs.capitalone">
+    <LinearLayout android:orientation="horizontal" android:id="@id/unauthQuick" android:background="@drawable/header_bg" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/capital_one_home">
+        <com.EnterpriseMobileBanking.Plugins.Components.QuickButton android:id="@id/quickNav_atm" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" custom:src="@drawable/header_pin" custom:text="@string/quick_nav_1" />
+        <com.EnterpriseMobileBanking.Plugins.Components.QuickButton android:id="@id/quickNav_products" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" custom:src="@drawable/header_bag" custom:text="@string/quick_nav_2" />
+        <com.EnterpriseMobileBanking.Plugins.Components.QuickButton android:id="@id/quickNav_contact" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" custom:src="@drawable/header_phone" custom:text="@string/quick_nav_3" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/lobContainer" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/unauthQuick">
+        <include android:id="@id/lob1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/lobswipe" />
+        <include android:id="@id/lob2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_below="@id/lob1" layout="@layout/lobswipe" />
+        <include android:id="@id/lob3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_below="@id/lob2" layout="@layout/lobswipe" />
+    </LinearLayout>
+    <View android:background="@drawable/drop_shadow_header" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_below="@id/unauthQuick" />
+</RelativeLayout>

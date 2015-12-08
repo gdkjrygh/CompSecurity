@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.fitbit.FitbitMobile" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-1624448">
+    <permission android:name="com.fitbit.FitbitMobile.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="com.fitbit.FitbitMobile.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="htc.socialmanager.permission.USE_SOCIALSERVICE"/>
+    <uses-permission android:name="htc.socialmanager.permission.READ_SOCIAL_DATABASE"/>
+    <uses-permission android:name="htc.socialmanager.permission.WRITE_SOCIAL_DATABASE"/>
+    <uses-permission android:name="htc.socialmanager.permission.USE_SOCIALCOMPONENT"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.htc.permission.APP_DEFAULT"/>
+    <uses-permission android:name="com.htc.sense.hsp.activeservice.BIND_ACTIVE_SERVICE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.fitbit.FitBitApplication" android:theme="@style/Theme.Fitbit.Teal">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCTYIpQi6kwi2Fw6yEskBVS25-lZ0iZ-zU"/>
+        <meta-data android:name="opensense" android:resource="@xml/htc_blinkfeed"/>
+        <meta-data android:name="com.mixpanel.android.MPConfig.DisableFallback" android:value="true"/>
+        <meta-data android:name="com.mixpanel.android.MPConfig.DecideFallbackEndpoint" android:value="https://decide.mixpanel.com/decide"/>
+        <meta-data android:name="com.mixpanel.android.MPConfig.AutoShowMixpanelUpdates" android:value="false"/>
+        <meta-data android:name="com.mixpanel.android.MPConfig.DisableGestureBindingUI" android:value="true"/>
+        <meta-data android:name="com.mixpanel.android.MPConfig.DisableEmulatorBindingUI" android:value="true"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationName" android:value="@string/app_name"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:immersive="true" android:launchMode="singleTask" android:name="com.fitbit.onboarding.landing.LandingActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Onboarding">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:pathPrefix="com.fitbit.FitbitMobile"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="fitbit" android:pathPrefix="/challenges/" android:scheme="fitbit"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.fitbit.com" android:pathPrefix="/friendDeepLinkingInvitation" android:scheme="http"/>
+                <data android:host="www.fitbit.com" android:pathPrefix="/friendDeepLinkingInvitation" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.onboarding.login.LoginActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Onboarding" android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.onboarding.password.PasswordRecoveryActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Onboarding" android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.onboarding.setup.CheckDeviceActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Onboarding"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.onboarding.profile.AboutYouActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Onboarding" android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.onboarding.landing.NetworkAccessActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Onboarding"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.onboarding.landing.SensitiveDataAccessActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Onboarding"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/label_home" android:launchMode="singleTop" android:name="com.fitbit.home.ui.HomeActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Home">
+            <meta-data android:name="fitbit.HOME_AS_UP" android:value="false"/>
+        </activity>
+        <activity android:label="@string/personal_info" android:name="com.fitbit.settings.ui.PersonalInformationActivity"/>
+        <activity android:icon="@drawable/fitbit_diamond" android:label="@string/account" android:name="com.fitbit.settings.ui.ProfileActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal.NoWindowContentOverlay"/>
+        <activity android:icon="@drawable/fitbit_diamond" android:label="@string/label_units" android:name="com.fitbit.settings.ui.UnitsPickActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/label_goals" android:name="com.fitbit.settings.ui.GoalsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/select_plan_intensity" android:launchMode="singleTop" android:name="com.fitbit.goals.ui.SelectPlanIntensityActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/two_things_make_up_your_food_goal" android:launchMode="singleTop" android:name="com.fitbit.goals.ui.CaloriesEatenVsBurnedActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.goals.ui.CreateWeightGoalActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal" android:windowSoftInputMode="adjustResize"/>
+        <activity android:icon="@drawable/fitbit_diamond" android:label="@string/exercise" android:name="com.fitbit.runtrack.ui.ExerciseListActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue"/>
+        <activity android:label="@string/exercise" android:name="com.fitbit.runtrack.ui.GpsModal" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.NoTitleBar.FullScreen"/>
+        <activity android:exported="true" android:icon="@drawable/fitbit_diamond" android:immersive="true" android:label="@string/running" android:name="com.fitbit.runtrack.ui.RecordExerciseSessionActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.NoTitleBar.FullScreen"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/exercise" android:name="com.fitbit.runtrack.ui.ExerciseDetailsActivity" android:parentActivityName="com.fitbit.runtrack.ui.ExerciseListActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue" android:windowSoftInputMode="adjustResize">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.fitbit.runtrack.ui.ExerciseListActivity"/>
+        </activity>
+        <activity android:label="@string/sharing_exercise" android:name="com.fitbit.runtrack.ui.ShareExerciseCameraActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue"/>
+        <activity android:label="@string/photos" android:name="com.fitbit.runtrack.ui.ShareExerciseGalleryActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue"/>
+        <activity android:label="@string/edit_photo" android:name="com.fitbit.runtrack.ui.ShareExerciseActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue"/>
+        <activity android:icon="@drawable/fitbit_diamond" android:label="@string/track" android:name="com.fitbit.runtrack.ui.RecordExerciseActivity" android:parentActivityName="com.fitbit.runtrack.ui.ExerciseListActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.fitbit.runtrack.ui.ExerciseListActivity"/>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/two_things_make_up_your_food_goal" android:launchMode="singleTop" android:name="com.fitbit.goals.ui.FoodGoalActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/plan_summary" android:launchMode="singleTop" android:name="com.fitbit.goals.ui.PlanSummaryActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/label_food" android:name="com.fitbit.food.ui.landing.FoodLoggingLandingActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue.GrayHeaders"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/log_food" android:name="com.fitbit.ui.choose.food.ChooseFoodActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/add_food_title" android:name="com.fitbit.food.ui.logging.LogFoodActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/add_meal_title" android:name="com.fitbit.food.ui.logging.LogMealActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/food_logging_create_food" android:name="com.fitbit.food.ui.CustomFoodActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/food_logging_quick_calorie_add" android:name="com.fitbit.food.ui.logging.QuickCalorieAddActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/food_logging_nutrition_facts_label" android:name="com.fitbit.food.ui.logging.NutritionalFactsActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/barcode_scanner" android:name="com.fitbit.food.barcode.ui.BarcodeScannerActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.NoTitleBar.FullScreen"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/food_log_label" android:name="com.fitbit.food.ui.daydetails.FoodLoggingDayDetailsActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue.GrayHeaders"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/log_activity" android:name="com.fitbit.activity.ui.activitylog.UpdateRecordedExerciseActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.activity.ui.FitbitActivityChartActivity" android:screenOrientation="sensorLandscape" android:theme="@style/Theme.Fitbit.Teal" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/label_log_weight" android:name="com.fitbit.weight.ui.WeightLogActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/label_weight" android:name="com.fitbit.weight.ui.WeightChartActivity" android:screenOrientation="sensorLandscape" android:theme="@style/Theme.Fitbit.Teal.NoTitleBar" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:icon="@drawable/fitbit_diamond" android:label="@string/label_water" android:name="com.fitbit.water.ui.WaterListActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Blue"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/water_entries_for_the_day" android:name="com.fitbit.water.ui.EditWaterEntriesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Blue"/>
+        <activity android:label="@string/add_water_log" android:name="com.fitbit.water.ui.AddWaterActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Blue"/>
+        <activity android:configChanges="keyboard|keyboardHidden" android:name="com.fitbit.water.ui.charts.WaterChartActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.NoTitleBar.TranslucentDecor.Blue"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/label_sleep" android:name="com.fitbit.sleep.ui.landing.SleepLoggingLandingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Violet"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/label_sleep" android:name="com.fitbit.sleep.ui.details.SleepLoggingDetailsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Violet"/>
+        <activity android:configChanges="keyboard|keyboardHidden" android:name="com.fitbit.sleep.ui.charts.SleepChartActivity" android:screenOrientation="sensor" android:theme="@style/Theme.Fitbit.NoTitleBar.TranslucentDecor.Violet"/>
+        <activity android:configChanges="keyboard|keyboardHidden" android:name="com.fitbit.sleep.ui.intraday.SleepIntradayChartActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.NoTitleBar.TranslucentDecor.Violet"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/log_sleep" android:name="com.fitbit.sleep.ui.LogSleepActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Violet" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.sleep.ui.SleepRecordActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.NoTitleBar.TranslucentDecor"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/ic_remove_light" android:label="@string/whats_new" android:name="com.fitbit.sleep.ui.landing.WhatsNew" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Violet.NoTitleBar"/>
+        <activity android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.device.ui.TrackerDetailsActivity_" android:screenOrientation="portrait"/>
+        <activity android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.device.ui.ScaleDetailsActivity_" android:screenOrientation="portrait"/>
+        <activity android:icon="@drawable/fitbit_diamond" android:label="@string/label_exercise_shortcuts" android:name="com.fitbit.device.ui.ExerciseOptionsActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/label_hr_zones" android:name="com.fitbit.settings.ui.HeartRateCustomZoneActivity_" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.device.ui.GuideActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.device.ui.setup.choose.ChooseTrackerActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Onboarding"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.device.ui.setup.choose.ConfirmDeviceActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Onboarding"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.device.ui.setup.replace.ConfirmReplaceDeviceActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Onboarding"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.device.ui.setup.replace.ConfirmReplacePairedDeviceActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Onboarding"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.device.ui.setup.replace.ReplaceDeviceActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Onboarding"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.device.ui.setup.choose.ExplainTrackersActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Onboarding"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/title_silent_alarms" android:name="com.fitbit.alarm.ui.AlarmActivity_" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/title_silent_alarms" android:name="com.fitbit.alarm.ui.ChooseAlarmActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal.NoWindowContentOverlay"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/label_new_silent_alarm" android:name="com.fitbit.alarm.ui.LogAlarmActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal"/>
+        <activity android:icon="@drawable/fitbit_diamond" android:label="@string/label_new_silent_alarm" android:name="com.fitbit.alarm.ui.AlarmHelpFirstActivity_" android:screenOrientation="portrait"/>
+        <activity android:icon="@drawable/fitbit_diamond" android:label="@string/label_new_silent_alarm" android:name="com.fitbit.alarm.ui.AlarmHelpSecondActivity_" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/help" android:name="com.fitbit.settings.ui.HelpPageActivity" android:screenOrientation="portrait"/>
+        <activity android:icon="@drawable/fitbit_diamond" android:label="@string/label_find_friends" android:name="com.fitbit.friends.ui.AddFriendsActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:launchMode="singleTop" android:name="com.fitbit.friends.ui.ConversationActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal.NoTitleBar" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/label_messages" android:launchMode="singleTop" android:name="com.fitbit.friends.ui.MessagesActivity_" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:launchMode="singleTop" android:name="com.fitbit.home.ui.DetailActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.fitbit.ui.WebViewActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.debug.ProxySettings" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.FitbitMobile.ServerSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.galileo.ui.GalileoServiceSettingsActivity_" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.settings.ui.SoftTrackerSettingsActivity_" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.galileo.ui.GalileoScanActivity_" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.settings.ui.MixPanelSettingsActivity_" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.settings.ui.HardcodedSynclairConfigSettingsActivity_" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.settings.ui.MaintananceSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/label_challenges" android:name="com.fitbit.challenges.ui.ChallengeActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/label_challenge_options" android:name="com.fitbit.challenges.ui.ChallengeOptionsActivity_" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.settings.ui.ClientBackOffSettingsActivity_" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.settings.ui.GoogleStepsServiceSettingsActivity_"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.fitbit.synclair.ui.SynclairActivity_" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/label_add_players" android:name="com.fitbit.challenges.ui.AddPlayersActivity_" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.challenges.ui.OutgoingInvitationActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.challenges.ui.IncomingInvitationActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/label_challenge_rules" android:name="com.fitbit.challenges.ui.ChallengeGameplayActivity_" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/heart_rate" android:name="com.fitbit.heartrate.landing.HeartRateLandingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue.Toolbar"/>
+        <activity android:configChanges="keyboard|keyboardHidden" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.heartrate.intraday.IntradayHeartRateChartActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.heartrate.charts.ExerciseHeartRateChartActivity" android:screenOrientation="sensor" android:theme="@style/Theme.Fitbit.RoyalBlue.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.heartrate.charts.RestingHeartRateChartActivity" android:screenOrientation="sensor" android:theme="@style/Theme.Fitbit.RoyalBlue.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:label="@string/heart_rate" android:name="com.fitbit.heartrate.details.HeartRateDetailsActivity_" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.RoyalBlue"/>
+        <activity android:configChanges="keyboard|keyboardHidden" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.activity.ui.charts.ActivityChartActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.activity.ui.landing.ActivityLandingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:launchMode="singleTop" android:name="com.fitbit.activity.ui.details.ActivityDetailsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Teal"/>
+        <activity android:name="com.mixpanel.android.surveys.SurveyActivity" android:theme="@style/com_mixpanel_android_SurveyActivityTheme"/>
+        <activity android:name="net.hockeyapp.android.UpdateActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/fitbit_diamond" android:name="com.fitbit.profile.ui.badges.BadgeDetailActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Fitbit.Onboarding.Translucent.Badge"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:name="com.fitbit.runtrack.ExerciseLocationService"/>
+        <service android:name="com.fitbit.runtrack.SpeechService"/>
+        <service android:name="com.fitbit.FitbitMobile.GCMIntentService"/>
+        <service android:name="com.fitbit.data.bl.SyncService"/>
+        <service android:name="com.fitbit.galileo.service.GalileoSyncService_"/>
+        <service android:name="com.fitbit.pedometer.service.PedometerService_"/>
+        <service android:name="com.fitbit.widget.WidgetUpdaterService_"/>
+        <service android:name="com.fitbit.pedometer.google.GoogleStepsService"/>
+        <service android:name="com.fitbit.bluetooth.connection.BluetoothConnectionService"/>
+        <service android:name="com.fitbit.dncs.service.DncsSendNotificationService"/>
+        <service android:name="com.fitbit.dncs.service.DncsPairingService"/>
+        <service android:name="com.htc.blinkfeed.service.BlinkFeedPluginService">
+            <intent-filter>
+                <action android:name="com.htc.opensense.social.SocialPlugin"/>
+            </intent-filter>
+            <meta-data android:name="plugin" android:value="com.fitbit.blinkfeed.FitbitBlinkFeedPlugin"/>
+        </service>
+        <service android:name="com.fitbit.synclair.ForegroundService"/>
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService"/>
+        <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.fitbit.FitbitMobile"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.fitbit.dncs.observers.sms.SmsObserver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.fitbit.FitbitMobile.NotificationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.fitbit.FitbitMobile.NotificationBroadcastReceiver.ACTION"/>
+                <action android:name="com.fitbit.FitbitMobile.NotificationBroadcastReceiver.ACTION_NOTIFICATION_CAME"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.fitbit.galileo.service.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.fitbit.widget.WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_ENABLED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DISABLED"/>
+                <action android:name="com.fitbit.widget.WidgetProvider.ACTION_BUTTON_CLICKED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/fitbit_appwidget_info"/>
+        </receiver>
+        <receiver android:name="com.fitbit.FitbitMobile.NetworkStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.fitbit.runtrack.AudioCueBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.fitbit.runtrack.EXERCISE_SESSION_UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.fitbit.dncs.observers.phone.PhoneCallObserver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <uses-library android:name="com.broadcom.bt" android:required="false"/>
+        <uses-library android:name="com.samsung.android.sdk.bt" android:required="false"/>
+        <meta-data android:name="hdkapi_htcactiveservice" android:value="1.1.1"/>
+    </application>
+</manifest>

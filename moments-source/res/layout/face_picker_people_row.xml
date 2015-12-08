@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/face_picker_side_margin" android:paddingRight="@dimen/face_picker_side_margin" android:layout_width="fill_parent" android:layout_height="@dimen/face_picker_row_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/profile_pic" android:layout_width="@dimen/face_picker_avatar_size" android:layout_height="@dimen/face_picker_avatar_size" fb:roundAsCircle="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" android:layout_weight="1.0">
+        <com.facebook.resources.ui.FbTextView android:ellipsize="end" android:id="@id/name_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" style="@style/face_picker_list_text" />
+        <com.facebook.resources.ui.FbTextView android:id="@id/not_a_member_text" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/face_picker_list_subtext" />
+    </LinearLayout>
+    <ImageButton android:id="@id/remove_button" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/delete_mark" />
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_white_popup_corner" android:paddingBottom="10.0dip" android:layout_width="280.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:gravity="top" android:orientation="vertical" android:id="@id/title_container" android:background="@drawable/popup_title_bg" android:layout_width="280.0dip" android:layout_height="50.0dip">
+                <TextView android:textSize="20.0sp" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/login_popup_title" android:layout_centerInParent="true" style="@style/TitleBarText" />
+                <Button android:textSize="20.0sp" android:id="@id/login_popup_close" android:layout_width="45.0dip" android:layout_height="wrap_content" android:text="@string/close_x" android:layout_alignParentRight="true" android:layout_centerInParent="true" style="@style/ButtonStyle" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/scrollViewOnlyChild" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:id="@id/login_popup_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:text="@string/login_popup_message" style="@style/CheckoutTableText" />
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/fields" android:background="@drawable/iphone_table_single" android:layout_width="@dimen/tablet_max_width" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:layout_below="@id/login_popup_message" android:layout_centerHorizontal="true">
+                    <TextView android:textSize="16.0sp" android:id="@id/loginPasswordHint" android:clickable="true" android:layout_width="75.0dip" android:text="@string/login_password_hint" style="@style/UserAccountHintBlock" />
+                    <EditText android:id="@id/passwordEntry" android:background="#00000000" android:layout_height="@dimen/title_height" android:inputType="textPassword" android:imeOptions="actionDone|flagNoExtractUi" style="@style/UserAccountEditTextBlock" />
+                </LinearLayout>
+                <RelativeLayout android:id="@id/loginBlock" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="20.0dip" android:layout_width="@dimen/tablet_max_width" android:layout_height="wrap_content" android:layout_below="@id/fields">
+                    <RelativeLayout android:layout_width="@dimen/forgot_link_width" android:layout_height="@dimen/forgot_link_height">
+                        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/dominos_blue" android:gravity="left" android:id="@id/reset_password_link" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/forgot_password_link" android:layout_alignParentLeft="true" />
+                        <View android:background="@color/transparent" android:clickable="true" android:layout_width="@dimen/forgot_fake_view_width" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                    <Button android:textSize="17.0sp" android:textStyle="bold" android:id="@id/loginButton" android:background="@drawable/red_button_enabled" android:layout_width="120.0dip" android:layout_height="45.0dip" android:text="@string/login_confirmation_button_text" android:layout_alignParentRight="true" style="@style/ButtonStyle" />
+                    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/black" android:id="@id/cancelText" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_marginBottom="10.0dip" android:text="@string/cancel_link" android:layout_below="@id/loginButton" android:layout_alignParentRight="true" />
+                    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/black" android:id="@id/signOutText" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/sign_out_link" android:layout_below="@id/cancelText" android:layout_alignParentRight="true" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/dominos_blue" android:gravity="right" android:id="@id/continue_as_guest_link" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/loginButton" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

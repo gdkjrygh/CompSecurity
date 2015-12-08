@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/titlebar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="left" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/titlebar_button_width" android:layout_marginEnd="@dimen/titlebar_button_width">
+        <LinearLayout android:orientation="horizontal" android:id="@id/button_container" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <View android:layout_gravity="right|center" android:background="@color/sync_tab_divider_grey" android:layout_width="1.0dip" android:layout_height="33.0dip" />
+        <View android:layout_gravity="bottom" android:id="@id/border" android:background="#ffa8a8a8" android:layout_width="fill_parent" android:layout_height="@dimen/titlebar_border_height" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="right|center" android:id="@id/side_button_container" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <com.facebook.moments.navui.titlebar.NavTitleBarButton android:id="@id/side_button" android:background="@drawable/top_nav_nub" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <View android:layout_gravity="bottom" android:id="@id/button_border" android:background="#ffa8a8a8" android:visibility="gone" android:layout_width="@dimen/titlebar_button_width" android:layout_height="@dimen/titlebar_border_height" />
+    </FrameLayout>
+    <View android:layout_gravity="bottom|left|center" android:id="@id/tab_bar" android:background="@color/sync_new_nav_primary_blue" android:layout_width="@dimen/titlebar_button_width" android:layout_height="@dimen/titlebar_button_tab_bar" />
+</FrameLayout>

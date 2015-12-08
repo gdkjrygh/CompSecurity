@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.app.FragmentTabHost android:id="@android:id/tabhost" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?attr/loggingInteractiveChartStyle">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/fullscreen_chart_tab_host_title_text_size" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/txt_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:maxLines="1" />
+            <TabWidget android:id="@android:id/tabs" android:layout_width="fill_parent" android:layout_height="@dimen/fullscreen_chart_tab_height" style="@style/HeartRateTabWidget" />
+            <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </android.support.v4.app.FragmentTabHost>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher android:id="@id/viewswitcher_hint" android:background="@color/app_default_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewSwitcher android:id="@id/viewswitcher_loadingData" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleLarge" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:id="@id/listView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <include android:id="@id/retry_hint_container" layout="@layout/fragment_web_collages_hint" />
+        </RelativeLayout>
+    </ViewSwitcher>
+    <include android:id="@id/hintView" layout="@layout/fragment_hint" />
+</ViewSwitcher>

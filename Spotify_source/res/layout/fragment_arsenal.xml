@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="32.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:gravity="center" android:id="@id/sp_logo" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:src="@drawable/sp_logo" android:layout_toLeftOf="@id/arsenal_arrow" />
+                <ImageView android:id="@id/arsenal_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arsenal_arrow" android:layout_alignTop="@id/sp_logo" android:layout_alignBottom="@id/sp_logo" android:layout_centerHorizontal="true" />
+                <ImageView android:gravity="center" android:id="@id/psn_icon" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/psn_icon" android:layout_toRightOf="@id/arsenal_arrow" />
+                <TextView android:gravity="center" android:id="@id/spotify_account" android:paddingTop="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/sp_logo" android:layout_alignLeft="@id/sp_logo" android:layout_alignRight="@id/sp_logo" style="@style/CellSubTitle" />
+                <TextView android:gravity="center" android:id="@id/arsenal_account" android:paddingTop="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/psn_icon" android:layout_alignLeft="@id/psn_icon" android:layout_alignRight="@id/psn_icon" style="@style/CellSubTitle" />
+            </RelativeLayout>
+            <TextView android:textColor="@color/cat_white" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:layout_marginBottom="16.0dip" android:text="@string/arsenal_dywla_title" android:maxLines="1" style="@style/CatLoginTitleTextAppearance" />
+            <TextView android:gravity="center" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/arsenal_dywla_subtitle" style="@style/CatLoginDescriptionTextAppearance" />
+            <TextView android:textColor="@color/cat_grayscale_95" android:gravity="center" android:id="@id/description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/arsenal_dywla_description" android:singleLine="false" style="@style/CellSubTitle" />
+            <TextView android:textColor="@color/cat_grayscale_55" android:gravity="center" android:id="@id/footnote" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/arsenal_dywla_footnote" android:singleLine="false" style="@style/CellSubTitle" />
+            <ProgressBar android:id="@id/throbber" android:visibility="gone" android:layout_marginTop="36.0dip" style="@style/indeterminateProgressBar" />
+        </LinearLayout>
+    </ScrollView>
+    <Button android:gravity="center" android:layout_gravity="bottom" android:id="@id/accept_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:text="@string/arsenal_link_positive" android:textAllCaps="true" style="?pasteButtonStylePrimary" />
+    <Button android:gravity="center" android:layout_gravity="bottom" android:id="@id/cancel_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/arsenal_link_negative" android:textAllCaps="true" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/personalization_meter_progress" android:background="@color/pandora_clear_window_background" android:padding="3.0dip" android:layout_width="38.0dip" android:layout_height="38.0dip" android:layout_marginLeft="14.0dip" android:layout_marginRight="14.0dip" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <LinearLayout android:gravity="center" android:id="@id/thumb_down_counter_wrapper" android:padding="0.0dip" android:layout_toLeftOf="@id/personalization_meter_progress" android:layout_centerVertical="true" style="@style/StationPersonalizationStyle.ThumbCounter">
+        <ImageView android:id="@id/thumb_down_image" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_meter_thumb_down" android:contentDescription="@string/thumbed_down_tracks" />
+        <TextView android:gravity="center" android:id="@id/thumb_down_counter" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/zero" style="@style/StationPersonalizationStyle.ThumbColor" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/thumb_up_counter_wrapper" android:padding="0.0dip" android:layout_toRightOf="@id/personalization_meter_progress" android:layout_centerVertical="true" style="@style/StationPersonalizationStyle.ThumbCounter">
+        <TextView android:gravity="center" android:id="@id/thumb_up_counter" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:text="@string/zero" style="@style/StationPersonalizationStyle.ThumbColor" />
+        <ImageView android:id="@id/thumb_up_image" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_meter_thumb_up" android:contentDescription="@string/thumbed_up_tracks" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/find_friends_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <com.pandora.android.util.SearchBox android:id="@id/find_people_search_box" android:layout_width="fill_parent" android:layout_height="wrap_content" pandora:hintText="@string/find_friend_hint" pandora:hintTextSizeSmall="@bool/displayHintTextSizeSmall" />
+    <ScrollView android:id="@id/empty_find_people" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:gravity="center" android:id="@id/find_people_hero_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/cd_empty_find_people" style="@style/FindPeopleHeroImageStyle" />
+            <TextView android:textSize="@dimen/empty_find_people_title_text_size" android:textColor="@color/empty_find_friends_title_color" android:gravity="center" android:layout_gravity="center" android:paddingLeft="36.0dip" android:paddingRight="36.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/empty_feed_discover" style="@style/FindPeopleHeaderTextStyle" />
+            <TextView android:textSize="@dimen/empty_find_people_text_size" android:textColor="@color/empty_find_friends_text_color" android:gravity="center" android:layout_gravity="center_horizontal" android:paddingLeft="50.0dip" android:paddingRight="50.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/empty_feed_follow_text_margin" android:text="@string/empty_feed_follow" />
+            <Button android:gravity="center" android:layout_gravity="center" android:id="@id/facebook_connect_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/connect_to_facebook_button_margin" android:text="@string/facebook_connect" android:drawableLeft="@drawable/ic_facebook_connect" android:drawablePadding="5.0dip" android:contentDescription="@string/cd_facebook_connect_button" style="@style/PandoraFacebookButton" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/non_empty_find_people" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/find_facebook_people_layout" android:background="@color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/find_facebook_people" android:background="@drawable/list_item_selector" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/search_box_height">
+                <ImageView android:id="@id/find_facebook_people_facebook_icon" android:layout_width="@dimen/station_album_art_size" android:layout_height="@dimen/station_album_art_size" android:layout_marginLeft="8.0dip" android:src="@drawable/ic_facebook_connect" android:scaleType="center" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/cd_find_facebook_people_button" />
+                <TextView android:textSize="@dimen/find_friends_text_size" android:textColor="@drawable/station_list_text_selector" android:gravity="left|center" android:paddingLeft="@dimen/search_box_text_padding" android:paddingRight="@dimen/search_box_text_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/find_facebook_people" android:layout_toRightOf="@id/find_facebook_people_facebook_icon" />
+            </RelativeLayout>
+            <View android:background="@drawable/station_textview_row_white_bg_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/no_search_results" android:background="@color/find_friends_background_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/find_friends_text_size" android:textColor="@color/empty_find_friends_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_matches" />
+            <TextView android:textSize="@dimen/find_friends_text_size" android:textColor="@android:color/black" android:id="@id/no_search_results_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <com.pandora.android.view.PandoraWebView android:id="@id/find_people_web_browser" android:background="@android:color/white" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</LinearLayout>

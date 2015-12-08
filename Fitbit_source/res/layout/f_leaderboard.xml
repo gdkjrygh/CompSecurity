@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:scrollbarStyle="insideOverlay" android:id="@id/list" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:dividerHeight="0.0dip" />
+    <FrameLayout android:id="@id/empty" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/blocker_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/l_data_is_unavailable_view" />
+        <com.fitbit.ui.FixedFocusScrollView android:id="@id/empty_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+            <RelativeLayout android:gravity="center" android:layout_gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip">
+                <TextView android:textSize="28.0sp" android:textColor="#ff777777" android:gravity="center_horizontal" android:id="@id/txt_no_friends_title" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mobile_ff_more_fun_with_friends" android:layout_below="@id/ImageView_layout" />
+                <TextView android:textSize="20.0sp" android:textColor="#ff888888" android:gravity="center_horizontal" android:id="@id/txt_no_friends_text" android:paddingLeft="25.0dip" android:paddingTop="25.0dip" android:paddingRight="25.0dip" android:paddingBottom="100.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mobile_ff_more_fun_with_friends_desc" android:layout_below="@id/txt_no_friends_title" />
+                <RelativeLayout android:id="@id/ImageView_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="25.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+                    <ImageView android:id="@id/ImageView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/friend_finder" android:layout_centerInParent="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </com.fitbit.ui.FixedFocusScrollView>
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="bottom|right|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <include android:layout_gravity="bottom" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="27.0dip" layout="@layout/l_mobile_ff_popup_layout" />
+        <View android:id="@id/find_friends_button" style="@style/Fitbit.Button.Overflow.Plus" />
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/center_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

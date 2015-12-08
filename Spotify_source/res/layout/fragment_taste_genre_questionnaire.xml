@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.spotify.mobile.android.ui.view.AspectRatioRelativeLayout android:id="@id/welcome" android:background="@color/cat_grayscale_8" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/welcome_background" android:background="@drawable/onboarding_taste_mixing" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:layout_centerInParent="true" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/onboarding_taste_welcome_title" style="?pasteTextAppearanceHeading" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/onboarding_taste_welcome_subtitle" style="?pasteTextAppearanceHeadingSmall" />
+        </LinearLayout>
+        <ImageView android:id="@id/welcome_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="50.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </com.spotify.mobile.android.ui.view.AspectRatioRelativeLayout>
+    <include android:id="@id/questionnaire" layout="@layout/fragment_taste_questionnaire" />
+    <View android:id="@id/touch_filter" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

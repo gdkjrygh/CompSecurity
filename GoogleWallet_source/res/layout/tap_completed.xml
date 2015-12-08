@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/NfcSplashScreenLayout">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/TapCompletedImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_logo_wallet_color_88dp" android:contentDescription="@null" />
+        <TextView android:id="@id/TapCompletedText" android:layout_margin="@dimen/splash_message_margin" style="@style/Body.Splash" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/TransactionDetailContainerNode" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:gravity="center" android:id="@id/TapTroubleshooterLauncherBar" android:padding="@dimen/default_spacing" android:visibility="invisible" android:text="@string/tap_completed_troubleshoot" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked.White" />
+</RelativeLayout>

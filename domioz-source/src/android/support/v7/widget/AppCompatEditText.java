@@ -1,0 +1,111 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package android.support.v7.widget;
+
+import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.drawable.Drawable;
+import android.support.v7.a.b;
+import android.support.v7.internal.widget.au;
+import android.support.v7.internal.widget.aw;
+import android.support.v7.internal.widget.ax;
+import android.support.v7.internal.widget.az;
+import android.util.AttributeSet;
+import android.widget.EditText;
+
+public class AppCompatEditText extends EditText
+{
+
+    private static final int a[] = {
+        0x10100d4
+    };
+    private aw b;
+    private aw c;
+    private ax d;
+
+    public AppCompatEditText(Context context, AttributeSet attributeset)
+    {
+        this(context, attributeset, b.z);
+    }
+
+    public AppCompatEditText(Context context, AttributeSet attributeset, int i)
+    {
+        super(au.a(context), attributeset, i);
+        if (ax.a)
+        {
+            context = az.a(getContext(), attributeset, a, i);
+            if (context.f(0))
+            {
+                attributeset = context.c().b(context.f(0, -1));
+                if (attributeset != null)
+                {
+                    a(attributeset);
+                }
+            }
+            d = context.c();
+            context.b();
+        }
+    }
+
+    private void a()
+    {
+        if (getBackground() != null)
+        {
+            if (c != null)
+            {
+                ax.a(this, c);
+            } else
+            if (b != null)
+            {
+                ax.a(this, b);
+                return;
+            }
+        }
+    }
+
+    private void a(ColorStateList colorstatelist)
+    {
+        if (colorstatelist != null)
+        {
+            if (b == null)
+            {
+                b = new aw();
+            }
+            b.a = colorstatelist;
+            b.d = true;
+        } else
+        {
+            b = null;
+        }
+        a();
+    }
+
+    protected void drawableStateChanged()
+    {
+        super.drawableStateChanged();
+        a();
+    }
+
+    public void setBackgroundDrawable(Drawable drawable)
+    {
+        super.setBackgroundDrawable(drawable);
+        a(null);
+    }
+
+    public void setBackgroundResource(int i)
+    {
+        super.setBackgroundResource(i);
+        ColorStateList colorstatelist;
+        if (d != null)
+        {
+            colorstatelist = d.b(i);
+        } else
+        {
+            colorstatelist = null;
+        }
+        a(colorstatelist);
+    }
+
+}
