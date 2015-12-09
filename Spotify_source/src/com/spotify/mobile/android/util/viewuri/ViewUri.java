@@ -1,0 +1,188 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.spotify.mobile.android.util.viewuri;
+
+import gei;
+import gjm;
+
+// Referenced classes of package com.spotify.mobile.android.util.viewuri:
+//            Verified
+
+public final class ViewUri
+{
+
+    public static final gjm A = new gjm((new StringBuilder("spotify:hub:shows")).append(gei.a("(:[^:]++)?", 5)).toString());
+    public static final gjm B = new gjm((new StringBuilder("spotify:app:browse")).append(gei.a("(:[^:]++)?", 5)).toString());
+    public static final gjm C = new gjm((new StringBuilder("spotify:hub:sandbox:[^:]+")).append(gei.a("(:[^:]++)?", 4)).toString());
+    public static final Verified D = new Verified("spotify:internal:taste:genre");
+    public static final Verified E = new Verified("spotify:internal:taste:artist");
+    public static final Verified F = new Verified("spotify:internal:taste:mixing");
+    public static final Verified G = new Verified("spotify:internal:inbox");
+    public static final Verified H = new Verified("spotify:config");
+    public static final Verified I = new Verified("spotify:notifications");
+    public static final Verified J = new Verified("spotify:app:magic");
+    public static final Verified K = new Verified("spotify:now-playing");
+    public static final Verified L = new Verified("spotify:now-playing-bar");
+    public static final Verified M = new Verified("spotify:now-playing-view");
+    public static final Verified N = new Verified("spotify:queue");
+    public static final Verified O = new Verified("spotify:widget");
+    public static final Verified P = new Verified("spotify:remote-control");
+    public static final Verified Q = new Verified("spotify:app:concerts");
+    public static final Verified R = new Verified("spotify:internal:concerts-location-search");
+    public static final gjm S;
+    public static final Verified T;
+    public static final gjm U = new gjm("spotify:radio:create_station(:.*)?");
+    public static final gjm V = new gjm("spotify:station:(artist:[a-zA-Z0-9]{22}|album:[a-zA-Z0-9]{22}|track:+[a-zA-Z0-9]{22}|genre:[^:]+|user:[^:]+:(playlist:[a-zA-Z0-9]{22}|top:tracks|starred|toplist|publishedstarred)|user:[^:]+:cluster:[a-zA-Z0-9]{22}|user:[^:]+:clusters)");
+    public static final gjm W = new gjm("spotify:station:user:[^:]+:cluster:[a-zA-Z0-9]{22}");
+    public static final gjm X = new gjm("spotify:station:user:[^:]+:clusters");
+    public static final gjm Y = new gjm("spotify:station:artist:[a-zA-Z0-9]{22}");
+    public static final gjm Z = new gjm("spotify:station:album:[a-zA-Z0-9]{22}");
+    public static final Verified a = new Verified("spotify");
+    public static final Verified aA = new Verified("spotify:create_rename_playlist");
+    public static final Verified aB = new Verified("spotify:confirm_deletion");
+    public static final Verified aC = new Verified("spotify:trial_reminder");
+    public static final Verified aD = new Verified("spotify:trial_reminder:spotify_free");
+    public static final Verified aE = new Verified("spotify:offline_sync_error");
+    public static final Verified aF = new Verified("spotify:disk_almost_full");
+    public static final Verified aG = new Verified("spotify:app:upsell");
+    public static final Verified aH = new Verified("spotify:upsell:premium_only");
+    public static final Verified aI = new Verified("spotify:upsell:stuck_in_shuffle");
+    public static final Verified aJ = new Verified("spotify:upsell:out_of_skips");
+    public static final Verified aK = new Verified("spotify:upsell:no_offline");
+    public static final Verified aL = new Verified("spotify:upsell:no_queue");
+    public static final Verified aM = new Verified("spotify:upsell:trial-started");
+    public static final Verified aN = new Verified("spotify:upsell:capping_reached");
+    public static final Verified aO = new Verified("spotify:upsell:start_trial");
+    public static final Verified aP = new Verified("spotify:upsell:activating_trial");
+    public static final Verified aQ = new Verified("spotify:upsell:no_streaming");
+    public static final Verified aR = new Verified("spotify:upsell:interstitial:end_of_trial");
+    public static final Verified aS = new Verified("spotify:upsell:premium");
+    public static final Verified aT = new Verified("spotify:upsell:premium_in_app_destination");
+    public static final Verified aU = new Verified("spotify:dynamic_upsell");
+    public static final Verified aV = new Verified("spotify:upsell:out_of_skips_plus");
+    public static final Verified aW = new Verified("spotify:upsell:out_of_skips_consumables");
+    public static final Verified aX = new Verified("spotify:app:artist-feedback");
+    public static final Verified aY = new Verified("spotify:app:tinkerbell");
+    public static final Verified aZ = new Verified("spotify:internal:premium_signup");
+    public static final gjm aa = new gjm("spotify:station:track:+[a-zA-Z0-9]{22}");
+    public static final gjm ab = new gjm("spotify:station:genre:[^:]+");
+    public static final gjm ac = new gjm("spotify:station:(user:[^:]+:(playlist:[a-zA-Z0-9]{22}|top:tracks|starred|toplist|publishedstarred))");
+    public static final gjm ad = new gjm("spotify:radio:artist:[a-zA-Z0-9]{22}");
+    public static final gjm ae = new gjm("spotify:radio:album:[a-zA-Z0-9]{22}");
+    public static final gjm af = new gjm("spotify:radio:track:+[a-zA-Z0-9]{22}");
+    public static final gjm ag = new gjm("spotify:radio:genre:[^:]+");
+    public static final gjm ah = new gjm("spotify:radio:(user:[^:]+:(playlist:[a-zA-Z0-9]{22}|top:tracks|starred|toplist|publishedstarred))");
+    public static final gjm ai = new gjm("spotify:user:[^:]+");
+    public static final gjm aj = new gjm("starred|toplist|spotify:user:[^:]+:(playlist:[a-zA-Z0-9]{22}|top:tracks|starred|toplist|publishedstarred)");
+    public static final gjm ak = new gjm("spotify:user:[^:]+:folder:[a-zA-Z0-9]+");
+    public static final Verified al = new Verified("spotify:folder_tracks");
+    public static final gjm am = new gjm("spotify:album:[a-zA-Z0-9]{22}");
+    public static final gjm an = new gjm("spotify:artist:[a-zA-Z0-9]{22}(:albums|:singles|:appears_on|:compilations|:related|:biography|:gallery|:playlists|:radio)?");
+    public static final Verified ao = new Verified("spotify:intro:permissions");
+    public static final Verified ap = new Verified("spotify:intro:tos:dialog");
+    public static final Verified aq = new Verified("spotify:intro:tos:text");
+    public static final Verified ar = new Verified("spotify:settings:lastfm_login_dialog");
+    public static final Verified as = new Verified("spotify:nux:login-signup");
+    public static final Verified at = new Verified("spotify:login:facebook");
+    public static final Verified au = new Verified("spotify:login:welcome");
+    public static final Verified av = new Verified("spotify:login:disable_offline_mode");
+    public static final Verified aw = new Verified("spotify:signup-v1:start");
+    public static final Verified ax = new Verified("spotify:signup-v1:signup");
+    public static final Verified ay = new Verified("spotify:signup-v1:login");
+    public static final Verified az = new Verified("spotify:add_to_playlist");
+    public static final Verified b = new Verified("spotify:main");
+    public static final Verified bA = new Verified("spotify:internal:gaia-picker");
+    public static final Verified bB = new Verified("spotify:internal:gaia-popup");
+    public static final Verified bC = new Verified("spotify:internal:push_notification");
+    public static final Verified bD = new Verified("spotify:internal:preferences:push_notification");
+    public static final Verified bE = new Verified("spotify:internal:notification");
+    public static final Verified bF = new Verified("spotify:internal:notification_webview:http(s?)%3[aA]%2[fF]%2[fF]([^\\s]*)?");
+    public static final Verified bG = new Verified("spotify:media_controller");
+    public static final Verified bH = new Verified("spotify:app:app_rater");
+    public static final Verified bI = new Verified("spotify:signup:communications:dialog");
+    public static final Verified bJ = new Verified("spotify:media_service");
+    public static final Verified bK = new Verified("spotify:app:applink");
+    public static final Verified bL = new Verified("spotify:networkoperatorpremiumactivation:opt_in_dialog");
+    public static final gjm bM = new gjm("spotify:show:[a-zA-Z0-9]{22}");
+    public static final Verified bN = new Verified("spotify:ad_subscriptions");
+    public static final Verified bO = new Verified("spotify:churn_locked_state");
+    public static final Verified bP = new Verified("spotify:remove_all_episodes");
+    public static final Verified bQ = new Verified("spotify:fullscreen_videoplayer");
+    public static final Verified bR = new Verified("spotify:internal:service");
+    public static final Verified ba = new Verified("spotify:share");
+    public static final Verified bb = new Verified("spotify:app:share");
+    public static final Verified bc = new Verified("spotify:app:share-flow");
+    public static final Verified bd = new Verified("spotify:share:spotify");
+    public static final Verified be = new Verified("spotify:licenses");
+    public static final Verified bf = new Verified("spotify:update");
+    public static final Verified bg = new Verified("spotify:delete_cache_dialog");
+    public static final Verified bh = new Verified("spotify:delete_cache_dialog_confirm");
+    public static final Verified bi = new Verified("spotify:deleting_cache_dialog");
+    public static final Verified bj = new Verified("spotify:collection");
+    public static final Verified bk = new Verified("spotify:user:[^:]+:collection");
+    public static final Verified bl = new Verified("spotify:internal:collection:playlists");
+    public static final Verified bm = new Verified("spotify:internal:collection:radio");
+    public static final Verified bn = new Verified("spotify:internal:collection:artists");
+    public static final Verified bo = new Verified("spotify:internal:collection:albums");
+    public static final gjm bp = new gjm("spotify:user:[^:]+:collection:album:[a-zA-Z0-9]{22}");
+    public static final gjm bq = new gjm("spotify:user:[^:]+:collection:artist:[a-zA-Z0-9]{22}");
+    public static final Verified br = new Verified("spotify:internal:collection:tracks");
+    public static final Verified bs = new Verified("spotify:internal:collection:overview");
+    public static final Verified bt = new Verified("spotify:internal:collection:shows");
+    public static final Verified bu = new Verified("spotify:internal:collection:offlined-episodes");
+    public static final Verified bv = new Verified("spotify:internal:collection:unplayed-episodes");
+    public static final Verified bw = new Verified("spotify:internal:collection:saved-episodes");
+    public static final Verified bx = new Verified("spotify:recently_played");
+    public static final Verified by = new Verified("spotify:annotate_discard_changes");
+    public static final Verified bz = new Verified("spotify:annotate_playlist");
+    public static final Verified c = new Verified("spotify:navigation");
+    public static final Verified d = new Verified("spotify:navigation:categories-charts");
+    public static final Verified e = new Verified("spotify:navigation:genres-inspiration");
+    public static final Verified f = new Verified("spotify:navigation:moods-moments");
+    public static final Verified g = new Verified("spotify:navigation:play-music");
+    public static final Verified h = new Verified("spotify:app:radio");
+    public static final Verified i = new Verified("spotify:startpage");
+    public static final Verified j = new Verified("spotify:internal:startpage");
+    public static final Verified k = new Verified("spotify:internal:startpagedense");
+    public static final Verified l = new Verified("spotify:internal:running");
+    public static final Verified m = new Verified("spotify:internal:party");
+    public static final Verified n = new Verified("spotify:app:discover");
+    public static final Verified o = new Verified("spotify:app:social-chart");
+    public static final Verified p = new Verified("spotify:app:findfriends");
+    public static final Verified q = new Verified("spotify:internal:social-feed");
+    public static final Verified r = new Verified("spotify:app:browse");
+    public static final Verified s = new Verified("spotify:app:browse:new_releases");
+    public static final gjm t = new gjm("spotify:app:browse:[^:]+");
+    public static final Verified u = new Verified("spotify:charts:root");
+    public static final gjm v = new gjm("spotify:charts:[^:]+");
+    public static final gjm w = new gjm("spotify:(app:)?chart:[^:]+");
+    public static final gjm x = new gjm((new StringBuilder("spotify:genre:[^:]+")).append(gei.a("(:[^:]++)?", 4)).toString());
+    public static final gjm y = new gjm((new StringBuilder("spotify:hub:moments")).append(gei.a("(:[^:]++)?", 5)).toString());
+    public static final gjm z = new gjm((new StringBuilder("spotify:hub:music")).append(gei.a("(:[^:]++)?", 5)).toString());
+
+    static 
+    {
+        new Verified("spotify:playlists");
+        new Verified("spotify:app:magic:walking");
+        new Verified("spotify:app:magic:running");
+        new Verified("spotify:app:magic:automotive");
+        gjm gjm1 = new gjm("spotify:search(:.*)?");
+        S = gjm1;
+        T = gjm1.a("spotify:search");
+        new Verified("spotify:internal:station_migration");
+        new gjm("spotify:artist:[a-zA-Z0-9]{22}:similar");
+        new Verified("spotify:login:google");
+        new Verified("spotify:login:prelaunch-interest");
+        new Verified("spotify:upsell:confirm_consumable");
+        new Verified("spotify:wifi_only_upsell");
+        new Verified("spotify:wifimft_group3_no_more_time");
+        new Verified("spotify:sd_storage_alert_dialog");
+        new Verified("spotify:internal:gaia");
+        new Verified("spotify:internal:gaia-onboarding");
+        new Verified("spotify:internal:cosmos-test");
+        new Verified("spotify:app:appprotocol");
+        new Verified("spotify:video_service");
+    }
+}

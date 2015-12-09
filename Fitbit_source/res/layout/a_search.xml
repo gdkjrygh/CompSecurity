@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/container_search" android:background="@drawable/food_tab_bg_inactive" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.fitbit.ui.EditText android:textColor="@android:color/black" android:textColorHint="@color/hint_foreground_light" android:id="@id/edt_search" android:background="@android:drawable/edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:hint="@string/choose_activity_search_hint" android:maxLength="255" android:drawableLeft="@drawable/ic_txt_search">
+            <requestFocus />
+        </com.fitbit.ui.EditText>
+    </LinearLayout>
+    <LinearLayout android:padding="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/btn_clear" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/content_clear_search_area" />
+    </LinearLayout>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/txt_no_results" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_activity_no_results" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/black_80a" android:clickable="true" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="top|right|center" android:orientation="horizontal" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="@dimen/sync_tab_stack_header_height" android:layout_marginTop="@dimen/title_bar_height">
+        <ImageView android:layout_gravity="center" android:id="@id/see_all_pointer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/white_see_all_pointer" />
+        <com.facebook.resources.ui.FbTextView android:textColor="@color/white" android:gravity="center" android:id="@id/see_all_button" android:paddingLeft="10.0dip" android:paddingRight="@dimen/master_side_margin" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/sync_tab_see_all" style="@style/sync_tab_stack_see_all_text" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-1.0dip" android:src="@drawable/tutorial_jumping_nub" />
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.resources.ui.FbTextView android:textColor="@color/sync_primary_color" android:gravity="center" android:layout_gravity="center" android:id="@id/title_text" android:layout_width="320.0dip" android:layout_height="wrap_content" android:layout_marginTop="27.0dip" android:text="@string/nav_main_tab_see_all_overlay_title" android:maxLines="2" style="@style/nux_overlay_sheet_title_text" />
+            <com.facebook.resources.ui.FbTextView android:textColor="@color/black" android:gravity="center" android:layout_gravity="center" android:layout_width="320.0dip" android:layout_height="wrap_content" android:text="@string/nav_main_tab_see_all_overlay_subtitle" android:maxLines="2" style="@style/nux_overlay_sheet_text" />
+            <com.facebook.resources.ui.FbTextView android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/overlay_button" android:background="@drawable/pressable_blue_button" android:layout_width="240.0dip" android:layout_height="36.0dip" android:layout_marginTop="26.0dip" android:layout_marginBottom="20.0dip" android:text="@string/nav_main_tab_see_all_overlay_button_text" android:maxLines="1" style="@style/nux_overlay_button_text" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

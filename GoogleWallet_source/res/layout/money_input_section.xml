@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/narrow_spacing" android:paddingBottom="@dimen/narrow_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/PrefixMoneySymbol" android:visibility="gone" android:layout_weight="0.0" android:contentDescription="@null" style="@style/AmountText" />
+        <com.google.android.apps.wallet.widgets.money.MonetaryValueInput android:id="@id/MoneyInput" android:layout_width="0.0dip" android:maxLength="10" android:layout_weight="1.0" android:inputType="numberDecimal" android:textAlignment="2" style="@style/AmountText" />
+        <TextView android:id="@id/SuffixMoneySymbol" android:visibility="gone" android:layout_weight="0.0" android:contentDescription="@null" style="@style/AmountText" />
+    </LinearLayout>
+    <TextView android:id="@id/MoneyInputError" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/default_spacing" android:layout_marginRight="@dimen/default_spacing" style="@style/Title.Error" />
+</LinearLayout>

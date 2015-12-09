@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/scroll" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/scroll_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/container1" android:background="@drawable/insetwhite_bg" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="8.0dip" android:layout_alignParentTop="true">
+            <TextView android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginBottom="5.0dip" android:text="@string/weight" style="@style/GrayTitle" />
+            <com.fitbit.customui.WeightPicker android:id="@id/weight_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/container2" android:background="@drawable/insetwhite_bg" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="8.0dip" android:layout_below="@id/container1">
+            <TextView android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginBottom="5.0dip" android:text="@string/body_fat" style="@style/GrayTitle" />
+            <com.fitbit.customui.FatPicker android:id="@id/fat_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" fitbit:layout="@layout/l_fat_picker" />
+        </LinearLayout>
+        <Button android:textAppearance="?android:textAppearanceLargeInverse" android:id="@id/log_button" android:background="@drawable/btn_rounded_pink" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginRight="5.0dip" android:text="@string/log_it" android:layout_below="@id/container2" android:layout_alignParentRight="true" />
+    </RelativeLayout>	>
+</ScrollView>

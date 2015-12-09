@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/dialog_bg" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center_horizontal" android:id="@id/pin_message" android:layout_marginLeft="@dimen/pin_generic_24_margin" android:layout_marginTop="@dimen/pin_generic_24_margin" android:layout_marginRight="@dimen/pin_generic_24_margin" android:text="@string/label_pin_message" style="@style/PrimaryText.Small" />
+    <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:measureWithLargestChild="true" android:layoutDirection="3">
+        <EditText android:id="@id/pin_input" android:layout_marginTop="@dimen/pin_generic_16_margin" android:hint="@string/label_pin_hint" android:singleLine="true" android:maxLength="4" android:layout_centerHorizontal="true" android:inputType="numberPassword" android:imeOptions="flagNoExtractUi" style="@style/PrimaryText.Medium" />
+        <ImageView android:id="@id/pin_ic_input_error" android:layout_marginLeft="@dimen/pin_error_ic_left_margin" android:layout_marginBottom="@dimen/pin_error_ic_bottom_margin" android:src="@drawable/ic_input_error" android:layout_toRightOf="@id/pin_input" android:layout_alignBottom="@id/pin_input" android:contentDescription="@string/label_pin_error" style="@style/wrap" />
+    </RelativeLayout>
+    <TextView android:textColorHighlight="@color/dialog_body_bg" android:textColorLink="@android:color/white" android:id="@id/pin_forgot" android:layout_marginTop="@dimen/pin_generic_16_margin" android:text="@string/label_pin_forgot" style="@style/PrimaryText.Micro" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/dialog_pin_progress_spinner" android:padding="@dimen/double_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/pin_generic_16_margin" android:indeterminate="true" android:indeterminateOnly="true" style="?android:attr/progressBarStyle" />
+    <View android:background="@drawable/list_div" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="@dimen/pin_generic_16_margin" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:measureWithLargestChild="true" android:layoutDirection="3" style="@style/NetflixButtonBar">
+        <Button android:textSize="@dimen/text_medium" android:id="@id/pin_cancelBtn" android:paddingTop="@dimen/pin_generic_16_margin" android:paddingBottom="@dimen/pin_generic_16_margin" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_cancel" android:layout_weight="1.0" style="@style/NetflixDialogButton" />
+    </LinearLayout>
+</LinearLayout>

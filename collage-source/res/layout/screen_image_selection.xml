@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/product_creation_background" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <GridView android:id="@id/image_source_grid_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0" />
+    <include layout="@layout/include_small_progress_bar" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <android.support.v7.widget.RecyclerView android:id="@id/image_recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include layout="@layout/include_proceed_overlay" />
+        <ly.kite.widget.CustomTypefaceButton android:textColor="@color/image_selection_clear_photos_button_text" android:gravity="center" android:layout_gravity="bottom" android:id="@id/clear_photos_button" android:background="@color/image_selection_clear_photos_button_background" android:padding="20.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

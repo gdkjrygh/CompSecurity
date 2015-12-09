@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/CancelPaymentButton" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/layout_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:src="@drawable/tap_phone_to_reader" android:contentDescription="@null" style="@style/SplashHeroImage" />
+            <TextView android:text="@string/payment_notification_tap_again" style="@style/Title.Splash" />
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/CancelPaymentButton" android:text="@string/button_cancel" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+</RelativeLayout>

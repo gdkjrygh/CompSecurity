@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/games_simple_list_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.SwipeRefreshLayout android:enabled="false" android:id="@id/swipe_refresh_widget" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Games.DarkList" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <include android:visibility="gone" layout="@layout/games_empty_view" />
+    <include android:visibility="gone" layout="@layout/games_network_error_message" />
+    <LinearLayout android:orientation="vertical" android:id="@id/loading_view" android:visibility="gone" style="@style/Games.LoadingViewContainer">
+        <ProgressBar android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleLarge" />
+    </LinearLayout>
+</FrameLayout>

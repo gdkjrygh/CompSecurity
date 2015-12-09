@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:theme="@style/Theme.Fitbit.WhatsNew" android:orientation="vertical" android:id="@id/whats_new_background" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.view.ViewPager android:id="@id/new_feature_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/vertical_margin_step" android:layout_marginTop="@dimen/whats_new_relative_margin_top" android:layout_marginRight="@dimen/vertical_margin_step" android:layout_marginBottom="@dimen/vertical_margin_step">
+        <ImageButton android:id="@id/whats_new_close_button" android:layout_width="@dimen/activity_baby_chart_right_margin" android:layout_height="@dimen/activity_baby_chart_right_margin" style="?attr/whatsNewFeatureCloseButton" />
+        <TextView android:id="@id/whats_new_panel_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/whats_new_panel_title" style="?attr/whatsNewPageTitle" />
+    </RelativeLayout>
+    <LinearLayout android:id="@id/page_indicators" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?attr/whatsNewViewPageIndicator">
+        <View android:layout_width="@dimen/tile_unit_padding" android:layout_height="@dimen/tile_unit_padding" style="?attr/whatsNewViewPageIndicatorDot" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/edittext_edges_color_focused_or_pressed" />
+            <stroke android:width="2.2999878dip" android:color="@color/edittext_edges_color_focused_or_pressed" />
+            <corners android:radius="3.0dip" />
+        </shape>
+    </item>
+    <item android:state_focused="false" android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/edittext_edges_color_focused_or_pressed" />
+            <stroke android:width="2.2999878dip" android:color="@color/edittext_edges_color_focused_or_pressed" />
+            <corners android:radius="3.0dip" />
+        </shape>
+    </item>
+    <item android:state_focused="true" android:state_pressed="false">
+        <shape>
+            <solid android:color="@android:color/white" />
+            <stroke android:width="2.2999878dip" android:color="@color/edittext_edges_color_focused_or_pressed" />
+            <corners android:radius="3.0dip" />
+        </shape>
+    </item>
+    <item android:state_focused="false" android:state_pressed="false">
+        <shape>
+            <gradient android:startColor="@color/broken_white" android:endColor="@android:color/white" android:angle="270.0" android:centerColor="@android:color/white" />
+            <stroke android:width="0.70000005dip" android:color="@color/gray_1" />
+            <corners android:radius="3.0dip" />
+        </shape>
+    </item>
+    <item android:state_enabled="true">
+        <shape>
+            <padding android:left="4.0dip" android:top="4.0dip" android:right="4.0dip" android:bottom="4.0dip" />
+        </shape>
+    </item>
+</selector>

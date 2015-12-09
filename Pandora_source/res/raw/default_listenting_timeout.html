@@ -1,0 +1,264 @@
+<html>
+<head>
+<meta name="content-size" content="320x400" />
+<meta name="viewport" content="" />
+<title>Still listening?</title>
+<style type="text/css">\
+
+body, html { background: transparent; margin-left: 0.5em; margin-right: 0.5em; }
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+body {font-size:10px;font-family: AvenirNext-Regular, Roboto-Light, Roboto-Regular, Helvetica, Arial, sans-serif;}
+body.android {letter-spacing: .5px;}
+body.ipad-retina { font-size:20px; }
+a {text-decoration:}
+
+.spacing-m-t-40 {
+margin-top: 30px;
+margin-top: 3em;
+}
+
+/*  *******************************
+BUTTON
+****************************** */
+a.button-lrg {
+display: block;
+text-align: center;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+-webkit-border-radius: .2em;
+-moz-border-radius: .2em;
+-ms-border-radius: .2em;
+-o-border-radius: .2em;
+border-radius: .2em;
+padding: 12px;
+padding: .7em;
+font-size: 15px;
+font-size: 1.5em;
+border:none;
+text-decoration:none;
+}
+
+a.button-lrg--grey {
+background-color: #ccc;
+color: #666;
+}
+
+a.button-lrg--grey:active{
+background-color: #aaa;
+border:none;
+}
+
+a.button-lrg--blue {
+background-color: #54657e;
+color: #fff;
+}
+
+a.button-lrg--blue:active{
+background-color: #425064;
+border:none;
+}
+
+a.button-lrg--green-seafoam {
+background-color: #0fb9a6;
+color: #fff;
+}
+
+a.button-lrg--green-seafoam:active{
+background-color: #0d9888;
+border:none;
+}
+
+
+a.button-lrg--fixedWidthLrg {
+width: 200px;
+width: 13.3em;
+/*width: 26rem;*/
+}
+
+a.button-lrg--marginBottomSm {
+margin-bottom:13px;
+margin-bottom:.8em;
+/*margin-bottom:1.5rem;*/
+}
+
+a.button-lrg--marginBottomLrg {
+margin-bottom:20px;
+margin-bottom:1.2em;
+/*margin-bottom:1.5rem;*/
+}
+
+a.button-lrg--fontSizeLrg {
+font-size:18px;
+font-size:1.8em;
+/*font-size:2.3rem;*/
+}
+
+a.button-lrg--fontSizeXlrg,
+.button-lrg--fontSizeXlrg {
+font-size:20px;
+font-size:2em;
+}
+
+/* BUTTON TRANSPARENT */
+a.button-lrg--transparent,
+.button-lrg--transparent {
+display:inline-block;
+border: 1px solid #fff;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+-webkit-border-radius: .3em;
+-moz-border-radius: .3em;
+-ms-border-radius: .3em;
+-o-border-radius: .3em;
+border-radius: .3em;
+padding: 6px;
+padding: .6em;
+color: #fff;
+}
+
+a.button-lrg--transparent--aqua-dark,
+.button-lrg--transparent--aqua-dark {
+border: 1px solid #00adee;
+color: #00adee;
+}
+
+a.button-lrg--transparent--no-border,
+.button-lrg--transparent--no-border {
+color:#ccc;
+border:none;
+}
+
+
+/*  *******************************
+MODAL
+****************************** */
+
+.modal{} /* used as an empty full-width container for user to click and close modal */
+
+.js-modalGrey {
+margin-top:40px;
+margin-top:4em;
+}
+
+.modal__content {
+margin:0 auto;
+text-align: center;
+background-color: #e7e7e7;
+}
+
+.modal__content > .stack,
+.modal__content > a.button-lrg,
+.modal__content > .modal__content--sm__img {
+margin-left: auto;
+margin-right: auto;
+}
+
+.modal__content__img {
+margin-left: auto;
+margin-right: auto;
+}
+
+.modal__content--sm {
+max-width: 360px;
+max-width: 36em;
+padding: 18px 18px 18px;
+padding: 1.8em 1.8em 1.8em;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+-o-border-radius: 5px;
+border-radius: 5px;
+-webkit-border-radius: .5em;
+-moz-border-radius: .5em;
+-ms-border-radius: .5em;
+-o-border-radius: .5em;
+border-radius: .5em;
+}
+
+.modal__content__h1 {
+font-weight: normal;
+font-size: 27px;
+font-size: 2.7em;
+/*font-size: 3.8rem;*/
+margin-bottom: 15px;
+margin-bottom: .5em;
+/*margin-bottom: 1.5rem;*/
+font-weight: normal;
+color:#666;
+line-height:35px;
+line-height:1.3em;
+/*line-height:5rem;*/
+}
+
+.modal__content__h2 {
+font-weight: normal;
+font-size: 25px;
+font-size: 2.5em; /* reduced font size for "Are You Still Listening" modal only */
+margin-bottom: 5px; /* reduced margin bottom for "Are You Still Listening" modal only */
+margin-bottom: .5em;
+color:#999;
+margin-top:10px; /* for "Are You Still Listening" modal only */
+}
+
+.modal__content__h3 {
+font-weight: normal;
+font-size: 15px;
+font-size: 1.5em;
+/*font-size: 1.9rem;*/
+margin-bottom: 10px;
+margin-bottom: 1em; /* reduced margin bottom for "Are You Still Listening" modal only */
+/*margin-bottom: 2rem;*/
+color:#999;
+margin-top:.5em; /* increased margin top for "Are You Still Listening" modal only */
+}
+
+.modal__content__h3 > a{text-decoration: underline;}
+
+.modal__content--transparent {
+color: #fff;
+background: rgba(0, 0, 0, 0);
+}
+
+.modal__content--transparent .modal__content__h1 {
+color: #fff;
+}
+
+.modal__content--transparent .modal__content__h2 {
+color: #ccc;
+font-size: 15px;
+font-size: 1.5em;
+line-height: 15px;
+line-height: 1.5em;
+}
+
+.modal__content__img--still-listening {
+width: 125px;
+width: 12.5em;
+}
+
+.js-display-block {
+display:block!important;
+}
+</style>
+
+</head>
+<body>
+<div class="modal">
+    <div class="modal__content  modal__content--transparent">
+        <img class="modal__content__img modal__content__img--still-listening" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTAzLjkxNnB4IiBoZWlnaHQ9IjgwLjYyOXB4IiB2aWV3Qm94PSIwIDAgMTAzLjkxNiA4MC42MjkiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwMy45MTYgODAuNjI5Ig0KCSB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8Zz4NCgkJCTxnPg0KCQkJCTxnPg0KCQkJCQk8cGF0aCBmaWxsPSIjQ0NDQ0NDIiBkPSJNNTEuOTU4LDEuNWMxNC44LDAsMjguMTIzLDkuNDExLDMzLjk0LDIzLjk3NmMwLjMxNiwwLjc5My0wLjA3MSwxLjY5OC0wLjg2NCwyLjAxNw0KCQkJCQkJYy0wLjE4NSwwLjA3My0wLjM3NywwLjEwOS0wLjU3MywwLjEwOWMtMC42NCwwLTEuMjA1LTAuMzgyLTEuNDQyLTAuOTc1Qzc3LjY3NCwxMy4yNDcsNjUuNDgxLDQuNjAyLDUxLjk1OCw0LjYwMg0KCQkJCQkJYy0xMy41MjUsMC0yNS43MTcsOC42NDYtMzEuMDYsMjIuMDI0Yy0wLjIzNywwLjU5NC0wLjgwNSwwLjk3OS0xLjQ0MSwwLjk3OWMtMC4xOTUsMC0wLjM4OS0wLjAzOS0wLjU3NC0wLjExMw0KCQkJCQkJYy0wLjc5NC0wLjMxNy0xLjE4My0xLjIyMS0wLjg2NC0yLjAxOEMyMy44MzUsMTAuOTExLDM3LjE1NywxLjUsNTEuOTU4LDEuNSBNNTEuOTU4LDBDMzYuNTQsMCwyMi42NzEsOS43ODEsMTYuNjI1LDI0LjkxOQ0KCQkJCQkJYy0wLjYyNSwxLjU2NCwwLjEzNywzLjM0LDEuNywzLjk2NWMwLjM3MywwLjE0OSwwLjc1NiwwLjIyMSwxLjEzMiwwLjIyMWMxLjIxMiwwLDIuMzU1LTAuNzI5LDIuODM1LTEuOTIxDQoJCQkJCQlDMjcuNDA1LDE0LjM3NiwzOS4wNTEsNi4xMDIsNTEuOTU4LDYuMTAyYzEyLjkwNiwwLDI0LjU1Miw4LjI3NCwyOS42NjgsMjEuMDgyYzAuNDc3LDEuMTkzLDEuNjI0LDEuOTE4LDIuODM1LDEuOTE4DQoJCQkJCQljMC4zNzcsMCwwLjc2LTAuMDY4LDEuMTMtMC4yMThjMS41NjItMC42MjUsMi4zMjYtMi40LDEuNzAxLTMuOTY1QzgxLjI0NSw5Ljc4Miw2Ny4zNzYsMCw1MS45NTgsMEw1MS45NTgsMHoiLz4NCgkJCQk8L2c+DQoJCQk8L2c+DQoJCTwvZz4NCgk8L2c+DQoJPGc+DQoJCTxnPg0KCQkJPGc+DQoJCQkJPGc+DQoJCQkJCTxwYXRoIGZpbGw9IiNGRjg1MDAiIGQ9Ik0xOC4wNzMsMzQuMTI4YzIuNDc5LDAsNC41LDIuMDIsNC41LDQuNXYzNi4wMDFjMCwyLjQ4MS0yLjAyMSw0LjUtNC41LDQuNWMtMi40ODEsMC00LjUtMi4wMTktNC41LTQuNQ0KCQkJCQkJVjM4LjYyOEMxMy41NzMsMzYuMTQ3LDE1LjU5MSwzNC4xMjgsMTguMDczLDM0LjEyOCBNMTguMDczLDMyLjYyOGMtMy4zMTMsMC02LDIuNjg4LTYsNnYzNi4wMDFjMCwzLjMxMiwyLjY4Nyw2LDYsNg0KCQkJCQkJYzMuMzEyLDAsNi0yLjY4OCw2LTZWMzguNjI4QzI0LjA3MywzNS4zMTUsMjEuMzg1LDMyLjYyOCwxOC4wNzMsMzIuNjI4TDE4LjA3MywzMi42Mjh6Ii8+DQoJCQkJPC9nPg0KCQkJPC9nPg0KCQk8L2c+DQoJCTxnPg0KCQkJPGc+DQoJCQkJPGc+DQoJCQkJCTxwYXRoIGZpbGw9IiNGRjg1MDAiIGQ9Ik04NS44NDcsMzQuMTI4YzIuNDgsMCw0LjUsMi4wMiw0LjUsNC41djM2LjAwMWMwLDIuNDgxLTIuMDIsNC41LTQuNSw0LjVzLTQuNS0yLjAxOS00LjUtNC41VjM4LjYyOA0KCQkJCQkJQzgxLjM0NywzNi4xNDcsODMuMzY2LDM0LjEyOCw4NS44NDcsMzQuMTI4IE04NS44NDcsMzIuNjI4Yy0zLjMxMiwwLTYsMi42ODgtNiw2djM2LjAwMWMwLDMuMzEyLDIuNjg4LDYsNiw2czYtMi42ODgsNi02DQoJCQkJCQlWMzguNjI4QzkxLjg0NywzNS4zMTUsODkuMTU5LDMyLjYyOCw4NS44NDcsMzIuNjI4TDg1Ljg0NywzMi42Mjh6Ii8+DQoJCQkJPC9nPg0KCQkJPC9nPg0KCQk8L2c+DQoJCTxnPg0KCQkJPGc+DQoJCQkJPGc+DQoJCQkJCTxnPg0KCQkJCQkJPHBhdGggZmlsbD0iI0ZGODUwMCIgZD0iTTk3LjA0LDQzLjQxN2MzLjI0OCwyLjY2Miw1LjM3NSw3LjcxNyw1LjM3NSwxMy4yMTJjMCw1LjQ5Ni0yLjEyNSwxMC41NS01LjM3NSwxMy4yMTFWNDMuNDE3DQoJCQkJCQkJIE05NS41NCw0MC43MzV2MzEuNzgyYzQuODU0LTIuMTM3LDguMzc1LTguNDM5LDguMzc1LTE1Ljg5MVMxMDAuMzk2LDQyLjg3NSw5NS41NCw0MC43MzVMOTUuNTQsNDAuNzM1eiIvPg0KCQkJCQk8L2c+DQoJCQkJPC9nPg0KCQkJPC9nPg0KCQk8L2c+DQoJCTxnPg0KCQkJPGc+DQoJCQkJPGc+DQoJCQkJCTxnPg0KCQkJCQkJPHBhdGggZmlsbD0iI0ZGODUwMCIgZD0iTTYuODc1LDQzLjQxN1Y2OS44NEMzLjYyNiw2Ny4xNzksMS41LDYyLjEyNSwxLjUsNTYuNjI5QzEuNSw1MS4xMzQsMy42MjYsNDYuMDc5LDYuODc1LDQzLjQxNw0KCQkJCQkJCSBNOC4zNzUsNDAuNzM1QzMuNTIxLDQyLjg3NSwwLDQ5LjE3OCwwLDU2LjYyOXMzLjUyMSwxMy43NTQsOC4zNzUsMTUuODkyVjQwLjczNUw4LjM3NSw0MC43MzV6Ii8+DQoJCQkJCTwvZz4NCgkJCQk8L2c+DQoJCQk8L2c+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==">
+        <h1 class="modal__content__h1">Still listening?</h1>
+        <h2 class="modal__content__h2">Don't miss a second of the music you love.
+        </h2>
+        <div class="spacing-m-t-40">
+            <a class="button-lrg button-lrg--transparent button-lrg--marginBottomLrg" href="javascript:Pandora.closeCustomWebViewContainer();">Still Listening</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

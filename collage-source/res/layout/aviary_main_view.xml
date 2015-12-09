@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aviary.android.feather.library.services.drag.DragLayer android:id="@id/dragLayer" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:background="?aviaryBackgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/aviary_navbar" layout="@layout/aviary_navbar" />
+        <RelativeLayout android:id="@id/main_content" android:padding="?aviaryMainImagePadding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/aviary_bottombar" android:layout_below="@id/aviary_navbar">
+            <RelativeLayout android:id="@id/drawing_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.aviary.android.feather.sdk.widget.AviaryImageRestoreSwitcher android:id="@id/aviary_restore" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?attr/aviaryImageRestoreViewStyle">
+                <it.sephiroth.android.library.imagezoom.ImageViewTouch android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <it.sephiroth.android.library.imagezoom.ImageViewTouch android:id="@id/image_original" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.aviary.android.feather.sdk.widget.AviaryImageRestoreSwitcher>
+            <include android:id="@id/image_loading_view" layout="@layout/aviary_main_loader" />
+        </RelativeLayout>
+        <include android:id="@id/aviary_bottombar" android:layout_width="fill_parent" android:layout_height="?aviaryBottomBarHeight" android:layout_alignParentBottom="true" layout="@layout/aviary_bottombar" />
+        <RelativeLayout android:id="@id/feather_dialogs_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/aviary_navbar" />
+        <SurfaceView android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    </RelativeLayout>
+</com.aviary.android.feather.library.services.drag.DragLayer>

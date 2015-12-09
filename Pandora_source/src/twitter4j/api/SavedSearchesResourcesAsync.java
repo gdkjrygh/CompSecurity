@@ -1,0 +1,18 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package twitter4j.api;
+
+
+public interface SavedSearchesResourcesAsync
+{
+
+    public abstract void createSavedSearch(String s);
+
+    public abstract void destroySavedSearch(int i);
+
+    public abstract void getSavedSearches();
+
+    public abstract void showSavedSearch(int i);
+}

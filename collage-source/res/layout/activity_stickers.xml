@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.HackyDrawerLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#fff8f8f8" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/cblue_toolbar_with_elevation" />
+        <ViewSwitcher android:orientation="vertical" android:id="@id/view_switcher_sticker_menu" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/linearLayout_sticker_menu" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <android.support.v7.widget.RecyclerView android:id="@id/gridView_sticker_store_menu" android:paddingLeft="12.0dip" android:paddingTop="12.0dip" android:paddingRight="12.0dip" android:fadingEdge="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="true" />
+                <com.cardinalblue.android.piccollage.view.NoInternetWarningBar android:id="@id/sticker_menu_no_internet_warning_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </FrameLayout>
+            <RelativeLayout android:id="@id/linearLayout_sticker_fragments" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <android.support.v4.view.HackyViewPager android:id="@id/sticker_viewpager" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/footer" />
+                <FrameLayout android:id="@id/footer" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true">
+                    <ImageButton android:layout_gravity="left|center" android:id="@id/btn_prev_sticker_pack" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="@drawable/ic_store_prev" />
+                    <TextView android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/btn_act_more_sticker" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/more_stickers" android:drawableLeft="@drawable/ic_store" />
+                    <ImageButton android:layout_gravity="right|center" android:id="@id/btn_next_sticker_pack" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/ic_store_next" />
+                </FrameLayout>
+            </RelativeLayout>
+        </ViewSwitcher>
+    </LinearLayout>
+</android.support.v4.widget.HackyDrawerLayout>

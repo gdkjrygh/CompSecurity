@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/two_line_separator_layout" />
+        <com.jcp.views.TypefaceTextView android:textSize="17.0sp" android:textColor="@color/text_color" android:gravity="center" android:id="@id/localAdStoreName" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/no_local_ad_store_selected_msg" app:customTypeface="GOTHAM_BOLD_OTF" />
+        <com.jcp.views.TypefaceTextView android:textSize="14.0sp" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/localAdStoreAddress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/no_local_ad_store_address_msg" app:customTypeface="GOTHAM_BOOK" />
+        <com.jcp.views.TypefaceTextView android:textSize="14.0sp" android:textColor="@color/threshold_message_text" android:gravity="center" android:id="@id/selectStoreBtn" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/select_store_btn_label" android:onClick="findStore" app:customTypeface="GOTHAM_BOLD_OTF" />
+        <include layout="@layout/two_line_separator_layout" />
+    </LinearLayout>
+    <ListView android:id="@id/adsCatalogsList" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@android:color/transparent" />
+</LinearLayout>

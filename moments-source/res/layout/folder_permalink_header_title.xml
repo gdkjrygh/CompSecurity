@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/permalink_list_header_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/permalink_list_header_title_margin" android:layout_marginStart="@dimen/permalink_list_header_title_margin">
+        <com.facebook.resources.ui.FbTextView android:id="@id/main_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/folder_permalink_header_row_main_title_text" />
+        <com.facebook.resources.ui.FbTextView android:id="@id/second_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/folder_permalink_header_row_second_title_text" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/thanks_module" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <com.facebook.resources.ui.FbTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/permalink_header_row_dot_margin" android:layout_marginRight="@dimen/permalink_header_row_dot_margin" android:text="•" android:layout_marginStart="@dimen/permalink_header_row_dot_margin" android:layout_marginEnd="@dimen/permalink_header_row_dot_margin" style="@style/folder_permalink_header_dot_before_thanks" />
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.facebook.resources.ui.FbTextView android:layout_gravity="center_vertical" android:id="@id/thanked_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/folder_permalink_header_thanked_text" />
+            <com.facebook.resources.ui.FbTextView android:gravity="center_vertical" android:id="@id/thanks_action_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/folder_permalink_header_say_thanks" style="@style/folder_permalink_header_thanks_action_text" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

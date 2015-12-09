@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/product_overview_content_background" android:layout_width="fill_parent" android:layout_height="@dimen/product_overview_content_height" android:layerType="hardware"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:paddingLeft="@dimen/product_overview_content_padding_horizontal" android:paddingRight="@dimen/product_overview_content_padding_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/description_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/product_overview_detail_title_margin_top">
+                <ly.kite.widget.CustomTypefaceTextView android:textSize="@dimen/product_overview_detail_title" android:textStyle="bold" android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/product_overview_detail_title_margin_top" android:text="@string/Description" />
+                <ly.kite.widget.CustomTypefaceTextView android:textSize="@dimen/product_overview_detail_text" android:gravity="left" android:id="@id/description_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/size_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/product_overview_detail_title_margin_top">
+                <ly.kite.widget.CustomTypefaceTextView android:textSize="@dimen/product_overview_detail_title" android:textStyle="bold" android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/Size" />
+                <ly.kite.widget.CustomTypefaceTextView android:textSize="@dimen/product_overview_detail_text" android:gravity="left" android:id="@id/size_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/quantity_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/product_overview_detail_title_margin_top">
+                <ly.kite.widget.CustomTypefaceTextView android:textSize="@dimen/product_overview_detail_title" android:textStyle="bold" android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/Quantity" />
+                <ly.kite.widget.CustomTypefaceTextView android:textSize="@dimen/product_overview_detail_text" android:gravity="left" android:id="@id/quantity_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <ly.kite.widget.CustomTypefaceTextView android:textSize="@dimen/product_overview_detail_title" android:textStyle="bold" android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/product_overview_detail_title_margin_top" android:text="@string/Shipping" />
+            <ly.kite.widget.CustomTypefaceTextView android:textSize="@dimen/product_overview_detail_text" android:gravity="left" android:id="@id/shipping_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ly.kite.widget.CustomTypefaceTextView android:textSize="@dimen/product_overview_detail_title" android:textStyle="bold" android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/product_overview_detail_title_margin_top" android:text="@string/Quality_Guarantee" />
+            <ly.kite.widget.CustomTypefaceTextView android:textSize="@dimen/product_overview_detail_text" android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/quality_guarantee_text" />
+            <View android:layout_width="fill_parent" android:layout_height="@dimen/product_overview_drawer_proceed_overlay_frame_height" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/include_product_overview_drawer_proceed_overlay" />
+</FrameLayout>

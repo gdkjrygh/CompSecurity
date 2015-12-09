@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <View android:id="@id/background_darken" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.common.ui.keyboard.SoftInputDetectingLinearLayout android:layout_gravity="top|left|center" android:orientation="vertical" android:id="@id/bubble_content_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.moments.syncheads.SyncHeadBubbleView android:id="@id/bubble_content_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include layout="@layout/custom_keyboard_layout" />
+    </com.facebook.common.ui.keyboard.SoftInputDetectingLinearLayout>
+    <FrameLayout android:id="@android:id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.facebook.resources.ui.FbTextView android:gravity="right" android:layout_gravity="top|left|center" android:id="@id/success_state_tooltip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:alpha="0.0" style="@style/sync_head_target_text" />
+    <ViewStub android:id="@id/action_targets" android:layout="@layout/sync_head_action_targets" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/sync_head_container" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:splitMotionEvents="false" />
+</merge>

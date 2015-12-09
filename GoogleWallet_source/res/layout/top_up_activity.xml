@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Card">
+            <com.google.android.apps.wallet.widgets.money.MoneyInputSection android:id="@id/MoneyInputSection" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View style="@style/HorizontalDivider" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/AddMoneyAmount1" android:layout_width="0.0dip" android:layout_weight="1.0" style="@style/FlatButton" />
+                <View style="@style/VerticalDivider" />
+                <Button android:id="@id/AddMoneyAmount2" android:layout_width="0.0dip" android:layout_weight="1.0" style="@style/FlatButton" />
+                <View style="@style/VerticalDivider" />
+                <Button android:id="@id/AddMoneyAmount3" android:layout_width="0.0dip" android:layout_weight="1.0" style="@style/FlatButton" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:gravity="center_vertical" android:id="@id/SetupRecurringTransfer" android:padding="@dimen/default_spacing" android:visibility="gone" android:text="@string/setup_recurring_topup_button" android:drawableLeft="@drawable/ic_rt" android:drawablePadding="@dimen/default_spacing" style="@style/Body.Action" />
+        <TextView android:gravity="center_vertical" android:id="@id/NextTransfer" android:padding="@dimen/default_spacing" android:visibility="gone" android:drawableLeft="@drawable/ic_rt" android:drawablePadding="@dimen/default_spacing" style="@style/Body.Action" />
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

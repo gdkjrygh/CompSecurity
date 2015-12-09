@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/welcome_header_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/include1" layout="@layout/title_bar_blue" />
+    <ScrollView android:id="@id/bodyWrapper" android:padding="15.0dip" android:scrollbars="none" android:fadingEdge="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/include1" android:layout_centerHorizontal="true">
+        <RelativeLayout android:id="@id/body" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/fields" android:background="@drawable/iphone_table_single" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                <RelativeLayout android:id="@id/typeRow" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+                    <TextView android:textColor="@color/grey_address_form_text" android:gravity="right|center" android:id="@id/typeLabel" android:layout_width="@dimen/label_width" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/label_margin_left" android:text="@string/type" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@android:color/black" android:gravity="left|center" android:id="@id/typeText" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/textview" android:layout_toRightOf="@id/typeLabel" android:layout_centerVertical="true" />
+                    <View style="@style/AddressTypeDividerGray" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/nameRow" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+                    <TextView android:textColor="@color/grey_address_form_text" android:gravity="right|center" android:id="@id/nameLabel" android:layout_width="@dimen/label_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/label_margin_left" android:text="@string/location_name" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@android:color/black" android:gravity="center_vertical" android:id="@id/nameText" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/textview" android:layout_toRightOf="@id/nameLabel" />
+                    <View style="@style/AddressTypeDividerGray" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/regionContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@color/grey_address_form_text" android:gravity="right" android:id="@id/regionText" android:layout_width="@dimen/label_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/label_margin_left" android:layout_marginRight="10.0dip" android:text="@string/form_delivery_state" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@android:color/black" android:id="@id/region" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/regionText" android:layout_centerVertical="true" />
+                    <View style="@style/AddressTypeDividerGray" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/locationContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@color/grey_address_form_text" android:gravity="right" android:id="@id/locationText" android:layout_width="@dimen/label_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/label_margin_left" android:layout_marginRight="10.0dip" android:text="@string/form_campus_base_text" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@android:color/black" android:textColorHint="@color/white_grey_text" android:id="@id/location" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/locationText" android:layout_centerVertical="true" />
+                    <View style="@style/AddressTypeDividerGray" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/buildingContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@color/grey_address_form_text" android:gravity="right" android:id="@id/buildingTextName" android:layout_width="@dimen/label_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/label_margin_left" android:layout_marginRight="10.0dip" android:text="@string/form_dorm_building_text" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@android:color/black" android:textColorHint="@color/white_grey_text" android:id="@id/building" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/buildingTextName" android:layout_centerVertical="true" />
+                    <View style="@style/AddressTypeDividerGray" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/unitContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@color/grey_address_form_text" android:gravity="right" android:id="@id/label" android:layout_width="@dimen/label_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/label_margin_left" android:layout_marginRight="10.0dip" android:text="@string/form_room_address_text" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@android:color/black" android:textColorHint="@color/white_grey_text" android:id="@id/unitSelector" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/form_user_hint_required" android:layout_toRightOf="@id/label" android:layout_centerVertical="true">
+                        <requestFocus />
+                    </TextView>
+                </RelativeLayout>
+                <View style="@style/AddressTypeDividerGray" />
+                <RelativeLayout android:id="@id/buildingRow" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+                    <TextView android:textColor="@color/grey_address_form_text" android:gravity="right" android:id="@id/buildingLabel" android:layout_width="@dimen/label_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/label_margin_left" android:text="@string/building" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@android:color/black" android:textColorHint="@color/white_grey_text" android:gravity="center_vertical" android:id="@id/buildingText" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/textview" android:hint="@string/optional" android:layout_toRightOf="@id/buildingLabel" android:layout_centerVertical="true" />
+                    <View style="@style/AddressTypeDividerGray" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/streetRow" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+                    <TextView android:textColor="@color/grey_address_form_text" android:gravity="right" android:id="@id/streetLabel" android:layout_width="@dimen/label_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/label_margin_left" android:text="@string/street" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@android:color/black" android:textColorHint="@color/white_grey_text" android:gravity="center_vertical" android:id="@id/streetText" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/textview" android:hint="@string/form_user_hint_required" android:layout_toRightOf="@id/streetLabel" android:layout_centerVertical="true" />
+                    <View style="@style/AddressTypeDividerGray" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/aptRow" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+                    <TextView android:textColor="@color/grey_address_form_text" android:gravity="right" android:id="@id/aptLabel" android:layout_width="@dimen/label_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/label_margin_left" android:text="@string/suite_apt_num" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@android:color/black" android:textColorHint="@color/white_grey_text" android:gravity="center_vertical" android:id="@id/aptText" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/textview" android:hint="@string/optional" android:layout_toRightOf="@id/aptLabel" android:layout_centerVertical="true" />
+                    <View style="@style/AddressTypeDividerGray" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/cityRow" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+                    <TextView android:textColor="@color/grey_address_form_text" android:gravity="right" android:id="@id/cityLabel" android:layout_width="@dimen/label_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/label_margin_left" android:text="@string/city" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@android:color/black" android:textColorHint="@color/white_grey_text" android:gravity="center_vertical" android:id="@id/cityText" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/textview" android:hint="@string/form_user_hint_required" android:layout_toRightOf="@id/cityLabel" android:layout_centerVertical="true" />
+                    <View style="@style/AddressTypeDividerGray" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/stateRow" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+                    <TextView android:textColor="@color/grey_address_form_text" android:gravity="right" android:id="@id/stateLabel" android:layout_width="@dimen/label_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/label_margin_left" android:text="@string/form_delivery_state" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@android:color/black" android:gravity="center_vertical" android:id="@id/stateText" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/textview" android:layout_toRightOf="@id/stateLabel" android:layout_centerVertical="true" />
+                    <View style="@style/AddressTypeDividerGray" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/zipRow" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+                    <TextView android:textColor="@color/grey_address_form_text" android:gravity="right" android:id="@id/zipLabel" android:layout_width="@dimen/label_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/label_margin_left" android:text="@string/zip" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@android:color/black" android:textColorHint="@color/white_grey_text" android:gravity="center_vertical" android:id="@id/zipText" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/textview" android:hint="@string/form_user_hint_required" android:layout_toRightOf="@id/zipLabel" android:layout_centerVertical="true" />
+                    <View style="@style/AddressTypeDividerGray" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/deliveryInstructionsRow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/form_height">
+                    <TextView android:textColor="@color/grey_address_form_text" android:gravity="right" android:id="@id/deliveryInstructionsLabel" android:layout_width="@dimen/label_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/label_margin_left" android:text="@string/del_instructions" android:maxLength="30" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@android:color/black" android:textColorHint="@color/white_grey_text" android:gravity="center_vertical" android:id="@id/deliveryInstructionsText" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/textview" android:hint="@string/optional" android:layout_toRightOf="@id/deliveryInstructionsLabel" android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@id/buttonRow" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginTop="5.0dip" android:weightSum="2.0" android:layout_below="@id/fields" android:layout_centerHorizontal="true">
+                <Button android:id="@id/carryoutButton" android:background="@drawable/btn_red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/carryout_caps" android:layout_weight="1.0" style="@style/ButtonStyle" />
+                <Button android:id="@id/deliveryButton" android:background="@drawable/btn_red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/delivery_caps" android:layout_weight="1.0" style="@style/ButtonStyle" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <FrameLayout android:id="@id/titleShadow" android:background="@drawable/black_fade_down_light" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_below="@id/include1" />
+</RelativeLayout>

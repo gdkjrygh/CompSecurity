@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/player_controller" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/player_controls_margin" android:layout_marginBottom="@dimen/player_controls_margin" android:layout_alignParentBottom="true" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/player_margin" android:paddingRight="@dimen/player_margin" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textAppearance="?pasteTextAppearanceSecondary" android:textColor="@color/cat_white_70" android:gravity="left" android:id="@id/time_position" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" />
+        <com.spotify.mobile.android.ui.view.CancellableSeekBar android:gravity="center_vertical" android:id="@id/seekbar" android:paddingLeft="9.0dip" android:paddingRight="9.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxHeight="2.0dip" android:progress="0" android:minHeight="2.0dip" android:layout_weight="1.0" app:cancelDistance="60.0dip" />
+        <TextView android:textAppearance="?pasteTextAppearanceSecondary" android:textColor="@color/cat_white_70" android:gravity="left" android:id="@id/time_length" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/controls" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/player_control_or_upsell_height" android:layout_marginTop="8.0dip" android:layout_marginBottom="16.0dip">
+        <LinearLayout android:orientation="horizontal" android:id="@id/shuffle_controls" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageButton android:id="@id/btn_shuffle" android:background="@null" android:paddingLeft="16.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:contentDescription="@string/player_content_description_shuffle" />
+            <ImageButton android:id="@id/btn_repeat" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/player_content_description_repeat" />
+        </LinearLayout>
+        <ImageButton android:id="@id/btn_thumbdown" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:contentDescription="@string/player_content_description_downvote" />
+        <ImageButton android:id="@id/btn_thumbup" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:contentDescription="@string/player_content_description_upvote" />
+        <ImageButton android:id="@id/btn_prev" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:contentDescription="@string/player_content_description_prev" />
+        <com.spotify.android.paste.widget.CheckableImageButton android:id="@id/btn_play" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:scaleType="fitCenter" android:layout_weight="1.0" android:contentDescription="@string/player_content_description_play" />
+        <ImageButton android:id="@id/btn_next" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:contentDescription="@string/player_content_description_next" />
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.spotify.mobile.android.ui.view.ConnectIconView android:layout_gravity="right" android:id="@id/btn_connect" android:paddingTop="12.5dip" android:paddingBottom="12.5dip" android:visibility="invisible" android:layout_width="60.0dip" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

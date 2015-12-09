@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/text_container" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/dark_grey" android:id="@id/txt_chart_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_alignParentLeft="true" android:textIsSelectable="false" style="@style/GrayTitle" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/dark_grey" android:ellipsize="marquee" android:gravity="right" android:id="@id/txt_chart_date_range" android:focusable="true" android:focusableInTouchMode="true" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/time_and_date_medium_format" android:scrollHorizontally="true" android:singleLine="true" android:layout_toLeftOf="@id/btn_enlarge_graph" android:layout_toRightOf="@id/txt_chart_title" android:marqueeRepeatLimit="marquee_forever" android:textIsSelectable="false" />
+        <ImageButton android:id="@id/btn_enlarge_graph" android:background="@null" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_enlarge_graph" android:layout_alignParentRight="true" android:contentDescription="@null" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/chart_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.artfulbits.aiCharts.ChartView android:id="@id/chart" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="12.0dip" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/light_grey" android:id="@id/txt_chart_upper" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:textIsSelectable="false" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/light_grey" android:id="@id/txt_chart_lower" android:paddingLeft="8.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:textIsSelectable="false" />
+        <TextView android:id="@id/txt_empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_measurements" android:layout_centerInParent="true" />
+        <ProgressBar android:layout_gravity="center" android:id="@android:id/progress" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip" android:layout_centerInParent="true" style="@android:style/Widget.ProgressBar.Small.Inverse" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/intraday_labels" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="13.0sp" android:textColor="@color/light_grey" android:id="@id/label_intraday_start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/light_grey" android:gravity="center" android:id="@id/label_intraday_noon" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:textIsSelectable="false" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/light_grey" android:id="@id/label_intraday_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" />
+    </LinearLayout>
+</LinearLayout>

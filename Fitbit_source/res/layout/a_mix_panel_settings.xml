@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Mixpanel API token:" />
+    <View android:id="@id/mix_panel_fake_focus" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="4.0dip" />
+    <RadioGroup android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioButton android:id="@id/mix_panel_fitbit_master_token" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Fitbit Master" />
+        <RadioButton android:id="@id/mix_panel_qa_and_local_token" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Fitbit QA &amp; Local" />
+        <RadioButton android:id="@id/mix_panel_android_token" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Android" />
+        <RadioButton android:id="@id/mix_panel_debug_token" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Debug" />
+        <RadioButton android:id="@id/mix_panel_custom_token" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Custom" />
+    </RadioGroup>
+    <EditText android:id="@id/mix_panel_token" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textNoSuggestions" />
+    <Button android:id="@id/mix_panel_save" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/save" />
+</LinearLayout>

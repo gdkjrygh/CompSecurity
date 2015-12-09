@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/progress_holder" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.fitbit.challenges.ui.progress.ProgressChart android:id="@id/challenge_progress" android:layout_width="fill_parent" android:layout_height="?EoCProgressBarHeight" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/shimmer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?EoCShimmerMarginLeft">
+        <ImageView android:layout_width="wrap_content" android:layout_height="?EoCProgressBarHeight" android:layout_marginLeft="?EoCProgressBarInitialMargin" android:src="@drawable/shimmerwide" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="?EoCProgressBarHeight" android:layout_marginLeft="?EoCProgressBarSmallMargin" android:src="@drawable/shimmermed" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="?EoCProgressBarHeight" android:layout_marginLeft="?EoCProgressBarMargin" android:src="@drawable/shimmerthin" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="right|center" android:id="@id/star" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="?EoCGoalStarHeight" android:layout_marginRight="?EoCGoalStarMarginRight" android:src="@drawable/goalstar" />
+</FrameLayout>

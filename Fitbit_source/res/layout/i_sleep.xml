@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?android:selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/chart_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <ImageButton style="@style/UnclickableCornerFullscreenIcon" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/txt_chart_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:textIsSelectable="false" fitbit:font="proxima_nova_semibold" />
+    </RelativeLayout>
+    <com.fitbit.sleep.ui.landing.SleepLoggingSevenDaysBabyChartView android:id="@id/chart_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_below="@id/chart_header" />
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingRight="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/uv_title" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Make the app more Android friendly" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ff999999" android:id="@id/uv_text" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Badges are cool, and we'd like to give them out to our active users." />
+    <TextView android:textSize="11.0sp" android:textColor="#ff999999" android:id="@id/uv_creator" android:paddingLeft="5.0dip" android:paddingTop="2.0dip" android:paddingRight="5.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Posted by Anonymous on Jul 21, 2011" />
+    <include layout="@layout/uv_divider" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/uv_subscribe" android:background="@drawable/uv_clickable" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingRight="5.0dip" android:paddingBottom="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/uv_i_want_this" />
+            <TextView android:textSize="11.0sp" android:textColor="#ff999999" android:id="@id/uv_subscriber_count" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="12 people want this" />
+        </LinearLayout>
+        <CheckBox android:id="@id/uv_subscribe_checkbox" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/uv_admin_response" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff8dc13c" android:id="@id/uv_response_status" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="admin response: started" android:textAllCaps="true" />
+        <View android:id="@id/uv_response_divider" android:background="#ff8dc13c" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <LinearLayout android:orientation="horizontal" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="12.0sp" android:id="@id/uv_admin_name" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Evan Hamilton" />
+                    <TextView android:textSize="12.0sp" android:textColor="#ff999999" android:id="@id/uv_response_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Feb 12, 2013" />
+                </LinearLayout>
+                <TextView android:textSize="12.0sp" android:textColor="#ff999999" android:id="@id/uv_response_text" android:paddingTop="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="We are looking into this. Please check back and leave additional comments and we will be in touch!" />
+            </LinearLayout>
+            <ImageView android:id="@id/uv_admin_avatar" android:paddingTop="2.0dip" android:layout_width="50.0dip" android:layout_height="50.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/uv_comment_count" android:paddingLeft="5.0dip" android:text="14 comments" android:textIsSelectable="false" style="@style/uv_ListSeparatorLight" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/uv_post_comment" android:background="@drawable/uv_clickable" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingRight="5.0dip" android:paddingBottom="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/uv_post_a_comment" android:layout_weight="1.0" />
+        <View android:background="#20000000" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/uv_comment" />
+    </LinearLayout>
+    <include layout="@layout/uv_divider" />
+</LinearLayout>

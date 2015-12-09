@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:id="@id/Scroll" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:src="@drawable/img_rt_splash_color_160dp" android:contentDescription="@null" style="@style/SplashHeroImage" />
+            <TextView android:id="@id/AmountFrequency" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:paddingBottom="0.0dip" style="@style/LargeTitle" />
+            <TextView android:id="@id/OnDay" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" style="@style/LargeTitle" />
+            <TextView android:id="@id/Source" android:paddingBottom="@dimen/default_spacing" style="@style/Body.Splash" />
+        </LinearLayout>
+        <Space android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <View style="@style/HorizontalDivider" />
+        <LinearLayout android:orientation="vertical" android:id="@id/NextTopup" android:background="@color/butter" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:gravity="center_horizontal" android:id="@id/Expand" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/quantum_ic_keyboard_arrow_up_black_24" />
+            <Space android:id="@id/Collapse" android:layout_width="fill_parent" android:layout_height="@dimen/default_spacing" />
+            <TextView android:id="@id/TransferDate" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:paddingBottom="0.0dip" style="@style/Title.Splash" />
+            <TextView android:id="@id/TransferAvailability" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:paddingBottom="0.0dip" style="@style/Title.Splash" />
+            <TextView android:gravity="center_horizontal" android:id="@id/Details" android:paddingTop="@dimen/default_spacing" style="@style/FinePrint.Butter" />
+            <TextView android:id="@id/AccessibilityText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/tap_to_expand" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

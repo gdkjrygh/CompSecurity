@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="bottom" android:id="@id/postplay" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/postplay_bgd" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:antialias="true" android:dither="true" android:scaleType="fitCenter" android:adjustViewBounds="false" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <View android:id="@id/postplay_episodes_overlay_black" android:background="@color/postplay_episode_black_overlay" android:layout_width="fill_parent" android:layout_height="@dimen/postplay_episodes_overlay_black_height" android:layout_alignParentBottom="true" />
+    <View android:background="@drawable/postplay_episodes_bg" android:layout_width="fill_parent" android:layout_height="@dimen/postplay_episodes_overlay_gradient_height" android:layout_above="@id/postplay_episodes_overlay_black" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/postplay_ignore_tap" android:padding="@dimen/postplay_tablet_episodes_margin" android:layout_width="fill_parent" android:layout_height="@dimen/postplay_episodes_overlay_height" android:layout_alignParentBottom="true">
+        <RelativeLayout android:layout_gravity="bottom" android:layout_width="@dimen/postplay_tablet_episodes_play_image_width" android:layout_height="@dimen/postplay_tablet_episodes_play_image_height" android:layout_marginRight="@dimen/postplay_tablet_episodes_margin">
+            <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/postplay_play_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/postplay_play_button" android:layout_width="@dimen/postplay_tablet_episodes_play_btn_size" android:layout_height="@dimen/postplay_tablet_episodes_play_btn_size" android:src="@drawable/play_overlay" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@id/postplay_timer_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/postplay_tablet_episodes_first_line_bottom_margin">
+                <TextView android:layout_gravity="left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/postplay_episodes_timer_margin" android:text="@string/label_postplay_nextEpisode" android:singleLine="true" style="@style/PostPlayNext" />
+                <TextView android:layout_gravity="left|center" android:id="@id/postplay_timer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@integer/postplay_timer_value" android:singleLine="true" style="@style/PostPlayTimer" />
+            </LinearLayout>
+            <TextView android:layout_gravity="left|center" android:id="@id/postplay_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/postplay_tablet_episodes_second_line_bottom_margin" android:text="" android:singleLine="true" style="@style/PostPlayTitle" />
+            <TextView android:ellipsize="end" android:layout_gravity="left|center" android:id="@id/postplay_synopsis" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/postplay_episodes_metadata_width" android:text="" android:maxLines="2" style="@style/PostPlaySynopsis" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

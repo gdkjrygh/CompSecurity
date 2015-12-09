@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageButton android:layout_gravity="left" android:id="@id/close_btn" android:layout_width="56.0dip" android:layout_height="56.0dip" android:scaleType="centerInside" android:contentDescription="@string/player_content_description_close" style="@style/Widget.Player.Button.Borderless" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/context" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/queue_btn" android:layout_toRightOf="@id/close_btn" android:layout_alignBaseline="@id/close_btn" android:layout_alignTop="@id/close_btn" android:layout_alignBottom="@id/close_btn">
+        <com.spotify.mobile.android.spotlets.player.views.MarqueeTextView android:id="@id/context_title" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:fontAsset="?catFontRegular100" style="@style/NavigationTitle" />
+        <com.spotify.mobile.android.spotlets.player.views.MarqueeTextView android:id="@id/context_subtitle" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/NavigationSubtitle" />
+        <com.spotify.android.paste.widget.SleepTimerView android:textColor="@color/cat_white_70" android:layout_gravity="center_horizontal" android:id="@id/player_sleep_timer_counter" android:visibility="gone" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageButton android:layout_gravity="right" android:id="@id/queue_btn" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@null" android:scaleType="centerInside" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/player_content_description_queue" style="@style/Widget.Player.Button.Borderless" />
+</RelativeLayout>

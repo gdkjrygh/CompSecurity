@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rdcpreview_outerRL" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center_horizontal" android:id="@id/rdcpreview_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/preview_all_caps" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/rdcpreview_use_retake_layout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/transparent_black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <Button android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/rdcpreview_retake" android:background="@drawable/grey_btn" android:paddingLeft="14.0dip" android:paddingRight="14.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="2.0dip" android:text="Retake" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/transparent_black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <Button android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/rdcpreview_use" android:background="@drawable/grey_btn" android:paddingLeft="23.0dip" android:paddingRight="22.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="2.0dip" android:text="Use" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@id/rdcpreview_overlay" android:background="@drawable/camera_overlay_img" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_above="@id/rdcpreview_use_retake_layout" />
+        <View android:id="@id/rdcpreview_overlay_use_retake" android:background="@drawable/camera_overlay_img" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_above="@id/rdcpreview_use_retake_layout" />
+    </RelativeLayout>
+</LinearLayout>

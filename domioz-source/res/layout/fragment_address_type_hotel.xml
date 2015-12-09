@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/addressTypeHotelLocationContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:gravity="right|center" android:id="@id/addressTypeHotelLocation" android:text="@string/form_hotel_name_text" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeHotelLocationEntry" android:hint="@string/form_user_hint_optional" android:maxLength="@integer/address_max_length" android:layout_toRightOf="@id/addressTypeHotelLocation" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeHotelStreetAddressContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeHotelStreetAddress" android:text="@string/form_street_address" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeHotelStreetAddressEntry" android:hint="@string/form_user_hint_required" android:maxLength="@integer/address_max_length" android:layout_toRightOf="@id/addressTypeHotelStreetAddress" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeHotelRoomContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeHotelRoom" android:text="@string/form_room_address_text" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeHotelRoomEntry" android:hint="@string/form_user_hint_required" android:layout_toRightOf="@id/addressTypeHotelRoom" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeHotelCityContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeHotelCity" android:text="@string/city" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeHotelCityEntry" android:hint="@string/form_user_hint_required" android:layout_toRightOf="@id/addressTypeHotelCity" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeHotelStateContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeHotelState" android:text="@string/form_delivery_state" style="@style/AddressTypeTextStyle" />
+        <Spinner android:id="@id/addressTypeHotelStateSpinner" android:background="@color/bg_form_text" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" android:layout_marginLeft="@dimen/label_margin_left" android:layout_toRightOf="@id/addressTypeHotelState" android:layout_centerVertical="true" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeHotelZipContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeHotelZip" android:text="@string/form_zip_code_text" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeHotelZipEntry" android:hint="@string/form_user_hint_required" android:maxLength="@integer/address_zip_size" android:layout_toRightOf="@id/addressTypeHotelZip" android:inputType="number" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeHotelDeliveryInstContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeHotelDeliveryInst" android:text="@string/form_delivery_inst" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeHotelDeliveryInstEntry" android:hint="@string/form_user_hint_optional" android:singleLine="true" android:maxLength="@integer/address_delivery_inst_size" android:layout_toRightOf="@id/addressTypeHotelDeliveryInst" android:imeOptions="actionDone|flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/sync_picker_fragment_container" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.moments.ui.titlebar.SyncTitleBar android:id="@id/sync_titlebar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <android.support.v4.view.ViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:orientation="vertical" android:id="@id/tab_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" app:showDividers="end" app:divider="@color/black_08a" app:dividerThickness="1.0dip">
+            <com.facebook.moments.ui.common.SyncTabbedViewPagerIndicator android:id="@id/view_pager_indicator" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" app:dividerPadding="23.0dip" app:underlineColor="@color/sync_primary_color" app:underlineHeight="@dimen/tab_indicator_height" app:tabLayout="@layout/tabbed_view_pager_indicator_child" app:divider="@null" />
+        </com.facebook.fbui.widget.layout.SegmentedLinearLayout>
+    </FrameLayout>
+</LinearLayout>

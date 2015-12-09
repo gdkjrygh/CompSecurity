@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/select_players_activity" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/select_players_activity_subcontainer" android:background="@color/games_select_players_chips_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:id="@id/top_of_screen_padding" android:layout_width="fill_parent" android:layout_height="@dimen/games_select_players_staging_padding" />
+        <TextView android:enabled="false" android:id="@id/select_players_current_count_label" android:paddingLeft="@dimen/games_tile_select_players_header_left_padding" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PlayClusterTitle" />
+        <ListView android:id="@id/chips_list" android:paddingLeft="@dimen/games_select_players_staging_padding" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+        <ImageView android:id="@id/divider" android:padding="0.0dip" android:layout_height="2.0dip" android:layout_marginTop="5.0dip" android:src="@drawable/games_select_players_divider_bg" style="@style/Games.HorizontalDivider" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/select_players_lower_section" android:background="@color/games_select_players_list_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <FrameLayout android:id="@id/select_players_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/select_players_list_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/games_select_players_none_found" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:paddingBottom="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/games_null_avatar" />
+            <TextView android:layout_gravity="center" android:paddingBottom="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/games_select_players_filter_empty" style="@style/Games.EmptyViewText" />
+            <TextView android:layout_gravity="center" android:id="@id/games_select_players_start_over" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/games_select_players_filter_start_over" style="@style/Games.EmptyViewActionText" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

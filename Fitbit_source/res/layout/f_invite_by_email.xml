@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/invite_by_email_main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/search_layout" android:layout_width="fill_parent" android:layout_height="@dimen/mobile_ff_img_avatar_layout_height" android:layout_marginLeft="@dimen/mobile_ff_button_left_margin" android:layout_marginTop="@dimen/mobile_ff_buttons_top_margin" android:layout_marginRight="@dimen/mobile_ff_button_right_margin" android:layout_marginBottom="@dimen/mobile_ff_button_bottom_margin">
+        <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="@dimen/mobile_ff_img_avatar_layout_width" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_email" />
+        </RelativeLayout>
+        <EditText android:textColorHint="@color/mobile_ff_search_hint_color" android:layout_gravity="center_vertical" android:id="@id/search_email_text" android:background="@drawable/invite_text_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mobile_ff_friend_item_layout_margin" android:hint="@string/field_email_hint" android:singleLine="true" android:inputType="textEmailAddress" android:textCursorDrawable="@drawable/edit_text_cursor">
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+    <com.fitbit.friends.ui.views.NewEmailView_ android:id="@id/new_email_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

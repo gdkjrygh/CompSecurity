@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/home_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="handleLob"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/gripper" android:background="@drawable/gripper_button" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/home_gripper" android:scaleType="center" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:onClick="onGripperClick" />
+    <ImageView android:id="@id/swipe_lob_icon" android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/home_front_360" android:layout_toRightOf="@id/gripper" android:layout_centerVertical="true" />
+    <RelativeLayout android:id="@id/relativeLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toLeftOf="@id/lob_arrow" android:layout_toRightOf="@id/swipe_lob_icon" android:layout_centerInParent="true">
+        <com.EnterpriseMobileBanking.Plugins.Components.CapitalOneTextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="@color/lob_title" android:id="@id/swipe_lob_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/header_card" />
+    </RelativeLayout>
+    <ImageView android:id="@id/lob_arrow" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_below="@id/relativeLayout1">
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/lob_subtext" android:gravity="center" android:id="@id/swipe_lob_subtext" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/subtext_360" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,186 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.aviary.android.feather.sdk;
+
+
+// Referenced classes of package com.aviary.android.feather.sdk:
+//            R
+
+public static final class 
+{
+
+    public static final int aviary_adjust_knob = 0x7f020047;
+    public static final int aviary_badge_icon = 0x7f020048;
+    public static final int aviary_blue_button_background = 0x7f020049;
+    public static final int aviary_blue_button_background_normal = 0x7f02004a;
+    public static final int aviary_blue_button_background_pressed = 0x7f02004b;
+    public static final int aviary_blue_button_normal = 0x7f02004c;
+    public static final int aviary_blue_button_pressed = 0x7f02004d;
+    public static final int aviary_bottombar_hline = 0x7f02004e;
+    public static final int aviary_bottombar_logo_background = 0x7f02004f;
+    public static final int aviary_bottombar_thumb_divider_left = 0x7f020050;
+    public static final int aviary_bottombar_thumb_divider_right = 0x7f020051;
+    public static final int aviary_bottombar_thumb_external_background = 0x7f020052;
+    public static final int aviary_bottombar_tools_background = 0x7f020053;
+    public static final int aviary_bottombar_vline = 0x7f020054;
+    public static final int aviary_bottombar_vline_inverted = 0x7f020055;
+    public static final int aviary_bottombar_vline_selector = 0x7f020056;
+    public static final int aviary_crop_invert_indicator = 0x7f020057;
+    public static final int aviary_crop_invert_indicator_inverted = 0x7f020058;
+    public static final int aviary_crop_invert_indicator_selector = 0x7f020059;
+    public static final int aviary_crop_invert_indicator_transparent = 0x7f02005a;
+    public static final int aviary_delete_knob = 0x7f02005b;
+    public static final int aviary_effect_item_getmore = 0x7f02005c;
+    public static final int aviary_effects_pack_background = 0x7f02005d;
+    public static final int aviary_external_packs_download_icon = 0x7f02005e;
+    public static final int aviary_external_packs_download_icon_paid = 0x7f02005f;
+    public static final int aviary_frame_divider_background = 0x7f020060;
+    public static final int aviary_frame_item_getmore = 0x7f020061;
+    public static final int aviary_frame_item_selected_image = 0x7f020062;
+    public static final int aviary_frames_pack_background = 0x7f020063;
+    public static final int aviary_gallery_default_background_selector = 0x7f020064;
+    public static final int aviary_gallery_middle_divider = 0x7f020065;
+    public static final int aviary_gray_button_background = 0x7f020066;
+    public static final int aviary_gray_button_normal = 0x7f020067;
+    public static final int aviary_gray_button_pressed = 0x7f020068;
+    public static final int aviary_green_button_background = 0x7f020069;
+    public static final int aviary_green_button_disabled = 0x7f02006a;
+    public static final int aviary_green_button_normal = 0x7f02006b;
+    public static final int aviary_green_button_pressed = 0x7f02006c;
+    public static final int aviary_hidden_edittext_background = 0x7f02006d;
+    public static final int aviary_hidden_textfield_normal = 0x7f02006e;
+    public static final int aviary_home_dialog_background = 0x7f02006f;
+    public static final int aviary_iap_grid_background = 0x7f020070;
+    public static final int aviary_iap_grid_background_inverted = 0x7f020071;
+    public static final int aviary_iap_notification_group = 0x7f020072;
+    public static final int aviary_iap_notification_ok = 0x7f020073;
+    public static final int aviary_iap_workspace_indicator_normal = 0x7f020074;
+    public static final int aviary_iap_workspace_indicator_selected = 0x7f020075;
+    public static final int aviary_iap_workspace_indicator_selector = 0x7f020076;
+    public static final int aviary_iap_workspace_shadow_bottom = 0x7f020077;
+    public static final int aviary_iap_workspace_shadow_top = 0x7f020078;
+    public static final int aviary_ic_alert_small = 0x7f020079;
+    public static final int aviary_ic_circle = 0x7f02007a;
+    public static final int aviary_ic_enhance_brighten = 0x7f02007b;
+    public static final int aviary_ic_enhance_colorfix = 0x7f02007c;
+    public static final int aviary_ic_enhance_hd = 0x7f02007d;
+    public static final int aviary_ic_eraser = 0x7f02007e;
+    public static final int aviary_ic_eraser_small = 0x7f02007f;
+    public static final int aviary_ic_flip_horizontal = 0x7f020080;
+    public static final int aviary_ic_flip_vertical = 0x7f020081;
+    public static final int aviary_ic_free = 0x7f020082;
+    public static final int aviary_ic_na = 0x7f020083;
+    public static final int aviary_ic_na_gold = 0x7f020084;
+    public static final int aviary_ic_passport_black = 0x7f020085;
+    public static final int aviary_ic_passport_white = 0x7f020086;
+    public static final int aviary_ic_passport_white_small = 0x7f020087;
+    public static final int aviary_ic_rectangle = 0x7f020088;
+    public static final int aviary_ic_rotate_left = 0x7f020089;
+    public static final int aviary_ic_rotate_right = 0x7f02008a;
+    public static final int aviary_ic_smart = 0x7f02008b;
+    public static final int aviary_knob = 0x7f02008c;
+    public static final int aviary_lens_image = 0x7f02008d;
+    public static final int aviary_light_gray_button_background = 0x7f02008e;
+    public static final int aviary_light_gray_button_normal = 0x7f02008f;
+    public static final int aviary_light_gray_button_pressed = 0x7f020090;
+    public static final int aviary_logo_big = 0x7f020091;
+    public static final int aviary_main_loader_background = 0x7f020092;
+    public static final int aviary_meme_button_background = 0x7f020093;
+    public static final int aviary_meme_clear_button = 0x7f020094;
+    public static final int aviary_nav_background = 0x7f020095;
+    public static final int aviary_nav_button_background = 0x7f020096;
+    public static final int aviary_nav_button_pressed = 0x7f020097;
+    public static final int aviary_nav_check = 0x7f020098;
+    public static final int aviary_nav_divider = 0x7f020099;
+    public static final int aviary_overlay_blemish_arrow = 0x7f02009a;
+    public static final int aviary_overlay_blur_blue = 0x7f02009b;
+    public static final int aviary_overlay_ripple = 0x7f02009c;
+    public static final int aviary_overscroll_edge = 0x7f02009d;
+    public static final int aviary_overscroll_glow = 0x7f02009e;
+    public static final int aviary_powered = 0x7f02009f;
+    public static final int aviary_resize_knob = 0x7f0200a0;
+    public static final int aviary_seekbar_background = 0x7f0200a1;
+    public static final int aviary_seekbar_background_image = 0x7f0200a2;
+    public static final int aviary_seekbar_secondary_center_selector = 0x7f0200a3;
+    public static final int aviary_seekbar_secondary_inverted_normal = 0x7f0200a4;
+    public static final int aviary_seekbar_secondary_inverted_pressed = 0x7f0200a5;
+    public static final int aviary_seekbar_secondary_inverted_selector = 0x7f0200a6;
+    public static final int aviary_seekbar_secondary_normal = 0x7f0200a7;
+    public static final int aviary_seekbar_secondary_pressed = 0x7f0200a8;
+    public static final int aviary_seekbar_secondary_selector = 0x7f0200a9;
+    public static final int aviary_seekbar_thumb = 0x7f0200aa;
+    public static final int aviary_seekbar_thumb_focused = 0x7f0200ab;
+    public static final int aviary_seekbar_thumb_normal = 0x7f0200ac;
+    public static final int aviary_seekbar_thumb_pressed = 0x7f0200ad;
+    public static final int aviary_seekbar_thumb_zero_normal = 0x7f0200ae;
+    public static final int aviary_seekbar_thumb_zero_pressed = 0x7f0200af;
+    public static final int aviary_sticker_highlight_background_selector = 0x7f0200b0;
+    public static final int aviary_sticker_item_getmore = 0x7f0200b1;
+    public static final int aviary_sticker_pack_background = 0x7f0200b2;
+    public static final int aviary_sticker_pack_background_glow = 0x7f0200b3;
+    public static final int aviary_store_blue_button_selector = 0x7f0200b4;
+    public static final int aviary_store_list_item_checked = 0x7f0200b5;
+    public static final int aviary_store_list_item_selector = 0x7f0200b6;
+    public static final int aviary_store_placeholder = 0x7f0200b7;
+    public static final int aviary_supply_passport_banner_background = 0x7f0200b8;
+    public static final int aviary_supply_passport_banner_background_pressed = 0x7f0200b9;
+    public static final int aviary_supply_passport_banner_background_selector = 0x7f0200ba;
+    public static final int aviary_symbol_minus_normal = 0x7f0200bb;
+    public static final int aviary_symbol_plus_normal = 0x7f0200bc;
+    public static final int aviary_text_highlight_background = 0x7f0200bd;
+    public static final int aviary_text_highlight_bg_normal = 0x7f0200be;
+    public static final int aviary_text_highlight_bg_pressed = 0x7f0200bf;
+    public static final int aviary_toast_background = 0x7f0200c0;
+    public static final int aviary_tool_button_background = 0x7f0200c1;
+    public static final int aviary_tool_button_center_normal = 0x7f0200c2;
+    public static final int aviary_tool_button_center_pressed = 0x7f0200c3;
+    public static final int aviary_tool_button_left_normal = 0x7f0200c4;
+    public static final int aviary_tool_button_left_pressed = 0x7f0200c5;
+    public static final int aviary_tool_button_normal = 0x7f0200c6;
+    public static final int aviary_tool_button_pressed = 0x7f0200c7;
+    public static final int aviary_tool_button_right_normal = 0x7f0200c8;
+    public static final int aviary_tool_button_right_pressed = 0x7f0200c9;
+    public static final int aviary_tool_center_button_background = 0x7f0200ca;
+    public static final int aviary_tool_ic_blemish = 0x7f0200cb;
+    public static final int aviary_tool_ic_blur = 0x7f0200cc;
+    public static final int aviary_tool_ic_brightness = 0x7f0200cd;
+    public static final int aviary_tool_ic_colorsplash = 0x7f0200ce;
+    public static final int aviary_tool_ic_contrast = 0x7f0200cf;
+    public static final int aviary_tool_ic_crop = 0x7f0200d0;
+    public static final int aviary_tool_ic_draw = 0x7f0200d1;
+    public static final int aviary_tool_ic_effects = 0x7f0200d2;
+    public static final int aviary_tool_ic_enhance = 0x7f0200d3;
+    public static final int aviary_tool_ic_feedback = 0x7f0200d4;
+    public static final int aviary_tool_ic_focus = 0x7f0200d5;
+    public static final int aviary_tool_ic_frames = 0x7f0200d6;
+    public static final int aviary_tool_ic_meme = 0x7f0200d7;
+    public static final int aviary_tool_ic_orientation = 0x7f0200d8;
+    public static final int aviary_tool_ic_redeye = 0x7f0200d9;
+    public static final int aviary_tool_ic_saturation = 0x7f0200da;
+    public static final int aviary_tool_ic_sharpen = 0x7f0200db;
+    public static final int aviary_tool_ic_stickers = 0x7f0200dc;
+    public static final int aviary_tool_ic_text = 0x7f0200dd;
+    public static final int aviary_tool_ic_warmth = 0x7f0200de;
+    public static final int aviary_tool_ic_whiten = 0x7f0200df;
+    public static final int aviary_tool_left_button_background = 0x7f0200e0;
+    public static final int aviary_tool_right_button_background = 0x7f0200e1;
+    public static final int aviary_tools_divider = 0x7f0200e2;
+    public static final int aviary_wave_dot = 0x7f0200e3;
+    public static final int aviary_wheel_background = 0x7f0200e4;
+    public static final int aviary_wheel_container = 0x7f0200e5;
+    public static final int aviary_wheel_indicator = 0x7f0200e6;
+    public static final int aviary_wheel_line = 0x7f0200e7;
+    public static final int aviary_wheel_shadow = 0x7f0200e8;
+    public static final int aviary_wheel_shadow_bottom = 0x7f0200e9;
+    public static final int hlv_overscroll_edge = 0x7f020186;
+    public static final int hlv_overscroll_glow = 0x7f020187;
+    public static final int overlay_close_button_background = 0x7f020263;
+    public static final int overlay_close_button_background_normal = 0x7f020264;
+    public static final int overlay_close_button_background_pressed = 0x7f020265;
+
+    public ()
+    {
+    }
+}

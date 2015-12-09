@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/pic_profile_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.view.HackyViewPager android:id="@id/pic_profile_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <android.support.design.widget.AppBarLayout android:id="@id/header_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="android.support.design.widget.CBBehavior">
+        <include layout="@layout/detail_user_profile" />
+        <android.support.design.widget.TabLayout android:id="@id/pic_profile_indicator" android:layout_width="fill_parent" android:layout_height="@dimen/user_profile_tab_height" android:layout_below="@id/user_info_container" style="@style/CBlueTabLayout" />
+    </android.support.design.widget.AppBarLayout>
+    <ImageButton android:layout_gravity="bottom|right|center" android:id="@id/fab_create" android:background="@drawable/fab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:src="@drawable/selector_bn_act_create" android:elevation="8.0dip" />
+    <include layout="@layout/error_message" />
+</android.support.design.widget.CoordinatorLayout>

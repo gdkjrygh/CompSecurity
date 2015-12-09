@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="52.0">
+        <ImageButton android:layout_gravity="top|left|center" android:id="@id/MenuButton" android:background="@drawable/unbounded_rippleable" android:layout_width="@dimen/minimum_touch_target" android:layout_height="@dimen/minimum_touch_target" android:src="@drawable/quantum_ic_menu_grey600_24" android:scaleType="centerInside" android:contentDescription="@string/nav_drawer_open" />
+        <ImageButton android:layout_gravity="top|right|center" android:id="@id/InfoButton" android:background="@drawable/unbounded_rippleable" android:layout_width="@dimen/minimum_touch_target" android:layout_height="@dimen/minimum_touch_target" android:src="@drawable/quantum_ic_info_outline_grey600_24" android:scaleType="centerInside" android:contentDescription="@string/pin_info_description" />
+        <LinearLayout android:gravity="top|center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/Logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/pin_logo_spacing" android:contentDescription="@null" />
+            <TextView android:id="@id/Title" android:focusable="true" style="@style/PinTitle" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/default_spacing">
+                <TextView android:layout_gravity="center_horizontal" android:id="@id/UserEmail" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Body" />
+                <TextView android:layout_gravity="center_horizontal" android:id="@id/ForgotPinLink" android:focusable="true" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pin_fragment_forgot_pin" style="@style/CardButton" />
+                <TextView android:layout_gravity="center_horizontal" android:id="@id/ProblemMessage" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Font_ErrorText03" />
+            </FrameLayout>
+            <include layout="@layout/pin_fields" />
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="48.0">
+        <com.google.android.apps.wallet.widgets.progressspinner.ProgressSpinnerView android:id="@id/WaitingView" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include layout="@layout/pin_pad" />
+    </FrameLayout>
+</LinearLayout>

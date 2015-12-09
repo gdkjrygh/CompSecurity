@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/ListRow" android:background="@drawable/bounded_rippleable" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/TextBox" android:padding="@dimen/default_spacing" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_toLeftOf="@id/ListRowControl" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignWithParentIfMissing="true">
+        <TextView android:id="@id/Title" style="@style/ListItemPrimaryText" />
+        <TextView android:id="@id/Subtitle" android:visibility="gone" style="@style/ListItemSecondaryText" />
+    </LinearLayout>
+    <include android:id="@id/ListRowControl" layout="@layout/checkbox_or_switch" />
+    <View android:id="@id/HorizontalDivider" android:visibility="gone" android:layout_width="fill_parent" android:layout_below="@id/TextBox" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/HorizontalDivider" />
+</RelativeLayout>

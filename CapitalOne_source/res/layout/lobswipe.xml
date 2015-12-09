@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/swipecontainer" />
+    <com.EnterpriseMobileBanking.Plugins.Components.SwipeCover android:id="@id/swipeScroll" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:overScrollMode="never">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:id="@id/carpetCover" android:background="@android:color/transparent" android:layout_width="291.0dip" android:layout_height="fill_parent" />
+            <include android:id="@id/swipeCover" android:layout_width="320.0dip" android:layout_height="fill_parent" android:layout_toRightOf="@id/carpetCover" layout="@layout/swipecover" />
+            <View android:background="@drawable/drop_shadow_swipe" android:layout_width="7.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/swipeCover" />
+            <View android:id="@id/swipeSpring" android:background="@drawable/home_bg" android:layout_width="29.0dip" android:layout_height="fill_parent" android:layout_toRightOf="@id/swipeCover" />
+        </RelativeLayout>
+    </com.EnterpriseMobileBanking.Plugins.Components.SwipeCover>
+    <ImageView android:background="@color/lob_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

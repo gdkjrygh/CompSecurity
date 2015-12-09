@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/first_gradient_imageView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <View android:id="@id/second_gradient_imageView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <ImageView android:id="@id/landing_logo_img" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:src="@drawable/landing_logo" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/button_layout" android:layout_alignParentTop="true">
+        <com.fitbit.onboarding.landing.CaptionView android:id="@id/view_caption_first" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <com.fitbit.onboarding.landing.CaptionView android:id="@id/view_caption_second" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip" android:layout_marginBottom="30.0dip" android:layout_alignParentBottom="true">
+        <Button android:textStyle="bold" android:id="@id/btn_join_fitbit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" android:text="@string/landing_join_fitbit" />
+        <Button android:id="@id/btn_log_in" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/log_in_title" />
+    </LinearLayout>
+</RelativeLayout>

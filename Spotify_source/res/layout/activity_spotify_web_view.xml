@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:paste="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@color/cat_grayscale_15" android:layout_width="fill_parent" android:layout_height="@dimen/actionbar_height">
+        <com.spotify.android.paste.widget.SpotifyIconView android:id="@id/btn_close" android:background="?android:selectableItemBackground" android:layout_width="48.0dip" android:layout_height="fill_parent" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:contentDescription="@string/generic_content_description_close" paste:iconType="icon_x_16" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <com.spotify.android.paste.widget.SpotifyIconView android:id="@id/btn_back_arrow" android:background="?android:selectableItemBackground" android:layout_width="48.0dip" android:layout_height="fill_parent" android:scaleType="centerInside" android:contentDescription="@string/spotify_web_view_content_description_back" paste:iconType="icon_chevron_left_16" />
+            <com.spotify.android.paste.widget.SpotifyIconView android:id="@id/btn_forward_arrow" android:background="?android:selectableItemBackground" android:layout_width="48.0dip" android:layout_height="fill_parent" android:scaleType="centerInside" android:contentDescription="@string/spotify_web_view_content_description_forward" paste:iconType="icon_chevron_right_16" />
+        </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout android:id="@id/spotify_webview_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?android:selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/chart_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/heartrate_zones_icon" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/txt_chart_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_minutes_in_heart_rate_zones" android:textIsSelectable="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.5dip">
+            <ImageView android:layout_width="11.0dip" android:layout_height="11.0dip" android:src="@drawable/heartrate_fat_burn_legend_item" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="1.0dip" android:text="@string/label_fat_burn" />
+            <ImageView android:layout_width="11.0dip" android:layout_height="11.0dip" android:layout_marginLeft="20.0dip" android:src="@drawable/heartrate_cardio_legend_item" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="1.0dip" android:text="@string/label_cardio" />
+            <ImageView android:layout_width="11.0dip" android:layout_height="11.0dip" android:layout_marginLeft="20.0dip" android:src="@drawable/heartrate_peak_legend_item" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="1.0dip" android:text="@string/label_peak" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageButton style="@style/UnclickableCornerFullscreenIcon" />
+    <com.fitbit.heartrate.charts.views.ExercizeHeartRateBabyChartView_ android:id="@id/chart_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_below="@id/chart_header" />
+</RelativeLayout>

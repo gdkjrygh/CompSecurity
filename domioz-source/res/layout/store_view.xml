@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:gravity="fill_horizontal|center" android:layout_gravity="right" android:id="@id/RelativeLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/red" android:gravity="center" android:id="@id/store_list_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="30.0dip" android:lines="1" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/separator" android:layout_width="1.0px" android:layout_height="60.0dip" android:src="@color/text_grey" android:layout_toRightOf="@id/store_list_num" />
+            <LinearLayout android:gravity="left" android:orientation="vertical" android:id="@id/info" android:padding="10.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="35.0dip" android:layout_toRightOf="@id/separator">
+                <TextView android:textColor="@color/white_black_text" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="left" android:id="@id/store_view_address" android:padding="5.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" android:scrollHorizontally="false" android:includeFontPadding="true" style="@style/ListItemLabel" />
+                <TextView android:textColor="@color/white_grey_text" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="right" android:id="@id/store_view_location_info" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="20.0dip" android:lines="1" android:scrollHorizontally="true" style="@style/ListItemDescription" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/itemLinkView" android:clickable="true" android:layout_width="75.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <ImageView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginLeft="30.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/ic_bracket" android:scaleType="centerInside" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</merge>

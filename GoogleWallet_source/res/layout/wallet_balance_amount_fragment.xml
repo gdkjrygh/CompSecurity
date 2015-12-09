@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout android:orientation="vertical" android:background="@color/primary" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="center" android:id="@id/BalanceFragmentAmount" android:accessibilityLiveRegion="1" style="@style/HeroText.Inverted" />
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/ErrorMsg" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wallet_balance_unreliable" android:drawableLeft="@drawable/ic_mywallet_error_color_24dp" android:drawablePadding="@dimen/default_spacing" style="@style/Font_MyWalletWalletBalanceHalfLabel" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/PositiveAmountButtons" android:paddingTop="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:gravity="center" android:id="@id/AddFund" android:text="@string/add_money" android:layout_weight="1.0" style="@style/PrimaryButton" />
+        <Space android:layout_width="4.0dip" android:layout_height="@dimen/minimum_touch_target" android:layout_weight="0.0" />
+        <Button android:gravity="center" android:id="@id/TransferFund" android:text="@string/transfer_to_bank" android:layout_weight="1.0" style="@style/PrimaryButton" />
+    </LinearLayout>
+    <Button android:gravity="center" android:id="@id/Settle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settle_balance_button" android:drawablePadding="@dimen/default_spacing" style="@style/PrimaryButton" />
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout>

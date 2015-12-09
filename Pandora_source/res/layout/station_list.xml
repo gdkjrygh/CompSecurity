@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/blue_bar_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/list_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/empty_view" android:background="@color/stationlist_empty_background" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/onboarding_text_size_large" android:textColor="@color/stationlist_empty_line_1_text" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/empty_station_list_onboarding_line_1" android:drawableTop="@drawable/welcome_stationlist_icon" android:drawablePadding="16.0dip" />
+            <TextView android:textSize="@dimen/onboarding_text_size_small" android:textColor="@color/stationlist_empty_line_2_text" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/empty_station_list_onboarding_line_2" />
+        </LinearLayout>
+        <com.pandora.android.util.SearchBox android:id="@id/search_box" android:layout_width="fill_parent" android:layout_height="wrap_content" pandora:hintText="@string/create_new_station" pandora:hintTextSizeSmall="@bool/displayHintTextSizeSmall" />
+        <ListView android:id="@android:id/list" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollFooter="@null" style="?attr/listDividerStyle" />
+        <com.pandora.android.view.PlaceholderStationRows android:id="@id/placeholder_station_rows" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <TextView android:textSize="50.0sp" android:textColor="#99ffffff" android:gravity="center" android:id="@id/overlay_text" android:background="#bb000000" android:padding="10.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="70.0dip" android:minWidth="70.0dip" android:layout_centerInParent="true" />
+    <LinearLayout android:id="@id/undobar" android:layout_alignParentBottom="true" style="@style/UndoBar">
+        <TextView android:id="@id/undobar_message" style="@style/UndoBarMessage" />
+        <Button android:id="@id/undobar_button" android:text="@string/undo" style="@style/UndoBarButton" />
+    </LinearLayout>
+</RelativeLayout>

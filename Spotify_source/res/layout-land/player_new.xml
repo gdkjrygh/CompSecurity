@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.spotify.mobile.android.spotlets.player.NewPlayerViews android:id="@id/player_views" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/onscreen_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+        <FrameLayout android:id="@id/content_unit_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/new_player_controls_width_landscape_negative" android:layout_marginTop="@dimen/carousel_margin_top" android:layout_marginBottom="@dimen/carousel_margin_bottom" android:layout_toRightOf="@id/content_container" android:layout_alignParentRight="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/content_container" android:layout_width="@dimen/new_player_controls_width_landscape" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+            <RelativeLayout android:id="@id/player_navigation_unit_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <FrameLayout android:id="@id/info_unit_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/include_player_new_seekbar" />
+                <FrameLayout android:gravity="center" android:id="@id/player_head_unit_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="96.0dip" />
+            </LinearLayout>
+            <include android:layout_width="fill_parent" android:layout_height="48.0dip" layout="@layout/connect_unit" />
+        </LinearLayout>
+    </RelativeLayout>
+    <com.spotify.mobile.android.spotlets.tinkerbell.TooltipContainer android:id="@id/tooltip_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.spotify.mobile.android.spotlets.player.NewPlayerViews>

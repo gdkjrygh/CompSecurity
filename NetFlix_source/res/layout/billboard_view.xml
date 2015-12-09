@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/billboard_story_art" android:scaleType="centerCrop" android:layout_centerVertical="true" style="@style/match" />
+    <View android:id="@id/billboard_shadow_overlay" android:background="@color/black" android:layout_alignParentLeft="true" style="@style/match" />
+    <View android:id="@id/billboard_shadow_overlay_gradient" android:background="@drawable/shadow_bg_to_trans_horizontal" android:layout_width="@dimen/billboard_shadow_overlay_width" android:layout_height="fill_parent" android:layout_alignParentLeft="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/billboard_info_view_group" android:layout_width="380.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/billboard_info_view_group_margin_left" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <TextView android:id="@id/billboard_label" android:layout_marginBottom="@dimen/content_padding" android:text="@string/label_spotlight" android:singleLine="true" android:lineSpacingMultiplier="1.0" style="@style/PrimaryText.Medium" />
+        <com.netflix.mediaclient.android.widget.AdvancedImageView android:id="@id/billboard_tv_card" android:layout_width="160.0dip" android:layout_height="89.0dip" android:layout_marginBottom="@dimen/content_padding" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+        <TextView android:id="@id/billboard_basic_info" android:layout_marginBottom="@dimen/content_padding" android:singleLine="true" android:lineSpacingMultiplier="1.0" style="@style/PrimaryText.Micro" />
+        <TextView android:ellipsize="end" android:id="@id/billboard_synopsis" android:layout_marginBottom="@dimen/double_padding" android:maxLines="3" android:lineSpacingMultiplier="1.0" style="@style/PrimaryText.Micro" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/billboard_button_group" style="@style/wrap">
+            <Button android:textSize="@dimen/text_micro" android:id="@id/billboard_play_button" android:layout_marginRight="@dimen/double_padding" android:text="@string/label_play_now" android:drawableLeft="@drawable/p4p_play" android:contentDescription="@string/label_play_now" style="@style/RedButton" />
+            <Button android:textSize="@dimen/text_micro" android:id="@id/billboard_info_button" android:text="@string/label_more_info" android:contentDescription="@string/label_more_info" style="@style/GreyButton" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

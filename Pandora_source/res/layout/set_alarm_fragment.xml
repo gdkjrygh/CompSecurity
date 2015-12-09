@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/settings_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/bottom_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@id/cancel_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="1.0" />
+        <Button android:id="@id/save_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/save" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/bottom_bar">
+        <LinearLayout android:orientation="vertical" android:padding="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/alarm_row_margin">
+                <TextView android:layout_height="wrap_content" android:text="@string/alarm_label_time" style="@style/set_alarm_label" />
+                <Button android:id="@id/set_alarm_time_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SpinnerButtonStyle" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/alarm_row_margin">
+                <TextView android:layout_height="wrap_content" android:text="@string/alarm_label_station" style="@style/set_alarm_label" />
+                <Button android:id="@id/set_alarm_station_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SpinnerButtonStyle" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/alarm_row_margin">
+                <TextView android:layout_height="wrap_content" android:text="@string/alarm_label_repeat" style="@style/set_alarm_label" />
+                <Button android:id="@id/set_alarm_repeat_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SpinnerButtonStyle" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/alarm_row_margin">
+                <TextView android:layout_height="wrap_content" android:text="@string/alarm_label_snooze" style="@style/set_alarm_label" />
+                <Button android:id="@id/set_alarm_snooze_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SpinnerButtonStyle" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip">
+                <TextView android:layout_height="wrap_content" android:text="@string/alarm_label_volume" style="@style/set_alarm_label" />
+                <SeekBar android:id="@id/set_alarm_volume_seekbar" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/alarm_row_margin" android:contentDescription="@string/accessibility_description_alarmclock_volume_slider" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

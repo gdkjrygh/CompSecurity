@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/games_leaderboard_score_header_wrapper" android:paddingLeft="@dimen/games_onyx_header_edge_padding" android:paddingTop="@dimen/games_header_leaderboard_score_container_padding" android:paddingRight="@dimen/games_onyx_header_edge_padding" android:paddingBottom="@dimen/games_header_leaderboard_score_container_padding" android:layout_width="fill_parent" android:layout_height="@dimen/games_header_leaderboard_score_height_plus_margin" android:layout_marginBottom="@dimen/games_header_leaderboard_score_bottom_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.gms.common.images.internal.LoadingImageView android:id="@id/leaderboard_icon" android:layout_width="@dimen/games_header_leaderboard_score_image_height" android:layout_height="@dimen/games_header_leaderboard_score_image_height" android:layout_marginRight="@dimen/games_header_leaderboard_score_container_padding" android:layout_alignParentBottom="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/leaderboard_header_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/leaderboard_icon" android:layout_alignBottom="@id/leaderboard_icon">
+        <RelativeLayout android:id="@id/title_rank_container" android:paddingRight="@dimen/games_header_leaderboard_score_container_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/games_header_leaderboard_score_title_text_size" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/leaderboard_title" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@id/player_rank_container" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <RelativeLayout android:id="@id/player_rank_container" android:background="@drawable/games_white_rounded_rectangle" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <com.google.android.gms.games.ui.widget.MetagameAvatarView android:id="@id/player_image" android:layout_width="@dimen/games_header_leaderboard_score_player_avatar_size" android:layout_height="@dimen/games_header_leaderboard_score_player_avatar_size" />
+                <TextView android:textSize="@dimen/games_header_leaderboard_score_player_rank_size" android:textColor="@color/play_games_theme_secondary" android:gravity="center_vertical" android:id="@id/player_rank" android:paddingLeft="6.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/games_header_leaderboard_score_player_avatar_size" android:singleLine="true" android:layout_toRightOf="@id/player_image" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/timespan_toggle_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+            <Spinner android:id="@id/timespan_spinner" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerVertical="true" style="@style/Games.LeaderboardSpinner" />
+            <View android:id="@id/no_overlap_view" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <include android:id="@id/collection_toggle_container" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/games_leaderboard_score_collection_toggle_layout" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

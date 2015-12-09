@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center_vertical" android:background="@drawable/gradient_dark_teal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:gravity="center" android:layout_gravity="center" android:id="@android:id/content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/loadable_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:bufferType="spannable" style="@style/Fitbit.Onboarding.TextView" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.fitbit.challenges.ui.HorizontalListView android:id="@id/carousel" android:layout_width="fill_parent" android:layout_height="170.0dip" />
+            </LinearLayout>
+            <TextView android:textSize="18.0sp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" style="@style/Fitbit.Onboarding.TextView" />
+            <TextView android:textSize="18.0sp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip" style="@style/Fitbit.Onboarding.TextView" />
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <Button android:gravity="center" android:id="@id/join_the_challenge" android:layout_width="fill_parent" android:layout_height="@dimen/friend_button_height" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip" android:text="@string/join_challenge_button_text" style="@style/AlphaButton" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/decline" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/decline_button_text" android:layout_weight="1.0" style="@style/SmallAlphaButton" />
+                <TextView android:id="@id/sneak_peek" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/sneek_peek_button_text" android:layout_weight="1.0" style="@style/SmallAlphaButton" />
+                <TextView android:id="@id/rules" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/rules_button_text" android:layout_weight="1.0" style="@style/SmallAlphaButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include android:id="@id/blocker_view" android:visibility="invisible" layout="@layout/l_data_is_unavailable_view" />
+    <TextView android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/label_no_challenge_found" />
+    <ProgressBar android:layout_gravity="center" android:id="@android:id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

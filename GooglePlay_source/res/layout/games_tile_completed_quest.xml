@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/tile_content" android:background="@drawable/games_tile_bg" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.gms.common.images.internal.LoadingImageView android:id="@id/quest_icon" android:padding="@dimen/games_tile_completed_quest_icon_padding" android:layout_width="fill_parent" android:layout_height="@dimen/games_tile_completed_quest_icon_size" android:scaleType="centerCrop" android:layout_alignParentTop="true" />
+    <View android:id="@id/divider" android:layout_width="fill_parent" android:layout_alignBottom="@id/quest_icon" style="@style/Games.Tile.Divider.Horizontal" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/games_tile_completed_quest_text_area_height" android:layout_below="@id/divider">
+        <TextView android:ellipsize="end" android:gravity="bottom|left|center" android:id="@id/quest_name" android:paddingLeft="@dimen/games_tile_completed_quest_text_side_padding" android:paddingRight="@dimen/games_tile_completed_quest_text_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" style="@style/Games.CompletedQuest.Name" />
+        <TextView android:ellipsize="end" android:gravity="top|left|center" android:id="@id/quest_time" android:paddingLeft="@dimen/games_tile_completed_quest_text_side_padding" android:paddingRight="@dimen/games_tile_completed_quest_text_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" style="@style/Games.CompletedQuest.Time" />
+    </LinearLayout>
+</RelativeLayout>

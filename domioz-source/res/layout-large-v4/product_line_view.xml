@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="12.0sp" android:textColor="@color/dominos_blue" android:gravity="center" android:id="@id/additionalChargeContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:text="@string/additional_charge" />
+        <TextView android:gravity="left" android:id="@id/section_view_label" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:text="@string/product_header" android:layout_below="@id/additionalChargeContainer" android:layout_alignParentTop="false" style="@style/SectionLabel" />
+        <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="4.0" android:layout_below="@id/section_view_label">
+            <ImageView android:id="@id/product_line_view_delete" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/remove_button" android:scaleType="center" android:layout_alignParentLeft="true" android:onClick="onDeleteClick" />
+            <LinearLayout android:orientation="vertical" android:background="@drawable/list_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/product_line_view_info" />
+            <RelativeLayout android:id="@id/product_line_view_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/product_line_view_delete" style="@style/CounterTopList">
+                <TextView android:id="@id/product_line_view_option_description" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_below="@id/product_line_view_top_data" style="@style/ListItemDescription" />
+                <RelativeLayout android:id="@id/product_line_view_top_data" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/product_line_view_image" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/ListItemImage" />
+                    <RelativeLayout android:id="@id/RelativeLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/product_line_view_image">
+                        <TextView android:id="@id/product_line_view_label" android:layout_toLeftOf="@id/product_line_view_price" style="@style/ListItemLabel" />
+                        <TextView android:gravity="right" android:id="@id/product_line_view_price" android:layout_width="55.0dip" android:layout_marginRight="5.0dip" android:layout_alignBaseline="@id/product_line_view_label" android:layout_alignParentRight="true" style="@style/ListItemDescription" />
+                    </RelativeLayout>
+                    <TextView android:id="@id/product_line_view_description" android:layout_width="wrap_content" android:layout_toRightOf="@id/product_line_view_image" android:layout_below="@id/RelativeLayout1" style="@style/ListItemDescription" />
+                    <TextView android:textSize="10.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@id/product_line_view_qty" android:background="@drawable/qty_badge" android:layout_width="23.0dip" android:layout_height="23.0dip" android:text="@string/_25" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</merge>

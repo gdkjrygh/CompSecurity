@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/ActionButton" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/SplashImage" android:contentDescription="@string/splash_image_description" style="@style/SplashHeroImage.FullWidth" />
+            <TextView android:id="@id/SplashHeaderText" style="@style/Title.Splash" />
+            <TextView android:id="@id/SplashSubText" style="@style/Body.Splash" />
+            <TextView android:id="@id/SplashSubText2" android:visibility="gone" style="@style/Body.Splash" />
+            <TextView android:id="@id/SplashSubText3" android:visibility="gone" style="@style/Body.Splash" />
+            <TextView android:id="@id/SplashInfoLink" style="@style/Body.Splash" />
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/ActionButton" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+</RelativeLayout>

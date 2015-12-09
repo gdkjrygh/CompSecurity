@@ -1,0 +1,253 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.b.c;
+
+import com.google.b.b.b;
+import java.lang.reflect.GenericArrayType;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.lang.reflect.TypeVariable;
+import java.util.HashMap;
+import java.util.Map;
+
+public class a
+{
+
+    final int hashCode;
+    final Class rawType;
+    final Type type;
+
+    protected a()
+    {
+        type = getSuperclassTypeParameter(getClass());
+        rawType = b.e(type);
+        hashCode = type.hashCode();
+    }
+
+    a(Type type1)
+    {
+        type = b.d((Type)com.google.b.b.a.a(type1));
+        rawType = b.e(type);
+        hashCode = type.hashCode();
+    }
+
+    private static transient AssertionError buildUnexpectedTypeError(Type type1, Class aclass[])
+    {
+        StringBuilder stringbuilder = new StringBuilder("Unexpected type. Expected one of: ");
+        int j = aclass.length;
+        for (int i = 0; i < j; i++)
+        {
+            stringbuilder.append(aclass[i].getName()).append(", ");
+        }
+
+        stringbuilder.append("but got: ").append(type1.getClass().getName()).append(", for type token: ").append(type1.toString()).append('.');
+        return new AssertionError(stringbuilder.toString());
+    }
+
+    public static a get(Class class1)
+    {
+        return new a(class1);
+    }
+
+    public static a get(Type type1)
+    {
+        return new a(type1);
+    }
+
+    static Type getSuperclassTypeParameter(Class class1)
+    {
+        class1 = class1.getGenericSuperclass();
+        if (class1 instanceof Class)
+        {
+            throw new RuntimeException("Missing type parameter.");
+        } else
+        {
+            return b.d(((ParameterizedType)class1).getActualTypeArguments()[0]);
+        }
+    }
+
+    private static boolean isAssignableFrom(Type type1, GenericArrayType genericarraytype)
+    {
+        Type type2;
+        type2 = genericarraytype.getGenericComponentType();
+        if (!(type2 instanceof ParameterizedType))
+        {
+            break MISSING_BLOCK_LABEL_78;
+        }
+        if (!(type1 instanceof GenericArrayType)) goto _L2; else goto _L1
+_L1:
+        genericarraytype = ((GenericArrayType)type1).getGenericComponentType();
+_L4:
+        return isAssignableFrom(((Type) (genericarraytype)), (ParameterizedType)type2, ((Map) (new HashMap())));
+_L2:
+        genericarraytype = type1;
+        if (type1 instanceof Class)
+        {
+            type1 = (Class)type1;
+            do
+            {
+                genericarraytype = type1;
+                if (!type1.isArray())
+                {
+                    break;
+                }
+                type1 = type1.getComponentType();
+            } while (true);
+        }
+        if (true) goto _L4; else goto _L3
+_L3:
+        return true;
+    }
+
+    private static boolean isAssignableFrom(Type type1, ParameterizedType parameterizedtype, Map map)
+    {
+        boolean flag = false;
+        if (type1 == null)
+        {
+            return false;
+        }
+        if (parameterizedtype.equals(type1))
+        {
+            return true;
+        }
+        Class class1 = b.e(type1);
+        int k;
+        if (type1 instanceof ParameterizedType)
+        {
+            type1 = (ParameterizedType)type1;
+        } else
+        {
+            type1 = null;
+        }
+        if (type1 != null)
+        {
+            Type atype[] = type1.getActualTypeArguments();
+            TypeVariable atypevariable[] = class1.getTypeParameters();
+            for (int i = 0; i < atype.length; i++)
+            {
+                Type type2 = atype[i];
+                TypeVariable typevariable = atypevariable[i];
+                for (; type2 instanceof TypeVariable; type2 = (Type)map.get(((TypeVariable)type2).getName())) { }
+                map.put(typevariable.getName(), type2);
+            }
+
+            if (typeEquals(type1, parameterizedtype, map))
+            {
+                return true;
+            }
+        }
+        type1 = class1.getGenericInterfaces();
+        k = type1.length;
+        for (int j = ((flag) ? 1 : 0); j < k; j++)
+        {
+            if (isAssignableFrom(type1[j], parameterizedtype, ((Map) (new HashMap(map)))))
+            {
+                return true;
+            }
+        }
+
+        return isAssignableFrom(class1.getGenericSuperclass(), parameterizedtype, ((Map) (new HashMap(map))));
+    }
+
+    private static boolean matches(Type type1, Type type2, Map map)
+    {
+        return type2.equals(type1) || (type1 instanceof TypeVariable) && type2.equals(map.get(((TypeVariable)type1).getName()));
+    }
+
+    private static boolean typeEquals(ParameterizedType parameterizedtype, ParameterizedType parameterizedtype1, Map map)
+    {
+        if (!parameterizedtype.getRawType().equals(parameterizedtype1.getRawType())) goto _L2; else goto _L1
+_L1:
+        int i;
+        parameterizedtype = parameterizedtype.getActualTypeArguments();
+        parameterizedtype1 = parameterizedtype1.getActualTypeArguments();
+        i = 0;
+_L5:
+        if (i >= parameterizedtype.length)
+        {
+            break; /* Loop/switch isn't completed */
+        }
+        if (matches(parameterizedtype[i], parameterizedtype1[i], map)) goto _L3; else goto _L2
+_L2:
+        return false;
+_L3:
+        i++;
+        if (true) goto _L5; else goto _L4
+_L4:
+        return true;
+    }
+
+    public final boolean equals(Object obj)
+    {
+        return (obj instanceof a) && b.a(type, ((a)obj).type);
+    }
+
+    public final Class getRawType()
+    {
+        return rawType;
+    }
+
+    public final Type getType()
+    {
+        return type;
+    }
+
+    public final int hashCode()
+    {
+        return hashCode;
+    }
+
+    public boolean isAssignableFrom(a a1)
+    {
+        return isAssignableFrom(a1.getType());
+    }
+
+    public boolean isAssignableFrom(Class class1)
+    {
+        return isAssignableFrom(((Type) (class1)));
+    }
+
+    public boolean isAssignableFrom(Type type1)
+    {
+        if (type1 == null)
+        {
+            return false;
+        }
+        if (type.equals(type1))
+        {
+            return true;
+        }
+        if (type instanceof Class)
+        {
+            return rawType.isAssignableFrom(b.e(type1));
+        }
+        if (type instanceof ParameterizedType)
+        {
+            return isAssignableFrom(type1, (ParameterizedType)type, ((Map) (new HashMap())));
+        }
+        if (type instanceof GenericArrayType)
+        {
+            boolean flag;
+            if (rawType.isAssignableFrom(b.e(type1)) && isAssignableFrom(type1, (GenericArrayType)type))
+            {
+                flag = true;
+            } else
+            {
+                flag = false;
+            }
+            return flag;
+        } else
+        {
+            throw buildUnexpectedTypeError(type, new Class[] {
+                java/lang/Class, java/lang/reflect/ParameterizedType, java/lang/reflect/GenericArrayType
+            });
+        }
+    }
+
+    public final String toString()
+    {
+        return b.f(type);
+    }
+}

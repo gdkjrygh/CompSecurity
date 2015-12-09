@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/tile_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.CardView android:id="@id/tile_content" android:layout_width="@dimen/games_tile_quest_width" android:layout_height="wrap_content" android:layout_margin="@dimen/games_onyx_card_external_margin" android:layout_centerHorizontal="true" card_view:cardCornerRadius="@dimen/games_onyx_card_corner_radius" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+        <RelativeLayout android:id="@id/tile_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/games_tile_quest_header" />
+            <TextView android:id="@id/quest_description" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/games_tile_quest_common_margin_left" android:layout_marginRight="@dimen/games_tile_quest_common_margin_right" android:singleLine="false" android:layout_below="@id/quest_name" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" style="@style/Games.Tile.Text.QuestDescription" />
+            <View android:id="@id/overlay" android:background="@drawable/games_highlight_overlay" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:id="@id/footer_space" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/games_tile_quest_footer_height" android:layout_below="@id/quest_description" />
+            <include layout="@layout/games_tile_quest_footer" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

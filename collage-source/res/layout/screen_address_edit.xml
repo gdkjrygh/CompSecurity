@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ly.kite.widget.CustomTypefaceEditText android:id="@id/edit_text_recipient_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_vertical_margin" android:hint="Name" android:maxLines="1" android:lines="1" android:singleLine="true" android:inputType="textCapWords" />
+            <ly.kite.widget.CustomTypefaceEditText android:id="@id/edit_text_address_line1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_vertical_margin" android:hint="Line 1" android:maxLines="1" android:lines="1" android:singleLine="true" android:inputType="textCapWords" />
+            <ly.kite.widget.CustomTypefaceEditText android:id="@id/edit_text_address_line2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_vertical_margin" android:hint="Line 2" android:maxLines="1" android:lines="1" android:singleLine="true" android:inputType="textCapWords" />
+            <ly.kite.widget.CustomTypefaceEditText android:id="@id/edit_text_address_city" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_vertical_margin" android:hint="City" android:maxLines="1" android:lines="1" android:singleLine="true" android:inputType="textCapWords" />
+            <ly.kite.widget.CustomTypefaceEditText android:id="@id/edit_text_address_county" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_vertical_margin" android:hint="County / State" android:maxLines="1" android:lines="1" android:singleLine="true" android:inputType="textCapWords" />
+            <ly.kite.widget.CustomTypefaceEditText android:id="@id/edit_text_address_postcode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_vertical_margin" android:hint="Postcode / ZIP code" android:maxLines="1" android:lines="1" android:singleLine="true" android:inputType="textCapCharacters" />
+            <Spinner android:id="@id/spinner_country" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_vertical_margin" android:text="Country" />
+            <ly.kite.widget.CustomTypefaceButton android:textColor="@android:color/white" android:background="#ff57ae2e" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_vertical_margin" android:text="Save" android:onClick="onSaveClicked" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/include_proceed_overlay" />
+</FrameLayout>

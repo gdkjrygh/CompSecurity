@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fitbit="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/v_details_header" />
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="top|right|center" android:id="@id/imgv_heartrate_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/question_mark_dark" />
+    </LinearLayout>
+    <include android:id="@id/loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/l_list_loading_footer" />
+    <TextView android:gravity="center" android:id="@id/empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/can_not_view_offline" fitbit:font="proxima_nova_semibold" />
+    <LinearLayout android:orientation="vertical" android:id="@id/graph_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+            <TextView android:textSize="36.0sp" android:id="@id/total_minutes" android:layout_width="wrap_content" android:layout_height="wrap_content" fitbit:font="proxima_nova_regular" />
+            <TextView android:textSize="18.0sp" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_minutes_in_heart_rate_zones_short" fitbit:font="proxima_nova_regular" />
+        </LinearLayout>
+        <com.fitbit.heartrate.charts.views.HeartRateZonesChartView_ android:id="@id/zones_chart" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip" />
+        <include android:id="@id/hr_header" layout="@layout/v_details_header" />
+        <com.artfulbits.aiCharts.ChartView android:id="@id/chart" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="7.0dip" android:layout_marginRight="16.0dip" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="horizontal" android:paddingBottom="19.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="36.0dip" android:layout_marginRight="16.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="@color/detailed_gray" android:gravity="center_vertical" android:id="@id/start_time" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" fitbit:font="proxima_nova_regular" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/detailed_gray" android:gravity="top|right|center" android:id="@id/end_time" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" fitbit:font="proxima_nova_regular" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

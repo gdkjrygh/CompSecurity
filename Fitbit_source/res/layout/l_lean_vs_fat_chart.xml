@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/chart_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.fitbit.ui.FitbitChartView android:id="@id/chart" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="56.0dip">
+            <ImageView android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/lean_vs_fat_chart_marker_selected" />
+            <TextView android:textStyle="bold" android:textColor="@color/chart_lean_vs_fat_border_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fat" android:lines="1" android:singleLine="true" />
+            <ImageView android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/lean_chart_marker_selected" />
+            <TextView android:textStyle="bold" android:textColor="@color/chart_lean_border_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lean" android:lines="1" android:singleLine="true" /> />
+</LinearLayout>
+    </RelativeLayout>
+    <TextView android:gravity="center" android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_measurements" />
+    <ProgressBar android:id="@android:id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

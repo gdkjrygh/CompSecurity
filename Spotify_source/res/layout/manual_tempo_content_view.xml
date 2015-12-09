@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/manual_tempo_content_view" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:paste="http://schemas.android.com/apk/res-auto">
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?pasteTextAppearanceHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:text="@string/running_tempo_activity_title" />
+        <TextView android:textAppearance="?pasteTextAppearanceHeadingSmall" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:text="@string/running_tempo_activity_description" android:alpha="0.5" />
+    </LinearLayout>
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <FrameLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="120.0dip">
+            <TextView android:textSize="60.0dip" android:gravity="center_horizontal" android:id="@id/tempo_value" android:layout_width="120.0dip" android:layout_height="wrap_content" android:layout_centerInParent="true" paste:fontAsset="?catFontSemibold" />
+            <ImageButton android:id="@id/tempo_down" android:background="@null" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/tempo_value" android:layout_alignParentLeft="true" android:contentDescription="@string/running_content_description_decrease_tempo" />
+            <ImageButton android:id="@id/tempo_up" android:background="@null" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toRightOf="@id/tempo_value" android:layout_alignParentRight="true" android:contentDescription="@string/running_content_description_increase_tempo" />
+            <TextView android:textAppearance="?pasteTextAppearanceMetadata" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/running_tempo_activity_stepsmin" android:layout_above="@id/tempo_value" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </FrameLayout>
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <Button android:id="@id/start_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="55.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="55.0dip" android:layout_marginBottom="55.0dip" android:text="@string/running_tempo_activity_start_button" style="?pasteButtonStylePrimary" />
+</LinearLayout>

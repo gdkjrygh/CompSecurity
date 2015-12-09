@@ -1,0 +1,25 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.apps.wallet.wobs.add;
+
+
+// Referenced classes of package com.google.android.apps.wallet.wobs.add:
+//            SearchProgramsFragment, ProgramCardsHandler, ProgramCardsUiProperties, Program
+
+public static interface 
+{
+
+    public abstract String getMerchantName();
+
+    public abstract ProgramCardsHandler getProgramCardsHandler();
+
+    public abstract ProgramCardsUiProperties getUiProperties();
+
+    public abstract void onDiscoverableProgramSelected(Program program);
+
+    public abstract void onMerchantNameEntered(String s);
+
+    public abstract void onMerchantNameSelected(String s);
+}

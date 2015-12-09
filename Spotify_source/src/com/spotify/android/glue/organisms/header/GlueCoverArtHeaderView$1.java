@@ -1,0 +1,56 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.spotify.android.glue.organisms.header;
+
+import android.view.View;
+import android.widget.ImageView;
+import dgm;
+import jz;
+
+// Referenced classes of package com.spotify.android.glue.organisms.header:
+//            GlueCoverArtHeaderView
+
+final class a
+    implements dgm
+{
+
+    private GlueCoverArtHeaderView a;
+
+    public final View a()
+    {
+        return a;
+    }
+
+    public final void a(View view)
+    {
+        throw new UnsupportedOperationException("setContentView is not supported in GlueCoverArtHeaderView.");
+    }
+
+    public final void a(CharSequence charsequence)
+    {
+        a.a(charsequence);
+    }
+
+    public final void a(jz jz)
+    {
+        throw new UnsupportedOperationException("setAdapter is not supported in GlueCoverArtHeaderView.");
+    }
+
+    public final ImageView b()
+    {
+        return GlueCoverArtHeaderView.a(a);
+    }
+
+    public final void b(View view)
+    {
+        throw new UnsupportedOperationException("setImageOverlay is not supported in GlueCoverArtHeaderView.");
+    }
+
+    (GlueCoverArtHeaderView gluecoverartheaderview)
+    {
+        a = gluecoverartheaderview;
+        super();
+    }
+}

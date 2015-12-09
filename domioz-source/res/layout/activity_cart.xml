@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/FullScreen"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/cartTitleBarContainer" style="@style/TitleBarRed">
+        <include android:id="@id/cartTitleBarBackground" layout="@layout/bar_red" />
+        <TextView android:id="@id/cartTitleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/main_title" android:layout_centerInParent="true" style="@style/TitleBarText" />
+        <ImageView android:id="@id/cartEditButtonSeparator" android:layout_marginLeft="18.0dip" android:layout_toLeftOf="@id/cartEditButton" android:layout_alignParentTop="true" style="@style/TitleBarSeparator" />
+        <RelativeLayout android:gravity="center" android:id="@id/cartEditButton" android:padding="0.0dip" android:layout_width="@dimen/cart_edit_button_width" android:layout_height="50.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="onEditClick" style="@style/TitleBarAction">
+            <TextView android:textSize="18.0sp" android:id="@id/cartEditButtonText" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="0.0dip" android:text="@string/edit" android:shadowColor="@android:color/black" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_centerInParent="true" android:layout_centerHorizontal="false" android:layout_centerVertical="false" style="@style/ButtonStyle" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@id/cartFoodMenuAndCouponsLayout" android:background="#ff0078ae" android:paddingLeft="10.0dip" android:paddingTop="8.0dip" android:paddingRight="10.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/cart_food_menu_height" android:weightSum="100.0" android:layout_below="@id/cartTitleBarContainer">
+        <ImageButton android:id="@id/cartFoodMenuButton" android:background="@drawable/btn_blue" android:padding="6.0dip" android:paddingLeft="0.0dip" android:paddingTop="2.0dip" android:paddingRight="0.0dip" android:paddingBottom="3.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="5.0dip" android:src="@drawable/menubutton_2x" android:scaleType="centerInside" android:layout_weight="50.0" />
+        <ImageButton android:id="@id/cartCouponsButton" android:background="@drawable/btn_blue" android:padding="3.0dip" android:paddingLeft="0.0dip" android:paddingTop="0.0dip" android:paddingRight="0.0dip" android:paddingBottom="9.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/couponbutton_2x" android:scaleType="centerInside" android:layout_weight="50.0" />
+        <RelativeLayout android:gravity="center" android:id="@id/cartHeaderCheckout" android:background="@drawable/btn_red" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip">
+            <ImageView android:id="@id/carShoppingCartView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/shopping_cart" android:scaleType="centerInside" />
+            <TextView android:textSize="10.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@id/cartHeaderCheckoutTextView" android:background="@drawable/qty_badge" android:layout_width="23.0dip" android:layout_height="23.0dip" android:layout_marginLeft="-3.0dip" android:layout_marginTop="-3.0dip" android:text="@string/_25" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView android:background="@drawable/black_fade_down" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_below="@id/cartTitleBarContainer" />
+    <RelativeLayout android:background="@drawable/appbkgr" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/cartFoodMenuAndCouponsLayout">
+        <ImageView android:background="@drawable/black_fade_down" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_alignParentTop="true" />
+        <FrameLayout android:orientation="vertical" android:id="@id/loyaltyMicroWidgetHolder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+        <com.dominos.views.WarningView_ android:id="@id/cartTopWarningView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/loyaltyMicroWidgetHolder" android:layout_alignParentLeft="true" />
+        <RelativeLayout android:id="@id/cartMenuDisplay" android:layout_below="@id/cartTopWarningView" style="@style/ListViewFrame">
+            <android.support.v4.widget.SwipeRefreshLayout android:id="@id/cartSwipeRefreshLayout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ListView android:id="@android:id/list" android:scrollbars="none" android:fadingEdge="none" android:listSelector="#00000000" android:divider="#00000000" android:dividerHeight="0.0dip" style="@style/ListViewNormal" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+            <include android:id="@android:id/empty" layout="@layout/cart_empty_layout" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_above="@id/VerifyWithDepositContinueButton" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:src="@drawable/img_challengedeposit_splash_color_173x96dp" android:contentDescription="@null" style="@style/SplashHeroImage" />
+            <TextView android:text="@string/verify_with_deposit_check_bank_acount_for_deposit_title" style="@style/ListItemPrimaryText" />
+            <TextView android:id="@id/VerifyDepositMessage" android:paddingBottom="@dimen/default_spacing" style="@style/ListItemSecondaryText" />
+            <TextView android:text="@string/verify_with_deposit_note_the_amount_title" style="@style/ListItemPrimaryText" />
+            <TextView android:text="@string/verify_with_deposit_note_the_amount_message" style="@style/ListItemSecondaryText" />
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/VerifyWithDepositContinueButton" android:text="@string/button_ok_got_it" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/sleepImageView" android:background="@drawable/sleep_record_violet_gradient" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/sleep_record_moon" android:scaleType="centerCrop" />
+    <ImageView android:id="@id/wakeImageView" android:background="@drawable/sleep_record_teal_gradient" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/sleep_record_sun" android:scaleType="centerCrop" />
+    <RelativeLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@id/txtTimeElapsed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/vertical_margin_step" android:layout_above="@id/txtTimeInBed" style="@style/SleepRecordTimeElapsed.Secondary" />
+        <TextView android:id="@id/txtTimeInBed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_time_in_bed" android:layout_above="@id/awakeButton" style="@style/SleepRecordTimeInBed" />
+        <com.fitbit.customui.ShadowButton android:gravity="center" android:id="@id/awakeButton" android:background="@drawable/btn_sleep_record_round_rect" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_i_am_awake" android:layout_above="@id/txtDesc" style="@style/SleepRecordButton" />
+        <TextView android:id="@id/txtDesc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/record_sleep_log_desc" android:layout_alignParentBottom="true" style="@style/SleepRecordDesc" />
+    </RelativeLayout>
+</RelativeLayout>

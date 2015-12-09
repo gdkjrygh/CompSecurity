@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/global_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:background="#ffe9e9e9" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/sync_list_header" layout="@layout/l_silent_alarm_list_header" />
+        <include android:id="@id/sync_list_sync_header" layout="@layout/l_silent_alarm_list_sync_header" />
+        <ListView android:id="@id/list" android:padding="18.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#ffd9d9d9" android:dividerHeight="1.0dip" />
+        <LinearLayout android:gravity="center" android:layout_gravity="top|center" android:orientation="vertical" android:id="@android:id/empty" android:background="@color/main_bg_color" android:padding="26.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="16.0dip" android:textColor="#ff343434" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_no_silent_alarms" />
+            <ImageView android:layout_gravity="center_horizontal" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="0.0px" android:src="@drawable/alarm_none" android:layout_weight="1.0" />
+            <Button android:textSize="14.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:layout_gravity="bottom|center" android:id="@id/btn_add_alarm" android:background="@drawable/btn_pink_alarm" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="20.0dip" android:text="@string/label_add_new_alarm_big" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/content_udpate_firmware_with_computer" android:background="@color/main_bg_color" android:padding="26.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="16.0dip" android:textColor="#ff343434" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_update_needed" />
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="0.0px" android:src="@drawable/fitbit_connect" android:layout_weight="1.0" />
+        <TextView android:textSize="16.0dip" android:textColor="#ff666666" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/txt_update_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_update_needed" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/content_udpate_firmware" android:background="@color/main_bg_color" android:padding="26.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="16.0dip" android:textColor="#ff343434" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_update_needed" />
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="0.0px" android:src="@drawable/fitbit_update" android:layout_weight="1.0" />
+        <Button android:textSize="14.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:layout_gravity="bottom|center" android:id="@id/btn_update_firmware" android:background="@drawable/btn_pink_alarm" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/label_update_fitbit_one" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:orientation="vertical" android:background="@color/settings_background" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_row_margin">
+            <com.pandora.android.view.RoundLinearLayout android:orientation="vertical" android:id="@id/daydream_settings_clock_switch_container" pandora:roundedCorners="top_left|top_right" style="@style/settings_row_style">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/list_item_selector" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_row_height">
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:focusable="false" android:clickable="false" android:minHeight="0.0dip" android:text="@string/daydream_settings_clock" style="@style/settings_row_label" />
+                        <TextView android:textColor="@color/settings_text_color_secondary" android:gravity="left|center" android:paddingLeft="@dimen/settings_row_padding" android:focusable="false" android:visibility="gone" android:clickable="false" android:minHeight="0.0dip" style="@style/settings_row_value" />
+                    </LinearLayout>
+                    <com.pandora.android.util.Switch android:id="@id/daydream_settings_clock_switch" android:paddingRight="@dimen/settings_row_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PSwitch" />
+                </LinearLayout>
+            </com.pandora.android.view.RoundLinearLayout>
+            <View android:id="@id/daydream_settings_divider" style="@style/settings_row_divider_style" />
+            <com.pandora.android.view.RoundLinearLayout android:orientation="vertical" android:id="@id/daydream_settings_dim_switch_container" pandora:roundedCorners="bottom_left|bottom_right" style="@style/settings_row_style">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/list_item_selector" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/settings_row_height">
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:focusable="false" android:clickable="false" android:minHeight="0.0dip" android:text="@string/daydream_settings_dim_screen" style="@style/settings_row_label" />
+                        <TextView android:textColor="@color/settings_text_color_secondary" android:gravity="left|center" android:paddingLeft="@dimen/settings_row_padding" android:focusable="false" android:visibility="gone" android:clickable="false" android:minHeight="0.0dip" style="@style/settings_row_value" />
+                    </LinearLayout>
+                    <com.pandora.android.util.Switch android:id="@id/daydream_settings_dim_screen_switch" android:paddingRight="@dimen/settings_row_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PSwitch" />
+                </LinearLayout>
+            </com.pandora.android.view.RoundLinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

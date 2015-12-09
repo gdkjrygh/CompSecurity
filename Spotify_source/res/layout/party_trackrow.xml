@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/wrapper" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="horizontal" android:id="@id/context_menu" android:duplicateParentState="true" android:layout_width="48.0dip" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <TextView android:textAppearance="?pasteTextAppearance" android:ellipsize="end" android:id="@id/title" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?pasteListItemPaddingLeftRight" android:maxLines="1" android:layout_toLeftOf="@id/context_menu" android:layout_alignParentLeft="true" />
+    <TextView android:textAppearance="?pasteTextAppearanceSecondary" android:ellipsize="end" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_toLeftOf="@id/context_menu" android:layout_below="@id/title" android:layout_alignLeft="@id/title" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/nearby_container" android:paddingBottom="8.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="@dimen/party_nearby_icon_size" android:layout_marginTop="8.0dip" android:layout_below="@id/subtitle" android:layout_alignLeft="@id/title" />
+    <View android:id="@id/divider" android:background="?pasteListDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/nearby_container" />
+</RelativeLayout>

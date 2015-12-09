@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/invite_by_email_main_layout" android:background="@android:color/white" android:padding="@dimen/mobile_ff_friend_item_layout_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.fitbit.ui.loadable.CircleLoadablePicassoImageView android:id="@id/img_avatar" android:layout_width="@dimen/mobile_ff_img_avatar_layout_width" android:layout_height="@dimen/mobile_ff_img_avatar_layout_height" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="16.0sp" android:textColor="@color/mobile_ff_list_name_text_color" android:id="@id/txt_name" android:paddingLeft="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/mobile_ff_list_address_text_color" android:id="@id/txt_address" android:paddingLeft="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/mobile_ff_list_address_text_color" android:id="@id/txt_invalid_email" android:paddingLeft="14.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/err_invalid_email" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/btn_invite" android:layout_width="@dimen/mobile_ff_add_friend_button_width" android:layout_height="@dimen/mobile_ff_add_friend_button_height">
+        <ImageView android:textSize="36.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/btn_invite_background" android:background="@drawable/btn_add_contact" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/view_sent" android:visibility="gone" android:layout_width="@dimen/mobile_ff_add_friend_button_width" android:layout_height="@dimen/mobile_ff_add_friend_button_height">
+        <ImageView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_friend_added" android:scaleType="center" android:layout_centerInParent="true" android:contentDescription="@string/send" />
+    </RelativeLayout>
+</LinearLayout>

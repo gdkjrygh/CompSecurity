@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/product_image_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/product_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+        <ViewStub android:id="@id/gallery_brightcove_stub" android:layout="@layout/brightcove_view_gallery" android:inflatedId="@id/galley_brightcove_inflated_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <TextView android:textColor="#ffffffff" android:layout_gravity="bottom|left|center" android:id="@id/newImage" android:background="@color/jcp_red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/new_item" />
+        <ImageView android:layout_gravity="bottom|right|center" android:id="@id/btn_video_play" android:background="@drawable/icon_videoplay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/product_option_bar" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:gravity="center" android:id="@id/save_icon" android:background="@drawable/saved" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <com.jcp.views.TypefaceTextView android:textAppearance="?android:textAppearanceLarge" android:textSize="14.0sp" android:textColor="#ff666666" android:gravity="center_vertical" android:id="@id/search_similar" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/find_similar" android:drawableLeft="@drawable/search_icon" android:drawablePadding="2.0dip" android:drawableStart="@drawable/search_icon" app:customTypeface="GOTHAM_BOOK" />
+    </LinearLayout>
+    <include layout="@layout/full_width_gray_horizontal_line" />
+    <LinearLayout android:orientation="vertical" android:id="@id/product_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.jcp.views.TypefaceTextView android:textSize="16.0sp" android:textColor="#ff333333" android:id="@id/productDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" app:customTypeface="GOTHAM_BOOK" />
+        <com.jcp.views.TypefaceTextView android:textAppearance="?android:textAppearanceMedium" android:textSize="14.0sp" android:textColor="#ff666666" android:gravity="center_vertical" android:id="@id/productColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawableLeft="@drawable/icon_colorswatch" android:drawablePadding="2.0dip" android:drawableStart="@drawable/icon_colorswatch" app:customTypeface="GOTHAM_BOOK" />
+        <com.jcp.views.TypefaceTextView android:textSize="15.25sp" android:textColor="#ffcc0000" android:id="@id/marketing_label" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" app:customTypeface="GOTHAM_MEDIUM" />
+        <com.jcp.views.TypefaceTextView android:textSize="15.0sp" android:textColor="#ff333333" android:id="@id/productPromotionMessage" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" app:customTypeface="GOTHAM_MEDIUM" />
+        <com.jcp.views.TypefaceTextView android:textSize="14.0sp" android:textColor="#ffcc0000" android:id="@id/productSalePrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" app:customTypeface="GOTHAM_MEDIUM" />
+        <com.jcp.views.TypefaceTextView android:textSize="14.0sp" android:textColor="#ff666666" android:id="@id/productOriginalPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" app:customTypeface="GOTHAM_BOOK" />
+        <com.jcp.views.TypefaceTextView android:textSize="14.0sp" android:textColor="#ff666666" android:id="@id/productPercentOff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" app:customTypeface="GOTHAM_BOOK" />
+        <com.jcp.widget.ProductRating android:id="@id/product_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

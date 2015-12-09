@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/RelativeLayout1" android:background="@drawable/appbkgr" style="@style/FullScreen"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/RelativeLayout1" style="@style/TitleBarRed">
+        <include android:id="@id/titleBarBackground" layout="@layout/bar_blue" />
+        <ImageButton android:id="@id/home_button" android:src="@drawable/ic_title_home" android:contentDescription="@string/main_home_description" style="@style/TitleBarAction" />
+        <ImageView android:id="@id/ImageView1" android:layout_toRightOf="@id/home_button" style="@style/TitleBarSeparator" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/main_title" android:layout_centerInParent="true" style="@style/TitleBarText" />
+    </RelativeLayout>
+    <ImageView android:background="@drawable/black_fade_down" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_below="@id/RelativeLayout1" />
+    <LinearLayout android:orientation="vertical" android:id="@id/LinearLayout2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/RelativeLayout1">
+        <EditText android:id="@id/pizza_tracker_phone_number" android:layout_marginTop="10.0dip" android:hint="@string/pizza_tracker_phone_prompt" android:maxLength="10" android:inputType="phone" android:imeOptions="actionDone|flagNoExtractUi" style="@style/FormEditText" />
+        <EditText android:id="@id/pizza_tracker_phone_extension" android:hint="@string/pizza_tracker_phone_extension_prompt" android:maxLength="6" android:inputType="phone" android:imeOptions="flagNoExtractUi" style="@style/FormEditText" />
+        <Button android:textSize="18.0sp" android:layout_gravity="center" android:id="@id/address_submit" android:background="@drawable/btn_red" android:layout_width="200.0dip" android:layout_height="35.0dip" android:text="@string/pizza_tracker_submit" android:onClick="onSubmitClick" style="@style/ButtonStyle" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/footerContainerLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/text_grey" android:gravity="center_horizontal" android:id="@id/lblTermsOfUse" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:text="@string/tracker_terms_and_conditions_text" android:onClick="displayTerms" />
+        </LinearLayout>
+        <ImageView android:id="@id/imageView2" android:layout_width="fill_parent" android:layout_height="3.0px" android:layout_marginTop="5.0dip" android:src="@drawable/list_divider" />
+        <ListView android:id="@id/listview" android:padding="10.0dip" android:scrollbars="none" android:fadingEdge="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="0.0dip" />
+    </LinearLayout>
+</RelativeLayout>

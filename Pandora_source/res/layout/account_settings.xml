@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:background="@color/settings_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.pandora.android.view.RoundLinearLayout android:id="@id/username_fields" android:layout_marginTop="@dimen/settings_row_margin" pandora:roundedCorners="top_left|top_right" style="@style/settings_row_style">
+            <TextView android:id="@id/username_label" android:background="@android:color/transparent" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:text="@string/label_email" style="@style/settings_row_label" />
+            <EditText android:textColor="@color/settings_text_color_secondary" android:gravity="right|center" android:id="@id/username" android:background="@android:color/transparent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/settings_row_margin" android:layout_weight="1.0" android:inputType="textEmailAddress" android:imeOptions="actionNext" style="@style/settings_row_value" />
+        </com.pandora.android.view.RoundLinearLayout>
+        <View style="@style/settings_row_divider_style" />
+        <com.pandora.android.view.RoundLinearLayout android:id="@id/password_fields" pandora:roundedCorners="none" style="@style/settings_row_style">
+            <TextView android:id="@id/password_label" android:background="@android:color/transparent" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:text="@string/label_password" style="@style/settings_row_label" />
+            <EditText android:textColor="@color/settings_text_color_secondary" android:gravity="right|center" android:id="@id/password" android:background="@android:color/transparent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/settings_row_margin" android:layout_weight="1.0" android:inputType="textPassword" android:imeOptions="actionNext" style="@style/settings_row_value" />
+        </com.pandora.android.view.RoundLinearLayout>
+        <View style="@style/settings_row_divider_style" />
+        <com.pandora.android.view.RoundLinearLayout android:id="@id/birth_year_fields" pandora:roundedCorners="none" style="@style/settings_row_style">
+            <TextView android:id="@id/birth_year_label" android:background="@android:color/transparent" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:text="@string/label_birth_year" style="@style/settings_row_label" />
+            <EditText android:textColor="@color/settings_text_color_secondary" android:gravity="right|center" android:id="@id/birth_year" android:background="@android:color/transparent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/settings_row_margin" android:layout_weight="1.0" android:inputType="number" android:imeOptions="actionNext" style="@style/settings_row_value" />
+        </com.pandora.android.view.RoundLinearLayout>
+        <View style="@style/settings_row_divider_style" />
+        <com.pandora.android.view.RoundLinearLayout android:id="@id/zip_code_fields" pandora:roundedCorners="none" style="@style/settings_row_style">
+            <TextView android:id="@id/zip_code_label" android:background="@android:color/transparent" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:text="@string/label_zip_code" style="@style/settings_row_label" />
+            <EditText android:textColor="@color/settings_text_color_secondary" android:gravity="right|center" android:id="@id/zip_code" android:background="@android:color/transparent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/settings_row_margin" android:layout_weight="1.0" android:inputType="number" android:imeOptions="actionNext" style="@style/settings_row_value" />
+        </com.pandora.android.view.RoundLinearLayout>
+        <View style="@style/settings_row_divider_style" />
+        <com.pandora.android.view.RoundLinearLayout android:id="@id/gender_fields" pandora:roundedCorners="bottom_left|bottom_right" style="@style/settings_row_style">
+            <TextView android:id="@id/gender_label" android:background="@android:color/transparent" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:text="@string/label_gender" style="@style/settings_row_label" />
+            <EditText android:textColor="@color/settings_text_color_secondary" android:gravity="right|center" android:id="@id/gender" android:background="@android:color/transparent" android:focusable="false" android:clickable="true" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/settings_row_margin" android:cursorVisible="false" android:layout_weight="1.0" android:inputType="none" android:imeOptions="actionNext" style="@style/settings_row_value" />
+        </com.pandora.android.view.RoundLinearLayout>
+        <com.pandora.android.view.RoundLinearLayout android:id="@id/allow_explicit_content_fields" android:layout_marginTop="@dimen/settings_row_margin" pandora:roundedCorners="all" style="@style/settings_row_style">
+            <TextView android:id="@id/allow_explicit_content_label" android:background="@android:color/transparent" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:text="@string/allow_explicit_content" style="@style/settings_row_label" />
+            <com.pandora.android.util.Switch android:gravity="right" android:id="@id/allow_explicit_content_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_centerVertical="true" style="@style/PSwitch" />
+        </com.pandora.android.view.RoundLinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/settings_row_margin" android:weightSum="1.0">
+            <Button android:layout_gravity="center_horizontal" android:id="@id/cancel_button" android:layout_width="0.0dip" android:layout_height="@dimen/settings_row_height" android:layout_marginRight="@dimen/settings_row_margin" android:text="@string/cancel" android:layout_weight="0.5" style="@style/PandoraAppDefaultButton" />
+            <Button android:layout_gravity="center_horizontal" android:id="@id/save_button" android:layout_width="0.0dip" android:layout_height="@dimen/settings_row_height" android:text="@string/save" android:layout_weight="0.5" style="@style/PandoraAppDefaultButton" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

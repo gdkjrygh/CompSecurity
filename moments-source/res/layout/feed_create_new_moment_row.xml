@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/feed_card_bottom"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/card_feed" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="top" android:orientation="vertical" android:background="@drawable/feed_story_card_top_row_background" android:paddingLeft="@dimen/feed_story_card_text_container_padding_side" android:paddingTop="@dimen/feed_story_card_header_padding_top" android:paddingRight="@dimen/feed_story_card_text_container_padding_side" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_story_card_shadow_side" android:layout_marginTop="@dimen/feed_story_card_shadow_top" android:layout_marginRight="@dimen/feed_story_card_shadow_side" android:layout_marginBottom="@dimen/feed_story_card_shadow_bottom" android:layout_marginStart="@dimen/feed_story_card_shadow_side" android:layout_marginEnd="@dimen/feed_story_card_shadow_side">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/feed_story_card_text_container_padding_side" android:src="@drawable/onboarding_plus_ring" android:layout_marginEnd="@dimen/feed_story_card_text_container_padding_side" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.facebook.resources.ui.FbTextView android:id="@id/nux_card_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/feed_create_new_moment_card_title" style="@style/nux_card_title_text" />
+                <com.facebook.resources.ui.FbTextView android:id="@id/nux_card_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/feed_create_new_moment_card_subtitle_singular" style="@style/nux_card_subtitle_text" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/feed_story_card_text_container_padding_side" android:src="@drawable/onboarding_new_moment" />
+    </LinearLayout>
+</FrameLayout>

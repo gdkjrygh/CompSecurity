@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/kycLoaderView" android:background="@color/primary" android:paddingTop="20.0dip" android:paddingBottom="60.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@id/lockBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_waiting_lock_spin_color_95dp" android:contentDescription="@null" />
+            <ImageView android:layout_gravity="center" android:id="@id/statusImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_waiting_lock_color_88dp" android:contentDescription="@null" />
+        </FrameLayout>
+        <TextView android:id="@id/title" android:paddingTop="40.0dip" android:text="@string/kyc_verifying_identity" style="@style/Title.Splash" />
+        <TextView android:id="@id/subtitle" android:paddingTop="0.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/kyc_hang_tight" android:layout_weight="1.0" style="@style/Body.Splash.Subcopy" />
+        <Button android:theme="@style/Theme_RaisedButton.Action" android:layout_gravity="center_horizontal" android:id="@id/tryAgain" android:visibility="gone" android:layout_width="wrap_content" android:layout_marginTop="40.0dip" android:minWidth="@dimen/large_warm_welcome_button" android:text="@string/dialog_option_try_again" style="@style/RaisedButton.Action" />
+        <Button android:layout_gravity="center_horizontal" android:id="@id/enterManually" android:visibility="gone" android:layout_width="wrap_content" android:minWidth="@dimen/large_warm_welcome_button" android:text="@string/enter_kyc_manually" style="@style/RaisedButton" />
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

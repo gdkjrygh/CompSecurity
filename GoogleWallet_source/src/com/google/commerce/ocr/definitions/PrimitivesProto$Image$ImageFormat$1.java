@@ -1,0 +1,18 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.commerce.ocr.definitions;
+
+
+// Referenced classes of package com.google.commerce.ocr.definitions:
+//            PrimitivesProto
+
+final class 
+    implements com.google.protobuf.e.ImageFormat._cls1
+{
+
+    ()
+    {
+    }
+}

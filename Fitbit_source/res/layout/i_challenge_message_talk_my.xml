@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="top|right|center" android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/l_message_timestamp" />
+    <LinearLayout android:gravity="top|right|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="top|right|center" android:layout_gravity="top|right|center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="-2.0dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+                <TextView android:textColor="@color/black" android:layout_gravity="top|right|center" android:id="@id/message_text" android:background="@drawable/bubble_flipped" android:paddingLeft="12.0dip" android:paddingTop="8.0dip" android:paddingRight="18.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Fitbit.Onboarding.TextView.Messages" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingTop="2.0dip" android:paddingRight="18.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="-2.0dip">
+                <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <TextView android:textSize="13.0sp" android:textColor="@color/cheer_button_text_color" android:gravity="right|center" android:layout_gravity="right|center" android:id="@id/cheer_button" android:background="#ffffffff" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60.0dip" android:text="@string/cheer_challenge_button_text" android:maxLines="1" style="@style/Fitbit.Onboarding.TextView" />
+                <ImageView android:layout_gravity="right|center" android:id="@id/smile" android:layout_width="@dimen/challenge_cheer_smile_size" android:layout_height="@dimen/challenge_cheer_smile_size" android:layout_marginRight="1.0dip" android:src="@drawable/cheerface" android:scaleType="centerInside" android:contentDescription="@null" />
+                <LinearLayout android:layout_gravity="right|center" android:orientation="horizontal" android:id="@id/cheered_userlist" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.fitbit.ui.loadable.CircleLoadablePicassoImageView android:layout_gravity="top|right|center" android:id="@id/img_avatar" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+    </LinearLayout>
+</LinearLayout>

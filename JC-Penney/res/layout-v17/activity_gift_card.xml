@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/gift_card_action_bar" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/gift_card_close" android:padding="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/close_button" android:layout_alignParentRight="true" android:contentDescription="@null" android:layout_alignParentEnd="true" />
+        <com.jcp.views.TypefaceTextView android:textSize="20.0sp" android:textColor="@color/jcp_red" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gift_card_action_bar_title" android:layout_alignParentTop="true" app:customTypeface="GOTHAM_MEDIUM" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.jcp.views.JCPWebView android:id="@id/gift_card_web_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,15 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.appboy.ui.inappmessage;
+
+import android.app.Activity;
+import android.view.View;
+import com.appboy.d.a;
+
+public interface r
+{
+
+    public abstract View a(Activity activity, a a1);
+}

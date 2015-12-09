@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/bg_x_promo_welcome" style="@style/Promo.DialogRoot"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.spotify.mobile.android.ui.view.BoundedRelativeLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true" app:maxWidth="440.0dip" app:maxHeight="500.0dip" style="@style/Promo.DialogContainer.NoPadding">
+        <ProgressBar android:id="@id/login_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="80.0dip" android:indeterminate="true" android:indeterminateOnly="true" android:indeterminateDrawable="@drawable/icn_loading_indicator" android:layout_centerHorizontal="true" />
+        <RelativeLayout android:id="@id/content_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/dialog_header" android:padding="@dimen/dialog_container_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/trial_started_spotify_free_title" style="@style/Promo.TextTitle" />
+            <TextView android:id="@id/body" android:paddingLeft="@dimen/dialog_container_padding" android:paddingRight="@dimen/dialog_container_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/dialog_header" style="@style/Promo.TextSubtitle" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/img_trial_started" android:layout_above="@id/button_primary" android:layout_below="@id/body" android:contentDescription="@null" style="@style/Promo.Image" />
+            <ProgressBar android:id="@id/welcome_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:indeterminate="true" android:indeterminateOnly="true" android:indeterminateDrawable="@drawable/icn_loading_indicator" android:layout_below="@id/body" android:layout_centerHorizontal="true" />
+            <TextView android:id="@id/body_mfr" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_below="@id/body" />
+            <Button android:id="@id/button_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dialog_container_padding" android:text="@string/trial_started_spotify_free_button" android:layout_alignParentBottom="true" style="@style/Promo.Button" />
+        </RelativeLayout>
+    </com.spotify.mobile.android.ui.view.BoundedRelativeLayout>
+</FrameLayout>

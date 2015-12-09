@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/background_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="20.0dip" android:paddingTop="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/arrowsjcpenneyrewards" />
+            <com.jcp.views.HtmlTypefaceTextView android:gravity="center" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="40.0dip" app:htmlText="@string/rewards_can_now_be_connected" app:customTypeface="GOTHAM_LIGHT" />
+        </LinearLayout>
+        <com.jcp.views.TypefaceTextView android:gravity="center" android:background="@color/light_grey" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/title_activity_link_to_rewards" app:customTypeface="LORA_ITALIC" />
+        <LinearLayout android:orientation="vertical" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.jcp.views.TypefaceTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/already_have_account" app:customTypeface="GOTHAM_BOLD" />
+            <com.jcp.views.TypefaceTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/already_have_account_subtext" app:customTypeface="GOTHAM_BOOK" />
+            <com.jcp.views.TypefaceButton android:textColor="@color/white" android:gravity="center" android:id="@id/button_connect_existing_accounts" android:background="@drawable/grey_button" android:paddingLeft="40.0dip" android:paddingTop="10.0dip" android:paddingRight="40.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="20.0dip" android:text="@string/rewards_connect_existing" android:textAllCaps="true" app:customTypeface="GOTHAM_MEDIUM" />
+            <include layout="@layout/or_separator" />
+            <com.jcp.views.TypefaceTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/need_an_account" app:customTypeface="GOTHAM_BOLD" />
+            <com.jcp.views.TypefaceTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/need_an_account_subtext" app:customTypeface="GOTHAM_BOOK" />
+            <com.jcp.views.TypefaceButton android:textColor="@color/white" android:gravity="center" android:id="@id/button_create_jcp_account" android:background="@drawable/grey_button" android:paddingLeft="40.0dip" android:paddingTop="10.0dip" android:paddingRight="40.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="20.0dip" android:text="@string/rewards_create_new_jcp_account" android:textAllCaps="true" app:customTypeface="GOTHAM_MEDIUM" />
+            <include layout="@layout/rewards_separator" />
+            <com.jcp.widget.JCPRewardsLink android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

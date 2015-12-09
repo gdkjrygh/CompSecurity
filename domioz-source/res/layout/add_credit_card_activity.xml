@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/titleBar" style="@style/TitleBarRed">
+        <include android:id="@id/titleBarBackground" layout="@layout/bar_blue" />
+        <TextView android:id="@id/titleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_activity_add_credit_card" android:layout_centerInParent="true" style="@style/TitleBarText" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/scroller" android:background="@drawable/appbkgr" android:paddingLeft="15.0dip" android:paddingTop="15.0dip" android:paddingRight="15.0dip" android:paddingBottom="15.0dip" android:scrollbars="none" android:fadingEdge="none" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_below="@id/titleBar">
+        <LinearLayout android:orientation="vertical" android:id="@id/add_credit_card_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/iphone_table_single" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@color/grey_address_form_text" android:text="@string/card_number_hint" style="@style/AddCreditCardHintBlock" />
+                    <EditText android:textSize="@dimen/details_text_size" android:textColorHint="@color/white_grey_text" android:id="@id/cardNumber" android:nextFocusDown="@id/credit_card_month" android:hint="@string/hint_credit_card_number" android:maxLength="16" android:inputType="number" android:imeOptions="flagNoExtractUi" style="@style/UserAccountEditTextBlock" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" style="@style/UserAccountLineDivider" />
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@color/grey_address_form_text" android:id="@id/TextView1" android:text="@string/month_" style="@style/AddCreditCardHintBlock" />
+                    <Spinner android:id="@id/credit_card_month" android:nextFocusDown="@id/credit_card_year" android:layout_marginLeft="5.0dip" style="@style/CreditCardExpirationControl" />
+                    <TextView android:id="@id/TextView2" android:layout_width="30.0dip" android:text="@string/year_" style="@style/CreditCardExpirationControl" />
+                    <Spinner android:id="@id/credit_card_year" android:nextFocusDown="@id/securityCode" android:layout_width="wrap_content" style="@style/CreditCardExpirationControl" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" style="@style/UserAccountLineDivider" />
+                <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@color/grey_address_form_text" android:id="@id/securityCodeHint" android:text="@string/security_code_hint" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/AddCreditCardHintBlock" />
+                    <EditText android:textSize="@dimen/details_text_size" android:textColorHint="@color/white_grey_text" android:id="@id/securityCode" android:paddingRight="5.0dip" android:nextFocusDown="@id/zipCode" android:layout_width="75.0dip" android:maxLines="1" android:maxLength="4" android:layout_toRightOf="@id/securityCodeHint" android:layout_centerVertical="true" android:inputType="number" android:imeOptions="flagNoExtractUi" style="@style/UserAccountEditTextBlock" /> android:hint="@string/form_user_hint_required"/>
+<ImageButton android:id="@id/securityCodeHelpButton" android:background="#00000000" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginRight="15.0dip" android:src="@drawable/ic_question_mark" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" style="@style/UserAccountLineDivider" />
+                <LinearLayout android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@color/grey_address_form_text" android:layout_gravity="center_vertical" android:id="@id/zipCodeHint" android:text="@string/billing_zip_hint" style="@style/AddCreditCardHintBlock" />
+                    <EditText android:textSize="@dimen/details_text_size" android:textColorHint="@color/white_grey_text" android:id="@id/zipCode" android:nextFocusDown="@id/save_to_profile_checkbox" android:maxLength="5" android:inputType="number" android:imeOptions="flagNoExtractUi" style="@style/UserAccountEditTextBlock" />
+                </LinearLayout>
+                <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/saveToProfileContainer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" style="@style/UserAccountLineDivider" />
+                    <TextView android:textSize="@dimen/details_text_size" android:textColor="@color/grey_address_form_text" android:id="@id/saveToProfileHint" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/AddCreditCardHintBlock" />
+                    <CheckBox android:id="@id/save_to_profile_checkbox" android:nextFocusDown="@id/make_primary_card_checkbox" android:layout_width="50.0dip" android:layout_toRightOf="@id/saveToProfileHint" android:layout_centerVertical="true" style="@style/UserAccountEditTextBlock" />
+                    <ImageButton android:id="@id/saveToProfileHelpButton" android:background="#00000000" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginRight="15.0dip" android:src="@drawable/ic_question_mark" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/saved_card_controls_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:visibility="visible" style="@style/UserAccountLineDivider" />
+                    <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/primaryCardControlsContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textColor="@color/hint_text_color" android:id="@id/makePrimaryCardHint" android:layout_height="wrap_content" android:text="@string/make_primary_card" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/AddCreditCardHintBlock" />
+                        <CheckBox android:id="@id/make_primary_card_checkbox" android:visibility="visible" android:nextFocusDown="@id/cardNickname" android:layout_width="50.0dip" android:layout_toRightOf="@id/makePrimaryCardHint" android:layout_centerVertical="true" style="@style/UserAccountEditTextBlock" />
+                        <ImageButton android:id="@id/primaryCardHelpButton" android:background="#00000000" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginRight="15.0dip" android:src="@drawable/ic_question_mark" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/lineDividerBelowPrimaryCardControls" android:visibility="gone" style="@style/UserAccountLineDivider" />
+                    <LinearLayout android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:visibility="visible" android:text="@string/card_nickname_hint" style="@style/AddCreditCardHintBlock" />
+                        <EditText android:id="@id/cardNickname" android:visibility="visible" android:maxLength="20" android:inputType="textCapCharacters" android:imeOptions="flagNoExtractUi" style="@style/UserAccountEditTextBlock" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <Button android:textSize="20.0sp" android:textStyle="bold" android:id="@id/use_this_credit_card_button" android:background="@drawable/btn_blue" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginTop="10.0dip" android:text="@string/save_credit_card" style="@style/LandingScreenButtonText" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

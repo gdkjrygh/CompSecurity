@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/alert_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/alert_replay_view" android:background="@color/custom_station_alert_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/custom_station_alert_text_color" android:gravity="center" android:id="@id/alert_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="13.0dip" android:layout_marginRight="14.0dip" android:text="@string/replay_static_text" />
+            <ImageButton android:layout_gravity="center_horizontal" android:id="@id/replay_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:src="@drawable/replay_button_selector" android:contentDescription="@string/cd_replay" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/alert_expired_view" android:background="@color/custom_station_alert_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/custom_station_alert_text_color" android:gravity="center" android:id="@id/alert_expired_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="13.0dip" android:layout_marginRight="14.0dip" android:text="@string/station_expired_static_text" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/custom_station_alert_text_color" android:gravity="center" android:id="@id/alert_expired_date_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="13.0dip" android:layout_marginRight="14.0dip" />
+            <ImageButton android:layout_gravity="center_horizontal" android:id="@id/return_to_stationlist_button" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:src="@drawable/return_to_stationlist_button_selector" android:contentDescription="@string/cd_return_to_station_list" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView android:gravity="center" android:id="@id/station_art_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/empty_art" android:layout_above="@id/alert_view" android:layout_alignParentTop="true" />
+</RelativeLayout>

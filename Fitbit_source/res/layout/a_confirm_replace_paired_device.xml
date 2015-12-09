@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/gradient_dark_teal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/photo_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:layout_marginBottom="40.0dip" android:layout_alignParentTop="true">
+        <com.fitbit.ui.loadable.CircleLoadablePicassoImageView android:layout_gravity="center" android:id="@id/photo" android:layout_width="75.0dip" android:layout_height="75.0dip" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/text_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="40.0dip" android:layout_marginRight="20.0dip" android:layout_above="@id/buttons_panel" android:layout_below="@id/photo_panel">
+        <TextView android:textSize="24.0sp" android:textStyle="bold" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/confirm_device_replace_title" />
+        <TextView android:textColor="@color/white_transparent" android:gravity="center" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:textIsSelectable="false" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/buttons_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip" android:layout_marginBottom="30.0dip" android:layout_alignParentBottom="true">
+        <Button android:textStyle="bold" android:textColor="@color/white_transparent" android:id="@id/button_ok" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" android:text="@string/confirm_device_replace_ok" />
+        <Button android:textStyle="bold" android:textColor="@color/white_transparent" android:id="@id/button_cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/confirm_device_replace_cancel" />
+    </LinearLayout>
+</RelativeLayout>

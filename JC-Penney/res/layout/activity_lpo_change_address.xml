@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/mainLayout" android:background="@drawable/text_bg3" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/change_FName_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.jcp.views.TypefaceEditText android:textSize="16.0sp" android:textColor="#ff333333" android:id="@id/change_lpo_first_name" android:nextFocusDown="@id/change_lpo_last_name" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:hint="@string/ship_first_name" android:ems="10" android:singleLine="true" android:inputType="text" android:textCursorDrawable="@null" app:customTypeface="GOTHAM_BOOK">
+                    <requestFocus />
+                </com.jcp.views.TypefaceEditText>
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/change_LastName_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/change_FName_layout">
+                <com.jcp.views.TypefaceEditText android:textSize="16.0sp" android:textColor="#ff333333" android:id="@id/change_lpo_last_name" android:nextFocusDown="@id/company_lpo_edit_text" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:hint="@string/ship_last_name" android:ems="10" android:singleLine="true" android:inputType="text" android:textCursorDrawable="@null" app:customTypeface="GOTHAM_BOOK">
+                    <requestFocus />
+                </com.jcp.views.TypefaceEditText>
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/change_company_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/change_LastName_layout">
+                <com.jcp.views.TypefaceEditText android:textSize="16.0sp" android:textColor="#ff333333" android:id="@id/company_lpo_edit_text" android:nextFocusDown="@id/line1_lpo_edit_text" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:hint="@string/ship_company" android:ems="10" android:singleLine="true" android:inputType="text" android:textCursorDrawable="@null" app:customTypeface="GOTHAM_BOOK" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/change_line1_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/change_company_layout">
+                <com.jcp.views.TypefaceEditText android:textSize="16.0sp" android:textColor="#ff333333" android:id="@id/line1_lpo_edit_text" android:nextFocusDown="@id/Line2_lpo_edit_text" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:hint="@string/line_one_edit_text_hint" android:ems="10" android:singleLine="true" android:inputType="text" android:textCursorDrawable="@null" app:customTypeface="GOTHAM_BOOK" />
+                <ImageView android:id="@id/line_question_image_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="64.0dip" android:src="@drawable/question_icon" android:layout_alignLeft="@id/line1_lpo_edit_text" android:layout_centerVertical="true" android:contentDescription="@string/info_about_field" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/change_line2_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/change_line1_layout">
+                <com.jcp.views.TypefaceEditText android:textSize="16.0sp" android:textColor="#ff333333" android:id="@id/Line2_lpo_edit_text" android:nextFocusDown="@id/zip_code_lpo_edit_text" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:hint="@string/line_two_edit_text_hint" android:ems="10" android:singleLine="true" android:inputType="text" android:textCursorDrawable="@null" app:customTypeface="GOTHAM_BOOK" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/change_zip_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/change_line2_layout">
+                <com.jcp.views.TypefaceEditText android:textSize="16.0sp" android:textColor="#ff333333" android:id="@id/zip_code_lpo_edit_text" android:nextFocusDown="@id/phone_lpo_edit_text" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:hint="@string/zip_code" android:ems="10" android:singleLine="true" android:digits="0123456789" android:inputType="number" android:textCursorDrawable="@null" app:customTypeface="GOTHAM_BOOK" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/change_apo_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/change_zip_layout">
+                <Spinner android:textColor="#ff333333" android:textColorHint="#ffcdcdcd" android:id="@id/apo_fpo_dpo_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:ems="10" android:singleLine="true" android:textCursorDrawable="@null" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/change_ae_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/change_apo_layout">
+                <Spinner android:textColor="#ff333333" android:textColorHint="#ffcdcdcd" android:id="@id/aa_ae_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:ems="10" android:singleLine="true" android:textCursorDrawable="@null" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/change_phone_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/change_ae_layout">
+                <com.jcp.views.PhoneTypefaceEditText android:textSize="16.0sp" android:textColor="#ff333333" android:id="@id/phone_lpo_edit_text" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:hint="@string/phone_number" android:ems="14" android:singleLine="true" android:imeOptions="actionDone" android:textCursorDrawable="@null" app:customTypeface="GOTHAM_BOOK" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/alert_message_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_below="@id/change_phone_layout">
+                <com.jcp.views.TypefaceTextView android:textSize="16.0sp" android:textColor="#ffcc0000" android:id="@id/alert_message_text" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="" android:singleLine="true" android:inputType="text" android:textCursorDrawable="@null" app:customTypeface="GOTHAM_BOOK" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

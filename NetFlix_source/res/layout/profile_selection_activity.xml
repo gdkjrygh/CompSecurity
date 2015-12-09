@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/profile_selection_parent" style="@style/match"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/loading_and_error_inset" />
+    <ScrollView android:id="@id/profile_selection_content" android:visibility="gone" style="@style/match">
+        <LinearLayout android:orientation="vertical" style="@style/match">
+            <TextView android:layout_gravity="center_horizontal" android:id="@id/profile_selection_title" android:paddingTop="@dimen/double_padding" android:paddingBottom="@dimen/content_padding" android:text="@string/label_whos_watching" style="@style/PrimaryText.Medium" />
+            <com.netflix.mediaclient.android.widget.StaticGridView android:id="@id/profile_selection_grid_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:listSelector="@color/transparent" android:stretchMode="none" android:columnWidth="@dimen/profile_avatar_view_group_width" android:numColumns="1" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/kids_loading_screen" />
+</FrameLayout>

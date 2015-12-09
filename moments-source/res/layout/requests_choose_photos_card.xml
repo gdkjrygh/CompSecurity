@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="13.0dip" android:paddingTop="15.0dip" android:paddingRight="13.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/card_feed" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="top" android:orientation="vertical" android:background="@drawable/feed_story_card_top_row_background" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/feed_story_card_text_container_padding_side" android:src="@drawable/onboarding_plus_ring" android:layout_marginEnd="@dimen/feed_story_card_text_container_padding_side" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.facebook.resources.ui.FbTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/requests_send_photos_choose_photos_button" style="@style/nux_card_title_text" />
+                <com.facebook.resources.ui.FbTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/requests_send_photos_from_your_gallery" style="@style/nux_card_subtitle_text" />
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/feed_story_card_bottom_row_background" android:layout_width="fill_parent" android:layout_height="15.0dip" />
+    </LinearLayout>
+</FrameLayout>

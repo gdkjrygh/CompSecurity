@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/fragment_layout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center_horizontal" android:id="@id/registry" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/registry" />
+    <LinearLayout android:orientation="vertical" android:id="@id/registryLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+        <include android:id="@id/weddingRegistry" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/registry_row" />
+        <View android:id="@id/strut" android:layout_width="0.0dip" android:layout_height="1.0dip" />
+        <include android:layout_gravity="bottom" android:id="@id/babyRegistry" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/registry_row" />
+    </LinearLayout>
+</LinearLayout>

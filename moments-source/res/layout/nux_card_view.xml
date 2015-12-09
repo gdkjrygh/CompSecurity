@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/regular_card_container" android:background="@drawable/nux_suggestion_card" android:paddingLeft="@dimen/sync_tab_card_inner_margin" android:paddingRight="@dimen/sync_tab_card_inner_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sync_photo_card_top_bottom_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/nux_card_header_container" android:paddingTop="2.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/sync_tab_card_header_height">
+        <com.facebook.moments.ui.sync.SyncTabCardHeaderSquareView android:layout_gravity="left|center" android:id="@id/square_view" android:layout_width="@dimen/sync_tab_card_header_square_view_height" android:layout_height="@dimen/sync_tab_card_header_square_view_height" />
+        <LinearLayout android:layout_gravity="left|center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="41.0dip" android:layout_marginRight="18.0dip" android:layout_marginStart="41.0dip" android:layout_marginEnd="18.0dip">
+            <com.facebook.resources.ui.FbTextView android:ellipsize="end" android:id="@id/nux_card_title_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" style="@style/sync_tab_card_title_people_text" />
+            <com.facebook.resources.ui.FbTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/step_2_suggestion_card_subtitle" android:maxLines="2" style="@style/sync_tab_story_header_subtitle_text" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_marginRight="@dimen/sync_photo_row_spacing" android:src="@drawable/nux_suggestion_grid_photo1" android:layout_marginEnd="@dimen/sync_photo_row_spacing" style="@style/login_nux_suggestion_card_thumbnail_style" />
+        <ImageView android:layout_marginRight="@dimen/sync_photo_row_spacing" android:src="@drawable/nux_suggestion_grid_photo2" android:layout_marginEnd="@dimen/sync_photo_row_spacing" style="@style/login_nux_suggestion_card_thumbnail_style" />
+        <ImageView android:src="@drawable/nux_suggestion_grid_photo3" style="@style/login_nux_suggestion_card_thumbnail_style" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sync_photo_row_spacing">
+        <ImageView android:layout_marginRight="@dimen/sync_photo_row_spacing" android:src="@drawable/nux_suggestion_grid_photo4" android:layout_marginEnd="@dimen/sync_photo_row_spacing" style="@style/login_nux_suggestion_card_thumbnail_style" />
+        <ImageView android:layout_marginRight="@dimen/sync_photo_row_spacing" android:src="@drawable/nux_suggestion_grid_photo5" android:layout_marginEnd="@dimen/sync_photo_row_spacing" style="@style/login_nux_suggestion_card_thumbnail_style" />
+        <ImageView android:src="@drawable/nux_suggestion_grid_photo6" style="@style/login_nux_suggestion_card_thumbnail_style" />
+    </LinearLayout>
+    <com.facebook.moments.ui.sync.SyncTabCardBottomView android:id="@id/buttons_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sync_tab_card_bottom_top_margin" android:layout_marginBottom="@dimen/sync_tab_card_bottom_top_margin" />
+</LinearLayout>

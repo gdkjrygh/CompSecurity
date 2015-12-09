@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/shipment_activity_widgets_layout" android:paddingLeft="45.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="45.0dip" android:paddingEnd="10.0dip">
+        <com.jcp.views.TypefaceTextView android:textSize="15.0sp" android:id="@id/shipping_status" android:paddingTop="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:customTypeface="GOTHAM_BOOK" />
+        <com.jcp.views.TypefaceTextView android:textSize="20.0sp" android:id="@id/delivered_date_time" android:paddingTop="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:customTypeface="GOTHAM_BOOK" />
+        <com.jcp.views.TypefaceTextView android:textSize="15.0sp" android:id="@id/location" android:paddingTop="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:customTypeface="GOTHAM_BOOK" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/shipment_activity_chevron_layout" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/shipping_activity_chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <View android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+    <include layout="@layout/package_shipment_additional_info" />
+</LinearLayout>

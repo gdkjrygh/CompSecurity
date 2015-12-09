@@ -1,0 +1,229 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.google.android.finsky.protos;
+
+import com.google.protobuf.nano.CodedInputByteBufferNano;
+import com.google.protobuf.nano.CodedOutputByteBufferNano;
+import com.google.protobuf.nano.MessageNano;
+import com.google.protobuf.nano.WireFormatNano;
+import java.io.IOException;
+
+// Referenced classes of package com.google.android.finsky.protos:
+//            VideoDocAnnotations
+
+public static final class cachedSize extends MessageNano
+{
+
+    public String alsoAvailableInListUrl;
+    public boolean bundle;
+    public String bundleContentListUrl;
+    public bundleDocid bundleDocid[];
+    public String extrasContentListUrl;
+    public boolean hasAlsoAvailableInListUrl;
+    public boolean hasBundle;
+    public boolean hasBundleContentListUrl;
+    public boolean hasExtrasContentListUrl;
+
+    protected final int computeSerializedSize()
+    {
+        int i;
+label0:
+        {
+            int j = super.computeSerializedSize();
+            if (!hasBundle)
+            {
+                i = j;
+                if (!bundle)
+                {
+                    break label0;
+                }
+            }
+            i = j + (CodedOutputByteBufferNano.computeTagSize(1) + 1);
+        }
+        int k;
+label1:
+        {
+            if (!hasBundleContentListUrl)
+            {
+                k = i;
+                if (bundleContentListUrl.equals(""))
+                {
+                    break label1;
+                }
+            }
+            k = i + CodedOutputByteBufferNano.computeStringSize(2, bundleContentListUrl);
+        }
+        int i1;
+label2:
+        {
+            if (!hasExtrasContentListUrl)
+            {
+                i1 = k;
+                if (extrasContentListUrl.equals(""))
+                {
+                    break label2;
+                }
+            }
+            i1 = k + CodedOutputByteBufferNano.computeStringSize(3, extrasContentListUrl);
+        }
+label3:
+        {
+            if (!hasAlsoAvailableInListUrl)
+            {
+                i = i1;
+                if (alsoAvailableInListUrl.equals(""))
+                {
+                    break label3;
+                }
+            }
+            i = i1 + CodedOutputByteBufferNano.computeStringSize(4, alsoAvailableInListUrl);
+        }
+        i1 = i;
+        if (bundleDocid != null)
+        {
+            i1 = i;
+            if (bundleDocid.length > 0)
+            {
+                int l = 0;
+                do
+                {
+                    i1 = i;
+                    if (l >= bundleDocid.length)
+                    {
+                        break;
+                    }
+                    cachedSize cachedsize = bundleDocid[l];
+                    i1 = i;
+                    if (cachedsize != null)
+                    {
+                        i1 = i + CodedOutputByteBufferNano.computeMessageSize(5, cachedsize);
+                    }
+                    l++;
+                    i = i1;
+                } while (true);
+            }
+        }
+        return i1;
+    }
+
+    public final volatile MessageNano mergeFrom(CodedInputByteBufferNano codedinputbytebuffernano)
+        throws IOException
+    {
+        do
+        {
+            int i = codedinputbytebuffernano.readTag();
+            switch (i)
+            {
+            default:
+                if (WireFormatNano.parseUnknownField(codedinputbytebuffernano, i))
+                {
+                    continue;
+                }
+                // fall through
+
+            case 0: // '\0'
+                return this;
+
+            case 8: // '\b'
+                bundle = codedinputbytebuffernano.readBool();
+                hasBundle = true;
+                break;
+
+            case 18: // '\022'
+                bundleContentListUrl = codedinputbytebuffernano.readString();
+                hasBundleContentListUrl = true;
+                break;
+
+            case 26: // '\032'
+                extrasContentListUrl = codedinputbytebuffernano.readString();
+                hasExtrasContentListUrl = true;
+                break;
+
+            case 34: // '"'
+                alsoAvailableInListUrl = codedinputbytebuffernano.readString();
+                hasAlsoAvailableInListUrl = true;
+                break;
+
+            case 42: // '*'
+                int k = WireFormatNano.getRepeatedFieldArrayLength(codedinputbytebuffernano, 42);
+                bundleDocid abundledocid[];
+                int j;
+                if (bundleDocid == null)
+                {
+                    j = 0;
+                } else
+                {
+                    j = bundleDocid.length;
+                }
+                abundledocid = new bundleDocid[k + j];
+                k = j;
+                if (j != 0)
+                {
+                    System.arraycopy(bundleDocid, 0, abundledocid, 0, j);
+                    k = j;
+                }
+                for (; k < abundledocid.length - 1; k++)
+                {
+                    abundledocid[k] = new bundleDocid();
+                    codedinputbytebuffernano.readMessage(abundledocid[k]);
+                    codedinputbytebuffernano.readTag();
+                }
+
+                abundledocid[k] = new bundleDocid();
+                codedinputbytebuffernano.readMessage(abundledocid[k]);
+                bundleDocid = abundledocid;
+                break;
+            }
+        } while (true);
+    }
+
+    public final void writeTo(CodedOutputByteBufferNano codedoutputbytebuffernano)
+        throws IOException
+    {
+        if (hasBundle || bundle)
+        {
+            codedoutputbytebuffernano.writeBool(1, bundle);
+        }
+        if (hasBundleContentListUrl || !bundleContentListUrl.equals(""))
+        {
+            codedoutputbytebuffernano.writeString(2, bundleContentListUrl);
+        }
+        if (hasExtrasContentListUrl || !extrasContentListUrl.equals(""))
+        {
+            codedoutputbytebuffernano.writeString(3, extrasContentListUrl);
+        }
+        if (hasAlsoAvailableInListUrl || !alsoAvailableInListUrl.equals(""))
+        {
+            codedoutputbytebuffernano.writeString(4, alsoAvailableInListUrl);
+        }
+        if (bundleDocid != null && bundleDocid.length > 0)
+        {
+            for (int i = 0; i < bundleDocid.length; i++)
+            {
+                bundleDocid bundledocid = bundleDocid[i];
+                if (bundledocid != null)
+                {
+                    codedoutputbytebuffernano.writeMessage(5, bundledocid);
+                }
+            }
+
+        }
+        super.writeTo(codedoutputbytebuffernano);
+    }
+
+    public ()
+    {
+        bundle = false;
+        hasBundle = false;
+        bundleContentListUrl = "";
+        hasBundleContentListUrl = false;
+        extrasContentListUrl = "";
+        hasExtrasContentListUrl = false;
+        alsoAvailableInListUrl = "";
+        hasAlsoAvailableInListUrl = false;
+        bundleDocid = bundleDocid();
+        cachedSize = -1;
+    }
+}

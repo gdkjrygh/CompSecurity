@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/storeDetailContainer" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/storeDetailInnerContainer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/storeDetail" android:background="@drawable/table_button_top" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textStyle="bold" android:textColor="@color/text_grey" android:id="@id/label_store_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_store_address" android:layout_toLeftOf="@id/callUs" android:layout_toRightOf="@id/storeImage" android:layout_alignTop="@id/storeImage" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/text_grey" android:id="@id/store_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/store_address" android:layout_toLeftOf="@id/callUs" android:layout_below="@id/label_store_address" android:layout_alignLeft="@id/label_store_address" />
+            <ImageView android:id="@id/storeImage" android:layout_width="130.0dip" android:layout_height="70.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/defaultstore" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/divider1" android:background="@color/text_grey" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_below="@id/storeDetail" />
+        <FrameLayout android:id="@id/deliveryAddressContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/divider1" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/divider2" android:background="@color/text_grey" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/deliveryAddressContainer" />
+        <FrameLayout android:id="@id/feedbackContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/divider2" />
+    </RelativeLayout>
+</LinearLayout>

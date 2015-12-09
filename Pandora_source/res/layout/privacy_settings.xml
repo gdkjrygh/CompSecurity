@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/blue_bar_layout" android:background="@color/settings_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:orientation="vertical" android:id="@id/settings_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textStyle="bold" android:paddingLeft="@dimen/settings_row_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/settings_row_margin" android:text="@string/listening_activity" style="@style/settings_text_large" />
+            <com.pandora.android.view.RoundLinearLayout pandora:roundedCorners="top_left|top_right" style="@style/settings_row_style">
+                <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/pandora_profile_layout" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_row_margin" android:layout_marginRight="@dimen/settings_row_margin">
+                    <TextView android:id="@id/pandora_profile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pandora_profile" style="@style/settings_text_large" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_sysbar_quicksettings" android:layout_alignParentRight="true" android:contentDescription="Pandora Profile" />
+                    <TextView android:textColor="@color/settings_text_color_secondary" android:id="@id/pandora_profile_setting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/profile_private" android:layout_below="@id/pandora_profile" style="@style/settings_text_medium" />
+                </RelativeLayout>
+            </com.pandora.android.view.RoundLinearLayout>
+            <View style="@style/settings_row_divider_style" />
+            <com.pandora.android.view.RoundLinearLayout pandora:roundedCorners="none" style="@style/settings_row_style">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_row_margin" android:layout_marginRight="@dimen/settings_row_margin">
+                    <TextView android:id="@id/enable_comments_title" android:paddingLeft="@dimen/settings_row_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_row_margin" android:text="@string/allow_comments" android:layout_centerVertical="true" style="@style/settings_text_large" />
+                    <CheckBox android:id="@id/enable_comments_switch" android:saveEnabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkmark_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </com.pandora.android.view.RoundLinearLayout>
+            <View style="@style/settings_row_divider_style" />
+            <com.pandora.android.view.RoundLinearLayout android:id="@id/auto_share_row_layout" pandora:roundedCorners="none" style="@style/settings_row_style">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_row_margin" android:layout_marginRight="@dimen/settings_row_margin">
+                    <TextView android:id="@id/facebook_auto_share_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/facebook_auto_share" android:layout_centerVertical="true" style="@style/settings_text_large" />
+                    <com.pandora.android.util.Switch android:id="@id/facebook_auto_share_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/PSwitch" />
+                </RelativeLayout>
+            </com.pandora.android.view.RoundLinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/facebook_auto_share_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <View style="@style/settings_row_divider_style" />
+                <com.pandora.android.view.RoundLinearLayout pandora:roundedCorners="none" style="@style/settings_row_style">
+                    <RelativeLayout android:id="@id/facebook_listening_activity" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_row_margin" android:layout_marginRight="@dimen/settings_row_margin">
+                        <TextView android:id="@id/facebook_listening_activity_text_view" android:paddingLeft="@dimen/settings_row_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_row_margin" android:text="@string/facebook_listening_activity" android:layout_centerVertical="true" style="@style/settings_text_large" />
+                        <CheckBox android:id="@id/facebook_listening_activity_switch" android:saveEnabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkmark_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                </com.pandora.android.view.RoundLinearLayout>
+                <View style="@style/settings_row_divider_style" />
+                <com.pandora.android.view.RoundLinearLayout pandora:roundedCorners="none" style="@style/settings_row_style">
+                    <RelativeLayout android:id="@id/facebook_likes" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_row_margin" android:layout_marginRight="@dimen/settings_row_margin">
+                        <TextView android:id="@id/facebook_likes_text_view" android:paddingLeft="@dimen/settings_row_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_row_margin" android:text="@string/facebook_likes" android:layout_centerVertical="true" style="@style/settings_text_large" />
+                        <CheckBox android:id="@id/facebook_likes_switch" android:saveEnabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkmark_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                </com.pandora.android.view.RoundLinearLayout>
+                <View style="@style/settings_row_divider_style" />
+                <com.pandora.android.view.RoundLinearLayout pandora:roundedCorners="bottom_left|bottom_right" style="@style/settings_row_style">
+                    <RelativeLayout android:id="@id/facebook_follows" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_row_margin" android:layout_marginRight="@dimen/settings_row_margin">
+                        <TextView android:id="@id/facebook_follows_text_view" android:paddingLeft="@dimen/settings_row_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_row_margin" android:text="@string/facebook_follows" android:layout_centerVertical="true" style="@style/settings_text_large" />
+                        <CheckBox android:id="@id/facebook_follows_switch" android:saveEnabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkmark_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                </com.pandora.android.view.RoundLinearLayout>
+            </LinearLayout>
+            <TextView android:textColor="@color/settings_text_color_secondary" android:paddingLeft="@dimen/settings_row_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/settings_row_margin" android:text="@string/privacy_settings_share_message" style="@style/settings_text_medium" />
+            <TextView android:textStyle="bold" android:paddingLeft="@dimen/settings_row_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/settings_row_margin" android:text="@string/external_services" style="@style/settings_text_large" />
+            <com.pandora.android.view.RoundLinearLayout android:gravity="left|center" android:orientation="vertical" android:visibility="visible" android:layout_marginBottom="@dimen/settings_row_margin" pandora:roundedCorners="all" style="@style/settings_row_style">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/settings_row_padding" android:paddingRight="@dimen/settings_row_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.pandora.android.util.UrlImageView android:id="@id/facebook_user_picture" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/default_profile" android:contentDescription="Facebook Profile Picture" pandora:cornerRadius="@dimen/facebook_user_picture_corner_radius" pandora:roundedCorners="all" />
+                    <LinearLayout android:gravity="left" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/settings_row_margin" android:layout_marginRight="@dimen/settings_row_margin" android:layout_weight="1.0">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/facebook" style="@style/settings_text_large" />
+                        <TextView android:textColor="@color/settings_text_color_secondary" android:id="@id/facebook_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/settings_text_medium" />
+                    </LinearLayout>
+                    <com.pandora.android.util.Switch android:gravity="right|center" android:layout_gravity="right|center" android:id="@id/facebook_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PSwitch" />
+                </LinearLayout>
+            </com.pandora.android.view.RoundLinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

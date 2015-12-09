@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/PressedItemContainer" android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Card.Touchable"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.wallet.paymentcard.widgets.FundingSourceView android:id="@id/Card" android:layout_width="@dimen/list_item_primary_action" android:layout_height="@dimen/list_item_primary_action" android:layout_marginRight="@dimen/default_spacing" />
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:gravity="top" android:id="@id/PaymentCardName" android:lines="1" android:maxLength="26" style="@style/ListItemPrimaryText" />
+        <TextView android:gravity="center_vertical" android:id="@id/MessageText" android:visibility="gone" android:layout_below="@id/PaymentCardName" style="@style/ListItemSecondaryText" />
+    </RelativeLayout>
+    <ImageButton android:gravity="center" android:layout_gravity="right|center" android:id="@id/PaymentCardDetailView" android:background="@drawable/unbounded_rippleable" android:visibility="gone" android:layout_width="@dimen/minimum_touch_target" android:layout_height="fill_parent" android:src="@drawable/quantum_ic_info_outline_grey600_24" android:scaleType="centerInside" android:contentDescription="@null" />
+</LinearLayout>

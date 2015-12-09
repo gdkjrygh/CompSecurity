@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:id="@id/scroller" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/LowBalanceToggleCard" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Card" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/default_spacing">
+            <TextView android:id="@id/AmountLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/low_balance_amount" style="@style/ListItemPrimaryText.Disableable" />
+            <com.google.android.apps.wallet.widgets.money.MoneyInputSection android:id="@id/Amount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/narrow_spacing" />
+            <View style="@style/HorizontalDivider" />
+            <TextView android:id="@id/AllNotificationsDisabledNotice" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/medium_spacing" style="@style/ListItemPrimaryText" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

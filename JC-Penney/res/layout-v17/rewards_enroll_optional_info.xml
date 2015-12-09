@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:src="@drawable/birthday_gift" />
+    <com.jcp.views.TypefaceTextView android:textSize="20.0sp" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/rewards_optional_info_title" app:customTypeface="GOTHAM_BOOK" />
+    <com.jcp.views.TypefaceTextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/rewards_optional_info_subtitle" app:customTypeface="GOTHAM_BOLD" />
+    <com.jcp.views.TypefaceTextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/rewards_optional_info_text" app:customTypeface="GOTHAM_BOOK" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:layout_gravity="center" android:background="@color/lighter_gray" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_marginRight="10.0dip" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+        <com.jcp.views.TypefaceTextView android:textColor="@color/lighter_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/optional" app:customTypeface="GOTHAM_BOLD" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.jcp.views.TypefaceTextView android:id="@id/rewards_birth_date" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:hint="@string/hint_birthday" android:drawableRight="@drawable/birthday_icon" android:layout_weight="3.0" android:drawableEnd="@drawable/birthday_icon" android:layout_marginEnd="10.0dip" app:customTypeface="GOTHAM_BOOK" style="@style/createAccountEditText" />
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+    <com.jcp.views.TypefaceEditText android:id="@id/rewards_enroll_address_one" android:longClickable="false" android:hint="@string/hint_address_line_one" android:drawableRight="@drawable/address_plus_icon" android:inputType="textPostalAddress" android:drawableEnd="@drawable/address_plus_icon" app:customTypeface="GOTHAM_BOOK" style="@style/createAccountEditText" />
+    <com.jcp.views.TypefaceEditText android:id="@id/rewards_enroll_address_two" android:visibility="gone" android:hint="@string/hint_address_line_two" android:inputType="textPostalAddress" app:customTypeface="GOTHAM_BOOK" style="@style/createAccountEditText" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.jcp.views.TypefaceEditText android:id="@id/rewards_enroll_city" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:hint="@string/hint_city" android:layout_weight="3.0" android:inputType="textPostalAddress" android:layout_marginEnd="10.0dip" app:customTypeface="GOTHAM_BOOK" style="@style/createAccountEditText" />
+        <Spinner android:id="@id/rewards_enroll_state" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/hint_state" android:layout_weight="1.0" style="@style/createAccountEditText" />
+    </LinearLayout>
+</LinearLayout>

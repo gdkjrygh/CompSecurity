@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout android:id="@id/sliding_panel" style="@style/SlidingUpPanel"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/search_query_details_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/loading_and_error_inset" />
+        <ScrollView android:id="@id/similar_items_grid_view_group" style="@style/match">
+            <include layout="@layout/similar_items_grid_frag" />
+        </ScrollView>
+    </FrameLayout>
+    <include layout="@layout/mdx_mini_player_inset" />
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.RoundedFrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/feed_story_card_shadow_side" android:layout_marginTop="@dimen/feed_story_card_shadow_top" android:layout_marginRight="@dimen/feed_story_card_shadow_side" android:layout_weight="1.0" fb:isBottomRightRounded="false" fb:isBottomLeftRounded="false" fb:cornerRadius="2.0dip">
+        <ImageView android:id="@id/cover_photo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/feed_story_card_cover_photo_gradient" android:paddingLeft="@dimen/feed_story_card_text_container_padding_side" android:paddingTop="@dimen/feed_story_card_header_padding_top" android:paddingRight="@dimen/feed_story_card_text_container_padding_side" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.facebook.resources.ui.FbTextView android:id="@id/cover_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/feed_story_card_cover_photo_title_text" />
+                <com.facebook.resources.ui.FbTextView android:id="@id/cover_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/feed_story_card_text_line_margin" style="@style/feed_story_card_cover_photo_subtitle_text" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_story_card_cover_photo_count_module_margin_left" android:layout_marginStart="@dimen/feed_story_card_cover_photo_count_module_margin_left">
+                <ImageView android:background="@drawable/titled_moment_photo_count" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <com.facebook.resources.ui.FbTextView android:id="@id/photo_count_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_story_card_cover_photo_count_text_margin_left" android:layout_marginStart="@dimen/feed_story_card_cover_photo_count_text_margin_left" style="@style/feed_story_card_cover_photo_count_text" />
+                <ImageView android:background="@drawable/titled_moment_member_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_story_card_cover_photo_counts_margin_between" />
+                <com.facebook.resources.ui.FbTextView android:id="@id/member_count_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_story_card_cover_photo_count_text_margin_left" android:layout_marginStart="@dimen/feed_story_card_cover_photo_count_text_margin_left" style="@style/feed_story_card_cover_photo_count_text" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.facebook.widget.RoundedFrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_marginLeft="@dimen/feed_story_card_shadow_side" android:layout_marginRight="@dimen/feed_story_card_shadow_side" android:layout_marginBottom="@dimen/feed_story_card_shadow_bottom">
+        <com.facebook.resources.ui.FbTextView android:id="@id/photo_count_string_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginStart="15.0dip" style="@style/feed_story_card_footer_light_text" />
+    </LinearLayout>
+</merge>

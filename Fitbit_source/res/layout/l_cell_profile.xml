@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/cell_profile" android:padding="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.fitbit.ui.loadable.CircleLoadablePicassoImageView android:layout_gravity="center_horizontal" android:id="@id/img_profile" android:clickable="true" android:layout_width="96.0dip" android:layout_height="96.0dip" />
+        <Button android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/add_photo" android:background="@drawable/bg_add_photo" android:layout_width="wrap_content" android:layout_height="29.0dip" android:layout_marginTop="10.0dip" android:text="@string/add_photo" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/profile_info" android:paddingLeft="14.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="96.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="20.0sp" android:textColor="@color/settings_name_text_color" android:ellipsize="end" android:id="@id/txt_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/alarm_item_text_color" android:id="@id/txt_member_since" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="3.0dip" />
+    </LinearLayout>
+</LinearLayout>

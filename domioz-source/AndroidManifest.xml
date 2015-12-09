@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:amazon="http://schemas.amazon.com/apk/res/android" xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.dominospizza" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <permission android:name="com.dominospizza.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.dominospizza.permission.C2D_MESSAGE"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+    <application android:anyDensity="true" android:hardwareAccelerated="true" android:icon="@drawable/icon72" android:label="@string/app_name" android:largeHeap="true" android:name="com.dominos.App_" android:theme="@style/AppTheme">
+        <uses-library android:name="com.google.android.maps" android:required="false"/>
+        <amazon:enable-feature android:name="com.amazon.geo.maps" android:required="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="5a33ccc4216f70e783e5bdc3bd50c0041ede5073"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@string/google_maps_api_key"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <receiver android:exported="false" android:name="com.google.android.gms.wallet.EnableWalletOptimizationReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wallet.ENABLE_WALLET_OPTIMIZATION"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.dominos.activities.InitialLaunchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="dominos.com" android:pathPrefix="/android" android:scheme="http"/>
+                <data android:host="www.dominos.com" android:pathPrefix="/android" android:scheme="http"/>
+                <data android:host="dominos.com" android:pathPrefix="/android" android:scheme="https"/>
+                <data android:host="www.dominos.com" android:pathPrefix="/android" android:scheme="https"/>
+                <data android:host="dominos.com" android:path="/" android:scheme="http"/>
+                <data android:host="www.dominos.com" android:path="/" android:scheme="http"/>
+                <data android:host="dominos.com" android:path="/" android:scheme="https"/>
+                <data android:host="www.dominos.com" android:path="/" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="android" android:scheme="dominos"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.CartActivity_" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="coupon"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="order"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/pizza_tracker_title" android:launchMode="singleTop" android:name="com.dominos.activities.TrackerActivity_" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="pizza_tracker"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/pizza_tracker_title" android:launchMode="singleTop" android:name="com.dominos.activities.PizzaTrackerPhoneNumberActivity_">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="order.dominos.com" android:pathPrefix="/en/pages/tracker" android:scheme="https"/>
+                <data android:host="www.order.dominos.com" android:pathPrefix="/en/pages/tracker" android:scheme="https"/>
+                <data android:host="order.dominos.com" android:pathPrefix="/en/pages/tracker" android:scheme="http"/>
+                <data android:host="www.order.dominos.com" android:pathPrefix="/en/pages/tracker" android:scheme="http"/>
+                <data android:scheme="pizza_tracker_phone_number"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="tracker" android:scheme="dominos"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/store_list_title" android:launchMode="singleTop" android:name="com.dominos.activities.StoreListActivity_" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="locator"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.dominos.activities.SplashScreenActivity_" android:screenOrientation="portrait"/>
+        <activity android:name="com.dominos.activities.TermsWebActivity"/>
+        <activity android:launchMode="singleTop" android:name="com.dominos.activities.UserLoginActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.RegistrationActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.dominos.activities.PizzaProfileActivity_"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.UserChangePassword_" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.UserEditInfoActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.AddGiftCardActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.GiftCardInfoActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.GiftCardActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.UserAddLocation_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.dominos.activities.PrivacyWebActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/title_activity_add_credit_card" android:name="com.dominos.activities.AddCreditCardActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/title_activity_edit_credit_card" android:name="com.dominos.activities.EditCreditCardActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:launchMode="singleTop" android:name="com.dominos.activities.LandingActivity_" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.LabsRootMenuListActivity_"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.LabsMenuListActivity_"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.LabsVariantListActivity_"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.LabsSizeListActivity_"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.LabsFlavorListActivity_"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.LabsProductDetailListActivity_"/>
+        <activity android:launchMode="singleTop" android:name="com.dominos.activities.HistoricalListActivity_"/>
+        <activity android:launchMode="singleTop" android:name="com.dominos.activities.LabsCouponListActivity_" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.LabsCouponWizardActivity_" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.ShopRunnerLoginActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/checkout_form_activity" android:launchMode="singleTop" android:name="com.dominos.activities.LabsCheckoutActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:launchMode="singleTop" android:name="com.dominos.activities.OrderSettingActivity_"/>
+        <activity android:launchMode="singleTop" android:name="com.dominos.activities.SavedAddressActivity_"/>
+        <activity android:launchMode="singleTop" android:name="com.dominos.activities.AddressTypeActivity_"/>
+        <activity android:launchMode="singleTop" android:name="com.dominos.activities.LoyaltyFAQActivity_"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.LoyaltyHistoryActivity_"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.LoyaltyRewardDetailsActivity_"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.DeliveryActivity_" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:launchMode="singleTop" android:name="com.dominos.activities.MapActivity_"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.dominos.activities.StoreProfileActivity_"/>
+        <activity android:launchMode="singleTop" android:name="com.dominos.activities.LoyaltyTermsWebActivity_"/>
+        <activity android:name="com.dominos.news.activity.NewsFeedActivity_">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="newsfeed" android:scheme="dominos"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.appboy.ui.AppboyWebViewActivity"/>
+        <activity android:launchMode="singleTop" android:name="com.dominos.fordsync.FordSyncActivity_" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="com.dominos.activities.SettingsPreferenceActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light"/>
+        <activity android:launchMode="singleTask" android:name="com.dominos.beacon.activities.BeaconCheckInActivity_" android:noHistory="true"/>
+        <service android:exported="false" android:name="com.dominos.fordsync.service.AppLinkService_"/>
+        <receiver android:name="com.dominos.fordsync.service.AppLinkBluetoothListener_">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED"/>
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED"/>
+                <action android:name="com.dominos.fordsync.action.START"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.dominos.notification.TrackerService_"/>
+        <receiver android:name="com.dominos.pebble.PebbleTrackerReceiver_">
+            <intent-filter>
+                <action android:name="com.dominos.notifications.tracker"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.dominos.wear.service.WearOrderService_"/>
+        <service android:name="com.dominos.wear.service.WearMessageService_">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.dominos.notification.DismissReceiver_">
+            <intent-filter>
+                <action android:name="com.dominos.intent.action.NOTIFICATION_DISMISSED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.appboy.AppboyGcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.dominospizza"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.dominos.news.receiver.PushNotificationReceiver_">
+            <intent-filter>
+                <action android:name="com.dominospizza.intent.APPBOY_PUSH_RECEIVED"/>
+                <action android:name="com.dominospizza.intent.APPBOY_NOTIFICATION_OPENED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.dominos.beacon.service.BeaconService_"/>
+        <service android:name="com.dominos.beacon.service.GeofenceTransitionIntentService_"/>
+        <receiver android:name="com.dominos.beacon.receiver.BeaconReceiver_">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
+                <action android:name="beacon.intent.action.BEACON_START"/>
+                <action android:name="beacon.intent.action.BEACON_RESTART"/>
+                <action android:name="beacon.intent.action.CHECK_IN"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.dominos.beacon.receiver.BeaconDismissReceiver_">
+            <intent-filter>
+                <action android:name="com.dominos.intent.action.NOTIFICATION_DISMISSED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:label="RecyclerViewTestActivity" android:name="android.support.v7.widget.TestActivity"/>
+        <meta-data android:name="com.google.android.wearable.beta.app" android:resource="@xml/android_wear_micro_apk"/>
+    </application>
+</manifest>

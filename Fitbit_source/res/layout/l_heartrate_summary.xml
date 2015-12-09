@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/red_heart" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_resting_heart_rate" style="@style/DetailsSummaryTitle" />
+        </LinearLayout>
+        <TextView android:textSize="18.0sp" android:textColor="@color/heart_rate_black" android:id="@id/resting_heartrate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    </LinearLayout>
+    <View android:background="@color/heart_rate_divider_line" android:layout_width="fill_parent" android:layout_height="@dimen/details_summary_divider_line_height" android:layout_marginTop="15.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/heartrate_zones_icon" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/exercise_zones_capitalized" style="@style/DetailsSummaryTitle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0sp" android:textColor="@color/heart_rate_black" android:id="@id/time_in_exercize_zones" android:layout_width="0.0dip" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="0.5" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/heart_rate_black" android:id="@id/calories_burned" android:layout_width="0.0dip" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="0.5" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

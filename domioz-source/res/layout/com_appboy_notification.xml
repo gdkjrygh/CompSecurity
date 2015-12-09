@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/status_bar_latest_event_content" android:layout_width="fill_parent" android:layout_height="65.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/com_appboy_notification_icon" android:layout_width="@android:dimen/notification_large_icon_width" android:layout_height="@android:dimen/notification_large_icon_height" android:scaleType="center" />
+    <LinearLayout android:gravity="top" android:layout_gravity="fill_vertical" android:orientation="vertical" android:paddingTop="0.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@android:dimen/notification_large_icon_width">
+        <LinearLayout android:layout_gravity="top" android:orientation="horizontal" android:paddingTop="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_weight="0.0">
+            <TextView android:textAppearance="@style/Appboy.EventContent.Title" android:ellipsize="end" android:id="@id/com_appboy_notification_title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+            <TextView android:textAppearance="@style/Appboy.EventContent.Time" android:gravity="center" android:layout_gravity="center" android:id="@id/com_appboy_notification_time" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="0.0" />
+        </LinearLayout>
+        <TextView android:textAppearance="@style/Appboy.EventContent" android:ellipsize="end" android:id="@id/com_appboy_notification_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="4.0dip" android:text="" android:maxLines="2" android:singleLine="false" android:layout_weight="1.0" />
+    </LinearLayout>
+</FrameLayout>

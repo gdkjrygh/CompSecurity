@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/view_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.view.ViewPager android:gravity="center" android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.pandora.android.view.SafeImageView android:id="@id/album_art_to_animate" android:visibility="invisible" android:layout_width="@dimen/now_playing_landscape_art_size" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/now_playing_track_view_padding" android:layout_marginTop="@dimen/now_playing_track_view_padding" android:layout_marginBottom="@dimen/now_playing_track_view_padding" android:src="@drawable/empty_art" android:scaleType="fitCenter" android:contentDescription="@string/cd_album_art_image" />
+    </RelativeLayout>
+    <com.pandora.android.countdown.CountdownBarLayout android:id="@id/countdown_bar_layout" android:background="@color/semi_transparent_black" android:visibility="gone" android:layout_width="@dimen/now_playing_landscape_art_size" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/now_playing_track_view_padding" android:layout_alignParentTop="true" pandora:showClickToActionButton="true" pandora:displayZone="nowPlaying" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ad_view_wrapper_now_playing" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/now_playing_track_view_padding" android:layout_alignParentBottom="true" />
+    <View android:id="@id/album_art_shim" android:layout_width="@dimen/now_playing_landscape_art_size" android:layout_height="0.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/mini_player_fragment_wrapper" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/album_art_shim" android:layout_alignParentBottom="true">
+        <com.pandora.android.view.MiniPlayerView android:name="com.pandora.android.view.MiniPlayerView" android:id="@id/mini_player_view" android:layout_width="fill_parent" android:layout_height="@dimen/mini_player_height" android:layout_marginTop="12.0dip" />
+    </LinearLayout>
+</RelativeLayout>

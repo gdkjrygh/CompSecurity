@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="top|center" android:layout_gravity="top|center" android:orientation="vertical" android:id="@id/cc_station_replay_wrapper" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/cc_station_replay_button" android:background="#f2242424" android:layout_width="fill_parent" android:layout_height="40.0dip">
+            <TextView android:textColor="@android:color/white" android:layout_gravity="center" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/now_playing_track_replay" style="@android:style/TextAppearance.Small" />
+            <ImageView android:layout_gravity="center" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/now_playing_replay_icon" android:contentDescription="@string/cd_station_replay_button" />
+        </LinearLayout>
+        <View android:background="#ff0b0c0c" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="top|center" android:layout_gravity="top|center" android:orientation="vertical" android:id="@id/station_track_unavailable_wrapper" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:background="#f2fdf9ba" android:layout_width="fill_parent" android:layout_height="40.0dip">
+            <TextView android:textColor="#ff8f843e" android:layout_gravity="center" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/track_not_found" style="@android:style/TextAppearance.Small" />
+            <ImageView android:layout_gravity="center" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/now_playing_unavail_icon" android:contentDescription="@string/cd_now_playing_track_unavailable_bg" />
+        </LinearLayout>
+        <View android:background="#ffa0954e" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="top|center" android:layout_gravity="top|center" android:orientation="vertical" android:id="@id/station_expired_wrapper" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:background="#f2fdf9ba" android:layout_width="fill_parent" android:layout_height="40.0dip">
+            <TextView android:textColor="#ff8f843e" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/station_expired" style="@android:style/TextAppearance.Small" />
+        </LinearLayout>
+        <View android:background="#ffa0954e" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="top|center" android:layout_gravity="top|center" android:orientation="vertical" android:id="@id/now_playing_generic_message_wrapper" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:background="#f2242424" android:layout_width="fill_parent" android:layout_height="40.0dip">
+            <TextView android:textColor="#ffffffff" android:id="@id/now_playing_generic_message_text_view" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@android:style/TextAppearance.Small" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

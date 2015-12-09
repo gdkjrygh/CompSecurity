@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/two_boxes_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="top|right|center" android:id="@id/carrot_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/sync_tab_stack_empty_carrot_view_margin_right" android:layout_marginBottom="-0.5dip" android:src="@drawable/pressable_carrot_view" android:layout_weight="0.0" />
+        <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="9.0dip">
+            <com.facebook.moments.ui.sync.SyncTabEmptyCardBoxView android:id="@id/see_suggestion_box" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.5" />
+            <com.facebook.moments.ui.sync.SyncTabEmptyCardBoxView android:id="@id/choose_photo_box" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/sync_tab_stack_empty_box_spacing" android:layout_weight="0.5" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/one_box_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="right" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/sync_tab_stack_empty_carrot_view_margin_right" android:src="@drawable/pressable_carrot_view" android:layout_weight="0.0" />
+        <com.facebook.moments.ui.sync.SyncTabEmptyCardBigBoxView android:id="@id/choose_photo_big_box" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</merge>

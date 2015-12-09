@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/settings_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.moments.ui.titlebar.SyncTitleBar android:id="@id/sync_titlebar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:background="@color/moments_grey_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.drawee.fbpipeline.FbDraweeView android:id="@id/user_image" android:layout_width="@dimen/settings_image_size" android:layout_height="@dimen/settings_image_size" android:layout_marginTop="30.0dip" android:layout_marginBottom="12.0dip" fb:placeholderImage="@drawable/avatar_null" fb:placeholderImageScaleType="fitCenter" fb:actualImageScaleType="centerCrop" fb:roundAsCircle="true" />
+            <com.facebook.resources.ui.FbTextView android:textSize="18.0sp" android:textColor="@color/black70a" android:gravity="center" android:id="@id/user_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/master_side_margin" android:layout_marginRight="@dimen/master_side_margin" android:layout_marginBottom="30.0dip" android:fontFamily="sans-serif" />
+            <com.facebook.fbui.widget.layout.SegmentedLinearLayout android:orientation="vertical" android:id="@id/row_container" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:showDividers="beginning|end|middle" fb:divider="#ffe6e6e6" fb:dividerThickness="0.5dip" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

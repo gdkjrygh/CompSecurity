@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/player_detail_xp_genre_row" android:paddingTop="@dimen/games_xp_chart_row_top_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="top" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minWidth="160.0dip" android:layout_weight="@integer/games_player_xp_per_genre_column_weight">
+        <TextView android:textSize="@dimen/games_xp_chart_font_size" android:textColor="@color/games_xp_chart_genre" android:gravity="left" android:id="@id/player_detail_xp_genre" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/games_xp_chart_font_size" android:textColor="@color/games_xp_chart_genre" android:gravity="right" android:id="@id/player_detail_xp_amount" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/player_detail_favorite_genres_bar" android:paddingLeft="@dimen/games_xp_chart_edge_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="160.0dip" android:layout_weight="1.0">
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/player_detail_xp_bar" android:layout_width="fill_parent" android:layout_height="@dimen/games_xp_chart_bar_height">
+            <View android:id="@id/player_detail_xp_bar_left" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <View android:id="@id/player_detail_xp_bar_right" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/games_xp_chart_font_size" android:textColor="@android:color/white" android:gravity="left" android:id="@id/player_detail_xp_bar_label" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

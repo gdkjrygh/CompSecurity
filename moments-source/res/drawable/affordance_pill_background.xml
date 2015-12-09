@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/pill_shadow" />
+    <item android:id="@id/primary_pill_shape">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/affordance_pill_radius" />
+            <solid android:color="@color/affordance_pill_background" />
+        </shape>
+    </item>
+    <item>
+        <selector>
+            <item android:state_pressed="true">
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/affordance_pill_radius" />
+                    <solid android:color="@color/translucent_press_overlay" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</layer-list>

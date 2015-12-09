@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="320.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sp="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="center_vertical" android:id="@id/video_surface_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.spotify.mobile.android.video.VideoSurfaceView android:id="@id/video_surface" android:layout_width="fill_parent" android:layout_height="wrap_content" sp:fullscreen="false" />
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/video_overlay" android:background="@drawable/player_video_gradient" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <com.spotify.android.paste.widget.SpotifyIconView android:layout_gravity="right|center" android:id="@id/video_expand_button" android:background="?selectableItemBackground" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerInside" android:contentDescription="@string/videoplayer_content_description_maximize" sp:iconSize="20.0dip" sp:iconType="icon_fullscreen_32" />
+        </FrameLayout>
+    </FrameLayout>
+    <com.spotify.android.paste.widget.ThrobberView android:layout_gravity="center" android:id="@id/content_unit_throbber" android:visibility="gone" android:layout_width="64.0dip" android:layout_height="64.0dip" />
+</FrameLayout>

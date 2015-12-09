@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="top" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:paddingLeft="@dimen/dimen_tracker_details_item_padding" android:paddingRight="12.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/controls" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <android.support.v7.widget.SwitchCompat android:id="@id/checkbox_switch" android:padding="8.0dip" android:visibility="visible" android:layout_width="60.0dip" android:layout_height="60.0dip" android:textOn="@string/tracker_hr_tracking_on" android:textOff="@string/tracker_hr_tracking_off" android:layout_alignParentRight="true" />
+        <ProgressBar android:id="@android:id/progress" android:paddingRight="3.0dip" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" android:indeterminate="true" android:layout_alignLeft="@id/checkbox_switch" android:layout_alignTop="@id/checkbox_switch" android:layout_alignRight="@id/checkbox_switch" android:layout_alignBottom="@id/checkbox_switch" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/controls" android:layout_centerVertical="true">
+        <TextView android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:textIsSelectable="false" style="@style/DeviceListItemTitleTextStyle" />
+        <TextView android:id="@android:id/text2" android:layout_width="fill_parent" android:layout_height="0.0dip" android:singleLine="false" android:layout_weight="1.0" android:textIsSelectable="false" style="@style/DeviceListItemDescriptionTextStyle" />
+    </LinearLayout>
+</RelativeLayout>

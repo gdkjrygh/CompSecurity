@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/photo_picker_fragment_container" android:background="@color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.moments.ui.titlebar.SyncTitleBar android:id="@id/sync_titlebar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.moments.ui.EmptyView android:id="@id/photo_picker_empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.facebook.moments.ui.listview.SyncListView android:id="@id/sync_list_view" android:background="@color/white" android:paddingLeft="@dimen/permalink_side_padding" android:paddingRight="@dimen/permalink_side_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/picker_loading_spinner" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center" android:layout_width="56.0dip" android:layout_height="56.0dip" android:indeterminateOnly="true" android:indeterminateDrawable="@drawable/gray_spinner_indeterminate" android:indeterminateDuration="1500" />
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

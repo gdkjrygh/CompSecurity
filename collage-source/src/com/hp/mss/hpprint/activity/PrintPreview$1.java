@@ -1,0 +1,28 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
+package com.hp.mss.hpprint.activity;
+
+import android.view.View;
+
+// Referenced classes of package com.hp.mss.hpprint.activity:
+//            PrintPreview
+
+class a
+    implements android.view.tener
+{
+
+    final PrintPreview a;
+
+    public void onClick(View view)
+    {
+        a.onAboutLinkClicked(view);
+    }
+
+    (PrintPreview printpreview)
+    {
+        a = printpreview;
+        super();
+    }
+}

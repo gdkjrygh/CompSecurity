@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/search_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:id="@id/add_custom_food_view" layout="@layout/v_add_custom_food" />
+            <ListView android:id="@id/list_search_results" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <RelativeLayout android:layout_gravity="top" android:id="@id/list_empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ProgressBar android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+                <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/txt_no_results" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_activity_no_results" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <include android:id="@id/blocker_view" layout="@layout/l_data_is_unavailable_view" />
+</merge>

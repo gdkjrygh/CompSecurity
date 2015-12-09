@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/sync_bg_darker_grey" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/onboard_card_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/nav_stack_loading_container_margin">
+        <LinearLayout android:orientation="horizontal" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.moments.navui.stack.StackHeartBeatButton android:layout_gravity="center_vertical" android:id="@id/plus_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/nav_stack_loading_container_inner_padding" android:layout_marginRight="@dimen/nav_stack_loading_container_inner_padding" android:layout_marginStart="@dimen/nav_stack_loading_container_inner_padding" android:layout_marginEnd="@dimen/nav_stack_loading_container_inner_padding" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nav_stack_loading_container_margin" android:layout_marginRight="@dimen/nav_stack_loading_container_inner_padding" android:layout_marginBottom="@dimen/nav_stack_loading_container_margin" android:layout_weight="1.0" android:layout_marginEnd="@dimen/nav_stack_loading_container_inner_padding">
+                <com.facebook.resources.ui.FbTextView android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/onboard_view_suggestion_card_title" android:maxLines="2" style="@style/nux_card_title_text" />
+                <com.facebook.resources.ui.FbTextView android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/onboard_view_suggestion_card_subtitle" android:maxLines="3" style="@style/onboarding_card_subtitle_text" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/onboarding_view_suggested" />
+    </LinearLayout>
+</FrameLayout>

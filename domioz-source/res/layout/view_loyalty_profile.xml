@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:id="@id/loyaltyLayout" android:background="@drawable/iphone_table_single" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/pieceOfPieTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip">
+        <ImageView android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/ic_loyalty" />
+        <TextView android:textSize="@dimen/loyalty_title_size" android:textColor="@color/text_grey" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/piece_of_pie_rewards" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:id="@id/loyaltyNowAMember" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/pieceOfPieTitle">
+        <TextView android:textSize="15.0sp" android:textColor="@color/white_darkgrey_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/you_are_now_a_member" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:id="@id/loyaltyUnavailable" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/pieceOfPieTitle">
+        <TextView android:textColor="@color/white_darkgrey_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="7.0dip" android:text="@string/profile_user_unable_to_activate_loyalty" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/loyaltyEnrollMainLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/pieceOfPieTitle" android:layout_alignLeft="@id/pieceOfPieTitle" android:layout_alignRight="@id/pieceOfPieTitle">
+        <TextView android:textColor="@color/white_darkgrey_text" android:gravity="center" android:id="@id/loyaltyEnrollLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/profile_you_can_earn" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/dominos_blue" android:id="@id/loyaltyLearnMore" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loyalty_learn_more" />
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="10.0dip" android:layout_height="10.0dip" android:src="@drawable/bracket_blue" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/loyaltyEnrollActivateLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textSize="16.0sp" android:textStyle="bold" android:id="@id/profileLoyaltyActivateMoreButton" android:background="@drawable/red_button" android:layout_width="150.0dip" android:layout_height="35.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="15.0dip" android:text="@string/activate" android:onClick="onCreateNewProfileClick" style="@style/ButtonStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

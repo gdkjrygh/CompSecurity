@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feature Test Announcement</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="" />
+<script>
+	
+	var viewport = document.querySelector("meta[name=viewport]");
+
+	function getParam(name){
+		if (name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search)) {
+			return decodeURIComponent(name[1]).toLowerCase();
+		}
+	}
+
+	// Global Object for various User Agent types
+	var UAType = {};
+	UAType.ua = navigator.userAgent.toLowerCase();
+	UAType.isIphone = UAType.ua.indexOf("iphone") > -1;
+	UAType.isIpod = UAType.ua.indexOf("ipod") > -1;
+	UAType.isIpad = UAType.ua.indexOf("ipad") > -1;
+	UAType.isAndroid = UAType.ua.indexOf("android") > -1;
+	UAType.isIphoneRetina = UAType.isIphone && (window.devicePixelRatio === 2);
+	UAType.isIpadRetina = UAType.isIpad && (window.devicePixelRatio === 2);
+	UAType.isAndroidHDPI = UAType.isAndroid && (window.devicePixelRatio) === 1.5;
+	UAType.isAndroidXHDPI = UAType.isAndroid && (Math.floor(window.devicePixelRatio) === 2);
+	UAType.isAndroidXXHDPI = UAType.isAndroid && (Math.floor(window.devicePixelRatio) === 3);
+	UAType.isIphoneOrAndroid = window.devicePixelRatio === 1;
+
+
+	// Global Object for various client flags ported over to be used with Javascript
+	var ClientFlag = {};
+
+	// flag for tablet detection for app v5.0 & up. Outputs boolean.
+	ClientFlag.isTablet = getParam('is_tablet') === "true";
+
+	// flag for tablet orientation. Outputs "portrait" or "landscape" (or "" for non-tablet)
+	ClientFlag.tabletOrientation = ClientFlag.isTablet ? (getParam("orientation") === "portrait" ? "portrait" : "landscape") : "";
+
+	// flag for Apps/users with Station Personalization enabled. Outputs boolean.
+	ClientFlag.sp = (getParam('sp') === "1") && !ClientFlag.isTablet;
+
+	// flag for Now Playing Track Detail page. Outputs boolean.
+	ClientFlag.nowPlayingTrackDetail = (window.location.href.indexOf("nowplaying_track_detail") > -1);
+
+	// flag for system version. Outputs version number.
+	ClientFlag.getSystemVer = parseFloat(getParam('systemVersion'));
+
+	// flag for system version older than KitKat. Outputs boolean.
+	ClientFlag.isOlderThanKitKat = ClientFlag.getSystemVer < 4.4;
+
+	// flag for app version. Outputs version number.
+	ClientFlag.getAppVer = parseFloat(getParam('applicationVersion'));
+ 
+	// Set Viewports
+
+	if (UAType.isIpad) {
+		// iPad Screens
+		// Removed 'width=device-width' to display properly on iPad
+		viewport.setAttribute('content', 'initial-scale=1, maximum-scale=1');
+
+	} else if (UAType.isIphone && ClientFlag.sp && ClientFlag.nowPlayingTrackDetail) {
+		// For iPhone, need to hard code a viewport width (300px) so it doesn't display full device width (320px) on Now Playing Track Detail page.
+		viewport.setAttribute('content', 'width=300, initial-scale=1, maximum-scale=1');
+
+	} else {
+		// Anything else
+		viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1');
+	}
+</script>	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://beta.savagebeast.com:7001/www/css/sass-generated/global-mobile.css?v=369103015">
+	<script>
+		
+		window.addEventListener('load', function() {
+
+			// For iOS retina devices, add classname to <body> tag for CSS 
+			if (UAType.isIphoneRetina || UAType.isIpadRetina) {
+				var body = document.getElementsByTagName("BODY")[0];
+				body.className = body.className + " ios-retina";
+
+			} 
+
+			var buttons = document.getElementsByClassName("js-button-1");
+			for (var i=0; i < buttons.length; i++) {
+				buttons[i].addEventListener("touchstart", function(evt) {
+					var el = evt.target;
+					while (el != null && el.className.indexOf("js-button-1") == -1) {
+						el = el.parentNode;
+					}
+					var classes = el.className.split(" ");
+					for (var i=0; i < classes.length; i++) {
+						if (classes[i] == "active") return;	// already active somehow
+					}
+					classes.push("active");
+					el.className = classes.join(" ");
+				});
+				buttons[i].addEventListener("touchend", function(evt) {
+					var el = evt.target;
+					while (el != null && el.className.indexOf("js-button-1") == -1) {
+						el = el.parentNode;
+					}
+					var classes = el.className.split(" ");
+					for (var i=0; i < classes.length; i++) {
+						if (classes[i] == "active") {
+							classes[i] = "";
+						}
+					}
+					el.className = classes.join(" ");
+				});
+			}
+
+			// MOBILE-7809 - Reverts viewport settings for modal window to prevent the height from cropping
+			// These are for retina and hi-res displays
+			// WEB-4372
+			if ((UAType.isIpadRetina) || UAType.isIphoneRetina || (UAType.isAndroidXHDPI && ClientFlag.isOlderThanKitKat) ){
+				viewport.setAttribute('content', 'width=device-width, initial-scale=0.5, maximum-scale=0.5');
+			}
+			
+			
+	        var modalTransparent = document.querySelectorAll(".js-modalTransparent")[0],
+	            modalGrey = document.querySelectorAll(".js-modalGrey")[0];
+
+	        // WEB-4345 - Show older modal design for tablets & app version 5.5 or below.
+	        if (ClientFlag.isTablet || UAType.isIpad || !ClientFlag.getAppVer || ClientFlag.getAppVer <= 5.5){
+	            // Show older modal
+	            if (modalGrey){
+	            	modalGrey.classList.add("js-display-block");
+	            } 
+	        } else {
+	        	// Show newer modal
+	            modalTransparent.classList.add("js-display-block");
+	        }
+
+	        // Fix to adjust top margin for modals on iOS 6 iPhone
+	        if((UAType.isIphone || UAType.isIpod) && ClientFlag.getSystemVer < 7){       	
+	        	modalTransparent.className += ' js-spacing-m-t-60';
+	        	modalGrey.className += ' js-spacing-m-t-60';
+	        }
+
+	         
+
+		}, false);
+
+	</script>
+</head>
+<body class="">
+
+
+
+<style type="text/css">
+	body, html { background: transparent; margin-left: 0.5em; margin-right: 0.5em; }
+</style>
+
+<div class="modal" onclick="if (event.target == this) PandoraApp.closeCustomWebViewContainer()">
+	<div class="modal__content modal__content--sm">
+		<h1 class="modal__content__h1">Feature Test Announcement</h1>
+		<h3 class="modal__content__h3">Announcing Artist Messages</h3>
+		<img class="modal__content__img" src="http://beta.savagebeast.com:7001/mobile/img/alarm_clock_sleep_timer_xhdpi.png" alt="" />
+		<a class="js-button-1      button-lrg button-lrg--grey button-lrg--fixedWidthLrg" onclick="PandoraApp.goToScreen('advancedSettings')"><strong>Open Settings</strong></a>
+	</div>
+</div>
+
+</body>
+</html>

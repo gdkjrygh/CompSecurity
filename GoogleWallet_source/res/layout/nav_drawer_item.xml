@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/Divider" android:visibility="gone" android:layout_marginTop="@dimen/narrow_spacing" android:layout_marginBottom="@dimen/narrow_spacing" style="@style/HorizontalDivider" />
+    <RelativeLayout android:background="@drawable/bounded_rippleable" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/Value" android:paddingRight="@dimen/default_spacing" android:layout_marginLeft="@dimen/default_spacing" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/NavItemValue" />
+        <FrameLayout android:id="@id/IconWrapper" android:paddingTop="@dimen/list_padding_top" android:paddingBottom="@dimen/list_padding_bottom" android:layout_marginLeft="@dimen/default_spacing" style="@style/ListItemPrimaryAction">
+            <com.google.android.apps.wallet.widgets.imageview.StateTintingImageView android:id="@id/Icon" android:contentDescription="@null" wallet:tint="@color/nav_drawer_item_tint" style="@style/ListItemPrimaryActionIcon" />
+        </FrameLayout>
+        <TextView android:id="@id/Title" android:layout_toRightOf="@id/IconWrapper" android:layout_centerVertical="true" style="@style/NavItemTitle" />
+    </RelativeLayout>
+</LinearLayout>

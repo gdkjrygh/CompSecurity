@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_above="@id/ShippingAddressDoneButton" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:text="@string/enter_plastic_card_shipping_address_header" style="@style/Subheader" />
+            <LinearLayout android:orientation="vertical" style="@style/Card">
+                <TextView android:id="@id/ShippingAddressRecipientName" android:padding="@dimen/default_spacing" style="@style/Body" />
+                <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/ShippingAddressStreetAddress" android:layout_width="fill_parent" android:hint="@string/hint_street_address" android:nextFocusForward="@id/ShippingAddressStreetAddress2" wallet:autoAdvance="true" style="@style/SingleLineTextField" />
+                <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/ShippingAddressStreetAddress2" android:layout_width="fill_parent" android:hint="@string/hint_street_address_two" android:nextFocusForward="@id/ShippingAddressCity" wallet:autoAdvance="true" style="@style/SingleLineTextField" />
+                <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/ShippingAddressCity" android:layout_width="fill_parent" android:hint="@string/hint_city" android:nextFocusForward="@id/ShippingAddressState" wallet:autoAdvance="true" style="@style/SingleLineTextField" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/ShippingAddressState" android:nextFocusDown="@id/ShippingAddressZipCode" android:layout_width="0.0dip" android:hint="@string/hint_state" android:layout_weight="1.0" android:inputType="textCapCharacters|textNoSuggestions" android:nextFocusForward="@id/ShippingAddressZipCode" wallet:autoAdvance="true" style="@style/SingleLineTextField" />
+                    <com.google.android.apps.wallet.widgets.validation.ValidatedEditText android:id="@id/ShippingAddressZipCode" android:layout_width="0.0dip" android:layout_marginLeft="0.0dip" android:hint="@string/hint_zip_code" android:layout_weight="1.0" wallet:autoAdvance="true" style="@style/SingleLineTextField" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>
+    <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveButton android:id="@id/ShippingAddressDoneButton" android:text="@string/button_done" android:layout_alignParentBottom="true" style="@style/FlatButton.Docked" />
+</RelativeLayout>

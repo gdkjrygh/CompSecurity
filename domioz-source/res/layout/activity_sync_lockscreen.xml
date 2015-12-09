@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_fordsync" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/fordsyncRootLayout" android:background="@drawable/bg_fordsync_border" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip" android:layout_above="@id/fordsyncFooterLayout">
+        <ImageView android:id="@id/fordsyncSmartPhone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/ic_smartphone_dominos" android:layout_alignParentTop="true" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/fordsyncUSBPlug" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:src="@drawable/ic_usb_plug" android:layout_below="@id/fordsyncSmartPhone" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/fordsyncConnectionStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_fordsync_status_connected" android:layout_below="@id/fordsyncUSBPlug" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/fordsyncUSBCord" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:src="@drawable/ic_usb_cord" android:layout_below="@id/fordsyncConnectionStatus" android:layout_centerInParent="true" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:src="@drawable/ic_ford" android:layout_below="@id/fordsyncUSBCord" android:layout_centerInParent="true" />
+        <ImageButton android:id="@id/fordsyncDisconnectButton" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="50.0dip" android:src="@drawable/ic_fordsync_disconnect" android:layout_alignParentBottom="true" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/fordsyncFooterLayout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageView android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_fordsync_footer" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

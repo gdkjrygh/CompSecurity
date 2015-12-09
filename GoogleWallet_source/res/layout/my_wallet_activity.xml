@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wallet="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/HeaderTileContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_refresh_widget" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.wallet.widgets.scrollview.ObservableScrollView android:id="@id/my_wallet_screen_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+            <com.google.android.apps.wallet.mywallet.MyWalletLinearLayout android:orientation="vertical" android:id="@id/MyWalletTiles" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/layout_invisible_divider" android:showDividers="middle" />
+        </com.google.android.apps.wallet.widgets.scrollview.ObservableScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

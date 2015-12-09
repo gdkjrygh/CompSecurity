@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:id="@id/linearLayout1" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_alignParentTop="true">
+        <com.jcp.views.TypefaceTextView android:textSize="16.0sp" android:textColor="#ff2f2f2f" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GOTHAM_BOOK" android:layout_centerHorizontal="true" android:layout_centerVertical="true" app:customTypeface="GOTHAM_BOOK" />
+        <ImageView android:id="@id/closebtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/close_button" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/zoomlayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="2.0" android:layout_below="@id/linearLayout1">
+        <RelativeLayout android:id="@id/weblayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.jcp.views.JCPWebView android:id="@id/EditorwebView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ProgressBar android:id="@id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <com.jcp.views.TouchImageView android:id="@id/snoop" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

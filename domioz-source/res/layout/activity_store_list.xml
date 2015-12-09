@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/FullScreen"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.dominos.views.ToolBarView_ android:id="@id/storeListActionBarView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center" android:id="@id/linearLayout1" android:background="@color/light_blue_bar" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_below="@id/storeListActionBarView">
+        <LinearLayout android:orientation="horizontal" android:id="@id/stealFocus" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="1.0dip" android:layout_height="1.0dip" />
+        <EditText android:id="@id/address" android:nextFocusLeft="@id/address" android:nextFocusUp="@id/address" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginRight="4.0dip" android:hint="@string/address_hint" android:maxLines="1" android:lines="1" android:singleLine="true" android:selectAllOnFocus="true" android:layout_weight="1.0" android:imeOptions="flagNoExtractUi">
+            <requestFocus />
+        </EditText>
+        <Button android:textSize="14.0dip" android:id="@id/submitAddress" android:background="@drawable/btn_red" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip" android:text="@string/search" android:onClick="onSubmit" style="@style/ButtonStyle" />
+        <ImageButton android:id="@id/useLocation" android:background="@drawable/btn_red" android:layout_width="50.0dip" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:src="@drawable/ic_menu_mylocation" android:onClick="onUseLocation" style="@style/ButtonStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/appbkgr" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/linearLayout1">
+        <FrameLayout android:id="@id/signInFragmentContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="8.0dip" />
+        <FrameLayout android:id="@id/FrameLayout1" style="@style/ListViewFrame">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ListView android:id="@android:id/list" android:padding="10.0dip" android:scrollbars="none" android:fadingEdge="none" android:clipToPadding="false" android:layout_height="wrap_content" android:listSelector="#00000000" android:divider="#00000000" android:dividerHeight="0.0dip" android:headerDividersEnabled="false" android:footerDividersEnabled="false" style="@style/ListViewNormal" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/text_size_large" android:textColor="@android:color/black" android:gravity="center" android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/store_list_no_items" />
+        </FrameLayout>
+    </LinearLayout>
+    <Button android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/white_black_text" android:layout_gravity="center_horizontal" android:id="@id/firstRunButton" android:background="@drawable/iphone_table_single" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="15.0dip" android:text="@string/choose_saved_location" android:layout_below="@id/linearLayout1" android:onClick="showLocations" />
+    <ScrollView android:id="@id/savedLocationsBox" android:background="#cc000000" android:padding="15.0dip" android:visibility="gone" android:scrollbars="none" android:fadingEdge="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/linearLayout1">
+        <LinearLayout android:orientation="vertical" android:id="@id/savedLocationsList" android:background="@drawable/iphone_table_single" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <ImageView android:background="@drawable/black_fade_down" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_below="@id/linearLayout1" />
+</RelativeLayout>

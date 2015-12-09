@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/personal_info_ad_wrapper" android:background="@color/semi_transparent_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:background="@color/personal_info_ad_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/personal_info_ad_root_layout_margin">
+        <com.pandora.android.view.PersonalInfoAdImageView android:id="@id/personal_info_ad_imageview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/advertisement" />
+        <LinearLayout android:orientation="vertical" android:id="@id/personal_info_ad_text_wrapper" android:padding="15.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_below="@id/personal_info_ad_imageview" android:layout_centerHorizontal="true">
+            <TextView android:id="@id/personal_info_ad_headline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" style="@style/personal_info_ad_headline" />
+            <TextView android:id="@id/personal_info_ad_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" style="@style/personal_info_ad_description" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/personal_info_user_message_layout" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/personal_info_ad_bottom_wrapper" android:layout_below="@id/personal_info_ad_imageview">
+            <TextView android:id="@id/personal_info_ad_user_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/personal_info_ad_submit_message" style="@style/personal_info_ad_description" />
+            <TextView android:id="@id/personal_info_ad_email_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" style="@style/personal_info_ad_headline" />
+            <TextView android:id="@id/personal_info_ad_disclaimer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/personal_info_ad_disclaimer" style="@style/personal_info_ad_disclaimer" />
+        </LinearLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@id/personal_info_ad_bottom_wrapper" android:layout_width="wrap_content" android:layout_height="@dimen/pandora_button_min_height" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:layout_alignParentBottom="true">
+            <TextView android:id="@id/personal_info_ad_privacy_link" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginBottom="2.0dip" android:text="@string/personal_info_advertiser_privacy_policy" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" style="@style/personal_info_ad_disclaimer" />
+            <Button android:id="@id/personal_info_ad_button" android:layout_width="120.0dip" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/sign_up" android:layout_alignParentRight="true" style="@style/PersonalInfoAdViewButton" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

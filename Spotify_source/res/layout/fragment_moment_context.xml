@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/fragment_moment_context_tagline_text_size" android:gravity="bottom|center" android:id="@id/tagline" android:paddingBottom="@dimen/moments_start_tagline_padding_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/moments_start_tagline_height" android:singleLine="true" />
+    </LinearLayout>
+    <ViewStub android:id="@id/stub_image_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.spotify.mobile.android.ui.view.FontFitTextView android:textSize="@dimen/fragment_moment_context_name_text_size" android:gravity="center_horizontal" android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" app:fontFitMinTextSize="@dimen/fragment_moment_context_name_text_size_min" />
+        <TextView android:textSize="@dimen/fragment_moment_context_description_text_size" android:textColor="?pasteColorTextSecondary" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/description" android:paddingLeft="40.0dip" android:paddingTop="5.0dip" android:paddingRight="40.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" />
+        <ToggleButton android:layout_gravity="center_horizontal" android:id="@id/follow_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:textOn="@string/header_playlist_following" android:textOff="@string/header_playlist_follow" style="?pasteButtonStyleSmall" />
+    </LinearLayout>
+</LinearLayout>

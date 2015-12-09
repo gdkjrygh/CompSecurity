@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/games_participant_list_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.gms.common.images.internal.LoadingImageView android:id="@id/featured_image" android:layout_width="@dimen/games_participant_featured_width" android:layout_height="@dimen/games_participant_featured_height" android:scaleType="fitCenter" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:background="@color/games_participant_list_translucent_bg" android:paddingLeft="16.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:layout_gravity="center_vertical" android:id="@id/games_participant_title_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:fontFamily="sans-serif-light" />
+        </LinearLayout>
+    </FrameLayout>
+    <View android:id="@id/titleDivider" android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <ListView android:id="@id/games_participant_list_view" android:background="@drawable/games_tile_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

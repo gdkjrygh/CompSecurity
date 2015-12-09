@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/tablet_root_container" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <com.slidingmenu.lib.SlidingMenu android:id="@id/tablet_sliding_menu" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom_bar_layout" sliding:mode="right" sliding:viewAbove="@layout/tablet_home_above" sliding:viewBehind="@layout/tablet_home_below" sliding:behindWidth="@dimen/third_pane_width" sliding:behindScrollScale="0.5" sliding:shadowWidth="1.0dip" xmlns:sliding="http://schemas.android.com/apk/res-auto" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/bottom_bar_layout" android:background="#ff1b337a" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:id="@id/media_buttons_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+            <com.pandora.android.eureka.DisappearingMediaRouteButton android:id="@id/cast_action" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:title="@string/menu_cast_title" />
+        </LinearLayout>
+        <com.pandora.android.view.MiniPlayerView android:name="com.pandora.android.view.MiniPlayerView" android:id="@id/mini_player_view" android:layout_width="wrap_content" android:layout_height="@dimen/mini_player_height" android:layout_centerHorizontal="true" />
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/tablet_third_pane_menu" />
+    </RelativeLayout>
+</RelativeLayout>

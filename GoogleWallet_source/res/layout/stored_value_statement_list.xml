@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <fragment android:name="com.google.android.apps.wallet.network.ui.NoInternetConnectionFragment" android:tag="com.google.android.apps.wallet.ui.dashbaord.NoInternetConnectionFragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveListView android:scrollbarStyle="outsideOverlay" android:id="@id/StatementList" android:footerDividersEnabled="false" style="@style/List" />
+        <com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/EmptyStatementList" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/text_inset_xlarge" android:layout_marginRight="@dimen/text_inset_xlarge">
+            <TextView android:gravity="center_horizontal" android:id="@id/EmptyStatementTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/no_statements_title" style="@style/ListItemPrimaryText" />
+            <TextView android:gravity="center_horizontal" android:id="@id/EmptyStatementContent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/gap_regular" android:text="@string/no_statements_content" style="@style/ListItemSecondaryText" />
+        </com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveLinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/detail_layout" android:background="@drawable/iphone_table_single" android:focusable="false" android:descendantFocusability="blocksDescendants" android:layout_below="@id/section_view_label" style="@style/ListItem">
+            <RelativeLayout android:id="@id/label_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+                <TextView android:id="@id/label" android:text="" style="@style/ListItemLabel" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/control_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/label_layout" android:layout_alignLeft="@id/sauce_spinner">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/quantity_control_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                    <ImageButton android:id="@id/decrement_button" android:background="@android:color/transparent" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_margin="5.0dip" android:src="@drawable/dec_btn" android:scaleType="centerInside" />
+                    <TextView android:textSize="@dimen/text_size_medium" android:textStyle="bold" android:textColor="@android:color/black" android:gravity="center" android:id="@id/quantity_label" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:minEms="3" />
+                    <ImageButton android:id="@id/increment_button" android:background="@android:color/transparent" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_margin="5.0dip" android:src="@drawable/inc_btn" android:scaleType="centerInside" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</merge>

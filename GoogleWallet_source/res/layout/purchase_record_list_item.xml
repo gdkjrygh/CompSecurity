@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Card.Touchable"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:id="@id/PurchaseRecordTitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" style="@style/ListItemPrimaryText" />
+        <TextView android:gravity="right" android:id="@id/PurchaseRecordAmount" android:paddingLeft="@dimen/receipt_list_entry_transaction_amount_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ListItemPrimaryText" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/PurchaseRecordLabel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/receipt_purchase_type_nfc_label" android:layout_weight="1.0" style="@style/ListItemSecondaryText" />
+        <TextView android:gravity="right" android:id="@id/PurchaseRecordTime" android:paddingLeft="@dimen/receipt_list_entry_transaction_amount_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ListItemSecondaryText" />
+    </LinearLayout>
+    <View android:id="@id/Divider" style="@style/HorizontalDivider" />
+</LinearLayout>

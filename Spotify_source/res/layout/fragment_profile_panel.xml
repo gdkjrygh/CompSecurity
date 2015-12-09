@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:paste="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/invitation_codes" android:background="@drawable/profile_panel_invitation_codes_panel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="-5.0dip">
+        <TextView android:textAppearance="?pasteTextAppearanceHeadingSmall" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/navigation_profile_invitation_codes_title" />
+        <TextView android:textAppearance="?pasteTextAppearanceSecondary" android:id="@id/invitation_codes_description" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <RelativeLayout android:orientation="horizontal" android:id="@id/profile" android:layout_width="0.0dip" android:baselineAligned="false" android:layout_weight="1.0" style="@style/ProfilePanel">
+            <ImageView android:id="@id/image" android:layout_centerVertical="true" style="@style/ProfilePanelImage" />
+            <TextView android:textColor="@color/cat_profile_panel" android:layout_gravity="left|center" android:id="@id/name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_toRightOf="@id/image" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/ProfilePanelText" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/inbox" android:paddingRight="16.0dip" android:visibility="gone" android:layout_width="62.0dip" android:layout_height="fill_parent" android:layout_weight="0.0" android:contentDescription="@string/profile_content_description_inbox">
+            <com.spotify.android.paste.widget.SpotifyIconView android:id="@id/inbox_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:scaleType="centerCrop" android:layout_centerInParent="true" paste:iconColor="@color/cat_profile_panel" paste:iconType="icon_inbox_32" />
+            <TextView android:textSize="12.0dip" android:textColor="@color/cat_grayscale_8" android:gravity="center" android:id="@id/unseen_messages" android:background="@drawable/profile_panel_badge_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:minWidth="16.0dip" android:minHeight="16.0dip" android:layout_alignTop="@id/inbox_icon" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/notifications" android:paddingRight="16.0dip" android:visibility="gone" android:layout_width="62.0dip" android:layout_height="fill_parent" android:layout_weight="0.0" android:contentDescription="@string/profile_content_description_notifications">
+            <com.spotify.android.paste.widget.SpotifyIconView android:id="@id/notifications_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:scaleType="centerCrop" android:layout_centerInParent="true" paste:iconColor="@color/cat_profile_panel" paste:iconType="icon_notifications_32" />
+            <TextView android:textColor="@color/cat_grayscale_8" android:gravity="center" android:id="@id/unseen_notifications" android:background="@drawable/profile_panel_badge_background" android:visibility="gone" android:layout_width="7.0dip" android:layout_height="7.0dip" android:layout_marginTop="-4.0dip" android:layout_alignTop="@id/notifications_icon" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

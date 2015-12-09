@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/actionbar_height">
+        <ImageButton android:id="@id/btn_close" android:background="?android:selectableItemBackground" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:contentDescription="@string/queue_content_description_btn_close" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/actionbar_title_color" android:ellipsize="marquee" android:orientation="vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/playqueue_title" android:singleLine="true" android:layout_toRightOf="@id/btn_close" android:layout_centerVertical="true" android:textAllCaps="true" />
+        <ImageButton android:id="@id/sleep_timer_button" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerInside" android:layout_alignParentRight="true" android:contentDescription="@string/queue_content_description_btn_sleep_timer" style="@style/Widget.Player.Button.Borderless" />
+        <com.spotify.android.paste.widget.SleepTimerView android:textColor="@color/cat_white_70" android:id="@id/queue_sleep_timer_counter" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/title" android:layout_alignLeft="@id/title" />
+    </RelativeLayout>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

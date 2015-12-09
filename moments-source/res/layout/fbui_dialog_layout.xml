@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minWidth="@dimen/dialog_min_width"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/fbui_dialog_title_container" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/windowTitleContainerStyle">
+        <ImageView android:id="@id/fbui_dialog_icon" android:layout_width="@dimen/fbui_dialog_icon_size" android:layout_height="@dimen/fbui_dialog_icon_size" android:layout_marginRight="@dimen/fbui_padding_half_standard" android:layout_marginEnd="@dimen/fbui_padding_half_standard" />
+        <com.facebook.resources.ui.FbTextView android:id="@id/fbui_dialog_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:attr/windowTitleStyle" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/fbui_dialog_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.facebook.fbui.widget.dialog.DialogButtonBar android:id="@id/fbui_dialog_buttonbar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/dialogButtonBarStyle" />
+</LinearLayout>

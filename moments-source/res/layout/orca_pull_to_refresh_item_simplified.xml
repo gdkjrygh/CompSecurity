@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout android:id="@id/pull_to_refresh_parent_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/pull_to_refresh_spinner" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/rotate_spinner_drawable" android:layout_centerInParent="true" />
+        <com.facebook.widget.FacebookProgressCircleView android:id="@id/pull_to_refresh_spinner_mask" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_centerInParent="true" fb:progressCircleBaseAlpha="255" fb:progressCircleBaseColor="@color/pull_to_refresh_default_color" fb:progressCircleDrawnAlpha="0" fb:progressCircleEnableFadeIn="true" fb:progressCircleStrokeWidth="6.0dip" fb:progressCircleWidth="20.0dip" />
+        <com.facebook.widget.loadingindicator.LoadingIndicatorView android:id="@id/pull_to_refresh_error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:errorPaddingTop="10.0dip" fb:errorPaddingBottom="10.0dip" />
+    </com.facebook.ui.compat.fbrelativelayout.FbRelativeLayout>
+    <View android:id="@id/pull_to_refresh_list_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/ptr_list_gradient_height" />
+    <View android:id="@id/pull_to_refresh_list_mask" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

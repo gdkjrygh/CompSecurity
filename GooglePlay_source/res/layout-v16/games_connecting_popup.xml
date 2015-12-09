@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/game_connecting_popup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/play_games_theme_primary" android:layout_width="@dimen/games_signin_connecting_popup_width" android:layout_height="@dimen/games_signin_connecting_popup_height">
+        <FrameLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_width="@dimen/games_connecting_play_games_logo_size" android:layout_height="@dimen/games_connecting_play_games_logo_size" android:layout_marginTop="34.0dip" android:src="@drawable/splash_ic_play_games_controller" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/splash_google_logo" />
+                    <TextView android:textSize="22.0sp" android:textColor="@android:color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/games_only_brand_name" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="sans-serif" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/game_info_section" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="@dimen/games_signin_connecting_popup_curtain_height">
+                <ImageView android:id="@id/popup_icon" android:layout_width="@dimen/games_connecting_icon_size" android:layout_height="@dimen/games_connecting_icon_size" android:layout_marginTop="38.0dip" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/games_connecting_appname_color" android:ellipsize="end" android:gravity="center" android:id="@id/popup_app_label" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:singleLine="true" android:fontFamily="sans-serif" />
+            </LinearLayout>
+        </FrameLayout>
+        <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/popup_text_label" android:layout_width="fill_parent" android:layout_height="32.0dip" android:text="@string/games_client_connecting_message" android:singleLine="true" android:fontFamily="sans-serif" />
+    </LinearLayout>
+</FrameLayout>

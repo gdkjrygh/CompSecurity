@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/addressTypeCampusBaseStateContainer" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeCampusBaseState" android:text="@string/form_delivery_state" style="@style/AddressTypeTextStyle" />
+        <Spinner android:id="@id/addressTypeCampusBaseStateSpinner" android:background="@color/bg_form_text" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" android:layout_marginLeft="@dimen/label_margin_left" android:layout_toRightOf="@id/addressTypeCampusBaseState" android:layout_centerVertical="true" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeCampusBaseCampusBaseContainer" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeCampusBaseCampusBase" android:text="@string/address_type_campusBase_name" style="@style/AddressTypeTextStyle" />
+        <Spinner android:id="@id/addressTypeCampusBaseCampusBaseSpinner" android:background="@color/bg_form_text" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" android:layout_marginLeft="@dimen/label_margin_left" android:layout_toRightOf="@id/addressTypeCampusBaseCampusBase" android:layout_centerVertical="true" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeCampusBaseDormBuildingContainer" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeCampusBaseDormBuilding" android:text="@string/form_dorm_building_text" style="@style/AddressTypeTextStyle" />
+        <Spinner android:id="@id/addressTypeCampusBaseDormBuildingSpinner" android:background="@color/bg_form_text" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" android:layout_marginLeft="@dimen/label_margin_left" android:layout_toRightOf="@id/addressTypeCampusBaseDormBuilding" android:layout_centerVertical="true" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeCampusBaseRoomContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeCampusBaseRoom" android:text="@string/form_room_address_text" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeCampusBaseRoomEntry" android:hint="@string/form_user_hint_required" android:cursorVisible="false" android:layout_toRightOf="@id/addressTypeCampusBaseRoom" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeCampusBaseDeliveryInstContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeCampusBaseDeliveryInst" android:text="@string/form_delivery_inst" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeCampusBaseDeliveryInstEntry" android:hint="@string/form_user_hint_optional" android:singleLine="true" android:maxLength="@integer/address_delivery_inst_size" android:layout_toRightOf="@id/addressTypeCampusBaseDeliveryInst" android:imeOptions="actionDone|flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+    </RelativeLayout>
+</LinearLayout>

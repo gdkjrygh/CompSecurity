@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/signin_container" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/signin_pandora_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pandora_logo" android:layout_centerInParent="true" android:contentDescription="@string/cd_pandora_logo" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ScrollView android:id="@id/button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" android:alpha="0.0">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/signin_pandora_logo_fake" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pandora_logo" android:contentDescription="@string/cd_pandora_logo" />
+                <RelativeLayout android:gravity="center_horizontal" android:id="@id/form_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/email_fields" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/signin_registration_row_margin">
+                        <com.pandora.android.view.ValidatingEditText android:id="@id/email" android:layout_height="wrap_content" android:hint="@string/edittext_hint_email" android:drawableLeft="@drawable/edittext_email_left_drawable_selector" android:drawableRight="@drawable/edittext_close_drawable_selector" android:drawablePadding="@dimen/validate_edit_text_drawable_padding" android:inputType="textEmailAddress" style="@style/SignInEditText" />
+                        <View android:layout_gravity="bottom" android:layout_margin="0.0dip" style="@style/SigninRegistrationRowDividerStyle" />
+                        <com.pandora.android.view.ValidatingEditText android:id="@id/password" android:layout_height="wrap_content" android:hint="@string/edittext_hint_password" android:ems="10" android:drawableLeft="@drawable/edittext_password_left_drawable_selector" android:drawableRight="@drawable/edittext_close_drawable_selector" android:drawablePadding="@dimen/validate_edit_text_drawable_padding" android:inputType="textPassword" android:imeActionLabel="@string/button_sign_in_submit" style="@style/SignInEditText" />
+                        <View android:layout_gravity="bottom" android:layout_margin="0.0dip" style="@style/SigninRegistrationRowDividerStyle" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <Button android:textStyle="normal" android:id="@id/button_sign_in_submit" android:layout_marginTop="@dimen/sign_in_buttons_margin_top" android:text="@string/button_sign_in_submit" style="@style/SignInButtonStyle" />
+                <TextView android:gravity="center_horizontal" android:id="@id/forgot_link" android:focusable="true" android:clickable="true" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sign_in_buttons_margin_top" android:text="@string/button_forgot" android:selectAllOnFocus="true" style="@style/SignInForgotPwdLink" />
+                <Button android:textStyle="normal" android:id="@id/button_sign_up" android:layout_marginTop="@dimen/sign_in_buttons_margin_top" android:text="@string/button_sign_up_label" style="@style/SignInRegisterButtonStyle" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</FrameLayout>

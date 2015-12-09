@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <com.facebook.widget.titlebar.TitleBarViewStub android:id="@id/titlebar_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" fb:title="@string/qr_code_login_title" fb:navless="true" />
+    <LinearLayout android:orientation="vertical" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.facebook.resources.ui.FbTextView android:textSize="25.0sp" android:textColor="@android:color/black" android:gravity="center_horizontal" android:id="@id/qr_login_info_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="80.0dip" android:text="@string/qr_code_login_fetching_info" />
+        <com.facebook.resources.ui.FbTextView android:textSize="@dimen/fbui_text_size_xlarge" android:textColor="@android:color/black" android:gravity="center_horizontal" android:id="@id/qr_login_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="85.0dip" />
+    </LinearLayout>
+    <com.facebook.resources.ui.FbButton android:textSize="@dimen/fbui_text_size_large" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="bottom" android:id="@id/qr_code_login_approve" android:background="@drawable/orca_login_button_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" android:layout_marginBottom="40.0dip" android:text="@string/qr_code_login_approve_button" android:layout_marginStart="18.0dip" android:layout_marginEnd="18.0dip" />
+</FrameLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/bg_synclair" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/synclair_title_margin_left" android:layout_marginTop="@dimen/synclair_title_margin_top" android:layout_marginRight="@dimen/synclair_title_margin_right" android:layout_marginBottom="10.0dip" style="@style/SynclairTitleText" />
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/digits" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.fitbit.synclair.ui.components.EndLineCursorEditText android:id="@id/digit0" android:nextFocusLeft="@id/digit3" android:nextFocusRight="@id/digit1" android:nextFocusUp="@id/digit3" android:nextFocusDown="@id/digit1" android:imeOptions="actionNext" style="@style/SynclairDigitText">
+            <requestFocus />
+        </com.fitbit.synclair.ui.components.EndLineCursorEditText>
+        <com.fitbit.synclair.ui.components.EndLineCursorEditText android:id="@id/digit1" android:nextFocusLeft="@id/digit0" android:nextFocusRight="@id/digit2" android:nextFocusUp="@id/digit0" android:nextFocusDown="@id/digit2" android:layout_marginLeft="6.0dip" android:imeOptions="actionNext" style="@style/SynclairDigitText" />
+        <com.fitbit.synclair.ui.components.EndLineCursorEditText android:id="@id/digit2" android:nextFocusLeft="@id/digit1" android:nextFocusRight="@id/digit3" android:nextFocusUp="@id/digit1" android:nextFocusDown="@id/digit3" android:layout_marginLeft="6.0dip" android:imeOptions="actionNext" style="@style/SynclairDigitText" />
+        <com.fitbit.synclair.ui.components.EndLineCursorEditText android:id="@id/digit3" android:nextFocusLeft="@id/digit2" android:nextFocusRight="@id/digit0" android:nextFocusUp="@id/digit2" android:nextFocusDown="@id/digit0" android:layout_marginLeft="6.0dip" android:imeOptions="actionGo" style="@style/SynclairDigitText" />
+    </LinearLayout>
+    <TextView android:id="@id/txt_error" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/SynclairCodeInputErrorText" />
+    <Button android:id="@id/btn_not_working" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/synclair_btn_not_working" style="@style/SynclairNotWorkingButton" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:enabled="false" android:id="@id/btn_next" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/synclair_button_next_layout_height" android:layout_marginLeft="@dimen/synclair_button_next_margin_left" android:layout_marginRight="@dimen/synclair_button_next_margin_right" android:layout_marginBottom="@dimen/synclair_button_next_margin_bottom" android:text="@string/synclair_connecting" style="@style/SynclairNextButton" />
+        <ProgressBar android:id="@id/progress_btn_bar" android:visibility="invisible" android:layout_width="@dimen/synclair_progress_next_layout_width" android:layout_height="@dimen/synclair_progress_next_layout_height" android:layout_marginLeft="@dimen/synclair_progress_next_margin_left" android:layout_marginTop="@dimen/synclair_progress_next_margin_top" android:layout_marginRight="@dimen/synclair_progress_next_margin_right" android:layout_marginBottom="@dimen/synclair_progress_next_margin_bottom" android:indeterminate="true" />
+    </FrameLayout>
+</LinearLayout>

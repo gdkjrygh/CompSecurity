@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:id="@id/headerBar" android:background="@drawable/header_bg" android:layout_width="fill_parent" android:layout_height="@dimen/home_header_height">
+        <ImageView android:id="@id/top_border" android:layout_width="fill_parent" android:layout_height="25.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/white_border_top" android:scaleType="@integer/header_border_scale" android:layout_alignParentTop="true" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:id="@id/logo" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/logosolo" android:scaleType="centerInside" android:layout_centerVertical="true" />
+            <TextView android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:id="@id/titleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/landing_screen_header_text" android:maxLines="2" android:layout_toRightOf="@id/logo" android:layout_centerVertical="true" style="@style/LandingScreenHeaderText" />
+        </RelativeLayout>
+        <ImageView android:id="@id/bottom_border" android:layout_width="fill_parent" android:layout_height="25.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/white_border_bottom" android:scaleType="@integer/header_border_scale" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

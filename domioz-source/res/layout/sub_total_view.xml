@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TableLayout android:layout_gravity="right" android:id="@id/subTotalNetRow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+            <TableRow android:id="@id/tableRow1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:layout_gravity="right" android:id="@id/sub_total_view_net_prompt" android:layout_width="wrap_content" android:text="@string/sub_total_view_net_prompt" style="@style/ListItemLabel" />
+                <TextView android:layout_gravity="right" android:id="@id/sub_total_view_net_amount" android:layout_width="wrap_content" android:layout_marginRight="5.0dip" style="@style/ListItemDescription" />
+            </TableRow>
+            <TableRow android:id="@id/subTotalPromotionRow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:layout_gravity="right" android:id="@id/sub_total_view_promotion_prompt" android:layout_width="wrap_content" android:text="@string/sub_total_view_promotion_prompt" style="@style/ListItemLabel" />
+                <TextView android:layout_gravity="right" android:id="@id/sub_total_view_promotion_amount" android:layout_width="wrap_content" android:layout_marginRight="5.0dip" style="@style/ListItemDescription" />
+            </TableRow>
+            <TableRow android:id="@id/subTotalDeliveryRow" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RelativeLayout>
+                    <ImageView android:id="@id/shoprunner_logo" android:layout_width="175.0dip" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/sr_logo" android:scaleType="fitXY" android:layout_toLeftOf="@id/sub_total_view_delivery_prompt" android:layout_alignBottom="@id/sub_total_view_delivery_prompt" />
+                    <TextView android:id="@id/sub_total_view_delivery_prompt" android:layout_width="wrap_content" android:text="@string/sub_total_view_delivery_prompt" android:layout_alignParentRight="true" style="@style/ListItemLabel" />
+                </RelativeLayout>
+                <TextView android:layout_gravity="right" android:id="@id/sub_total_view_delivery_amount" android:layout_width="wrap_content" android:layout_marginRight="5.0dip" style="@style/ListItemDescription" />
+            </TableRow>
+            <TableRow android:id="@id/subTotalTaxRow" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:layout_gravity="right" android:id="@id/sub_total_view_tax_prompt" android:layout_width="wrap_content" android:text="@string/sub_total_view_tax_prompt" style="@style/ListItemLabel" />
+                <TextView android:layout_gravity="right" android:id="@id/sub_total_view_tax_amount" android:layout_width="wrap_content" android:layout_marginRight="5.0dip" style="@style/ListItemDescription" />
+            </TableRow>
+            <TableRow android:id="@id/subTotalDepositRow" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:layout_gravity="right" android:id="@id/sub_total_view_deposit_prompt" android:layout_width="wrap_content" android:text="@string/sub_total_view_deposit_prompt" style="@style/ListItemLabel" />
+                <TextView android:layout_gravity="right" android:id="@id/sub_total_view_deposit_amount" android:layout_width="wrap_content" android:layout_marginRight="5.0dip" style="@style/ListItemDescription" />
+            </TableRow>
+            <ImageView android:background="@drawable/divider" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" />
+            <TableRow android:id="@id/grandTotalRow" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/text_size_large" android:layout_gravity="right" android:id="@id/grand_total_prompt" android:layout_width="wrap_content" android:text="@string/grand_total_view_prompt" style="@style/ListItemLabel" />
+                <TextView android:textSize="@dimen/text_size_medium" android:layout_gravity="right" android:id="@id/grand_total_amount" android:layout_width="wrap_content" android:layout_marginRight="5.0dip" style="@style/ListItemDescription" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</merge>

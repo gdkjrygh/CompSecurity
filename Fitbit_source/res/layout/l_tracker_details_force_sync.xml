@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?android:selectableItemBackground" android:paddingLeft="@dimen/dimen_tracker_details_item_padding" android:paddingTop="8.0dip" android:paddingRight="@dimen/dimen_tracker_details_item_padding" android:paddingBottom="8.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/controls" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageButton android:id="@id/btnForceSync" android:background="@null" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/btn_force_sync" android:scaleType="centerInside" android:layout_centerInParent="true" />
+        <ProgressBar android:id="@id/sync_progress_bar" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:indeterminate="true" android:layout_alignLeft="@id/btnForceSync" android:layout_alignTop="@id/btnForceSync" android:layout_alignRight="@id/btnForceSync" android:layout_alignBottom="@id/btnForceSync" />
+    </RelativeLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_toLeftOf="@id/controls" android:layout_alignParentLeft="true">
+        <TextView android:id="@id/txtForceSync" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_sync_now" style="@style/DeviceListItemTitleTextStyle" />
+        <TextView android:id="@id/txtForceSyncDetailed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_move_zip" style="@style/DeviceListItemDescriptionTextStyle" />
+    </LinearLayout>
+</RelativeLayout>

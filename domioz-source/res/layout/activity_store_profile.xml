@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/storeProfileContainer" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.dominos.views.ToolBarView_ android:id="@id/storeProfileActionBarView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:background="@drawable/welcome_header_bg" android:scrollbars="none" android:fadingEdge="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:background="@color/white" android:padding="@dimen/store_info_container_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/store_info_text_size" android:textStyle="bold" android:textColor="@color/profile_text_blue" android:id="@id/storeNumberTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/store_info_text_margin" android:text="@string/store_profile_store_number" style="@style/TopShadow" />
+                    <TextView android:textSize="@dimen/text_size_smaller" android:id="@id/storeAddressTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/address" />
+                    <TextView android:textSize="@dimen/text_size_small" android:textColor="@color/store_profile_info_text" android:gravity="right" android:id="@id/storeInfoTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:gravity="right" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:layout_width="@dimen/store_image_size_width" android:layout_height="@dimen/store_image_size_height" android:src="@drawable/dominos_store" android:scaleType="fitCenter" />
+                </LinearLayout>
+            </LinearLayout>>
+<LinearLayout android:background="@drawable/black_fade_down_light" android:layout_width="fill_parent" android:layout_height="@dimen/store_bg_height" />
+            <RelativeLayout android:paddingBottom="@dimen/store_map_container_padding" android:layout_width="fill_parent" android:layout_height="@dimen/store_map_layout_height" android:minHeight="@dimen/store_map_layout_height">
+                <FrameLayout android:gravity="center" android:id="@id/mapStoreProfileContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <LinearLayout android:orientation="vertical" android:id="@id/storeProfileExpandMap" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/mapBusyStoreProfileContainer" android:background="@color/store_profile_map_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/text_size_large" android:gravity="center" android:id="@id/mapLoadingErrorText" android:background="@color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/location_error_title" />
+            </RelativeLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/common_margin_padding_ten">
+                <Button android:id="@id/storeProfileCarryoutButton" android:background="@color/red" android:layout_width="fill_parent" android:layout_height="@dimen/store_button_height" android:layout_margin="@dimen/store_button_padding" android:text="@string/carryout_label" style="@style/TitleBarActionButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

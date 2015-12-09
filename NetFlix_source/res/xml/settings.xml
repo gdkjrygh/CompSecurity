@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:key="pref.screen"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/label_pref_settings_category_playback">
+        <CheckBoxPreference android:title="@string/label_pref_settings_wifi_warning_title" android:key="nf_play_no_wifi_warning" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/label_pref_settings_category_notification" android:key="pref.notification">
+        <CheckBoxPreference android:title="@string/label_pref_settings_notification_enable" android:key="nf_notification_enable" android:summary="@string/label_pref_settings_notification_enable_summary" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/label_pref_settings_category_qa" android:key="pref.qa.debugonly">
+        <Preference android:title="@string/label_site" android:key="ui.site" android:summary="@string/label_site_summary" />
+        <Preference android:title="@string/label_reset_uibootloader" android:key="ui.reset_bootloader" android:summary="@string/label_reset_uibootloader_summary" />
+        <Preference android:title="@string/label_bugreport" android:key="ui.bugreport" android:summary="@string/label_bugreport_summary" />
+        <CheckBoxPreference android:title="@string/label_playeroverlay_enable" android:key="ui.playeroverlay" android:summary="@string/label_playeroverlay_summary" android:defaultValue="false" />
+        <ListPreference android:title="@string/label_playerType" android:key="ui.playertype" android:summary="@string/label_playerType_summary" />
+        <EditTextPreference android:title="@string/label_bootParams" android:key="ui.bootParams" android:summary="@string/label_bootParams_summary" />
+        <EditTextPreference android:title="@string/label_castappid_title" android:key="ui.castAppId" android:summary="@string/label_castappid_summary" />
+        <ListPreference android:title="@string/label_subtitleConfiguration" android:key="ui.subtitleConfig" android:summary="@string/label_subtitleConfiguration_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/label_about">
+        <Preference android:title="@string/label_version" android:key="ui.about" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/label_pref_settings_category_legal">
+        <Preference android:title="@string/label_open_source_licenses" android:key="@string/settings_key_open_source_licenses" />
+        <Preference android:title="@string/label_pref_settings_privacy_policy" android:key="pref.privacy" />
+        <Preference android:title="@string/label_pref_settings_legal_terms_of_use" android:key="pref.terms" />
+    </PreferenceCategory>
+</PreferenceScreen>

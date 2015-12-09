@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/addressTypeDormitoryLocationContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeDormitoryLocation" android:text="@string/form_dormitory_name_text" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeDormitoryLocationEntry" android:hint="@string/form_user_hint_optional" android:maxLength="@integer/address_max_length" android:layout_toRightOf="@id/addressTypeDormitoryLocation" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeDormitoryStreetAddressContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeDormitoryStreetAddress" android:text="@string/form_street_address" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeDormitoryStreetAddressEntry" android:hint="@string/form_user_hint_required" android:maxLength="@integer/address_max_length" android:layout_toRightOf="@id/addressTypeDormitoryStreetAddress" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeDormitoryRoomContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeDormitoryRoom" android:text="@string/form_room_address_text" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeDormitoryRoomEntry" android:hint="@string/form_user_hint_required" android:layout_toRightOf="@id/addressTypeDormitoryRoom" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeDormitoryCityContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeDormitoryCity" android:text="@string/city" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeDormitoryCityEntry" android:hint="@string/form_user_hint_required" android:layout_toRightOf="@id/addressTypeDormitoryCity" android:inputType="textCapWords" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeDormitoryStateContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeDormitoryState" android:text="@string/form_delivery_state" style="@style/AddressTypeTextStyle" />
+        <Spinner android:id="@id/addressTypeDormitoryStateSpinner" android:background="@color/bg_form_text" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" android:layout_marginLeft="@dimen/label_margin_left" android:layout_toRightOf="@id/addressTypeDormitoryState" android:layout_centerVertical="true" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeDormitoryZipContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeDormitoryZip" android:text="@string/form_zip_code_text" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeDormitoryZipEntry" android:hint="@string/form_user_hint_required" android:maxLength="@integer/address_zip_size" android:layout_toRightOf="@id/addressTypeDormitoryZip" android:inputType="number" android:imeOptions="flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+        <View style="@style/AddressTypeDividerGray" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/addressTypeDormitoryDeliveryInstContainer" android:layout_width="fill_parent" android:layout_height="@dimen/form_height">
+        <TextView android:id="@id/addressTypeDormitoryDeliveryInst" android:text="@string/form_delivery_inst" style="@style/AddressTypeTextStyle" />
+        <EditText android:id="@id/addressTypeDormitoryDeliveryInstEntry" android:hint="@string/form_user_hint_optional" android:singleLine="true" android:maxLength="@integer/address_delivery_inst_size" android:layout_toRightOf="@id/addressTypeDormitoryDeliveryInst" android:imeOptions="actionDone|flagNoExtractUi" style="@style/AddressTypeEditTextStyle" />
+    </RelativeLayout>
+</LinearLayout>

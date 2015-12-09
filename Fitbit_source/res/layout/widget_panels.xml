@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center" android:id="@id/progress_panel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="4.0dip">
+            <ImageView android:id="@id/img_progress_meter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" android:layout_centerVertical="true" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_toRightOf="@id/img_progress_meter" android:layout_centerVertical="true">
+                <LinearLayout android:gravity="bottom" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="30.0sp" android:textColor="#ff85e6e7" android:layout_gravity="left" android:id="@id/txt_main_goal_value" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="16.0sp" android:textColor="#ffdadbdb" android:layout_gravity="bottom" android:id="@id/txt_main_goal" android:paddingLeft="4.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/widget_you_should_login" />
+                </LinearLayout>
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="12.0sp" android:textColor="#42ffffff" android:id="@id/txt_last_update" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" />
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView android:layout_gravity="right" android:id="@id/img_lockscreen_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:src="@drawable/lockscreen_logo" android:scaleType="centerInside" />
+    </FrameLayout>
+    <RelativeLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/error_panel" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/icons" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/widget_steps" />
+            <ImageView android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/widget_distance" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/widget_calories" />
+        </LinearLayout>
+        <TextView android:textSize="22.0sp" android:textColor="#ffdadbdb" android:gravity="center_horizontal" android:id="@id/error_message" android:paddingTop="13.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:text="@string/label_please_wait" android:layout_below="@id/icons" android:layout_centerHorizontal="true" />
+        <ImageView android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/widget_brand" android:scaleType="centerInside" android:layout_below="@id/error_message" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</merge>

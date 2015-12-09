@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="?pasteActionBarBackground" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+        <TextView android:id="@id/done_button" android:paddingRight="14.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/find_friends_flow_skip" android:layout_alignParentRight="true" style="@style/ActionBarCompatTitle" />
+        <TextView android:gravity="center_vertical" android:paddingLeft="14.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/find_friends_flow_title" android:layout_toLeftOf="@id/done_button" android:layout_alignParentLeft="true" style="@style/ActionBarCompatTitle" />
+    </RelativeLayout>
+    <RadioGroup android:id="@id/findfriends_radiogroup" android:checkedButton="@id/tab_text_friends" style="@style/StaticTabBar">
+        <RadioButton android:ellipsize="end" android:id="@id/tab_text_friends" android:button="@android:color/transparent" android:text="@string/find_friends_flow_friendstab_title" android:singleLine="true" style="@style/StaticTab" />
+        <RadioButton android:ellipsize="end" android:id="@id/tab_text_features" android:button="@android:color/transparent" android:text="@string/find_friends_flow_featuredtab_title" android:singleLine="true" style="@style/StaticTab" />
+    </RadioGroup>
+    <com.spotify.android.paste.widget.EmptyView android:gravity="center" android:id="@id/empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.spotify.mobile.android.ui.view.LoadingView android:gravity="center" android:id="@id/loading_view" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress" style="@style/indeterminateProgressBar" />
+    </com.spotify.mobile.android.ui.view.LoadingView>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/unconnected_views" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="?pasteTextAppearance" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/findfriends_connect_fb_margin" android:layout_marginTop="@dimen/findfriends_connect_fb_margin_tb" android:layout_marginRight="@dimen/findfriends_connect_fb_margin" android:layout_marginBottom="@dimen/findfriends_connect_fb_margin_tb" android:text="@string/find_friends_flow_header_title" />
+        <Button android:layout_gravity="center" android:id="@id/findfriends_connect_fb_button" android:background="@drawable/findfriends_connect_fb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/find_friends_flow_facebook" android:singleLine="true" style="?attr/pasteButtonStylePrimary" />
+        <TextView android:textAppearance="?pasteTextAppearanceSecondary" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/findfriends_connect_fb_margin" android:text="@string/find_friends_flow_disclaimer" />
+    </LinearLayout>
+</LinearLayout>

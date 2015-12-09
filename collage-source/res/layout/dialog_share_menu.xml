@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:gravity="center_vertical" android:id="@id/share_title" android:background="#ff52b4c1" android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="52.0dip" android:text="@string/pic_collage" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:textSize="14.0sp" android:gravity="top|left|center" android:id="@id/caption_editor" android:padding="5.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="18.0dip" android:minHeight="124.0dip" android:hint="@string/write_a_caption" android:layout_toLeftOf="@id/share_image_view" android:inputType="textMultiLine" />
+        <ImageView android:id="@id/share_image_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:scaleType="centerInside" android:adjustViewBounds="true" android:maxWidth="70.0dip" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <FrameLayout android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="52.0dip">
+        <ImageView android:layout_gravity="right|center" android:id="@id/btn_post" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_send" />
+    </FrameLayout>
+</LinearLayout>

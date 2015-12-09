@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView android:scrollbarStyle="outsideOverlay" android:id="@id/RootScrollView" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/ProgramCardPreviewTile" style="@style/Card">
+            <include layout="@layout/wobs_card_preview" />
+            <include android:id="@id/AddMessageSection" layout="@layout/wobs_card_add_msg" />
+            <View android:paddingBottom="@dimen/screen_spacing_regular" style="@style/HorizontalDivider" />
+            <LinearLayout android:orientation="vertical" android:id="@id/UserDataPrompts" android:paddingTop="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:id="@id/CustomSection" android:paddingLeft="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" android:paddingBottom="@dimen/default_spacing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/TosHeadedSection" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:text="@string/wob_join_program_terms_of_service" style="@style/Subheader" />
+            <LinearLayout android:orientation="vertical" android:id="@id/TosSection" android:paddingLeft="@dimen/default_spacing" android:paddingTop="@dimen/default_spacing" android:paddingRight="@dimen/default_spacing" style="@style/Card" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/CapturedImagesHeadedSection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/default_spacing">
+            <TextView android:text="@string/wobs_captured_images_section_header" style="@style/Subheader" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/CapturedImages" android:padding="@dimen/default_spacing" style="@style/Card">
+                <include android:id="@id/FrontImage" layout="@layout/wobs_captured_image" />
+                <include android:id="@id/BackImage" layout="@layout/wobs_captured_image" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.apps.wallet.widgets.dynamicwidth.ScreenWidthSensitiveScrollView>

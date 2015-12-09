@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/shop_dept_header" android:background="@color/white" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+        <com.jcp.views.TypefaceTextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/jcp_red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/shop_department" android:layout_centerInParent="true" app:customTypeface="GOTHAM_BOLD" />
+        <ImageView android:id="@id/show_dept_header_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pdp_up_arrow" android:layout_alignParentRight="true" android:contentDescription="@null" />
+    </RelativeLayout>
+    <in.srain.cube.views.GridViewWithHeaderAndFooter android:gravity="center" android:id="@id/shop_department_grid" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="2.0dip" android:horizontalSpacing="2.0dip" android:verticalSpacing="2.0dip" android:stretchMode="columnWidth" android:numColumns="auto_fit" />
+    <com.jcp.views.HorizontalListOfRecommendedProducts android:id="@id/product_recommendations" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/fading_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

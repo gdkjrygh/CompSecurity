@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/food_log_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:background="@color/food_log_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/content" android:background="@color/food_log_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.fitbit.food.ui.logging.views.EditCaloriesView android:id="@id/edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" />
+            <View android:background="@color/settings_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <com.fitbit.food.ui.logging.views.ChooseMealTypeView android:id="@id/choose_meal_type_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" />
+            <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@id/create_btns_content" android:padding="5.0dip" style="@style/AddFoodLogView">
+                <com.fitbit.customui.ShadowButton android:textColor="@color/white" android:id="@id/log_this_btn" android:background="@drawable/btn_log_this" android:layout_width="wrap_content" android:text="@string/log_this_btn" style="@style/AddLogButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include android:id="@id/blocker_view" layout="@layout/l_data_is_unavailable_view" />
+</LinearLayout>

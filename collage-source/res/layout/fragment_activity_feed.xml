@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher android:id="@id/view_switcher_collages" android:background="@color/fragment_web_collages_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/collage_fragment_hint_container" layout="@layout/fragment_web_collages_retry" />
+    <RelativeLayout android:id="@id/collage_fragment_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.widget.CBSwipeRefreshLayout android:id="@id/layout_ptr" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ListView android:id="@id/activity_list" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </android.support.v4.widget.CBSwipeRefreshLayout>
+    </RelativeLayout>
+</ViewSwitcher>

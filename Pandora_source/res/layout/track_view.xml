@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent" android:filterTouchesWhenObscured="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pandora="http://schemas.android.com/apk/res-auto">
+    <com.pandora.android.view.SquareImageView android:id="@id/album_art" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/now_playing_track_view_padding" android:layout_marginRight="@dimen/now_playing_track_view_padding" />
+    <include layout="@layout/featured_track_viewstub" />
+    <com.pandora.android.view.SlidingDrawer android:id="@id/sliding_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/now_playing_track_view_padding" android:layout_marginRight="@dimen/now_playing_track_view_padding" pandora:handle="@id/handle" pandora:content="@id/content" pandora:allowSingleTap="false">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/handle" android:padding="@dimen/now_playing_track_handle_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/mini_album_frame" android:paddingTop="@dimen/now_playing_track_handle_padding" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/mini_album_art_size" android:layout_alignParentRight="true">
+                <com.pandora.android.util.ThumbImageButton android:id="@id/thumb_down" android:background="@null" android:visibility="gone" android:layout_width="?trackHistoryThumbSize" android:layout_height="?trackHistoryThumbSize" android:src="@drawable/ic_track_action_thumb_down_selector" pandora:selectedDescription="@string/cd_thumb_down_selected" pandora:up_or_down="@string/cd_down" style="@style/PandoraButtonStyle" />
+                <com.pandora.android.util.ThumbImageButton android:id="@id/thumb_up" android:background="@null" android:visibility="gone" android:layout_width="?trackHistoryThumbSize" android:layout_height="?trackHistoryThumbSize" android:src="@drawable/ic_track_action_thumb_up_selector" pandora:selectedDescription="@string/cd_thumb_up_selected" pandora:up_or_down="@string/cd_up" style="@style/PandoraButtonStyle" />
+                <com.pandora.android.eureka.DisappearingMediaRouteButton android:id="@id/chromecast_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <ImageView android:id="@id/handle_caret" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_caret" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/track_info" android:paddingLeft="@dimen/now_playing_track_handle_info_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/now_playing_track_handle_margin" android:layout_toLeftOf="@id/mini_album_frame">
+                <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/NowPlayingText.Track" />
+                <TextView android:textColor="@android:color/white" android:id="@id/artist" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/NowPlayingText.Artist" />
+                <TextView android:textColor="@android:color/white" android:id="@id/album" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/NowPlayingText.Album" />
+            </LinearLayout>
+            <TextView android:ellipsize="none" android:id="@id/welcome_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:lines="2" style="@style/NowPlayingText.Welcome" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="0.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.pandora.android.view.TrackActionsLayout android:gravity="center" android:orientation="horizontal" android:id="@id/track_actions_layout" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <FrameLayout android:id="@id/webview_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+    </com.pandora.android.view.SlidingDrawer>
+</merge>
